@@ -6708,3 +6708,4 @@ _piJoinAutoMatchRoomCallback,,0x006A51A0,288,Code/GameEngine/Source/GameNetwork/
 _piSBCleanup,,0x006A5C50,164,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBCleanup.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piQRPlayerKeyCallback,,0x006A7320,172,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRPlayerKeyCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBStartListingAutoMatches,,0x006A6230,173,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBStartListingAutoMatches.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piQRKeyListCallback,,0x006A7400,178,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRKeyListCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
