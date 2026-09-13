@@ -6817,3 +6817,13 @@ _piPingPlayerJoinedRoom,,0x006A3D80,82,Code/GameEngine/Source/GameNetwork/GameSp
 _piPingPlayerLeftRoomTableMapFn,,0x006A3E00,137,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPingPlayerJoinedRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piPingPlayerLeftRoom,,0x006A3E90,236,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPingPlayerJoinedRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piFindXping,,0x006A3F80,110,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPingPlayerJoinedRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_EncodeIP,,0x006A7890,177,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_DecodeIP,,0x006A7950,144,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piStagingRoomHash,,0x006A79E0,94,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piMangleStagingRoom,,0x006A7A80,100,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piMangleUser,,0x006A7AF0,42,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piDemangleUser,,0x006A7B20,126,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piMangleIP,,0x006A7BA0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piDemangleIP,,0x006A7BD0,32,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piMangleTitleRoom,,0x006A7A40,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piMangleGroupRoom,,0x006A7A60,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
