@@ -1354,3 +1354,7 @@ _Rva007FEA00,0x0066AED0,address read from the REL32 displacement in DirtySock Y4
 ?Rva007FE780Printf@@YAHPBDZZ,0x0066AC50,address read from the REL32 displacements in DirtySock netgameutil NetGameUtilControl at 0x0067A4E0; BFME1 netgameutil names this callee; body not yet converted
 _Rva0080F5A0,0x0067B4A0,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080F550 at 0x0067B450; same-TU forward reference pending conversion; body not yet converted
 _Rva00812CD0,0x0067EBD0,address read from the REL32 displacements in DirtySock Y5SmallHelpers Rva0080E500 at 0x0067A400; BFME1 Y5SmallHelpers names this callee; body not yet converted
+_Rva00811CE0,0x0067DBE0,address read from the REL32 displacements in DirtySock Y5SmallHelpers Rva008119A0 at 0x0067D8A0; BFME1 Y5SmallHelpers names this callee; body not yet converted
+_Rva007FEBD0,0x0066B0A0,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva008119A0 at 0x0067D8A0; call order matches BFME1 source; body not yet converted
+_Rva007FECB0,0x0066B180,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva008119A0 at 0x0067D8A0; call order matches BFME1 source; body not yet converted
+_Rva007FE780,0x0066AC50,address read from the REL32 displacements in DirtySock Y5SmallHelpers Rva008119A0 at 0x0067D8A0; same log body as the Rva007FE780Printf pin per BFME1 Y2NetConn; body not yet converted
