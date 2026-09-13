@@ -6657,3 +6657,4 @@ _piIsLocalServer,,0x006A5710,98,Code/GameEngine/Source/GameNetwork/GameSpy/peer/
 _piSBAutoMatchGetServerRating,,0x006A5780,93,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBAutoMatchRating.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piCallAutoMatchRateCallback,,0x0069EE40,41,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBAutoMatchRateCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piGetNextID,,0x006A0010,34,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsGetNextID.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piQRTeamKeyCallback,,0x006A73D0,43,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRTeamKeyCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
