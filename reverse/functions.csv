@@ -6684,3 +6684,4 @@ _piQRPublicAddressCallback,,0x006A75B0,38,Code/GameEngine/Source/GameNetwork/Gam
 _peerCreateStagingRoomA,,0x0069AF90,48,Code/GameEngine/Source/GameNetwork/GameSpy/peer/PeerCreateStagingRoomA.cpp,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piIsCallbackFinished,,0x0069F100,51,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerCallbacksFinished.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piCreateAutoMatchRoomCallback,,0x006A5370,110,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerAutoMatchCreateRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCreateAutoMatchRoom,,0x006A53E0,87,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerAutoMatchCreateRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
