@@ -7026,3 +7026,4 @@ _Rva0080FDD0,,0x0067BCD0,149,Code/Libraries/Source/DirtySock/Y4MultiPrecision.c,
 _Rva0080FED0,,0x0067BDD0,211,Code/Libraries/Source/DirtySock/Y4MultiPrecision.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva0080F200,,0x0067B100,244,Code/Libraries/Source/DirtySock/Y4MultiPrecision.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva0080F300,,0x0067B200,207,Code/Libraries/Source/DirtySock/Y4MultiPrecision.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
+_Rva0080F430,,0x0067B330,255,Code/Libraries/Source/DirtySock/Y4MultiPrecision.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned from byte-true call site
