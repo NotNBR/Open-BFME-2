@@ -70,7 +70,11 @@ void TableFree(HashTable table);
 #define strcasecmp _strcmpi
 extern __declspec(dllimport) int __cdecl _strcmpi(const char *left,
 	const char *right);
-__declspec(dllimport) char *__cdecl strzcpy(char *dest, const char *source, int len);
+/* BFME2 links the CRT directly here (retail import slot is msvcr71!strncpy);
+   same Gamespy->CRT mapping as strcasecmp above: the 0x40-length copies in
+   this TU are followed by an explicit nick[0x3F] = '\0', making strncpy
+   byte- and behavior-identical at every call site. */
+#define strzcpy strncpy
 PEERBool piPingInitPlayer(PEER peer, piPlayer *player);
 void piPingPlayerJoinedRoom(PEER peer, piPlayer *player, RoomType roomType);
 void piPingPlayerLeftRoom(PEER peer, piPlayer *player);

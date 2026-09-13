@@ -6779,3 +6779,23 @@ _piSetLocalFlags,,0x006A4AD0,617,Code/GameEngine/Source/GameNetwork/GameSpy/peer
 ?Get_Texture_Name@TextureBaseClass@@QBEABVStringClass@@XZ,,0x005FBE57,4,Code/Libraries/Source/WWVegas/WW3D2/matinfo.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?_M_input_error@?$basic_filebuf@DV?$char_traits@D@_STL@@@_STL@@AAEHXZ,,0x0001D900,73,Code/stlport/NarrowFilebufInputError.cpp,matched,BFME1 STLport reference source; exact sweep placement
 _piParseFlags,,0x006A4440,98,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piPlayersTableHashFn,,0x006A4120,52,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piPlayersInit,,0x006A4160,94,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piPlayersCleanup,,0x006A41C0,64,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piGetPlayer,,0x006A4220,88,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piEnumRoomPlayersMap,,0x006A4280,48,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piEnumRoomPlayers,,0x006A42B0,89,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSetNewPlayerFlags,,0x006A43D0,104,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSetPlayerRoomFlags,,0x006A44B0,76,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSetPlayerModeFlags,,0x006A4500,82,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piFindPlayerByIndexMap,,0x006A45D0,41,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piFindPlayerByIndex,,0x006A4600,55,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCountRoomOpsMap,,0x006A4640,47,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCountRoomOps,,0x006A4670,60,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piClearRoomPlayers,,0x006A4970,44,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piPlayerLeftRoom,,0x006A4840,120,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piLeftRoomMapFn,,0x006A4940,35,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piAddPlayer,,0x006A46B0,225,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piPlayerJoinedRoom,,0x006A47A0,146,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piPlayerChangedNick,,0x006A48C0,120,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSetPlayerIPAndProfileID,,0x006A4350,118,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import

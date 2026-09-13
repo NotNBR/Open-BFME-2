@@ -1301,3 +1301,7 @@ _piClearRoomPlayers,0x006A4970,
 _piKeyCacheCleanse,0x006A6760,
 _piKeyCacheRefreshRoom,0x006A71D0,
 _piParseFlags,0x006A4440,
+_piPingPlayerLeftRoom,0x006A3E90,address read from the REL32 displacement at placed _piPlayerLeftRoom 0x006A4840
+_piPingInitPlayer,0x006A3D00,address read from the REL32 displacement at placed _piAddPlayer 0x006A46B0
+_piPingPlayerJoinedRoom,0x006A3D80,address read from the REL32 displacement at placed _piPlayerJoinedRoom 0x006A47A0
+_piKeyCachePlayerChangedNick,0x006A6B30,address read from the REL32 displacement at placed _piPlayerChangedNick 0x006A48C0
