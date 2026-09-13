@@ -1315,3 +1315,7 @@ _piMangleIP,0x006A7BA0,address read from the REL32 displacement at placed _piXpi
 _piSendChannelUTM,0x00699470,address read from the REL32 displacement at placed _piXpingPlayer 0x006A3A70
 _ntohl@4,0x0065565E,address read from the REL32 displacement at placed _piStagingRoomHash 0x006A79E0
 _piProcessIncoming,0x006B2970,address read from the REL32 displacement at placed _pingerThink 0x006B2B40
+_piConnectTitle,0x006987D0,address read from the REL32 displacement at placed _piConnectConnectCallback 0x006A00D0
+_piDisconnectTitle,0x00698810,address read from the REL32 displacement at placed _piConnectConnectCallback 0x006A00D0
+_piFinishedEnteringRoom,0x006A4D40,address read from the REL32 displacement at placed _piCreateStagingRoomEnumUsersCallbackA 0x006A03F0
+_piStartedEnteringRoom,0x006A4A10,address read from the REL32 displacement at placed _piNewCreateStagingRoomOperation 0x006A0600

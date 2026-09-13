@@ -6869,3 +6869,13 @@ _piProcessTrip2,,0x006B27C0,230,Code/GameEngine/Source/GameNetwork/GameSpy/pinge
 _piProcessTrip3,,0x006B28B0,104,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _pingerProcessPing,,0x006B2920,75,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piProcessIncoming,,0x006B2970,271,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piAddOperation,,0x006A0040,139,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piNewConnectOperation,,0x006A01F0,422,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piEnterResultToJoinResult,,0x006A03A0,72,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCreateStagingRoomEnterChannelCallbackA,,0x006A0560,158,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piConnectConnectCallback,,0x006A00D0,165,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCreateStagingRoomEnumUsersCallbackA,,0x006A03F0,367,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piNewCreateStagingRoomOperation,,0x006A0600,403,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piJoinRoomEnumUsersCallbackA,,0x006A07A0,185,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piJoinRoomEnterChannelCallbackA,,0x006A0860,142,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piNewJoinRoomOperation,,0x006A08F0,187,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsListGroupRooms.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
