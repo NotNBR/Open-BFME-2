@@ -1339,3 +1339,5 @@ _chatGetUserID,0x006A15F0,address read from the REL32 displacement at placed _pe
 _Rva0080ADE0,0x00676CE0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B050 at 0x00676F50; BFME1 Y4CommAlloc names this callee; body not yet converted
 _Rva007F0030,0x0065CF10,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B070 at 0x00676F70; BFME1 Y4CommAlloc names this callee; body not yet converted
 _Rva007F0000,0x0065CEE0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B000 at 0x00676F00; BFME1 Y4CommAlloc names the FESL allocator callee; body not yet converted
+_Rva007FD7D0,0x00669CA0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B0A0 at 0x00676FA0; call order matches BFME1 source; body not yet converted
+_Rva007FD3F0,0x006698C0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B0A0 at 0x00676FA0 and Rva0080B150 at 0x00677050; call order matches BFME1 source; body not yet converted
