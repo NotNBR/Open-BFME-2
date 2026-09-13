@@ -7044,3 +7044,4 @@ _Rva00812220,,0x0067E120,241,Code/Libraries/Source/DirtySock/Y4CommTable.c,match
 _Rva00812320,,0x0067E220,658,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned from byte-true call sites
 _Rva008125C0,,0x0067E4C0,208,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
 _Rva00812CD0,,0x0067EBD0,253,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; BFME1 bfmeGo1019C tail calls are this-image free calls per byte-true sites
+_Rva008155A0,,0x006814A0,70,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
