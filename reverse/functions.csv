@@ -6647,3 +6647,4 @@ __Locale_time_destroy,,0x000205A0,122,Code/stlport/LocaleTimeDestroy.c,matched,b
 ?d_00885390@Rva00885390Class@@QAEXXZ,,0x006C9EA0,45,Code/GameEngine/Source/Common/Bfme/Rva00885980.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
 ?d_00885960@Rva00885980Class@@QAEXXZ,,0x006CA470,21,Code/GameEngine/Source/Common/Bfme/Rva00885980.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
 ??0CriticalSectionLock@@QAE@PAUBfmeCriticalSection@@@Z,,0x0061FC40,22,Code/GameEngine/Source/Common/Bfme/Glo00EF3330_h00489410.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?commitPendingCursor@Mouse@@AAEXXZ,,0x001EDDFF,39,Code/GameEngine/Source/GameClient/MouseSetEngineVisibility.cpp,matched,gen-alias;object-symbol=?commitPendingCursor@Mouse@@AAEXXZ;C++ alias
