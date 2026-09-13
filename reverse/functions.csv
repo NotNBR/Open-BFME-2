@@ -7050,3 +7050,4 @@ _Rva00815680,,0x00681580,173,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,ma
 _Rva00815B50,,0x00681A50,84,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned
 _Rva00815BB0,,0x00681AB0,212,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned
 _Rva00815D40,,0x00681C40,82,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
+_Rva00815C90,,0x00681B90,173,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
