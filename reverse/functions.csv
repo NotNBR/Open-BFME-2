@@ -6655,3 +6655,4 @@ __Locale_time_destroy,,0x000205A0,122,Code/stlport/LocaleTimeDestroy.c,matched,b
 _piCleanAutoMatch,,0x006A4F40,40,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerAutoMatchClean.c,matched,bfme1 GameSpy sweep exact placement; gsifree->free per landed peerCallbacks.c sibling
 _piIsLocalServer,,0x006A5710,98,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBAutoMatchRating.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBAutoMatchGetServerRating,,0x006A5780,93,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBAutoMatchRating.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCallAutoMatchRateCallback,,0x0069EE40,41,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBAutoMatchRateCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
