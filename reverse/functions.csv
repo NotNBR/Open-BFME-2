@@ -6639,3 +6639,8 @@ __Locale_time_destroy,,0x000205A0,122,Code/stlport/LocaleTimeDestroy.c,matched,b
 ?bfmeLinearInsertFloatDescending@@YAXPAUBfmeSortPair@@U1@@Z,,0x00625A30,52,Code/GameEngine/Source/Common/Bfme/BfmeLinearInsertFloat.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
 ?sum@Rva0006D5B0@@SGIII@Z,,0x002262D1,13,Code/GameEngine/Source/Common/Bfme/Rva0006D5B0_sum.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
 ?assign@Rva0048E3D0PairRefAssign@@QAEXPAURva0048E3D0Source@@@Z,,0x004E56D0,23,Code/GameEngine/Source/Common/Bfme/Rva0048E3D0PairRefAssign.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?value@Rva0082AFF0@@QBEPAV1@PAV1@@Z,,0x000239F0,16,Code/GameEngine/Source/Common/Bfme/Rva0082AFF0Accessor.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?cleanup@Rva00739C70@@QAEXXZ,,0x000723E4,23,Code/GameEngine/Source/Common/Bfme/Rva00739C70Cleanup.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?get@Rva00489360@@QBEHXZ,,0x001DBB42,18,Code/GameEngine/Source/Common/Bfme/Rva00489360GuardedAdd.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?rva_004097F0@Rva00409850SubObject@@QAEXE@Z,,0x00362647,23,Code/GameEngine/Source/Common/Bfme/Rva00409930SlotArray.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?checkAndSet@Rva0034FF50@@QAEXXZ,,0x003B27F8,12,Code/GameEngine/Source/Common/Bfme/Rva0034FF50SmallHelpers.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
