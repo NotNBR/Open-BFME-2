@@ -7004,3 +7004,4 @@ _Rva0080E330,,0x0067A230,25,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,mat
 _Rva0080E300,,0x0067A200,40,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; no non-CRT callees
 _Rva0080F530,,0x0067B430,32,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; memcpy-only
 _Rva0080F3D0,,0x0067B2D0,86,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; memcpy-only
+_Rva0080DF70,,0x00679E70,68,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; memcpy-only
