@@ -10,7 +10,7 @@
 
 #define VALID_NICK_CHARS "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789[]\\`_^{|}-"
 
-void Rva006A1520FixNick(char *translated, const char *nick)
+extern "C" void Rva006A1520FixNick(char *translated, const char *nick)
 {
     if (isdigit(*nick) || (*nick == '-'))
         *translated++ = '_';
