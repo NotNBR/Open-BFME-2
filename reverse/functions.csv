@@ -6637,3 +6637,5 @@ __Locale_time_destroy,,0x000205A0,122,Code/stlport/LocaleTimeDestroy.c,matched,b
 ??Rvalue_compare@?$map@IPAXU?$less@I@_STL@@V?$allocator@U?$pair@$$CBIPAX@_STL@@@2@@_STL@@QBE_NABU?$pair@$$CBIPAX@2@0@Z,,0x0002BF0E,19,Code/Libraries/Source/WWVegas/WWLib/stlport_map_int_ptr_lower.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?bfmeLinearInsertFloatAscending@@YAXPAUBfmeSortPair@@U1@@Z,,0x006259F0,52,Code/GameEngine/Source/Common/Bfme/BfmeLinearInsertFloat.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
 ?bfmeLinearInsertFloatDescending@@YAXPAUBfmeSortPair@@U1@@Z,,0x00625A30,52,Code/GameEngine/Source/Common/Bfme/BfmeLinearInsertFloat.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?sum@Rva0006D5B0@@SGIII@Z,,0x002262D1,13,Code/GameEngine/Source/Common/Bfme/Rva0006D5B0_sum.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
+?assign@Rva0048E3D0PairRefAssign@@QAEXPAURva0048E3D0Source@@@Z,,0x004E56D0,23,Code/GameEngine/Source/Common/Bfme/Rva0048E3D0PairRefAssign.cpp,matched,bfme1 Bfme sweep exact placement; verbatim source import
