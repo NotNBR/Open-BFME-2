@@ -1346,3 +1346,6 @@ _Rva007FD510,0x006699E0,address read from the REL32 displacement in DirtySock Y4
 _Rva007FD7A0,0x00669C70,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B460 at 0x00677360; call order matches BFME1 source; body not yet converted
 _Rva007FD920,0x00669DF0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080D980 at 0x00679880; call order matches BFME1 source; body not yet converted
 _Rva0080C390,0x00678290,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080D980 at 0x00679880; same-TU forward reference pending conversion; body not yet converted
+_Rva00812320,0x0067E220,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080F100 at 0x0067B000 and Rva0080F180 at 0x0067B080; call order matches BFME1 source; body not yet converted
+_Rva00812220,0x0067E120,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080F100 at 0x0067B000; call order matches BFME1 source; body not yet converted
+_Rva00811E20,0x0067DD20,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080F180 at 0x0067B080; call order matches BFME1 source; body not yet converted
