@@ -6676,3 +6676,4 @@ _piSBFreeHostServer,,0x006A5E80,38,Code/GameEngine/Source/GameNetwork/GameSpy/pe
 _piStartHosting,,0x006A62E0,53,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerHost.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piStopHosting,,0x006A6320,73,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerHost.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piJoinAutoMatchRoom,,0x006A52C0,167,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerAutoMatchJoinRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piStartReporting,,0x006A7690,216,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRStartReporting.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
