@@ -7002,3 +7002,4 @@ _Rva006A1520FixNick,,0x006A1520,103,Code/GameEngine/Source/GameNetwork/GameSpy/c
 _peerFixNickA,,0x00698A00,5,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainFixNick.c,matched,bfme1 GameSpy sweep exact placement; callee renamed to this-image address (Rva006A1520FixNick); unique E9 tail-call stub
 _Rva0080E330,,0x0067A230,25,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; no non-CRT callees
 _Rva0080E300,,0x0067A200,40,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; no non-CRT callees
+_Rva0080F530,,0x0067B430,32,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; memcpy-only
