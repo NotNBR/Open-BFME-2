@@ -1305,3 +1305,11 @@ _piPingPlayerLeftRoom,0x006A3E90,address read from the REL32 displacement at pla
 _piPingInitPlayer,0x006A3D00,address read from the REL32 displacement at placed _piAddPlayer 0x006A46B0
 _piPingPlayerJoinedRoom,0x006A3D80,address read from the REL32 displacement at placed _piPlayerJoinedRoom 0x006A47A0
 _piKeyCachePlayerChangedNick,0x006A6B30,address read from the REL32 displacement at placed _piPlayerChangedNick 0x006A48C0
+_piIsPlayerVIP,0x006A4560,address read from the REL32 displacement at placed _piPickPingPlayersMap 0x006A3850
+_pingerShutdown,0x006B25D0,address read from the REL32 displacement at placed _piPingCleanup 0x006A3710
+_pingerInit,0x006B24B0,address read from the REL32 displacement at placed _piPingInit 0x006A3670
+_pingerPing,0x006B2B70,address read from the REL32 displacement at placed _piPingPlayer 0x006A3800
+_pingerThink,0x006B2B40,address read from the REL32 displacement at placed _piPingThink 0x006A3C20
+_piFindPlayerByIP,0x006A4330,address read from the REL32 displacement at placed _piPinged 0x006A3640
+_piMangleIP,0x006A7BA0,address read from the REL32 displacement at placed _piXpingPlayer 0x006A3A70
+_piSendChannelUTM,0x00699470,address read from the REL32 displacement at placed _piXpingPlayer 0x006A3A70
