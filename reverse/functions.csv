@@ -6969,3 +6969,10 @@ _piSBAutoMatchListCallback,,0x006A5830,384,Code/GameEngine/Source/GameNetwork/Ga
 _piFinishedEnteringRoom,,0x006A4D40,100,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerRoomsInit.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import; BFME1 attests same size
 _piLeaveRoom,,0x006A4DB0,257,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerRoomsInit.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import; BFME1 attests same size
 _piRoomsCleanup,,0x006A4EC0,127,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerRoomsInit.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import; BFME1 attests same size
+_IsPrivateIP,,0x0060AC80,76,Code/GameEngine/Source/GameNetwork/GameSpy/nonport.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
+_InternalInit,,0x00607190,46,Code/GameEngine/Source/GameNetwork/GameSpy/gstats/gstats.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
+_value_for_key_safe,,0x00607340,20,Code/GameEngine/Source/GameNetwork/GameSpy/gstats/gstats.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
+_ServerBrowserFree,,0x0069CE30,32,Code/GameEngine/Source/GameNetwork/GameSpy/serverbrowsing/sb_serverbrowsing.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
+_ServerBrowserHalt,,0x0069CF50,25,Code/GameEngine/Source/GameNetwork/GameSpy/serverbrowsing/sb_serverbrowsing.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
+_ServerBrowserThink,,0x0069CF30,25,Code/GameEngine/Source/GameNetwork/GameSpy/serverbrowsing/sb_serverbrowsing.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
+_GFreeLock,,0x006BBEB0,20,Code/GameEngine/Source/GameNetwork/GameSpy/ghttp/ghttpCommon.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
