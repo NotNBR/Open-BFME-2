@@ -7047,3 +7047,4 @@ _Rva00812CD0,,0x0067EBD0,253,Code/Libraries/Source/DirtySock/Y4CommTable.c,match
 _Rva008155A0,,0x006814A0,70,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
 _Rva008155F0,,0x006814F0,132,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
 _Rva00815680,,0x00681580,173,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
+_Rva00815B50,,0x00681A50,84,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned
