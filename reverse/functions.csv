@@ -6698,3 +6698,4 @@ _piSBInit,,0x006A5B00,322,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSB
 _piOperationFree,,0x0069FDF0,65,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piOperationsInit,,0x0069FE40,59,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piClearOperations,,0x0069FE80,24,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piRemoveOperation,,0x0069FED0,105,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
