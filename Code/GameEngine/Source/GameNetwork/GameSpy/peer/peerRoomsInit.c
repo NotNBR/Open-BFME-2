@@ -46,8 +46,13 @@ typedef piConnection *PEER;
 #define strcasecmp _strcmpi
 extern __declspec(dllimport) int __cdecl _strcmpi(const char *left,
 	const char *right);
-__declspec(dllimport) char *__cdecl strzcpy(char *dest, const char *source,
-	int len);
+/* BFME2 links the CRT directly here (retail import slot is msvcr71!strncpy);
+   same Gamespy->CRT mapping as strcasecmp above: the 0x200-length copy in
+   this TU is followed by an explicit name[0x1FF] = '\0', making strncpy
+   byte-identical to the bounded copy retail inlined. */
+#define strzcpy strncpy
+extern __declspec(dllimport) char *__cdecl strncpy(char *dest,
+	const char *source, unsigned int count);
 int piParseFlags(const char *flags);
 void chatSetChannelKeysA(void *chat, const char *channel, const char *user,
 	int num, const char **keys, const char **values);
