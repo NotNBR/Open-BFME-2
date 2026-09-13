@@ -7058,3 +7058,4 @@ _Rva00815AB0,,0x006819B0,147,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,ma
 _Rva00815FA0,,0x00681EA0,128,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva00816020,,0x00681F20,317,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
 _Rva00813780,,0x0067F680,55,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
+_Rva00814040,,0x0067FF40,35,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
