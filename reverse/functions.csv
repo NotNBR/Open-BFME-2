@@ -6827,3 +6827,14 @@ _piMangleIP,,0x006A7BA0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerM
 _piDemangleIP,,0x006A7BD0,32,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piMangleTitleRoom,,0x006A7A40,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piMangleGroupRoom,,0x006A7A60,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMangle.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piPingToBytes,,0x006B2200,52,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piFindActivePingCompareFn,,0x006B2630,19,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piQueueCallback,,0x006B23A0,127,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCallCallbacks,,0x006B2420,143,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCheckTimeouts,,0x006B2A80,178,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSendPing,,0x006B2240,156,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSocketInit,,0x006B22E0,186,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_pingerInit,,0x006B24B0,282,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_pingerShutdown,,0x006B25D0,86,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_pingerThink,,0x006B2B40,34,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_pingerPing,,0x006B2B70,341,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPing.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import

@@ -1314,3 +1314,4 @@ _piFindPlayerByIP,0x006A4330,address read from the REL32 displacement at placed 
 _piMangleIP,0x006A7BA0,address read from the REL32 displacement at placed _piXpingPlayer 0x006A3A70
 _piSendChannelUTM,0x00699470,address read from the REL32 displacement at placed _piXpingPlayer 0x006A3A70
 _ntohl@4,0x0065565E,address read from the REL32 displacement at placed _piStagingRoomHash 0x006A79E0
+_piProcessIncoming,0x006B2970,address read from the REL32 displacement at placed _pingerThink 0x006B2B40
