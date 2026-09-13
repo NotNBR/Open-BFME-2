@@ -6660,3 +6660,4 @@ _piGetNextID,,0x006A0010,34,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peer
 _piQRTeamKeyCallback,,0x006A73D0,43,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRTeamKeyCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piQRThink,,0x006A7630,45,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRThink.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBStopListingGames,,0x006A5590,52,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBStopListingGames.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSendNatNegotiateCookie,,0x006A5DD0,53,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSendNatNegotiateCookie.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
