@@ -6978,3 +6978,9 @@ _ServerBrowserThink,,0x0069CF30,25,Code/GameEngine/Source/GameNetwork/GameSpy/se
 _GFreeLock,,0x006BBEB0,20,Code/GameEngine/Source/GameNetwork/GameSpy/ghttp/ghttpCommon.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
 _peerGetUserID,,0x00698A40,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; call site reads 0x006A15F0 while twin reads landed _chatGetProfileID 0x006A1600; BFME1 attests order and size
 _peerGetProfileID,,0x00698A60,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; call site reads landed _chatGetProfileID 0x006A1600; BFME1 attests order and size
+_RemovePlayer,,0x00607020,78,Code/GameEngine/Source/GameNetwork/GameSpy/gstats/gstats.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
+_RemoveTeam,,0x00607140,78,Code/GameEngine/Source/GameNetwork/GameSpy/gstats/gstats.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
+_SBServerGetPlayerIntValueA,,0x0069BAB0,65,Code/GameEngine/Source/GameNetwork/GameSpy/serverbrowsing/sb_server.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
+_SBServerGetTeamIntValueA,,0x0069BB00,65,Code/GameEngine/Source/GameNetwork/GameSpy/serverbrowsing/sb_server.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
+_chatAddChannelBanA,,0x006A1EF0,41,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
+_chatRemoveChannelBanA,,0x006A1F20,41,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
