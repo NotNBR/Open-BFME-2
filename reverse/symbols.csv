@@ -1365,3 +1365,6 @@ _Rva008140D0,0x0067FFD0,address read from the REL32 displacement in DirtySock Y5
 _Rva00812DD0,0x0067ECD0,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080E6C0 at 0x0067A5C0; call order matches BFME1 source; body not yet converted
 _Rva0080C6F0,0x006785F0,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080DA50 at 0x00679950; same-TU forward reference pending conversion; body not yet converted
 _Rva007FDA50,0x00669F20,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080DA50 at 0x00679950; BFME1 names this recv callee per Y2Rva00807900Module; body not yet converted
+_strstr,0x00629850,address read from the REL32 displacement in DirtySock Y4CommTable Rva00811E20 at 0x0067DD20; static CRT callee; body not yet converted
+@_RTC_CheckStackVars@8,0x0075A5C5,address read from the REL32 displacement in DirtySock Y4CommTable Rva00811E20 at 0x0067DD20; compiler stack-check helper next to RTC_CheckEsp; body not yet converted
+@__security_check_cookie@4,0x00629BAB,address read from the REL32 displacement in DirtySock Y4CommTable Rva00811E20 at 0x0067DD20; compiler stack-cookie helper in the static CRT cluster; body not yet converted
