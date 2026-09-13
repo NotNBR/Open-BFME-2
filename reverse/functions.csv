@@ -6695,3 +6695,4 @@ _piCheckBlockingID,,0x006986E0,37,Code/GameEngine/Source/GameNetwork/GameSpy/pee
 _peerLeaveRoomA,,0x0069A2C0,95,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainLeaveRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _peerListGroupRoomsA,,0x0069A320,187,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainLeaveRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBInit,,0x006A5B00,322,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBInit.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piOperationFree,,0x0069FDF0,65,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
