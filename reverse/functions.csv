@@ -6985,3 +6985,9 @@ _SBServerGetTeamIntValueA,,0x0069BB00,65,Code/GameEngine/Source/GameNetwork/Game
 _chatAddChannelBanA,,0x006A1EF0,41,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
 _chatRemoveChannelBanA,,0x006A1F20,41,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,bfme1 GameSpy sweep exact placement; fold resolved by per-site refs; BFME1 attests same size
 _GNewLock,,0x006BBE90,31,Code/GameEngine/Source/GameNetwork/GameSpy/ghttp/ghttpCommon.c,matched,bfme1 GameSpy sweep exact placement; second sweep of held TU; BFME1 attests same size
+_GSIStartAvailableCheckA,,0x0069D650,283,Code/GameEngine/Source/GameNetwork/GameSpy/available.c,matched,bfme1 GameSpy sweep exact placement; verbatim 2004-vintage source import; BFME1 attests same size
+_GSIAvailableCheckThink,,0x0069D7E0,223,Code/GameEngine/Source/GameNetwork/GameSpy/available.c,matched,bfme1 GameSpy sweep exact placement; verbatim 2004-vintage source import; BFME1 attests same size
+_HandlePacket,,0x0069D770,106,Code/GameEngine/Source/GameNetwork/GameSpy/available.c,matched,bfme1 GameSpy sweep exact placement; verbatim 2004-vintage source import; BFME1 attests same size
+_get_sockaddrin__available,,0x0069D5E0,56,Code/GameEngine/Source/GameNetwork/GameSpy/available.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import; BFME1 attests same size; duplicate static also emitted by gstats.c;object-symbol=_get_sockaddrin
+_SendPacket,,0x0069D620,43,Code/GameEngine/Source/GameNetwork/GameSpy/available.c,matched,bfme1 GameSpy sweep exact placement; verbatim 2004-vintage source import; BFME1 attests same size
+_GSICancelAvailableCheck,,0x0069D8C0,37,Code/GameEngine/Source/GameNetwork/GameSpy/available.c,matched,bfme1 GameSpy sweep exact placement; verbatim 2004-vintage source import; BFME1 attests same size
