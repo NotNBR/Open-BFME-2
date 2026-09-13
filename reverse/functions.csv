@@ -6778,3 +6778,4 @@ _piSetLocalFlags,,0x006A4AD0,617,Code/GameEngine/Source/GameNetwork/GameSpy/peer
 ?Get_HName@HRawAnimClass@@UBEPBDXZ,,0x002B236A,4,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?Get_Texture_Name@TextureBaseClass@@QBEABVStringClass@@XZ,,0x005FBE57,4,Code/Libraries/Source/WWVegas/WW3D2/matinfo.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?_M_input_error@?$basic_filebuf@DV?$char_traits@D@_STL@@@_STL@@AAEHXZ,,0x0001D900,73,Code/stlport/NarrowFilebufInputError.cpp,matched,BFME1 STLport reference source; exact sweep placement
+_piParseFlags,,0x006A4440,98,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPlayersRoomFlags.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
