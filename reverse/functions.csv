@@ -7016,3 +7016,4 @@ _Rva0080B150,,0x00677050,90,Code/Libraries/Source/DirtySock/Y4CommAlloc.c,matche
 _Rva0080B460,,0x00677360,30,Code/Libraries/Source/DirtySock/Y4CommAlloc.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned from byte-true call site
 _Rva0080D980,,0x00679880,199,Code/Libraries/Source/DirtySock/Y4CommAlloc.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned from byte-true call sites
 _Rva0080F100,,0x0067B000,116,Code/Libraries/Source/DirtySock/Y4CommAlloc.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned from byte-true call sites
+_Rva0080F180,,0x0067B080,123,Code/Libraries/Source/DirtySock/Y4CommAlloc.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned from byte-true call sites
