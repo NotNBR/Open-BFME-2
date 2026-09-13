@@ -217,7 +217,6 @@ void Rva007FEBD0( void *list );
 void Rva007FECB0( void *list );
 void Rva007FEAA0( void *list );
 void Rva007FD3F0( void *socket );
-void bfmeGo1019C( int value );
 void __cdecl Rva00812690( struct Rva007FD4E0Socket *socket, int reason,
 	void *data );
 
@@ -419,9 +418,8 @@ void Rva00812CD0( void *object )
 	Rva007FD3F0( socket );
 	Rva007FECB0( object );
 	Rva007FEAA0( object );
-	bfmeGo1019C( *( int * )( ( char * )object + 0x28 ) );
-	bfmeGo1019C( ( int )object );
-}
+	Rva007F0030( *( void ** )( ( char * )object + 0x28 ) );
+	Rva007F0030( object );}
 
 unsigned int __cdecl strlen( const char *text );
 char * __cdecl strcpy( char *dest, const char *src );
