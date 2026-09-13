@@ -1269,3 +1269,6 @@ _realloc,0x0003E4B0,retail REL32 at both allocation sites in DebugLogTyped
 ?insert_unique@?$_Rb_tree@UGen_p12pod@@U?$pair@$$CBUGen_p12pod@@H@_STL@@U?$_Select1st@U?$pair@$$CBUGen_p12pod@@H@_STL@@@3@U?$less@UGen_p12pod@@@3@V?$allocator@U?$pair@$$CBUGen_p12pod@@H@_STL@@@3@@_STL@@QAE?AU?$_Rb_tree_iterator@U?$pair@$$CBUGen_p12pod@@H@_STL@@U?$_Nonconst_traits@U?$pair@$$CBUGen_p12pod@@H@_STL@@@2@@2@U32@ABU?$pair@$$CBUGen_p12pod@@H@2@@Z,0x0016DF60,address read from the REL32 displacement at a placed body
 ?clear@Member0C00739C70@@QAEXXZ,0x00116760,
 _piRemoveOperation,0x0069FED0,
+_SBServerGetPrivateInetAddress,0x00030BE0,
+_piCallAutoMatchRateCallback,0x0069EE40,
+_piJoinAutoMatchRoom,0x006A52C0,
