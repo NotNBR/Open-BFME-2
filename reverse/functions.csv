@@ -6680,3 +6680,4 @@ _piStartReporting,,0x006A7690,216,Code/GameEngine/Source/GameNetwork/GameSpy/pee
 _piSBStopListingGroups,,0x006A56F0,29,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBStopListingGroups.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBGamesEngineCallback,,0x006A5570,31,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBGamesEngineCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piQRNatNegotiateCallback,,0x006A7580,33,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRNatNegotiateCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piQRPublicAddressCallback,,0x006A75B0,38,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRPublicAddressCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
