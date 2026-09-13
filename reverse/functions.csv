@@ -6669,3 +6669,4 @@ _piKeysCleanup,,0x006A6550,92,Code/GameEngine/Source/GameNetwork/GameSpy/peer/pe
 _piSetChannelCallbacks,,0x006AB290,94,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerGlobalCallbacksSetChannel.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piQRAddErrorCallback,,0x006A7510,97,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRAddErrorCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBCloneServerTableMap,,0x006A5E10,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBCloneServer.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSBCloneServer,,0x006A5E30,77,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBCloneServer.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
