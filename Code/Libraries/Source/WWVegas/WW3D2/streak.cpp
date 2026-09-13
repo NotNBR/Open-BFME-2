@@ -283,7 +283,6 @@ void StreakLineClass::Get_Color(Vector3 &color)
 	color.Set(LineRenderer.Get_Color());
 }
 
-// ?Get_Opacity@StreakLineClass@@ present-unmatched
 float StreakLineClass::Get_Opacity(void)
 {
 	return LineRenderer.Get_Opacity();
