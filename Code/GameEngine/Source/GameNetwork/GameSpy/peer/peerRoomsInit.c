@@ -41,7 +41,10 @@ typedef struct piConnection
 
 typedef piConnection *PEER;
 
-__declspec(dllimport) int __cdecl strcasecmp(const char *left,
+/* BFME2 links the CRT directly here (retail import slot is msvcr71!_strcmpi);
+   same strcasecmp->_strcmpi mapping as the landed chat/serverbrowsing siblings. */
+#define strcasecmp _strcmpi
+extern __declspec(dllimport) int __cdecl _strcmpi(const char *left,
 	const char *right);
 __declspec(dllimport) char *__cdecl strzcpy(char *dest, const char *source,
 	int len);
