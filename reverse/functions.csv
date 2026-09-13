@@ -6691,3 +6691,4 @@ _piStartAutoMatchReporting,,0x006A7770,275,Code/GameEngine/Source/GameNetwork/Ga
 _piSBGroupsListCallback,,0x006A55D0,279,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBGroupsListCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBGamesListCallback,,0x006A5440,292,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBGamesListCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piQRServerKeyCallback,,0x006A71F0,295,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRServerKeyCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piCheckBlockingID,,0x006986E0,37,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainLeaveRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
