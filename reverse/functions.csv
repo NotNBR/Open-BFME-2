@@ -6935,3 +6935,11 @@ _peerIsPlaying,,0x006993F0,28,Code/GameEngine/Source/GameNetwork/GameSpy/peer/pe
 _piAreAllReadyEnumRoomPlayersCallback,,0x00699330,25,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _peerSetGlobalKeysA,,0x00699610,23,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _peerStopListingGames,,0x00698C30,21,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piSendChannelUTM,,0x00699470,205,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; callee identity confirmed by chatSendChannelMessageA call site and verified peerStartGameA/peerUTMRoomA callers
+_piSendPlayerUTM,,0x00699540,205,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; callee identity confirmed by chatSendUserMessageA call site
+_piGetPrivateIP,,0x00698710,74,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; upgrades harvested pin; BFME1 attests same size
+_peerAlwaysGetPlayerInfo,,0x00698B70,15,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; BFME1 attests same size
+_peerGetHostServer,,0x00698EC0,11,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; BFME1 attests same size
+_peerGetNickA,,0x006989E0,18,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; BFME1 attests same size
+_peerInRoom,,0x00698E70,16,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; BFME1 attests same size
+_peerSetQuietMode,,0x00698AA0,15,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainBlockingOperations.c,matched,bfme1 GameSpy sweep exact placement; BFME1 attests same size
