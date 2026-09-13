@@ -6663,3 +6663,4 @@ _piSBStopListingGames,,0x006A5590,52,Code/GameEngine/Source/GameNetwork/GameSpy/
 _piSendNatNegotiateCookie,,0x006A5DD0,53,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSendNatNegotiateCookie.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piStopAutoMatch,,0x006A5150,65,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerAutoMatchStop.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piUserChangedNickCallback,,0x006AB090,68,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerUserChangedNickCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piQRCountCallback,,0x006A74C0,79,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerQRCountCallback.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
