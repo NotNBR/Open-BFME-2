@@ -6862,3 +6862,10 @@ _piKeyCacheRefreshPlayer,,0x006A71B0,24,Code/GameEngine/Source/GameNetwork/GameS
 _piKeyCacheRefreshRoom,,0x006A71D0,21,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerKeysGetWatchKey.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSetGlobalWatchKeys,,0x006A6D90,240,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerKeysGetWatchKey.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSetRoomWatchKeys,,0x006A6E80,248,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerKeysGetWatchKey.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piBytesToPing,,0x006B2170,141,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piFindActivePing,,0x006B2650,73,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piProcessTrip1,,0x006B26B0,269,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piProcessTrip2,,0x006B27C0,230,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piProcessTrip3,,0x006B28B0,104,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_pingerProcessPing,,0x006B2920,75,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piProcessIncoming,,0x006B2970,271,Code/GameEngine/Source/GameNetwork/GameSpy/pinger/pingerMain.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
