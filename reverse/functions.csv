@@ -7030,3 +7030,4 @@ _Rva0080F430,,0x0067B330,255,Code/Libraries/Source/DirtySock/Y4MultiPrecision.c,
 _Rva0080E410,,0x0067A310,45,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee now a matched row
 _Rva0080E1C0,,0x0067A0C0,53,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee now a matched row
 _Rva0080DFC0,,0x00679EC0,103,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee now a matched row
+_NetGameUtilControl,,0x0067A4E0,219,Code/Libraries/Source/DirtySock/netgameutil.cpp,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned from byte-true call sites
