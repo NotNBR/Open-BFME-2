@@ -1335,3 +1335,4 @@ _piRoomsCleanup,0x006A4EC0,address read from the REL32 displacement at a placed 
 _piSendStateChanged,0x006A7610,address read from the REL32 displacement at a placed body
 _IsPrivateIP,0x0060AC80,address read from the REL32 displacement at placed _piGetPrivateIP 0x00698710
 _bfmeCiThinkFromEsi,0x006A10F0,address read from the REL32 displacement at placed _chatChangeNickA 0x006A13C0
+_chatGetUserID,0x006A15F0,address read from the REL32 displacement at placed _peerGetUserID 0x00698A40
