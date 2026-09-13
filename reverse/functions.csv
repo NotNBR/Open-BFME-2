@@ -7037,3 +7037,4 @@ _Rva0080E500,,0x0067A400,218,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 _Rva008119A0,,0x0067D8A0,827,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned from byte-true call sites
 _Rva0080E6C0,,0x0067A5C0,872,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned from byte-true call sites
 _Rva0080DA50,,0x00679950,410,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned from byte-true call sites
+_Rva00811900,,0x0067D800,149,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
