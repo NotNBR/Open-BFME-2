@@ -6700,3 +6700,4 @@ _piOperationsInit,,0x0069FE40,59,Code/GameEngine/Source/GameNetwork/GameSpy/peer
 _piClearOperations,,0x0069FE80,24,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piRemoveOperation,,0x0069FED0,105,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piCancelJoinOperation,,0x0069FFA0,97,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piChangeNickCallback,,0x006A0BD0,89,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperations.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
