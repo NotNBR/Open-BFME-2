@@ -7040,3 +7040,4 @@ _Rva0080DA50,,0x00679950,410,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 _Rva00811900,,0x0067D800,149,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva00811D70,,0x0067DC70,163,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva00811E20,,0x0067DD20,1020,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; helpers pinned from byte-true call sites
+_Rva00812220,,0x0067E120,241,Code/Libraries/Source/DirtySock/Y4CommTable.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
