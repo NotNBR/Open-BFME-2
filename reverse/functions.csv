@@ -6687,3 +6687,4 @@ _piCreateAutoMatchRoomCallback,,0x006A5370,110,Code/GameEngine/Source/GameNetwor
 _piCreateAutoMatchRoom,,0x006A53E0,87,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerAutoMatchCreateRoom.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _peerConnectPreAuthA,,0x0069AE50,219,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerMainConnectPreAuth.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
 _piSBStartListingGroups,,0x006A6150,222,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBStartListingGroups.c,matched,bfme1 GameSpy sweep exact placement; verbatim source import
+_piStartAutoMatchReporting,,0x006A7770,275,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerAutoMatchStartReporting.c,matched,bfme1 GameSpy sweep exact placement; strzcpy-strzcat map to CRT per retail imports
