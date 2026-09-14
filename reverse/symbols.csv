@@ -1475,3 +1475,4 @@ _atoi,0x00629838,address read from the REL32 displacement in DirtySock Y2ProtoMa
 ?Rva007FD920Send@@YAHPAXPBDHH1H@Z,0x00669DF0,same send body as the Rva007FD920 pin; C++ alias name from BFME1 Y2ProtoMangleHelpers call sites
 _strcat,0x0062988C,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006720F0; static CRT callee; body not yet converted
 ?Rva00806200HttpPost@@YAXPAURva008042B0Http@@PBDH111@Z,0x00672240,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva007FE310SocketHost@@YAXPAURva00804440SockAddr@@H0H@Z,0x0066A7E0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00670480; BFME1 names this callee; body not yet converted
