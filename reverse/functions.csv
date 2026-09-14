@@ -7327,3 +7327,4 @@ _piStopReporting,,0x006A75E0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/
 ?GetFrameEntry@Debug@@AAEPAUFrameHashEntry@1@IIPBDH@Z,,0x0003A1B0,91,Code/Libraries/Source/WWVegas/WWDebug/Debug_GetFrameEntry.cpp,matched,
 ?RecvReply@Cftp@@QAEJPBDHPAH@Z,,0x006CA080,268,Code/Libraries/Source/WWVegas/WWDownload/CftpRecvReply.cpp,matched,
 ?Use_Non_Blocking_Mode@@YA_NXZ,,0x006C9E00,154,Code/Libraries/Source/WWVegas/WWDownload/CftpUseNonBlockingMode.cpp,matched,
+?getNameFromSingleBit@KindOfMaskType@@SAPBDH@Z,,0x00306218,26,Code/GameEngine/Source/GameLogic/ScriptEngine/KindOfGetNameFromSingleBit.cpp,matched,BFME2 218-entry KindOf table at 0xDBBE18; ported from exact BFME1 181-entry body at 0x10C5B0 with array-size bound only
