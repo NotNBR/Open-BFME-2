@@ -7290,3 +7290,4 @@ _Rva00811CE0,,0x0067DBE0,144,Code/Libraries/Source/DirtySock/Y4CommTable.c,match
 ?dup_00683240@@YAXXZ,,0x00683240,91,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,gen-alias;object-symbol=_Rva008144C0;C++ alias
 ?dup_0067d7d0@@YAXXZ,,0x0067D7D0,8,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,gen-alias;object-symbol=_Rva008118D0;C++ alias
 ?dup_0067d7f0@@YAXXZ,,0x0067D7F0,8,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,gen-alias;object-symbol=_Rva008118D0;C++ alias
+?dup_0066a3b0@@YAXXZ,,0x0066A3B0,267,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,gen-alias;object-symbol=?Rva00804440LocalAddr@@YAIXZ;C++ alias
