@@ -1479,3 +1479,5 @@ _strcat,0x0062988C,address read from the REL32 displacement in DirtySock Y2Proto
 _strncmp,0x0062995E,address read from the REL32 displacement in DirtySock Y2ProtoMangleTagField at 0x00671660; static CRT callee; body not yet converted
 ?Rva00808220@@YAHPAURva00807BA0Ping@@IPBDHH@Z,0x00674250,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _strtoul,0x006291C0,address read from the REL32 displacement in DirtySock Y2Rva00807900Module at 0x00673A30; static CRT callee; body not yet converted
+?Rva007FDE80SetCallback@@YAHPAXHI00@Z,0x0066A350,same body as the Rva007FDE80 pin; C++ alias name from BFME1 Y2Rva00807900Module call sites
+?Rva007FEA20ListInit@@YAXPAX@Z,0x0066AEF0,same body as the Rva007FEA20 pin; C++ alias name from BFME1 Y2Rva00807900Module call sites
