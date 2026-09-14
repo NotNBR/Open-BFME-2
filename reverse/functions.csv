@@ -7274,3 +7274,4 @@ _Rva0081AE20,,0x00686D20,450,Code/Libraries/Source/DirtySock/Rva00819630TapiTran
 ??_GGen008030A0@@UAEPAXI@Z,,0x0066F100,32,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
 ??_GGen00809750@@UAEPAXI@Z,,0x00675650,35,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
 ??_GGen00808FB0@@UAEPAXI@Z,,0x00674EB0,32,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
+?WriteConditionDataChunk@Condition@@SAXAAVDataChunkOutput@@PAV1@@Z,,0x003B428C,183,Code/GameEngine/Source/GameLogic/ScriptEngine/ConditionWriteDataChunk.cpp,matched,
