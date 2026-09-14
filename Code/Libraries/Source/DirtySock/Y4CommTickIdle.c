@@ -127,10 +127,10 @@ void Rva008143A0( struct Rva00814700Comm *comm, void *value )
 	comm->m_flags |= 2;
 }
 
-__declspec(dllimport) void __stdcall Rva01358F30WorkerYield( int interval );
-__declspec(dllimport) int __stdcall Rva01358EDC( void *handle, unsigned int mask );
-__declspec(dllimport) int __stdcall Rva01358EB0( void *handle, unsigned int flags );
-__declspec(dllimport) int __stdcall Rva01358CCC( void *handle );
+__declspec(dllimport) void __stdcall Sleep( int interval );
+__declspec(dllimport) int __stdcall SetCommMask( void *handle, unsigned int mask );
+__declspec(dllimport) int __stdcall PurgeComm( void *handle, unsigned int flags );
+__declspec(dllimport) int __stdcall CloseHandle( void *handle );
 
 struct Rva0081B830Transport
 {
@@ -149,17 +149,17 @@ int Rva0081B830( struct Rva0081B830Transport *comm )
 	{
 		comm->m_state = 6;
 		while ( comm->m_state == 6 )
-			Rva01358F30WorkerYield( 0 );
+			Sleep( 0 );
 	}
 	comm->m_state = 8;
 	while ( comm->m_state != 1 )
-		Rva01358F30WorkerYield( 0 );
+		Sleep( 0 );
 
 	if ( comm->m_handle != (void *)-1 )
 	{
-		Rva01358EDC( comm->m_handle, 2 );
-		Rva01358EB0( comm->m_handle, 0x0f );
-		Rva01358CCC( comm->m_handle );
+		SetCommMask( comm->m_handle, 2 );
+		PurgeComm( comm->m_handle, 0x0f );
+		CloseHandle( comm->m_handle );
 		comm->m_handle = (void *)-1;
 	}
 
@@ -192,23 +192,23 @@ void Rva0081ACD0( struct Rva0081ACD0Transport *transport )
 	{
 		transport->m_state = 6;
 		while ( transport->m_state == 6 )
-			Rva01358F30WorkerYield( 0 );
+			Sleep( 0 );
 	}
 
 	transport->m_state = 9;
 	while ( transport->m_state != 1 )
-		Rva01358F30WorkerYield( 0 );
+		Sleep( 0 );
 
 	if ( transport->m_handle != (void *)-1 )
 	{
-		Rva01358EDC( transport->m_handle, 2 );
-		Rva01358EB0( transport->m_handle, 0x0f );
-		Rva01358CCC( transport->m_handle );
+		SetCommMask( transport->m_handle, 2 );
+		PurgeComm( transport->m_handle, 0x0f );
+		CloseHandle( transport->m_handle );
 	}
 
-	Rva01358CCC( transport->m_event0 );
-	Rva01358CCC( transport->m_event1 );
-	Rva01358CCC( transport->m_event2 );
+	CloseHandle( transport->m_event0 );
+	CloseHandle( transport->m_event1 );
+	CloseHandle( transport->m_event2 );
 	Rva007F0030( transport->m_allocA );
 	Rva007F0030( transport->m_allocB );
 	Rva007F0030( transport );
@@ -1305,7 +1305,7 @@ void Rva0081ACD0( void *transport );
 void __stdcall Rva0081BDCC( int lineApplication );
 __declspec(dllimport) int __stdcall Rva0135904CPostWorkerMessage(
 	unsigned int workerId, unsigned int message, int first, int second );
-__declspec(dllimport) void __stdcall Rva01358F30WorkerYield( int interval );
+__declspec(dllimport) void __stdcall Sleep( int interval );
 typedef void *( __stdcall *Rva008139A0WorkerHandleProc )( void );
 typedef int ( __stdcall *Rva008139A0ReleaseHandleProc )( void *handle,
 	int value, struct Rva00814700Comm *comm );
@@ -1318,7 +1318,7 @@ void Rva008139A0( struct Rva00814700Comm *comm )
 	Rva0135904CPostWorkerMessage( comm->m_workerId, 0x12, 0, 0 );
 
 	while ( comm->m_state == 9 )
-		Rva01358F30WorkerYield( 0 );
+		Sleep( 0 );
 
 	( *(Rva008139A0ReleaseHandleProc *)0x01358E44 )(
 		( *(Rva008139A0WorkerHandleProc *)0x01358DDC )(), 0, comm );
