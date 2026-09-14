@@ -1478,3 +1478,4 @@ _strcat,0x0062988C,address read from the REL32 displacement in DirtySock Y2Proto
 ?Rva007FE310SocketHost@@YAXPAURva00804440SockAddr@@H0H@Z,0x0066A7E0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00670480; BFME1 names this callee; body not yet converted
 _strncmp,0x0062995E,address read from the REL32 displacement in DirtySock Y2ProtoMangleTagField at 0x00671660; static CRT callee; body not yet converted
 ?Rva00808220@@YAHPAURva00807BA0Ping@@IPBDHH@Z,0x00674250,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+_strtoul,0x006291C0,address read from the REL32 displacement in DirtySock Y2Rva00807900Module at 0x00673A30; static CRT callee; body not yet converted
