@@ -1408,3 +1408,4 @@ _Rva00818CB0,0x00684BB0,address from masked placement of the same-TU body; forwa
 _Rva00817B30,0x00683A30,address read from the REL32 displacement in DirtySock Y4CommTransportLife Rva00818CB0 at 0x00684BB0; call order matches BFME1 source; body not yet converted
 _Rva00817030,0x00682F30,address read from the REL32 displacement in DirtySock Y4CommTransportLife Rva008187E0 at 0x006846E0; call order matches BFME1 source; body not yet converted
 _Rva00811310,0x0067D210,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+_Rva00811840,0x0067D740,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
