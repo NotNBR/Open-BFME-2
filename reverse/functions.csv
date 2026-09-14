@@ -7317,3 +7317,4 @@ _piIsPlayerVIP,,0x006A4560,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/pe
 _piDisconnectTitle,,0x00698810,34,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerDisconnectTitle.c,matched,
 _piStopReporting,,0x006A75E0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerStopReporting.c,matched,
 ?getConditionTemplate@ScriptEngine@@QAEPBVConditionTemplate@@H@Z,,0x00203941,30,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_getConditionTemplate.cpp,matched,
+?writeInt@DataChunkOutput@@QAEXH@Z,,0x00306CFF,24,Code/GameEngine/Source/GameLogic/ScriptEngine/DataChunkOutput_writeInt.cpp,matched,
