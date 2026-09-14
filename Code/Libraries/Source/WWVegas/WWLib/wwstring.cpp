@@ -51,8 +51,18 @@ void * __cdecl operator new[](unsigned int size, unsigned int tag);
 #include "wwstring.h"
 #include "win.h"
 #include "wwmemlog.h"
-#include "mutex.h"
 #include <stdio.h>
+
+// TU-scoped: wwstring.h already models FastCriticalSectionClass with the
+// fastcall spin the retail codegen needs, so the reference mutex.h (which
+// defines the same class with inline asm) must not be included here.
+// WideCharToMultiByte is not in the minimal win.h stand-in; declared here
+// with the SDK signature (8 args = @32) so Copy_Wide keeps its import shape.
+extern "C" __declspec(dllimport) int __stdcall WideCharToMultiByte(
+        unsigned int CodePage, unsigned long dwFlags,
+        const unsigned short *lpWideCharStr, int cchWideChar,
+        char *lpMultiByteStr, int cbMultiByte,
+        const char *lpDefaultChar, int *lpUsedDefaultChar);
 
 // BFME's ARRAY operators forward to the scalar ones: always.h declares
 // operator new[]/delete[] and defines neither, so an inline forwarder is folded
@@ -329,6 +339,7 @@ StringClass::Format (const TCHAR *format, ...)
 //
 ///////////////////////////////////////////////////////////////////
 void
+// ?Release_Resources@StringClass@@QAEXXZ absent-from-retail
 StringClass::Release_Resources (void)
 {
 	Free_String();
