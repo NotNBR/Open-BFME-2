@@ -1550,3 +1550,5 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ?AddOutput@Debug@@EAEXPBDI@Z,0x00039B70
 ?Add_Prototype_Impl@BfmeResourceEnumerator@@QAEXPAX@Z,0x00621710,address read from REL32 in Add_Prototype at 0x0061EF9F (e8 6c 27 00 00 -> 0x00621710); BFME1 Add_Prototype.cpp attests the AssetRegistry::Add_Prototype_Impl member shape for this thin wrapper
 ??0BfmeMsg@@QAE@XZ,0x00655770,ICF-folded 16B base ctor shared with the PrototypeClass row; thiscall base call in BfmeMsgVJH ctor reuses it
+?AddFrameEntry@Debug@@AAEPAUFrameHashEntry@1@IIPBDH@Z,0x00038FF0,address read from REL32 in GetFrameEntry at 0x0003A1B0+0x3E (e8 xx -> 0x00038FF0); ghidra FUN_00438ff0 223B; BFME1 Debug_GetFrameEntry_Thunk attests AddFrameEntry member shape for this hash-miss allocator
+?UpdateFrameStatus@Debug@@AAEXAAUFrameHashEntry@1@@Z,0x00039A60,Debug name for the matched Rva0088A7E0Debug body at same address; address read from REL32 in GetFrameEntry at 0x0003A1B0+0x4F; lets caller verify while callee stays under its sweep name

@@ -7324,3 +7324,4 @@ _piStopReporting,,0x006A75E0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/
 ??0BfmeMsgVJH@@QAE@PADH@Z,,0x00655900,76,Code/GameEngine/Source/GameNetwork/BfmeMsgVJH_ctor.cpp,matched,
 ?hasOverrideWindow@RadarWindowOverrideSource@@QBE_NXZ,,0x002D35D6,16,Code/GameEngine/Source/Common/System/RadarWindowOverride.cpp,matched,
 ?AsyncGetHostByName@Cftp@@QAEHPADAAUsockaddr_in@@@Z,,0x006C9F90,165,Code/Libraries/Source/WWVegas/WWDownload/CftpAsyncGetHostByName.cpp,matched,
+?GetFrameEntry@Debug@@AAEPAUFrameHashEntry@1@IIPBDH@Z,,0x0003A1B0,91,Code/Libraries/Source/WWVegas/WWDebug/Debug_GetFrameEntry.cpp,matched,
