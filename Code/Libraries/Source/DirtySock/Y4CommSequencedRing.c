@@ -84,12 +84,12 @@ struct Rva0081BD40Comm
  * than a wait.  The name is address-derived: an IAT call site is a DIR32 and
  * the gate fills it from retail, so nothing here asserts which API it is. */
 __declspec(dllimport) void __stdcall Sleep( int interval );
-__declspec(dllimport) unsigned int __stdcall Rva01358E0CTick( void );
-__declspec(dllimport) int __stdcall Rva01358EDC( void *handle,
+__declspec(dllimport) unsigned int __stdcall GetTickCount( void );
+__declspec(dllimport) int __stdcall SetCommMask( void *handle,
 	unsigned int mask );
-__declspec(dllimport) unsigned int __stdcall Rva01358F64Wait( void *handle,
+__declspec(dllimport) unsigned int __stdcall WaitForSingleObject( void *handle,
 	unsigned int timeout );
-__declspec(dllimport) int __stdcall Rva01358F70Write( void *handle,
+__declspec(dllimport) int __stdcall WriteFile( void *handle,
 	const void *buffer, unsigned int length, unsigned int *written,
 	void *overlapped );
 
@@ -373,19 +373,19 @@ int Rva0081A3B0( struct Rva0081BD40Comm *comm,
 		packet[ iLength + 7 ] = 0x0A;
 
 		if ( comm->m_streamLength == 0 )
-			Rva01358EDC( comm->m_handle, 2 );
+			SetCommMask( comm->m_handle, 2 );
 
 		comm->m_streamLength = iLength + comm->m_streamLength + 8;
-		comm->m_streamTick = Rva01358E0CTick();
+		comm->m_streamTick = GetTickCount();
 	}
 
 	if ( comm->m_streamLength == 0 )
 		return 0;
 
-	if ( Rva01358F64Wait( comm->m_event, 0 ) == 0x102 )
+	if ( WaitForSingleObject( comm->m_event, 0 ) == 0x102 )
 		return 0;
 
-	Rva01358F70Write( comm->m_handle,
+	WriteFile( comm->m_handle,
 		comm->m_streamBuffers[ comm->m_streamSlot ],
 		comm->m_streamLength, &comm->m_streamWritten,
 		comm->m_streamOverlapped );
@@ -628,7 +628,7 @@ int Rva0081BA60( struct Rva0081BD40Comm *comm, const void *payload,
 	slot->m_sequence = comm->m_sendSequence;
 	comm->m_sendSequence = comm->m_sendSequence + 1;
 	slot->m_ack = comm->m_recvSequence - 1;
-	slot->m_tick = Rva01358E0CTick();
+	slot->m_tick = GetTickCount();
 
 	comm->m_sendWriteOffset = ( comm->m_sendWriteOffset
 		+ comm->m_sendRecordSize ) % comm->m_sendBufferSize;
