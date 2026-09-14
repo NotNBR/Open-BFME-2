@@ -1416,3 +1416,4 @@ _Rva007FEF60,0x0066B430,address read from the REL32 displacement in DirtySock Y4
 ?bfmeInit1019@@YAXPAD@Z,0x00629B14,address read from the REL32 displacement in DirtySock Rva007F0000Allocator at 0x0065CEE0; structural name from another lane; body not yet converted
 _Rva0081B010,0x00686F10,address read from the REL32 displacement in DirtySock Y4CommSequencedRing Rva0081B790 at 0x00687690; BFME1 Y4CommSequencedRing names this callee; body not yet converted
 _Rva0081BC80,0x00687B80,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+_Rva0081A3B0,0x006862B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
