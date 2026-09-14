@@ -1454,3 +1454,4 @@ _Netbios@4,0x00687CD8,address read from the REL32 displacements in DirtySock Y2N
 ?Rva007FD3F0SocketClose@@YAXPAX@Z,0x006698C0,same close body as the Rva007FD3F0 pin; C++ alias name from BFME1 Y2ProtoMangleHelpers call sites
 _sprintf,0x006291B4,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00670670; direct rel32 to the import stub; body not yet converted
 ?Rva008046E0HttpRequest@@YAHPAURva008042B0Http@@PBDH1@Z,0x00670720,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva007FFB50AddrText@@YAPADI@Z,0x0066C020,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00670590; BFME1 names this callee; body not yet converted
