@@ -1411,3 +1411,4 @@ _strdup,0x006C4C70,address read from the retail REL32 in INIClass::Put_String at
 _strlen,0x00629170,BFME2 retail strlen thunk and call target for StringBase<char>::compare(const char *)
 _strstr,0x00629850,address read from the REL32 displacement in DirtySock Y4CommTable Rva00811E20 at 0x0067DD20; static CRT callee; body not yet converted
 _Rva007EEC30,0x0065BB60,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+__RTC_UninitUse,0x0075AB62,address read from the REL32 displacements in DirtySock Y4CivilTime Rva007EDE00 at 0x0065AD30; compiler RTC helper next to RTC_CheckEsp; body not yet converted
