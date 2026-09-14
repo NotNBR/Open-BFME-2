@@ -1494,3 +1494,4 @@ _Rva00817640,0x00683540,address read from the REL32 displacement in DirtySock co
 ??3Gen0080ACD0@@SAXPAXI@Z,0x0065D030,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00676BD0; operator delete; body not yet converted
 ?Rva007EBCA0@@YAPADPBD0@Z,0x00658BD0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva007ED9F0@@YAHPADHPBDI@Z,0x0065A920,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva007ECAF0@@YAHPADHPBDH@Z,0x00659A20,same body as the Rva007ED9F0 row; both call sites in EE280 encode this address; alias name from BFME1 source
