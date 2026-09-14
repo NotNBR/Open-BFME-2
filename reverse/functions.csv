@@ -7296,3 +7296,4 @@ _Rva00814070,,0x0067FF70,39,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,mat
 _Rva008140A0,,0x0067FFA0,39,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,gen-alias;object-symbol=_Rva008140A0;C++ alias
 ?dup_00680300@@YAXXZ,,0x00680300,91,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,gen-alias;object-symbol=_Rva00814400;C++ alias
 ?dup_00680360@@YAXXZ,,0x00680360,91,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,gen-alias;object-symbol=_Rva00814400;C++ alias
+?dup_00683140@@YAXXZ,,0x00683140,120,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,gen-alias;object-symbol=_Rva00817240;C++ alias
