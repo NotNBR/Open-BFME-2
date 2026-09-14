@@ -1,5 +1,5 @@
 // ?compareNoCase@WideCharCompare@@QBEHPBG0H@Z
-// partial score=0.95 date=2026-09-03
+// partial score=0.7 date=2026-09-14
 // cl: /O1 /arch:SSE
 //
 // The two narrow (const char *, int) comparison workers, split out of
@@ -18,8 +18,7 @@
 
 #define _DLL
 #include <string.h>
-
-extern "C" __declspec(dllimport) int __cdecl towlower(int c);
+#include <wctype.h>
 
 // The four (const T *, int) comparison members hand five arguments to a shared
 // worker: this string's data and length, the argument's data and length, and a
@@ -82,16 +81,13 @@ int WideCharCompare::compare(const wchar_t *a, const wchar_t *b, int len) const
     return 0;
 }
 
-// The case-folded twin loads towlower's import thunk once and calls it twice
-// per character, keeping the folded left-hand character in the length's
-// neighbouring home slot between the two calls.
 int WideCharCompare::compareNoCase(const wchar_t *a, const wchar_t *b, int len) const
 {
     while (len > 0) {
-        const wchar_t la = (wchar_t)towlower(*a);
-        const wchar_t lb = (wchar_t)towlower(*b);
-        if (la != lb)
-            return la - lb;
+        volatile int fa = towlower(*a);
+        const int fb = towlower(*b);
+        if (fa != fb)
+            return fa - fb;
         ++a;
         ++b;
         --len;
