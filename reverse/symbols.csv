@@ -1495,3 +1495,4 @@ _Rva00817640,0x00683540,address read from the REL32 displacement in DirtySock co
 ?Rva007EBCA0@@YAPADPBD0@Z,0x00658BD0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva007ED9F0@@YAHPADHPBDI@Z,0x0065A920,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva007ECAF0@@YAHPADHPBDH@Z,0x00659A20,same body as the Rva007ED9F0 row; both call sites in EE280 encode this address; alias name from BFME1 source
+_Rva0080FB40,0x0067BA40,address read from the REL32 displacements in DirtySock Y5SmallHelpers Rva0080F5A0 at 0x0067B4A0; call order matches BFME1 source; body not yet converted
