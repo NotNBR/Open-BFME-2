@@ -7202,3 +7202,4 @@ _Rva0081A6A0,,0x006865A0,146,Code/Libraries/Source/DirtySock/Rva0081A6A0Comm.cpp
 _Rva0081A740,,0x00686640,203,Code/Libraries/Source/DirtySock/Rva0081A740Comm.cpp,matched,bfme1 DirtySock comm exact source; unique masked hit
 _Rva0081B700,,0x00687600,134,Code/Libraries/Source/DirtySock/Rva0081B700CommReset.cpp,matched,bfme1 DirtySock comm exact source; unique masked hit
 _Rva0081B9B0,,0x006878B0,24,Code/Libraries/Source/DirtySock/Rva0081B9B0Shutdown.cpp,matched,bfme1 DirtySock shutdown exact source; unique masked hit; upgrades pin to row
+??_GGen0080ACD0@@UAEPAXI@Z,,0x00676BD0,35,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar deleter exact source; unique masked hit; callees pinned
