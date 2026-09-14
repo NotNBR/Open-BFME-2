@@ -7072,3 +7072,4 @@ _Rva008142D0,,0x006801D0,139,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,ma
 _Rva00815510,,0x00681410,139,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
 _Rva00813E50,,0x0067FD50,201,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callees pinned
 _Rva0081ACD0,,0x00686BD0,316,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; Win32 imports by gate-attested slot identities
+_Rva00814540,,0x00680440,434,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
