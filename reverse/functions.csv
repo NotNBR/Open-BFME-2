@@ -7187,3 +7187,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva00807A00@@YAHPAXHPBD@Z,,0x00673A30,170,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callee pinned
 ?Rva00807B10@@YAHPAD@Z,,0x00673B40,130,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit
 ?Rva00807BA0@@YAPAURva00807BA0Ping@@XZ,,0x00673BD0,324,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callees pinned
+?Rva00808140@@YAXPAURva00808140Ref@@@Z,,0x00674170,115,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callee pinned
