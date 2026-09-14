@@ -7318,3 +7318,4 @@ _piDisconnectTitle,,0x00698810,34,Code/GameEngine/Source/GameNetwork/GameSpy/pee
 _piStopReporting,,0x006A75E0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerStopReporting.c,matched,
 ?getConditionTemplate@ScriptEngine@@QAEPBVConditionTemplate@@H@Z,,0x00203941,30,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_getConditionTemplate.cpp,matched,
 ?writeInt@DataChunkOutput@@QAEXH@Z,,0x00306CFF,24,Code/GameEngine/Source/GameLogic/ScriptEngine/DataChunkOutput_writeInt.cpp,matched,
+?Add_Prototype@@YAXPAX@Z,,0x0061EF90,21,Code/GameEngineDevice/Source/W3DDevice/GameClient/Add_Prototype.cpp,matched,
