@@ -1460,3 +1460,6 @@ _sprintf,0x006291B4,address read from the REL32 displacement in DirtySock Y2Prot
 ?Rva007FDFF0Connect@@YAPAXPBDH@Z,0x0066A4C0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00670720; call order matches BFME1 source; body not yet converted
 ?Rva00804890StrCaseCmp@@YAHPBD0@Z,0x006708D0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00670720; one of two identical twins; this site is byte-true; body not yet converted
 ?Rva00804920Update@@YAPBDPAURva008042B0Http@@@Z,0x00670960,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00670720; call order matches BFME1 source; body not yet converted
+?Rva00805620ParseStatus@@YAPBDPBDPAH@Z,0x00671660,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006714E0; call order matches BFME1 source; body not yet converted
+?Rva00805870ParsePeer@@YAHPAURva00804150ProtoMangleRef@@PBD@Z,0x006718B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva00805960@@YAHPAURva00804150ProtoMangleRef@@PBD@Z,0x006719A0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
