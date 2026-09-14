@@ -7170,3 +7170,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva00805870ParsePeer@@YAHPAURva00804150ProtoMangleRef@@PBD@Z,,0x006718B0,235,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; upgrades pin to row
 ?Rva00805960@@YAHPAURva00804150ProtoMangleRef@@PBD@Z,,0x006719A0,272,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
 ?Rva00805C70@@YAHPAURva00804150ProtoMangleRef@@PAURva00805960Probe@@@Z,,0x00671CB0,477,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; upgrades pin to row
+?Rva00805E50@@YAXPAURva00804150ProtoMangleRef@@PAURva00805960Probe@@HH@Z,,0x00671E90,489,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; upgrades pin to row

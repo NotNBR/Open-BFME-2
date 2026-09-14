@@ -1472,3 +1472,4 @@ _atoi,0x00629838,address read from the REL32 displacement in DirtySock Y2ProtoMa
 ?Rva00805E50@@YAXPAURva00804150ProtoMangleRef@@PAURva00805960Probe@@HH@Z,0x00671E90,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva007FD2D0SocketOpen@@YAPAXHHH@Z,0x006697A0,same socket-open body as the Rva007FD2D0 pin; C++ alias name from BFME1 Y2ProtoMangleHelpers call sites
 ?Rva007FD510Bind@@YAHPAXPBXH@Z,0x006699E0,same bind body as the Rva007FD510 pin; C++ alias name from BFME1 Y2ProtoMangleHelpers call sites
+?Rva007FD920Send@@YAHPAXPBDHH1H@Z,0x00669DF0,same send body as the Rva007FD920 pin; C++ alias name from BFME1 Y2ProtoMangleHelpers call sites
