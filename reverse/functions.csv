@@ -7095,3 +7095,4 @@ _Rva00811310,,0x0067D210,913,Code/Libraries/Source/DirtySock/Y4CommSha1.c,matche
 _Rva008116B0,,0x0067D5B0,388,Code/Libraries/Source/DirtySock/Y4CommSha1.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
 _Rva00811840,,0x0067D740,120,Code/Libraries/Source/DirtySock/Y4CommSha1.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
 _Rva007EC3F0,,0x00659320,220,Code/Libraries/Source/DirtySock/Y4TextToValue.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
+_Rva007EC4D0,,0x00659400,238,Code/Libraries/Source/DirtySock/Y4TextToValue.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
