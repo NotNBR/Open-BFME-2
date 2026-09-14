@@ -18,7 +18,7 @@ void Rva007F0030Free( void *block );
 // site needs.
 extern "C" void Rva0081BDE4( void );
 
-__declspec(dllimport) void __stdcall Rva01358F30Sleep( unsigned int ms );
+extern "C" __declspec(dllimport) void __stdcall Sleep( unsigned int ms );
 
 // The two byte swaps in Y4DirtySock's range and the reset at 0x0080DFC0.
 unsigned short Rva007FFA60Swap16( unsigned short value );   // 0x007FFA60
@@ -591,7 +591,7 @@ void Rva00806580( Rva00806580Record *record )
 	if( record->m_field00 != 0 )
 		Rva0080B070Destroy( record->m_field00 );
 
-	Rva01358F30Sleep( 50 );
+	Sleep( 50 );
 	Rva0081BDE4();
 
 	if( record->m_field7C != 0 )

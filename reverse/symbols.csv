@@ -1430,3 +1430,4 @@ _Rva0080B1B0,0x006770B0,address read from the REL32 displacement in DirtySock Y2
 _Rva0080B4B0,0x006773B0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
 _Rva0080E200,0x0067A100,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
 _Rva007FDB60,0x0066A030,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080DBF0 at 0x00679AF0; BFME1 Y5SmallHelpers names this callee; body not yet converted
+_Rva0081BDE4,0x006556AC,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x006725B0; BFME1 names this callee; body not yet converted
