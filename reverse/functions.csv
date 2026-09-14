@@ -7320,3 +7320,4 @@ _piStopReporting,,0x006A75E0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/
 ?writeInt@DataChunkOutput@@QAEXH@Z,,0x00306CFF,24,Code/GameEngine/Source/GameLogic/ScriptEngine/DataChunkOutput_writeInt.cpp,matched,
 ?Add_Prototype@@YAXPAX@Z,,0x0061EF90,21,Code/GameEngineDevice/Source/W3DDevice/GameClient/Add_Prototype.cpp,matched,
 ?add@MultiIniFieldParse@@QAEXPBUFieldParse@@I@Z,,0x0002BC6E,60,Code/GameEngine/Source/Common/System/INI_MultiIniFieldParse_add.cpp,matched,
+?parseDurationReal@INI@@SAXPAV1@PAX1PBX@Z,,0x00338B0A,38,Code/GameEngine/Source/Common/System/INI_parseDurationReal.cpp,matched,
