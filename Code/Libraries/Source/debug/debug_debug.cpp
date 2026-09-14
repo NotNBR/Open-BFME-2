@@ -52,6 +52,7 @@ void *Debug::PreStatic=&Debug::PreStaticInit;
 void *Debug::PostStatic=&Debug::PostStaticInit;
 #pragma data_seg()
 
+// ??0LogDescription@Debug@@QAE@PBD0@Z present-unmatched
 Debug::LogDescription::LogDescription(const char *fileOrGroup, const char *description)
 {
   Debug::Instance.AddLogGroup(fileOrGroup,description);
@@ -65,6 +66,7 @@ unsigned Debug::curStackFrame;
 
 // this constructor is empty on purpose because all construction
 // work is done in PreStaticInit (and some in PostStaticInit)
+// ??0Debug@@AAE@XZ present-unmatched
 Debug::Debug(void)
 {
   // do not put any code in here (but it's good for keeping module global todo's)
@@ -73,6 +75,7 @@ Debug::Debug(void)
   ///       make it possible to enable/disable categories by adding category to log ID
 }
 
+// ?PreStaticInit@Debug@@CAXXZ present-unmatched
 void Debug::PreStaticInit(void)
 {
   // do not change any member variables that have constructors
@@ -109,6 +112,7 @@ void Debug::PreStaticInit(void)
   SetUnhandledExceptionFilter(DebugExceptionhandler::ExceptionFilter);
 }
 
+// ?PostStaticInit@Debug@@CAXXZ present-unmatched
 void Debug::PostStaticInit(void)
 {
   InstallExceptionHandler();
@@ -202,6 +206,7 @@ void Debug::PostStaticInit(void)
   }
 }
 
+// ?StaticExit@Debug@@CAXXZ present-unmatched
 void Debug::StaticExit(void)
 {
   // yes, we do leave memory 'leaks' but Win32 will take care of these
@@ -247,6 +252,7 @@ Debug::Format::Format(const char *format, ...)
   va_end(va);
 }
 
+// ??1Debug@@QAE@XZ present-unmatched
 Debug::~Debug()
 {
   // again, do not put any code in here
@@ -258,11 +264,13 @@ static void LocalSETranslator(unsigned, struct _EXCEPTION_POINTERS *pExPtrs)
   DebugExceptionhandler::ExceptionFilter(pExPtrs);
 }
 
+// ?InstallExceptionHandler@Debug@@SAXXZ present-unmatched
 void Debug::InstallExceptionHandler(void)
 {
   _set_se_translator(LocalSETranslator);
 }
 
+// ?SkipNext@Debug@@SA_NXZ present-unmatched
 bool Debug::SkipNext(void)
 {
   // this is typically set while an assertion
@@ -294,6 +302,7 @@ bool Debug::SkipNext(void)
   return e->status==Skip;
 }
 
+// ?AssertBegin@Debug@@SAAAV1@PBDH0@Z present-unmatched
 Debug& Debug::AssertBegin(const char *file, int line, const char *expr)
 {
   // avoid infinite recursion...
@@ -325,6 +334,7 @@ Debug& Debug::AssertBegin(const char *file, int line, const char *expr)
   return Instance;
 }
 
+// ?AssertDone@Debug@@UAE_NXZ present-unmatched
 bool Debug::AssertDone(void)
 {
   --disableAssertsEtc;
@@ -423,6 +433,7 @@ bool Debug::AssertDone(void)
   return false;
 }
 
+// ?CheckBegin@Debug@@SAAAV1@PBDH0@Z present-unmatched
 Debug& Debug::CheckBegin(const char *file, int line, const char *expr)
 {
   // avoid infinite recursion...
@@ -454,6 +465,7 @@ Debug& Debug::CheckBegin(const char *file, int line, const char *expr)
   return Instance;
 }
 
+// ?CheckDone@Debug@@UAE_NXZ present-unmatched
 bool Debug::CheckDone(void)
 {
   --disableAssertsEtc;
@@ -539,6 +551,7 @@ Debug& Debug::LogBegin(const char *fileOrGroup)
   return Instance;
 }
 
+// ?LogDone@Debug@@UAE_NXZ present-unmatched
 bool Debug::LogDone(void)
 {
   --disableAssertsEtc;
@@ -549,6 +562,7 @@ bool Debug::LogDone(void)
   return false;
 }
 
+// ?CrashBegin@Debug@@SAAAV1@PBDH@Z present-unmatched
 Debug& Debug::CrashBegin(const char *file, int line)
 {
   // avoid infinite recursion...
@@ -582,6 +596,7 @@ Debug& Debug::CrashBegin(const char *file, int line)
   return Instance;
 }
 
+// ?CrashDone@Debug@@UAE_N_N@Z present-unmatched
 bool Debug::CrashDone(bool die)
 {
   --disableAssertsEtc;
@@ -700,9 +715,22 @@ bool Debug::CrashDone(bool die)
   return false;
 }
 
+// Retail Debug ABI in this TU: curType sits at this+0x9cf4 with 7 string
+// types (this TU's headers have 8: ioBuffer carries one entry fewer),
+// m_width at +0x9f50 and m_fillChar at +0x9f54. TU-local view so the placed
+// stream bodies in this TU keep their layout (cf. RetailDebugVersionView).
+struct RetailDebugOutView {
+  char _pad0[0x9cf4];
+  int curType;                        // 0x9cf4; retail bails when it is 7
+  char _pad1[0x9f50 - 0x9cf4 - 4];
+  int m_width;                        // 0x9f50
+  char m_fillChar;                    // 0x9f54
+};
+
 Debug& Debug::operator<<(const char *str)
 {
-  if (curType==DebugIOInterface::StringType::MAX)
+  RetailDebugOutView *retail = (RetailDebugOutView *)this;
+  if (retail->curType==7)
     // yes, this is valid and simply means not to
     // write anything...
     return *this;
@@ -713,23 +741,24 @@ Debug& Debug::operator<<(const char *str)
   else if (!*str)
     return *this;
 
-  unsigned len=strlen(str);
+  int len=strlen(str);
 
   // forced width?
-  if (len<m_width)
+  if (len<retail->m_width)
   {
-    for (unsigned k=len;k<m_width;k++)
-      AddOutput(&m_fillChar,1);
+    for (int k=len;k<retail->m_width;k++)
+      Debug::AddOutput(&retail->m_fillChar,1);
   }
 
   // reset width after each insertion
-  m_width=0;
+  retail->m_width=0;
 
-  AddOutput(str,len);
+  Debug::AddOutput(str,len);
 
   return *this;
 }
 
+// ?SetPrefixAndRadix@Debug@@UAEXPBDH@Z present-unmatched
 void Debug::SetPrefixAndRadix(const char *prefix, int radix)
 {
   strncpy(m_prefix,prefix?prefix:"",sizeof(m_prefix)-1);
@@ -947,6 +976,7 @@ Debug& Debug::operator<<(HResult hres)
   return (*this) << _ultoa(hres.m_hresult,help,16);
 }
 
+// ?IsLogEnabled@Debug@@SA_NPBD@Z present-unmatched
 bool Debug::IsLogEnabled(const char *fileOrGroup)
 {
   // now this isn't great but since IsLogEnabled is supposed
@@ -961,6 +991,7 @@ bool Debug::IsLogEnabled(const char *fileOrGroup)
   return e->status==NoSkip;
 }
 
+// ?AddHResultTranslator@Debug@@SAXIP6A_NAAV1@JPAX@Z1@Z present-unmatched
 void Debug::AddHResultTranslator(unsigned prio, HResultTranslator func, void *user)
 {
   // bail out if invalid parameter passed in
@@ -990,6 +1021,7 @@ void Debug::AddHResultTranslator(unsigned prio, HResultTranslator func, void *us
   Instance.hrTranslators[k].user=user;
 }
 
+// ?RemoveHResultTranslator@Debug@@SAXP6A_NAAV1@JPAX@Z1@Z present-unmatched
 void Debug::RemoveHResultTranslator(HResultTranslator func, void *user)
 {
   // bail out if invalid parameter passed in
@@ -1010,6 +1042,7 @@ void Debug::RemoveHResultTranslator(HResultTranslator func, void *user)
     }
 }
 
+// ?AddIOFactory@Debug@@SA_NPBD0P6APAVDebugIOInterface@@XZ@Z present-unmatched
 bool Debug::AddIOFactory(const char *io_id, const char *descr, DebugIOInterface* (*func)(void))
 {
   // bail out if invalid parameters passed in
@@ -1034,6 +1067,7 @@ bool Debug::AddIOFactory(const char *io_id, const char *descr, DebugIOInterface*
   return true;
 }
 
+// ?AddCommands@Debug@@SA_NPBDPAVDebugCmdInterface@@@Z present-unmatched
 bool Debug::AddCommands(const char *cmdgroup, DebugCmdInterface *cmdif)
 {
   // bail out if invalid parameters passed in
@@ -1063,6 +1097,7 @@ bool Debug::AddCommands(const char *cmdgroup, DebugCmdInterface *cmdif)
   return true;
 }
 
+// ?RemoveCommands@Debug@@SAXPAVDebugCmdInterface@@@Z present-unmatched
 void Debug::RemoveCommands(DebugCmdInterface *cmdif)
 {
   // bail out if invalid parameter passed in
@@ -1089,6 +1124,7 @@ void Debug::RemoveCommands(DebugCmdInterface *cmdif)
   }
 }
 
+// ?Command@Debug@@SAXPBD@Z present-unmatched
 void Debug::Command(const char *cmd)
 {
   DFAIL_IF(!cmd) return;
@@ -1137,6 +1173,7 @@ void Debug::Update(void)
   }
 }
 
+// ?AddFrameEntry@Debug@@AAEPAUFrameHashEntry@1@IIPBDH@Z present-unmatched
 Debug::FrameHashEntry* Debug::AddFrameEntry(unsigned addr, unsigned type,
                                             const char *fileOrGroup, int line)
 {
@@ -1179,6 +1216,7 @@ Debug::FrameHashEntry* Debug::AddFrameEntry(unsigned addr, unsigned type,
   return e;
 }
 
+// ?UpdateFrameStatus@Debug@@EAEXAAUFrameHashEntry@1@@Z present-unmatched
 void Debug::UpdateFrameStatus(FrameHashEntry &entry)
 {
   // build pattern match entry
@@ -1242,6 +1280,7 @@ const char *Debug::AddLogGroup(const char *fileOrGroup, const char *descr)
   return cur->nameGroup;
 }
 
+// ?StartOutput@Debug@@EAAXW4StringType@DebugIOInterface@@PBDZZ present-unmatched
 void Debug::StartOutput(DebugIOInterface::StringType type, const char *fmt, ...)
 {
   if (curType==DebugIOInterface::Log)
@@ -1257,6 +1296,7 @@ void Debug::StartOutput(DebugIOInterface::StringType type, const char *fmt, ...)
   __ASSERT(curSource[sizeof(curSource)-1]==0);
 }
 
+// ?AddOutput@Debug@@EAEXPBDI@Z present-unmatched
 void Debug::AddOutput(const char *str, unsigned remainingLen)
 {
   // bail out if no valid destination type
@@ -1320,6 +1360,7 @@ void Debug::AddOutput(const char *str, unsigned remainingLen)
   }
 }
 
+// ?FlushOutput@Debug@@EAEX_N@Z present-unmatched
 void Debug::FlushOutput(bool defaultLog)
 {
   __ASSERT(curType!=DebugIOInterface::StringType::MAX);
@@ -1371,6 +1412,7 @@ void Debug::FlushOutput(bool defaultLog)
   *curSource=0;
 }
 
+// ?AddPatternEntry@Debug@@EAEXI_NPBD@Z present-unmatched
 void Debug::AddPatternEntry(unsigned types, bool isActive, const char *pattern)
 {
   __ASSERT(pattern);
@@ -1394,6 +1436,7 @@ void Debug::AddPatternEntry(unsigned types, bool isActive, const char *pattern)
   lastPatternEntry=cur;
 }
 
+// ?SimpleMatch@Debug@@SA_NPBD0@Z present-unmatched
 bool Debug::SimpleMatch(const char *str, const char *pattern)
 {
   __ASSERT(str);
@@ -1418,6 +1461,7 @@ bool Debug::SimpleMatch(const char *str, const char *pattern)
   return *str==*pattern;
 }
 
+// ?SetBuildInfo@Debug@@SAXPBD00@Z present-unmatched
 void Debug::SetBuildInfo(const char *version,
                          const char *internalVersion,
                          const char *buildDate)
@@ -1462,6 +1506,7 @@ void Debug::WriteBuildInfo(void)
     (*this) << " build " << retail->m_buildDate;
 }
 
+// ?ExecCommand@Debug@@EAEXPBD0@Z present-unmatched
 void Debug::ExecCommand(const char *cmdstart, const char *cmdend)
 {
   // split off into command and arguments
@@ -1608,6 +1653,7 @@ static BOOL CALLBACK EnumThreadWndProc(HWND hwnd, LPARAM lParam)
   return FALSE;
 }
 
+// ?IsWindowed@Debug@@EAE_NXZ present-unmatched
 bool Debug::IsWindowed(void)
 {
   // use cached result if possible
