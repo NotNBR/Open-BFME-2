@@ -49,8 +49,12 @@
 //     dx8caps.cpp carries many matched rows and shares its `// cl:` line with
 //     all of them, so `Functions: FAIL n/m` is the regression check.
 //
-// ALREADY REFUTED here: nothing. No flag sweep has been run against this body.
-// Do not record one as refuted without measuring it.
+// ALREADY REFUTED here (2026-09-14, measured, do not re-run):
+//   * /Oa alone on the whole TU. It was the NOT YET TRIED lever above.
+//     Result: Functions FAIL 8/19 (Check_Texture_Format_Support,
+//     Init_Caps, Check_Driver_Version_Status, Compute_Caps and 4 more).
+//     /Oa is destructive TU-wide and cannot be used to chase the ecx/edx
+//     swap here. t=5 model=muse-spark.
 
 // The body as it stands in dx8caps.cpp:959.
 void DX8Caps::Check_Depth_Stencil_Support(WW3DFormat display_format, const D3DCAPS8& caps)
