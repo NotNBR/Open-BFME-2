@@ -7198,3 +7198,4 @@ _CommUDPWrite,,0x00682F30,203,Code/Libraries/Source/DirtySock/commudp.cpp,matche
 _CommUdpSetup,,0x00684300,253,Code/Libraries/Source/DirtySock/commudp.cpp,matched,bfme1 DirtySock commudp exact source; unique masked hit; callee pinned
 _CommUdpPoke,,0x00684920,173,Code/Libraries/Source/DirtySock/commudp.cpp,matched,bfme1 DirtySock commudp exact source; unique masked hit
 _CommUDPSend,,0x006832C0,625,Code/Libraries/Source/DirtySock/commudp.cpp,matched,bfme1 DirtySock commudp exact source; unique masked hit; callee pinned
+_Rva0081A6A0,,0x006865A0,146,Code/Libraries/Source/DirtySock/Rva0081A6A0Comm.cpp,matched,bfme1 DirtySock comm exact source; unique masked hit
