@@ -7191,3 +7191,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva008085A0@@YAHPAURva00807BA0Ping@@PBD1H@Z,,0x006745D0,131,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit
 ?Rva00808660@@YAHPAURva00807BA0Ping@@PAXPAHPAURva00808660Result@@@Z,,0x00674690,365,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callees pinned
 ?Rva00807CF0@@YAHPAXH0@Z,,0x00673D20,496,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; upgrades pin to row
+?Rva00807EE0@@YAPAURva00807EE0Entry@@PBEPAXH@Z,,0x00673F10,198,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; upgrades pin to row
