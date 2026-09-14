@@ -7075,3 +7075,4 @@ _Rva0081ACD0,,0x00686BD0,316,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,ma
 _Rva00814540,,0x00680440,434,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva00816280,,0x00682180,526,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva0081B830,,0x00687730,224,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
+_Rva00816BF0,,0x00682AF0,508,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
