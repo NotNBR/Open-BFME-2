@@ -267,7 +267,14 @@ void DX8TextureCategoryClass::Remove_Polygon_Renderer(DX8PolygonRendererClass* p
 }
 
 
-// ?Remove_Texture_Category@DX8FVFCategoryContainer@@ present-unmatched
+// Retail queues via the renderer pointer at 0x00DF363C (+0x34 list),
+// null-checked, where ZH uses the file-static list below.
+struct RendererFVFDeleteListView
+{
+	unsigned char pad[0x34];
+	FVFCategoryList list;
+};
+extern RendererFVFDeleteListView *RendererPtr00DF363C;
 void DX8FVFCategoryContainer::Remove_Texture_Category(DX8TextureCategoryClass* tex_category)
 {
 	for (unsigned pass=0;pass<passes;++pass) {
@@ -277,7 +284,9 @@ void DX8FVFCategoryContainer::Remove_Texture_Category(DX8TextureCategoryClass* t
 		// If any of the texture category lists has anything in it, no need to delete this container
 		if (texture_category_list[pass].Peek_Head() != NULL) return;
 	}
-	fvf_category_container_delete_list.Add_Tail(this);
+	RendererFVFDeleteListView *renderer = RendererPtr00DF363C;
+	if (renderer)
+		renderer->list.Add_Tail(this);
 }
 
 // ?Add_Visible_Material_Pass@DX8FVFCategoryContainer@@ present-unmatched
