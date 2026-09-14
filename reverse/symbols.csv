@@ -1463,3 +1463,6 @@ _sprintf,0x006291B4,address read from the REL32 displacement in DirtySock Y2Prot
 ?Rva00805620ParseStatus@@YAPBDPBDPAH@Z,0x00671660,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006714E0; call order matches BFME1 source; body not yet converted
 ?Rva00805870ParsePeer@@YAHPAURva00804150ProtoMangleRef@@PBD@Z,0x006718B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva00805960@@YAHPAURva00804150ProtoMangleRef@@PBD@Z,0x006719A0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva00805710TagFieldGet@@YAHPADHPBD1H@Z,0x00671750,address read from the REL32 displacements in DirtySock Y2ProtoMangleHelpers at 0x006718B0; call order matches BFME1 source; body not yet converted
+?Rva007FFC10TextAddr@@YAIPBD@Z,0x0066C0E0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006718B0; BFME1 names this callee; body not yet converted
+_atoi,0x00629838,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006718B0; static CRT callee; body not yet converted
