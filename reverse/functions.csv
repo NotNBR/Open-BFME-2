@@ -7213,3 +7213,4 @@ _Rva0081B9B0,,0x006878B0,24,Code/Libraries/Source/DirtySock/Rva0081B9B0Shutdown.
 ?Rva007EE150@@YAHPADHPBD1@Z,,0x0065B080,120,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit
 ?Rva007EDD30@@YAHPADHPBDHHHHHHH@Z,,0x0065AC60,199,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit; callee pinned
 ?Rva007ED9F0@@YAHPADHPBDI@Z,,0x0065A920,286,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit; upgrades pin to row
+?Rva007EE050@@YAHPADHPBDHHH@Z,,0x0065AF80,245,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit
