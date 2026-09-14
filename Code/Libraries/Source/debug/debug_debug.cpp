@@ -720,7 +720,13 @@ bool Debug::CrashDone(bool die)
 // m_width at +0x9f50 and m_fillChar at +0x9f54. TU-local view so the placed
 // stream bodies in this TU keep their layout (cf. RetailDebugVersionView).
 struct RetailDebugOutView {
-  char _pad0[0x9cf4];
+  char _pad0[0x9c84];
+  struct IoEntry {
+    char *buffer;
+    unsigned used;
+    unsigned alloc;
+    bool lastWasCR;
+  } ioBuffer[7];                      // 0x9c84, 16B stride; lastWasCR at +12
   int curType;                        // 0x9cf4; retail bails when it is 7
   char _pad1[0x9f50 - 0x9cf4 - 4];
   int m_width;                        // 0x9f50
@@ -882,11 +888,12 @@ Debug& Debug::operator<<(const void *ptr)
 
 Debug& Debug::operator<<(const MemDump &dump)
 {
-  if (curType==DebugIOInterface::StringType::MAX)
+  RetailDebugOutView *retail = (RetailDebugOutView *)this;
+  if (retail->curType==7)
     return *this;
 
   // need CR?
-  if (!ioBuffer[curType].lastWasCR)
+  if (!retail->ioBuffer[retail->curType].lastWasCR)
     operator<<("\n");
 
   // How many items per line? We're assuming an output
