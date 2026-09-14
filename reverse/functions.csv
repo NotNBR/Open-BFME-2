@@ -7196,3 +7196,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 _CommTCPUnlisten,,0x00680260,49,Code/Libraries/Source/DirtySock/commtcp.cpp,matched,bfme1 DirtySock commtcp exact source; unique masked hit; upgrades pin to row
 _CommUDPWrite,,0x00682F30,203,Code/Libraries/Source/DirtySock/commudp.cpp,matched,bfme1 DirtySock commudp exact source; unique masked hit
 _CommUdpSetup,,0x00684300,253,Code/Libraries/Source/DirtySock/commudp.cpp,matched,bfme1 DirtySock commudp exact source; unique masked hit; callee pinned
+_CommUdpPoke,,0x00684920,173,Code/Libraries/Source/DirtySock/commudp.cpp,matched,bfme1 DirtySock commudp exact source; unique masked hit
