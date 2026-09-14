@@ -7137,3 +7137,4 @@ _Rva0081BA60,,0x00687960,530,Code/Libraries/Source/DirtySock/Y4CommSequencedRing
 ?Rva008078B0@@YAXPAURva00806580Record@@@Z,,0x006738E0,78,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callee pinned
 ?Rva00806A90@@YAXPAURva00806580Record@@PBXH@Z,,0x00672AC0,119,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callee pinned
 ?Rva00807820@@YAHPAURva00806580Record@@PAI1PAXH@Z,,0x00673850,130,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callees pinned
+?Rva008076E0@@YAHPAURva00806580Record@@PAI1PAPAD@Z,,0x00673710,314,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; upgrades pin to row
