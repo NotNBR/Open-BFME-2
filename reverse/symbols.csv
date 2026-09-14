@@ -1418,3 +1418,4 @@ _Rva0081B010,0x00686F10,address read from the REL32 displacement in DirtySock Y4
 _Rva0081BC80,0x00687B80,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva0081A3B0,0x006862B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva007FEA00Tick@@YAIXZ,0x0066AED0,same tick body as the Rva007FEA00 pin per BFME1 Y2NetConn comment placing Tick at 0x007FEA00; call sites in Y2Rva00806580Module encode this address; body not yet converted
+?Rva0080B070Destroy@@YAXPAX@Z,0x00676F70,same release-and-free body as the Rva0080B070 row; C++ alias name from BFME1 Y2Rva00806580Module call sites

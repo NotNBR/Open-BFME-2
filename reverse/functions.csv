@@ -7134,3 +7134,4 @@ _Rva0081AB40,,0x00686A40,397,Code/Libraries/Source/DirtySock/Y4CommSequencedRing
 _Rva0081BA60,,0x00687960,530,Code/Libraries/Source/DirtySock/Y4CommSequencedRing.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 ?Rva008064A0@@YAPAURva00806580Record@@XZ,,0x006724D0,223,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callees pinned
 ?Rva00806A70@@YAXPAURva00806580Record@@H@Z,,0x00672AA0,24,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit
+?Rva008078B0@@YAXPAURva00806580Record@@@Z,,0x006738E0,78,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; callee pinned
