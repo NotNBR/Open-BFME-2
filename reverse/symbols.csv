@@ -1520,3 +1520,11 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ??3Gen007EB140@@SAXPAXI@Z,0x0065D030,shared pool-free helper also used by Gen0080ACD0; member-delete alias from BFME1 Y2ScalarDeleters call sites
 ??1BfmeDirtyBase@@UAE@XZ,0x00658650,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00661290; shared base dtor; body not yet converted
 ??3Gen007F47E0@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites
+??1Gen007F4D00@@UAE@XZ,0x006617C0,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x006617A0; BFME1 names this dtor; body not yet converted
+??1Gen007F86D0@@UAE@XZ,0x00664710,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00664D50; BFME1 names this dtor; body not yet converted
+??1Gen007FA290@@UAE@XZ,0x006661A0,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x006667E0; BFME1 names this dtor; body not yet converted
+??1Gen008030A0@@UAE@XZ,0x0066EFC0,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x0066F100; BFME1 names this dtor; body not yet converted
+??3Gen007F4D00@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites
+??3Gen007F86D0@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites
+??3Gen007FA290@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites
+??3Gen008030A0@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites

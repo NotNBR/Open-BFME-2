@@ -7268,3 +7268,7 @@ _Rva0081AE20,,0x00686D20,450,Code/Libraries/Source/DirtySock/Rva00819630TapiTran
 ??1Gen0080ACD0@@UAE@XZ,,0x00676730,264,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; upgrades pin to row
 ??_GGen007EB140@@UAEPAXI@Z,,0x006580E0,35,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
 ??_GGen007F47E0@@UAEPAXI@Z,,0x00661290,38,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
+??_GGen007F4D00@@UAEPAXI@Z,,0x006617A0,32,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
+??_GGen007F86D0@@UAEPAXI@Z,,0x00664D50,35,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
+??_GGen007FA290@@UAEPAXI@Z,,0x006667E0,35,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
+??_GGen008030A0@@UAEPAXI@Z,,0x0066F100,32,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
