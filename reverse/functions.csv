@@ -7159,3 +7159,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva008043C0HttpDestroy@@YAXPAURva008042B0Http@@@Z,,0x00670400,42,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; callee pinned
 ?Rva00804380CloseSocket@@YAXPAURva008042B0Http@@@Z,,0x006703C0,59,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; upgrades pin to row
 ?Rva00805610HttpCode@@YAHPAURva00804150ProtoMangleRef@@@Z,,0x00671650,14,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
+?Rva00804250CopyField@@YAXPADPBDH@Z,,0x00670290,83,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
