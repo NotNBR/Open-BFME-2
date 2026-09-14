@@ -7314,3 +7314,4 @@ _piStopAutoMatchReporting,,0x006A7660,36,Code/GameEngine/Source/GameNetwork/Game
 _piOperationsCleanup,,0x0069FEA0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsCleanup.c,matched,
 _piSendStateChanged,,0x006A7610,24,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSendStateChanged.c,matched,
 _piIsPlayerVIP,,0x006A4560,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerIsPlayerVIP.c,matched,
+_piDisconnectTitle,,0x00698810,34,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerDisconnectTitle.c,matched,
