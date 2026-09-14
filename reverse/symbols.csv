@@ -1513,3 +1513,6 @@ _Rva0080D6C0,0x00679520,address read from the REL32 displacement in DirtySock Pr
 _Rva007FDEE0,0x0066A3B0,same body as the Rva007FDEE0 pin; C alias name from BFME1 Y4CommRingIdle call sites
 ?ji_0081bda8@@YAXXZ,0x00687CA8,address read from the REL32 displacement in DirtySock Rva00813100ConnectionSetup at 0x0067F000; indirect-call slot cast to function in BFME1 source; body not yet converted
 _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva0080B1B0 at 0x006770B0; BFME1 Y2Rva00806580Module names this callee; body not yet converted
+??1BfmeMsgVJH@@QAE@XZ,0x00655780,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00676730; call order matches BFME1 source; body not yet converted
+??1Gen00809750@@UAE@XZ,0x006755F0,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00676730; call order matches BFME1 source; body not yet converted
+?Gen007EFFC0@@YAPAVGenAlloc@@XZ,0x0065CEA0,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00676730; BFME1 names this allocator getter; body not yet converted

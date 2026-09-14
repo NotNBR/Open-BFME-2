@@ -320,7 +320,6 @@ struct Gen0080ACD0
 // ??0Gen0080ACD0@@QAE@XZ present-unmatched   emitted only to force the vtable, and with it ??_G
 Gen0080ACD0::Gen0080ACD0() {}
 
-// ??1Gen0080ACD0@@UAE@XZ present-unmatched   pinned at 0x00676730; kept because trimming it changes the ??_G emission above
 Gen0080ACD0::~Gen0080ACD0()
 {
 	BfmeMsgVJH **message = m_messages;
