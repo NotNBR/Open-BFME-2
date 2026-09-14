@@ -1450,3 +1450,5 @@ _strstr,0x00629850,address read from the REL32 displacement in DirtySock Y4CommT
 ?Rva007EB520NetConnMAC@@YAIPAX@Z,0x006584C0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Netbios@4,0x00687CD8,address read from the REL32 displacements in DirtySock Y2NetConn at 0x006584C0; netbios LAN adapter API; body not yet converted
 ?Rva00804380CloseSocket@@YAXPAURva008042B0Http@@@Z,0x006703C0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva007FD4E0SocketShutdown@@YAXPAXH@Z,0x006699B0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006703C0; call order matches BFME1 source; body not yet converted
+?Rva007FD3F0SocketClose@@YAXPAX@Z,0x006698C0,same close body as the Rva007FD3F0 pin; C++ alias name from BFME1 Y2ProtoMangleHelpers call sites
