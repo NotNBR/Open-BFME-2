@@ -1549,3 +1549,4 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ??$__uninitialized_copy@U?$_Deque_iterator@UBfmeE12@@U?$_Nonconst_traits@UBfmeE12@@@_STL@@@_STL@@U12@@_STL@@YA?AU?$_Deque_iterator@UBfmeE12@@U?$_Nonconst_traits@UBfmeE12@@@_STL@@@0@U10@00ABU__false_type@0@@Z,0x00584E0E,ICF twin of pinned const-traits overload at same address; retail call in deque uninitialized_copy_copy at 0x005851CD+0x32 targets 0x00584E0E which itself calls deque _M_increment; pin lets caller verify while callee body stays unclaimed
 ?AddOutput@Debug@@EAEXPBDI@Z,0x00039B70
 ?Add_Prototype_Impl@BfmeResourceEnumerator@@QAEXPAX@Z,0x00621710,address read from REL32 in Add_Prototype at 0x0061EF9F (e8 6c 27 00 00 -> 0x00621710); BFME1 Add_Prototype.cpp attests the AssetRegistry::Add_Prototype_Impl member shape for this thin wrapper
+??0BfmeMsg@@QAE@XZ,0x00655770,ICF-folded 16B base ctor shared with the PrototypeClass row; thiscall base call in BfmeMsgVJH ctor reuses it
