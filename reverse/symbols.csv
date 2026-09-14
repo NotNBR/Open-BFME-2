@@ -1497,3 +1497,5 @@ _Rva00817640,0x00683540,address read from the REL32 displacement in DirtySock co
 ?Rva007ECAF0@@YAHPADHPBDH@Z,0x00659A20,same body as the Rva007ED9F0 row; both call sites in EE280 encode this address; alias name from BFME1 source
 _Rva0080FB40,0x0067BA40,address read from the REL32 displacements in DirtySock Y5SmallHelpers Rva0080F5A0 at 0x0067B4A0; call order matches BFME1 source; body not yet converted
 _Rva0080FD30,0x0067BC30,address read from the REL32 displacements in DirtySock Y4MultiPrecision Rva0080FB40 at 0x0067BA40; call order matches BFME1 source; body not yet converted
+_Rva0081BDB4@36,0x00687CB4,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008136C0 at 0x0067F5C0; call order matches BFME1 source; body not yet converted
+_Rva0081BDBA@24,0x00687CBA,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008136C0 at 0x0067F5C0; call order matches BFME1 source; body not yet converted

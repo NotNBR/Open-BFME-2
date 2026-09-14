@@ -7241,3 +7241,4 @@ _Rva0080F0D0,,0x0067AFD0,46,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,mat
 _Rva0080F5A0,,0x0067B4A0,1359,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,bfme1 DirtySock small-unit exact placement; ret-truncated unique hit; upgrades pin to row
 _Rva0080FB40,,0x0067BA40,437,Code/Libraries/Source/DirtySock/Y4MultiPrecision.c,matched,bfme1 DirtySock small-unit exact placement; ret-truncated unique hit; upgrades pin to row
 _Rva00810120,,0x0067C020,3058,Code/Libraries/Source/DirtySock/Y4CommDigest.c,matched,bfme1 DirtySock small-unit exact placement; ret-truncated unique hit; upgrades pin to row
+_Rva008136C0,,0x0067F5C0,143,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,bfme1 DirtySock small-unit exact placement; ret-truncated unique hit; callees pinned
