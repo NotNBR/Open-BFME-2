@@ -1414,3 +1414,4 @@ _Rva007EEC30,0x0065BB60,address from masked placement of the same-TU body; forwa
 __RTC_UninitUse,0x0075AB62,address read from the REL32 displacements in DirtySock Y4CivilTime Rva007EDE00 at 0x0065AD30; compiler RTC helper next to RTC_CheckEsp; body not yet converted
 _Rva007FEF60,0x0066B430,address read from the REL32 displacement in DirtySock Y4CivilTime Rva007EF780 at 0x0065C6B0; last call in source order after EDB10; body not yet converted
 ?bfmeInit1019@@YAXPAD@Z,0x00629B14,address read from the REL32 displacement in DirtySock Rva007F0000Allocator at 0x0065CEE0; structural name from another lane; body not yet converted
+_Rva0081B010,0x00686F10,address read from the REL32 displacement in DirtySock Y4CommSequencedRing Rva0081B790 at 0x00687690; BFME1 Y4CommSequencedRing names this callee; body not yet converted

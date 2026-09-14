@@ -205,8 +205,8 @@ int Rva0081BC80( struct Rva0081BD40Comm *comm, void *buffer, int size,
 	return record->m_length;
 }
 
-__declspec(dllimport) void __stdcall Rva01358D18Enter( void *lock );
-__declspec(dllimport) void __stdcall Rva01358E74Leave( void *lock );
+__declspec(dllimport) void __stdcall EnterCriticalSection( void *lock );
+__declspec(dllimport) void __stdcall LeaveCriticalSection( void *lock );
 
 int Rva0081B010( struct Rva0081BD40Comm *comm, void *argument );
 
@@ -235,14 +235,14 @@ int Rva0081B790( struct Rva0081BD40Comm *comm, void *argument )
 	if ( argument == 0 || comm->m_state != 1 )
 		return -2;
 
-	Rva01358D18Enter( comm->m_lock );
+	EnterCriticalSection( comm->m_lock );
 
 	iResult = Rva0081B010( comm, argument );
 
 	if ( comm->m_state == 5 )
 		comm->m_state = 3;
 
-	Rva01358E74Leave( comm->m_lock );
+	LeaveCriticalSection( comm->m_lock );
 	return iResult;
 }
 
@@ -253,14 +253,14 @@ int Rva0081B910( struct Rva0081BD40Comm *comm, void *argument )
 	if ( argument == 0 || comm->m_state != 1 )
 		return -2;
 
-	Rva01358D18Enter( comm->m_lock );
+	EnterCriticalSection( comm->m_lock );
 
 	iResult = Rva0081B010( comm, argument );
 
 	if ( comm->m_state == 5 )
 		comm->m_state = 2;
 
-	Rva01358E74Leave( comm->m_lock );
+	LeaveCriticalSection( comm->m_lock );
 	return iResult;
 }
 
@@ -633,9 +633,9 @@ int Rva0081BA60( struct Rva0081BD40Comm *comm, const void *payload,
 	comm->m_sendWriteOffset = ( comm->m_sendWriteOffset
 		+ comm->m_sendRecordSize ) % comm->m_sendBufferSize;
 
-	Rva01358D18Enter( comm->m_lock );
+	EnterCriticalSection( comm->m_lock );
 	Rva0081A8C0( comm );
-	Rva01358E74Leave( comm->m_lock );
+	LeaveCriticalSection( comm->m_lock );
 
 	iCount = ( ( comm->m_sendWriteOffset + comm->m_sendBufferSize
 		- comm->m_sendReadOffset ) % comm->m_sendBufferSize )
