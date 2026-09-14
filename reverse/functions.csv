@@ -7119,3 +7119,4 @@ _Rva007EFB20,,0x0065CA50,254,Code/Libraries/Source/DirtySock/Y4CivilTime.c,match
 _Rva007EFC20,,0x0065CB50,223,Code/Libraries/Source/DirtySock/Y4CivilTime.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 ?Rva007F0000Alloc@@YAPAXH@Z,,0x0065CEE0,42,Code/Libraries/Source/DirtySock/Rva007F0000Allocator.cpp,matched,bfme1 DirtySock allocator exact source; unique masked hit; callee pinned
 _Rva0080D7A0,,0x006796A0,234,Code/Libraries/Source/DirtySock/Y4BoundedCopy.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
+_Rva0080D930,,0x00679830,79,Code/Libraries/Source/DirtySock/Y4BoundedCopy.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
