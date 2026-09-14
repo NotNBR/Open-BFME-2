@@ -13,8 +13,8 @@ Goal: Source code that rebuilds BFME 2's engine binary (`game.dat`) byte-for-byt
 
 ## Status
 
-**8.99% of the game's retail `.text` has exact byte coverage** — 723,074 C++ bytes
-plus 5,026 ASM-only bytes. Source-backed reconstruction accounts for 9.09% of
+**10.86% of the game's retail `.text` has exact byte coverage** — 873,916 C++ bytes
+plus 5,204 ASM-only bytes. Source-backed reconstruction accounts for 10.98% of
 real code, 2,040 bytes of which are the first prebuilt-library rows: retail
 statically links Visual C++ 7.1's own support libraries, and `tools/lib_probe.py`
 places their members without needing an attached row to anchor a window. The
@@ -25,7 +25,7 @@ are wide open.
 
 ## Roadmap
 
-* [ ] BFME 2 Source Code (8.99%)
+* [ ] BFME 2 Source Code (10.86%)
 * [ ] 60/120 FPS
 * [ ] Memory fix
 * [ ] Better crash logs
