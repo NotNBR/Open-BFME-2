@@ -1438,3 +1438,7 @@ _strdup,0x006C4C70,address read from the retail REL32 in INIClass::Put_String at
 _strlen,0x00629170,BFME2 retail strlen thunk and call target for StringBase<char>::compare(const char *)
 _strncpy,0x0062983E,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672740; static CRT callee; body not yet converted
 _strstr,0x00629850,address read from the REL32 displacement in DirtySock Y4CommTable Rva00811E20 at 0x0067DD20; static CRT callee; body not yet converted
+?Rva00807520@@YAHPAURva00806580Record@@HH@Z,0x00673550,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva0080E330@@YAHPAXH@Z,0x0067A230,same length-adjust body as the Rva0080E330 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
+?Rva0080E350@@YAXPAXPADH@Z,0x0067A250,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x006733A0; call order matches BFME1 source; body not yet converted
+?Rva0080E410@@YAXPAXPADH@Z,0x0067A310,same cipher-update body as the Rva0080E410 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
