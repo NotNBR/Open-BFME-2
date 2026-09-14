@@ -7294,3 +7294,4 @@ _Rva00811CE0,,0x0067DBE0,144,Code/Libraries/Source/DirtySock/Y4CommTable.c,match
 _ProtoMangleCreate,,0x00670190,245,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,gen-alias;object-symbol=_ProtoMangleCreate;C++ alias
 _Rva00814070,,0x0067FF70,39,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,gen-alias;object-symbol=_Rva00814070;C++ alias
 _Rva008140A0,,0x0067FFA0,39,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,gen-alias;object-symbol=_Rva008140A0;C++ alias
+?dup_00680300@@YAXXZ,,0x00680300,91,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,gen-alias;object-symbol=_Rva00814400;C++ alias
