@@ -7282,3 +7282,4 @@ _Rva0081AE20,,0x00686D20,450,Code/Libraries/Source/DirtySock/Rva00819630TapiTran
 _chatGetUserID,,0x006A15F0,11,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,reloc-free span this TU already compiles; sibling _chatGetProfileID at 0x006A1600
 _Rva008142B0,,0x006801B0,23,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,matched,C++ alias; reloc-free idle setter; unclaimed_scan exact cc-padded
 _Rva008154F0,,0x006813F0,23,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,C++ alias; reloc-free idle setter; unclaimed_scan exact cc-padded
+_Rva00816DF0,,0x00682CF0,23,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,C++ alias; reloc-free idle setter; unclaimed_scan exact cc-padded
