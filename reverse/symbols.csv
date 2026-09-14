@@ -1507,3 +1507,6 @@ _Rva00814D60,0x00680C60,address from masked placement of the same-TU body; forwa
 _Rva007FF720,0x0066BBF0,address read from the REL32 displacement in DirtySock Y4CommTransportLife Rva00819090 at 0x00684F90; BFME1 Y4CommTransportLife names this callee; body not yet converted
 _Rva0080C960,0x00678860,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva0080B4B0 at 0x006773B0; call order matches BFME1 source; body not yet converted
 _Rva0080AD00,0x00676C00,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva0080B4B0 at 0x006773B0; call order matches BFME1 source; body not yet converted
+_Rva0080D590,0x00678A43,address read from the REL32 displacement in DirtySock ProtoSSLParseCertificate Rva0080C960 at 0x00678860; call order matches BFME1 source; body not yet converted
+_Rva0080D620,0x00679490,address read from the REL32 displacement in DirtySock ProtoSSLParseCertificate Rva0080C960 at 0x00678860; call order matches BFME1 source; body not yet converted
+_Rva0080D6C0,0x00679520,address read from the REL32 displacement in DirtySock ProtoSSLParseCertificate Rva0080C960 at 0x00678860; call order matches BFME1 source; body not yet converted
