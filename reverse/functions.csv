@@ -7322,3 +7322,4 @@ _piStopReporting,,0x006A75E0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/
 ?add@MultiIniFieldParse@@QAEXPBUFieldParse@@I@Z,,0x0002BC6E,60,Code/GameEngine/Source/Common/System/INI_MultiIniFieldParse_add.cpp,matched,
 ?parseDurationReal@INI@@SAXPAV1@PAX1PBX@Z,,0x00338B0A,38,Code/GameEngine/Source/Common/System/INI_parseDurationReal.cpp,matched,
 ??0BfmeMsgVJH@@QAE@PADH@Z,,0x00655900,76,Code/GameEngine/Source/GameNetwork/BfmeMsgVJH_ctor.cpp,matched,
+?hasOverrideWindow@RadarWindowOverrideSource@@QBE_NXZ,,0x002D35D6,16,Code/GameEngine/Source/Common/System/RadarWindowOverride.cpp,matched,

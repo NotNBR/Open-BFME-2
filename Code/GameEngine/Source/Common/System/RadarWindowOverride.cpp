@@ -10,7 +10,10 @@ class GameWindow;
 struct RadarWindowOverrideInner
 {
 	char m_pad[ 0x60 ];
-	unsigned char m_flags;
+	bool m_flag0 : 1;
+	bool m_flag1 : 1;
+	bool m_flag2 : 1;
+	bool m_unused : 5;
 	char m_pad61[ 3 ];
 	GameWindow *m_window;
 };
@@ -18,7 +21,6 @@ struct RadarWindowOverrideInner
 class RadarWindowOverrideSource
 {
 public:
-	// ?hasOverrideWindow@RadarWindowOverrideSource@@QBE_NXZ present-unmatched
 	bool hasOverrideWindow( void ) const;
 	GameWindow *getOverrideWindow( void ) const;
 
@@ -30,4 +32,9 @@ private:
 GameWindow *RadarWindowOverrideSource::getOverrideWindow( void ) const
 {
 	return m_inner->m_window;
+}
+
+bool RadarWindowOverrideSource::hasOverrideWindow( void ) const
+{
+	return ( m_inner->m_flag0 || m_inner->m_flag1 || m_inner->m_flag2 ) ? 0 : 1;
 }
