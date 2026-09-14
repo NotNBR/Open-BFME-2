@@ -7174,3 +7174,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva008060B0@@YAHPAURva00804150ProtoMangleRef@@HH@Z,,0x006720F0,327,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; callees pinned
 ?Rva00806200HttpPost@@YAXPAURva008042B0Http@@PBDH111@Z,,0x00672240,181,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; upgrades pin to row
 ?Rva00804440LocalAddr@@YAIXZ,,0x00670480,267,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; pinned twin address; upgrades pin to row
+?Rva00805A70NextProbe@@YAHPAURva00805960Probe@@PAURva00804150ProtoMangleRef@@PBD@Z,,0x00671AB0,512,Code/Libraries/Source/DirtySock/Y2ProtoMangleNextProbe.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; upgrades pin to row
