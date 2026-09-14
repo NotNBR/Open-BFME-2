@@ -1505,3 +1505,5 @@ _Rva0081BDD2@20,0x00687CD2,address read from the REL32 displacement in DirtySock
 __strcmpi,0x00629A2A,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813A50 at 0x0067F950; static CRT callee; body not yet converted
 _Rva00814D60,0x00680C60,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva007FF720,0x0066BBF0,address read from the REL32 displacement in DirtySock Y4CommTransportLife Rva00819090 at 0x00684F90; BFME1 Y4CommTransportLife names this callee; body not yet converted
+_Rva0080C960,0x00678860,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva0080B4B0 at 0x006773B0; call order matches BFME1 source; body not yet converted
+_Rva0080AD00,0x00676C00,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva0080B4B0 at 0x006773B0; call order matches BFME1 source; body not yet converted
