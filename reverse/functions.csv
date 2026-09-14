@@ -7279,3 +7279,4 @@ _Rva0081AE20,,0x00686D20,450,Code/Libraries/Source/DirtySock/Rva00819630TapiTran
 ?Needs_Vertex_Normals@MeshModelClass@@QAE_NXZ,,0x00171850,20,Code/Libraries/Source/WWVegas/WW3D2/meshmdl.cpp,matched,
 ?Remove_Texture_Category@DX8FVFCategoryContainer@@QAEXPAVDX8TextureCategoryClass@@@Z,,0x00144C30,115,Code/Libraries/Source/WWVegas/WW3D2/dx8renderer.cpp,matched,
 ?call@Rva007F6740Receiver@@QAEXPAXHHHHHHHHPB_JIPAPBDIHH@Z,,0x00662ED0,298,Code/GameEngine/Source/GameNetwork/Rva007F6740GameBrowserArrayRequest.cpp,matched,
+_chatGetUserID,,0x006A15F0,11,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,reloc-free span this TU already compiles; sibling _chatGetProfileID at 0x006A1600
