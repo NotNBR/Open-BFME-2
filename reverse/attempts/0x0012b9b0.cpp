@@ -1,5 +1,7 @@
 // ?Vendor_Specific_Hacks@DX8Caps@@AAEXABU_D3DADAPTER_IDENTIFIER8@@@Z
-// partial score=0.989 date=2026-09-09
+// partial score=0.994 date=2026-09-14
+// ?Vendor_Specific_Hacks@DX8Caps@@AAEXABU_D3DADAPTER_IDENTIFIER8@@@Z
+// partial score=0.994 date=2026-09-14
 // cl: (compiled as part of Code/Libraries/Source/WWVegas/WW3D2/dx8caps.cpp)
 //
 // ?Vendor_Specific_Hacks@DX8Caps@@AAEXABU_D3DADAPTER_IDENTIFIER8@@@Z
@@ -69,10 +71,36 @@
 //     matching length under /G6 is a coincidence of scheduling, not evidence.
 //     Do not switch the unit's flag to chase this body.
 //
-// NOT YET TRIED:
+// NOT YET TRIED (2026-09-09 and earlier):
 //   * Making the fold's operand set literally exclude fmt[118] in the source.
 //     Retail elides it, so the source may never have named it, and dropping it
 //     removes the only reason the fold must be ordered after the store.
+//
+// ================= UPDATE 2026-09-14: barrier gives exact size, 6B left =====
+// Ported the BFME1 ancestor shape (indices 100-104 there, 118-122 here):
+// three named bool loads before the two false stores, _ReadWriteBarrier,
+// fourth load after, then |= chain. Needs the barrier decl at top:
+//   extern "C" void _ReadWriteBarrier(void);
+//   #pragma intrinsic(_ReadWriteBarrier)
+// Result: 1065 bytes EXACT size (was 1053), first diff at +0x6E. Retail holds
+// fmt[122] in al, fmt[120] in dl, fmt[119] in cl across the stores, reloads
+// fmt[121] into bl after, folds or al,bl / or al,dl / or al,cl, stores al.
+// Ours holds fmt[122] in al, fmt[120] in cl, fmt[119] in dl (dl/cl swapped),
+// reloads fmt[121] into bl, folds or bl,dl / or bl,cl / or bl,al into bl.
+// Same 4 operands, same elision of fmt[118], same xor bl,bl after.
+// REFUTED 2026-09-14, do not re-run:
+//   * unsigned char temporaries (1068B, worse).
+//   * named-member overlay (CompressionFields supportDXT3/4/5) for the loads:
+//     identical 1065B and identical dl/cl + accumulator diff.
+//   * declaration/assignment split to decouple load order from registers:
+//     registers follow assignment order (first-assigned takes cl), no change.
+//   * fold order swaps (|= Dxt2 before Dxt3) and single-expression fold
+//     (supportDxtc | supportDxt4 | ...): identical bl accumulator.
+// The wall is pure register allocation: first-assigned of the pair takes cl,
+// second takes dl, accumulator takes bl (Dxt4's register) instead of al.
+// Next lever (not tried): keep bl=0 live across the loads so Dxt4 cannot take
+// bl, or find a spelling where the accumulator shares al with Dxtc instead of
+// bl with Dxt4 (e.g. use Dxtc after the fold to keep it live in al).
 //
 // place_bodies over the unit after both corrections: 0 new bodies, 0 new pins.
 // The layout fix did not unblock siblings here the way the RenderObjClass and
