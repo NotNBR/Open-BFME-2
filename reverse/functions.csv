@@ -7205,3 +7205,4 @@ _Rva0081B9B0,,0x006878B0,24,Code/Libraries/Source/DirtySock/Rva0081B9B0Shutdown.
 ??_GGen0080ACD0@@UAEPAXI@Z,,0x00676BD0,35,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar deleter exact source; unique masked hit; callees pinned
 ?Rva007EBAE0@@YADD@Z,,0x00658A10,35,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit
 ?Rva007EBFC0@@YAPADPBD@Z,,0x00658EF0,103,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit; callee pinned
+?Rva007EBCA0@@YAPADPBD0@Z,,0x00658BD0,374,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit; upgrades pin to row
