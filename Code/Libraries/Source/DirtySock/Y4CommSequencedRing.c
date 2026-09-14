@@ -83,7 +83,7 @@ struct Rva0081BD40Comm
  * for a poll interval; here it is called with zero, which is a yield rather
  * than a wait.  The name is address-derived: an IAT call site is a DIR32 and
  * the gate fills it from retail, so nothing here asserts which API it is. */
-__declspec(dllimport) void __stdcall Rva01358F30Wait( int interval );
+__declspec(dllimport) void __stdcall Sleep( int interval );
 __declspec(dllimport) unsigned int __stdcall Rva01358E0CTick( void );
 __declspec(dllimport) int __stdcall Rva01358EDC( void *handle,
 	unsigned int mask );
@@ -187,7 +187,7 @@ int Rva0081BC80( struct Rva0081BD40Comm *comm, void *buffer, int size,
 		return -7;
 
 	while ( comm->m_depth != 0 )
-		Rva01358F30Wait( 0 );
+		Sleep( 0 );
 
 	record = (struct Rva0081BC80Record *)( comm->m_recvBuffer
 		+ comm->m_recvReadOffset );

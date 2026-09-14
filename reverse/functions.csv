@@ -7123,3 +7123,4 @@ _Rva0080D930,,0x00679830,79,Code/Libraries/Source/DirtySock/Y4BoundedCopy.c,matc
 _Rva0081A360,,0x00686260,70,Code/Libraries/Source/DirtySock/Y4CommSequencedRing.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva0081B790,,0x00687690,148,Code/Libraries/Source/DirtySock/Y4CommSequencedRing.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; Win32 imports by slot identity
 _Rva0081BD40,,0x00687C40,98,Code/Libraries/Source/DirtySock/Y4CommSequencedRing.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
+_Rva0081BC80,,0x00687B80,186,Code/Libraries/Source/DirtySock/Y4CommSequencedRing.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; Win32 import by slot identity
