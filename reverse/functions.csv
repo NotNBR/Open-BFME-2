@@ -7200,3 +7200,4 @@ _CommUdpPoke,,0x00684920,173,Code/Libraries/Source/DirtySock/commudp.cpp,matched
 _CommUDPSend,,0x006832C0,625,Code/Libraries/Source/DirtySock/commudp.cpp,matched,bfme1 DirtySock commudp exact source; unique masked hit; callee pinned
 _Rva0081A6A0,,0x006865A0,146,Code/Libraries/Source/DirtySock/Rva0081A6A0Comm.cpp,matched,bfme1 DirtySock comm exact source; unique masked hit
 _Rva0081A740,,0x00686640,203,Code/Libraries/Source/DirtySock/Rva0081A740Comm.cpp,matched,bfme1 DirtySock comm exact source; unique masked hit
+_Rva0081B700,,0x00687600,134,Code/Libraries/Source/DirtySock/Rva0081B700CommReset.cpp,matched,bfme1 DirtySock comm exact source; unique masked hit
