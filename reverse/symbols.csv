@@ -1390,3 +1390,6 @@ _Rva00814EA0,0x00680DA0,address from masked placement of the same-TU body; forwa
 _Rva00814700,0x00680600,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva00814770,0x00680670,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00814700 at 0x00680600; call order matches BFME1 source; body not yet converted
 _Rva0081B9B0,0x006878B0,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813F20 at 0x0067FE20; BFME1 Y4CommTickIdle names this callee; body not yet converted
+_Rva007FFCB0,0x0066C180,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008151E0 at 0x006810E0; call order matches BFME1 source; body not yet converted
+_Rva007FD5C0,0x00669A90,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008151E0 at 0x006810E0; call order matches BFME1 source; body not yet converted
+_Rva008142B0,0x006801B0,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008151E0 at 0x006810E0; one of three identical twins; this site is byte-true; body not yet converted
