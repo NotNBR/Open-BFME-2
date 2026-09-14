@@ -7260,3 +7260,4 @@ _Rva0080B4B0,,0x006773B0,3704,Code/Libraries/Source/DirtySock/Y2Rva00806580Modul
 _Rva00816160,,0x00682060,254,Code/Libraries/Source/DirtySock/Y4CommRingIdle.c,matched,bfme1 DirtySock small-unit exact placement; caller context disambiguates twin; upgrades pin to row
 _Rva00818500,,0x00684400,254,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; caller context disambiguates twin
 _Rva00813100@24,,0x0067F000,1003,Code/Libraries/Source/DirtySock/Rva00813100ConnectionSetup.cpp,matched,bfme1 DirtySock connsetup exact source; ret-truncated unique hit; upgrades pin to row
+?Rva007FDFF0Connect@@YAPAXPBDH@Z,,0x0066A4C0,494,Code/Libraries/Source/DirtySock/Rva007FDFF0Connect.cpp,matched,bfme1 DirtySock connect exact source; ret-truncated unique hit; Win32 imports by slot identity
