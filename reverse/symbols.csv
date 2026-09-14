@@ -1489,3 +1489,4 @@ _strtoul,0x006291C0,address read from the REL32 displacement in DirtySock Y2Rva0
 ?Rva00807EE0@@YAPAURva00807EE0Entry@@PBEPAXH@Z,0x00673F10,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva00807FB0@@YAPAURva00807EE0Entry@@PBE0H@Z,0x00673FE0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva00818500,0x00684400,address read from the REL32 displacements in DirtySock commudp CommUdpSetup at 0x00684300; BFME1 commudp names this callee; body not yet converted
+_Rva00817640,0x00683540,address read from the REL32 displacement in DirtySock commudp CommUDPSend at 0x006832C0; BFME1 commudp names this callee; body not yet converted
