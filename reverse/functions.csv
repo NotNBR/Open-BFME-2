@@ -7178,3 +7178,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva00805830SkipNewlines@@YAPBDPBD0@Z,,0x00671870,62,Code/Libraries/Source/DirtySock/Y2ProtoMangleTagField.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; upgrades pin to row
 ?Rva00805620ParseStatus@@YAPBDPBDPAH@Z,,0x00671660,235,Code/Libraries/Source/DirtySock/Y2ProtoMangleTagField.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; callee pinned
 ?Rva00805710TagFieldGet@@YAHPADHPBD1H@Z,,0x00671750,273,Code/Libraries/Source/DirtySock/Y2ProtoMangleTagField.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
+?Rva00807960@@YAHPBDH@Z,,0x00673990,147,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,bfme1 DirtySock module exact source; unique masked hit; Win32 import by slot identity
