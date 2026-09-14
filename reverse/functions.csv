@@ -7312,3 +7312,4 @@ _piXpingTableHashFn,,0x006A3440,154,Code/GameEngine/Source/GameNetwork/GameSpy/p
 _piSBStopListingAutoMatches,,0x006A5AC0,54,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBStopListingAutoMatches.c,matched,
 _piStopAutoMatchReporting,,0x006A7660,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerStopAutoMatchReporting.c,matched,
 _piOperationsCleanup,,0x0069FEA0,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerOperationsCleanup.c,matched,
+_piSendStateChanged,,0x006A7610,24,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSendStateChanged.c,matched,
