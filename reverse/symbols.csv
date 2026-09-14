@@ -1516,3 +1516,5 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ??1BfmeMsgVJH@@QAE@XZ,0x00655780,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00676730; call order matches BFME1 source; body not yet converted
 ??1Gen00809750@@UAE@XZ,0x006755F0,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00676730; call order matches BFME1 source; body not yet converted
 ?Gen007EFFC0@@YAPAVGenAlloc@@XZ,0x0065CEA0,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x00676730; BFME1 names this allocator getter; body not yet converted
+??1Gen007EB140@@UAE@XZ,0x00657690,address read from the REL32 displacement in DirtySock Y2ScalarDeleters at 0x006580E0; BFME1 names this dtor; body not yet converted
+??3Gen007EB140@@SAXPAXI@Z,0x0065D030,shared pool-free helper also used by Gen0080ACD0; member-delete alias from BFME1 Y2ScalarDeleters call sites
