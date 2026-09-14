@@ -7083,3 +7083,4 @@ _Rva00817140,,0x00683040,116,Code/Libraries/Source/DirtySock/Y4CommTransportLife
 _Rva008171C0,,0x006830C0,79,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva00818D20,,0x00684C20,98,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
 _Rva00818BF0,,0x00684AF0,189,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
+_Rva00818CB0,,0x00684BB0,110,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; upgrades pin to row
