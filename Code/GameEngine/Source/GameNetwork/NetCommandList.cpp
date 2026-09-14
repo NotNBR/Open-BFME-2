@@ -5,14 +5,20 @@
 // and destroy the head node until the list is empty, then clear the counters.
 // Each node's +4/+8 links are cleared before it is detached and deleted.
 
+class NetCommandMsg
+{
+public:
+	void detach();
+};
+
 class NetCommandNode
 {
 public:
 	void detach();
 
-	NetCommandNode *m_unreconstructed_00;
-	NetCommandNode *m_next;
-	void *m_unreconstructed_08;
+	NetCommandMsg *m_msg; ///< retail this+0x00, released by detach
+	NetCommandNode *m_next; ///< retail this+0x04, cleared by reset
+	NetCommandNode *m_prev; ///< retail this+0x08, cleared by reset
 };
 
 class NetCommandList
@@ -32,7 +38,7 @@ void NetCommandList::reset()
 	{
 		NetCommandNode *temp = m_head->m_next;
 		m_head->m_next = 0;
-		m_head->m_unreconstructed_08 = 0;
+		m_head->m_prev = 0;
 		NetCommandNode *node = m_head;
 		if (node != 0)
 		{
@@ -43,4 +49,11 @@ void NetCommandList::reset()
 	}
 	m_count = 0;
 	m_unreconstructed_0C = 0;
+}
+
+// ?detach@NetCommandNode@@QAEXXZ
+void NetCommandNode::detach()
+{
+	if (m_msg)
+		m_msg->detach();
 }

@@ -883,6 +883,7 @@ name,address,notes
 ?deleteLoadScreen@GameLogic@@QAEXXZ,0x002423E3,GameEngine slot 39 call target; BFME1 GameLogic deleteLoadScreen is the first client-subsystem operation and this BFME2 body owns the same GameLogic state
 ?destroyObject@GameLogic@@QAEXPAVObject@@@Z,0x00242C09,address read from the REL32 displacement at a placed body
 ?destroyParticleSystemByID@ParticleSystemManager@@QAEXW4ParticleSystemID@@@Z,0x001F5B79,address read from the REL32 displacement at a placed body
+?detach@NetCommandMsg@@QAEXXZ,0x004D55BC,NetCommandMsg refcount release at +0x18 with virtual-dtor flag-0 plus global opdelete; tail-call target of NetCommandNode::detach 12B at 0x58B8AE (jmp rel32); ZH NetCommandMsg::detach in NetCommandMsg.cpp
 ?detach@NetCommandNode@@QAEXXZ,0x0058B8AE,12-byte node cleanup; REL32 from NetCommandList::reset
 ?doFxAtBones@FXListAtBonePosFXNugget@@IBEXPBVObject@@H@Z,0x001E2DD6,address read from the REL32 displacement at a placed body
 ?do_always_noconv@?$codecvt@GDH@_STL@@MBE_NXZ,0x001826C0,slot 5 of 0x007BBB2C; folded
