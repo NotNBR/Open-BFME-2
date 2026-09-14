@@ -7222,3 +7222,4 @@ _Rva0081B9B0,,0x006878B0,24,Code/Libraries/Source/DirtySock/Rva0081B9B0Shutdown.
 ?Rva007ECBE0@@YAHPADHPBDI@Z,,0x00659B10,417,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit
 ?Rva007ECE60@@YAHPADHPBD1@Z,,0x00659D90,629,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit
 ?Rva007ED0E0@@YAHPADHPBDPBEH@Z,,0x0065A010,311,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit
+?Rva007ED220@@YAHPADHPBDPBEH@Z,,0x0065A150,315,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; unique masked hit
