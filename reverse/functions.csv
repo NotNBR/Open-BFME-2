@@ -7276,3 +7276,4 @@ _Rva0081AE20,,0x00686D20,450,Code/Libraries/Source/DirtySock/Rva00819630TapiTran
 ??_GGen00808FB0@@UAEPAXI@Z,,0x00674EB0,32,Code/Libraries/Source/DirtySock/Y2ScalarDeleters.cpp,matched,bfme1 DirtySock scalar exact source; fixed-sweep unique hit; callees pinned
 ?WriteConditionDataChunk@Condition@@SAXAAVDataChunkOutput@@PAV1@@Z,,0x003B428C,183,Code/GameEngine/Source/GameLogic/ScriptEngine/ConditionWriteDataChunk.cpp,matched,
 ?_M_doit@?$_Underflow@DV?$char_traits@D@_STL@@@_STL@@SAHPAV?$basic_filebuf@DV?$char_traits@D@_STL@@@2@@Z,,0x0001E560,395,Code/Libraries/Source/WWVegas/WWLib/stlport_narrow_filebuf_mmap_underflow.cpp,matched,
+?Needs_Vertex_Normals@MeshModelClass@@QAE_NXZ,,0x00171850,20,Code/Libraries/Source/WWVegas/WW3D2/meshmdl.cpp,matched,
