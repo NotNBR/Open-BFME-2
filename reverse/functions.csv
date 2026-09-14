@@ -7149,3 +7149,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva007EB380Startup@@YAHPAD@Z,,0x00658320,81,Code/Libraries/Source/DirtySock/Y2NetConn.cpp,matched,bfme1 DirtySock NetConn exact source; unique masked hit; callee pinned
 ?Rva007EB650Shutdown@@YAHXZ,,0x006585F0,34,Code/Libraries/Source/DirtySock/Y2NetConn.cpp,matched,bfme1 DirtySock NetConn exact source; unique masked hit; callees pinned
 ?Rva007F8D30@@YAXXZ,,0x006653B0,105,Code/Libraries/Source/DirtySock/Y2NetConn.cpp,matched,bfme1 DirtySock NetConn exact source; unique masked hit; upgrades pin to row
+?Rva007EB680Sleep@@YAXI@Z,,0x00658620,33,Code/Libraries/Source/DirtySock/Y2NetConn.cpp,matched,bfme1 DirtySock NetConn exact source; unique masked hit; Win32 import by slot identity
