@@ -1393,3 +1393,4 @@ _Rva0081B9B0,0x006878B0,address read from the REL32 displacement in DirtySock Y4
 _Rva007FFCB0,0x0066C180,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008151E0 at 0x006810E0; call order matches BFME1 source; body not yet converted
 _Rva007FD5C0,0x00669A90,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008151E0 at 0x006810E0; call order matches BFME1 source; body not yet converted
 _Rva008142B0,0x006801B0,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008151E0 at 0x006810E0; one of three identical twins; this site is byte-true; body not yet converted
+_CommTCPUnlisten,0x00680260,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008142D0 at 0x006801D0; real upstream name from BFME1 source; body not yet converted
