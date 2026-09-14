@@ -7305,3 +7305,4 @@ _Rva008140A0,,0x0067FFA0,39,Code/Libraries/Source/DirtySock/Y4CommTickIdle.c,mat
 ?Rva00807920@@YAPAXPBDH@Z,,0x00673950,28,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,gen-alias;object-symbol=?Rva00807920@@YAPAXPBDH@Z;C++ alias
 ?Rva00807940@@YAHPBDH@Z,,0x00673970,28,Code/Libraries/Source/DirtySock/Y2Rva00807900Module.cpp,matched,gen-alias;object-symbol=?Rva00807940@@YAHPBDH@Z;C++ alias
 _piXpingTableHashFn,,0x006A3440,154,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerPingPlayerJoinedRoom.c,matched,gen-alias;object-symbol=_piXpingTableHashFn;C++ alias
+?getOverrideWindow@RadarWindowOverrideSource@@QBEPAVGameWindow@@XZ,,0x002D35CF,7,Code/GameEngine/Source/Common/System/RadarWindowOverride.cpp,matched,leaf getter via inner window at +0x64; dedicated TU preserves newMap caller
