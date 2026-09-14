@@ -1466,7 +1466,7 @@ _sprintf,0x006291B4,address read from the REL32 displacement in DirtySock Y2Prot
 ?Rva00805710TagFieldGet@@YAHPADHPBD1H@Z,0x00671750,address read from the REL32 displacements in DirtySock Y2ProtoMangleHelpers at 0x006718B0; call order matches BFME1 source; body not yet converted
 ?Rva007FFC10TextAddr@@YAIPBD@Z,0x0066C0E0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006718B0; BFME1 names this callee; body not yet converted
 _atoi,0x00629838,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006718B0; static CRT callee; body not yet converted
-?Rva00805830SkipNewlines@@YAPBDPBD0@Z,0x00671AB0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006719A0; call order matches BFME1 source; body not yet converted
-?Rva00805A70NextProbe@@YAHPAURva00805960Probe@@PAURva00804150ProtoMangleRef@@PBD@Z,0x00671870,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006719A0; call order matches BFME1 source; body not yet converted
+?Rva00805830SkipNewlines@@YAPBDPBD0@Z,0x00671870,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006719A0; call order matches BFME1 source; body not yet converted
+?Rva00805A70NextProbe@@YAHPAURva00805960Probe@@PAURva00804150ProtoMangleRef@@PBD@Z,0x00671AB0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006719A0; call order matches BFME1 source; body not yet converted
 ?Rva00805C70@@YAHPAURva00804150ProtoMangleRef@@PAURva00805960Probe@@@Z,0x00671CB0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva00805E50@@YAXPAURva00804150ProtoMangleRef@@PAURva00805960Probe@@HH@Z,0x00671E90,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
