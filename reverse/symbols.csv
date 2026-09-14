@@ -597,7 +597,22 @@ name,address,notes
 ?Resize@?$VectorClass@VTCBClass@TCBSpline3DClass@@@@UAE_NHPBVTCBClass@TCBSpline3DClass@@@Z,0x000F0BF1
 ?Resize@StringClass@@AAEXH@Z,0x00610C70,address read from the REL32 displacement at a placed body; stlport 4.5.3
 ?Return_File@RawFileFactoryClass@@QAEXPAVFileClass@@@Z,0x006132A0,address read from the retail REL32 in INIClass::Save(const char*) at 0x00616650
+?Rva007F0030Free@@YAXPAX@Z,0x0065CF10,same free body as the Rva007F0030 pin; C++ alias name from BFME1 Y2Rva00806580Module call sites
 ?Rva007FE780Printf@@YAHPBDZZ,0x0066AC50,address read from the REL32 displacements in DirtySock netgameutil NetGameUtilControl at 0x0067A4E0; BFME1 netgameutil names this callee; body not yet converted
+?Rva007FEA00Tick@@YAIXZ,0x0066AED0,same tick body as the Rva007FEA00 pin per BFME1 Y2NetConn comment placing Tick at 0x007FEA00; call sites in Y2Rva00806580Module encode this address; body not yet converted
+?Rva007FF990Swap16@@YAGG@Z,0x0066BE60,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672940; call order matches BFME1 source; body not yet converted
+?Rva007FF9F0Swap32@@YAII@Z,0x0066BEC0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672940; call order matches BFME1 source; body not yet converted
+?Rva007FFA60Swap16@@YAGG@Z,0x0066BF30,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
+?Rva007FFAD0@@YAII@Z,0x0066BFA0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
+?Rva00806B10@@YAXPAURva00806580Record@@@Z,0x00672B40,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva00807370@@YAHPAURva00806580Record@@HHPADH@Z,0x006733A0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva008076E0@@YAHPAURva00806580Record@@PAI1PAPAD@Z,0x00673710,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva0080B000Create@@YAPAXXZ,0x00676F00,same allocator body as the Rva0080B000 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
+?Rva0080B070Destroy@@YAXPAX@Z,0x00676F70,same release-and-free body as the Rva0080B070 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
+?Rva0080B150@@YAHPAX0H@Z,0x00677050,same socket-connect body as the Rva0080B150 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
+?Rva0080B460@@YAHPAXH@Z,0x00677360,same mode-set body as the Rva0080B460 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
+?Rva0080DF70@@YAHPBDPAD1@Z,0x00679E70,same key-split body as the Rva0080DF70 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
+?Rva0080DFC0@@YAXPAXPBX@Z,0x00679EC0,same cipher-init body as the Rva0080DFC0 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
 ?Save@INIClass@@QBEHAAVFileClass@@@Z,0x006165B0,address read from the REL32 displacement at a placed body; stlport 4.5.3
 ?Save_W3D@SubObjectArrayClass@HLodDefClass@@QAE_NAAVChunkSaveClass@@@Z,0x0019B370,address read from the REL32 displacement at a placed body; stlport 4.5.3
 ?Scale@MeshGeometryClass@@QAEXABVVector3@@@Z,0x0016B3F0,BFME2 target-side callee pin for MeshClass::Scale drift quick win
@@ -798,6 +813,7 @@ name,address,notes
 ?bfmeFlushQO@BfmeThingQO@@QAEXH@Z,0x00039300
 ?bfmeGetMainWindowTitle@@YA?AVUnicodeString@@XZ,0x0023484D,window title UnicodeString helper called by initializeAppWindows
 ?bfmeGlobalCGD@@YAXXZ,0x00759600
+?bfmeInit1019@@YAXPAD@Z,0x00629B14,address read from the REL32 displacement in DirtySock Rva007F0000Allocator at 0x0065CEE0; structural name from another lane; body not yet converted
 ?bfmeInitDGD@BfmeThingDGD@@QAEPAV1@PAX@Z,0x00664620
 ?bfmeInitDGF@BfmeThingDGF@@QAEPAV1@PAX@Z,0x00664DB0
 ?bfmeInitDGG@BfmeThingDGG@@QAEPAV1@PAX@Z,0x00666EC0
@@ -1150,6 +1166,7 @@ _MD5Init,0x00606220,GameSpy C-linkage alias; all 40 compiled MD5Init bytes exact
 _MD5Print,0x00606320,GameSpy callee already byte-verified in Code/GameEngine/Source/GameNetwork/GameSpy/md5c.c at commit 5ba3d5ea032c; direct call from _gpiHandleEnd
 _MD5Update,0x00606C40,RSA MD5 C-linkage alias of existing byte-verified WWLib C++ body; independently compiled entire GameSpy source body and all direct calls agree
 _PeerOperationsComplete,0x0069FF40,
+_Rva007EEC30,0x0065BB60,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva007F0000,0x0065CEE0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B000 at 0x00676F00; BFME1 Y4CommAlloc names the FESL allocator callee; body not yet converted
 _Rva007F0000Alloc,0x0065CEE0,same allocator body as the Rva007F0000 pin per byte-true call sites in DirtySock Y4CommTransportLife Rva00816BF0 at 0x00682AF0; body not yet converted
 _Rva007F0030,0x0065CF10,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B070 at 0x00676F70; BFME1 Y4CommAlloc names this callee; body not yet converted
@@ -1161,6 +1178,7 @@ _Rva007FD7A0,0x00669C70,address read from the REL32 displacement in DirtySock Y4
 _Rva007FD7D0,0x00669CA0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B0A0 at 0x00676FA0; call order matches BFME1 source; body not yet converted
 _Rva007FD920,0x00669DF0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080D980 at 0x00679880; call order matches BFME1 source; body not yet converted
 _Rva007FDA50,0x00669F20,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080DA50 at 0x00679950; BFME1 names this recv callee per Y2Rva00807900Module; body not yet converted
+_Rva007FDB60,0x0066A030,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080DBF0 at 0x00679AF0; BFME1 Y5SmallHelpers names this callee; body not yet converted
 _Rva007FDE80,0x0066A350,address read from the REL32 displacement in DirtySock Y4CommTable Rva00812320 at 0x0067E220; call order matches BFME1 source; body not yet converted
 _Rva007FE780,0x0066AC50,address read from the REL32 displacements in DirtySock Y5SmallHelpers Rva008119A0 at 0x0067D8A0; same log body as the Rva007FE780Printf pin per BFME1 Y2NetConn; body not yet converted
 _Rva007FEA00,0x0066AED0,address read from the REL32 displacement in DirtySock Y4MultiPrecision Rva0080F430 at 0x0067B330; BFME1 Y4MultiPrecision names this callee; body not yet converted
@@ -1169,10 +1187,14 @@ _Rva007FEAA0,0x0066AF70,address read from the REL32 displacement in DirtySock Y4
 _Rva007FEB00,0x0066AFD0,address read from the REL32 displacement in DirtySock Y4CommRingIdle Rva00815B50 at 0x00681A50; call order matches BFME1 source; body not yet converted
 _Rva007FEBD0,0x0066B0A0,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva008119A0 at 0x0067D8A0; call order matches BFME1 source; body not yet converted
 _Rva007FECB0,0x0066B180,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva008119A0 at 0x0067D8A0; call order matches BFME1 source; body not yet converted
+_Rva007FEF60,0x0066B430,address read from the REL32 displacement in DirtySock Y4CivilTime Rva007EF780 at 0x0065C6B0; last call in source order after EDB10; body not yet converted
 _Rva007FFCB0,0x0066C180,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva008151E0 at 0x006810E0; call order matches BFME1 source; body not yet converted
 _Rva0080ADE0,0x00676CE0,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080B050 at 0x00676F50; BFME1 Y4CommAlloc names this callee; body not yet converted
+_Rva0080B1B0,0x006770B0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
+_Rva0080B4B0,0x006773B0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
 _Rva0080C390,0x00678290,address read from the REL32 displacement in DirtySock Y4CommAlloc Rva0080D980 at 0x00679880; same-TU forward reference pending conversion; body not yet converted
 _Rva0080C6F0,0x006785F0,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080DA50 at 0x00679950; same-TU forward reference pending conversion; body not yet converted
+_Rva0080E200,0x0067A100,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
 _Rva0080F5A0,0x0067B4A0,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080F550 at 0x0067B450; same-TU forward reference pending conversion; body not yet converted
 _Rva00810120,0x0067C020,address read from the REL32 displacement in DirtySock Y4CommDigest Rva00810060 at 0x0067BF60; same-TU forward reference pending conversion; body not yet converted
 _Rva00811310,0x0067D210,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
@@ -1213,11 +1235,15 @@ _Rva00817140,0x00683040,address read from the REL32 displacement in DirtySock Y4
 _Rva00817B30,0x00683A30,address read from the REL32 displacement in DirtySock Y4CommTransportLife Rva00818CB0 at 0x00684BB0; call order matches BFME1 source; body not yet converted
 _Rva00818BF0,0x00684AF0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva00818CB0,0x00684BB0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+_Rva0081A3B0,0x006862B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+_Rva0081B010,0x00686F10,address read from the REL32 displacement in DirtySock Y4CommSequencedRing Rva0081B790 at 0x00687690; BFME1 Y4CommSequencedRing names this callee; body not yet converted
 _Rva0081B830,0x00687730
 _Rva0081B9B0,0x006878B0,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813F20 at 0x0067FE20; BFME1 Y4CommTickIdle names this callee; body not yet converted
 _Rva0081B9D0,0x006878D0,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813F90 at 0x0067FE90; BFME1 Y4CommTickIdle names this callee; body not yet converted
 _Rva0081BA60,0x00687960,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00814040 at 0x0067FF40; BFME1 Y4CommTickIdle names this callee; body not yet converted
+_Rva0081BC80,0x00687B80,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva0081BDAE@4,0x00687CAE,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813780 at 0x0067F680; BFME1 Y4CommTickIdle names this callee; body not yet converted
+_Rva0081BDE4,0x006556AC,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x006725B0; BFME1 names this callee; body not yet converted
 _SBServerGetPrivateInetAddress,0x00030BE0,
 _SBServerGetPublicInetAddress,0x006989D0,GameSpy public IPv4 getter; exact seven-byte source body folded with ArrayLength; server layout and independently matched SDK callers corroborate alias
 _SBServerSetICMPIP,0x006BC320,GameSpy ICMP-address setter; exact twelve-byte source body folded with ghiPostSetAutoFree; server field layout and independently matched SDK callers corroborate alias
@@ -1248,6 +1274,7 @@ __CIpow,0x006299A0,address read from the REL32 displacement at a placed body; st
 __CxxThrowException@8,0x00629094,MSVC 7.1 C++ throw helper; retail target of the ATL AtlThrow body at 0x00001125
 __EH_prolog,0x00629188,MSVC 7.1 EH frame prologue helper - push -1 / push eax / link fs:[0] / set up the unwind frame; every /EHsc body with a local static calls it first
 __RTC_CheckEsp,0x0075A5A2
+__RTC_UninitUse,0x0075AB62,address read from the REL32 displacements in DirtySock Y4CivilTime Rva007EDE00 at 0x0065AD30; compiler RTC helper next to RTC_CheckEsp; body not yet converted
 __ReadUCS2CharFromUTF8String,0x0069D8F0,GameSpy UTF8 decoder; independently compiled 174-byte stringutil.c body at this address; direct call in GP UTF8ToUCS2StringLen corroborates identity
 __SEH_prolog,0x00628FA4,CRT SEH frame setup, emitted by cl for every __try; Ghidra names it and sizes it 59. Address is the REL32 in CComCriticalSection::Init
 ___WSAFDIsSet@8,0x006556EE,PE-verified FF25 import thunk to wsock32.dll!__WSAFDIsSet via IAT 0x00BBA944; independently read from retail import directory
@@ -1409,29 +1436,5 @@ _strcmp,0x006291C6,PE CRT thunk; independent FF25 import thunk at RVA 0x006291C6
 _strcpy,0x00629176,IAT jmp after _strlen; REL32 from makeDecoratedNameKey
 _strdup,0x006C4C70,address read from the retail REL32 in INIClass::Put_String at 0x00616FB0; the CRT body this unit calls directly where it imports the rest of the CRT
 _strlen,0x00629170,BFME2 retail strlen thunk and call target for StringBase<char>::compare(const char *)
+_strncpy,0x0062983E,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672740; static CRT callee; body not yet converted
 _strstr,0x00629850,address read from the REL32 displacement in DirtySock Y4CommTable Rva00811E20 at 0x0067DD20; static CRT callee; body not yet converted
-_Rva007EEC30,0x0065BB60,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
-__RTC_UninitUse,0x0075AB62,address read from the REL32 displacements in DirtySock Y4CivilTime Rva007EDE00 at 0x0065AD30; compiler RTC helper next to RTC_CheckEsp; body not yet converted
-_Rva007FEF60,0x0066B430,address read from the REL32 displacement in DirtySock Y4CivilTime Rva007EF780 at 0x0065C6B0; last call in source order after EDB10; body not yet converted
-?bfmeInit1019@@YAXPAD@Z,0x00629B14,address read from the REL32 displacement in DirtySock Rva007F0000Allocator at 0x0065CEE0; structural name from another lane; body not yet converted
-_Rva0081B010,0x00686F10,address read from the REL32 displacement in DirtySock Y4CommSequencedRing Rva0081B790 at 0x00687690; BFME1 Y4CommSequencedRing names this callee; body not yet converted
-_Rva0081BC80,0x00687B80,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
-_Rva0081A3B0,0x006862B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
-?Rva007FEA00Tick@@YAIXZ,0x0066AED0,same tick body as the Rva007FEA00 pin per BFME1 Y2NetConn comment placing Tick at 0x007FEA00; call sites in Y2Rva00806580Module encode this address; body not yet converted
-?Rva0080B070Destroy@@YAXPAX@Z,0x00676F70,same release-and-free body as the Rva0080B070 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
-?Rva0080DFC0@@YAXPAXPBX@Z,0x00679EC0,same cipher-init body as the Rva0080DFC0 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
-?Rva007F0030Free@@YAXPAX@Z,0x0065CF10,same free body as the Rva007F0030 pin; C++ alias name from BFME1 Y2Rva00806580Module call sites
-?Rva008076E0@@YAHPAURva00806580Record@@PAI1PAPAD@Z,0x00673710,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
-?Rva00806B10@@YAXPAURva00806580Record@@@Z,0x00672B40,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
-?Rva0080B000Create@@YAPAXXZ,0x00676F00,same allocator body as the Rva0080B000 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
-?Rva007FFA60Swap16@@YAGG@Z,0x0066BF30,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
-?Rva007FFAD0@@YAII@Z,0x0066BFA0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
-_Rva0080B1B0,0x006770B0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
-_Rva0080B4B0,0x006773B0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
-_Rva0080E200,0x0067A100,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
-_Rva007FDB60,0x0066A030,address read from the REL32 displacement in DirtySock Y5SmallHelpers Rva0080DBF0 at 0x00679AF0; BFME1 Y5SmallHelpers names this callee; body not yet converted
-_Rva0081BDE4,0x006556AC,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x006725B0; BFME1 names this callee; body not yet converted
-?Rva007FF9F0Swap32@@YAII@Z,0x0066BEC0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672940; call order matches BFME1 source; body not yet converted
-?Rva007FF990Swap16@@YAGG@Z,0x0066BE60,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672940; call order matches BFME1 source; body not yet converted
-?Rva0080B150@@YAHPAX0H@Z,0x00677050,same socket-connect body as the Rva0080B150 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
-?Rva0080B460@@YAHPAXH@Z,0x00677360,same mode-set body as the Rva0080B460 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
