@@ -7310,3 +7310,4 @@ _piXpingTableHashFn,,0x006A3440,154,Code/GameEngine/Source/GameNetwork/GameSpy/p
 ??6Debug@@UAEAAV0@PBD@Z,,0x0003B340,137,Code/Libraries/Source/debug/debug_debug.cpp,matched,TU-local RetailDebugOutView pins curType at +0x9cf4 with 7 types and m_width at +0x9f50 with m_fillChar at +0x9f54; signed len/k give jge/jl; Debug qualification emits retail direct AddOutput calls
 ??6Debug@@UAEAAV0@ABVMemDump@0@@Z,,0x000389C0,617,Code/Libraries/Source/debug/debug_debug.cpp,matched,Extends RetailDebugOutView with 7-entry ioBuffer at +0x9c84; curType 7 check; plain virtual operator calls slot 0x38 like retail
 _piSBStopListingAutoMatches,,0x006A5AC0,54,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerSBStopListingAutoMatches.c,matched,
+_piStopAutoMatchReporting,,0x006A7660,36,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerStopAutoMatchReporting.c,matched,
