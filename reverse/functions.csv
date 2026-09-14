@@ -7089,3 +7089,4 @@ _Rva00819590,,0x00685490,147,Code/Libraries/Source/DirtySock/Y4CommTransportLife
 _Rva008186C0,,0x006845C0,161,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva00818FF0,,0x00684EF0,160,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
 _Rva008187E0,,0x006846E0,567,Code/Libraries/Source/DirtySock/Y4CommTransportLife.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit; callee pinned
+_Rva00811180,,0x0067D080,74,Code/Libraries/Source/DirtySock/Y4CommSha1.c,matched,bfme1 DirtySock small-unit exact placement; unique masked hit
