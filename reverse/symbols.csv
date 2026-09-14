@@ -1443,3 +1443,5 @@ _strstr,0x00629850,address read from the REL32 displacement in DirtySock Y4CommT
 ?Rva0080E350@@YAXPAXPADH@Z,0x0067A250,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x006733A0; call order matches BFME1 source; body not yet converted
 ?Rva0080E410@@YAXPAXPADH@Z,0x0067A310,same cipher-update body as the Rva0080E410 row; C++ alias name from BFME1 Y2Rva00806580Module call sites
 ?Rva007FD080@@YAXH@Z,0x00669550,address read from the REL32 displacement in DirtySock Y2NetConn at 0x00658320; BFME1 Y2NetConn names this callee; body not yet converted
+?Rva007F8D30@@YAXXZ,0x006653B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
+?Rva007FD270@@YAXXZ,0x00669740,address read from the REL32 displacement in DirtySock Y2NetConn at 0x006585F0; BFME1 Y2NetConn names this callee; body not yet converted
