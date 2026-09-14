@@ -1530,3 +1530,4 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ??3Gen008030A0@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites
 ??3Gen00808FB0@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites
 ??3Gen00809750@@SAXPAXI@Z,0x0065D030,shared pool-free helper; member-delete alias from BFME1 Y2ScalarDeleters call sites
+??1Gen00808FB0@@UAE@XZ,0x00655780,same folded dtor body as the BfmeMsgVJH pin; alias name from BFME1 Y2ScalarDeleters call sites
