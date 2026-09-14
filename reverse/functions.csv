@@ -7161,3 +7161,4 @@ _Rva0080DBF0,,0x00679AF0,146,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,ma
 ?Rva00805610HttpCode@@YAHPAURva00804150ProtoMangleRef@@@Z,,0x00671650,14,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
 ?Rva00804250CopyField@@YAXPADPBDH@Z,,0x00670290,83,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
 ?Rva008042B0HttpCreate@@YAHPAURva008042B0Http@@H@Z,,0x006702F0,118,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
+?Rva00806040@@YAHPAURva00804150ProtoMangleRef@@PAIPAH@Z,,0x00672080,108,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit
