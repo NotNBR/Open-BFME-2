@@ -11,9 +11,22 @@
 
 struct Rva007FD4E0Socket
 {
-	char m_gap[0x16];
+	struct Rva007FD4E0Socket *m_next; /* +0x00 */
+	struct Rva007FD4E0Socket *m_killNext; /* +0x04 */
+	int m_family; /* +0x08 */
+	int m_type; /* +0x0C */
+	int m_protocol; /* +0x10 */
+	char m_opened; /* +0x14 */
+	char m_reserved15; /* +0x15 */
 	short m_shutdownFlags; /* +0x16 */
 	unsigned int m_socket; /* +0x18 */
+	char m_gap[0x20];
+	void *m_callback; /* +0x3C */
+	unsigned int m_lastTick; /* +0x40 */
+	unsigned int m_rate; /* +0x44 */
+	void *m_callbackData; /* +0x48 */
+	void (__cdecl *m_callbackProc)(struct Rva007FD4E0Socket *socket,
+		int reason, void *data); /* +0x4C */
 };
 
 int __stdcall bind(unsigned int socket, const void *address, int addressLength);
@@ -75,6 +88,17 @@ int Rva007FDEB0(int control, int value, void *pointer)
 int Rva007FE200(const int *value)
 {
 	return *value;
+}
+
+int Rva007FDE80(struct Rva007FD4E0Socket *socket, void *callback,
+	unsigned int rate, void *data,
+	void (__cdecl *proc)(struct Rva007FD4E0Socket *, int, void *))
+{
+	socket->m_rate = rate;
+	socket->m_callback = callback;
+	socket->m_callbackData = data;
+	socket->m_callbackProc = proc;
+	return 0;
 }
 
 int Rva007FE6C0(const char *string1, const char *string2, int length)
