@@ -7419,3 +7419,4 @@ _Rva0081B010,,0x00686F10,1692,Code/Libraries/Source/DirtySock/Rva0081B010CommWor
 ?Rva007ECAF0@@YAHPADHPBDH@Z,,0x00659A20,205,Code/Libraries/Source/DirtySock/Y2Rva007EBAE0Module.cpp,matched,bfme1 DirtySock EBAE0 exact source; flag-mask to letters via same-TU body
 ?Rva00800040JoinI64@@YAXPB_JIPADID@Z,,0x0066C4F0,289,Code/GameEngine/Source/GameNetwork/Y2FeslUtilJoinI64.cpp,matched,bfme1 Y2FeslUtilJoinI64 source; int64-array join via sprintf percent-I64d
 ?Rva00800170Join@@YAXPAPBDIPADID@Z,,0x0066C620,261,Code/GameEngine/Source/GameNetwork/Y2FeslUtilJoin.cpp,matched,bfme1 Y2FeslUtilJoin source; string-array join via strlen-strcat
+?compareNoCase@?$StringBase@G@@QBEHPBG@Z,0x00037A90,0x00037A90,89,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,Open-BFME5 clean C++; stlport 4.5.3; wide fold test via trait with ternary tiebreak

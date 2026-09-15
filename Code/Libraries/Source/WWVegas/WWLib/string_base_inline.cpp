@@ -367,6 +367,22 @@ int StringBase<char>::compareNoCase(const char *str) const
     return result;
 }
 
+// The wide twin measures with a wcslen call and folds through the trait's
+// folding member. The tiebreak is a ternary so the difference stays in esi
+// (sub esi,edi then mov eax,esi); an if-return spells it mov-first.
+template <>
+int StringBase<wchar_t>::compareNoCase(const wchar_t *str) const
+{
+    const int strLen = str ? (int)wcslen(str) : 0;
+    int len = m_data ? m_data->length : 0;
+    const wchar_t *data = m_data ? &m_data->data[0] : L"";
+
+    WideCharCompare tag;
+
+    int result = tag.compareNoCase(data, str, len < strLen ? len : strLen);
+    return result != 0 ? result : len - strLen;
+}
+
 template <typename T>
 bool StringBase<T>::endsWithNoCase(const StringBase<T> &str) const
 {
