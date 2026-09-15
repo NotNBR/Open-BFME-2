@@ -1,9 +1,12 @@
 // cl: /Od /GZ /GS /MD /DNDEBUG
 /* EA DirtySock socket wrappers, ported verbatim from BFME1
- * Y4DirtySockSocket.c. Retail 0x006699E0 (41B) and 0x00669A10 (126B).
+ * Y4DirtySockSocket.c. Retail 0x006699E0 (41B), 0x00669A10 (126B)
+ * and 0x0066AB90 (180B).
  *
  * The bind wrapper hands its result to the Winsock error translator,
  * which maps WSAE* failures onto the library's small negative vocabulary.
+ * The bounded compare selects unbounded form on negative length; both
+ * operands read unsigned, so high-bit differences stay non-negative.
  */
 
 struct Rva007FD4E0Socket
@@ -40,4 +43,30 @@ int Rva007FD510(struct Rva007FD4E0Socket *socket, const void *address,
 	int addressLength)
 {
 	return Rva007FD540(bind(socket->m_socket, address, addressLength));
+}
+
+int Rva007FE6C0(const char *string1, const char *string2, int length)
+{
+	int difference;
+	const unsigned char *first;
+	const unsigned char *second;
+
+	first = (const unsigned char *)string1;
+	second = (const unsigned char *)string2;
+	if (length < 0)
+	{
+		for (; *first != 0; first++, second++)
+		{
+			if (*first != *second)
+				return *first - *second;
+		}
+		return 0;
+	}
+	for (; length > 0; first++, second++, length--)
+	{
+		difference = *first - *second;
+		if (difference != 0)
+			return difference;
+	}
+	return 0;
 }
