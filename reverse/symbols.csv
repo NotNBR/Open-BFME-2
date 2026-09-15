@@ -1242,6 +1242,12 @@ _Rva00818BF0,0x00684AF0,address from masked placement of the same-TU body; forwa
 _Rva00818CB0,0x00684BB0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva0081A3B0,0x006862B0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 _Rva0081B010,0x00686F10,address read from the REL32 displacement in DirtySock Y4CommSequencedRing Rva0081B790 at 0x00687690; BFME1 Y4CommSequencedRing names this callee; body not yet converted
+_Rva008139A0,0x0067F8A0,op-table slot 1 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTickIdle body 158B matches Ghidra 158B; body not yet converted
+?rva00813CF0@@YAXXZ,0x0067FBF0,op-table slot 3 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTapi names this op callee; 5B unclaimed
+_Rva00813E30,0x0067FD30,op-table slot 5 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTickIdle body 27B matches Ghidra 27B; body not yet converted
+?rva00813A40@@YAXXZ,0x0067F940,op-table slot 8 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTapi names this op callee; 5B unclaimed
+_Rva00814020,0x0067FF20,op-table slot 10 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTapi names this op callee; 17B unclaimed
+_Rva00812FD0,0x0067EED0,CommTAPI factory at 0x0067ECD0 passes this address as the CreateThread worker entry; BFME1 Y4CommTickIdle body 267B matches Ghidra 267B; body not yet converted
 _Rva0081B830,0x00687730
 _Rva0081B9B0,0x006878B0,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813F20 at 0x0067FE20; BFME1 Y4CommTickIdle names this callee; body not yet converted
 _Rva0081B9D0,0x006878D0,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813F90 at 0x0067FE90; BFME1 Y4CommTickIdle names this callee; body not yet converted
