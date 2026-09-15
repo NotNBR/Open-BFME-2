@@ -1,87 +1,98 @@
 // ?bfmeOneCGD@BfmeThingCGD@@QAEXXZ
-// partial score=0.6 date=2026-09-11
-// Standalone attempt body for ?bfmeOneCGD@BfmeThingCGD@@QAEXXZ @ 0x00758D10.
-// Layout proven (all branch targets/structure byte-equal); register
-// assignment is not: see the partial record in reverse/re_attempts.log.
+// partial score=0.7 date=2026-09-15
+// cl: /DNDEBUG /MD /EHsc /O2 /Ob2
+// ?bfmeOneCGD@BfmeThingCGD@@QAEXXZ
+//
+// BfmeThingCGD::bfmeOneCGD at 0x00758D10 (193 bytes): sweep the 0x493
+// bucket array, and splice every node whose two sub-objects agree it is
+// ready from its home chain onto the collection list.  Pure pointer
+// surgery, no calls, so the member names below are only offset carriers;
+// only the +0xAE10/+0xC05C/+0xC060/+0xC064 slots and the node +0/+4/+0x10
+// /+0x2C/+0x30 shape matter.
+
 struct BfmeCGDSub
 {
-	unsigned char _gap0[4];
-	int m_val4; // +4
-	unsigned char _gap1[8];
-	int m_val10; // +0x10
+	unsigned char m_pad00[0x04];
+	void *m_ptr04;
+	unsigned char m_pad08[0x10 - 0x08];
+	int m_flag10;
 };
 
 struct BfmeCGDNode
 {
-	BfmeCGDSub *m_sub0; // +0
-	BfmeCGDSub *m_sub4; // +4
-	unsigned char _gap0[8]; // +8
-	int m_val10; // +0x10
-	unsigned char _gap1[0x2c - 0x14];
-	BfmeCGDNode **m_prev; // +0x2c, points at the previous link (or the head)
-	BfmeCGDNode *m_next; // +0x30
+	BfmeCGDSub *m_subA;		// +0x00
+	BfmeCGDSub *m_subB;		// +0x04
+	unsigned char m_pad08[0x10 - 0x08];
+	int m_flag10;			// +0x10
+	unsigned char m_pad14[0x2C - 0x14];
+	void *m_prevLink;		// +0x2C: address of the link field holding this node
+	BfmeCGDNode *m_next;		// +0x30
 };
 
 class BfmeThingCGD
 {
 public:
-	void bfmeOneCGD();
-	void *m_bfmeFirst; // +0
-	unsigned char m_gap0[0xae10 - 4]; // +4
-	BfmeCGDNode *m_buckets[0x493]; // +0xae10, ends at 0xc05c
-	BfmeCGDNode *m_head; // +0xc05c, active list made of spliced nodes
-	unsigned m_index; // +0xc060
-	BfmeCGDNode *m_current; // +0xc064
-	unsigned char m_gap1[0xc06d - 0xc068]; // +0xc068
-	bool m_bfmeBusy; // +0xc06d
+	void bfmeOneCGD(void);
+
+private:
+	unsigned char m_pad00[0xAE10];
+	BfmeCGDNode *m_buckets[0x493];	// +0xAE10
+	BfmeCGDNode *m_collect;		// +0xC05C
+	int m_index;			// +0xC060
+	BfmeCGDNode *m_cursor;		// +0xC064
 };
 
-void BfmeThingCGD::bfmeOneCGD()
+// ?bfmeOneCGD@BfmeThingCGD@@QAEXXZ
+void BfmeThingCGD::bfmeOneCGD(void)
 {
 	m_index = 0;
-	m_current = m_buckets[0];
-	for (;;)
-	{
-		if (m_current == 0)
-		{
-			for (;;)
-			{
-				unsigned idx = m_index + 1;
-				if (idx == 0x493)
-					return;
-				m_index = idx;
-				m_current = m_buckets[idx];
-				if (m_current != 0)
-					break;
+	m_cursor = m_buckets[0];
+	for (;;) {
+		if (m_cursor == 0) {
+			m_index = m_index + 1;
+			if (m_index == 0x493) {
+				return;
+			}
+			m_cursor = m_buckets[m_index];
+			if (m_cursor == 0) {
+				continue;
 			}
 		}
-		BfmeCGDNode *cur = m_current;
-		BfmeCGDNode *next = cur->m_next;
-		m_current = next;
-		if (cur == 0)
+		BfmeCGDNode *cur = m_cursor;
+		m_cursor = cur->m_next;
+		if (cur == 0) {
 			return;
-		if (cur->m_sub0->m_val10 == 0)
-		{
-			if (cur->m_sub4->m_val10 == 0)
-				continue;
 		}
-		BfmeCGDSub *s0 = cur->m_sub0;
-		if (s0->m_val4 != 0 && cur->m_sub4->m_val4 != 0)
-		{
-			cur->m_val10 = 0;
+		if (cur->m_subA->m_flag10 != 0) {
+			goto check_second;
 		}
-		else
-		{
-			if (m_current == cur)
-				m_current = m_current->m_next;
-			BfmeCGDNode *nxt = cur->m_next;
-			if (nxt != 0)
-				nxt->m_prev = cur->m_prev;
-			BfmeCGDNode **prv = cur->m_prev;
-			*prv = cur->m_next;
-			cur->m_prev = 0;
-			cur->m_next = m_head;
-			m_head = cur;
+		if (cur->m_subB->m_flag10 == 0) {
+			continue;
 		}
+check_second:
+		if (cur->m_subA->m_ptr04 == 0) {
+			goto splice_node;
+		}
+		if (cur->m_subB->m_ptr04 == 0) {
+			goto splice_node;
+		}
+		cur->m_flag10 = 0;
+		continue;
+splice_node:
+		if (m_cursor != cur) {
+			goto skip_advance;
+		}
+		m_cursor = cur->m_next;
+skip_advance:
+		if (cur->m_next != 0) {
+			cur->m_next->m_prevLink = cur->m_prevLink;
+		}
+		{
+			void **prevLink = (void **)cur->m_prevLink;
+			*prevLink = cur->m_next;
+		}
+		cur->m_prevLink = 0;
+		cur->m_next = m_collect;
+		m_collect = cur;
 	}
 }
