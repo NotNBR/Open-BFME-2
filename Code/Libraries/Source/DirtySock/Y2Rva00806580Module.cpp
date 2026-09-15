@@ -1511,3 +1511,24 @@ int Rva007FF990Swap16( unsigned short value )
 	*(unsigned short *)pair = value;
 	return ( pair[ 0 ] << 8 ) | pair[ 1 ];
 }
+
+// 0x0066BFA0 reverses 32-bit byte order by shifting the PARAMETER and storing
+// low byte to the highest offset first -- the same big-endian spelling the
+// swaps above use, extended to four bytes. Ported verbatim from BFME1
+// Rva007FFAD0 (0x007FFAD0, 102B) whose bytes are identical; same /Od /RTC
+// frame (0x0C, RTC check, no cookie -- the 4-byte buffer is below the /GS
+// threshold, just like the 2-byte swap buffers above).
+unsigned int Rva007FFAD0( unsigned int value )
+{
+	unsigned char result[ 4 ];
+
+	result[ 3 ] = (unsigned char)value;
+	value >>= 8;
+	result[ 2 ] = (unsigned char)value;
+	value >>= 8;
+	result[ 1 ] = (unsigned char)value;
+	value >>= 8;
+	result[ 0 ] = (unsigned char)value;
+
+	return *(unsigned int *)result;
+}
