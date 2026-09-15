@@ -965,3 +965,45 @@ void Rva007FE880(int group, const unsigned char *buffer, int length)
 			Rva007FE780(g_Rva012C3D1CFormat, addr, line);
 	}
 }
+
+struct Rva007FEF80Tm
+{
+	int tm_sec;
+	int tm_min;
+	int tm_hour;
+	int tm_mday;
+	int tm_mon;
+	int tm_year;
+	int tm_wday;
+	int tm_yday;
+	int tm_isdst;
+};
+
+struct Rva007FEF80Tm *__cdecl gmtime(const long *timer);
+struct Rva007FEF80Tm *__cdecl localtime(const long *timer);
+extern int g_Rva012C3D24Offset;
+
+int Rva007FEF80(void)
+{
+	int iGmt;
+	int iLocal;
+	long uTime;
+	struct Rva007FEF80Tm *pTm;
+
+	if (g_Rva012C3D24Offset == -1)
+	{
+		uTime = time(0);
+
+		pTm = gmtime(&uTime);
+		iGmt = pTm->tm_mday * 86400 + pTm->tm_hour * 3600
+			+ pTm->tm_min * 60 + pTm->tm_sec;
+
+		pTm = localtime(&uTime);
+		iLocal = pTm->tm_mday * 86400 + pTm->tm_hour * 3600
+			+ pTm->tm_min * 60 + pTm->tm_sec;
+
+		g_Rva012C3D24Offset = iLocal - iGmt;
+	}
+
+	return g_Rva012C3D24Offset;
+}
