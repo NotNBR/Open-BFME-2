@@ -659,3 +659,21 @@ void Rva007FED40(void *callback, void *ref)
 	g_Rva0130AB90[g_Rva0130ACB4].callbackRef = ref;
 	g_Rva0130ACB4++;
 }
+
+void Rva007FED90(void *callback, void *ref)
+{
+	int slotIndex;
+
+	if (callback == 0 || ref == 0)
+		return;
+	for (slotIndex = 0; slotIndex < g_Rva0130ACB4; slotIndex++)
+	{
+		if (g_Rva0130AB90[slotIndex].callbackFunction == callback &&
+			g_Rva0130AB90[slotIndex].callbackRef == ref)
+		{
+			g_Rva0130AB90[slotIndex].callbackFunction = 0;
+			g_Rva0130AB90[slotIndex].callbackRef = 0;
+			break;
+		}
+	}
+}
