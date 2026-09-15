@@ -1,11 +1,13 @@
 // cl: /Od /GZ /GS /MD /DNDEBUG
 /* EA DirtySock -- host:port text parser plus socket-address compare, ported
- * verbatim from BFME1 Y4DirtySockAddrText.c. Retail 0x0066C2A0 (442B)
- * and 0x0066BBF0 (108B).
+ * verbatim from BFME1 Y4DirtySockAddrText.c. Retail 0x0066C2A0 (442B),
+ * 0x0066BBF0 (108B) and 0x0066C180 (238B).
  *
  * Parses "host:port" with an optional third colon-separated number.
  * Returns a bitmask of what was found: bit 0 for non-zero address,
- * bit 1 for port field, bit 2 for third field.
+ * bit 1 for port field, bit 2 for third field. The builder zeroes a
+ * 16-byte socket address, runs the parser, and writes address and port
+ * back big-endian.
  */
 
 int Rva007FFDD0(unsigned int *address, int *port, int *extra,
@@ -89,4 +91,42 @@ int Rva007FF720(const struct Rva007FF720SockAddr *first,
 		compareLength = 6;
 
 	return Rva007FE6C0(first->m_data, second->m_data, compareLength);
+}
+
+struct Rva007FFCB0Addr
+{
+	unsigned short m_family; /* +0x00 */
+	unsigned short m_port; /* +0x02 */
+	unsigned int m_address; /* +0x04 */
+	unsigned int m_reserved8; /* +0x08 */
+	unsigned int m_reservedC; /* +0x0C */
+};
+
+int Rva007FFCB0(struct Rva007FFCB0Addr *sa, const char *text)
+{
+	int iResult;
+	int iPort;
+	unsigned int uAddr;
+	unsigned int uTemp;
+
+	iResult = 0;
+
+	sa->m_family = 2;
+	sa->m_port = 0;
+	sa->m_address = 0;
+	sa->m_reserved8 = 0;
+	sa->m_reservedC = 0;
+
+	iResult = Rva007FFDD0(&uAddr, &iPort, 0, text);
+
+	uTemp = uAddr;
+	((unsigned char *)sa)[7] = (unsigned char)uTemp; uTemp >>= 8;
+	((unsigned char *)sa)[6] = (unsigned char)uTemp; uTemp >>= 8;
+	((unsigned char *)sa)[5] = (unsigned char)uTemp; uTemp >>= 8;
+	((unsigned char *)sa)[4] = (unsigned char)uTemp;
+
+	((unsigned char *)sa)[2] = (unsigned char)(iPort >> 8);
+	((unsigned char *)sa)[3] = (unsigned char)iPort;
+
+	return iResult;
 }
