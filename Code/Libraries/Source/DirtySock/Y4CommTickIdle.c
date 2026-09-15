@@ -1303,25 +1303,26 @@ int Rva008136C0( int lineApplication, int deviceId, void *line,
 
 void Rva0081ACD0( void *transport );
 void __stdcall Rva0081BDCC( int lineApplication );
-__declspec(dllimport) int __stdcall Rva0135904CPostWorkerMessage(
+__declspec(dllimport) int __stdcall PostThreadMessageA(
 	unsigned int workerId, unsigned int message, int first, int second );
 __declspec(dllimport) void __stdcall Sleep( int interval );
-typedef void *( __stdcall *Rva008139A0WorkerHandleProc )( void );
-typedef int ( __stdcall *Rva008139A0ReleaseHandleProc )( void *handle,
-	int value, struct Rva00814700Comm *comm );
+__declspec(dllimport) void *__stdcall GetProcessHeap( void );
+__declspec(dllimport) int __stdcall HeapFree( void *heap,
+	unsigned int flags, void *block );
 
 void Rva008139A0( struct Rva00814700Comm *comm )
 {
 	Rva0081ACD0( comm->m_transport );
 	Rva0081BDCC( *(int *)( comm->m_endpoint + 4 ) );
 	comm->m_state = 9;
-	Rva0135904CPostWorkerMessage( comm->m_workerId, 0x12, 0, 0 );
+	PostThreadMessageA( comm->m_workerId, 0x12, 0, 0 );
 
 	while ( comm->m_state == 9 )
 		Sleep( 0 );
 
-	( *(Rva008139A0ReleaseHandleProc *)0x01358E44 )(
-		( *(Rva008139A0WorkerHandleProc *)0x01358DDC )(), 0, comm );
+	/* BFME1 dereferences its own IAT slots 0x01358E44/0x01358DDC here;
+	 * BFME2 retail calls HeapFree and GetProcessHeap through theirs. */
+	HeapFree( GetProcessHeap(), 0, comm );
 }
 
 struct Rva00812FD0Message
@@ -1329,18 +1330,27 @@ struct Rva00812FD0Message
 	int m_words[ 7 ];
 };
 
-__declspec(dllimport) int __stdcall Rva01359044DiscardMessage(
+/* Retail reaches the message-loop APIs through import thunks this repo
+ * names Rva01359xx and Rva01358xx (PeekMessageA GetModuleHandleA GetMessageA
+ * TranslateMessage DispatchMessageA, in IAT-slot order); the declarations
+ * use the real names the import verifier maps each slot to. */
+__declspec(dllimport) int __stdcall PeekMessageA(
 	struct Rva00812FD0Message *message, int window, int first, int last,
 	int flags );
-__declspec(dllimport) void *__stdcall Rva01358DC8ModuleHandle( int module );
-__declspec(dllimport) int __stdcall Rva0135900CReadMessage(
+__declspec(dllimport) void *__stdcall GetModuleHandleA( int module );
+__declspec(dllimport) int __stdcall GetMessageA(
 	struct Rva00812FD0Message *message, int window, int first, int last );
-__declspec(dllimport) int __stdcall Rva01359098TranslateMessage(
+__declspec(dllimport) int __stdcall TranslateMessage(
 	struct Rva00812FD0Message *message );
-__declspec(dllimport) int __stdcall Rva01358FC8DispatchMessage(
+__declspec(dllimport) int __stdcall DispatchMessageA(
 	struct Rva00812FD0Message *message );
 int __stdcall Rva0081BDA2( void *lineApplication, void *module,
 	void *callback, int name, void *deviceCount );
+/* The TAPI line callback: BFME1 spells its own VA 0x00C13100 here, BFME2
+ * retail passes 0x00A81A50, i.e. this same connection-setup entry. Declared
+ * with void * for the comm struct this TU does not include. */
+void __stdcall Rva00813100( int port, int kind, void *comm, int size,
+	int unusedA, int unusedB );
 
 int Rva00812FD0( struct Rva00814700Comm *argument )
 {
@@ -1349,9 +1359,9 @@ int Rva00812FD0( struct Rva00814700Comm *argument )
 	struct Rva00814700Comm *comm;
 
 	comm = argument;
-	Rva01359044DiscardMessage( &message, 0, 0, 0, 0 );
+	PeekMessageA( &message, 0, 0, 0, 0 );
 	iResult = Rva0081BDA2( comm->m_endpoint + 4,
-		Rva01358DC8ModuleHandle( 0 ), (void *)0x00C13100, 0,
+		GetModuleHandleA( 0 ), Rva00813100, 0,
 		comm->m_endpoint );
 
 	if ( *(int *)comm->m_endpoint == 0 )
@@ -1361,10 +1371,10 @@ int Rva00812FD0( struct Rva00814700Comm *argument )
 	}
 
 	comm->m_state = 2;
-	while ( Rva0135900CReadMessage( &message, 0, 0, 0 ) != 0 )
+	while ( GetMessageA( &message, 0, 0, 0 ) != 0 )
 	{
-		Rva01359098TranslateMessage( &message );
-		Rva01358FC8DispatchMessage( &message );
+		TranslateMessage( &message );
+		DispatchMessageA( &message );
 	}
 
 	comm->m_state = 1;
