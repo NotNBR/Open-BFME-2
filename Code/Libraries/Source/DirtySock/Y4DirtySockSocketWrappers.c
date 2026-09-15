@@ -901,3 +901,19 @@ int Rva007FE250(struct ResolveRequest *request)
 
 	return 0;
 }
+
+int __cdecl Rva007FF080(const char *text)
+{
+	int charIndex;
+	int hashValue;
+	int carryBits;
+
+	for (charIndex = 0, hashValue = 0; text[charIndex] != 0; charIndex++)
+	{
+		carryBits = hashValue & 0xF8000000;
+		hashValue = hashValue << 5;
+		hashValue = (carryBits >> 27) ^ hashValue;
+		hashValue = text[charIndex] ^ hashValue;
+	}
+	return hashValue;
+}
