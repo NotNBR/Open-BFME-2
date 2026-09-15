@@ -6,6 +6,13 @@
 #include <windows.h>
 #include <algorithm>
 
+#define PAGE_READONLY 0x02
+#define FILE_MAP_READ 0x04
+extern "C" __declspec(dllimport) void * __stdcall CreateFileMappingA(
+	void *, void *, unsigned long, unsigned long, unsigned long, const char *);
+extern "C" __declspec(dllimport) void * __stdcall MapViewOfFile(
+	void *, unsigned long, unsigned long, unsigned long, unsigned long);
+
 typedef long streamoff;
 
 namespace _STL
@@ -219,7 +226,7 @@ private:
 	}
 };
 
-// ?_M_doit@?$_Underflow@DV?$char_traits@D@_STL@@@_STL@@SAGPAV?$basic_filebuf@DV?$char_traits@D@_STL@@@2@@Z
+// ?_M_doit@?$_Underflow@DV?$char_traits@D@_STL@@@_STL@@SAHPAV?$basic_filebuf@DV?$char_traits@D@_STL@@@2@@Z
 #define MMAP_CHUNK 0x100000UL
 
 int _Underflow<char, char_traits<char> >::_M_doit(
@@ -323,5 +330,28 @@ int basic_filebuf<CharT, Traits>::_M_underflow_aux()
 }
 
 template int basic_filebuf<char, char_traits<char> >::_M_underflow_aux();
+
+// ?_M_mmap@_Filebuf_base@_STL@@QAEPAXJJ@Z
+void *_Filebuf_base::_M_mmap(streamoff offset, streamoff len)
+{
+	void *base;
+	_M_view_id = CreateFileMappingA(_M_file_id, 0, PAGE_READONLY, 0, 0, 0);
+	if (_M_view_id) {
+		base = MapViewOfFile(_M_view_id, FILE_MAP_READ,
+			(DWORD)((unsigned __int64)offset >> 32),
+			(DWORD)((unsigned __int64)offset & 0xffffffff),
+			(SIZE_T)len);
+		if (base == 0 || _M_seek(offset + len, ios_base::beg) < 0) {
+			if (base)
+				UnmapViewOfFile(base);
+			if (_M_view_id)
+				CloseHandle(_M_view_id);
+			_M_view_id = 0;
+			base = 0;
+		}
+	} else
+		base = 0;
+	return base;
+}
 
 }
