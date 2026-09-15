@@ -727,3 +727,14 @@ void Rva007FE620(void)
 
 	g_Rva012C3CDCDraining = 0;
 }
+
+void Rva007FE670(void)
+{
+	g_Rva0130ACB8Thread = 0;
+
+	while (g_Rva012C3CDCDraining > 0)
+		Sleep(1);
+
+	Rva007FEAA0(0);
+	Rva007FEAA0((struct Rva0130AB68List *)&g_Rva0130AC90);
+}
