@@ -34,7 +34,6 @@ Rva007FF700Date::Rva007FF700Date()
 	setDay(1);
 }
 
-// ?setDay@Rva007FF700Date@@QAEHH@Z present-unmatched
 int Rva007FF700Date::setDay(int day)
 {
 	int dayLimit;
