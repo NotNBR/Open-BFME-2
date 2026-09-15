@@ -763,7 +763,6 @@ bool HRawAnimClass::Has_Rotation (int pividx)
 	return NodeMotion[pividx].Q != NULL;
 }
 
-// ?Has_Visibility@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_Visibility (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));

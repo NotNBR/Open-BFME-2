@@ -7440,3 +7440,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?Free@HRawAnimClass@@AAEXXZ,,0x0018E890,50,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Animation teardown; placed by masked whole-text search
 ?add_bit_channel@HRawAnimClass@@AAEXPAVBitChannelClass@@@Z,,0x0018D520,25,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Visibility bit-channel install; placed by masked whole-text search
 ?Has_Rotation@HRawAnimClass@@UAE_NH@Z,,0x0018E690,24,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Rotation-channel presence; placed by masked whole-text search
+?Has_Visibility@HRawAnimClass@@UAE_NH@Z,,0x0018E6D0,24,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Visibility-channel presence; placed by masked whole-text search
