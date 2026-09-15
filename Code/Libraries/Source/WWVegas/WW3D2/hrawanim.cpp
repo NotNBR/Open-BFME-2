@@ -448,7 +448,6 @@ bool HRawAnimClass::read_bit_channel(ChunkLoadClass & cload,BitChannelClass * * 
  * HISTORY:                                                                                    *
  *   1/19/98    GTH : Created.                                                                 *
  *=============================================================================================*/
-// ?add_bit_channel@HRawAnimClass@@AAEXPAVBitChannelClass@@@Z present-unmatched
 void HRawAnimClass::add_bit_channel(BitChannelClass * newchan)
 {
 	int idx = newchan->Get_Pivot();

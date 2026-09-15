@@ -7438,3 +7438,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?Get_Vector_As_Quat@MotionChannelClass@@QBEXHAAVQuaternion@@@Z,,0x001600A0,110,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Inlined quat channel read on the unpooled layout (Data at +0x14); emitted by this TU; placed by masked whole-text search
 ?Is_Node_Motion_Present@HRawAnimClass@@UAE_NH@Z,,0x0018E5E0,70,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Channel-presence test; placed by masked whole-text search
 ?Free@HRawAnimClass@@AAEXXZ,,0x0018E890,50,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Animation teardown; placed by masked whole-text search
+?add_bit_channel@HRawAnimClass@@AAEXPAVBitChannelClass@@@Z,,0x0018D520,25,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Visibility bit-channel install; placed by masked whole-text search
