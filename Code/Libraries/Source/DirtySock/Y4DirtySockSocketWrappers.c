@@ -917,3 +917,51 @@ int __cdecl Rva007FF080(const char *text)
 	}
 	return hashValue;
 }
+
+int __cdecl sprintf(char *buffer, const char *format, ...);
+extern int g_Rva0130ACBCGroupMask;
+extern char g_Rva012C3D04Format[];
+extern char g_Rva012C3D0CFormat[];
+extern char g_Rva012C3D14Format[];
+extern char g_Rva012C3D1CFormat[];
+
+void Rva007FE880(int group, const unsigned char *buffer, int length)
+{
+	int i;
+	char *pOut;
+	char addr[0x10];
+	char line[0x80];
+
+	pOut = 0;
+
+	for (i = 0; i < length; i++)
+	{
+		if (pOut == 0)
+		{
+			sprintf(addr, g_Rva012C3D04Format, i);
+			pOut = line;
+		}
+
+		sprintf(pOut, g_Rva012C3D0CFormat, buffer[i]);
+		pOut += 2;
+
+		if ((i + 0x11) % 32 == 0)
+		{
+			*pOut = ' ';
+			pOut += 1;
+		}
+
+		if ((i + 1) % 32 == 0)
+		{
+			if (group & g_Rva0130ACBCGroupMask)
+				Rva007FE780(g_Rva012C3D14Format, addr, line);
+			pOut = 0;
+		}
+	}
+
+	if (pOut != 0)
+	{
+		if (group & g_Rva0130ACBCGroupMask)
+			Rva007FE780(g_Rva012C3D1CFormat, addr, line);
+	}
+}
