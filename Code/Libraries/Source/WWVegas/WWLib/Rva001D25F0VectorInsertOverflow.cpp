@@ -1,4 +1,4 @@
-// cl: /DNDEBUG /MD /EHsc /D_STLP_USE_STATIC_LIB /D_STLP_NO_EXCEPTIONS
+// cl: /DNDEBUG /MD /EHsc /D_STLP_USE_STATIC_LIB /D_STLP_NO_EXCEPTIONS /D_STLP_USE_MALLOC /D_CRTIMP= /Ireference/shims/bfmealloc
 // stlport
 
 // STLport vector<T>::_M_insert_overflow for the 92-byte element family whose
@@ -12,6 +12,7 @@ struct Rva001D28F0Element
 	char m_body[0x1c];
 	Rva001D28F0Element();
 	Rva001D28F0Element(const Rva001D28F0Element &other);
+	~Rva001D28F0Element();
 	Rva001D28F0Element &operator=(const Rva001D28F0Element &other);
 };
 
