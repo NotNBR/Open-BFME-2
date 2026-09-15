@@ -772,3 +772,18 @@ void Rva007FD170(struct Rva007FD4E0Socket *listHead)
 
 	Rva007FECB0(0);
 }
+
+void Rva0081BDE4(void);
+
+void Rva007FD270(void)
+{
+	Rva007FED90((void *)Rva007FD170, &g_Rva0130AB58Head);
+	Rva007FEE10();
+
+	while (g_Rva0130AB58Head != 0)
+		Rva007FD3F0((struct Rva007FD4E0Socket *)g_Rva0130AB58Head);
+
+	Rva007FD170(&g_Rva0130AB58Head);
+	Rva007FE670();
+	Rva0081BDE4();
+}
