@@ -859,3 +859,45 @@ void Rva007FE210(void *requestObject)
 	if (InterlockedExchange((long *)((char *)requestObject + 0x54), 1))
 		Rva007F0030(requestObject);
 }
+
+struct HostLookupRecord
+{
+	char header[0x0C];
+	unsigned char **addressList;
+};
+
+struct ResolveRequest
+{
+	int status;
+	unsigned int resolvedAddress;
+	char gap[8];
+	char hostname[0x44];
+	int state;
+};
+
+struct HostLookupRecord *__stdcall gethostbyname(const char *name);
+
+int Rva007FE250(struct ResolveRequest *request)
+{
+	unsigned char *addressBytes;
+	struct HostLookupRecord *lookupRecord;
+
+	lookupRecord = gethostbyname(request->hostname);
+
+	if (lookupRecord != 0)
+	{
+		addressBytes = *lookupRecord->addressList;
+		request->resolvedAddress = (addressBytes[0] << 24) | (addressBytes[1] << 16)
+			| (addressBytes[2] << 8) | addressBytes[3];
+		request->status = 1;
+	}
+	else
+	{
+		request->status = -1;
+	}
+
+	if (InterlockedExchange((long *)&request->state, 1))
+		Rva007F0030(request);
+
+	return 0;
+}
