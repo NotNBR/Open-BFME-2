@@ -1,11 +1,12 @@
 // cl: /Od /GZ /GS /MD /DNDEBUG
-/* EA DirtySock -- one-shot MD5 wrapper, ported verbatim from BFME1
+/* EA DirtySock -- one-shot MD5 and SHA-1 wrappers, ported verbatim from BFME1
  * Code/GameEngine/Source/GameNetwork/Y4DirtySockHashWrap.c
- * (Rva0080D590, 120B). Retail 0x00679490 (120B Ghidra).
+ * (Rva0080D590, 120B; Rva0080D620, 120B). Retail 0x00679490 and
+ * 0x00679520 (120B Ghidra each).
  *
- * Init/update/finish live in Y4CommDigest.c; this TU only stacks a
- * context, feeds it, and writes the digest. Retail names the local
- * MD5 (from the /GZ frame descriptor).
+ * Init/update/finish live in Y4CommDigest.c and Y4CommSha1.c; this TU
+ * only stacks a context, feeds it, and writes the digest. Retail names
+ * the locals MD5 and Sha1 (from the /GZ frame descriptors).
  */
 
 struct Rva00810060Context
@@ -27,4 +28,27 @@ void Rva0080D590(const unsigned char *data, int length, char *digest)
 	Rva00810020(&MD5);
 	Rva00810060(&MD5, data, length);
 	Rva00810FF0(&MD5, digest, 0x10);
+}
+
+struct Rva008111D0Context
+{
+	unsigned int m_count;
+	unsigned int m_fill;
+	unsigned int m_state[5];
+	unsigned char m_block[0x40];
+};
+
+void Rva00811180(struct Rva008111D0Context *context);
+void Rva008111D0(struct Rva008111D0Context *context,
+	const unsigned char *data, int length);
+void Rva008116B0(struct Rva008111D0Context *context, unsigned char *out,
+	unsigned int size);
+
+void Rva0080D620(const unsigned char *data, int length, unsigned char *digest)
+{
+	struct Rva008111D0Context Sha1;
+
+	Rva00811180(&Sha1);
+	Rva008111D0(&Sha1, data, length);
+	Rva008116B0(&Sha1, digest, 0x14);
 }

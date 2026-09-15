@@ -1508,7 +1508,7 @@ _Rva007FF720,0x0066BBF0,address read from the REL32 displacement in DirtySock Y4
 _Rva0080C960,0x00678860,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva0080B4B0 at 0x006773B0; call order matches BFME1 source; body not yet converted
 _Rva0080AD00,0x00676C00,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva0080B4B0 at 0x006773B0; call order matches BFME1 source; body not yet converted
 _Rva0080D590,0x00679490,address read from the REL32 displacement in DirtySock ProtoSSLParseCertificate Rva0080C960 at 0x00679380; retail call reaches the 120B MD5 wrapper calling Y4CommDigest trio; Ghidra 120B matches BFME1 120B
-_Rva0080D620,0x00679490,address read from the REL32 displacement in DirtySock ProtoSSLParseCertificate Rva0080C960 at 0x00678860; call order matches BFME1 source; body not yet converted
+_Rva0080D620,0x00679520,address read from the REL32 displacement in DirtySock ProtoSSLParseCertificate Rva0080C960 at 0x0067939D; retail call reaches the 120B SHA-1 wrapper calling Y4CommSha1 trio; Ghidra 120B matches BFME1 120B
 _Rva0080D6C0,0x00679520,address read from the REL32 displacement in DirtySock ProtoSSLParseCertificate Rva0080C960 at 0x00678860; call order matches BFME1 source; body not yet converted
 _Rva007FDEE0,0x0066A3B0,same body as the Rva007FDEE0 pin; C alias name from BFME1 Y4CommRingIdle call sites
 ?ji_0081bda8@@YAXXZ,0x00687CA8,address read from the REL32 displacement in DirtySock Rva00813100ConnectionSetup at 0x0067F000; indirect-call slot cast to function in BFME1 source; body not yet converted
