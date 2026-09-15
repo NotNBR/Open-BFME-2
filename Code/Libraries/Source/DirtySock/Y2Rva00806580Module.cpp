@@ -38,7 +38,7 @@ int   Rva0080B150( void *object, void *addr, int addrLen );  // 0x0080B150
 int   Rva0080B460( void *object, int mode );                // 0x0080B460
 extern "C" int Rva0080ADE0( void *object, int releaseState );
 extern "C" void *Rva007FD2D0( int family, int type, int protocol );
-extern "C" int Rva007FF790( char *address, const char *text );
+extern "C" int Rva007FF790( char *address, const char *text );  // 0x0066BC60
 extern "C" int atoi( const char *text );
 void *Rva007FDFF0Connect( const char *host, int timeout );
 struct Rva00806580Record;
@@ -1420,4 +1420,44 @@ void Rva00806B10( Rva00806580Record *record )
 			}
 		}
 	}
+}
+
+// 0x0066BC60 PARSES a dotted quad straight into bytes +4..+7 of a socket
+// address -- the inverse of the formatter at 0x0066BD30, and the two agree on
+// where the address lives. Ported verbatim from BFME1 Rva007FF790 (0x007FF790,
+// 205B) whose bytes are identical; same /Od /GZ frame (0x08, two CC fills).
+//
+// THE SEPARATOR EXPECTED AFTER EACH OCTET IS COMPUTED, NOT BRANCHED ON: after
+// the first three it is a dot, after the fourth it is the terminator, folded
+// into one comparison (dec/and 0x2E). There is NO RANGE CHECK: digits
+// accumulate with wrap ("999" parses as 231). On failure all four bytes are
+// cleared in the order 1,0,3,2 (two chained pair assignments), and -1 returns.
+// The digit conversion masks with 0x0F rather than subtracting '0'.
+// The text pointer advances through the caller's own parameter slot.
+extern "C" int Rva007FF790( char *sa, const char *text )
+{
+	int i;
+	unsigned char *octetPtr;
+
+	octetPtr = (unsigned char *)sa + 4;
+
+	for( i = 0; i < 4; i++, text++ )
+	{
+		octetPtr[ i ] = 0;
+
+		while( *text >= '0' && *text <= '9' )
+		{
+			octetPtr[ i ] = (unsigned char)( octetPtr[ i ] * 10 + ( *text & 0x0F ) );
+			text++;
+		}
+
+		if( *text != ( i < 3 ? '.' : 0 ) )
+		{
+			octetPtr[ 0 ] = octetPtr[ 1 ] = 0;
+			octetPtr[ 2 ] = octetPtr[ 3 ] = 0;
+			return -1;
+		}
+	}
+
+	return 0;
 }
