@@ -853,3 +853,9 @@ void Rva007FE520(int priority)
 	if (0)
 		Rva007FE780(g_Rva012C3CE0Message);
 }
+
+void Rva007FE210(void *requestObject)
+{
+	if (InterlockedExchange((long *)((char *)requestObject + 0x54), 1))
+		Rva007F0030(requestObject);
+}
