@@ -736,7 +736,6 @@ bool HRawAnimClass::Is_Node_Motion_Present(int pividx)
 	return false;
 }
 
-// ?Has_X_Translation@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_X_Translation (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));

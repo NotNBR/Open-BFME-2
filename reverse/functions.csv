@@ -7443,3 +7443,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?Has_Visibility@HRawAnimClass@@UAE_NH@Z,,0x0018E6D0,24,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Visibility-channel presence; placed by masked whole-text search
 ?Has_Y_Translation@HRawAnimClass@@UAE_NH@Z,,0x0018E650,24,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Y-translation-channel presence; placed by masked whole-text search
 ?Has_Z_Translation@HRawAnimClass@@UAE_NH@Z,,0x0018E670,24,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Z-translation-channel presence; placed by masked whole-text search
+?Has_X_Translation@HRawAnimClass@@UAE_NH@Z,,0x0018E630,23,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,X-translation-channel presence; placed by masked whole-text search
