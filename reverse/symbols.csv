@@ -1571,3 +1571,5 @@ _Rva007FE520,0x0066A9F0,address read from REL32 in DirtySock Y4DirtySockSocketWr
 _gmtime,0x0075AC0E,CRT gmtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
 _localtime,0x0062987A,CRT localtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
 _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE780 at 0x66AC50
+_sscanf,0x00629892,CRT sscanf import thunk; retail REL32 target of Rva007FF700Date parse at 0x66BA00
+?setDay@Rva007FF700Date@@QAEHH@Z,0x0066B920,address read from REL32 in DirtySock Y4DirtySockDateParse parse at 0x66BA00; BFME1 Y4DirtySockDate names this callee
