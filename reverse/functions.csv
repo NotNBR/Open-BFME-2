@@ -7357,3 +7357,4 @@ _Rva0080AD00,,0x00676C00,196,Code/Libraries/Source/DirtySock/Y2Rva00806580Module
 ?_M_insert_overflow@?$vector@HV?$allocator@H@_STL@@@_STL@@IAEXPAHABHABU__true_type@2@I_N@Z,,0x006887F0,217,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_int_insert_overflow.cpp,matched,stlport-4.5.3 vector<int> overflow; alloc-only shim for direct 0x307F0 allocator with stock inline copies; post-include free redeclare drops dllimport for direct _free call and memmove stays IAT
 _piFindPlayerByIPCallback,,0x006A4310,31,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerFindPlayerByIP.c,matched,
 _piFindPlayerByIP,,0x006A4330,30,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerFindPlayerByIP.c,matched,
+?Release_Head@?$RefMultiListClass@VRenderObjClass@@@@QAE_NXZ,,0x0006EF8C,33,Code/Libraries/Source/WWVegas/WWLib/RefMultiListRenderObjRemove.cpp,matched,
