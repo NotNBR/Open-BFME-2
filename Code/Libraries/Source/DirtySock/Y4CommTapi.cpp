@@ -44,6 +44,7 @@ extern "C"
 		unsigned int flags, unsigned int *threadId );
 	__declspec(dllimport) int __stdcall CloseHandle( void *handle );
 	__declspec(dllimport) void __stdcall Sleep( unsigned int interval );
+	unsigned int Rva007FEA00( void );
 	void *Rva00819630( int first, int second, int third );
 }
 
@@ -94,4 +95,21 @@ extern "C" CommTAPIRef *Rva00812DD0( int first, int second, int third )
 	comm->m_field8C = -1;
 	comm->m_state = 2;
 	return comm;
+}
+
+/* The three op-table stubs retail holds at 0x0067FBF0 and 0x0067F940 (5B,
+ * empty frames) and 0x0067FF20 (17B, tick read). BFME1 names all three as
+ * op callees without giving bodies; the shapes are forced. The lowercase
+ * pair keeps BFME1's plain-scope (C++) linkage, matching their pins. */
+void rva00813CF0( void )
+{
+}
+
+void rva00813A40( void )
+{
+}
+
+void Rva00814020( void )
+{
+	Rva007FEA00();
 }

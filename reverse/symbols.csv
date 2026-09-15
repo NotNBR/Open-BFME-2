@@ -1246,7 +1246,7 @@ _Rva008139A0,0x0067F8A0,op-table slot 1 of the CommTAPI factory at 0x0067ECD0 na
 ?rva00813CF0@@YAXXZ,0x0067FBF0,op-table slot 3 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTapi names this op callee; 5B unclaimed
 _Rva00813E30,0x0067FD30,op-table slot 5 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTickIdle body 27B matches Ghidra 27B; body not yet converted
 ?rva00813A40@@YAXXZ,0x0067F940,op-table slot 8 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTapi names this op callee; 5B unclaimed
-_Rva00814020,0x0067FF20,op-table slot 10 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTapi names this op callee; 17B unclaimed
+?Rva00814020@@YAXXZ,0x0067FF20,op-table slot 10 of the CommTAPI factory at 0x0067ECD0 names this address; BFME1 Y4CommTapi declares it at plain scope (C++ linkage); 17B tick-read wrapper unclaimed
 _Rva00812FD0,0x0067EED0,CommTAPI factory at 0x0067ECD0 passes this address as the CreateThread worker entry; BFME1 Y4CommTickIdle body 267B matches Ghidra 267B; body not yet converted
 _Rva0081BDA2@20,0x00687CA2,retail call in the TAPI worker at 0x0067EF34 reaches this 6B import thunk (jmp tapi32!lineInitialize slot 0xBBA7BC); BFME1 Y4CommTickIdle names this callee; thunk not a body do not convert here
 _Rva0081BDCC@4,0x00687CCC,retail call in Rva008139A0 at 0x0067F8BE reaches this 6B import thunk (jmp tapi32!lineShutdown slot 0xBBA7D4); BFME1 Y4CommTickIdle names this callee; thunk not a body do not convert here
