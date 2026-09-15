@@ -12,7 +12,7 @@ An explicit request or assigned lane overrides the queue:
 1. `git pull --rebase origin master`
 2. `python3 tools/check_csv.py` — repair ledger errors before other work
 3. `python3 tools/list_naked_candidates.py Code` serves a byte-true dump from
-   `Code/gen_asm/`, boundary already proven. **Prefer the coverage-first reference sweep below when compatible reference units are available allowing for small evidence-backed repairs when they preserve the verified body; otherwise converting dumps to real C++ is the default work.**
+   `Code/gen_asm/`, boundary already proven. **Prefer the coverage-first reference sweep below when compatible reference units are available; otherwise converting dumps to real C++ is the default work.**
       
 4. `python3 tools/next_work.py` for identity/structural work; it explains its
    own tiers.
@@ -31,9 +31,20 @@ Finish or revert each body before the next.
 
 ## Prefer coverage-first reference sweeps
 
-Prefer reference-source sweeps as the first approach. Optimize for verified unique-byte gain per unit of effort by batching compatible units, especially within related library families whose dependencies already exist.
+Prefer reference-source sweeps as the first approach whenever compatible reference units are available. Optimize for verified unique-byte gain per unit of effort by batching compatible units, especially within related library families whose dependencies already exist.
+
+Escalate reference-based work before abandoning it for dump reconstruction:
+
+1. Direct reuse / small repair. First try the reference unit essentially as-is, allowing small evidence-backed changes such as constants, declarations, offsets, helper selection, compiler settings, or other localized differences when they preserve the verified body and semantics.
+2. Moderate repair. If the direct path fails but the function identity and relationship remain well supported, allow moderate evidence-backed adaptation of control flow, data access, calls, layouts, or compiler shape. Preserve the reference function's established purpose and semantics while reconciling target-specific differences.
+3. Substantial reference-based reconstruction. If the reference is still clearly the same underlying function or subsystem, substantial reconstruction from it is allowed when retail evidence supports the identity, ABI, behavior, surrounding call relationships, and data usage. Treat the reference as the primary semantic and structural guide rather than discarding it merely because the target body has diverged significantly.
+4. Byte-true dump reconstruction. Move to reconstructing the served Code/gen_asm/ body as real C++ only after the viable reference-based paths above have been exhausted or the available reference is no longer sufficiently applicable.
 
 Use compiler and configuration variants from successfully matched siblings, with caching and isolated trials to improve throughput. Apply units that pass the existing matching pipeline, preserve provenance and compiler settings, continue through viable independent candidates, and group successful imports with their ledger updates into coherent commits. Move to deeper reconstruction when the sweep no longer offers worthwhile candidates.
+
+Do not spend unbounded effort forcing a weak reference. Once evidence no longer supports the same identity or semantics, or reasonable repair attempts stop yielding useful progress, move on to the byte-true dump path.
+
+Re-run sweeps as new dependencies, identities, compiler configurations, and sibling matches land; previously unproductive reference units may become viable later.
 
 ## BFME 1 reference freshness
 
