@@ -1570,3 +1570,4 @@ _getpeername@12,0x00687CEA,PE-verified FF25 import thunk to ws2_32.dll!getpeerna
 _Rva007FE520,0x0066A9F0,address read from REL32 in DirtySock Y4DirtySockSocketWrappers Rva007FD080 at 0x669550; BFME1 Y4DirtySockSocket names this startup callee; 223B Ghidra size vs BFME1 247B
 _gmtime,0x0075AC0E,CRT gmtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
 _localtime,0x0062987A,CRT localtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
+_vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE780 at 0x66AC50
