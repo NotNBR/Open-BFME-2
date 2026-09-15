@@ -7394,3 +7394,4 @@ _Rva007FED90,,0x0066B260,120,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWr
 _Rva007FEE40,,0x0066B310,280,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; idle dispatcher with swap-with-last compaction
 _Rva007FE620,,0x0066AAF0,67,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; shutdown drain pumps idle with Sleep poll
 _Rva007FE670,,0x0066AB40,75,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; shutdown handshake clears thread then resets lists
+_Rva007FD170,,0x00669640,245,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; idle pump fires due callbacks and drains kill list

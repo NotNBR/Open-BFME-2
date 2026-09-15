@@ -738,3 +738,37 @@ void Rva007FE670(void)
 	Rva007FEAA0(0);
 	Rva007FEAA0((struct Rva0130AB68List *)&g_Rva0130AC90);
 }
+
+void Rva007F0030(void *object);
+
+void Rva007FD170(struct Rva007FD4E0Socket *listHead)
+{
+	struct Rva007FD4E0Socket *scanSocket;
+	struct Rva007FD4E0Socket *socketList;
+	unsigned int nowTick;
+
+	socketList = listHead;
+	nowTick = Rva007FEA00();
+	Rva007FEBD0(0);
+
+	for (scanSocket = socketList->m_next; scanSocket != 0; scanSocket = scanSocket->m_next)
+	{
+		if (scanSocket->m_rate != 0 && scanSocket->m_callbackProc != 0
+			&& scanSocket->m_lastTick != 0xFFFFFFFF
+			&& nowTick - scanSocket->m_lastTick > scanSocket->m_rate)
+		{
+			scanSocket->m_lastTick = 0xFFFFFFFF;
+			scanSocket->m_callbackProc(scanSocket, 0, scanSocket->m_callbackData);
+			nowTick = Rva007FEA00();
+			scanSocket->m_lastTick = nowTick;
+		}
+	}
+
+	while ((scanSocket = g_Rva0130AB5CKillList) != 0)
+	{
+		g_Rva0130AB5CKillList = scanSocket->m_killNext;
+		Rva007F0030(scanSocket);
+	}
+
+	Rva007FECB0(0);
+}
