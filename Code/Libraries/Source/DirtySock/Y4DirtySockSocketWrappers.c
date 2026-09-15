@@ -641,3 +641,21 @@ int Rva007FDB60(struct Rva007FD4E0Socket *socket, int selector, void *buffer,
 
 	return -1;
 }
+
+struct IdleCallbackEntry
+{
+	void *callbackFunction;
+	void *callbackRef;
+};
+
+struct IdleCallbackEntry g_Rva0130AB90[64];
+int g_Rva0130ACB4;
+
+void Rva007FED40(void *callback, void *ref)
+{
+	if (callback == 0 || ref == 0)
+		return;
+	g_Rva0130AB90[g_Rva0130ACB4].callbackFunction = callback;
+	g_Rva0130AB90[g_Rva0130ACB4].callbackRef = ref;
+	g_Rva0130ACB4++;
+}
