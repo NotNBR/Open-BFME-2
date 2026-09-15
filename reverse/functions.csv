@@ -7367,3 +7367,4 @@ _Rva007FD540,,0x00669A10,126,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWr
 _Rva007FD510,,0x006699E0,41,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; bind wrapper via in-TU translator
 _Rva007FE6C0,,0x0066AB90,180,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; bounded string compare leaf
 _Rva007FF720,,0x0066BBF0,108,Code/Libraries/Source/DirtySock/Y4DirtySockAddrText.c,matched,bfme1 Y4DirtySockAddrText exact source; socket-compare via matched bounded compare
+_Rva007FD4E0,,0x006699B0,47,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; shutdown-flag wrapper
