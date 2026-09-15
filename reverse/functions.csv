@@ -7376,3 +7376,4 @@ _Rva007FECB0,,0x0066B180,140,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWr
 _Rva007FEB00,,0x0066AFD0,201,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; recursive-lock try-acquire
 _Rva007FEBD0,,0x0066B0A0,214,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; blocking acquire upgrades pin to row
 _Rva007FEAA0,,0x0066AF70,95,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; lock reset clears state
+_Rva007FEA20,,0x0066AEF0,114,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; lock initialiser clears heads
