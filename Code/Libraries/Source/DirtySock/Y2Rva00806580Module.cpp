@@ -31,7 +31,7 @@ extern "C" char *strncpy( char *dest, const char *src, unsigned int count );
 extern "C" void *memcpy( void *dest, const void *src, unsigned int count );
 extern "C" void *memset( void *dest, int value, unsigned int count );
 void *Rva007F0000Alloc( int size );                         // 0x007F0000
-unsigned short Rva007FF990Swap16( unsigned short value );   // 0x007FF990
+int Rva007FF990Swap16( unsigned short value );   // 0x007FF990
 unsigned int   Rva007FF9F0Swap32( unsigned int value );     // 0x007FF9F0
 void *Rva0080B000Create( void );                            // 0x0080B000
 int   Rva0080B150( void *object, void *addr, int addrLen );  // 0x0080B150
@@ -1492,4 +1492,22 @@ unsigned int Rva007FF9F0Swap32( unsigned int value )
 
 	*(unsigned int *)quad = value;
 	return ( ( ( ( quad[ 0 ] << 8 ) | quad[ 1 ] ) << 8 ) | quad[ 2 ] ) << 8 | quad[ 3 ];
+}
+
+// 0x0066BE60 is a 16-bit byte swap -- network-to-host order, or equally
+// host-to-network, since the operation is its own inverse. It writes the
+// argument into a two-byte object and reads the two bytes back individually,
+// high one first, which is how you swap without a rotate. Ported verbatim
+// from BFME1 Rva007FF990 (0x007FF990) whose bytes are identical; same /Od /GZ
+// frame. Retail's own name for that object, from the /GZ frame descriptor, is
+// `x` with width 2 -- an ARRAY aliased by a 16-bit store, not a short. The
+// argument loads with 16-bit mov ax, so the parameter is 16 bits; the result
+// builds with movzx and returns in full 32-bit eax, so the return is int
+// rather than short (unlike 0x0066BF30 which returns via mov ax).
+int Rva007FF990Swap16( unsigned short value )
+{
+	unsigned char pair[ 2 ];
+
+	*(unsigned short *)pair = value;
+	return ( pair[ 0 ] << 8 ) | pair[ 1 ];
 }

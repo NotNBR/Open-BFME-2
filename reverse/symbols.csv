@@ -600,7 +600,7 @@ name,address,notes
 ?Rva007F0030Free@@YAXPAX@Z,0x0065CF10,same free body as the Rva007F0030 pin; C++ alias name from BFME1 Y2Rva00806580Module call sites
 ?Rva007FE780Printf@@YAHPBDZZ,0x0066AC50,address read from the REL32 displacements in DirtySock netgameutil NetGameUtilControl at 0x0067A4E0; BFME1 netgameutil names this callee; body not yet converted
 ?Rva007FEA00Tick@@YAIXZ,0x0066AED0,same tick body as the Rva007FEA00 pin per BFME1 Y2NetConn comment placing Tick at 0x007FEA00; call sites in Y2Rva00806580Module encode this address; body not yet converted
-?Rva007FF990Swap16@@YAGG@Z,0x0066BE60,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672940; call order matches BFME1 source; body not yet converted
+?Rva007FF990Swap16@@YAHG@Z,0x0066BE60,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672940; call order matches BFME1 source; retail returns full eax so int not unsigned short; body not yet converted
 ?Rva007FF9F0Swap32@@YAII@Z,0x0066BEC0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module at 0x00672940; call order matches BFME1 source; body not yet converted
 ?Rva007FFA60Swap16@@YAGG@Z,0x0066BF30,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
 ?Rva007FFAD0@@YAII@Z,0x0066BFA0,address read from the REL32 displacement in DirtySock Y2Rva00806580Module Rva00806B10 at 0x00672B40; call order matches BFME1 source; body not yet converted
