@@ -211,9 +211,6 @@ extern char g_Rva012C3C88Format[];
 int Rva007FE780(const char *format, ...);
 int __stdcall closesocket(unsigned int socket);
 
-void Rva007FEBD0(struct Rva0130AB68List *list);
-void Rva007FECB0(struct Rva0130AB68List *list);
-
 int Rva007FD3F0(struct Rva007FD4E0Socket *socket)
 {
 	struct Rva007FD4E0Socket **link;
@@ -281,4 +278,48 @@ int Rva007FE6C0(const char *string1, const char *string2, int length)
 			return difference;
 	}
 	return 0;
+}
+
+struct Rva007FD920IpHeader
+{
+	unsigned char m_versionAndLength; /* +0x00, low nibble is IHL */
+	unsigned char m_skip[7];
+	unsigned char m_timeToLive; /* +0x08 */
+};
+
+int __stdcall setsockopt(unsigned int socket, int level, int option,
+	const void *value, int valueLength);
+int __stdcall send(unsigned int socket, const char *buffer, int length,
+	int flags);
+int __stdcall sendto(unsigned int socket, const char *buffer, int length,
+	int flags, const void *to, int toLength);
+void *Rva007FD660(char *temp, void *address);
+
+int Rva007FD920(struct Rva007FD4E0Socket *socket, const char *buffer,
+	int length, int flags, void *to, int toLength)
+{
+	int result;
+	char scratch[0x10];
+	const struct Rva007FD920IpHeader *header;
+	int timeToLive;
+
+	if (socket->m_type == 3)
+	{
+		header = (const struct Rva007FD920IpHeader *)buffer;
+		timeToLive = header->m_timeToLive;
+		setsockopt(socket->m_socket, 0, 4, &timeToLive, 4);
+
+		length -= (header->m_versionAndLength & 0x0F) * 4;
+		buffer = buffer + (header->m_versionAndLength & 0x0F) * 4;
+		if (length < 0)
+			length = 0;
+	}
+
+	if (to == 0)
+		result = send(socket->m_socket, buffer, length, 0);
+	else
+		result = sendto(socket->m_socket, buffer, length, 0,
+			Rva007FD660(scratch, to), toLength);
+
+	return Rva007FD540(result);
 }
