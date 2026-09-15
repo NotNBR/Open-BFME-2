@@ -474,3 +474,67 @@ struct Rva007FD4E0Socket *Rva007FD7D0(struct Rva007FD4E0Socket *listenSocket,
 
 	return acceptedSocket;
 }
+
+extern int g_Rva0130AB54Version;
+
+void *__cdecl memcpy(void *destination, const void *source,
+	unsigned int count);
+int __stdcall getsockname(unsigned int socket, void *name, int *nameLength);
+int __stdcall WSAIoctl(unsigned int socket, unsigned int code,
+	const void *inBuffer, int inLength, void *outBuffer, int outLength,
+	int *bytesReturned, void *overlapped, void *completion);
+
+#define SOCKET_ADDR_BYTES( p ) \
+	( ( ( ( ( (const unsigned char *)( p ) )[ 4 ] << 8 ) \
+	| ( (const unsigned char *)( p ) )[ 5 ] ) << 8 \
+	| ( (const unsigned char *)( p ) )[ 6 ] ) << 8 \
+	| ( (const unsigned char *)( p ) )[ 7 ] )
+
+int Rva007FE310(void *dest, int destLength, const void *src, int srcLength)
+{
+	unsigned int probeSocket;
+	char queryBuffer[0x10];
+	int lastError;
+
+	if (destLength != srcLength)
+		return -1;
+
+	if (*(const unsigned short *)src == 2)
+	{
+		memcpy(dest, src, destLength);
+		((unsigned char *)dest)[7] = 0;
+		((unsigned char *)dest)[6] = 0;
+		((unsigned char *)dest)[5] = 0;
+		((unsigned char *)dest)[4] = 0;
+
+		probeSocket = socket(2, 2, 0);
+		if (probeSocket != 0xFFFFFFFF)
+		{
+			if (g_Rva0130AB54Version >= 0x200)
+			{
+				if (WSAIoctl(probeSocket, 0xC8000014, src, srcLength, queryBuffer,
+					0x10, &destLength, 0, 0) < 0)
+				{
+					lastError = WSAGetLastError();
+				}
+				memcpy((char *)dest + 4, queryBuffer + 4, 4);
+
+				if (SOCKET_ADDR_BYTES(dest) == 0x7F000001)
+					memcpy((char *)dest + 4, (const char *)src + 4, 4);
+			}
+
+			if (SOCKET_ADDR_BYTES(dest) == 0
+				&& connect(probeSocket, src, srcLength) == 0
+				&& getsockname(probeSocket, queryBuffer, &destLength) == 0)
+			{
+				memcpy((char *)dest + 4, queryBuffer + 4, 4);
+			}
+
+			closesocket(probeSocket);
+		}
+		return 0;
+	}
+
+	memset(dest, 0, destLength);
+	return -3;
+}

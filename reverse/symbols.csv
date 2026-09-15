@@ -1565,3 +1565,4 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ??1Rva001D28F0Element@@QAE@XZ,0x00689500,retail REL32 destroy-loop thiscall in vector<Rva001D28F0Element>::_M_insert_overflow at 0x00689F52; element dtor SEH body
 _Rva007FFDD0,0x0066C2A0,address read from the REL32 displacement in DirtySock commudp CommUDPConnect at 0x00685200; BFME1 Y4DirtySockAddrText names this callee; 442B Ghidra size matches BFME1 442B
 _time,0x00629A42,CRT time import thunk; retail REL32 target of Rva007FEF60 at 0x66B430; PE imports slot 0xBBA508 is msvcr71.dll!time
+_WSAIoctl@36,0x00687CF0,PE-verified FF25 import thunk to ws2_32.dll!WSAIoctl via IAT 0x00BBA934; retail REL32 target of Rva007FE310 at 0x66A7E0
