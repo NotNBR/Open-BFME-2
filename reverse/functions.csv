@@ -7388,3 +7388,4 @@ _Rva007FD2D0,,0x006697A0,250,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWr
 _Rva007FD7D0,,0x00669CA0,295,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; accept wrapper upgrades pin to row
 _Rva007FEA00,,0x0066AED0,29,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; tick forwarder onto GetTickCount upgrades pin to row
 _Rva007FE310,,0x0066A7E0,491,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; address remap via routing query
+_Rva007FDB60,,0x0066A030,705,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; SocketInfo selector with connect-status check

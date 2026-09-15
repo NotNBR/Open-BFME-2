@@ -538,3 +538,106 @@ int Rva007FE310(void *dest, int destLength, const void *src, int srcLength)
 	memset(dest, 0, destLength);
 	return -3;
 }
+
+struct SocketFdSet
+{
+	unsigned int fd_count;
+	unsigned int fd_array[64];
+};
+
+struct SocketTimeVal
+{
+	long tv_sec;
+	long tv_usec;
+};
+
+#define SOCKET_FD_SET(handle, set) \
+	do { \
+		unsigned int slotIndex; \
+		for (slotIndex = 0; slotIndex < (set)->fd_count; slotIndex++) \
+		{ \
+			if ((set)->fd_array[slotIndex] == (handle)) \
+				break; \
+		} \
+		if (slotIndex == (set)->fd_count) \
+		{ \
+			if ((set)->fd_count < 64) \
+			{ \
+				(set)->fd_array[slotIndex] = (handle); \
+				(set)->fd_count++; \
+			} \
+		} \
+	} while (0)
+
+int __stdcall select(int nfds, struct SocketFdSet *readfds,
+	struct SocketFdSet *writefds, struct SocketFdSet *exceptfds,
+	const struct SocketTimeVal *timeout);
+int __stdcall getpeername(unsigned int socket, void *name, int *nameLength);
+
+int Rva007FDB60(struct Rva007FD4E0Socket *socket, int selector, void *buffer,
+	int bufferLength)
+{
+	int queryResult;
+	struct SocketFdSet writableSet;
+	struct SocketFdSet exceptSet;
+	struct SocketTimeVal timeout;
+	char peerAddress[0x10];
+
+	if (buffer != 0)
+		memset(buffer, 0, bufferLength);
+
+	if (socket->m_socket == 0xFFFFFFFF)
+		return -7;
+
+	if (selector == 'conn')
+	{
+		getpeername(socket->m_socket, buffer, &bufferLength);
+		return 0;
+	}
+
+	if (selector == 'bind')
+	{
+		getsockname(socket->m_socket, buffer, &bufferLength);
+		return 0;
+	}
+
+	if (selector == 'peer')
+	{
+		getpeername(socket->m_socket, buffer, &bufferLength);
+		return 0;
+	}
+
+	if (selector == 'stat')
+	{
+		if (socket->m_opened == 0)
+		{
+			writableSet.fd_count = 0;
+			exceptSet.fd_count = 0;
+			SOCKET_FD_SET(socket->m_socket, &writableSet);
+			SOCKET_FD_SET(socket->m_socket, &exceptSet);
+
+			timeout.tv_sec = timeout.tv_usec = 0;
+
+			if (select(1, 0, &writableSet, &exceptSet, &timeout) != 0)
+			{
+				if (exceptSet.fd_count > 0)
+					socket->m_opened = -1;
+				if (writableSet.fd_count > 0)
+					socket->m_opened = 1;
+			}
+		}
+
+		if (socket->m_opened > 0)
+		{
+			bufferLength = 0x10;
+			queryResult = Rva007FD540(getpeername(socket->m_socket, peerAddress,
+				&bufferLength));
+			if (queryResult == -2)
+				socket->m_opened = -1;
+		}
+
+		return socket->m_opened > 0;
+	}
+
+	return -1;
+}
