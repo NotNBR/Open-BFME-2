@@ -1,6 +1,4 @@
-// ?recalculate@LineSegClass@@IAEXXZ
-// partial score=0.93 date=2026-09-07
-// cl: /G7 /Oy- /arch:SSE2 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/shims/sweep
+// cl: /G7 /Oy- /arch:SSE2 /O1 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/shims/sweep
 
 #include "vector3.h"
 
@@ -25,3 +23,4 @@ void LineSegClass::recalculate(void)
 	Dir.Normalize();
 	Length = DP.Length();
 }
+

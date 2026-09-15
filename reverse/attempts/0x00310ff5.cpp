@@ -1,6 +1,11 @@
 // ?propagateMessages@MessageStream@@QAEXXZ
-// partial score=0.99 date=2026-09-12
+// partial score=0.99 date=2026-09-14
 // cl: /O1 /MD
+// WALL(2026-09-15): 100/101 bytes; only diff at +0x32 is push eax (retail,
+// reuses dtor return for operator delete arg) vs push esi (ours, reloads saved
+// msg). Tried /G7 (no change, still +0x32) and /O2 (worse: 113B, diff at +0x0).
+// Next: try source shapes that force eax reuse (e.g. clobber esi between dtor
+// and delete) rather than flags.
 
 // Evidence: retail 0x00310FF5 (101 bytes) is the REL32 call target named
 // ?propagateMessages@MessageStream@@QAEXXZ, referenced from
