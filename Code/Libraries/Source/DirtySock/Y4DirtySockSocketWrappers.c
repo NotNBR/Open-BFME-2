@@ -197,6 +197,14 @@ void Rva007FEA20(struct Rva0130AB68List *list)
 	InitializeCriticalSection(node->m_body);
 }
 
+extern int g_Rva0130AC90;
+
+void Rva007FEE10(void)
+{
+	Rva007FEBD0(&g_Rva0130AC90);
+	Rva007FECB0(&g_Rva0130AC90);
+}
+
 int Rva007FE6C0(const char *string1, const char *string2, int length)
 {
 	int difference;
