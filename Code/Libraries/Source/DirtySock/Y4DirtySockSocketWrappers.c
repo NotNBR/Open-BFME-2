@@ -327,7 +327,12 @@ int Rva007FD920(struct Rva007FD4E0Socket *socket, const char *buffer,
 int __stdcall recv(unsigned int socket, char *buffer, int length, int flags);
 int __stdcall recvfrom(unsigned int socket, char *buffer, int length,
 	int flags, char *from, int *fromLength);
-unsigned int Rva007FEA00(void);
+unsigned int __declspec(dllimport) __stdcall GetTickCount(void);
+
+unsigned int Rva007FEA00(void)
+{
+	return GetTickCount();
+}
 
 long __cdecl time(long *timer);
 
