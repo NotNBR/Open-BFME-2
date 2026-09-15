@@ -4,6 +4,7 @@
 // STLport 4.5.3 specialized narrow-file underflow helper, retail 0x0084B210.
 
 #include <windows.h>
+#include <algorithm>
 
 typedef long streamoff;
 
@@ -105,6 +106,7 @@ public:
 	void _M_unmap(void *base, long len);
 	long _M_file_size(void);
 	void *_M_mmap(streamoff offset, streamoff len);
+	int _M_read(char *buf, int n);
 
 private:
 	void *_M_file_id;
@@ -142,6 +144,22 @@ class _Underflow;
 
 template <class CharT, class Traits>
 class basic_filebuf;
+
+class codecvt
+{
+public:
+	enum result { ok, partial, error, noconv };
+
+	virtual ~codecvt() {}
+	virtual result do_out(int &, const char *, const char *, const char *&, char *, char *, char *&) const = 0;
+	virtual result do_in(int &, const char *, const char *, const char *&, char *, char *, char *&) const = 0;
+
+	result in(int &state, const char *from, const char *from_end, const char *&from_next,
+		char *to, char *to_end, char *&to_next) const
+	{
+		return do_in(state, from, from_end, from_next, to, to_end, to_next);
+	}
+};
 
 template <>
 class _Underflow<char, char_traits<char> >
@@ -184,13 +202,14 @@ private:
 	CharT *_M_saved_eback;
 	CharT *_M_saved_gptr;
 	CharT *_M_saved_egptr;
-	void *_M_codecvt;
+	const codecvt *_M_codecvt;
 	int _M_width;
 	int _M_max_width;
 	CharT _M_pback_buf[8];
 
 	bool _M_switch_to_input_mode(void);
 	int _M_underflow_aux(void);
+	int _M_input_error(void);
 
 	void _M_exit_putback_mode(void)
 	{
@@ -256,5 +275,53 @@ int _Underflow<char, char_traits<char> >::_M_doit(
 
 	return self->_M_underflow_aux();
 }
+
+template <class CharT, class Traits>
+int basic_filebuf<CharT, Traits>::_M_underflow_aux()
+{
+	_M_state = _M_end_state;
+
+	if (_M_ext_buf_end > _M_ext_buf_converted)
+		_M_ext_buf_end = copy(_M_ext_buf_converted, _M_ext_buf_end, _M_ext_buf);
+	else
+		_M_ext_buf_end = _M_ext_buf;
+
+	while (true)
+	{
+		int readCount = _M_base._M_read(_M_ext_buf_end, _M_ext_buf_EOS - _M_ext_buf_end);
+		if (readCount <= 0)
+			return char_traits<char>::eof();
+
+		_M_ext_buf_end += readCount;
+		const char *fromNext;
+		CharT *toNext;
+		codecvt::result status = _M_codecvt->in(_M_end_state,
+			_M_ext_buf, _M_ext_buf_end, fromNext,
+			_M_int_buf, _M_int_buf_EOS, toNext);
+
+		if (status == codecvt::noconv)
+		{
+			_M_ext_buf_converted = _M_ext_buf_end;
+			this->setg(_M_ext_buf, _M_ext_buf, _M_ext_buf_end);
+			return char_traits<char>::to_int_type(*_M_ext_buf);
+		}
+
+		if (status == codecvt::error ||
+			(toNext != _M_int_buf && fromNext == _M_ext_buf) ||
+			(_M_constant_width &&
+				(toNext - _M_int_buf) * _M_width != fromNext - _M_ext_buf) ||
+			(toNext == _M_int_buf && fromNext - _M_ext_buf >= _M_max_width))
+			return _M_input_error();
+
+		if (toNext != _M_int_buf)
+		{
+			_M_ext_buf_converted = _M_ext_buf + (fromNext - _M_ext_buf);
+			this->setg(_M_int_buf, _M_int_buf, toNext);
+			return char_traits<char>::to_int_type(*_M_int_buf);
+		}
+	}
+}
+
+template int basic_filebuf<char, char_traits<char> >::_M_underflow_aux();
 
 }
