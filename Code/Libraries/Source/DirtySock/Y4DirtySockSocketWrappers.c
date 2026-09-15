@@ -176,6 +176,27 @@ void Rva007FEBD0(struct Rva0130AB68List *list)
 	}
 }
 
+void __declspec(dllimport) __stdcall DeleteCriticalSection(void *body);
+void __declspec(dllimport) __stdcall InitializeCriticalSection(void *body);
+
+void Rva007FEAA0(struct Rva0130AB68List *list)
+{
+	struct Rva0130AB68List *node = list ? list : &g_Rva0130AB68Default;
+
+	node->m_state = 0;
+	DeleteCriticalSection(node->m_body);
+}
+
+void Rva007FEA20(struct Rva0130AB68List *list)
+{
+	struct Rva0130AB68List *node = list ? list : &g_Rva0130AB68Default;
+
+	node->m_ownerThread = 0;
+	node->m_depth = 0;
+	node->m_state = 0;
+	InitializeCriticalSection(node->m_body);
+}
+
 int Rva007FE6C0(const char *string1, const char *string2, int length)
 {
 	int difference;
