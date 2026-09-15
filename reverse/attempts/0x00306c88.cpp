@@ -1,86 +1,67 @@
 // ?closeDataChunk@DataChunkOutput@@QAEXXZ
-// partial score=0.78 date=2026-09-14
-// cl: /DNDEBUG /DWIN32 /D_WINDOWS /MD /EHs-c-
-// Lift the DataChunkOutput::closeDataChunk naked dump to clean C++.
+// partial score=0.99 date=2026-09-14
+// cl: /O1
 //
-// Zero Hour's DataChunk.cpp body, unchanged. Retail confirms every step: record
-// the position, seek back to the chunk header, write the size that goes there,
-// seek forward again, then pop the chunk off the stack and free it.
-//
-// The three CRT calls go through the IAT because they are dllimport under /MD,
-// and MSVC hoists the fseek slot into ebx since it is used twice. Their stack
-// arguments are cleaned up in one `add esp,0x2C` at the end rather than after
-// each call, which is why the frame looks larger than any single call needs.
-//
-// deleteInstance() is a plain `delete`: retail loads the vtable, pushes the
-// deleting-destructor flag 1 and calls slot 0, guarded by the null test MSVC
-// always emits for delete -- not a second check of m_chunkStack, which the
-// early return already settled.
-//
-// Retail pins the layout: the file handle is at this+0x04 and the chunk stack
-// at this+0x18, with the chunk's next pointer at +0x04 and its recorded file
-// position at +0x0C. The size written back excludes its own four bytes.
-
-typedef int Int;
+// DataChunkOutput::closeDataChunk, retail 0x00306C88 (119 bytes).
+// Pops the top chunk: records the position, seeks back to the header,
+// writes the size, seeks forward, pops the stack and frees the chunk via
+// the inline MemoryPoolObject::deleteInstance (explicit virtual dtor call
+// with the no-free flag, then the global scalar operator delete).
 
 extern "C" __declspec(dllimport) long __cdecl ftell(void *stream);
 extern "C" __declspec(dllimport) int __cdecl fseek(void *stream, long offset, int origin);
-extern "C" __declspec(dllimport) unsigned int __cdecl fwrite(const void *buffer, unsigned int size,
-															 unsigned int count, void *stream);
+extern "C" __declspec(dllimport) unsigned int __cdecl fwrite(
+	const void *ptr, unsigned int size, unsigned int count, void *file);
+
+void __cdecl operator delete(void *ptr);
 
 enum { SEEK_SET_ = 0 };
 
-// upstream layout: reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Include/Common/DataChunk.h
-class OutputChunk
+class MemoryPoolObject
 {
 public:
-	virtual ~OutputChunk();
-
-	// the vtable pointer occupies +0x00
-	OutputChunk *next;									///< retail this+0x04
-	unsigned char m_unreconstructed_08[4];
-	Int filepos;										///< retail this+0x0C
+	virtual ~MemoryPoolObject() {}
 };
 
-// upstream layout: reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Include/Common/DataChunk.h
+class OutputChunk : public MemoryPoolObject
+{
+public:
+	OutputChunk *next;	// +0x04
+	int id;		// +0x08
+	int filepos;	// +0x0C
+};
+
 class DataChunkOutput
 {
 public:
 	void closeDataChunk(void);
 
 private:
-	unsigned char m_unreconstructed_00[4];
-	void *m_tmp_file;									///< retail this+0x04
-	unsigned char m_unreconstructed_08[0x10];
-	OutputChunk *m_chunkStack;							///< retail this+0x18
+	char pad_0000[4];
+	void *file;	// +0x04
+	char pad_0008[0x10];
+	OutputChunk *chunkStack;	// +0x18
 };
 
-// ?closeDataChunk@DataChunkOutput@@QAEXXZ
 void DataChunkOutput::closeDataChunk(void)
 {
-	if (m_chunkStack == 0)
+	if (chunkStack == 0)
 	{
-		// TODO: Throw exception
 		return;
 	}
 
-	// remember where we are
-	Int here = ftell(m_tmp_file);
+	int here = ftell(file);
 
-	// rewind to store the data size
-	fseek(m_tmp_file, m_chunkStack->filepos, SEEK_SET_);
+	fseek(file, chunkStack->filepos, SEEK_SET_);
 
-	// compute data size (not including the actual data size itself)
-	Int size = here - m_chunkStack->filepos - sizeof(Int);
+	int size = here - chunkStack->filepos - sizeof(int);
 
-	// store the data size
-	fwrite((const char *)&size, sizeof(Int), 1, m_tmp_file);
+	fwrite(&size, sizeof(int), 1, file);
 
-	// go back to where we were
-	fseek(m_tmp_file, here, SEEK_SET_);
+	fseek(file, here, SEEK_SET_);
 
-	// pop the chunk off the stack
-	OutputChunk *c = m_chunkStack;
-	m_chunkStack = m_chunkStack->next;
-	delete c;
+	OutputChunk *c = chunkStack;
+	chunkStack = chunkStack->next;
+	if (c != 0)
+		c->~OutputChunk(), ::operator delete(c);
 }
