@@ -368,7 +368,6 @@ bool HRawAnimClass::read_channel(ChunkLoadClass & cload,MotionChannelClass * * n
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
-// ?add_channel@HRawAnimClass@@AAEXPAVMotionChannelClass@@@Z present-unmatched
 void HRawAnimClass::add_channel(MotionChannelClass * newchan)
 {
 	int idx = newchan->Get_Pivot();
