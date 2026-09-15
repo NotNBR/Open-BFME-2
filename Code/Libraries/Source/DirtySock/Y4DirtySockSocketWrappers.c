@@ -101,6 +101,35 @@ int Rva007FDE80(struct Rva007FD4E0Socket *socket, void *callback,
 	return 0;
 }
 
+struct Rva0130AB68List
+{
+	unsigned int m_ownerThread; /* +0x00 */
+	unsigned int m_depth; /* +0x04 */
+	int m_state; /* +0x08 */
+	char m_body[4]; /* +0x0C */
+};
+
+extern struct Rva0130AB68List g_Rva0130AB68Default;
+
+void __declspec(dllimport) __stdcall Rva01358E74Leave(void *body);
+
+void Rva007FECB0(struct Rva0130AB68List *list)
+{
+	struct Rva0130AB68List *node = list ? list : &g_Rva0130AB68Default;
+
+	if (node->m_depth > 1)
+	{
+		node->m_depth = node->m_depth - 1;
+	}
+	else
+	{
+		node->m_ownerThread = 0;
+		node->m_depth = 0;
+		node->m_state = 0;
+		Rva01358E74Leave(node->m_body);
+	}
+}
+
 int Rva007FE6C0(const char *string1, const char *string2, int length)
 {
 	int difference;
