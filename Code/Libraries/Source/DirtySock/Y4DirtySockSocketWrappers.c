@@ -376,3 +376,16 @@ int Rva007FDA50(struct Rva007FD4E0Socket *socket, char *buffer, int length,
 	}
 	return result;
 }
+
+int __stdcall connect(unsigned int socket, const void *address,
+	int addressLength);
+
+int Rva007FD5C0(struct Rva007FD4E0Socket *socket, const void *address,
+	int addressLength)
+{
+	char temp[0x10];
+
+	socket->m_opened = 0;
+	return Rva007FD540(connect(socket->m_socket,
+		Rva007FD660(temp, (void *)address), addressLength));
+}
