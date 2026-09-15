@@ -192,7 +192,6 @@ HRawAnimClass::~HRawAnimClass(void)
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
-// ?Free@HRawAnimClass@@AAEXXZ present-unmatched
 void HRawAnimClass::Free(void)
 {
 	if (NodeMotion != NULL) {
