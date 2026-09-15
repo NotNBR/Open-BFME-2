@@ -130,6 +130,30 @@ void Rva007FECB0(struct Rva0130AB68List *list)
 	}
 }
 
+unsigned int __declspec(dllimport) __stdcall GetCurrentThreadId(void);
+void __declspec(dllimport) __stdcall EnterCriticalSection(void *body);
+long __declspec(dllimport) __stdcall InterlockedExchange(long *target, long value);
+
+int Rva007FEB00(struct Rva0130AB68List *list)
+{
+	struct Rva0130AB68List *node = list ? list : &g_Rva0130AB68Default;
+
+	if (node->m_ownerThread == GetCurrentThreadId())
+	{
+		node->m_depth = node->m_depth + 1;
+		return 1;
+	}
+
+	if (InterlockedExchange((long *)&node->m_state, 1))
+		return 0;
+
+	EnterCriticalSection(node->m_body);
+
+	node->m_ownerThread = GetCurrentThreadId();
+	node->m_depth = node->m_depth + 1;
+	return 1;
+}
+
 int Rva007FE6C0(const char *string1, const char *string2, int length)
 {
 	int difference;
