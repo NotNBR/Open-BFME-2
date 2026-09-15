@@ -1,61 +1,49 @@
 // ?_bfme_updateTimedOps@@YAIXZ
-// partial score=0.49 date=2026-09-12
-// cl: /MD
-
-// Evidence: retail 0x003FE74B (71 bytes) is the REL32 call target named
-// ?_bfme_updateTimedOps@@YAIXZ, referenced (as a forward declaration only)
-// by Code/GameEngine/Source/Common/GameEngineClientSubsystems.cpp:
-//   unsigned int _bfme_updateTimedOps(void);
-//   ...
-//   unsigned int timedOps = _bfme_updateTimedOps();
-// No BFME1 twin exists for this one; the body below is reconstructed
-// directly from the retail bytes: a global singly-linked list head
-// (VA 0xE02EC0) of polymorphic "timed op" nodes (vtable at +0, m_next at
-// +4). Each call services at most the head node: it invokes a non-virtual
-// update() (retail 0x3FE6E8, pinned by this call site's thiscall/no-arg/
-// eax-return shape) and, if bit 0x2 of the result is set, unlinks and
-// tears it down with the exact split retail uses -- a virtual
-// op->~TimedOp() call with the deleting-destructor flag forced to 0, then
-// a separate call to the global scalar operator delete (0x2FD60) -- rather
-// than a bare `delete op;` (which combines both into one flag=1 call and
-// does not match). The return value is always masked to bits 0x1/0x4
-// (`& 5`); when the list became empty during this call the pre-delete
-// flags are first narrowed to just bit 0x4.
+// partial score=0.9 date=2026-09-15
+// cl: /O1 /DNDEBUG /MD
+// ?_bfme_updateTimedOps@@YAIXZ
 //
-// Near miss: this reconstruction matches the control flow and the dtor/
-// delete split exactly (positional 35/71, prefix 12B) but keeps the old
-// list head in a register (esi, pushed/popped) across the update() call
-// where retail instead reloads it fresh from the global afterward --
-// pure register allocation, not a structural difference.
+// GameLogic timed-operation pump at 0x003FE74B (71 bytes).  It runs the
+// head of the global TimedOp queue; when the head reports finished
+// (flags bit 1) it is unlinked, torn down through the slot-0 virtual and
+// freed with scalar operator delete, and when the queue drains the
+// input-locked bit is cleared.  The caller (GameEngineClientSubsystems)
+// uses bit 0 as inputLocked and bit 2 for the mouse-visibility guard,
+// matching the flags & 5 return.
+//
+// Only two callees: TimedOp::update (pinned at 0x003FE6E8, out of line
+// elsewhere) and scalar operator delete (matched WWLib unit).  The
+// slot-0 teardown is unrecovered, so this unit carries a trivial stub
+// purely to shape the vtable slot retail calls; the stub itself is
+// unclaimed and never compared.
+
+void __cdecl operator delete(void *block);
 
 class TimedOp
 {
 public:
-	virtual ~TimedOp();
-	unsigned int update( void );
+	virtual void *Destroy(int flags);
+	unsigned int update(void);
 
-	TimedOp *m_next; // +0x4
+	TimedOp *m_Next;	// +0x04
 };
 
-extern TimedOp *g_timedOpListHead; // VA 0xE02EC0
+extern TimedOp *g_timedOpHead;
 
-unsigned int _bfme_updateTimedOps( void )
+// ?_bfme_updateTimedOps@@YAIXZ
+unsigned int _bfme_updateTimedOps(void)
 {
 	unsigned int flags = 0;
-
-	if ( g_timedOpListHead )
-	{
-		flags = g_timedOpListHead->update();
-		if ( flags & 2 )
-		{
-			TimedOp *op = g_timedOpListHead;
-			g_timedOpListHead = op->m_next;
-			op->~TimedOp();
-			::operator delete( op );
-			if ( g_timedOpListHead == 0 )
-				flags &= 4;
+	if (g_timedOpHead != 0) {
+		flags = g_timedOpHead->update();
+		if ((flags & 2) != 0) {
+			TimedOp *head = g_timedOpHead;
+			g_timedOpHead = head->m_Next;
+			operator delete(head->Destroy(0));
 		}
 	}
-
+	if (g_timedOpHead == 0) {
+		flags &= 4;
+	}
 	return flags & 5;
 }
