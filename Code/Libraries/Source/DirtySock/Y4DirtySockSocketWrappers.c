@@ -389,3 +389,39 @@ int Rva007FD5C0(struct Rva007FD4E0Socket *socket, const void *address,
 	return Rva007FD540(connect(socket->m_socket,
 		Rva007FD660(temp, (void *)address), addressLength));
 }
+
+unsigned int __stdcall socket(int family, int type, int protocol);
+int __stdcall ioctlsocket(unsigned int socket, long command,
+	unsigned long *argument);
+void *Rva007F0000(int size);
+void *__cdecl memset(void *destination, int value, unsigned int count);
+
+struct Rva007FD4E0Socket *Rva007FD2D0(int family, int type, int protocol)
+{
+	unsigned int handle;
+	struct Rva007FD4E0Socket *socketObject;
+	unsigned long nonblock = 1;
+
+	handle = socket(family, type, protocol);
+	if (handle == 0xFFFFFFFF)
+		return 0;
+
+	socketObject = (struct Rva007FD4E0Socket *)Rva007F0000(0x50);
+	memset(socketObject, 0, 0x50);
+	socketObject->m_socket = handle;
+
+	ioctlsocket(handle, 0x8004667E, &nonblock);
+	if (type == 2)
+		setsockopt(handle, 0xFFFF, 0x20, &nonblock, 4);
+
+	socketObject->m_family = family;
+	socketObject->m_type = type;
+	socketObject->m_protocol = protocol;
+
+	Rva007FEBD0(0);
+	socketObject->m_next = (struct Rva007FD4E0Socket *)g_Rva0130AB58Head;
+	g_Rva0130AB58Head = socketObject;
+	Rva007FECB0(0);
+
+	return socketObject;
+}
