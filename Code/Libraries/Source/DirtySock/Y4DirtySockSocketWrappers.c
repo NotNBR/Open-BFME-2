@@ -19,6 +19,7 @@ struct Rva007FD4E0Socket
 int __stdcall bind(unsigned int socket, const void *address, int addressLength);
 int __stdcall WSAGetLastError(void);
 int __stdcall shutdown(unsigned int socket, int how);
+int __stdcall listen(unsigned int socket, int backlog);
 
 int Rva007FD540(int result)
 {
@@ -52,6 +53,11 @@ int Rva007FD4E0(struct Rva007FD4E0Socket *socket, int how)
 	socket->m_shutdownFlags |= how;
 	shutdown(socket->m_socket, how);
 	return 0;
+}
+
+int Rva007FD7A0(struct Rva007FD4E0Socket *socket, int backlog)
+{
+	return Rva007FD540(listen(socket->m_socket, backlog));
 }
 
 int Rva007FE6C0(const char *string1, const char *string2, int length)
