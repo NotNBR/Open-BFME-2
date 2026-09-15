@@ -7405,3 +7405,4 @@ _Rva007FE880,,0x0066AD50,377,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWr
 _Rva007FEF80,,0x0066B450,249,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; cached local-versus-UTC second offset
 _Rva007FE780,,0x0066AC50,242,Code/Libraries/Source/DirtySock/Y4DirtySockDebug.c,matched,bfme1 Y4DirtySockDebug exact source; hookable formatted print with percent-s fast path
 ?parse@Rva007FF700Date@@QAEHPBD@Z,,0x0066BA00,452,Code/Libraries/Source/DirtySock/Y4DirtySockDateParse.cpp,matched,bfme1 Y4DirtySockDateParse exact source; month-name day-year parser
+?Rva007FF3F0IsLeapYear@@YI_NH@Z,,0x0066B8C0,52,Code/Libraries/Source/DirtySock/Y4DirtySockDate.cpp,matched,bfme1 Y4DirtySockDate exact source; leap year test
