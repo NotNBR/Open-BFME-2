@@ -711,3 +711,19 @@ void Rva007FEE40(void)
 		Rva007FECB0(&g_Rva0130AC90);
 	}
 }
+
+extern int g_Rva012C3CDCDraining;
+extern int g_Rva0130ACB8Thread;
+
+void Rva007FE620(void)
+{
+	g_Rva012C3CDCDraining = 1;
+
+	while (g_Rva0130ACB8Thread != 0)
+	{
+		Rva007FEE40();
+		Sleep(0x32);
+	}
+
+	g_Rva012C3CDCDraining = 0;
+}
