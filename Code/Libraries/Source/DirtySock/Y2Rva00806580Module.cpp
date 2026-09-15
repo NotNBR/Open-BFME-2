@@ -1461,3 +1461,22 @@ extern "C" int Rva007FF790( char *sa, const char *text )
 
 	return 0;
 }
+
+// 0x0066BF30 swaps sixteen bits the OTHER WAY ROUND from 0x0066BE60: it writes
+// two bytes in and reads a short back (host-to-network), where its counterpart
+// stores a short and reads two bytes out. Ported verbatim from BFME1
+// Rva007FFA60 (0x007FFA60) whose bytes are identical; same /Od /GZ frame.
+// It shifts the PARAMETER as sixteen bits (shr cx,8 writes back to the
+// argument slot -- a 32-bit temporary would compile to shr eax,8), and returns
+// via 16-bit mov ax, so the return is unsigned short where its counterpart
+// returns int.
+unsigned short Rva007FFA60Swap16( unsigned short value )
+{
+	unsigned char bytePair[ 2 ];
+
+	bytePair[ 1 ] = (unsigned char)value;
+	value >>= 8;
+	bytePair[ 0 ] = (unsigned char)value;
+
+	return *(unsigned short *)bytePair;
+}
