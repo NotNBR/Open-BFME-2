@@ -749,7 +749,6 @@ bool HRawAnimClass::Has_Y_Translation (int pividx)
 	return NodeMotion[pividx].Y != NULL;
 }
 
-// ?Has_Z_Translation@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_Z_Translation (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
