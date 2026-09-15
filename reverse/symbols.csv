@@ -1372,7 +1372,6 @@ _piClearRoomPlayers,0x006A4970,
 _piConnectTitle,0x006987D0,address read from the REL32 displacement at placed _piConnectConnectCallback 0x006A00D0
 _piCountRoomOps,0x006A4670,
 _piDisconnectTitle,0x00698810,address read from the REL32 displacement at placed _piConnectConnectCallback 0x006A00D0
-_piFindPlayerByIP,0x006A4330,address read from the REL32 displacement at placed _piPinged 0x006A3640
 _piFindPlayerByIndex,0x006A4600,
 _piFinishedEnteringRoom,0x006A4D40,address read from the REL32 displacement at placed _piCreateStagingRoomEnumUsersCallbackA 0x006A03F0
 _piGetPrivateIP,0x00698710,address read from the REL32 displacement at a placed body
