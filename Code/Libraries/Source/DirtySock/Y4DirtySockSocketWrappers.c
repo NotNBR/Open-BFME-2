@@ -72,6 +72,11 @@ int Rva007FDEB0(int control, int value, void *pointer)
 	return -1;
 }
 
+int Rva007FE200(const int *value)
+{
+	return *value;
+}
+
 int Rva007FE6C0(const char *string1, const char *string2, int length)
 {
 	int difference;
