@@ -722,7 +722,6 @@ bool HRawAnimClass::Get_Visibility(int pividx,float frame)
  * HISTORY:                                                                                    *
  *   3/23/99    EHC : Created.                                                                 *
  *=============================================================================================*/
-// ?Is_Node_Motion_Present@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Is_Node_Motion_Present(int pividx) 
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
