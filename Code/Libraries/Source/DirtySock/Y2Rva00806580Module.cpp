@@ -205,6 +205,7 @@ extern "C" int Rva0080C960( void *comm, void *certificate,
 extern "C" void Rva0080AD00( unsigned char *data, int length, void *state );
 extern "C" void Rva0080F200( void *state, const unsigned char *key,
 	int length, int rounds );
+extern "C" void Rva0080F300( void *state, unsigned char *data, int length );
 extern "C" void Rva0080F3D0( void *state, const void *first, int firstLength,
 	const void *second, int secondLength );
 extern "C" void Rva0080F430( void *state, const void *data, int length );
@@ -1531,4 +1532,39 @@ unsigned int Rva007FFAD0( unsigned int value )
 	result[ 0 ] = (unsigned char)value;
 
 	return *(unsigned int *)result;
+}
+
+// 0x00676C00 mixes the tick counters with a 32-dword window off iCount, then
+// optionally RC4-keys the caller's state from those 16 bytes. Ported verbatim
+// from BFME1 Rva0080AD00 (Y4DirtySockTickMix.c, 196B) whose bytes are
+// identical; same /Od /GZ frame. Retail names the index local iCount (a
+// 1-element array -- the 32-dword read is a deliberate window off it, which
+// is why it is spelled ((int *)iCount)[i] rather than a scalar). The four
+// tick globals are file-statics here (DIR32 patches each to retail's .data);
+// Tick resolves via the existing 0x66AED0 pin and RC4 via the matched rows.
+extern "C" void Rva0080AD00( unsigned char *data, int length, void *state )
+{
+	static unsigned int tickBase;
+	static unsigned int tickAccum;
+	static unsigned int tickCount;
+	static unsigned int tickMix;
+	int iCount[ 1 ];
+
+	if( tickBase == 0 )
+	{
+		tickBase = Rva007FEA00Tick();
+	}
+	tickAccum = tickAccum + Rva007FEA00Tick();
+	tickCount = tickCount + 1;
+
+	for( iCount[ 0 ] = 0; iCount[ 0 ] < 0x20; iCount[ 0 ]++ )
+	{
+		tickMix = tickMix + ( (int *)iCount )[ iCount[ 0 ] ];
+	}
+
+	if( data != 0 )
+	{
+		Rva0080F200( state, (unsigned char *)&tickBase, 0x10, 3 );
+		Rva0080F300( state, data, length );
+	}
 }

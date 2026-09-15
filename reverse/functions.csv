@@ -7347,3 +7347,4 @@ _Rva007FF790,,0x0066BC60,205,Code/Libraries/Source/DirtySock/Y2Rva00806580Module
 ?Rva007FF9F0Swap32@@YAII@Z,,0x0066BEC0,85,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock swap32 exact source; 4-byte store with MSB-first byte reads
 ?Rva007FF990Swap16@@YAHG@Z,,0x0066BE60,69,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock swap16 exact source; int return via full eax not mov-ax
 ?Rva007FFAD0@@YAII@Z,,0x0066BFA0,102,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 byte-swap exact source; param-shifting big-endian store
+_Rva0080AD00,,0x00676C00,196,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock tick-mix exact source; iCount window plus optional RC4
