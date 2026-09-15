@@ -7409,3 +7409,4 @@ _Rva007FE780,,0x0066AC50,242,Code/Libraries/Source/DirtySock/Y4DirtySockDebug.c,
 ?setDay@Rva007FF700Date@@QAEHH@Z,,0x0066B920,120,Code/Libraries/Source/DirtySock/Y4DirtySockDate.cpp,matched,bfme1 Y4DirtySockDate exact source; day setter with per-month validation
 ??0Rva007FF700Date@@QAE@XZ,,0x0066BBD0,27,Code/Libraries/Source/DirtySock/Y4DirtySockDate.cpp,matched,bfme1 Y4DirtySockDate exact source; default 1 January 1900
 ?rva007FF250Decode@@YAHHPBDPAE@Z,,0x0066B720,402,Code/GameEngine/Source/GameNetwork/Rva007FF250Base64Decode.cpp,matched,bfme1 FESL Base64 exact source; four-char packet decoder via reverse table
+?rva007FF100Encode@@YAXIPBDPAX@Z,,0x0066B5D0,327,Code/GameEngine/Source/GameNetwork/Rva007FF100Base64Encode.cpp,matched,bfme1 FESL Base64 exact source; three-arg encoder via forward table
