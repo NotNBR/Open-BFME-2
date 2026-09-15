@@ -37,6 +37,7 @@ extern "C" {
 	int Rva007FD510(void *socket, const void *address, int length);
 	int Rva007FDE80(void *socket, int flags, int interval, void *ref, void *callback);
 	void Rva007FD3F0(void *socket);
+	unsigned int Rva007FEA00(void);
 	int Rva007FE780(const char *format, ...);
 	void Rva00815780(void);
 	void Rva00815890(void);
@@ -289,4 +290,17 @@ int CommSRPConnect(void *ref, const char *text)
 	Rva007FDE80(*(void **)((char *)ref + 0x7C), 2, 0x64, ref, Rva00815B50);
 	*(int *)((char *)ref + 0x90) = 1;
 	return 0;
+}
+
+/* The two op-table stubs retail holds at 0x00681680 (5B, empty frame) and
+ * 0x00681790 (17B, tick read). BFME1 names both as op callees without
+ * giving bodies; the shapes are forced (an empty void and a bare tick
+ * read in a /GZ TU emit exactly these bytes). */
+void Rva00815780(void)
+{
+}
+
+void Rva00815890(void)
+{
+	Rva007FEA00();
 }
