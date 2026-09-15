@@ -323,3 +323,49 @@ int Rva007FD920(struct Rva007FD4E0Socket *socket, const char *buffer,
 
 	return Rva007FD540(result);
 }
+
+int __stdcall recv(unsigned int socket, char *buffer, int length, int flags);
+int __stdcall recvfrom(unsigned int socket, char *buffer, int length,
+	int flags, char *from, int *fromLength);
+unsigned int Rva007FEA00(void);
+
+int Rva007FDA50(struct Rva007FD4E0Socket *socket, char *buffer, int length,
+	int flags, char *from, int *fromLength)
+{
+	int result;
+	unsigned int tick;
+	int translated;
+
+	if (from == 0)
+	{
+		result = recv(socket->m_socket, buffer, length, 0);
+	}
+	else
+	{
+		result = recvfrom(socket->m_socket, buffer, length, 0, from,
+			fromLength);
+		if (result > 0)
+		{
+			tick = Rva007FEA00();
+			from[11] = (char)tick; tick >>= 8;
+			from[10] = (char)tick; tick >>= 8;
+			from[9] = (char)tick; tick >>= 8;
+			from[8] = (char)tick;
+		}
+	}
+
+	if (result == 0)
+		translated = -1;
+	else
+		translated = Rva007FD540(result);
+	result = translated;
+
+	if (flags & 0x20)
+	{
+		if (result == -1)
+			result = 0;
+		else if (result == 0)
+			result = -1;
+	}
+	return result;
+}
