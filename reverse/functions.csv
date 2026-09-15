@@ -7349,3 +7349,4 @@ _Rva007FF790,,0x0066BC60,205,Code/Libraries/Source/DirtySock/Y2Rva00806580Module
 ?Rva007FFAD0@@YAII@Z,,0x0066BFA0,102,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 byte-swap exact source; param-shifting big-endian store
 _Rva0080AD00,,0x00676C00,196,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock tick-mix exact source; iCount window plus optional RC4
 ?_M_set_node@?$_Deque_iterator@VBuddyRequest@@@_STL@@QAEXPAPAVBuddyRequest@@@Z,,0x005507E7,23,Code/GameEngine/Source/GameNetwork/GameSpy/BuddyRequestDequePushBackAux.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
+??4?$VectorClass@VProxyClass@@@@QAEAAV0@ABV0@@Z,,0x0016F610,249,Code/Libraries/Source/WWVegas/WW3D2/VectorClassProxyAssign.cpp,matched,TU-scoped 4B refcounted-handle ProxyClass; Clear at slot3; IsValid juggling; new[] count-prefix plus eh-ctor; needs /G7 for add-over-inc codegen
