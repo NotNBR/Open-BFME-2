@@ -132,9 +132,11 @@ extern "C" int Rva0081B010( struct Rva0081B010Comm *comm, char *argument )
 	}
 	else
 	{
-		/* Retail's stale default serial pointer: 0x00E0ABA4 points outside
-		 * the image (BFME1 has 0x0130B18C in the same slot), so this path
-		 * cannot be dereferencing a live global in either game. Spelled
+		/* Retail's default serial pointer is image-specific: BFME1 has
+		 * 0x0130B18C in this slot, BFME2 0x00E0ABA4. Both address their
+		 * own image's .data (here LUT-like binary bytes, not a config
+		 * string -- no textual default exists in this image), so the
+		 * no-colon path parses whatever the link placed there. Spelled
 		 * as retail wrote it to preserve the bytes. */
 		argument = (char *)0x00E0ABA4;
 	}
