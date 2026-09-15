@@ -677,3 +677,37 @@ void Rva007FED90(void *callback, void *ref)
 		}
 	}
 }
+
+void Rva007FEE40(void)
+{
+	int tableIndex;
+	void (__cdecl *idleCallback)(void *ref);
+	void *callbackRef;
+
+	if (Rva007FEB00(&g_Rva0130AC90) != 0)
+	{
+		for (tableIndex = 0; tableIndex < g_Rva0130ACB4; tableIndex++)
+		{
+			idleCallback = (void (__cdecl *)(void *))
+				g_Rva0130AB90[tableIndex].callbackFunction;
+			callbackRef = g_Rva0130AB90[tableIndex].callbackRef;
+
+			if (idleCallback == 0 || callbackRef == 0)
+			{
+				g_Rva0130AB90[tableIndex].callbackFunction =
+					g_Rva0130AB90[g_Rva0130ACB4 - 1].callbackFunction;
+				g_Rva0130AB90[tableIndex].callbackRef =
+					g_Rva0130AB90[g_Rva0130ACB4 - 1].callbackRef;
+				g_Rva0130AB90[g_Rva0130ACB4 - 1].callbackFunction = 0;
+				g_Rva0130AB90[g_Rva0130ACB4 - 1].callbackRef = 0;
+				g_Rva0130ACB4 = g_Rva0130ACB4 - 1;
+				tableIndex = tableIndex - 1;
+				continue;
+			}
+
+			idleCallback(callbackRef);
+		}
+
+		Rva007FECB0(&g_Rva0130AC90);
+	}
+}

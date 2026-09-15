@@ -7391,3 +7391,4 @@ _Rva007FE310,,0x0066A7E0,491,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWr
 _Rva007FDB60,,0x0066A030,705,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; SocketInfo selector with connect-status check
 _Rva007FED40,,0x0066B210,65,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; idle-callback table append
 _Rva007FED90,,0x0066B260,120,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; idle-callback table remove zeroes entry
+_Rva007FEE40,,0x0066B310,280,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; idle dispatcher with swap-with-last compaction
