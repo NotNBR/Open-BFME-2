@@ -7420,3 +7420,8 @@ _Rva0081B010,,0x00686F10,1692,Code/Libraries/Source/DirtySock/Rva0081B010CommWor
 ?Rva00800040JoinI64@@YAXPB_JIPADID@Z,,0x0066C4F0,289,Code/GameEngine/Source/GameNetwork/Y2FeslUtilJoinI64.cpp,matched,bfme1 Y2FeslUtilJoinI64 source; int64-array join via sprintf percent-I64d
 ?Rva00800170Join@@YAXPAPBDIPADID@Z,,0x0066C620,261,Code/GameEngine/Source/GameNetwork/Y2FeslUtilJoin.cpp,matched,bfme1 Y2FeslUtilJoin source; string-array join via strlen-strcat
 ?compareNoCase@?$StringBase@G@@QBEHPBG@Z,0x00037A90,0x00037A90,89,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,Open-BFME5 clean C++; stlport 4.5.3; wide fold test via trait with ternary tiebreak
+_Rva00815300,,0x00681200,496,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,bfme1 commsrp exact source; SRP factory via op-table
+_CommSRPResolve,,0x00681660,28,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,bfme1 commsrp source; resolve stub always fails via diag
+_CommSRPSend,,0x006817B0,498,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,bfme1 commsrp source; outbound queue with sequence wrap
+_CommSRPListen,,0x00682560,577,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,bfme1 commsrp source; bind and listen with remap callback
+_CommSRPConnect,,0x00682870,547,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,bfme1 commsrp source; outbound connect with peer fill
