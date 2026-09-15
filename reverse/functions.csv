@@ -7414,3 +7414,4 @@ _Rva0080D590,,0x00679490,120,Code/GameEngine/Source/GameNetwork/Y4DirtySockHashW
 _Rva0080D620,,0x00679520,120,Code/GameEngine/Source/GameNetwork/Y4DirtySockHashWrap.c,matched,bfme1 Y4DirtySockHashWrap exact source; one-shot SHA-1 via Y4CommSha1 trio
 _Rva0080D6C0,,0x006795C0,200,Code/GameEngine/Source/GameNetwork/Y4DirtySockHashWrap.c,matched,bfme1 Y4DirtySockHashWrap exact source; RSA one-shot wrap via Y5SmallHelpers trio
 _Rva007FFCB0,,0x0066C180,238,Code/Libraries/Source/DirtySock/Y4DirtySockAddrText.c,matched,bfme1 Y4DirtySockAddrText exact source; socket-address builder via host-port parser
+_Rva0080C960,,0x00678860,3040,Code/Libraries/Source/DirtySock/ProtoSSLParseCertificate.c,matched,bfme1 ProtoSSLParseCertificate exact source; X509 parser via HashWrap trio
