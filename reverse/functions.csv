@@ -3796,7 +3796,6 @@ _XMP_Shift_Left_Bits,,0x0061BBD0,308,Code/Libraries/Source/WWVegas/WWLib/mpmath.
 ?Add_Subobject@AggregateDefClass@@MAEXABUW3dAggregateSubobjectStruct@@@Z,,0x001A3E20,108,Code/Libraries/Source/WWVegas/WW3D2/agg_def.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?Is_Object_In_List@AggregateDefClass@@MAE_NPBDAAV?$DynamicVectorClass@PAVRenderObjClass@@@@@Z,,0x001A38E0,71,Code/Libraries/Source/WWVegas/WW3D2/agg_def.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?Free_Subobject_List@AggregateDefClass@@MAEXXZ,,0x001A3830,70,Code/Libraries/Source/WWVegas/WW3D2/agg_def.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
-??0NodeMotionStruct@@QAE@XZ,,0x006CBBF0,28,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?Save@Targa@@QAEJPBDJ_N@Z,,0x00614A90,639,Code/Libraries/Source/WWVegas/WWLib/TARGA.CPP,matched,placed by masked whole-.text search of the compiled body - single hit
 ?Open@Targa@@QAEJPBDJ@Z,,0x006142B0,508,Code/Libraries/Source/WWVegas/WWLib/TARGA.CPP,matched,placed by masked whole-.text search of the compiled body - single hit
 ?EncodeImage@Targa@@AAEJXZ,,0x006145F0,434,Code/Libraries/Source/WWVegas/WWLib/TARGA.CPP,matched,placed by masked whole-.text search of the compiled body - single hit
@@ -7433,3 +7432,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?rva00813CF0@@YAXXZ,,0x0067FBF0,5,Code/Libraries/Source/DirtySock/Y4CommTapi.cpp,matched,op-table stub; empty frame
 ?rva00813A40@@YAXXZ,,0x0067F940,5,Code/Libraries/Source/DirtySock/Y4CommTapi.cpp,matched,op-table stub; empty frame
 ?Rva00814020@@YAXXZ,,0x0067FF20,17,Code/Libraries/Source/DirtySock/Y4CommTapi.cpp,matched,op-table stub; bare tick read
+?Get_Orientation@HRawAnimClass@@UBE_NAAVQuaternion@@HM@Z,,0x0018DD60,440,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,BFME fade-channel NodeMotionStruct (36B stride) and unpooled MotionChannel without CompressedData; bool report and normalized-lerp blend at 0x717550

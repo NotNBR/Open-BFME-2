@@ -1,4 +1,4 @@
-// cl: /arch:SSE /G7 /DNDEBUG /DWIN32 /D_WINDOWS /MD /EHsc /Ireference/shims/sweep /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/Compression /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngineDevice/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Main /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/Wwutil /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDownload /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/Code/Libraries/Source/Compression /Ireference/shims/sweep
+// cl: /Ireference/shims/bfmehrawanim /arch:SSE /G7 /DNDEBUG /DWIN32 /D_WINDOWS /MD /EHsc /Ireference/shims/sweep /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/Compression /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngineDevice/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Main /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/Wwutil /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDownload /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/Code/Libraries/Source/Compression /Ireference/shims/sweep
 // Ported verbatim from the Generals Zero Hour reference
 // (Libraries/Source/WWVegas/WW3D2/hrawanim.cpp); this unit had no counterpart under Code/.
 /*
@@ -59,6 +59,13 @@
 #include "assetmgr.h"
 #include "htree.h"
 
+// Retail Get_Orientation blends with the normalized-lerp helper at 0x00717550
+// (ledger ?BFME2_Nlerp@@YAXAAVQuaternion@@ABV1@1M@Z) where Zero Hour calls
+// Fast_Slerp: the target body issues `call 0x717550` for this blend while the
+// struct stride already proves the BFME fade-channel layout. Same
+// four-argument cdecl shape, so only the REL32 target changes.
+void BFME2_Nlerp(Quaternion &result, const Quaternion &p, const Quaternion &q, float alpha);
+
 /***********************************************************************************************
  * NodeMotionStruct::NodeMotionStruct -- constructor                                           *
  *                                                                                             *
@@ -70,6 +77,7 @@
  *                                                                                             *
  * HISTORY:                                                                                    *
  *=============================================================================================*/
+// ??0NodeMotionStruct@@QAE@XZ present-unmatched
 NodeMotionStruct::NodeMotionStruct() : 
 	X(NULL),
 	Y(NULL),
@@ -78,6 +86,7 @@ NodeMotionStruct::NodeMotionStruct() :
 	YR(NULL),
 	ZR(NULL),
 	Q(NULL),
+	Fade(NULL),
 	Vis(NULL)
 {
 }
@@ -95,6 +104,7 @@ NodeMotionStruct::NodeMotionStruct() :
  * HISTORY:                                                                                    *
  *   10/23/98   GTH : Created.                                                                 *
  *=============================================================================================*/
+// ??1NodeMotionStruct@@QAE@XZ present-unmatched
 NodeMotionStruct::~NodeMotionStruct()
 {
 	if (X != NULL) {
@@ -121,6 +131,9 @@ NodeMotionStruct::~NodeMotionStruct()
 	if (Vis != NULL) {
 		delete Vis;
 	}
+	if (Fade != NULL) {
+		delete Fade;
+	}
 }
 
 
@@ -136,6 +149,7 @@ NodeMotionStruct::~NodeMotionStruct()
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ??0HRawAnimClass@@QAE@XZ present-unmatched
 HRawAnimClass::HRawAnimClass(void) :
 	NumFrames(0),
 	NumNodes(0),
@@ -159,6 +173,7 @@ HRawAnimClass::HRawAnimClass(void) :
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ??1HRawAnimClass@@UAE@XZ present-unmatched
 HRawAnimClass::~HRawAnimClass(void)
 {
 	Free();
@@ -177,6 +192,7 @@ HRawAnimClass::~HRawAnimClass(void)
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ?Free@HRawAnimClass@@AAEXXZ present-unmatched
 void HRawAnimClass::Free(void)
 {
 	if (NodeMotion != NULL) {
@@ -198,6 +214,7 @@ void HRawAnimClass::Free(void)
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ?Load_W3D@HRawAnimClass@@QAEHAAVChunkLoadClass@@@Z present-unmatched
 int HRawAnimClass::Load_W3D(ChunkLoadClass & cload)
 {
 	bool pre30 = false;
@@ -325,6 +342,7 @@ Error:
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ?read_channel@HRawAnimClass@@AAE_NAAVChunkLoadClass@@PAPAVMotionChannelClass@@_N@Z present-unmatched
 bool HRawAnimClass::read_channel(ChunkLoadClass & cload,MotionChannelClass * * newchan,bool pre30)
 {
 	*newchan = W3DNEW MotionChannelClass;
@@ -350,6 +368,7 @@ bool HRawAnimClass::read_channel(ChunkLoadClass & cload,MotionChannelClass * * n
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ?add_channel@HRawAnimClass@@AAEXPAVMotionChannelClass@@@Z present-unmatched
 void HRawAnimClass::add_channel(MotionChannelClass * newchan)
 {
 	int idx = newchan->Get_Pivot();
@@ -383,6 +402,12 @@ void HRawAnimClass::add_channel(MotionChannelClass * newchan)
 		case ANIM_CHANNEL_Q:
 			NodeMotion[idx].Q = newchan;
 			break;
+
+		case 15: // ANIM_CHANNEL_FADE: BFME per-pivot fade channel (value 15,
+			// BFME1 w3d_file.h; Zero Hour's enum ends at ADAPTIVEDELTA_Q).
+			// Stored at NodeMotion[idx].Fade (+0x1C), ahead of Vis.
+			NodeMotion[idx].Fade = newchan;
+			break;
 	}
 
 }
@@ -400,6 +425,7 @@ void HRawAnimClass::add_channel(MotionChannelClass * newchan)
  * HISTORY:                                                                                    *
  *   1/19/98    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ?read_bit_channel@HRawAnimClass@@AAE_NAAVChunkLoadClass@@PAPAVBitChannelClass@@_N@Z present-unmatched
 bool HRawAnimClass::read_bit_channel(ChunkLoadClass & cload,BitChannelClass * * newchan,bool pre30)
 {
 	*newchan = W3DNEW BitChannelClass;
@@ -425,6 +451,7 @@ bool HRawAnimClass::read_bit_channel(ChunkLoadClass & cload,BitChannelClass * * 
  * HISTORY:                                                                                    *
  *   1/19/98    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ?add_bit_channel@HRawAnimClass@@AAEXPAVBitChannelClass@@@Z present-unmatched
 void HRawAnimClass::add_bit_channel(BitChannelClass * newchan)
 {
 	int idx = newchan->Get_Pivot();
@@ -449,6 +476,7 @@ void HRawAnimClass::add_bit_channel(BitChannelClass * newchan)
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ?Get_Translation@HRawAnimClass@@UBEXAAVVector3@@HM@Z present-unmatched
 void HRawAnimClass::Get_Translation(Vector3& trans, int pividx, float frame ) const
 {
 	struct NodeMotionStruct * motion = &NodeMotion[pividx];
@@ -514,8 +542,11 @@ void HRawAnimClass::Get_Translation(Vector3& trans, int pividx, float frame ) co
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
-void HRawAnimClass::Get_Orientation(Quaternion& q, int pividx,float frame) const
+ bool HRawAnimClass::Get_Orientation(Quaternion& q, int pividx,float frame) const
 {
+	// BFME reports success like BFME1's bool revision (retail 0x0018DD60 sets
+	// al=1 on every return path); the quaternion logic below is Zero Hour's.
+	// The blend helper is the normalized lerp at 0x00717550, not Fast_Slerp.
 //	int frame0 = (int)frame;
 	int frame0 = WWMath::Float_To_Long(frame-0.499999f);
 	int frame1 = frame0 + 1;
@@ -554,7 +585,7 @@ void HRawAnimClass::Get_Orientation(Quaternion& q, int pividx,float frame) const
 	}
 	else
 	{
-		Fast_Slerp(q, q0, q1, ratio);
+		BFME2_Nlerp(q, q0, q1, ratio);
 	}
 
 #else
@@ -579,6 +610,8 @@ void HRawAnimClass::Get_Orientation(Quaternion& q, int pividx,float frame) const
 
 	Fast_Slerp(q, q0, q1, ratio );
 #endif
+	// BFME1 keeps Zero Hour behaviour behind a bool report: always true here.
+	return true;
 }
 
 /*********************************************************************************************** 
@@ -593,6 +626,7 @@ void HRawAnimClass::Get_Orientation(Quaternion& q, int pividx,float frame) const
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
+// ?Get_Transform@HRawAnimClass@@UBEXAAVMatrix3D@@HM@Z present-unmatched
 void HRawAnimClass::Get_Transform(Matrix3D& mtx, int pividx, float frame ) const
 {
 	struct NodeMotionStruct * motion = &NodeMotion[pividx];
@@ -666,6 +700,7 @@ void HRawAnimClass::Get_Transform(Matrix3D& mtx, int pividx, float frame ) const
  * HISTORY:                                                                                    *
  *   1/19/98    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ?Get_Visibility@HRawAnimClass@@UAE_NHM@Z present-unmatched
 bool HRawAnimClass::Get_Visibility(int pividx,float frame)
 {
 	if (NodeMotion[pividx].Vis != NULL) {
@@ -689,6 +724,7 @@ bool HRawAnimClass::Get_Visibility(int pividx,float frame)
  * HISTORY:                                                                                    *
  *   3/23/99    EHC : Created.                                                                 *
  *=============================================================================================*/
+// ?Is_Node_Motion_Present@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Is_Node_Motion_Present(int pividx) 
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
@@ -705,30 +741,35 @@ bool HRawAnimClass::Is_Node_Motion_Present(int pividx)
 	return false;
 }
 
+// ?Has_X_Translation@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_X_Translation (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
 	return NodeMotion[pividx].X != NULL;
 }
 
+// ?Has_Y_Translation@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_Y_Translation (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
 	return NodeMotion[pividx].Y != NULL;
 }
 
+// ?Has_Z_Translation@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_Z_Translation (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
 	return NodeMotion[pividx].Z != NULL;
 }
 
+// ?Has_Rotation@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_Rotation (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
 	return NodeMotion[pividx].Q != NULL;
 }
 
+// ?Has_Visibility@HRawAnimClass@@UAE_NH@Z present-unmatched
 bool HRawAnimClass::Has_Visibility (int pividx)
 {
 	WWASSERT((pividx >= 0) && (pividx < NumNodes));
