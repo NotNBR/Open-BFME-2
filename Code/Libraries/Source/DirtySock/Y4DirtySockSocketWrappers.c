@@ -787,3 +787,36 @@ void Rva007FD270(void)
 	Rva007FE670();
 	Rva0081BDE4();
 }
+
+struct WsaStartupData
+{
+	unsigned short requestedVersion;
+	unsigned short highVersion;
+	char description[257];
+	char systemStatus[129];
+	unsigned short maxSockets;
+	unsigned short maxUdpDatagrams;
+	char *vendorInfo;
+};
+
+int __stdcall WSAStartup(unsigned short versionRequested,
+	struct WsaStartupData *startupData);
+void Rva007FE520(int priority);
+
+void Rva007FD080(int startupPriority)
+{
+	struct WsaStartupData startupData;
+	int startupResult;
+
+	Rva007FE520(startupPriority);
+	Rva007FED40((void *)Rva007FD170, &g_Rva0130AB58Head);
+
+	g_Rva0130AB60 = 0;
+	g_Rva0130AB64 = 0;
+
+	memset(&startupData, 0, sizeof startupData);
+	startupResult = WSAStartup(2, &startupData);
+
+	g_Rva0130AB54Version = ((unsigned char)(startupData.requestedVersion & 0xFF) << 8)
+		| (unsigned char)((unsigned int)startupData.requestedVersion >> 8);
+}

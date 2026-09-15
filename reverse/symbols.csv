@@ -1567,3 +1567,4 @@ _Rva007FFDD0,0x0066C2A0,address read from the REL32 displacement in DirtySock co
 _time,0x00629A42,CRT time import thunk; retail REL32 target of Rva007FEF60 at 0x66B430; PE imports slot 0xBBA508 is msvcr71.dll!time
 _WSAIoctl@36,0x00687CF0,PE-verified FF25 import thunk to ws2_32.dll!WSAIoctl via IAT 0x00BBA934; retail REL32 target of Rva007FE310 at 0x66A7E0
 _getpeername@12,0x00687CEA,PE-verified FF25 import thunk to ws2_32.dll!getpeername via IAT 0x00BBA930; retail REL32 target of Rva007FDB60 at 0x66A030
+_Rva007FE520,0x0066A9F0,address read from REL32 in DirtySock Y4DirtySockSocketWrappers Rva007FD080 at 0x669550; BFME1 Y4DirtySockSocket names this startup callee; 223B Ghidra size vs BFME1 247B
