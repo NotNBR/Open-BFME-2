@@ -26,7 +26,6 @@ bool __fastcall Rva007FF3F0IsLeapYear(int year)
 		return false;
 }
 
-// ??0Rva007FF700Date@@QAE@XZ present-unmatched
 Rva007FF700Date::Rva007FF700Date()
 {
 	m_month = 1;
