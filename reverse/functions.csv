@@ -7369,3 +7369,4 @@ _Rva007FE6C0,,0x0066AB90,180,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWr
 _Rva007FF720,,0x0066BBF0,108,Code/Libraries/Source/DirtySock/Y4DirtySockAddrText.c,matched,bfme1 Y4DirtySockAddrText exact source; socket-compare via matched bounded compare
 _Rva007FD4E0,,0x006699B0,47,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; shutdown-flag wrapper
 _Rva007FD7A0,,0x00669C70,37,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; listen wrapper upgrades pin to row
+_Rva007FDEB0,,0x0066A380,43,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; xmap-xdns control selector

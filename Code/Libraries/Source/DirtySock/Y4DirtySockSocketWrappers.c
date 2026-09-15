@@ -60,6 +60,18 @@ int Rva007FD7A0(struct Rva007FD4E0Socket *socket, int backlog)
 	return Rva007FD540(listen(socket->m_socket, backlog));
 }
 
+void *g_Rva0130AB60;
+int g_Rva0130AB64;
+
+int Rva007FDEB0(int control, int value, void *pointer)
+{
+	if (control == 'xmap')
+		g_Rva0130AB60 = pointer;
+	if (control == 'xdns')
+		g_Rva0130AB64 = value;
+	return -1;
+}
+
 int Rva007FE6C0(const char *string1, const char *string2, int length)
 {
 	int difference;
