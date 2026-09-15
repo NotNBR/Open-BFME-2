@@ -7410,3 +7410,4 @@ _Rva007FE780,,0x0066AC50,242,Code/Libraries/Source/DirtySock/Y4DirtySockDebug.c,
 ??0Rva007FF700Date@@QAE@XZ,,0x0066BBD0,27,Code/Libraries/Source/DirtySock/Y4DirtySockDate.cpp,matched,bfme1 Y4DirtySockDate exact source; default 1 January 1900
 ?rva007FF250Decode@@YAHHPBDPAE@Z,,0x0066B720,402,Code/GameEngine/Source/GameNetwork/Rva007FF250Base64Decode.cpp,matched,bfme1 FESL Base64 exact source; four-char packet decoder via reverse table
 ?rva007FF100Encode@@YAXIPBDPAX@Z,,0x0066B5D0,327,Code/GameEngine/Source/GameNetwork/Rva007FF100Base64Encode.cpp,matched,bfme1 FESL Base64 exact source; three-arg encoder via forward table
+_Rva0080D590,,0x00679490,120,Code/GameEngine/Source/GameNetwork/Y4DirtySockHashWrap.c,matched,bfme1 Y4DirtySockHashWrap exact source; one-shot MD5 via Y4CommDigest trio
