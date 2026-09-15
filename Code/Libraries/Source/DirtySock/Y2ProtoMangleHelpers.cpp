@@ -970,3 +970,29 @@ char *Rva00A6BD30FormatOctets( const unsigned char *address, char *destination, 
 	*writePtr = 0;
 	return destination;
 }
+
+// 0x0066C0E0 is the inverse of the text helper above: it runs the dotted-quad
+// parser at 0x0066BC60 over whatever it is handed, then lifts the four address
+// bytes out of the resulting socket address in the same big-endian order
+// everything else here uses. So the parser fills a whole socket address and
+// this discards all of it except the address itself. Ported verbatim from
+// BFME1 Rva007FFC10 (0x007FFC10) whose bytes are identical through the
+// /Od /GZ /GS epilogue; only the cookie and callee addresses differ.
+// The parser's C spelling is what the existing _Rva007FF790 pin names, so it
+// is declared extern "C" here rather than re-mangled.
+extern "C" int Rva007FF790( char *sa, const char *text );  // 0x0066BC60
+
+unsigned int Rva007FFC10TextAddr( const char *source )
+{
+	char sa[ 0x10 ];
+	unsigned int addrValue;
+
+	Rva007FF790( sa, source );
+
+	addrValue = ( ( ( ( (unsigned char *)sa )[ 4 ] << 8
+		| ( (unsigned char *)sa )[ 5 ] ) << 8
+		| ( (unsigned char *)sa )[ 6 ] ) << 8 )
+		| ( (unsigned char *)sa )[ 7 ];
+
+	return addrValue;
+}

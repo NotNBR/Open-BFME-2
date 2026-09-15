@@ -7341,3 +7341,4 @@ _PeerOperationsComplete,,0x0069FF40,95,Code/GameEngine/Source/GameNetwork/GameSp
 ?resetKeys@Keyboard@@QAEXXZ,,0x00232BDD,16,Code/GameEngine/Source/GameClient/Input/KeyboardResetKeys.cpp,matched,Unbanked reconstruction; identity from two WndProc focus-change calls; independent Ghidra boundary; direct-call and tail-jump targets decoded from retail
 ?Rva00A6BD30FormatOctets@@YAPADPBEPADH@Z,,0x0066BD30,303,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock formatter exact source; unique masked hit
 ?Rva007FFB50AddrText@@YAPADI@Z,,0x0066C020,163,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock protomangle exact source; unique masked hit; callee pinned
+?Rva007FFC10TextAddr@@YAIPBD@Z,,0x0066C0E0,135,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock text-addr exact source; inverse of AddrText; parser pinned
