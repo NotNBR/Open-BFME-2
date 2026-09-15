@@ -1562,3 +1562,4 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ?rva00232AE8@Keyboard@@AAEXXZ,0x00232AE8,Keyboard resetKeys tail jump at RVA 0x00232BE8; Ghidra boundary 147 bytes; address-qualified unknown helper
 ?Rva00A6BD30FormatOctets@@YAPADPBEPADH@Z,0x0066BD30,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers Rva007FFB50AddrText at 0x0066C08F; formats four octets at src+4 with dots into dst when size allows; body not yet converted
 ?Release@ProxyData@ProxyClass@@QAEXXZ,0x0061ED10,VectorClass<ProxyClass>::operator= element release called at 0x0016F6D3; shares the 36B dec-WORD-at-4 release body
+??1GenericMultiListClass@@UAE@XZ,0x00610640,trivial base dtor installing vtable 0xBC5C70 called at the end of BfmeNonRefSceneList dtor 0x00141780; 7B vtable-store body
