@@ -7379,3 +7379,4 @@ _Rva007FEAA0,,0x0066AF70,95,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWra
 _Rva007FEA20,,0x0066AEF0,114,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; lock initialiser clears heads
 _Rva007FEE10,,0x0066B2E0,38,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; idle-list teardown via matched lock pair
 _Rva007FD3F0,,0x006698C0,240,Code/Libraries/Source/DirtySock/Y4DirtySockSocketWrappers.c,matched,bfme1 Y4DirtySockSocket exact source; socket close upgrades pin to row
+_Rva007FD660,,0x00669B30,310,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 Y4DirtySockSocket remap exact source; xmap table lookup via same-TU AddrText

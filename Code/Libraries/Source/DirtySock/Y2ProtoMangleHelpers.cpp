@@ -996,3 +996,62 @@ unsigned int Rva007FFC10TextAddr( const char *source )
 
 	return addrValue;
 }
+
+// 0x00669B30 is the 'xmap' remap lookup -- the consumer of the table that
+// SocketControl installs when handed the 'xmap' selector. A caller-supplied
+// list rewrites destination addresses before connect: each entry is tested
+// as match == (address & mask) with the replacement at +0x08 doubling as
+// the terminator (zero ends the list). On a hit the whole address copies
+// into the caller's scratch, the four address bytes overwrite big-endian
+// from the replacement, and the scratch returns instead of the original.
+// Ported verbatim from BFME1 Rva007FD660 (0x007FD660, 310B). The table head
+// is defined in the socket TU; the extern "C" spelling matches the pin.
+struct Rva0130AB60Map
+{
+	unsigned int m_match; /* +0x00 */
+	unsigned int m_mask; /* +0x04 */
+	unsigned int m_replace; /* +0x08, zero terminates */
+};
+
+extern void *g_Rva0130AB60;
+extern char g_Rva012C3C60Message[];
+extern char g_Rva012C3C7CMessage[];
+
+extern "C" void *Rva007FD660( char *temp, void *address )
+{
+	unsigned int addrValue;
+	struct Rva0130AB60Map *map;
+	unsigned int replace;
+
+	map = (struct Rva0130AB60Map *)g_Rva0130AB60;
+	if( map != 0 )
+	{
+		addrValue = ( ( ( ( (unsigned char *)address )[ 4 ] << 8 )
+			| ( (unsigned char *)address )[ 5 ] ) << 8
+			| ( (unsigned char *)address )[ 6 ] ) << 8
+			| ( (unsigned char *)address )[ 7 ];
+
+		for( ; map->m_replace != 0; map++ )
+		{
+			if( map->m_match == ( addrValue & map->m_mask ) )
+			{
+				Rva007FE780Printf( g_Rva012C3C60Message,
+					Rva007FFB50AddrText( addrValue ) );
+				Rva007FE780Printf( g_Rva012C3C7CMessage,
+					Rva007FFB50AddrText( map->m_replace ) );
+
+				memcpy( temp, address, 0x10 );
+
+				replace = map->m_replace;
+				temp[ 7 ] = (char)replace; replace >>= 8;
+				temp[ 6 ] = (char)replace; replace >>= 8;
+				temp[ 5 ] = (char)replace; replace >>= 8;
+				temp[ 4 ] = (char)replace;
+
+				address = temp;
+				break;
+			}
+		}
+	}
+	return address;
+}
