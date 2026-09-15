@@ -205,6 +205,58 @@ void Rva007FEE10(void)
 	Rva007FECB0(&g_Rva0130AC90);
 }
 
+extern void *g_Rva0130AB58Head;
+extern struct Rva007FD4E0Socket *g_Rva0130AB5CKillList;
+extern char g_Rva012C3C88Format[];
+int Rva007FE780(const char *format, ...);
+int __stdcall closesocket(unsigned int socket);
+
+void Rva007FEBD0(struct Rva0130AB68List *list);
+void Rva007FECB0(struct Rva0130AB68List *list);
+
+int Rva007FD3F0(struct Rva007FD4E0Socket *socket)
+{
+	struct Rva007FD4E0Socket **link;
+	unsigned char found;
+
+	found = 0;
+	Rva007FEBD0(0);
+	for (link = (struct Rva007FD4E0Socket **)&g_Rva0130AB58Head;
+		*link != 0;
+		link = &(*link)->m_next)
+	{
+		if (*link == socket)
+		{
+			*link = socket->m_next;
+			found = 1;
+			break;
+		}
+	}
+	Rva007FECB0(0);
+
+	if (!found)
+	{
+		Rva007FE780(g_Rva012C3C88Format, socket);
+		return -1;
+	}
+
+	Rva007FEE10();
+
+	if (socket->m_socket >= 0)
+	{
+		shutdown(socket->m_socket, 2);
+		closesocket(socket->m_socket);
+	}
+	socket->m_socket = 0xFFFFFFFF;
+	socket->m_opened = 0;
+
+	Rva007FEBD0(0);
+	socket->m_killNext = g_Rva0130AB5CKillList;
+	g_Rva0130AB5CKillList = socket;
+	Rva007FECB0(0);
+	return 0;
+}
+
 int Rva007FE6C0(const char *string1, const char *string2, int length)
 {
 	int difference;
