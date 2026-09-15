@@ -329,6 +329,13 @@ int __stdcall recvfrom(unsigned int socket, char *buffer, int length,
 	int flags, char *from, int *fromLength);
 unsigned int Rva007FEA00(void);
 
+long __cdecl time(long *timer);
+
+unsigned int Rva007FEF60(void)
+{
+	return time(0);
+}
+
 int Rva007FDA50(struct Rva007FD4E0Socket *socket, char *buffer, int length,
 	int flags, char *from, int *fromLength)
 {
