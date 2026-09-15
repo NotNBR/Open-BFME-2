@@ -1560,3 +1560,4 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ?getValue@GameLogicRandomVariable@@QBEMXZ,0x00234206,address read from REL32 in BoneFXUpdate::initTimes at 0x0048750B+0x48 (2 sites); ghidra FUN_00634206 70B; source type GameLogicRandomVariable::getValue for gameLogicDelay; sibling of matched client getValue at 0x002341A1
 ?rva00232B7B@Keyboard@@AAEXXZ,0x00232B7B,Keyboard resetKeys direct call at RVA 0x00232BE0; Ghidra boundary 76 bytes; address-qualified unknown helper
 ?rva00232AE8@Keyboard@@AAEXXZ,0x00232AE8,Keyboard resetKeys tail jump at RVA 0x00232BE8; Ghidra boundary 147 bytes; address-qualified unknown helper
+?Rva00A6BD30FormatOctets@@YAPADPBEPADH@Z,0x0066BD30,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers Rva007FFB50AddrText at 0x0066C08F; formats four octets at src+4 with dots into dst when size allows; body not yet converted

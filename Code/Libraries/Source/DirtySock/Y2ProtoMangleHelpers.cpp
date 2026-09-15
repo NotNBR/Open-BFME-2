@@ -47,6 +47,7 @@ void *Rva007FDFF0Connect( const char *host, int timeout );  // 0x007FDFF0
 // show that, which is why the earlier declaration here had it as void.
 const char *Rva00804920Update( Rva008042B0Http *http );      // 0x00804920
 char *Rva007FFB50AddrText( unsigned int addr );             // 0x007FFB50
+char *Rva00A6BD30FormatOctets( const unsigned char *src, char *dst, int size ); // 0x00A6BD30
 struct Rva00804440SockAddr;
 void  Rva007FE310SocketHost( Rva00804440SockAddr *host, int hostLen,
 		Rva00804440SockAddr *dest, int destLen );           // 0x007FE310
@@ -883,4 +884,89 @@ int Rva00806040( Rva00804150ProtoMangleRef *ref, unsigned int *addr, int *port )
 		return 0;
 
 	return -1;
+}
+
+// The dotted-quad printer behind the three probe-log call sites. Retail
+// splits the address low-octet-first into the top half of a 0x10-byte socket
+// address scratch (the formatter reads src+4..src+7, high octet first),
+// formats into a 20-byte static, and returns the static -- inet_ntoa-shaped,
+// hence the shared buffer. Ported verbatim from BFME1 Y4DirtySockAddrText.c
+// (Rva007FFB50AddrText, 0x007FFB50) whose code is identical through the
+// epilogue; only the cookie, static and callee addresses differ (DIR32).
+static char addrTextBuffer[ 20 ];
+
+char *Rva007FFB50AddrText( unsigned int addr )
+{
+	char sa[ 0x10 ];
+	unsigned int addrCopy;
+
+	addrCopy = addr;
+
+	sa[ 7 ] = (char)addrCopy; addrCopy >>= 8;
+	sa[ 6 ] = (char)addrCopy; addrCopy >>= 8;
+	sa[ 5 ] = (char)addrCopy; addrCopy >>= 8;
+	sa[ 4 ] = (char)addrCopy;
+
+	Rva00A6BD30FormatOctets( (const unsigned char *)sa, addrTextBuffer, 20 );
+
+	return addrTextBuffer;
+}
+
+// 0x00A6BD30 renders a socket address as a dotted quad, BY HAND -- no CRT call
+// anywhere in it, just idiv by 100 and by 10. It reads bytes +4..+7 of the
+// address, which is the same big-endian placement the rest of this library
+// uses. Ported verbatim from BFME1 Rva007FF860 (0x007FF860, 303B) whose bytes
+// are identical; the size check threshold is 16 ("255.255.255.255" plus NUL).
+//
+// THE SIZE CHECK IS TWO CHECKS AND THEY BEHAVE DIFFERENTLY. A non-positive
+// size returns null and TOUCHES NOTHING; a positive but too-small size also
+// returns null, but first writes a terminator. Each octet suppresses leading
+// zeros but keeps interior ones (205 renders as 205, 10.0.0.1 as itself).
+// The octet is held in a SIGNED int -- the divides are idiv with cdq -- even
+// though it is loaded with movzx and so can never be negative.
+char *Rva00A6BD30FormatOctets( const unsigned char *address, char *destination, int size )
+{
+	int i;
+	char *writePtr;
+	int octet;
+
+	writePtr = destination;
+
+	if( size <= 0 )
+		return 0;
+
+	if( size < 0x10 )
+	{
+		*writePtr = 0;
+		return 0;
+	}
+
+	for( i = 2; i < 6; i++ )
+	{
+		octet = address[ i + 2 ];
+
+		if( octet > 99 )
+		{
+			*writePtr++ = (char)( octet / 100 + '0' );
+			octet = octet % 100;
+			// THE TENS DIGIT IS UNCONDITIONAL HERE: once a hundreds digit has
+			// been written, a zero in the tens place is significant (205 -> 2,0,5).
+			*writePtr++ = (char)( octet / 10 + '0' );
+			octet = octet % 10;
+		}
+
+		if( octet > 9 )
+		{
+			*writePtr++ = (char)( octet / 10 + '0' );
+			octet = octet % 10;
+		}
+
+		*writePtr++ = (char)( octet + '0' );
+
+		if( i < 5 )
+			*writePtr++ = '.';
+	}
+
+	*writePtr = 0;
+	return destination;
 }
