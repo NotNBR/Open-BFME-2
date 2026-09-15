@@ -425,3 +425,47 @@ struct Rva007FD4E0Socket *Rva007FD2D0(int family, int type, int protocol)
 
 	return socketObject;
 }
+
+unsigned int __stdcall accept(unsigned int socket, void *address,
+	unsigned int *addressLength);
+
+struct Rva007FD4E0Socket *Rva007FD7D0(struct Rva007FD4E0Socket *listenSocket,
+	void *address, unsigned int *addressLength)
+{
+	struct Rva007FD4E0Socket *acceptedSocket;
+	unsigned int clientHandle;
+	unsigned long nonblock;
+
+	acceptedSocket = 0;
+	nonblock = 1;
+
+	if (listenSocket->m_socket == 0xFFFFFFFF)
+		return 0;
+
+	if (address != 0 && *addressLength < 0x10)
+		return 0;
+
+	if (listenSocket->m_family == 2)
+	{
+		clientHandle = accept(listenSocket->m_socket, address, addressLength);
+		if (clientHandle != 0xFFFFFFFF)
+		{
+			ioctlsocket(clientHandle, 0x8004667E, &nonblock);
+
+			acceptedSocket = (struct Rva007FD4E0Socket *)Rva007F0000(0x50);
+			memset(acceptedSocket, 0, 0x50);
+			acceptedSocket->m_socket = clientHandle;
+			acceptedSocket->m_family = listenSocket->m_family;
+			acceptedSocket->m_type = listenSocket->m_type;
+			acceptedSocket->m_protocol = listenSocket->m_protocol;
+			acceptedSocket->m_opened = 1;
+
+			Rva007FEBD0(0);
+			acceptedSocket->m_next = (struct Rva007FD4E0Socket *)g_Rva0130AB58Head;
+			g_Rva0130AB58Head = acceptedSocket;
+			Rva007FECB0(0);
+		}
+	}
+
+	return acceptedSocket;
+}
