@@ -820,3 +820,36 @@ void Rva007FD080(int startupPriority)
 	g_Rva0130AB54Version = ((unsigned char)(startupData.requestedVersion & 0xFF) << 8)
 		| (unsigned char)((unsigned int)startupData.requestedVersion >> 8);
 }
+
+__declspec(dllimport) int __stdcall CreateThread(
+	void *security, unsigned int stackSize, void *start, void *parameter,
+	unsigned int flags, unsigned int *identifier);
+__declspec(dllimport) void __stdcall SetThreadPriority(int thread, int priority);
+__declspec(dllimport) int __stdcall CloseHandle(int object);
+
+extern char g_Rva012C3CE0Message[];
+int Rva007FE780(const char *format, ...);
+
+void Rva007FE520(int priority)
+{
+	unsigned int threadId;
+
+	g_Rva0130ACB4 = 0;
+	g_Rva012C3CDCDraining = -1;
+
+	Rva007FEA20(0);
+	Rva007FEA20((struct Rva0130AB68List *)&g_Rva0130AC90);
+
+	g_Rva0130ACB8Thread = 1;
+	g_Rva0130ACB8Thread = CreateThread(0, 0, (void *)Rva007FE620,
+		0, 0, &threadId);
+
+	if (g_Rva0130ACB8Thread != 0)
+	{
+		SetThreadPriority(g_Rva0130ACB8Thread, priority);
+		CloseHandle(g_Rva0130ACB8Thread);
+	}
+
+	if (0)
+		Rva007FE780(g_Rva012C3CE0Message);
+}
