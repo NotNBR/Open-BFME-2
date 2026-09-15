@@ -7344,3 +7344,4 @@ _PeerOperationsComplete,,0x0069FF40,95,Code/GameEngine/Source/GameNetwork/GameSp
 ?Rva007FFC10TextAddr@@YAIPBD@Z,,0x0066C0E0,135,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,bfme1 DirtySock text-addr exact source; inverse of AddrText; parser pinned
 _Rva007FF790,,0x0066BC60,205,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock dotted-quad parser exact source; TextAddr callee
 ?Rva007FFA60Swap16@@YAGG@Z,,0x0066BF30,76,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock swap16 exact source; 16-bit param shift and mov-ax return
+?Rva007FF9F0Swap32@@YAII@Z,,0x0066BEC0,85,Code/Libraries/Source/DirtySock/Y2Rva00806580Module.cpp,matched,bfme1 DirtySock swap32 exact source; 4-byte store with MSB-first byte reads

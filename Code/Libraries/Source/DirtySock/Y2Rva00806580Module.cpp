@@ -1480,3 +1480,16 @@ unsigned short Rva007FFA60Swap16( unsigned short value )
 
 	return *(unsigned short *)bytePair;
 }
+
+// 0x0066BEC0 is the 32-bit companion of the swaps above -- retail's frame
+// descriptor names its local `x` with width 4. Same idea: store the argument
+// whole, read the bytes back individually most-significant first. Ported
+// verbatim from BFME1 Rva007FF9F0 (0x007FF9F0) whose bytes are identical;
+// unsigned return matches the existing decl/pin (32-bit mov, no sign effect).
+unsigned int Rva007FF9F0Swap32( unsigned int value )
+{
+	unsigned char quad[ 4 ];
+
+	*(unsigned int *)quad = value;
+	return ( ( ( ( quad[ 0 ] << 8 ) | quad[ 1 ] ) << 8 ) | quad[ 2 ] ) << 8 | quad[ 3 ];
+}
