@@ -111,7 +111,7 @@ struct Rva0130AB68List
 
 extern struct Rva0130AB68List g_Rva0130AB68Default;
 
-void __declspec(dllimport) __stdcall Rva01358E74Leave(void *body);
+void __declspec(dllimport) __stdcall LeaveCriticalSection(void *body);
 
 void Rva007FECB0(struct Rva0130AB68List *list)
 {
@@ -126,7 +126,7 @@ void Rva007FECB0(struct Rva0130AB68List *list)
 		node->m_ownerThread = 0;
 		node->m_depth = 0;
 		node->m_state = 0;
-		Rva01358E74Leave(node->m_body);
+		LeaveCriticalSection(node->m_body);
 	}
 }
 
