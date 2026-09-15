@@ -1558,3 +1558,5 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ??0OpenContainModuleData@@QAE@XZ,0x00253487,call site in HealContainModuleData ctor (0x4B57AA) bare thiscall with this=esi matching OpenContainModuleData base ctor per ZH HealContain.h hierarchy; retail 0x253487 (21B) stores folded vtable 0xBF2558 and constructs member at +8
 ?compare@AsciiString@@QBEHABV1@@Z,0x000069D6,address read from REL32 in BoneFXUpdate::initTimes at 0x0048750B+0x2F (3 sites); ghidra compare 42B; matched StringBase compare at same address (AsciiString inherits, alias pin)
 ?getValue@GameLogicRandomVariable@@QBEMXZ,0x00234206,address read from REL32 in BoneFXUpdate::initTimes at 0x0048750B+0x48 (2 sites); ghidra FUN_00634206 70B; source type GameLogicRandomVariable::getValue for gameLogicDelay; sibling of matched client getValue at 0x002341A1
+?rva00232B7B@Keyboard@@AAEXXZ,0x00232B7B,Keyboard resetKeys direct call at RVA 0x00232BE0; Ghidra boundary 76 bytes; address-qualified unknown helper
+?rva00232AE8@Keyboard@@AAEXXZ,0x00232AE8,Keyboard resetKeys tail jump at RVA 0x00232BE8; Ghidra boundary 147 bytes; address-qualified unknown helper
