@@ -7486,3 +7486,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?randomValue@@YIIPAI@Z,,0x00233EC3,119,Code/GameEngine/Source/Common/RandomValue_randomValue.cpp,matched,fastcall ADC random; O1 split TU
 ?Rva007EB810Get@@YAHXZ,,0x006587A0,6,Code/GameEngine/Source/GameNetwork/Rva007EB810Get.cpp,matched,global dword getter reading 0x00E09FBC; BFME1 GlobalDwordGetters direct reuse; dedicated TU keeps Join call shape
 ??0GenBase009EB7D0@@QAE@XZ,,0x0061ED40,51,Code/Libraries/Source/WWVegas/WW3D2/GenBase009EB7D0Ctor.cpp,matched,BFME1 MidVptrOnlyDerivedCtors direct reuse; dedicated TU keeps prototype call shape
+??0MaterialCollectorClass@@QAE@XZ,,0x00170240,163,Code/Libraries/Source/WWVegas/WW3D2/MaterialCollectorClassCtor.cpp,matched,BFME1 ctor thunk port with BFME2 vtables; shader base via matched VectorClass; texture base pinned at 0x16ED80
