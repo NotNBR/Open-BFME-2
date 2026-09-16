@@ -7504,3 +7504,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?propagateMessages@MessageStream@@QAEXXZ,,0x00310FF5,101,Code/GameEngine/Source/Common/MessageStream_propagateMessages.cpp,matched,BFME2 MessageStream worker; ZH shape with global-delete plus appendMessageList tail
 ??0ModuleData@@QAE@XZ,,0x006024FD,70,Code/GameEngine/Source/Common/Thing/ModuleDataCtor.cpp,matched,BFME2 ModuleData base ctor; INI source-file string plus tag fields
 ?handleRadiusCursor@InGameUI@@IAEXXZ,,0x0029A661,203,Code/GameEngine/Source/GameClient/InGameUI_handleRadiusCursor.cpp,matched,BFME2 radius-cursor follow; BFME1 InGameUIBodies port with pinned radar/shroud/decal callees
+?Set_Name@BoxRenderObjClass@@UAEXPBD@Z,,0x00174DD0,31,Code/Libraries/Source/WWVegas/WW3D2/BoxRenderObjClassCtor.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
