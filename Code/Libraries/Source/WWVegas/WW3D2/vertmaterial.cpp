@@ -67,9 +67,11 @@ static unsigned int unique=1;
 VertexMaterialClass* VertexMaterialClass::Presets[VertexMaterialClass::PRESET_COUNT];
 
 #ifdef DYN_MAT8
-class DynD3DMATERIAL8 : public W3DMPO
+// Retail allocates this through plain operator new where the W3DMPO glue
+// would route through createW3DMemPool, so the base is gone here (W3DMPO is
+// empty, so the layout is unchanged).
+class DynD3DMATERIAL8
 {
-	W3DMPO_GLUE(DynD3DMATERIAL8)
 public:
 	D3DMATERIAL8 Mat;
 };
@@ -84,7 +86,7 @@ public:
 ** VertexMaterialClass Implementation
 */
 // byte-exact reconstruction: reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp
-// ??0VertexMaterialClass@@ present-unmatched
+// ??0VertexMaterialClass@@QAE@XZ present-unmatched
 VertexMaterialClass::VertexMaterialClass(void):
 #ifdef DYN_MAT8
 	MaterialDyn(NULL),
@@ -120,7 +122,6 @@ VertexMaterialClass::VertexMaterialClass(void):
 }
 
 // byte-exact reconstruction: reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp
-// ??0VertexMaterialClass@@ present-unmatched
 VertexMaterialClass::VertexMaterialClass(const VertexMaterialClass & src) :
 #ifdef DYN_MAT8
 	MaterialDyn(NULL),
