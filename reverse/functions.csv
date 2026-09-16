@@ -7506,3 +7506,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?Set_Name@BoxRenderObjClass@@UAEXPBD@Z,,0x00174DD0,31,Code/Libraries/Source/WWVegas/WW3D2/BoxRenderObjClassCtor.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?drawFloatingText@InGameUI@@IAEXXZ,,0x0029D200,266,Code/GameEngine/Source/GameClient/InGameUI_drawFloatingText.cpp,matched,BFME2 floating-text draw; BFME1 port over STLport list with color/shroud pins
 ?Set_Mesh@AABTreeClass@@QAEXPAVMeshGeometryClass@@@Z,,0x00665640,10,Code/Libraries/Source/WWVegas/WW3D2/aabtree.cpp,matched,BFME1 mesh-pointer setter via present-unmatched marker; supersedes retracted dup_00665640 ICF alias
+??0?$ShareBufferClass@PAVVertexMaterialClass@@@@QAE@ABV0@@Z,,0x0015AB50,175,Code/Libraries/Source/WWVegas/WW3D2/ShareBufferClassVertexMaterialCopyCtor.cpp,matched,BFME2 ShareBuffer VertexMaterial copy; Shader-skeleton port with plain new
