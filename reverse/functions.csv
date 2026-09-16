@@ -7461,3 +7461,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?getSingleBitFromName@?$BitFlags@$0NK@@@SAHPBD@Z,,0x002AA2F9,54,Code/GameEngine/Source/Common/KindOfGetSingleBitFromName.cpp,matched,SELECTABLE anchor; byte-twin of BitFlags304 getSingleBitFromName at 0xB42CA with KindOf table 0xDBBE18
 ?testStatus@Object@@QBE_NW4ObjectStatusTypes@@@Z,,0x0004E536,27,Code/GameEngine/Source/GameLogic/Object/Object.cpp,matched,Object status bit test over mask at +0x94; caller bits run past 70
 ?isKindOf@Object@@QBE_NW4KindOfType@@@Z,,0x0006F039,27,Code/GameEngine/Source/GameLogic/Object/Object.cpp,matched,Object KindOf bit test over mask at +0x10C; caller bits run past 400
+?getSingleBitFromName@?$BitFlags@$0L@@@SAHPBD@Z,,0x0028C7AD,54,Code/GameEngine/Source/Common/BitFlags11DisabilityGetSingleBitFromName.cpp,matched,DEFAULT anchor; byte-twin of 0xB42CA with table 0xDC828C
