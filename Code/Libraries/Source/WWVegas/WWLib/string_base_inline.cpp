@@ -467,6 +467,26 @@ bool StringBase<T>::startsWithNoCase(const T *str, int len) const
     return _memicmp(&m_data->data[0], str, len) == 0;
 }
 
+// Single-argument narrow prefix test: measures with an inlined strlen scan,
+// then runs the length-bounded worker. Routes the comparison through an
+// explicit bool so the neg/sbb/inc inversion stays 8-bit like retail.
+template <>
+bool StringBase<char>::startsWithNoCase(const char *str) const
+{
+    const int len = str ? (int)strlen(str) : 0;
+
+    if (*str == 0) {
+        return true;
+    }
+
+    if ((m_data ? m_data->length : 0) < len) {
+        return false;
+    }
+
+    const bool isEqual = _memicmp(&m_data->data[0], str, len) == 0;
+    return isEqual;
+}
+
 template <typename T>
 bool StringBase<T>::endsWithNoCase(const T *str, int len) const
 {
