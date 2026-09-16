@@ -7459,3 +7459,5 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?reverseFind@?$StringBase@G@@QBEPBGG@Z,0x00035AF0,0x00035AF0,55,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,
 ?uninitialized_copy@_STL@@YAPAGPAG00@Z,,0x0000DF10,5,Code/Libraries/Source/WWVegas/WWLib/stlport_wide_string_uninitialized_copy.cpp,matched,STLport 4.5.3 wide uninitialized_copy; vendor inline overload tail-calls __copy_trivial at 0x000179B0; sole caller is wide string reserve at 0x0000DED6
 ?getSingleBitFromName@?$BitFlags@$0NK@@@SAHPBD@Z,,0x002AA2F9,54,Code/GameEngine/Source/Common/KindOfGetSingleBitFromName.cpp,matched,SELECTABLE anchor; byte-twin of BitFlags304 getSingleBitFromName at 0xB42CA with KindOf table 0xDBBE18
+?testStatus@Object@@QBE_NW4ObjectStatusTypes@@@Z,,0x0004E536,27,Code/GameEngine/Source/GameLogic/Object/Object.cpp,matched,Object status bit test over mask at +0x94; caller bits run past 70
+?isKindOf@Object@@QBE_NW4KindOfType@@@Z,,0x0006F039,27,Code/GameEngine/Source/GameLogic/Object/Object.cpp,matched,Object KindOf bit test over mask at +0x10C; caller bits run past 400
