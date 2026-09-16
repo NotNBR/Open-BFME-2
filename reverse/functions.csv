@@ -7478,3 +7478,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?resize@BfmeWordVec@@QAEXI@Z,,0x00157E50,15,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_word_o1_resize.cpp,matched,Word-vector single-arg resize; tail-calls two-arg form at 0x000824F9; supersedes retracted narrow-string row
 ?BFME_DX8_Thread_Assert@@YA_NXZ,,0x00120F50,90,Code/Libraries/Source/WWVegas/WW3D2/BfmeDX8ThreadLock.cpp,matched,release half of the DX8 device mutex; recursion bookkeeping mirrors the lock
 ?AddFrameEntry@Debug@@AAEPAUFrameHashEntry@1@IIPBDH@Z,,0x00038FF0,223,Code/Libraries/Source/WWVegas/WWDebug/Debug_AddFrameEntry.cpp,matched,BFME1 WWDebug AddFrameEntry port with virtual AddLogGroup slot and dual-separator scan
+?isLogEnabled@Debug@@QAE_NI@Z,,0x0003B5D0,109,Code/Libraries/Source/WWVegas/WWDebug/Debug_IsLogEnabled.cpp,matched,BFME1 WWDebug isLogEnabled port with frame pointer
