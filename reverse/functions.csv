@@ -4217,7 +4217,6 @@ _PreAuthenticatePlayerPM,,0x00608D50,158,Code/GameEngine/Source/GameNetwork/Game
 ?setAIDifficulty@AIPlayer@@QAEXW4GameDifficulty@@@Z,,0x00210C87,10,Code/GameEngine/Source/Common/RTS/Player.cpp,matched,gen-alias;object-symbol=?setAIDifficulty@AIPlayer@@QAEXW4GameDifficulty@@@Z;C++ alias
 ?setAngle@BuildListInfo@@QAEXM@Z,,0x0065D7E0,10,Code/GameEngine/Source/Common/RTS/Player.cpp,matched,gen-alias;object-symbol=?setAngle@BuildListInfo@@QAEXM@Z;C++ alias
 ?dup_002e6a93@@YAXXZ,,0x002E6A93,10,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/LanGameOptionsMenu.cpp,matched,gen-alias;object-symbol=?setTeamNumber@GameSlot@@QAEXH@Z;C++ alias
-?dup_00665640@@YAXXZ,,0x00665640,10,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/LanGameOptionsMenu.cpp,matched,gen-alias;object-symbol=?setTeamNumber@GameSlot@@QAEXH@Z;C++ alias
 ?setLastCommandSource@AIUpdateInterface@@IAEXW4CommandSourceType@@@Z,,0x003B23AF,10,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdate.cpp,matched,gen-alias;object-symbol=?setLastCommandSource@AIUpdateInterface@@IAEXW4CommandSourceType@@@Z;C++ alias
 ?setIgnoreObstacleID@Pathfinder@@QAEXW4ObjectID@@@Z,,0x003FF328,10,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdate.cpp,matched,gen-alias;object-symbol=?setIgnoreObstacleID@Pathfinder@@QAEXW4ObjectID@@@Z;C++ alias
 ?Set_Current_UV_Offset@LinearOffsetTextureMapperClass@@QAEXABVVector2@@@Z,,0x0042E8ED,18,Code/Libraries/Source/WWVegas/WW3D2/dx8renderer.cpp,matched,gen-alias;object-symbol=?Set_Current_UV_Offset@LinearOffsetTextureMapperClass@@QAEXABVVector2@@@Z;C++ alias
@@ -7506,3 +7505,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?handleRadiusCursor@InGameUI@@IAEXXZ,,0x0029A661,203,Code/GameEngine/Source/GameClient/InGameUI_handleRadiusCursor.cpp,matched,BFME2 radius-cursor follow; BFME1 InGameUIBodies port with pinned radar/shroud/decal callees
 ?Set_Name@BoxRenderObjClass@@UAEXPBD@Z,,0x00174DD0,31,Code/Libraries/Source/WWVegas/WW3D2/BoxRenderObjClassCtor.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?drawFloatingText@InGameUI@@IAEXXZ,,0x0029D200,266,Code/GameEngine/Source/GameClient/InGameUI_drawFloatingText.cpp,matched,BFME2 floating-text draw; BFME1 port over STLport list with color/shroud pins
+?Set_Mesh@AABTreeClass@@QAEXPAVMeshGeometryClass@@@Z,,0x00665640,10,Code/Libraries/Source/WWVegas/WW3D2/aabtree.cpp,matched,BFME1 mesh-pointer setter via present-unmatched marker; supersedes retracted dup_00665640 ICF alias
