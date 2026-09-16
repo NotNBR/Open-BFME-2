@@ -1592,3 +1592,4 @@ _sscanf,0x00629892,CRT sscanf import thunk; retail REL32 target of Rva007FF700Da
 ?Disable_Backface_Culling@MeshMatDescClass@@IAEXXZ,0x00188670,address read from the REL32 displacements at post_process 0x189C93 and 0x189CA2; 67B Ghidra matches the inline Disable shape with the BFME cull-bit layout
 ??0?$ShareBufferClass@PAVVertexMaterialClass@@@@QAE@ABV0@@Z,0x0015AB50,address read from the REL32 displacement at the MatBufferClass copy ctor call site 0x0015B2C8
 ??0?$ShareBufferClass@PAVTextureClass@@@@QAE@ABV0@@Z,0x0015AE10,address read from the REL32 displacement at the TexBufferClass copy ctor call site 0x0015D0C8
+?FindOrCreatePrototypeId@BfmePrototypeNameTable@@QAEHPBD@Z,0x00620500,address read from REL32 in Add_Prototype_Impl at 0x0062175C (e8 9f ed ff ff -> 0x00620500); string-interning name table returning prototype ID or 0 for null

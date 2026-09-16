@@ -36,6 +36,51 @@ typedef _STL::hashtable<_STL::pair<const int, int>, int, _STL::hash<int>,
 	_STL::_Select1st<_STL::pair<const int, int> >, _STL::equal_to<int>,
 	_STL::allocator<_STL::pair<const int, int> > > BfmePrototypeTable;
 
+typedef _STL::hash_map<int, int, _STL::hash<int>, _STL::equal_to<int>,
+	_STL::allocator<_STL::pair<const int, int> > > BfmePrototypeMap;
+
+// String-interning name table holding the 45007-bucket registry that
+// Add_Prototype_Impl queries. Retail 0x00620500 (187B) hashes the name
+// case-insensitively (tolower fold, times 33), buckets via div 0xAFCF,
+// compares with strcmp and allocates 12-byte nodes via operator new;
+// it returns the interned integer ID, or 0 for a null name.
+class BfmePrototypeNameTable
+{
+public:
+	int FindOrCreatePrototypeId(const char *prototypeName);
+};
+
+// Prototype template handed to Add_Prototype_Impl. The allocating caller
+// (Create_Rva00972880_Prototype at 0x00181130) builds a 20-byte
+// GenBase-derived object, installs vtable 0xBD5090 whose slot 0 returns
+// the "NULL" name, then forwards here. Retail proves three members:
+// the vptr, a 16-bit reference count at +4 (inc word) and the interned
+// integer ID at +8.
+struct BfmeAddedPrototype
+{
+	virtual const char *GetPrototypeName() const;
+	short m_referenceCount; // +4
+	short m_padding06; // +6: aligns m_prototypeId
+	int m_prototypeId; // +8
+};
+
+// Raw-critical-section RAII guard. The constructor stores the section
+// pointer then enters it; the destructor leaves it. Normal paths inline
+// both to direct Enter/Leave imports while the stored pointer plus the
+// EH state drive the out-of-line unwind that leaves on throw.
+struct BfmeCriticalSectionGuard
+{
+	void *m_guardedSection;
+	BfmeCriticalSectionGuard(void *section) : m_guardedSection(section)
+	{
+		EnterCriticalSection(section);
+	}
+	~BfmeCriticalSectionGuard()
+	{
+		LeaveCriticalSection(m_guardedSection);
+	}
+};
+
 class BfmeResourceEnumerator
 {
 public:
@@ -52,6 +97,8 @@ private:
 	void *m_cachedTable; // +0x64: begin()._M_ht snapshot
 	unsigned char m_unknown68[0x1F0 - 0x68];
 	unsigned m_tag; // +0x1F0
+	unsigned char m_unknownF4[0x1F8 - 0x1F4];
+	BfmePrototypeNameTable *m_nameTable; // +0x1F8
 };
 
 extern BfmeResourceEnumerator *TheResourceEnumerator;
@@ -71,4 +118,27 @@ void BfmeResourceEnumerator::Begin(unsigned tag)
 	m_cachedTable = iter._M_ht;
 	m_tag = tag;
 	LeaveCriticalSection(&m_lock);
+}
+
+// ?Add_Prototype_Impl@BfmeResourceEnumerator@@QAEXPAX@Z
+void BfmeResourceEnumerator::Add_Prototype_Impl(void *prototype)
+{
+	BfmeAddedPrototype *addedPrototype = (BfmeAddedPrototype *)prototype;
+	if (!addedPrototype)
+		return;
+	BfmeCriticalSectionGuard registryGuard(&m_lock);
+	const char *prototypeName = addedPrototype->GetPrototypeName();
+	int prototypeId = m_nameTable->FindOrCreatePrototypeId(prototypeName);
+	if (prototypeId == 0)
+		return;
+	BfmePrototypeTable::iterator foundIter = m_prototypes.find(prototypeId);
+	if (foundIter._M_cur != 0)
+		return;
+	++addedPrototype->m_referenceCount;
+	BfmePrototypeMap &prototypeMap = (BfmePrototypeMap &)m_prototypes;
+	prototypeMap[prototypeId] = (int)addedPrototype;
+	addedPrototype->m_prototypeId = prototypeId;
+	BfmePrototypeTable::iterator beginIter = m_prototypes.begin();
+	m_cachedNode = beginIter._M_cur;
+	m_cachedTable = beginIter._M_ht;
 }
