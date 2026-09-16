@@ -7489,3 +7489,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ??0MaterialCollectorClass@@QAE@XZ,,0x00170240,163,Code/Libraries/Source/WWVegas/WW3D2/MaterialCollectorClassCtor.cpp,matched,BFME1 ctor thunk port with BFME2 vtables; shader base via matched VectorClass; texture base pinned at 0x16ED80
 ??0TextureVectorBaseCtorShim@@QAE@HPBV?$RefCountPtr@VTextureClass@@@@@Z,,0x0016ED80,191,Code/Libraries/Source/WWVegas/WW3D2/TextureVectorBaseCtor.cpp,matched,BFME1 191B construct port with BFME2 vtable 0x00BD4640
 _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cpp,matched,BFME1 comm-state reset port; backend release via Rva007F0030Free at 0x65CF10
+?GetGameClientRandomValueReal@@YAMMMPADH@Z,,0x00234111,72,Code/GameEngine/Source/GameClient/ClientRandomValue_getValueReal.cpp,matched,BFME1 random_value port; fastcall randomValue callee; dedicated TU keeps getValue call shape
