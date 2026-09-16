@@ -7490,3 +7490,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ??0TextureVectorBaseCtorShim@@QAE@HPBV?$RefCountPtr@VTextureClass@@@@@Z,,0x0016ED80,191,Code/Libraries/Source/WWVegas/WW3D2/TextureVectorBaseCtor.cpp,matched,BFME1 191B construct port with BFME2 vtable 0x00BD4640
 _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cpp,matched,BFME1 comm-state reset port; backend release via Rva007F0030Free at 0x65CF10
 ?GetGameClientRandomValueReal@@YAMMMPADH@Z,,0x00234111,72,Code/GameEngine/Source/GameClient/ClientRandomValue_getValueReal.cpp,matched,BFME1 random_value port; fastcall randomValue callee; dedicated TU keeps getValue call shape
+?clear@Member0C00739C70@@QAEXXZ,,0x00116760,20,Code/GameEngine/Source/Common/Bfme/Rva00739C70Cleanup.cpp,matched,Null-checked slot-14 texture fetch reported to Log_DX8_ErrorCode; __stdcall virtual takes this on stack

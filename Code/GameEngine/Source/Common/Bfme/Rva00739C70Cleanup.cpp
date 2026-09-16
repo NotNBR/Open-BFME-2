@@ -25,7 +25,23 @@ public:
 	virtual void v0();
 	virtual void v1();
 	virtual unsigned long __stdcall Release();
+	virtual void v3();
+	virtual void v4();
+	virtual void v5();
+	virtual void v6();
+	virtual void v7();
+	virtual void v8();
+	virtual void v9();
+	virtual void v10();
+	virtual void v11();
+	virtual void v12();
+	virtual void v13();
+	// Slot 14 (0x38): returns a texture pointer that clear() null-checks and
+	// reports to Log_DX8_ErrorCode. Name is opaque; only the slot matters.
+	virtual TextureBaseClass *__stdcall GetTexture();
 };
+
+void Log_DX8_ErrorCode( unsigned int code );
 
 class Member0C00739C70
 {
@@ -33,7 +49,7 @@ public:
 	VirtualReleaser00739E00 *m_obj;
 
 	~Member0C00739C70();
-	void clear();
+	__declspec(noinline) void clear();
 	void reset()
 	{
 		if ( m_obj )
@@ -45,6 +61,13 @@ public:
 	TextureBaseClass *methodA( int arg, int a, int b, int c, int d );
 	TextureBaseClass *methodB( int arg, int a );
 };
+
+void Member0C00739C70::clear()
+{
+	TextureBaseClass *tex = m_obj->GetTexture();
+	if ( tex )
+		Log_DX8_ErrorCode( (unsigned int)tex );
+}
 
 class Rva00739C70
 {
