@@ -7502,3 +7502,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?openDataChunk@DataChunkOutput@@QAEXPADG@Z,,0x00307C76,179,Code/GameEngine/Source/GameLogic/ScriptEngine/ConditionWriteDataChunk.cpp,matched,BFME1 DataChunkOutput port via 0.9 stash; forceinline dtor plus trivial base routes temp destruction direct to folded releaseBuffer
 ?_bfme_updateTimedOps@@YAIXZ,,0x003FE74B,71,Code/GameEngine/Source/Common/TimedOperations_updateTimedOps.cpp,matched,BFME2 timed-operation pump; BFME1 TimedOperations port with global-delete retire
 ?propagateMessages@MessageStream@@QAEXXZ,,0x00310FF5,101,Code/GameEngine/Source/Common/MessageStream_propagateMessages.cpp,matched,BFME2 MessageStream worker; ZH shape with global-delete plus appendMessageList tail
+??0ModuleData@@QAE@XZ,,0x006024FD,70,Code/GameEngine/Source/Common/Thing/ModuleDataCtor.cpp,matched,BFME2 ModuleData base ctor; INI source-file string plus tag fields
