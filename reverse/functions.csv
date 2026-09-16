@@ -7509,3 +7509,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ??0?$ShareBufferClass@PAVVertexMaterialClass@@@@QAE@ABV0@@Z,,0x0015AB50,175,Code/Libraries/Source/WWVegas/WW3D2/ShareBufferClassVertexMaterialCopyCtor.cpp,matched,BFME2 ShareBuffer VertexMaterial copy; Shader-skeleton port with plain new
 ?update_cached_box@OBBoxRenderObjClass@@MAEXXZ,,0x001758C0,251,Code/Libraries/Source/WWVegas/WW3D2/OBBoxUpdateCachedBox.cpp,matched,
 ?update_cached_box@AABoxRenderObjClass@@MAEXXZ,,0x001757A0,112,Code/Libraries/Source/WWVegas/WW3D2/AABoxUpdateCachedBox.cpp,matched,
+?Get_Char_Spacing@FontCharsClass@@QAEHG@Z,,0x00158760,90,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassGetCharSpacingThunk.cpp,matched,
