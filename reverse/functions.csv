@@ -7480,3 +7480,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?AddFrameEntry@Debug@@AAEPAUFrameHashEntry@1@IIPBDH@Z,,0x00038FF0,223,Code/Libraries/Source/WWVegas/WWDebug/Debug_AddFrameEntry.cpp,matched,BFME1 WWDebug AddFrameEntry port with virtual AddLogGroup slot and dual-separator scan
 ?isLogEnabled@Debug@@QAE_NI@Z,,0x0003B5D0,109,Code/Libraries/Source/WWVegas/WWDebug/Debug_IsLogEnabled.cpp,matched,BFME1 WWDebug isLogEnabled port with frame pointer
 ?AddPatternEntry@Debug@@AAEXI_NPBD@Z,,0x000393E0,147,Code/Libraries/Source/WWVegas/WWDebug/Debug_AddPatternEntry.cpp,matched,BFME1 WWDebug AddPatternEntry verbatim port with strlwr fold
+?frameStatus@Debug@@QAE_NI_N@Z,,0x0003A6A0,175,Code/Libraries/Source/WWVegas/WWDebug/Debug_FrameStatus.cpp,matched,BFME1 WWDebug frameStatus port with fastpath and critsec
