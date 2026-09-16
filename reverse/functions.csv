@@ -7467,3 +7467,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?getSingleBitFromName@?$BitFlags@$0JK@@@SAHPBD@Z,,0x0028C84F,54,Code/GameEngine/Source/Common/BitFlags154SpecialPowerGetSingleBitFromName.cpp,matched,SPECIAL_INVALID anchor; byte-twin with table 0xDC0B40
 ?getSingleBitFromName@?$BitFlags@$0P@@@SAHPBD@Z,,0x003182F3,54,Code/GameEngine/Source/Common/BitFlags15CommandSetGetSingleBitFromName.cpp,matched,NONE anchor; byte-twin with table 0xDBAA00
 ?getSingleBitFromName@?$BitFlags@$0BF@@@SAHPBD@Z,,0x004BDC6D,54,Code/GameEngine/Source/Common/BitFlags21VeterancyLevelGetSingleBitFromName.cpp,matched,VETERAN-21 anchor; byte-twin with table 0xDBAA40
+?getSingleBitFromName@?$BitFlags@$0M@@@SAHPBD@Z,,0x004DC696,54,Code/GameEngine/Source/Common/BitFlags12EmotionGetSingleBitFromName.cpp,matched,TAUNT anchor; byte-twin with table 0xDBA9C8
