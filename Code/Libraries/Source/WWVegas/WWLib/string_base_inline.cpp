@@ -476,6 +476,24 @@ const T *StringBase<T>::reverseFind(T c) const
     return 0;
 }
 
+// Wide twin with the proper wide empty literal.
+template <>
+const wchar_t *StringBase<wchar_t>::reverseFind(wchar_t c) const
+{
+    const wchar_t *begin = m_data ? &m_data->data[0] : L"";
+    const wchar_t *p = begin + (m_data ? m_data->length : 0);
+
+    while (p != begin) {
+        --p;
+
+        if (*p == c) {
+            return p;
+        }
+    }
+
+    return 0;
+}
+
 // 0x0002C459 stays unclaimed: retail keeps the character parameter as a memory
 // operand and loads the string byte into the register, while MSVC 7.1 hoists the
 // parameter into the register before the loop and compares against memory. Four
