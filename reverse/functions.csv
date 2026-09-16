@@ -7470,3 +7470,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?getSingleBitFromName@?$BitFlags@$0M@@@SAHPBD@Z,,0x004DC696,54,Code/GameEngine/Source/Common/BitFlags12EmotionGetSingleBitFromName.cpp,matched,TAUNT anchor; byte-twin with table 0xDBA9C8
 ?getSingleBitFromName@?$BitFlags@$05@@SAHPBD@Z,,0x004DC6CC,54,Code/GameEngine/Source/Common/BitFlags6AIStateGetSingleBitFromName.cpp,matched,BACK_AWAY anchor; byte-twin with table 0xDBA9AC
 ??_G?$VectorClass@PAVHAnimComboDataClass@@@@UAEPAXI@Z,,0x001A3B40,71,Code/Libraries/Source/WWVegas/WW3D2/hanim_HAnimComboClass_ctor.cpp,matched,gen-alias;object-symbol=??_G?$VectorClass@PAVHAnimComboDataClass@@@@UAEPAXI@Z;C++ alias
+?dup_001a39d0@@YAXXZ,,0x001A39D0,45,Code/Libraries/Source/WWVegas/WW3D2/hanim.cpp,matched,gen-alias;object-symbol=??1?$DynamicVectorClass@PAVHAnimComboDataClass@@@@UAE@XZ;C++ alias
