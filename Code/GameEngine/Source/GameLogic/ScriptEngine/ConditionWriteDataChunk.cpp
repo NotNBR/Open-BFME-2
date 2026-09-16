@@ -39,14 +39,76 @@ public:
 
 extern NameKeyGenerator *TheNameKeyGenerator;
 
+struct BfmeStringData
+{
+	unsigned short m_refCount;
+	unsigned short m_numCharsAllocated;
+	unsigned short m_len;
+	unsigned short m_pad;
+};
+
+class AsciiString;
+template <typename T>
+class StringBase
+{
+	friend class AsciiString;
+private:
+	StringBase(const StringBase<T> &);
+	StringBase(const T *);
+	void concat(const T *, int);
+	void releaseBuffer();
+	BfmeStringData *m_data;
+};
+
+class AsciiString : private StringBase<char>
+{
+public:
+	AsciiString(const char *text) : StringBase<char>(text) {}
+	AsciiString(const AsciiString &other) : StringBase<char>(other) {}
+	// Destruction is exactly the buffer release: retail calls the folded
+	// releaseBuffer body directly, so force-inline to a direct call here.
+	__forceinline ~AsciiString() { releaseBuffer(); }
+};
+
+class Mapping;
+class DataChunkTableOfContents
+{
+public:
+	unsigned int allocateID(const AsciiString &name);
+private:
+	Mapping *m_list;
+	int m_listLength;
+	unsigned int m_nextID;
+	bool m_headerOpened;
+};
+
+class OutputStream;
+class OutputChunk
+{
+public:
+	virtual ~OutputChunk();
+	OutputChunk *next;
+	unsigned int id;
+	int filepos;
+};
+
 class DataChunkOutput
 {
 public:
-	void openDataChunk(char *name, unsigned int ver);
+	void openDataChunk(char *name, unsigned short ver);
 	void writeInt(int value);
 	void writeNameKey(NameKeyType key);
 	void closeDataChunk(void);
+
+private:
+	OutputStream *m_pOut;
+	void *m_tmp_file;
+	DataChunkTableOfContents m_contents;
+	OutputChunk *m_chunkStack;
 };
+
+extern "C" __declspec(dllimport) unsigned int __cdecl fwrite(const void *buf, unsigned int size, unsigned int count, void *stream);
+extern "C" __declspec(dllimport) int __cdecl ftell(void *stream);
 
 class ConditionTemplate
 {
@@ -112,4 +174,26 @@ void Condition::WriteConditionDataChunk(DataChunkOutput &chunkWriter, Condition 
 		chunkWriter.closeDataChunk();
 		pCondition = pCondition->getNext();
 	}
+}
+
+// ?openDataChunk@DataChunkOutput@@QAEXPADG@Z
+void DataChunkOutput::openDataChunk(char *name, unsigned short version)
+{
+	unsigned int id;
+	{
+		const AsciiString &chunkName = AsciiString(name);
+		id = m_contents.allocateID(chunkName);
+	}
+
+	OutputChunk *chunk = new OutputChunk;
+	chunk->next = m_chunkStack;
+	m_chunkStack = chunk;
+	chunk->id = id;
+
+	fwrite(&id, sizeof(id), 1, m_tmp_file);
+	fwrite(&version, sizeof(version), 1, m_tmp_file);
+	chunk->filepos = ftell(m_tmp_file);
+
+	int dummy = 0xffff;
+	fwrite(&dummy, sizeof(dummy), 1, m_tmp_file);
 }
