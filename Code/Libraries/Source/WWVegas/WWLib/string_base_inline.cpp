@@ -198,6 +198,14 @@ bool StringBase<wchar_t>::endsWith(const StringBase<wchar_t> &str) const
     return endsWith(str.m_data ? &str.m_data->data[0] : L"", str.m_data ? str.m_data->length : 0);
 }
 
+// Single-argument wide suffix test: thin wrapper measuring with a wcslen
+// call and forwarding to the length-bounded worker out of line.
+template <>
+bool StringBase<wchar_t>::endsWith(const wchar_t *str) const
+{
+    return endsWith(str, str ? (int)wcslen(str) : 0);
+}
+
 // The wide prefix twin of the suffix worker above: same empty check, same
 // length guard, same uninitialized trait - but the offset runs forward from
 // the data start, so the length is only read once.

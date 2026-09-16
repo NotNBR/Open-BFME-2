@@ -7455,3 +7455,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?post_process@MeshModelClass@@IAEXXZ,,0x00189C60,102,Code/Libraries/Source/WWVegas/WW3D2/MeshModelPostProcess.cpp,matched,BFME1 source minus the ZH fog and overbright blocks which retail 102B omits; Disable pins at 0x188670
 ?startsWithNoCase@?$StringBase@D@@QBE_NPBD@Z,0x00036000,0x00036000,90,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,
 ?startsWith@?$StringBase@G@@QBE_NPBG@Z,0x00036190,0x00036190,90,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,
+?endsWith@?$StringBase@G@@QBE_NPBG@Z,0x00036310,0x00036310,52,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,
