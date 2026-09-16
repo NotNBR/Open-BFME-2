@@ -86,7 +86,6 @@ public:
 ** VertexMaterialClass Implementation
 */
 // byte-exact reconstruction: reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp
-// ??0VertexMaterialClass@@QAE@XZ present-unmatched
 VertexMaterialClass::VertexMaterialClass(void):
 #ifdef DYN_MAT8
 	MaterialDyn(NULL),
