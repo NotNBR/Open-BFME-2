@@ -173,7 +173,6 @@ _zlibVersion,,0x006946C0,6,Code/Libraries/Source/Compression/ZLib/zutil.c,matche
 ??8@YA_NABVGameClientRandomVariable@@0@Z,0x00005568,0x00005568,51,Code/GameEngine/Source/GameClient/ClientRandomValue.cpp,matched,Open-BFME5 clean C++; GameClientRandomVariable equality over type and both Real bounds
 ??9@YA_NABVGameClientRandomVariable@@0@Z,0x0000559B,0x0000559B,21,Code/GameEngine/Source/GameClient/ClientRandomValue.cpp,matched,Open-BFME5 clean C++; GameClientRandomVariable inequality forwarding to the equality body
 ?d_0000d540@@YAXXZ,,0x0000D540,118,Code/gen_asm/d_0000b550.asm,matched,gen-dump;ghidra=FUN_0040d540
-?d_0000df10@@YAXXZ,,0x0000DF10,5,Code/gen_asm/d_0000b550.asm,matched,gen-dump;ghidra=thunk_FUN_004179b0
 ?d_00012190@@YAXXZ,,0x00012190,122,Code/gen_asm/d_000112aa.asm,matched,gen-dump;ghidra=FUN_00412190
 ?d_0001220a@@YAXXZ,,0x0001220A,2680,Code/gen_asm/d_000112aa.asm,matched,gen-dump;ghidra=FUN_0041220a
 ?zero@ICoord3D@@QAEXXZ,0x00004DCF,0x00004DCF,11,Code/Libraries/Source/WWVegas/WWMath/icoord.cpp,matched,Open-BFME5 clean C++; ICoord3D zero from EA reference
@@ -7458,3 +7457,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?endsWith@?$StringBase@G@@QBE_NPBG@Z,0x00036310,0x00036310,52,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,
 ?endsWithNoCase@?$StringBase@G@@QBE_NPBG@Z,0x00036390,0x00036390,52,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,
 ?reverseFind@?$StringBase@G@@QBEPBGG@Z,0x00035AF0,0x00035AF0,55,Code/Libraries/Source/WWVegas/WWLib/string_base_inline.cpp,matched,
+?uninitialized_copy@_STL@@YAPAGPAG00@Z,,0x0000DF10,5,Code/Libraries/Source/WWVegas/WWLib/stlport_wide_string_uninitialized_copy.cpp,matched,STLport 4.5.3 wide uninitialized_copy; vendor inline overload tail-calls __copy_trivial at 0x000179B0; sole caller is wide string reserve at 0x0000DED6
