@@ -223,6 +223,27 @@ bool StringBase<wchar_t>::startsWith(const StringBase<wchar_t> &str) const
     return startsWith(str.m_data ? &str.m_data->data[0] : L"", str.m_data ? str.m_data->length : 0);
 }
 
+// Single-argument wide prefix test: measures with a wcslen call, then runs
+// the trait worker. Same byte-typed inversion as the narrow NoCase twin.
+template <>
+bool StringBase<wchar_t>::startsWith(const wchar_t *str) const
+{
+    const int len = str ? (int)wcslen(str) : 0;
+
+    if (*str == 0) {
+        return true;
+    }
+
+    if ((m_data ? m_data->length : 0) < len) {
+        return false;
+    }
+
+    WideCharCompare tag;
+
+    const bool isEqual = tag.compare(&m_data->data[0], str, len) == 0;
+    return isEqual;
+}
+
 // The case-insensitive twin: same skeleton, but the comparison goes through
 // the trait's folding member rather than the exact one.
 template <>
