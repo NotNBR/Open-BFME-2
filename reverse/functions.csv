@@ -7445,3 +7445,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?Has_Z_Translation@HRawAnimClass@@UAE_NH@Z,,0x0018E670,24,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,Z-translation-channel presence; placed by masked whole-text search
 ?Has_X_Translation@HRawAnimClass@@UAE_NH@Z,,0x0018E630,23,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,X-translation-channel presence; placed by masked whole-text search
 ?Begin@BfmeResourceEnumerator@@QAEXI@Z,,0x00621480,69,Code/GameEngineDevice/Source/W3DDevice/GameClient/Add_Prototype.cpp,matched,Lock and snapshot hashtable begin iterator into cursor then record tag; stlport raw hashtable member
+?resize@BfmeWordVec@@QAEXIG@Z,,0x000824F9,61,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_word_o1.cpp,matched,Word-vector two-arg resize with by-value fill; stride-2 disproves the serving narrow-string pin; erase and fill-insert callees are ICF twins

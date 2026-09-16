@@ -1076,7 +1076,6 @@ name,address,notes
 ?reset@NetCommandList@@QAEXXZ,0x0058B283,BFME2 frame-command-list reset called by FrameData cleanup
 ?reset@SimpleObjectIterator@@AAEXXZ,0x00291C20,address read from the REL32 displacement at a placed body
 ?resetKeys@Keyboard@@QAEXXZ,0x00232BDD,address read from the REL32 in WndProc's WM_SETFOCUS/WM_KILLFOCUS arms at 0x00001862
-?resize@?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@QAEXID@Z,0x000824F9,STLport 4.5.3 narrow string two-argument resize; address read by locate.py from the REL32 in the one-argument resize at 0x00157E50
 ?resize@?$hashtable@U?$pair@$$CBHH@_STL@@HU?$hash@H@2@U?$_Select1st@U?$pair@$$CBHH@_STL@@@2@U?$equal_to@H@2@V?$allocator@U?$pair@$$CBHH@_STL@@@2@@_STL@@QAEXI@Z,0x00620B70,address read from the retail REL32 in hashtable::_M_insert at 0x00620F60
 ?resize@KeyToBucketMap@NameKeyGenerator@@AAEXI@Z,0x0053F1EC,ICF with hashtable NameKey ArmorTemplate resize; KeyToBucketMap insert first call
 ?revalidateOccupiers@SpawnPointProductionExitUpdate@@AAEXXZ,0x004A3F04,address read from the REL32 displacement at a placed body
@@ -1554,7 +1553,7 @@ _Rva007FF790,0x0066BC60,address read from the REL32 displacement in DirtySock Y2
 ?destroy@ParticleSystem@@QAEXXZ,0x001F462C,call site in destroyParticleSystemByID (0x1F5B79) mov ecx [ebp-0x18] (m_system) test je then bare thiscall matching ParticleSystem::destroy void; BFME1 ILT 0xE525
 ??1BfmeParticleSystemHandle@@QAE@XZ,0x0004CBC0,call site in destroyParticleSystemByID (0x1F5B79) lea ecx [ebp-0x18] bare thiscall for handle cleanup matching BfmeParticleSystemHandle dtor throw(); BFME1 ILT 0x13994
 ??0AIUpdateModuleData@@QAE@XZ,0x0058925D,call site in DozerAIUpdateModuleData ctor (0x494D26) bare thiscall with this=esi matching AIUpdateModuleData base ctor; retail 0x58925D..0x589297 (58B) ends ret, EH cookie; ghidra truncates to 10B
-?erase@?$vector@FV?$allocator@F@_STL@@@_STL@@QAEPAFPAF0@Z,0x0031BD55,call site in vector<float>::resize (0x824F9+0x1B) pushes args then calls; body at 0x31BD55 matched as void* erase 34B (ICF alias, identical pointer-move code for float*/void*); ghidra FUN_0071bd55 34B
+?erase@?$vector@FV?$allocator@F@_STL@@@_STL@@QAEPAFPAF0@Z,0x0031BD55,call site in word-vector resize (0x824F9+0x1B) pushes args then calls; body at 0x31BD55 matched as void* erase 34B (ICF alias, identical pointer-move code for float*/void*); ghidra FUN_0071bd55 34B
 ??0BfmeMsgVJH@@QAE@PADH@Z,0x00655900,call site in Rva007F6740Receiver::call (0x662ED0+0x26) lea msg buf push size thiscall matching FESL BfmeMsgVJH ctor (char*,int) throw(); ghidra FUN_00a55900 76B; same FESL class as BFME1
 ?Rva00800040JoinI64@@YAXPB_JIPADID@Z,0x0066C4F0,call site in Rva call (0x662ED0+0x57) pushes int64 array/count/dest/size/sep matching FESL JoinI64 (int64 array join with semicolon); ghidra FUN_00a6c4f0 289B; same helper as BFME1 0x800040
 ?Rva00800170Join@@YAXPAPBDIPADID@Z,0x0066C620,call site in Rva call (0x662ED0+0x78) pushes string array/count/dest/size/sep matching FESL Join (string array join); ghidra FUN_00a6c620 261B; same helper as BFME1 0x800170
@@ -1587,3 +1586,5 @@ _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE7
 _sscanf,0x00629892,CRT sscanf import thunk; retail REL32 target of Rva007FF700Date parse at 0x66BA00
 ?setDay@Rva007FF700Date@@QAEHH@Z,0x0066B920,address read from REL32 in DirtySock Y4DirtySockDateParse parse at 0x66BA00; BFME1 Y4DirtySockDate names this callee
 ?Rva007FF3F0IsLeapYear@@YI_NH@Z,0x0066B8C0,address read from REL32 in DirtySock Y4DirtySockDate setDay at 0x66B920; BFME1 Y4DirtySockDate names this callee; 52B Ghidra matches BFME1 52B
+?erase@?$vector@GV?$allocator@G@_STL@@@_STL@@QAEPAGPAG0@Z,0x0031BD55,ICF twin of the vector-voidptr erase row at the same address; word-erase folds to identical pointer-move bytes; call site is BfmeWordVec::resize at 0x824F9
+?_M_fill_insert@?$vector@GV?$allocator@G@_STL@@@_STL@@QAEXPAGIABG@Z,0x0007FF18,ICF twin of the vector-float fill-insert row at the same address; call site is BfmeWordVec::resize at 0x824F9
