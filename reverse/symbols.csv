@@ -1589,3 +1589,4 @@ _sscanf,0x00629892,CRT sscanf import thunk; retail REL32 target of Rva007FF700Da
 ?erase@?$vector@GV?$allocator@G@_STL@@@_STL@@QAEPAGPAG0@Z,0x0031BD55,ICF twin of the vector-voidptr erase row at the same address; word-erase folds to identical pointer-move bytes; call site is BfmeWordVec::resize at 0x824F9
 ?_M_fill_insert@?$vector@GV?$allocator@G@_STL@@@_STL@@QAEXPAGIABG@Z,0x0007FF18,ICF twin of the vector-float fill-insert row at the same address; call site is BfmeWordVec::resize at 0x824F9
 ?GetGameLogicRandomValueReal@@YAMMMPADH@Z,0x00234092,BFME2 game-logic getValue call target; mirrors the matched client helper pin at 0x234111 with RandomValue.cpp line 438
+?Disable_Backface_Culling@MeshMatDescClass@@IAEXXZ,0x00188670,address read from the REL32 displacements at post_process 0x189C93 and 0x189CA2; 67B Ghidra matches the inline Disable shape with the BFME cull-bit layout

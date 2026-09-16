@@ -7452,3 +7452,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ??1BfmeDirtyBase@@UAE@XZ,,0x00658650,7,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDtor.cpp,matched,Shared DirtySock base dtor reinstalling vtable CE0FB8; dedicated TU keeps nine scalar-deleter callers out of line
 ??0VertexMaterialClass@@QAE@XZ,,0x0013D420,296,Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp,matched,ported from the Open-BFME-1 conversion; placed by masked byte-scan
 ??1VertexMaterialClass@@UAE@XZ,,0x0013C990,132,Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp,matched,ported from the Open-BFME-1 conversion; placed by masked byte-scan
+?post_process@MeshModelClass@@IAEXXZ,,0x00189C60,102,Code/Libraries/Source/WWVegas/WW3D2/MeshModelPostProcess.cpp,matched,BFME1 source minus the ZH fog and overbright blocks which retail 102B omits; Disable pins at 0x188670
