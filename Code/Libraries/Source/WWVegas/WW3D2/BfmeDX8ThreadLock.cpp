@@ -17,6 +17,7 @@ extern "C" {
 __declspec(dllimport) unsigned long __stdcall WaitForSingleObject(void *handle, unsigned long milliseconds);
 __declspec(dllimport) void __stdcall EnterCriticalSection(void *section);
 __declspec(dllimport) void __stdcall LeaveCriticalSection(void *section);
+__declspec(dllimport) int __stdcall ReleaseMutex(void *handle);
 unsigned long __stdcall GetCurrentThreadId(void);
 }
 
@@ -114,4 +115,21 @@ int bfmeRva0011F600()
 	if (GetCurrentThreadId() == bfmeDX8DeviceOwner && (unsigned)bfmeDX8DeviceRecursion > 0)
 		return 1;
 	return 0;
+}
+
+// 0x00120F50: the release half of the device mutex.  Undoes one take: when
+// the recursion count reaches zero the owner is cleared, then the mutex is
+// released.  Reports whether this was the last unlock.
+bool BFME_DX8_Thread_Assert(void)
+{
+	unsigned long threadId = GetCurrentThreadId();
+	if (threadId == bfmeDX8DeviceOwner)
+		threadId = bfmeDX8DeviceRecursion;
+	EnterCriticalSection(bfmeDX8DeviceSection);
+	bool lastUnlock = --bfmeDX8DeviceRecursion == 0;
+	if (lastUnlock)
+		bfmeDX8DeviceOwner = 0;
+	LeaveCriticalSection(bfmeDX8DeviceSection);
+	ReleaseMutex(bfmeDX8DeviceMutex);
+	return lastUnlock;
 }

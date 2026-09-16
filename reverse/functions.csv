@@ -7476,3 +7476,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?LookupFrame@Debug@@AAEPAUFrameHashEntry@1@I@Z,,0x00038330,50,Code/Libraries/Source/WWVegas/WWDebug/Debug_GetFrameEntry.cpp,matched,placed by masked whole-text search of the compiled body - single hit
 ?Reset@Buffer@@QAEXXZ,,0x006157A0,39,Code/Libraries/Source/WWVegas/WWLib/buff.cpp,matched,ICF-folded with Buffer destructor; same 39B reset body
 ?resize@BfmeWordVec@@QAEXI@Z,,0x00157E50,15,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_word_o1_resize.cpp,matched,Word-vector single-arg resize; tail-calls two-arg form at 0x000824F9; supersedes retracted narrow-string row
+?BFME_DX8_Thread_Assert@@YA_NXZ,,0x00120F50,90,Code/Libraries/Source/WWVegas/WW3D2/BfmeDX8ThreadLock.cpp,matched,release half of the DX8 device mutex; recursion bookkeeping mirrors the lock
