@@ -7482,3 +7482,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?AddPatternEntry@Debug@@AAEXI_NPBD@Z,,0x000393E0,147,Code/Libraries/Source/WWVegas/WWDebug/Debug_AddPatternEntry.cpp,matched,BFME1 WWDebug AddPatternEntry verbatim port with strlwr fold
 ?frameStatus@Debug@@QAE_NI_N@Z,,0x0003A6A0,175,Code/Libraries/Source/WWVegas/WWDebug/Debug_FrameStatus.cpp,matched,BFME1 WWDebug frameStatus port with fastpath and critsec
 ?Add_Prototype_Impl@BfmeResourceEnumerator@@QAEXPAX@Z,,0x00621710,224,Code/GameEngineDevice/Source/W3DDevice/GameClient/Add_Prototype.cpp,matched,registry Add_Prototype impl via BFME1 pattern; guard Enters then virtual name plus FindOrCreate ID plus hashtable find plus operator-index plus begin cursor
+??1GenericMultiListClass@@UAE@XZ,,0x00610640,7,Code/Libraries/Source/WWVegas/WWLib/multilist.cpp,matched,trivial base dtor; exact via unclaimed_scan
