@@ -7496,3 +7496,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?GetGameClientRandomValue@@YAHHHPADH@Z,,0x0023404A,36,Code/GameEngine/Source/Common/GameClientAudioRandomValue_getValueInt.cpp,matched,BFME1 random_value.cpp trial port; client seed matches landed Real twin; release drops DEBUG_LOG
 ?GetGameAudioRandomValue@@YAHHHPADH@Z,,0x0023406E,36,Code/GameEngine/Source/Common/GameClientAudioRandomValue_getValueInt.cpp,matched,BFME1 random_value.cpp trial port; audio seed follows client seed by 24B matching BFME1 order
 ?GetGameAudioRandomValueReal@@YAMMMPADH@Z,,0x00234159,72,Code/GameEngine/Source/Common/GameAudioRandomValue_getValueReal.cpp,matched,BFME1 random_value.cpp trial port via landed client Real twin; audio seed plus 24B
+?GetGameLogicRandomSeed@@YAIXZ,,0x00233F6A,6,Code/GameEngine/Source/Common/GameLogicRandomSeed_get.cpp,matched,BFME1 random_value.cpp trial port; base-seed global read
