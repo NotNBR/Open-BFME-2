@@ -168,7 +168,6 @@ void VertexMaterialClass::Make_Unique()
 }
 
 // byte-exact reconstruction: reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp
-// ??1VertexMaterialClass@@UAE@XZ present-unmatched
 VertexMaterialClass::~VertexMaterialClass(void)
 {
 	int i;
