@@ -7498,3 +7498,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?GetGameAudioRandomValueReal@@YAMMMPADH@Z,,0x00234159,72,Code/GameEngine/Source/Common/GameAudioRandomValue_getValueReal.cpp,matched,BFME1 random_value.cpp trial port via landed client Real twin; audio seed plus 24B
 ?GetGameLogicRandomSeed@@YAIXZ,,0x00233F6A,6,Code/GameEngine/Source/Common/GameLogicRandomSeed_get.cpp,matched,BFME1 random_value.cpp trial port; base-seed global read
 ??0OpenContainModuleData@@QAE@XZ,,0x00253487,21,Code/GameEngine/Source/GameLogic/Object/Contain/OpenContainModuleDataCtor.cpp,matched,folded-vtable base ctor plus address-derived member setup
+??0BoxRenderObjClass@@QAE@ABUW3dBoxStruct@@@Z,,0x00175A40,266,Code/Libraries/Source/WWVegas/WW3D2/BoxRenderObjClassCtor.cpp,matched,BFME2 ctor via member Set_Name in dedicated TU
