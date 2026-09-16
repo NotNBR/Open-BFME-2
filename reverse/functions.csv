@@ -7464,3 +7464,4 @@ _Rva00815890,,0x00681790,17,Code/Libraries/Source/DirtySock/commsrp.cpp,matched,
 ?getSingleBitFromName@?$BitFlags@$0L@@@SAHPBD@Z,,0x0028C7AD,54,Code/GameEngine/Source/Common/BitFlags11DisabilityGetSingleBitFromName.cpp,matched,DEFAULT anchor; byte-twin of 0xB42CA with table 0xDC828C
 ?getSingleBitFromName@?$BitFlags@$0GI@@@SAHPBD@Z,,0x0028C7E3,54,Code/GameEngine/Source/Common/BitFlags104VeterancyGetSingleBitFromName.cpp,matched,VETERAN-104 anchor; byte-twin with table 0xDBC2C8
 ?getSingleBitFromName@?$BitFlags@$0GF@@@SAHPBD@Z,,0x0028C819,54,Code/GameEngine/Source/Common/BitFlags101BodyStateGetSingleBitFromName.cpp,matched,DESTROYED anchor; byte-twin with table 0xDA5F30
+?getSingleBitFromName@?$BitFlags@$0JK@@@SAHPBD@Z,,0x0028C84F,54,Code/GameEngine/Source/Common/BitFlags154SpecialPowerGetSingleBitFromName.cpp,matched,SPECIAL_INVALID anchor; byte-twin with table 0xDC0B40
