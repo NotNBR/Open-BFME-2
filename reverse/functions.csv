@@ -7558,3 +7558,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva002D22CA@@UAE@XZ,,0x002D22CA,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
 ??1Rva002E55D8@@UAE@XZ,,0x002E55D8,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
 ??1Rva003BA6A9@@UAE@XZ,,0x003BA6A9,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
+??1Rva003E3BD4@@UAE@XZ,,0x003E3BD4,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
