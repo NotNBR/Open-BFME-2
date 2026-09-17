@@ -29,6 +29,7 @@ class CollectionClass : public RenderObjClass
 {
 public:
 	CollectionClass(const CollectionClass &src);
+	virtual ~CollectionClass();
 
 	int A0;
 	int A1;
@@ -64,4 +65,19 @@ CollectionClass::CollectionClass(const CollectionClass &src)
 	B17 = src.B17;
 	B18 = src.B18;
 	B19 = src.B19;
+}
+
+// ??1CollectionClass@@UAE@XZ, retail 0x00130E80 (18B). Empty body: the
+// compiler reinstalls the vptrs and tail-jumps to the RenderObjClass
+// destructor at 0x0013BE20 (already matched, no pin).
+// ??_GCollectionClass@@QAEPAXI@Z, retail 0x00130FB0 (30B), is emitted by
+// the delete below.
+CollectionClass::~CollectionClass()
+{
+}
+
+// Anchor: emits the ??_G scalar-deleting-destructor COMDAT.
+void deleteCollection(CollectionClass *p)
+{
+	delete p;
 }

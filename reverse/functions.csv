@@ -7792,3 +7792,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva000CAEC6@@UAE@XZ,,0x000CAEC6,25,Code/GameEngine/Source/Common/Rva000C79C9Derived.cpp,matched,opaque MI dtor
 ??1Rva00130E80@@UAE@XZ,,0x00130E80,18,Code/Libraries/Source/WWVegas/WW3D2/RenderObjClassDerivedDtors.cpp,matched,opaque RenderObj-derived dtor; vptrs BD23C0/BD23B8; tail-jmp matched RenderObj dtor 0x13BE20; same shape as Camera dtor
 ??1Rva00166DE0@@UAE@XZ,,0x00166DE0,18,Code/Libraries/Source/WWVegas/WW3D2/RenderObjClassDerivedDtors.cpp,matched,opaque RenderObj-derived dtor; vptrs BD3FA8/BD3FA0; tail-jmp matched RenderObj dtor 0x13BE20; same shape as Camera dtor
+??1CollectionClass@@UAE@XZ,,0x00130E80,18,Code/Libraries/Source/WWVegas/WW3D2/CollectionClassCopyCtor.cpp,matched,Empty dtor; reinstalls vptrs and tail-jumps to matched RenderObjClass dtor 0x13BE20
