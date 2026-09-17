@@ -1723,3 +1723,7 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?clear@AsciiString@@QAEXXZ,0x00036410,BFME1 Image::Image calls m_name.clear()/m_filename.clear() in the ctor body; our Image ctor 0x2D8FE4 calls 0x36410 on +0x04/+0x08 after nulling in the same positions; 0-arg thiscall releasing m_data (fold-shares the address with the string dtor)
 ??0TextureClass@@QAE@PBD@Z,0x002DB882,31B texture ctor on fresh 0x3C alloc (base 0x1320D0 takes the filename, members +0x30/+0x38=1, vtable 0xC03E48); called by BfmeMapPictureTexture ctor 0x2DB93E
 ??4?$RefCountPtr@VTextureClass@@@@QAEAAV0@PAVTextureClass@@@Z,0x000EF87B,30B smart-ptr raw-assign (AddRef word+4, release old via 0x61ED10, store, flag-or); called by BfmeMapPictureTexture ctor 0x2DB93E with the new texture; ICF kin of the 0x424D0 assign
+??0StringClass@@QAE@H_N@Z,0x00065F34,StringClass(int,bool) snapshot-name temp ctor; called by Set_DX8_Render_State 0x6615F and Set_DX8_Texture_Stage_State 0x661DD as (0,true) before the Get-Value-Name call
+??1StringClass@@QAE@XZ,0x000610A40,StringClass dtor; cleans the snapshot-name temp in Set_DX8_Render_State 0x6615F and Set_DX8_Texture_Stage_State 0x661DD
+?Get_DX8_Render_State_Value_Name@DX8Wrapper@@SAXAAVStringClass@@KI@Z,0x00121A10,snapshot render-state name resolver; called with the temp plus (state,value) in Set_DX8_Render_State 0x6615F
+?Get_DX8_Texture_Stage_State_Value_Name@DX8Wrapper@@SAXAAVStringClass@@KI@Z,0x00120B90,snapshot texture-stage name resolver; called with the temp plus (state,value) in Set_DX8_Texture_Stage_State 0x661DD
