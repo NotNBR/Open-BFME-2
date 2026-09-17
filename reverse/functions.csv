@@ -8279,3 +8279,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva00330E15@RadiusDecal@@QAEXABUCoord3D@@@Z,,0x00330E15,24,Code/GameEngine/Source/GameClient/RadiusDecal_rva330E15.cpp,matched,Opaque RadiusDecal Coord setter to shadow+0x14 via twin caller 0xB3198 with setPosition
 ?set@Rva006573B0Holder@@QAEXPBD00@Z,,0x006573B0,99,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,FESL bulk string setter; first source assumed non-null and other two fall back to empty
 ?DisconnectFromServer@Cftp@@QAEJXZ,,0x006CA490,12,Code/Libraries/Source/WWVegas/WWDownload/CftpDisconnectFromServer.cpp,matched,
+?Apply@BfmeApplyTextureRef@@QAEXI@Z,,0x00132AF8,139,Code/Libraries/Source/WWVegas/WW3D2/BfmeApplyTextureRef_Apply.cpp,matched,BFME2-new per-stage apply; null path is inlined Set_DX8_Texture; live path via resource slots 0x28/0x2C/0x40 and backend slot 0; dedicated TU with /O1 for inc-mem counters
