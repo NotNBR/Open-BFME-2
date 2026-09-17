@@ -7552,3 +7552,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva005C31FB@@UAE@XZ,,0x005C31FB,14,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,opaque deleter tail-jmp AsciiString fold member at plus 8
 ??1Rva00221027@@UAE@XZ,,0x00221027,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
 ??1Rva00225ACA@@UAE@XZ,,0x00225ACA,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
+??1Rva00232D7B@@UAE@XZ,,0x00232D7B,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
