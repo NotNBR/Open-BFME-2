@@ -8220,3 +8220,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva00657480Holder@@QAEXPBD@Z,,0x00657480,28,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
 ?set@Rva00657470Holder@@QAEXE@Z,,0x00657470,16,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
 ??_GRva003B4100@@UAEPAXI@Z,,0x003B4A20,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x3B4100; flag plus pinned operator delete
+??1Rva005C4B1B@@UAE@XZ,,0x005C4B1B,11,Code/GameEngine/Source/Common/OpaqueSingleInheritanceDtors.cpp,matched,opaque single-inheritance dtor (vptr 0xC747B8 + tail-jmp pinned SEH base 0x3FCE38)
