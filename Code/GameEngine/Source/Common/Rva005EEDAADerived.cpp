@@ -1,0 +1,25 @@
+// cl: /O1 /MD
+//
+// Opaque single-inheritance destructors tail-calling Rva005EEDAA::~
+// Rva005EEDAA at 0x005EEDAA (row in Rva005EE30CChain.cpp). Each class below
+// stores its own vtable and tail-calls the base destructor; the base itself
+// is only declared here (defined once in Rva005EE30CChain.cpp), because a
+// same-TU definition would capture the call locally instead of at the ledger
+// address. Owner identities are unproven (opaque Rva names). One ledger row
+// per destructor, landed one commit at a time.
+
+class Rva005EEDAA
+{
+public:
+	virtual ~Rva005EEDAA();
+};
+
+class Rva005D8723 : public Rva005EEDAA
+{
+public:
+	virtual ~Rva005D8723();
+};
+
+Rva005D8723::~Rva005D8723()
+{
+}
