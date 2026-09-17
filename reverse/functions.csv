@@ -7735,3 +7735,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Get_Sorting_Struct@@YAPAVSortingNodeStruct@@XZ,,0x0012FD80,128,Code/Libraries/Source/WWVegas/WW3D2/SortingNodeStructDtor.cpp,matched,BFME1 shape verbatim; static clean_list shares the _clean_list name with sortingrenderer.cpp so DIR32 resolves to 0xDB6210 with no pin; push 0x2A8 validates the TU node extent
 ??1Rva005D719C@@UAE@XZ,,0x005D719C,11,Code/GameEngine/Source/Common/Rva005EE2A0Derived.cpp,matched,opaque derived dtor tail-jmp row base
 ??1Rva005D724B@@UAE@XZ,,0x005D724B,11,Code/GameEngine/Source/Common/Rva005EE2A0Derived.cpp,matched,opaque derived dtor
+??1Rva005D72FA@@UAE@XZ,,0x005D72FA,11,Code/GameEngine/Source/Common/Rva005EE2A0Derived.cpp,matched,opaque derived dtor
