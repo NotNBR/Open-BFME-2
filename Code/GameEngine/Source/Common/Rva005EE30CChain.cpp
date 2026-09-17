@@ -22,13 +22,3 @@ public:
 Rva005EE30C::~Rva005EE30C()
 {
 }
-
-class Rva005D736E : public Rva005EE30C
-{
-public:
-	virtual ~Rva005D736E();
-};
-
-Rva005D736E::~Rva005D736E()
-{
-}
