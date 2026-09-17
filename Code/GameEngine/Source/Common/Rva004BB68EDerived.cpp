@@ -56,3 +56,19 @@ public:
 Rva004BC325::~Rva004BC325()
 {
 }
+
+class Rva004BC4FC_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva004BC4FC : public Rva004BB68E, public MiBase1, public Rva004BC4FC_B2
+{
+public:
+	virtual ~Rva004BC4FC();
+};
+
+Rva004BC4FC::~Rva004BC4FC()
+{
+}
