@@ -204,3 +204,23 @@ public:
 Rva004B5D0B::~Rva004B5D0B()
 {
 }
+
+class Rva004B611C : public FireWeaponWhenDeadBehavior
+{
+public:
+	virtual ~Rva004B611C();
+};
+
+Rva004B611C::~Rva004B611C()
+{
+}
+
+class Rva004B66B3 : public FireWeaponWhenDeadBehavior
+{
+public:
+	virtual ~Rva004B66B3();
+};
+
+Rva004B66B3::~Rva004B66B3()
+{
+}

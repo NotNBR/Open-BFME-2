@@ -84,3 +84,48 @@ public:
 Rva004A935D::~Rva004A935D()
 {
 }
+
+class Rva0047EB78 : public Rva0026E836
+{
+public:
+	virtual ~Rva0047EB78();
+
+private:
+	char m_pad0028[0x3E4 - 0x28];
+	int m_extra03E4;
+};
+
+Rva0047EB78::~Rva0047EB78()
+{
+	m_extra03E4 = 0xC47B84;
+}
+
+class Rva0048F3E0 : public Rva0026E836
+{
+public:
+	virtual ~Rva0048F3E0();
+
+private:
+	char m_pad0028[0x3E4 - 0x28];
+	int m_extra03E4;
+};
+
+Rva0048F3E0::~Rva0048F3E0()
+{
+	m_extra03E4 = 0xC4CC88;
+}
+
+class Rva0049A64B : public Rva0026E836
+{
+public:
+	virtual ~Rva0049A64B();
+
+private:
+	char m_pad0028[0x3E4 - 0x28];
+	int m_extra03E4;
+};
+
+Rva0049A64B::~Rva0049A64B()
+{
+	m_extra03E4 = 0xC50868;
+}

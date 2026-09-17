@@ -8046,3 +8046,8 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??M@YA_NABVAsciiString@@0@Z,,0x0005598C,23,Code/Libraries/Source/WWVegas/WWLib/AsciiStringLess.cpp,matched,primitive string less via OR-false temp materialization; compare resolves via matched row; pin coexists; clears 0.83 partial
 ??1BfmeMsg@@UAE@XZ,,0x00655780,7,Code/GameEngine/Source/GameNetwork/BfmeMsgCtor.cpp,matched,trivial virtual base dtor is direct vptr reinstall (ctors home this to EAX); 121 direct destruction sites; 16B ctor sibling stays under PrototypeClass ICF alias
 ??_GBfmeMsg@@UAEPAXI@Z,,0x00655880,29,Code/GameEngine/Source/GameNetwork/BfmeMsgCtor.cpp,matched,scalar deleting dtor via delete-anchor; trivial dtor inlines away leaving vptr plus conditional delete; add-esp cleanup needs /O2
+??1Rva004B611C@@UAE@XZ,,0x004B611C,32,Code/GameEngine/Source/GameLogic/Object/Behavior/FireWeaponWhenDeadBehaviorDerived.cpp,matched,
+??1Rva004B66B3@@UAE@XZ,,0x004B66B3,32,Code/GameEngine/Source/GameLogic/Object/Behavior/FireWeaponWhenDeadBehaviorDerived.cpp,matched,
+??1Rva0047EB78@@UAE@XZ,,0x0047EB78,49,Code/GameEngine/Source/Common/Rva0026E836Derived.cpp,matched,
+??1Rva0048F3E0@@UAE@XZ,,0x0048F3E0,49,Code/GameEngine/Source/Common/Rva0026E836Derived.cpp,matched,
+??1Rva0049A64B@@UAE@XZ,,0x0049A64B,49,Code/GameEngine/Source/Common/Rva0026E836Derived.cpp,matched,
