@@ -57,3 +57,90 @@ void Rva00589079_Anchor(Rva00589079 *p)
 {
 	p->Rva00589079::~Rva00589079();
 }
+
+class Rva00481F82_S1
+{
+public:
+	virtual void f1();
+};
+
+class Rva00481F82_S2
+{
+public:
+	virtual void f2();
+
+private:
+	char m_pad04[12];
+};
+
+class Rva00481F82_S3
+{
+public:
+	virtual void f3();
+};
+
+class Rva00481F82_S4
+{
+public:
+	virtual void f4();
+};
+
+class Rva00481F82 : public Rva0024A797, public Rva00481F82_S1, public Rva00481F82_S2, public Rva00481F82_S3, public Rva00481F82_S4
+{
+public:
+	virtual ~Rva00481F82()
+	{
+	}
+};
+
+// Anchor: forces out-of-line emission of the in-class destructor COMDAT,
+// including the scalar deleting destructor.
+void Rva00481F82_Anchor(Rva00481F82 *p)
+{
+	p->Rva00481F82::~Rva00481F82();
+}
+
+class Rva00482E96_S1
+{
+public:
+	virtual void f1();
+};
+
+class Rva00482E96_S2
+{
+public:
+	virtual void f2();
+
+private:
+	char m_pad04[12];
+};
+
+class Rva00482E96_S3
+{
+public:
+	virtual void f3();
+
+private:
+	char m_pad18[4];
+};
+
+class Rva00482E96_S4
+{
+public:
+	virtual void f4();
+};
+
+class Rva00482E96 : public Rva0024A797, public Rva00482E96_S1, public Rva00482E96_S2, public Rva00482E96_S3, public Rva00482E96_S4
+{
+public:
+	virtual ~Rva00482E96()
+	{
+	}
+};
+
+// Anchor: forces out-of-line emission of the in-class destructor COMDAT,
+// including the scalar deleting destructor.
+void Rva00482E96_Anchor(Rva00482E96 *p)
+{
+	p->Rva00482E96::~Rva00482E96();
+}
