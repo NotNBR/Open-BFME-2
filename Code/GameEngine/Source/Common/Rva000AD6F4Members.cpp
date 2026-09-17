@@ -30,3 +30,17 @@ Rva00328A75::~Rva00328A75()
 {
 	m_member04.clear();
 }
+
+class Rva00577936
+{
+public:
+	virtual ~Rva00577936();
+
+private:
+	Rva000AD6F4 m_member04;
+};
+
+Rva00577936::~Rva00577936()
+{
+	m_member04.clear();
+}
