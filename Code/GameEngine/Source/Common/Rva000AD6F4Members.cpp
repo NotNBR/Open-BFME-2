@@ -44,3 +44,17 @@ Rva00577936::~Rva00577936()
 {
 	m_member04.clear();
 }
+
+class Rva005F83DF
+{
+public:
+	virtual ~Rva005F83DF();
+
+private:
+	Rva000AD6F4 m_member04;
+};
+
+Rva005F83DF::~Rva005F83DF()
+{
+	m_member04.clear();
+}
