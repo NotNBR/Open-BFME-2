@@ -1693,3 +1693,5 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ?undoRevealMapForPlayerPermanently@PartitionManager@@QAEXH@Z,0x007397B0,8B this-adjust jmp thunk (mov ecx [ecx+0x10]; jmp 0x73D810); first shroud call in BFME1 doBorderSwitch source; B1 reveal-thunk precedent
 ?setActiveBoundary@TerrainLogic@@QAEXH@Z,0x0028069E,middle call in doBorderSwitch with ecx=TheTerrainLogic global and int arg; B1 ledger names doBorderSwitch as its caller; 220B camera/view body
 ?revealMapForPlayerPermanently@PartitionManager@@QAEXH@Z,0x00739790,8B this-adjust jmp thunk (mov ecx [ecx+0x10]; jmp 0x73B410); second shroud call in BFME1 doBorderSwitch source
+?WriteGroupDataChunk@@YAXAAVDataChunkOutput@@PAVScriptList@@PAVScriptGroup@@@Z,0x003B5994,group slot of WriteScriptListDataChunk called with (out this [this+8]); BFME1 Scripts.cpp declares this free function; group-before-script BFME order
+?WriteScriptDataChunk@@YAXAAVDataChunkOutput@@PAVScriptList@@PAVScript@@@Z,0x003B6975,script slot of WriteScriptListDataChunk called with (out this [this+4]); B1 matched the same free function at 0x359EE0
