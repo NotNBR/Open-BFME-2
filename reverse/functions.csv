@@ -8320,3 +8320,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00625300@PartitionManager@@QAEXPBURegion3D@@@Z,,0x00625300,8,Code/GameEngine/Source/GameLogic/Object/PartitionManagerShroudThunks.cpp,matched,opaque region thunk (const-correct PBU spelling; PAU pin retired); pin-to-row upgrade
 ?init@FrameData@@QAEXXZ,,0x005DA4F9,100,Code/GameEngine/Source/GameNetwork/FrameData_init.cpp,matched,BFME1 FrameData.cpp shape minus the init call with double reset on the fresh list; layout +0/+4/+8/+0xC/+0x10; /O1 outlined EH prologue
 ?zeroFrames@FrameDataManager@@QAEXII@Z,,0x0058B7AF,62,Code/GameEngine/Source/Common/FrameDataManagerZeroFrames.cpp,matched,BFME1 verbatim in dedicated TU; opaque zeroFrame decl forces esi homing; G7 imul; upfront jbe from for-shape
+??_GNetCommandList@@MAEPAXI@Z,,0x0058B50F,34,Code/GameEngine/Source/GameNetwork/NetCommandListDeleter.cpp,matched,BFME1 dtor recipe with MAE access; O1 pop-cleanup; dtor present-unmatched
