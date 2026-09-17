@@ -1911,3 +1911,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 
 ??0Rva006DCD20@@QAE@PAVThing@@PBVModuleData@@@Z,0x006DCD20,opaque base of ClientUpdateModule 0x6CBCB0 (38B: vtable 0xCEAED0 folded with ClientUpdateModule own, base 0x6DBBC0, bit-flags +4); NOT DrawableModule (different vtable family from Module block 0xC07E.., donor shape belongs to landed 0x306B19); identity unproven
 ??1ObjectModule@@UAE@XZ,0x0049B47C,public-virtual spelling of the ObjectModule dtor for the slot-0 ??_G at 0x4A10FD (same address as the MAE pin and FX fold rows; dtor body itself unclaimed, 7B mov-vptr-ret fold point)
+??0MultiIniFieldParse@@QAE@XZ,0x0002BAA0,frameless 27B zeroing ctor over stack buffer at parseObject 0x1F311B; layout +0/+0x40/+0x80 matches BFME1 class
+??0GenericObjectCreationNugget@@QAE@XZ,0x001F0E32,SEH ctor installing vtable 0xBE1160 called by parseObject new at 0x1F311B; BFME1-attested QAE mangling
+??1GenericObjectCreationNugget@@MAE@XZ,0x001F31C6,parseObject new-unwind funclet target with vptr reinstall plus member teardown; BFME1-attested protected MAE mangling
