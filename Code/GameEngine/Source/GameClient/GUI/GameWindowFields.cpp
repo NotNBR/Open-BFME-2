@@ -37,6 +37,7 @@ public:
 	int winSetDisabledImage(int index, const Image *image);
 	int winSetDisabledColor(int index, int color);
 	int winSetDisabledBorderColor(int index, int color);
+	int winSetHiliteImage(int index, const Image *image);
 
 private:
 	char m_pad[48];
@@ -88,5 +89,13 @@ int GameWindow::winSetDisabledBorderColor(int index, int color)
 	if (index < 0 || index >= 9)
 		return -3;
 	m_instData.m_disabledDrawData[index].borderColor = color;
+	return 0;
+}
+
+int GameWindow::winSetHiliteImage(int index, const Image *image)
+{
+	if (index < 0 || index >= 9)
+		return -3;
+	m_instData.m_hiliteDrawData[index].image = image;
 	return 0;
 }
