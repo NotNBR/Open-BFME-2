@@ -1645,3 +1645,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva00548948@@UAE@XZ,0x00548948,opaque base dtor; 3 derived dtors tail-call it; identity unproven
 ??1Rva0055B0CC@@UAE@XZ,0x0055B0CC,opaque base dtor; 3 derived dtors tail-call it; identity unproven
 ??1Rva005DC73C@@UAE@XZ,0x005DC73C,opaque base dtor; 3 derived dtors tail-call it; identity unproven
+??1Rva005AFE3F@@UAE@XZ,0x005AFE3F,opaque base dtor; 3 derived dtors tail-call it; identity unproven
