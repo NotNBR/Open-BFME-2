@@ -10,8 +10,8 @@
 // ScriptList::WriteScriptsDataChunk / WriteScriptListDataChunk, following the
 // Zero Hour shape): the outer writer opens the PlayerScriptsList chunk and one
 // ScriptList chunk per list, delegating each list to the member writer; the
-// member writer emits the group chunk before the script chunk (the BFME order,
-// m_firstGroup at +0x08 ahead of m_firstScript at +0x04). The per-chunk writers
+// member writer emits the script chunk before the group chunk (the Zero Hour
+// order, m_firstScript at +0x08 after m_firstGroup at +0x04). The per-chunk writers
 // are free functions resolving through the 0x3B5994/0x3B6975 pins, the chunk
 // open through the matched 0x307C76 row, and the chunk close through the
 // 0x306C88 pin. Retail pushes version 1 for both chunks.
@@ -42,8 +42,8 @@ public:
 
 private:
 	unsigned char m_pad[4];
-	Script *m_firstScript; // +0x04
-	ScriptGroup *m_firstGroup; // +0x08
+	ScriptGroup *m_firstGroup; // +0x04
+	Script *m_firstScript; // +0x08
 };
 
 void WriteGroupDataChunk(DataChunkOutput &chunkWriter, ScriptList *scriptList, ScriptGroup *scriptGroup);
@@ -52,10 +52,10 @@ void WriteScriptDataChunk(DataChunkOutput &chunkWriter, ScriptList *scriptList, 
 // ?WriteScriptListDataChunk@ScriptList@@QAEXAAVDataChunkOutput@@@Z
 void ScriptList::WriteScriptListDataChunk(DataChunkOutput &chunkWriter)
 {
-	if (m_firstGroup)
-		WriteGroupDataChunk(chunkWriter, this, m_firstGroup);
 	if (m_firstScript)
 		WriteScriptDataChunk(chunkWriter, this, m_firstScript);
+	if (m_firstGroup)
+		WriteGroupDataChunk(chunkWriter, this, m_firstGroup);
 }
 
 // ?WriteScriptsDataChunk@ScriptList@@SAXAAVDataChunkOutput@@QAPAV1@H@Z
