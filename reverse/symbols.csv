@@ -1656,3 +1656,5 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva0058A0F4@@UAE@XZ,0x0058A0F4,opaque SEH base dtor (4 vptrs +0/+0xC/+0x10/+0x20, frees string members via 0x30830); 3 derived 32B dtors tail-call it; identity unproven
 ??1Rva001DBAC3@@UAE@XZ,0x001DBAC3,opaque leaf base dtor (7B mov-vptr plus ret); 2 derived 11B dtors tail-call it; identity unproven
 ??1Rva006D63C0@@UAE@XZ,0x006D63C0,opaque SEH base dtor; 2 derived 11B dtors tail-call it; identity unproven
+??1Rva0044D56A@@UAE@XZ,0x0044D56A,opaque SEH base dtor (vptr 0xC3EF60, AsciiString member at +0x18 via 0x36410, base 0x3B1F65); 2 derived 11B dtors tail-call it; identity unproven
+??1Rva004E3CD0@@UAE@XZ,0x004E3CD0,opaque SEH base dtor; 2 derived 11B dtors tail-call it; identity unproven
