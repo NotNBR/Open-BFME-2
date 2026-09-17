@@ -8000,3 +8000,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0AABoxRenderObjClass@@QAE@ABUW3dBoxStruct@@@Z,,0x00175C40,143,Code/Libraries/Source/WWVegas/WW3D2/AABoxRenderObjFromDef.cpp,matched,
 ?Clone@AABoxRenderObjClass@@UBEPAVRenderObjClass@@XZ,,0x00176300,78,Code/Libraries/Source/WWVegas/WW3D2/AABoxRenderObjClone.cpp,matched,
 ?Clone@OBBoxRenderObjClass@@UBEPAVRenderObjClass@@XZ,,0x001763D0,78,Code/Libraries/Source/WWVegas/WW3D2/OBBoxRenderObjClone.cpp,matched,
+??0AABoxRenderObjClass@@QAE@ABVAABoxClass@@@Z,,0x00175CD0,262,Code/Libraries/Source/WWVegas/WW3D2/AABoxRenderObjFromAABox.cpp,matched,
