@@ -8071,3 +8071,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?initDbghelp@Rva006C4CD0Helper@@QAEXXZ,,0x006C4CD0,124,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque dbghelp-table init; /O2 reg-materialization; 3 same-cluster callers
 ?uninitDbghelp@Rva006C4CD0Helper@@QAEXXZ,,0x006C4D50,43,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque dbghelp cleanup; SymCleanup slot plus FreeLibrary
 ??_GRva0065D52@@UAEPAXI@Z,,0x0004303B,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x65D52; flag plus pinned operator delete
+??_GRva0049FCB@@UAEPAXI@Z,,0x0004AA0C,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x49FCB; flag plus pinned operator delete
