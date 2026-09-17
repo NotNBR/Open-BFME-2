@@ -1,4 +1,4 @@
-// cl: /DNDEBUG /MD /EHsc
+// cl: /DNDEBUG /MD /EHsc /G7
 // Retail 0x00904230: DX8CALL(BeginScene()) wrapped by a matching enter/leave helper.
 
 struct IDirect3DDevice8;

@@ -8022,3 +8022,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?GadgetListBoxIsFull@@YA_NPAVGameWindow@@@Z,,0x00324822,62,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBoxIsFull.cpp,matched,BFME1 fullness test with rows temp; 1 opaque pin same batch
 ?Rva00324807@@YAHPAVGameWindow@@@Z,,0x00324807,27,Code/GameEngine/Source/GameClient/GUI/Gadget/Rva00324807BottomEntry.cpp,matched,Opaque null-guarded bottom-entry delegate; pin coexists with row
 ?update@TimedOperationRef@@QAEIM_N@Z,,0x003FE6A0,53,Code/GameEngine/Source/Common/TimedOperationRef_update.cpp,matched,BFME1 TimedOperationNode shape with throw instead of FatalError; opaque exception ctor pinned
+?Begin_Scene_Inner@DX8Wrapper@@SAXXZ,,0x0011D2B0,31,Code/Libraries/Source/WWVegas/WW3D2/DX8WrapperBeginSceneInner.cpp,matched,DX8 BeginScene enter helper; G7 emits add-mem over inc for the call counter
