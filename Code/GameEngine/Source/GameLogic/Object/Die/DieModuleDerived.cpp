@@ -168,3 +168,19 @@ public:
 Rva00486B56::~Rva00486B56()
 {
 }
+
+class Rva00486C76_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva00486C76 : public DieModule, public MiBase1, public Rva00486C76_B2
+{
+public:
+	virtual ~Rva00486C76();
+};
+
+Rva00486C76::~Rva00486C76()
+{
+}
