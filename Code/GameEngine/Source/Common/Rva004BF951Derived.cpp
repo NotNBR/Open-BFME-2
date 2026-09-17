@@ -137,3 +137,28 @@ public:
 Rva004C2016::~Rva004C2016()
 {
 }
+
+class Rva004C1BAB_B2
+{
+public:
+	virtual void f2();
+
+private:
+	char m_pad04[0xEC];
+};
+
+class Rva004C1BAB_B3
+{
+public:
+	virtual void f3();
+};
+
+class Rva004C1BAB : public Rva004BF951, public MiBase1, public Rva004C1BAB_B2, public Rva004C1BAB_B3
+{
+public:
+	virtual ~Rva004C1BAB();
+};
+
+Rva004C1BAB::~Rva004C1BAB()
+{
+}
