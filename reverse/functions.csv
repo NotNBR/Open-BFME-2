@@ -7521,3 +7521,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?isTurretEnabled@AIUpdateInterface@@QBE_NW4WhichTurretType@@@Z,,0x00262683,25,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterface_isTurretEnabled.cpp,matched,BFME2 AIUpdate logic with inlined TurretAI flag read at +0x3C; m_turretAI at +0x20C
 ?Get_Motion@HAnimComboClass@@QAEPAVHAnimClass@@H@Z,,0x00196670,23,Code/Libraries/Source/WWVegas/WW3D2/HAnimComboClassGetMotion.cpp,matched,
 ?Get_Pivot_Weight_Map@HAnimComboClass@@QAEPAVPivotMapClass@@H@Z,,0x00196740,27,Code/Libraries/Source/WWVegas/WW3D2/HAnimComboClassGetMotion.cpp,matched,
+?getCurrentVictim@AIUpdateInterface@@QBEPAVObject@@XZ,,0x00268D71,23,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterface_getCurrentVictim.cpp,matched,BFME2 AIUpdate logic; m_currentVictimID at +0x40; TheGameLogic DIR32
