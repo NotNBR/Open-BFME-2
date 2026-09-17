@@ -1,0 +1,136 @@
+// cl: /O1 /Oy- /DNDEBUG /MD /GX-
+//
+// ?doFXPos@FXList@@QBEXPBVCoord3D@@PBVMatrix3D@@MPBV2@@Z,
+// retail 0x001E296E, 168 bytes. Dedicated TU.
+//
+// Battle for Middle-earth reference
+// (reference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Source/GameClient/FXList.cpp,
+// FXList::doFXPos): per-bone effect applier walking the nugget list. The
+// retail body follows that role with BFME2 additions: an alias-name chain
+// resolved through the findFXList row, a disabled-flag early-out, a shroud
+// pre-check through the pinned 0x7397F0 thunk, and a per-nugget gate plus a
+// consumption flag at +0x144. Virtual slots need no pins.
+
+typedef int Int;
+
+#define NULL 0
+
+struct Coord3D
+{
+	float x;
+	float y;
+	float z;
+};
+
+class Matrix3D
+{
+	float m[12];
+};
+
+enum CellShroudStatus
+{
+	CELLSHROUD_CLEAR,
+	CELLSHROUD_FOGGED,
+	CELLSHROUD_SHROUDED
+};
+
+class PartitionManager
+{
+public:
+	CellShroudStatus getShroudStatusForPlayer(Int playerIndex, const Coord3D *pos) const;
+};
+
+extern PartitionManager *TheShroudManager;
+
+class AsciiString
+{
+public:
+	void *m_data;
+};
+
+class FXList;
+
+class FXListStore
+{
+public:
+	const FXList *findFXList(const char *name) const;
+};
+
+extern FXListStore *TheFXListStore;
+
+struct ShroudKeyInner
+{
+	char m_pad[0x54];
+	int m_key;
+};
+
+struct ShroudKeyBase
+{
+	char m_pad[0x10];
+	ShroudKeyInner *m_inner;
+};
+
+extern ShroudKeyBase *TheShroudKeyBase;
+
+class FXNugget
+{
+public:
+	virtual void slot00() = 0;
+	virtual void applyEffect(const Coord3D *pos, const Matrix3D *mtx, float speed, const Coord3D *secondary) = 0;
+	virtual void slot08() = 0;
+	virtual void slot0C() = 0;
+	virtual bool testNugget(int a, int b) = 0;
+
+	char m_pad[0x140];
+	bool m_consumed;
+};
+
+struct FXNuggetNode
+{
+	FXNuggetNode *m_next;
+	void *m_reserved;
+	FXNugget *m_nugget;
+};
+
+class FXList
+{
+public:
+	void doFXPos(const Coord3D *pos, const Matrix3D *mtx, float speed, const Coord3D *secondary) const;
+
+private:
+	void *m_head;
+	FXNuggetNode *m_nuggets;
+	void *m_unknown8;
+	AsciiString m_aliasName;
+	bool m_disabled;
+	char m_pad11[0x13];
+	bool m_hasAlias;
+};
+
+// ?doFXPos@FXList@@QBEXPBVCoord3D@@PBVMatrix3D@@MPBV2@@Z
+void FXList::doFXPos(const Coord3D *pos, const Matrix3D *mtx, float speed, const Coord3D *secondary) const
+{
+	const FXList *list = this;
+	while (list->m_hasAlias) {
+		const char *alias = list->m_aliasName.m_data != NULL ? (const char *)list->m_aliasName.m_data + 8 : "";
+		const FXList *found = TheFXListStore->findFXList(alias);
+		if (found == NULL)
+			break;
+		list = found;
+	}
+	if (!list->m_disabled) {
+		if (pos != NULL) {
+			int key = TheShroudKeyBase->m_inner->m_key;
+			if (TheShroudManager->getShroudStatusForPlayer(key, pos) != CELLSHROUD_CLEAR)
+				return;
+		}
+	}
+	for (FXNuggetNode *node = list->m_nuggets->m_next; node != list->m_nuggets; node = node->m_next) {
+		FXNugget *nugget = node->m_nugget;
+		if (nugget->testNugget(0, 0)) {
+			nugget->applyEffect(pos, mtx, speed, secondary);
+			if (nugget->m_consumed)
+				return;
+		}
+	}
+}
