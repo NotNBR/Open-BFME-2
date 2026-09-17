@@ -8236,3 +8236,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva00180EA0@@UAE@XZ,,0x00180EA0,11,Code/GameEngine/Source/Common/OpaqueSingleInheritanceDtors.cpp,matched,opaque single-inheritance dtor (vptr 0xBD5090 + tail-jmp pinned base 0x61ED80); 30B ??_G variant stays blocked
 ??_GRva004E18A2@@UAEPAXI@Z,,0x004E1D16,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x4E18A2; flag plus pinned operator delete
 ??_GRva0057C3B6@@UAEPAXI@Z,,0x0057C4E2,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x57C3B6; flag plus pinned operator delete
+?winSetEnabledImage@GameWindow@@QAEHHPBVImage@@@Z,,0x003143B9,36,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
