@@ -2,8 +2,9 @@
 // stlport
 
 // _Rb_tree<const ThingTemplate *, pair<const ThingTemplate *, int>>::
-// insert_unique with hint (retail 0x00759DB0, 592 bytes), the worker behind
-// ScoreKeeper's ObjectCountMap insertions. Explicit member instantiation:
+// insert_unique with hint (retail 0x00759DB0, 592 bytes) and without
+// (retail 0x00759C80, 145 bytes), the workers behind ScoreKeeper's
+// ObjectCountMap insertions. Explicit member instantiation:
 // the whole-map form would emit every member and leave this unit full of
 // unrowed definitions, and the mangled name needs the const-pointer pair
 // (pair<const ThingTemplate * const, int>), not the plain-pointer one.
@@ -34,3 +35,6 @@ typedef _STL::_Rb_tree<const ThingTemplate *, ThingTemplateCountPair,
 
 template ThingTemplateCountTree::iterator
 ThingTemplateCountTree::insert_unique(ThingTemplateCountTree::iterator, const ThingTemplateCountPair &);
+
+template _STL::pair<ThingTemplateCountTree::iterator, bool>
+ThingTemplateCountTree::insert_unique(const ThingTemplateCountPair &);
