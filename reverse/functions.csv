@@ -7589,3 +7589,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?update@TimedOp@@QAEIXZ,,0x003FE6E8,99,Code/GameEngine/Source/Common/TimedOperations_updateTimedOps.cpp,matched,BFME1 TimedOp update shape; embedded op helper pinned
 ?testMasks@Rva0026157E@@QBE_NPBX0@Z,,0x0026157E,66,Code/GameEngine/Source/Common/Rva0026157ETestMasks.cpp,matched,dual-mask disjoint-plus-subset raw dword loop leaf O1 unsigned
 ??1Rva00253E19@@UAE@XZ,,0x00253E19,25,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,opaque MI dtor three vptrs tail-jmp opaque base
+??1Rva00253EF5@@UAE@XZ,,0x00253EF5,25,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,opaque MI dtor three vptrs tail-jmp opaque base

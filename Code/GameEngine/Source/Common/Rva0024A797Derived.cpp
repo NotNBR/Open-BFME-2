@@ -40,3 +40,19 @@ public:
 Rva00253E19::~Rva00253E19()
 {
 }
+
+class Rva00253EF5_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva00253EF5 : public Rva0024A797, public MiBase1, public Rva00253EF5_B2
+{
+public:
+	virtual ~Rva00253EF5();
+};
+
+Rva00253EF5::~Rva00253EF5()
+{
+}
