@@ -11,7 +11,12 @@
 typedef int Int;
 typedef int WinErr;
 
+#ifndef NULL
+#define NULL 0
+#endif
+
 static const WinErr WIN_ERR_OK = 0;
+static const WinErr WIN_ERR_INVALID_PARAMETER = -3;
 
 struct ICoord2D
 {
@@ -29,9 +34,11 @@ class GameWindow
 {
 public:
 	Int winGetScreenPosition(Int *x, Int *y);
+	Int winGetSize(Int *width, Int *height);
 
 private:
-	unsigned char m_unreconstructed_000[0x14];
+	unsigned char m_unreconstructed_000[0x0C];
+	ICoord2D m_size;				// +0x0C
 	IRegion2D m_region;				// +0x14 (lo+hi, 0x10 bytes)
 	unsigned char m_unreconstructed_024[0x200 - 0x24];
 	GameWindow *m_parent;			// +0x200
@@ -55,4 +62,18 @@ Int GameWindow::winGetScreenPosition(Int *x, Int *y)
 	// WIN_ERR_OK), so return it directly instead of materializing the
 	// constant (which would cost an xor).
 	return (Int)parent;
+}
+
+// ?winGetSize@GameWindow@@QAEHPAH0@Z, retail 0x00313BC6 (38B). Same BFME1
+// file, verbatim port: null-checked size fetch with -3/0 codes.
+Int GameWindow::winGetSize(Int *width, Int *height)
+{
+	if (width == NULL || height == NULL) {
+		return WIN_ERR_INVALID_PARAMETER;
+	}
+
+	*width = m_size.x;
+	*height = m_size.y;
+
+	return WIN_ERR_OK;
 }
