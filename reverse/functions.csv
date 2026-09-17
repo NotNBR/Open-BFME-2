@@ -8308,3 +8308,8 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0Rva000B19A1@@QAE@PAVThing@@PBVModuleData@@@Z,,0x000B19A1,26,Code/GameEngine/Source/GameClient/Drawable/Update/Rva000B19A1Ctor.cpp,matched,opaque ClientUpdate intermediate base via DrawableModule row; pin-to-row upgrade; serves Animated 0xD181D plus LaserUpdate 0xCA752
 ??0Rva00252B68@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00252B68,26,Code/GameEngine/Source/GameLogic/Object/Update/Rva00252B68Ctor.cpp,matched,opaque intermediate base via DrawableModule row; pin-to-row upgrade
 ??0Rva00362EC7@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00362EC7,26,Code/GameEngine/Source/GameLogic/Object/Update/Rva00362EC7Ctor.cpp,matched,opaque intermediate base via DrawableModule row; pin-to-row upgrade
+??0Rva00490D3F@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00490D3F,47,Code/GameEngine/Source/GameLogic/Object/Update/Rva00490D3FCtor.cpp,matched,opaque OCL-twin via base pin; 0x24D67B stub (0x88)
+??0Rva00492179@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00492179,47,Code/GameEngine/Source/GameLogic/Object/Update/Rva00492179Ctor.cpp,matched,opaque OCL-twin via base pin; 0x24D9D2 stub (0x88); paired dtor rowed
+??0Rva00492402@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00492402,47,Code/GameEngine/Source/GameLogic/Object/Update/Rva00492402Ctor.cpp,matched,opaque OCL-twin via base pin; 0x24DA7C stub (0x88); paired dtor rowed
+??0Rva00492C59@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00492C59,47,Code/GameEngine/Source/GameLogic/Object/Update/Rva00492C59Ctor.cpp,matched,opaque OCL-twin via base pin; 0x24DBD0 stub (0x88)
+??0Rva00494DCA@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00494DCA,47,Code/GameEngine/Source/GameLogic/Object/Update/Rva00494DCACtor.cpp,matched,opaque OCL-twin via base pin; 0x24DD98 stub (0x88)
