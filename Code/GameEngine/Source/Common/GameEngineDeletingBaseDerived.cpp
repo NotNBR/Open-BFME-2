@@ -22,3 +22,13 @@ public:
 Rva00221027::~Rva00221027()
 {
 }
+
+class Rva00225ACA : public GameEngineDeletingBase
+{
+public:
+	virtual ~Rva00225ACA();
+};
+
+Rva00225ACA::~Rva00225ACA()
+{
+}
