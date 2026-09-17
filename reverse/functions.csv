@@ -8023,3 +8023,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva00324807@@YAHPAVGameWindow@@@Z,,0x00324807,27,Code/GameEngine/Source/GameClient/GUI/Gadget/Rva00324807BottomEntry.cpp,matched,Opaque null-guarded bottom-entry delegate; pin coexists with row
 ?update@TimedOperationRef@@QAEIM_N@Z,,0x003FE6A0,53,Code/GameEngine/Source/Common/TimedOperationRef_update.cpp,matched,BFME1 TimedOperationNode shape with throw instead of FatalError; opaque exception ctor pinned
 ?Begin_Scene_Inner@DX8Wrapper@@SAXXZ,,0x0011D2B0,31,Code/Libraries/Source/WWVegas/WW3D2/DX8WrapperBeginSceneInner.cpp,matched,DX8 BeginScene enter helper; G7 emits add-mem over inc for the call counter
+?Get_Render_Target_Resolution@DX8Wrapper@@CAXAAH00AA_N@Z,,0x00121860,195,Code/Libraries/Source/WWVegas/WW3D2/WW3D_Get_Render_Target_Resolution.cpp,matched,BFME1 WW3D unit ported to the DX8Wrapper body behind the 0x116FF0 thunk; /G7 TU

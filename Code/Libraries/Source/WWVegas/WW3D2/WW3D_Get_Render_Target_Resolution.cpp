@@ -1,6 +1,6 @@
 // cl: /DNDEBUG /MD /EHsc /G7
 //
-// ?Get_Render_Target_Resolution@WW3D@@SAXAAH00AA_N@Z, retail 0x00121860,
+// ?Get_Render_Target_Resolution@DX8Wrapper@@KAXAAH00AA_N@Z, retail 0x00121860,
 // 195 bytes. Dedicated TU.
 //
 // Battle for Middle-earth reference
@@ -59,14 +59,16 @@ extern Int BfmeRenderHeight; // 0x00DB5FD8
 extern Int BfmeRenderBitDepth; // 0x00DB5FDC
 extern Bool BfmeRenderWindowed; // 0x00DEDA06
 
-class WW3D
+// the WW3D forwarder lives at 0x00116FF0 (5B thunk, already claimed);
+// this TU recovers the DX8Wrapper body it jumps to (private static, hence
+// the KAX mangling, matching the pre-existing pin).
+class DX8Wrapper
 {
-public:
 	static void Get_Render_Target_Resolution(Int &width, Int &height, Int &bitDepth, Bool &windowed);
 };
 
-// ?Get_Render_Target_Resolution@WW3D@@SAXAAH00AA_N@Z
-void WW3D::Get_Render_Target_Resolution(Int &width, Int &height, Int &bitDepth, Bool &windowed)
+// ?Get_Render_Target_Resolution@DX8Wrapper@@KAXAAH00AA_N@Z
+void DX8Wrapper::Get_Render_Target_Resolution(Int &width, Int &height, Int &bitDepth, Bool &windowed)
 {
 	if (TheBfmeRenderDevice != NULL)
 	{
