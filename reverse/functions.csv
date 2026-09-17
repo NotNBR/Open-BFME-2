@@ -7911,3 +7911,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?getMinPoints@QuickMatchPreferences@@QAEHXZ,,0x005DF5FE,80,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_getMinPoints.cpp,matched,ZH verbatim int getter; same plumbing as OptionPreferences family
 ?getWaitTime@QuickMatchPreferences@@QAEHXZ,,0x005DF64E,80,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_getWaitTime.cpp,matched,ZH verbatim int getter; same plumbing as OptionPreferences family
 ?getMaxDisconnects@QuickMatchPreferences@@QAEHXZ,,0x005DF55B,80,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_getMaxDisconnects.cpp,matched,ZH verbatim int getter; same plumbing as OptionPreferences family
+??1Rva006F1360@@UAE@XZ,,0x006F1360,19,Code/GameEngine/Source/Common/Rva006F1360Dtor.cpp,matched,opaque derived dtor; vptr + 2 member-clears; tail-jmp opaque SEH base pin 0x6D6470; dedicated /O2 TU
+??1Rva006F1DB0@@UAE@XZ,,0x006F1DB0,11,Code/GameEngine/Source/Common/Rva006F1360Derived.cpp,matched,opaque chain dtor; tail-jmp opaque base 0x6F1360
