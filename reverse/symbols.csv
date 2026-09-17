@@ -1711,3 +1711,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?undoRevealMapForPlayerPermanently@ShroudManager@@QAEXH@Z,0x0073D810,tail-call target of PartitionManager undo thunk 0x7397B0 (mov ecx [ecx+0x10]; jmp); shroud-manager method by same-semantics forwarding
 ?getShroudStatusForPlayer@ShroudManager@@QBE?AW4CellShroudStatus@@HPBUCoord3D@@@Z,0x0073B940,tail-call target of PartitionManager shroud-status thunk 0x7397F0 (mov ecx [ecx+0x10]; jmp); shroud-manager method by same-semantics forwarding
 ?Rva00323F9C@@YIHPAU_ListboxData@@@Z,0x00323F9C,opaque reg-arg bottom-entry worker called by IsFull with ecx; B1 static getListboxBottomEntry role; true name unknown so address-derived fastcall
+??0Rva002035E2@@QAE@XZ,0x002035E2,default ctor of the 0x0C-byte std::exception child thrown by the null-operation guards (TimedOperationRef::update 0x3FE6A0 + 7 family sites); import-ctor plus vtable install; 13B
