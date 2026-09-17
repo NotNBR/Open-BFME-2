@@ -1710,3 +1710,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?revealMapForPlayerPermanently@ShroudManager@@QAEXH@Z,0x0073B410,tail-call target of PartitionManager reveal thunk 0x739790 (mov ecx [ecx+0x10]; jmp); shroud-manager method by same-semantics forwarding
 ?undoRevealMapForPlayerPermanently@ShroudManager@@QAEXH@Z,0x0073D810,tail-call target of PartitionManager undo thunk 0x7397B0 (mov ecx [ecx+0x10]; jmp); shroud-manager method by same-semantics forwarding
 ?getShroudStatusForPlayer@ShroudManager@@QBE?AW4CellShroudStatus@@HPBUCoord3D@@@Z,0x0073B940,tail-call target of PartitionManager shroud-status thunk 0x7397F0 (mov ecx [ecx+0x10]; jmp); shroud-manager method by same-semantics forwarding
+?Rva00323F9C@@YIHPAU_ListboxData@@@Z,0x00323F9C,opaque reg-arg bottom-entry worker called by IsFull with ecx; B1 static getListboxBottomEntry role; true name unknown so address-derived fastcall
