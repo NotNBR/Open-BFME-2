@@ -112,6 +112,23 @@
 #define D3DTOP_SELECTARG1 2
 #define D3DTOP_SELECTARG2 3
 #define D3DTOP_SUBTRACT 10
+#define D3DTSS_ALPHAARG0 27
+#define D3DTSS_ALPHAARG1 5
+#define D3DTSS_ALPHAARG2 6
+#define D3DTSS_ALPHAOP 4
+#define D3DTSS_BUMPENVMAT00 7
+#define D3DTSS_BUMPENVMAT01 8
+#define D3DTSS_BUMPENVMAT10 9
+#define D3DTSS_BUMPENVMAT11 10
+#define D3DTSS_BUMPENVLSCALE 22
+#define D3DTSS_BUMPENVLOFFSET 23
+#define D3DTSS_COLORARG0 26
+#define D3DTSS_COLORARG1 2
+#define D3DTSS_COLORARG2 3
+#define D3DTSS_COLOROP 1
+#define D3DTSS_RESULTARG 28
+#define D3DTSS_TEXCOORDINDEX 11
+#define D3DTSS_TEXTURETRANSFORMFLAGS 24
 #define D3DTTFF_COUNT1 1
 #define D3DTTFF_COUNT2 2
 #define D3DTTFF_COUNT3 3
@@ -146,6 +163,7 @@ public:
     static const char *Get_DX8_Texture_Arg_Name(unsigned value);
     static const char *Get_DX8_Texture_Filter_Name(unsigned value);
     static const char *Get_DX8_Texture_Op_Name(unsigned value);
+    static const char *Get_DX8_Texture_Stage_State_Name(unsigned long state);
     static const char *Get_DX8_Texture_Transform_Flag_Name(unsigned value);
     static const char *Get_DX8_Vertex_Blend_Flag_Name(unsigned value);
     static const char *Get_DX8_ZBuffer_Type_Name(unsigned value);
@@ -387,5 +405,29 @@ const char* DX8Wrapper::Get_DX8_Blend_Op_Name(unsigned value)
 	case D3DBLENDOP_MIN			: return "D3DBLENDOP_MIN";
 	case D3DBLENDOP_MAX			: return "D3DBLENDOP_MAX";
 	default							: return "UNKNOWN";
+	}
+}
+
+const char* DX8Wrapper::Get_DX8_Texture_Stage_State_Name(unsigned long state)
+{
+	switch (state) {
+	case D3DTSS_COLOROP                   : return "D3DTSS_COLOROP";
+	case D3DTSS_COLORARG1                 : return "D3DTSS_COLORARG1";
+	case D3DTSS_COLORARG2                 : return "D3DTSS_COLORARG2";
+	case D3DTSS_ALPHAOP                   : return "D3DTSS_ALPHAOP";
+	case D3DTSS_ALPHAARG1                 : return "D3DTSS_ALPHAARG1";
+	case D3DTSS_ALPHAARG2                 : return "D3DTSS_ALPHAARG2";
+	case D3DTSS_BUMPENVMAT00              : return "D3DTSS_BUMPENVMAT00";
+	case D3DTSS_BUMPENVMAT01              : return "D3DTSS_BUMPENVMAT01";
+	case D3DTSS_BUMPENVMAT10              : return "D3DTSS_BUMPENVMAT10";
+	case D3DTSS_BUMPENVMAT11              : return "D3DTSS_BUMPENVMAT11";
+	case D3DTSS_TEXCOORDINDEX             : return "D3DTSS_TEXCOORDINDEX";
+	case D3DTSS_BUMPENVLSCALE             : return "D3DTSS_BUMPENVLSCALE";
+	case D3DTSS_BUMPENVLOFFSET            : return "D3DTSS_BUMPENVLOFFSET";
+	case D3DTSS_TEXTURETRANSFORMFLAGS     : return "D3DTSS_TEXTURETRANSFORMFLAGS";
+	case D3DTSS_COLORARG0                 : return "D3DTSS_COLORARG0";
+	case D3DTSS_ALPHAARG0                 : return "D3DTSS_ALPHAARG0";
+	case D3DTSS_RESULTARG                 : return "D3DTSS_RESULTARG";
+	default										  : return "UNKNOWN";
 	}
 }
