@@ -34,6 +34,17 @@
 // INCLUDES ///////////////////////////////////////////////////////////////////////////////////////
 #include "PreRTS.h"	// This must go first in EVERY cpp file int the GameEngine
 
+// BFME2 drift note: the ClientUpdateModule inline ctor (from the ZH header
+// chain) calls its base through the DrawableModule spelling, but the retail
+// base at 0x6DCD20 is NOT DrawableModule -- its vtable (0xCEAED0, folded
+// with ClientUpdateModule's own) lives outside the Module vtable block
+// (0xC07E..), and the BFME1 DrawableModule donor shape belongs to the
+// landed 0x306B19 body instead. Redirect the header's base reference to an
+// opaque pin so the placed ClientUpdateModule row keeps resolving at
+// 0x6DCD20. (The sweep shim's own DrawableModule view is renamed along,
+// which consistently declares the same spelling.)
+#define DrawableModule Rva006DCD20
+
 #include "Common\Player.h"
 #include "Common\PlayerList.h"
 #include "Common/Xfer.h"
