@@ -11,10 +11,22 @@
 // indirect call and misses by one byte.
 
 extern "C" int __cdecl sscanf(const char *buf, const char *fmt, ...);
+extern "C" int __cdecl sprintf(char *buf, const char *fmt, ...);
+
+struct Rva007EB810Diag
+{
+    virtual void v0();
+    virtual void v1();
+    virtual void v2();
+    virtual void fail(const char *expr, const char *file, int line);
+};
+
+extern int Rva007EB810Get();
 
 class Rva007E8760Addr
 {
 public:
+    void format(char *destination, unsigned destinationSize);
     void parse(const char *addressText, int extra);
 
 private:
@@ -22,6 +34,21 @@ private:
     unsigned m_addr;
     int m_extra;
 };
+
+void Rva007E8760Addr::format(char *destination, unsigned destinationSize)
+{
+    if (destinationSize < 17)
+        ((Rva007EB810Diag *)Rva007EB810Get())->fail(
+            "false",
+            "\\views\\feslbuild_main\\jabba\\fesl\\source\\address.cpp",
+            49);
+    unsigned packedAddress = m_addr;
+    sprintf(destination, "%hu.%hu.%hu.%hu",
+        (unsigned char)(packedAddress >> 24),
+        (unsigned char)(packedAddress >> 16),
+        (unsigned char)(packedAddress >> 8),
+        (unsigned char)packedAddress);
+}
 
 void Rva007E8760Addr::parse(const char *addressText, int extra)
 {
