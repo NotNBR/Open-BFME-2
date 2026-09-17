@@ -7942,3 +7942,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Get_Parent_Index@HTreeClass@@QBEHH@Z,,0x00160BD0,35,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassBoneLookup.cpp,matched,HTree parent lookup; placed single-hit via dedicated unit
 ??1Rva004B0164@@UAE@XZ,,0x004B0164,42,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor with trailing const; vtab pairs with 0x4B0292 ctor
 ??1Rva004B29BE@@UAE@XZ,,0x004B29BE,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor; OCL consts
+??1Rva004CC9BF@@UAE@XZ,,0x004CC9BF,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor; OCL consts
