@@ -7510,3 +7510,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?update_cached_box@OBBoxRenderObjClass@@MAEXXZ,,0x001758C0,251,Code/Libraries/Source/WWVegas/WW3D2/OBBoxUpdateCachedBox.cpp,matched,
 ?update_cached_box@AABoxRenderObjClass@@MAEXXZ,,0x001757A0,112,Code/Libraries/Source/WWVegas/WW3D2/AABoxUpdateCachedBox.cpp,matched,
 ?Get_Char_Spacing@FontCharsClass@@QAEHG@Z,,0x00158760,90,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassGetCharSpacingThunk.cpp,matched,
+??0?$ShareBufferClass@PAVTextureClass@@@@QAE@ABV0@@Z,,0x0015AE10,284,Code/Libraries/Source/WWVegas/WW3D2/ShareBufferClassTextureCopyCtor.cpp,matched,BFME1 sharebuf copy skeleton plus TexBuffer AddRef discipline; slot-address loop reproduces retail ebx-index and ebp-that regalloc
