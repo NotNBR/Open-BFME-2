@@ -7768,3 +7768,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva005D8723@@UAE@XZ,,0x005D8723,11,Code/GameEngine/Source/Common/Rva005EEDAADerived.cpp,matched,opaque derived dtor tail-jmp row base
 ??1Rva005D9DC1@@UAE@XZ,,0x005D9DC1,11,Code/GameEngine/Source/Common/Rva005EEDAADerived.cpp,matched,opaque derived dtor
 ??1Rva005DA0E2@@UAE@XZ,,0x005DA0E2,11,Code/GameEngine/Source/Common/Rva005EEDAADerived.cpp,matched,opaque derived dtor
+??1Rva00546B29@@UAE@XZ,,0x00546B29,11,Code/GameEngine/Source/Common/Rva00548948Derived.cpp,matched,opaque derived dtor tail-jmp opaque base
