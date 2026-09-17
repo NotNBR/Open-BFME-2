@@ -64,3 +64,13 @@ public:
 Rva006FC120::~Rva006FC120()
 {
 }
+
+class Rva006FC1C0 : public Rva006D6470
+{
+public:
+	virtual ~Rva006FC1C0();
+};
+
+Rva006FC1C0::~Rva006FC1C0()
+{
+}
