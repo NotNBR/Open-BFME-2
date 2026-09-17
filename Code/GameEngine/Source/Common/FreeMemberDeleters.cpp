@@ -22,3 +22,18 @@ Rva0025BFE3::~Rva0025BFE3()
 	if (m_ptr04)
 		free(m_ptr04);
 }
+
+class Rva0030F42E
+{
+public:
+	virtual ~Rva0030F42E();
+
+private:
+	void *m_ptr04;
+};
+
+Rva0030F42E::~Rva0030F42E()
+{
+	if (m_ptr04)
+		free(m_ptr04);
+}
