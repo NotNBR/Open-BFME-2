@@ -28,6 +28,7 @@ typedef long HRESULT;
 #define DOWNLOAD_SUCCEEDED S_OK
 #define DOWNLOAD_PARAMERROR 0x80040001
 #define DOWNLOAD_STATUSERROR 0x80040002
+#define E_FAIL 0x80004005
 
 extern "C" __declspec(dllimport) int __cdecl _mkdir(const char *dirname);
 extern "C" __declspec(dllimport) char *__cdecl strncpy(
@@ -116,6 +117,18 @@ HRESULT CDownload::DownloadFile(LPCSTR server, LPCSTR username, LPCSTR password,
 	// Set status so we start to connect at the next PumpMessages()
 	if (m_Status != DOWNLOADSTATUS_FINDINGFILE)
 		m_Status = DOWNLOADSTATUS_GO;
+
+	return S_OK;
+}
+
+// ?GetLastLocalFile@CDownload@@UAEJPADH@Z
+HRESULT CDownload::GetLastLocalFile(char *local_file, int maxlen)
+{
+	if (local_file == 0)
+		return E_FAIL;
+
+	strncpy(local_file, m_LastLocalFile, maxlen);
+	local_file[maxlen - 1] = 0;
 
 	return S_OK;
 }
