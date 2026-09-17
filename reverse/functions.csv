@@ -7540,3 +7540,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?GameGetColorComponents@@YAXHPAE000@Z,,0x002D2A9F,43,Code/GameEngine/Source/Common/System/color_ops.cpp,matched,BFME1 GameGetColorComponents verbatim; BFME2 retail 43B vs BFME1 44B
 ?setPosition@RadiusDecal@@QAEXABUCoord3D@@@Z,,0x00330DFD,24,Code/GameEngine/Source/GameClient/RadiusDecal_setPosition.cpp,matched,BFME1 setPosition shape; shadow+0x04 null check with copy to shadow+0x08
 _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,empty Gamespy table stub shared with BFME1
+?screenPixelToWorld@Radar@@QAE_NPBUICoord2D@@PAUCoord3D@@@Z,,0x002D82E4,106,Code/GameEngine/Source/Common/System/Radar_screenPixelToWorld.cpp,matched,BFME1 screenPixelToWorld verbatim; window at +0x1430; 3 callees pinned
