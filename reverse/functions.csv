@@ -8290,3 +8290,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GObjectModule@@UAEPAXI@Z,,0x004A10FD,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,slot-0 deleting dtor off the ObjectModule vtable; dtor call via UAE pin at the 0x49B47C fold point plus ??3 row
 ?parseObject@GenericObjectCreationNugget@@SAXPAVINI@@PAX1PBX@Z,,0x001F311B,142,Code/GameEngine/Source/GameLogic/Object/GenericObjectCreationNuggetParseObject.cpp,matched,BFME1 parseObject verbatim with BFME2 nugget 0x12C plus flag at +0xA8
 ?Scale@HTreeClass@@QAEXM@Z,,0x00160C00,108,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassScale.cpp,matched,BFME1 Scale shape with in-place SSE triple scaling
+?setRegion@PartitionManager@@QAEXPBURegion3D@@M@Z,,0x00739740,8,Code/GameEngine/Source/GameLogic/Object/PartitionManagerShroudThunks.cpp,matched,this-adjusting thunk tail-jumping to the ShroudManager setRegion row; pin-to-row upgrade; fourth thunk in TU
