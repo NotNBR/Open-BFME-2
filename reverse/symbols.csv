@@ -1689,3 +1689,7 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ?find@CustomPreferenceMapShim@@QAEPAUCustomMapNodeShim@@PAUCustomAsciiStringShim@@@Z,0x001F8437,map find worker for the volume lookup; aliases the _M_find pin at the same address; read from the retail REL32 in this body
 ??0Rva004930A0@@QAE@XZ,0x004930A0,opaque intermediate base DEFAULT ctor (SEH body); called this-only by DeliverPayloadAIUpdate and AIUpdateInterface ctors; identity unproven
 ??0Rva00493C5A@@QAE@PAVThing@@PBVModuleData@@@Z,0x00493C5A,opaque intermediate base ctor (SEH body); called 2-arg by SupplyTruckAIUpdate ctor; identity unproven
+?findPlayerWithNameKey@PlayerList@@QAEPAVPlayer@@W4NameKeyType@@@Z,0x002A7A41,46B count+array scan comparing nameKey at +0x50; ecx is ThePlayerList global; key from matched nameToKey 0x148E1A; B1 ledger confirms name and 52B shape
+?undoRevealMapForPlayerPermanently@PartitionManager@@QAEXH@Z,0x007397B0,8B this-adjust jmp thunk (mov ecx [ecx+0x10]; jmp 0x73D810); first shroud call in BFME1 doBorderSwitch source; B1 reveal-thunk precedent
+?setActiveBoundary@TerrainLogic@@QAEXH@Z,0x0028069E,middle call in doBorderSwitch with ecx=TheTerrainLogic global and int arg; B1 ledger names doBorderSwitch as its caller; 220B camera/view body
+?revealMapForPlayerPermanently@PartitionManager@@QAEXH@Z,0x00739790,8B this-adjust jmp thunk (mov ecx [ecx+0x10]; jmp 0x73B410); second shroud call in BFME1 doBorderSwitch source
