@@ -1660,3 +1660,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ?CRC_String@@YAKPBD@Z,0x003EC922,copy-#1 1-arg CRC_String; 12 single-push call sites; shape plus family evidence; partial banked 0.9
 ?CRC_Stringi@@YAKPAD@Z,0x003EC953,copy-#1 1-arg CRC_Stringi with inline toupper; called by in-family wrapper 0x3ECA44; partial banked 0.95
 ??0Rva0044EF5E@@QAE@PAVThing@@PBVModuleData@@@Z,0x0044EF5E,opaque UpdateModule-derived intermediate base ctor (243B body: UpdateModule base call plus vtable 0xC3FBA8 plus members to +0x84); 28 module-ctor callers; identity unproven
+??1Rva0044EF5E@@UAE@XZ,0x00451F45,Rva0044EF5E intermediate base dtor: derived module dtors (OCLUpdate 0x4CD3DB, SpawnPoint 0x4CCDB6, SupplyCenterDock 0x4CDC33) re-store vtable plus consts then tail-jump here; vtable and consts match the 0x44EF5E ctor body; same SEH cookie; distinct from the co-pinned opaque Rva00451F45 name for the same address
