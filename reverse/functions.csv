@@ -7927,3 +7927,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0SupplyCenterDockUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CDBFC,47,Code/GameEngine/Source/GameLogic/Object/Update/SupplyCenterDockUpdateCtor.cpp,matched,opaque-base pattern; factory stub order; size 0x88
 ?radarToWorld@Radar@@QAE_NPBUICoord2D@@PAUCoord3D@@@Z,,0x002D7744,133,Code/GameEngine/Source/Common/System/Radar_radarToWorld.cpp,matched,BFME1 Radar.cpp clamp+scale shape with float height params per BFME1 BfmeTerrainHeightView
 ??1OCLUpdate@@UAE@XZ,,0x004CD3DB,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque-base dtor pattern; vtab plus consts plus tail-jmp base pin
+??_GOCLUpdate@@UAEPAXI@Z,,0x004CD440,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor; flag plus free via pinned delete
