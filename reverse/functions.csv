@@ -7587,3 +7587,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?construct@Rva0025342CMember@@QAEPAV1@XZ,,0x0025342C,73,Code/GameEngine/Source/GameLogic/Object/Contain/OpenContainModuleDataCtor.cpp,matched,2x clear80 plus dual-pathed tail init returning this; clear80 pinned
 ?clear80@Rva001EAE6FHelper@@QAEPAV1@XZ,,0x001EAE6F,23,Code/GameEngine/Source/GameLogic/Object/Contain/Rva001EAE6FClear80.cpp,matched,Shared 0x80 memset returning this; memset import
 ?update@TimedOp@@QAEIXZ,,0x003FE6E8,99,Code/GameEngine/Source/Common/TimedOperations_updateTimedOps.cpp,matched,BFME1 TimedOp update shape; embedded op helper pinned
+?testMasks@Rva0026157E@@QBE_NPBX0@Z,,0x0026157E,66,Code/GameEngine/Source/Common/Rva0026157ETestMasks.cpp,matched,dual-mask disjoint-plus-subset raw dword loop leaf O1 unsigned
