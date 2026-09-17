@@ -109,6 +109,11 @@ private:
 
 extern "C" __declspec(dllimport) unsigned int __cdecl fwrite(const void *buf, unsigned int size, unsigned int count, void *stream);
 extern "C" __declspec(dllimport) int __cdecl ftell(void *stream);
+extern "C" __declspec(dllimport) int __cdecl fseek(void *stream, long offset, int origin);
+
+void __cdecl operator delete(void *ptr);
+
+enum { SEEK_SET_ = 0 };
 
 class ConditionTemplate
 {
@@ -196,4 +201,34 @@ void DataChunkOutput::openDataChunk(char *name, unsigned short version)
 
 	int dummy = 0xffff;
 	fwrite(&dummy, sizeof(dummy), 1, m_tmp_file);
+}
+
+// ?closeDataChunk@DataChunkOutput@@QAEXXZ
+// Retail 0x00306C88 (119 bytes). ZH DataChunk.cpp port (GeneralsMD): same
+// head (null check, ftell, rewind, size, store, seek back, pop), but ZH ends
+// with c->deleteInstance() (pooled) while retail emits a global ::delete
+// (flag-0 virtual dtor call plus separate operator delete), matching the
+// plain new in openDataChunk above. The trailing null check needs no outer
+// if: ::delete on a nullable pointer emits it (xor/cmp/je over the dtor,
+// delete-if-null still called since free(0) no-ops).
+void DataChunkOutput::closeDataChunk(void)
+{
+	if (m_chunkStack == 0)
+	{
+		return;
+	}
+
+	int here = ftell(m_tmp_file);
+
+	fseek(m_tmp_file, m_chunkStack->filepos, SEEK_SET_);
+
+	int size = here - m_chunkStack->filepos - sizeof(int);
+
+	fwrite(&size, sizeof(int), 1, m_tmp_file);
+
+	fseek(m_tmp_file, here, SEEK_SET_);
+
+	OutputChunk *c = m_chunkStack;
+	m_chunkStack = m_chunkStack->next;
+	::delete c;
 }
