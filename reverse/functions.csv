@@ -7937,3 +7937,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva004921B0@@UAE@XZ,,0x004921B0,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor; vtab pairs with 0x492179 ctor; same consts as OCL; upgrade when stub order names it
 ??1Rva00492439@@UAE@XZ,,0x00492439,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor; vtab pairs with 0x492402 ctor; distinct +0x20 dummy
 ??1Rva00494F1B@@UAE@XZ,,0x00494F1B,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor; OCL consts; upgrade when stub order names it
+?Get_Bone_Name@HTreeClass@@QBEPBDH@Z,,0x00160BB0,22,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassBoneLookup.cpp,matched,HTree bone name accessor; 0x58 pivots
