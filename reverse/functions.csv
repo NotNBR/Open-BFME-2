@@ -8201,3 +8201,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva00C0DA3@@UAEPAXI@Z,,0x000C252F,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0xC0DA3; flag plus pinned operator delete
 ?Rva00655700@@YAXPADIPBD@Z,,0x00655700,98,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
 ?set@Rva006557F0Holder@@QAEXPBDH@Z,,0x006557F0,33,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
+?doesFileExist@FileSystem@@QBE_NPBD@Z,,0x00600D7D,189,Code/GameEngine/Source/GameClient/GUI/FileSystemDoesFileExist.cpp,matched,BFME2 lang-aware existence check (gate+local+archive+lang); /O1 gives ebp-frame+edi-filename+esi-sprintf+shared epi; else-nest gives backward-share+cmp-al; ternary-true-false gives test+setne tail
