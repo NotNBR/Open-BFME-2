@@ -100,23 +100,57 @@ MultiplayerColorDefinition::MultiplayerColorDefinition()
 	m_colorNight = m_color;
 }
 
+// Retail color-list window: the list lives at +0x34, the lazy numColors at
+// +0x40 (refilled from +0x38 while zero), the observer definition at +0x44
+// and the random definition at +0x84. The +0x34 helper takes the key by
+// address and builds on miss (138B SEH body at 0x3812E6); it is pinned
+// opaquely as lookup (operator[]-with-insert vs find unproven) for this
+// caller and its two siblings at 0x3813F7/0x38140F.
+struct RetailColorList
+{
+    MultiplayerColorDefinition *lookup(int *which);
+};
+
+// Retail shares one ret and one NULL store for all getColor paths; favor
+// size for just this function so the exits converge instead of returning
+// directly per arm.
+#pragma optimize("s", on)
 MultiplayerColorDefinition * MultiplayerSettings::getColor(Int which)
 {
-	if (which == PLAYERTEMPLATE_RANDOM)
-	{
-		return &m_randomColor;
-	}
-	else if (which == PLAYERTEMPLATE_OBSERVER)
-	{
-		return &m_observerColor;
-	}
-	else if (which < 0 || which >= getNumColors())
-	{
-		return NULL;
-	}
-
-	return &m_colorList[which];
+    // BFME1 shape (lazy numColors refill, address-taken key helper) with
+    // retail offsets; ZH instead calls getNumColors() and indexes inline.
+    // Retail shares one ret and one NULL store for all paths, spelled here
+    // with explicit jumps to the common tail.
+    unsigned char *retailLayout = reinterpret_cast<unsigned char *>(this);
+    MultiplayerColorDefinition *retval;
+    if (which == PLAYERTEMPLATE_RANDOM)
+    {
+        retval = reinterpret_cast<MultiplayerColorDefinition *>(retailLayout + 0x84);
+        goto done;
+    }
+    if (which == PLAYERTEMPLATE_OBSERVER)
+    {
+        retval = reinterpret_cast<MultiplayerColorDefinition *>(retailLayout + 0x44);
+        goto done;
+    }
+    if (which < 0)
+        goto null;
+    {
+        Int *numColors = reinterpret_cast<Int *>(retailLayout + 0x40);
+        if (*numColors == 0)
+            *numColors = *reinterpret_cast<Int *>(retailLayout + 0x38);
+        if (which < *numColors)
+        {
+            retval = reinterpret_cast<RetailColorList *>(retailLayout + 0x34)->lookup(&which);
+            goto done;
+        }
+    }
+null:
+    retval = NULL;
+done:
+    return retval;
 }
+#pragma optimize("s", off)
 
 MultiplayerColorDefinition * MultiplayerSettings::findMultiplayerColorDefinitionByName(AsciiString name)
 {
