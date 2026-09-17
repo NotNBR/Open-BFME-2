@@ -1639,3 +1639,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??0?$RefCountPtr@VTextureClass@@@@QAE@XZ,0x00326BE6,RefCountPtr<TextureClass> default nulling ctor (6B mov-mem-zero); SortingNodeStruct ctor +0x25 ehvec_ctor function arg over the 16 Textures; ICF-folded with the trivial-ctor group already at this address; ghidra 6B
 ??1Rva004BB68E@@UAE@XZ,0x004BB68E,opaque MI base dtor; 4 derived MI dtors tail-call it; identity unproven
 ??1Rva004DF7C2@@UAE@XZ,0x004DF7C2,opaque MI base dtor; 4 derived MI dtors tail-call it; identity unproven
+??1Rva004EDCE9@@UAE@XZ,0x004EDCE9,opaque base dtor; 4 derived dtors tail-call it; identity unproven
