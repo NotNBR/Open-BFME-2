@@ -7949,3 +7949,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva004AD9B0@@UAE@XZ,,0x004AD9B0,42,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor with trailing const; reuses +0x0C dummy
 ??_GRva00490D76@@UAEPAXI@Z,,0x00490EB3,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor for opaque row
 ??_GRva004921B0@@UAEPAXI@Z,,0x00492215,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor for opaque row
+??_GRva00492439@@UAEPAXI@Z,,0x0049249E,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor for opaque row
