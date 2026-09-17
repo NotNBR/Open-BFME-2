@@ -8204,3 +8204,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?doesFileExist@FileSystem@@QBE_NPBD@Z,,0x00600D7D,189,Code/GameEngine/Source/GameClient/GUI/FileSystemDoesFileExist.cpp,matched,BFME2 lang-aware existence check (gate+local+archive+lang); /O1 gives ebp-frame+edi-filename+esi-sprintf+shared epi; else-nest gives backward-share+cmp-al; ternary-true-false gives test+setne tail
 ?set@Rva0065F0D0Holder@@QAEXPBD@Z,,0x0065F0D0,22,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
 ?set@Rva0065F0F0Holder@@QAEXPBD@Z,,0x0065F0F0,22,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
+?set@Rva0065F110Holder@@QAEXPBD@Z,,0x0065F110,25,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
