@@ -72,3 +72,19 @@ public:
 Rva004B8EA8::~Rva004B8EA8()
 {
 }
+
+class Rva004B8F92_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva004B8F92 : public Rva004B8CDE, public MiBase1, public Rva004B8F92_B2
+{
+public:
+	virtual ~Rva004B8F92();
+};
+
+Rva004B8F92::~Rva004B8F92()
+{
+}
