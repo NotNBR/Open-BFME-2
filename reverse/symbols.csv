@@ -1677,3 +1677,6 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ??$_Construct@U?$pair@QBVThingTemplate@@H@_STL@@U12@@_STL@@YAXPAU?$pair@QBVThingTemplate@@H@0@ABU10@@Z,0x006204B0,pair _Construct for ScoreKeeper ObjectCountMap tree; ICF twin of the int-int _Construct; address read from _M_insert 0x759BC0 REL32
 ??0Rva0044EB54@@QAE@XZ,0x0044EB54,opaque intermediate base DEFAULT ctor (889B SEH body, vtable 0xC3F2A8, no args: callers pass this-only and it reads no stack args); 26 module default-ctor callers; identity unproven
 ??$_Construct@U?$pair@$$CBUGen_p12pod@@H@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBUGen_p12pod@@H@0@ABU10@@Z,0x0016CC80,Gen_p12pod pair _Construct; address read from _M_insert 0x16DBC0 REL32
+?Get_Char_Data@FontCharsClass@@AAEPBUFontCharsClassCharDataStruct@@G@Z,0x00158520,struct-spelled alias of Get_Char_Data for the loadCharacterData TU (whose own mangling uses struct not class); same body as the matched PBV row
+?ensureCharPage@FontCharsClass@@AAEXG@Z,0x00155220,page-table filler called with (this char) by loadCharacterData 0x158580; address read from its REL32; true identity unproven (opaque)
+?loadCharBitmap@FontCharsClass@@AAEPBUFontCharsClassCharDataStruct@@G@Z,0x00156A60,glyph rasterizer called with (this char) on table miss by loadCharacterData 0x158580; address read from its REL32; true identity unproven (opaque)

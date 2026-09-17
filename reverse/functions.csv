@@ -7969,3 +7969,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0SupplyWarehouseDockUpdate@@QAE@XZ,,0x004CDFD9,18,Code/GameEngine/Source/GameLogic/Object/Update/SupplyWarehouseDockUpdateCtor.cpp,matched,default ctor over opaque Rva0044EB54 base via pin; no trailing members; factory stub order
 ??0RailedTransportDockUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CC988,47,Code/GameEngine/Source/GameLogic/Object/Update/RailedTransportDockUpdateCtor.cpp,matched,opaque-base pattern; factory stub order; size 0x88
 ??0RepairDockUpdate@@QAE@XZ,,0x004CC20A,28,Code/GameEngine/Source/GameLogic/Object/Update/RepairDockUpdateCtor.cpp,matched,root class default ctor; vtable plus E16 vector via pinned base; factory stub order
+?loadCharacterData@FontCharsClass@@QAEPBUFontCharsClassCharDataStruct@@G@Z,,0x00158580,260,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassLoadCharacterData.cpp,matched,Thai-first glyph ensure helper; retail RE
