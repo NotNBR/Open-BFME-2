@@ -8052,3 +8052,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva0048F3E0@@UAE@XZ,,0x0048F3E0,49,Code/GameEngine/Source/Common/Rva0026E836Derived.cpp,matched,
 ??1Rva0049A64B@@UAE@XZ,,0x0049A64B,49,Code/GameEngine/Source/Common/Rva0026E836Derived.cpp,matched,
 ?selectMatchingAcrossScreen@InGameUI@@UAEHXZ,,0x0029CEB1,279,Code/GameEngine/Source/GameClient/InGameUI_selectMatchingAcrossScreen.cpp,matched,BFME1 InGameUIBodies verbatim with BFME2 outlined guard at 0x4253A and TacticalView slots and InGameUI message at 0x40
+??1Rva00483C35@@UAE@XZ,,0x00483C35,46,Code/GameEngine/Source/Common/Rva0045D39EDerived.cpp,matched,
+??1Rva00481805@@UAE@XZ,,0x00481805,7,Code/GameEngine/Source/Common/Rva00481805Dtor.cpp,matched,

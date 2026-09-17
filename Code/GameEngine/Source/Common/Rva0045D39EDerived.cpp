@@ -71,3 +71,18 @@ public:
 Rva00461EEB::~Rva00461EEB()
 {
 }
+
+class Rva00483C35 : public Rva0045D39E
+{
+public:
+	virtual ~Rva00483C35();
+
+private:
+	char m_pad0028[0x50 - 0x28];
+	int m_extra0050;
+};
+
+Rva00483C35::~Rva00483C35()
+{
+	m_extra0050 = 0xC49D70;
+}
