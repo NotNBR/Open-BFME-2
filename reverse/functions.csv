@@ -8184,3 +8184,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva00AAD26@@UAEPAXI@Z,,0x000AB09C,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0xAAD26; flag plus pinned operator delete
 ?getSymbolName@Rva006C4CD0Helper@@QAE_NKPADK@Z,,0x006C4D80,167,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque symbol-name resolver; SymGetSymFromAddr slot plus strncpy
 ?_M_rva00625476@BfmeDfe6e4@@QAEXXZ,,0x00225476,28,Code/GameEngine/Source/Main/BfmeDfe6e4_M_rva00625476.cpp,matched,BfmeDfe6e4 guarded-counter inc; base-opts plus G7 for add-mem
+?rva00225492@BfmeDfe6e4@@QAEXXZ,,0x00225492,56,Code/GameEngine/Source/Main/BfmeDfe6e4_rva00225492.cpp,matched,BfmeDfe6e4 timestamp refresh; GetCurrentThreadId gate plus time under lock
