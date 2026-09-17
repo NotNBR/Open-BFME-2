@@ -1695,3 +1695,5 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ?revealMapForPlayerPermanently@PartitionManager@@QAEXH@Z,0x00739790,8B this-adjust jmp thunk (mov ecx [ecx+0x10]; jmp 0x73B410); second shroud call in BFME1 doBorderSwitch source
 ?WriteScriptDataChunk@@YAXAAVDataChunkOutput@@PAVScriptList@@PAVScript@@@Z,0x003B5994,opens Script chunk v4; script slot of WriteScriptListDataChunk called with (out this [this+8]); calls OrCondition writer 0x3B4A3C like ZH Script writer
 ?WriteGroupDataChunk@@YAXAAVDataChunkOutput@@PAVScriptList@@PAVScriptGroup@@@Z,0x003B6975,opens ScriptGroup chunk v3; group slot of WriteScriptListDataChunk called with (out this [this+4]); recurses subgroups and calls script writer 0x3B5994
+_rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf into TLS buf + new[] + memcpy); throw-site helper for AI-kind and INI parsers; true name unknown
+?_CxxThrowException@@YGXPAX0@Z,0x00629094,CRT-mangled stdcall spelling of the __CxxThrowException@8 thunk (same target); MSVC emits this name for a C++ _CxxThrowException declaration
