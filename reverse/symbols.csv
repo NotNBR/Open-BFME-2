@@ -1916,3 +1916,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?Rva006276E0@ShroudManager@@QAEXPBURegion3D@@@Z,0x006276E0,opaque ShroudManager method behind PartitionManager thunk 0x625300 (region address arg); identity unproven
 ?Rva00627E40@ShroudManager@@QAEXH@Z,0x00627E40,opaque ShroudManager method behind PartitionManager thunk 0x625310 (int arg); identity unproven
 ?Rva00627810@ShroudManager@@QAEXPAX@Z,0x00627810,opaque ShroudManager method behind PartitionManager thunk 0x625320 (address arg); identity unproven
+??0NetCommandList@@QAE@XZ,0x0058B06A,BFME1-attested NetCommandList ctor (0x10-byte list); called post-new-null-check at 9 sites incl FrameData::init 0x5DA522; BFME1 mangling QAE
