@@ -1917,3 +1917,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?Rva00627E40@ShroudManager@@QAEXH@Z,0x00627E40,opaque ShroudManager method behind PartitionManager thunk 0x625310 (int arg); identity unproven
 ?Rva00627810@ShroudManager@@QAEXPAX@Z,0x00627810,opaque ShroudManager method behind PartitionManager thunk 0x625320 (address arg); identity unproven
 ??0NetCommandList@@QAE@XZ,0x0058B06A,BFME1-attested NetCommandList ctor (0x10-byte list); called post-new-null-check at 9 sites incl FrameData::init 0x5DA522; BFME1 mangling QAE
+?Rva0061F230_GetPrototype@@YA?AVHierarchyPrototypeRef@@PBD@Z,0x0061F230,asset-registry prototype lookup returning counted HierarchyPrototypeRef via hidden slot (null name writes null ref); called with lowercased h* key from Get_HTree 0x17FCCA and sibling 0x17FB1E plus 14 render-asset sites; BFME1 GetHTree analog
+??0HTreePrototypeOwner@@QAE@ABVHierarchyPrototypeRef@@@Z,0x0017FBED,4-byte SEH owner copy ctor (by-ref HierarchyPrototypeRef, zeroes m_ptr then delegates to 0x17FB0F); called only from Get_HTree 0x17FCDA and sibling 0x17FC54
+?Release_Ref@HierarchyPrototype@@QAEXXZ,0x0061ED10,36B dec-WORD-at-4 conditional-virtual release body; called as thiscall on prototype refs by Get_HTree temp/owner teardown
