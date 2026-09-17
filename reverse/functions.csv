@@ -8324,3 +8324,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0NetCommandList@@QAE@XZ,,0x0058B06A,19,Code/GameEngine/Source/GameNetwork/NetCommandListCtor.cpp,matched,vtable via matched deleter row; O1; pin coexists
 ?Get_HTree@@YAPAVHTreeClass@@PBD@Z,,0x0017FC7C,178,Code/Libraries/Source/WWVegas/WW3D2/GetHTree.cpp,matched,free hierarchy lookup via BFME1 GetHTree shape; h-star key plus registry ref plus slot10/11 plus tree at +0x14
 ?rva000C9BCC@W3DLaserDraw@@SA?AW4NameKeyType@@XZ,,0x000C9BCC,69,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/W3DLaserDrawPoolKey.cpp,matched,
+?rva000CE9EE@W3DTankDraw@@SA?AW4NameKeyType@@XZ,,0x000CE9EE,69,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/W3DTankDrawPoolKey.cpp,matched,
