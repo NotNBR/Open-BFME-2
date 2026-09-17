@@ -7956,3 +7956,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva004CC9BF@@UAEPAXI@Z,,0x004CCAF2,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor for opaque row
 ??_GRva004CDD39@@UAEPAXI@Z,,0x004CDD9E,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor for opaque row
 ??_GRva004AE4E2@@UAEPAXI@Z,,0x004AE567,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor for opaque row
+??_GRva004CE03D@@UAEPAXI@Z,,0x004CE0A2,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor for opaque row
