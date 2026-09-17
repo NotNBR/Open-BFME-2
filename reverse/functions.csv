@@ -8263,3 +8263,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva0004CA4C@@UAEPAXI@Z,,0x0004CA8B,28,Code/GameEngine/Source/Common/Rva002D22CADerived.cpp,matched,Scalar deleting dtor via home-TU emission; dtor rowed in same TU
 ??_GRva00589079@@UAEPAXI@Z,,0x005890FE,28,Code/GameEngine/Source/Common/Rva00589079Derived.cpp,matched,Scalar deleting dtor via home-TU emission; dtor rowed in same TU
 ??_GRva00481F82@@UAEPAXI@Z,,0x00482118,28,Code/GameEngine/Source/Common/Rva00589079Derived.cpp,matched,Scalar deleting dtor via home-TU emission; dtor rowed in same TU
+?writeNameKey@DataChunkOutput@@QAEXW4NameKeyType@@@Z,,0x00307D29,92,Code/GameEngine/Source/GameLogic/ScriptEngine/DataChunkOutputWriteNameKey.cpp,matched,ZH DataChunk.cpp writeNameKey port; keyToName returns const AsciiString ref (ret-4 body with no hidden pointer); /G7 for or-al-3 peephole
