@@ -1,0 +1,57 @@
+// cl: /Ireference/shims/bfmerendobj /G7 /arch:SSE /DNDEBUG /MD /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/Wwutil /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDownload /Ireference/open-bfme-1/Code/Libraries/Source/Compression /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDebug /Ireference/shims/sweep /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/Wwutil /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDownload /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/Code/Libraries/Source/Compression /Ireference/shims/sweep
+#define Matrix4x4 Matrix4
+#include "rendobj.h"
+#include "winbase_shim.h"
+/*
+**	Command & Conquer Generals Zero Hour(tm)
+**	Copyright 2025 Electronic Arts Inc.
+**
+**	This program is free software: you can redistribute it and/or modify
+**	it under the terms of the GNU General Public License as published by
+**	the Free Software Foundation, either version 3 of the License, or
+**	(at your option) any later version.
+**
+**	This program is distributed in the hope that it will be useful,
+**	but WITHOUT ANY WARRANTY; without even the implied warranty of
+**	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**	GNU General Public License for more details.
+**
+**	You should have received a copy of the GNU General Public License
+**	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+// Dedicated TU for the two ref-counted HAnimCombo getters. Retail spells the
+// refcount bump as `add dword [...],1` (83 /0); the sibling hanim.cpp TU emits
+// `inc dword [...]` (FF /0) for the same WWLib RefCountClass::Add_Ref
+// (`NumRefs++`), which its Set_HAnim at 0x1007B0 needs. These two bodies live
+// here under /G7 (Pentium 4 tuning prefers ADD over INC to avoid the partial
+// flag stall), byte-true with BFME1-verbatim source.
+
+#include "hanim.h"
+
+// ?Get_Motion@HAnimComboClass@@QAEPAVHAnimClass@@H@Z
+HAnimClass *HAnimComboClass::Get_Motion(int index)
+{
+	HAnimComboDataClass *data = HAnimComboData[index];
+
+	HAnimClass *anim = data->Peek_HAnim();
+
+	if (anim != NULL) {
+		anim->Add_Ref();
+	}
+	return anim;
+}
+
+// ?Get_Pivot_Weight_Map@HAnimComboClass@@QAEPAVPivotMapClass@@H@Z
+// Retail re-reads the map through Peek for the null check, the Add_Ref, and
+// the return (data stays in ecx, map reloaded at the end), rather than
+// holding it in a local.
+PivotMapClass *HAnimComboClass::Get_Pivot_Weight_Map(int index)
+{
+	HAnimComboDataClass *data = HAnimComboData[index];
+
+	if (data->Peek_Pivot_Map() != NULL) {
+		data->Peek_Pivot_Map()->Add_Ref();
+	}
+	return data->Peek_Pivot_Map();
+}

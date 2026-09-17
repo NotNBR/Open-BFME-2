@@ -7519,3 +7519,5 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?calcSleepDelay@DeletionUpdate@@IAEIII@Z,,0x00488357,52,Code/GameEngine/Source/GameLogic/Object/Update/DeletionUpdate_calcSleepDelay.cpp,matched,Dedicated TU: line-55 padding for retail push-0x37 plus TU-local GameLogic frame view at +0x40; helper resolves via matched row
 ?isAbleToAttack@Object@@QBE_NXZ,,0x00290B73,440,Code/GameEngine/Source/GameLogic/Object/Object_isAbleToAttack.cpp,matched,BFME2 rewrite of the BFME1/ZH Object::isAbleToAttack; direct member reads plus container-fire slots; 5 REL32 pins
 ?isTurretEnabled@AIUpdateInterface@@QBE_NW4WhichTurretType@@@Z,,0x00262683,25,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterface_isTurretEnabled.cpp,matched,BFME2 AIUpdate logic with inlined TurretAI flag read at +0x3C; m_turretAI at +0x20C
+?Get_Motion@HAnimComboClass@@QAEPAVHAnimClass@@H@Z,,0x00196670,23,Code/Libraries/Source/WWVegas/WW3D2/HAnimComboClassGetMotion.cpp,matched,
+?Get_Pivot_Weight_Map@HAnimComboClass@@QAEPAVPivotMapClass@@H@Z,,0x00196740,27,Code/Libraries/Source/WWVegas/WW3D2/HAnimComboClassGetMotion.cpp,matched,
