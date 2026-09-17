@@ -105,3 +105,19 @@ public:
 Rva004C131B::~Rva004C131B()
 {
 }
+
+class Rva004C1EF7_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva004C1EF7 : public Rva004BF951, public MiBase1, public Rva004C1EF7_B2
+{
+public:
+	virtual ~Rva004C1EF7();
+};
+
+Rva004C1EF7::~Rva004C1EF7()
+{
+}
