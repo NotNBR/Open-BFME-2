@@ -1623,7 +1623,7 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ?findDrawPositions@Radar@@QAEXHHHHPAUICoord2D@@0@Z,0x002D799C,BFME1 Radar findDrawPositions member; localPixelToRadar +0x49 direct call target in Radar cluster; ghidra 266B
 ?clear80@Rva001EAE6FHelper@@QAEPAV1@XZ,0x001EAE6F,Shared 0x80-byte memset helper (memset this 0 0x80 via 0x6291AE; returns this); 48 paired callers; construct +0x4/+0xf direct call targets
 ?update@TimedOperationRef@@QAEIM_N@Z,0x003FE6A0,TU-local holder concept; null-checked throw plus virtual slot-1 update on the embedded TimedOperation; update +0x5c direct call target; ghidra 53B
-?Capture_Update@HTreeClass@@QAEXH@Z,0x001622B0,address read from the retail REL32 at 0x00162B84 (Base_Update) +0x001660D6 (Combo_Update) +5 more update-loop sites; searches 36B captured-bone records by pivot index and applies the held quaternion/translation (world-space aware)
+?Capture_Update@HTreeClass@@QAEHH@Z,0x001622B0,address read from the retail REL32 at 0x00162B84 (Base_Update) +0x001660D6 (Combo_Update) +5 more update-loop sites; int returned (callers store eax and re-seed the sweep); searches 36B captured-bone records by pivot key and applies the held quaternion/translation (world-space aware)
 ??1Rva0024A797@@UAE@XZ,0x0024A797,opaque MI base dtor (3 vptrs tail-jmp 0x49B47C fold); 36 derived MI dtors tail-call it; identity unproven, address-derived name
 ??1Rva00493DEF@@UAE@XZ,0x00493DEF,opaque MI base dtor (SEH, 3 vptrs incl shared 0xBEFCF8 secondary); 20 derived MI dtors tail-call it; identity unproven
 ??1Rva004D759C@@UAE@XZ,0x004D759C,opaque MI base dtor (SEH, vptrs incl shared patterns, list walk); 20 derived MI dtors tail-call it; identity unproven
@@ -1901,3 +1901,5 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?rva002ECCF@INI@@QAEHPBD@Z,0x0002ECCF,INI token-to-int member (sscanf %d at 0xBBE164 with filler plus throw on failure); 12 callers all in the INI parse family passing (ini; token); called for the rank number in friend_parseRankDefinition; method keeps address token
 ?push_back@?$vector@PAVRankInfo@@V?$allocator@PAVRankInfo@@@_STL@@@_STL@@QAEXABQAVRankInfo@@@Z,0x004DFCB0,stlport vector<RankInfo*> push_back with out-of-line overflow via 0x2DFCF6; sole structured caller is the new-rank path in friend_parseRankDefinition 0x20048F; mangling stolen from TU build via undefined-symbol read
 ??0?$_Vector_base@HV?$allocator@H@_STL@@@_STL@@QAE@ABV?$allocator@H@1@@Z,0x00211E58,ICF-folded empty vector base ctor (same 29B as matched BfmeE16 row); RankInfoCtor TU vector<Int> member
+??4Overridable@@QAEAAV0@ABV0@@Z,0x001FD28E,ICF-folded trivial base copy (5B return-this like matched FX rows); RankInfo assign base call
+??4?$vector@HV?$allocator@H@_STL@@@_STL@@QAEAAV01@ABV01@@Z,0x0021C21B,vector<Int> assign worker for RankInfo m_sciencesGranted; sole caller RankInfo assign 0x200382
