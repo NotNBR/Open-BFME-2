@@ -58,10 +58,10 @@ public:
 	static const char *Get_DX8_Texture_Op_Name(unsigned value);
 	static const char *Get_DX8_Texture_Arg_Name(unsigned value);
 	static const char *Get_DX8_Texture_Transform_Flag_Name(unsigned value);
-	static void Get_DX8_Texture_Stage_State_Value_Name(StringClass &name, D3DTEXTURESTAGESTATETYPE state, unsigned value);
+	static void Get_DX8_Texture_Stage_State_Value_Name(StringClass &name, unsigned long state, unsigned value);
 };
 
-void DX8Wrapper::Get_DX8_Texture_Stage_State_Value_Name(StringClass &name, D3DTEXTURESTAGESTATETYPE state, unsigned value)
+void DX8Wrapper::Get_DX8_Texture_Stage_State_Value_Name(StringClass &name, unsigned long state, unsigned value)
 {
 	switch (state) {
 	case D3DTSS_COLOROP:
