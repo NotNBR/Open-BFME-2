@@ -1872,3 +1872,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?allow@FilePathGate@@QAE_NPBD@Z,0x00600AE5,path-gate filename predicate (ebp-frame validator: null/empty/drive-colon checks); called thiscall from FileSystem::doesFileExist; method name unproven
 ??1Rva00605CA7@@UAE@XZ,0x00605CA7,opaque SEH dtor (mov-eax-cookie prologue, vptr 0xC7AB28); tail-called by single-inheritance dtor at 0x605C6A; identity unproven, address-derived name
 ??1Rva003B00D6@@UAE@XZ,0x003B00D6,opaque SEH dtor (mov-eax-cookie prologue, vptr 0xC1D8F0); tail-called by single-inheritance dtor at 0x3B0152; identity unproven, address-derived name
+??1Rva003B0344@@UAE@XZ,0x003B0344,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x3B0401; identity unproven, address-derived name
