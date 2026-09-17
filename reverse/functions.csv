@@ -7511,3 +7511,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?update_cached_box@AABoxRenderObjClass@@MAEXXZ,,0x001757A0,112,Code/Libraries/Source/WWVegas/WW3D2/AABoxUpdateCachedBox.cpp,matched,
 ?Get_Char_Spacing@FontCharsClass@@QAEHG@Z,,0x00158760,90,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassGetCharSpacingThunk.cpp,matched,
 ??0?$ShareBufferClass@PAVTextureClass@@@@QAE@ABV0@@Z,,0x0015AE10,284,Code/Libraries/Source/WWVegas/WW3D2/ShareBufferClassTextureCopyCtor.cpp,matched,BFME1 sharebuf copy skeleton plus TexBuffer AddRef discipline; slot-address loop reproduces retail ebx-index and ebp-that regalloc
+??0?$ShareBufferClass@I@@QAE@HPBDH@Z,,0x000D1DE2,110,Code/Libraries/Source/WWVegas/WW3D2/ShareBufferClassUnsignedCtor.cpp,matched,BFME1 sweep sharebuf 3-arg shape at /O1 for the ebp-frame EH prologue; explicit operator new booking vector-new
