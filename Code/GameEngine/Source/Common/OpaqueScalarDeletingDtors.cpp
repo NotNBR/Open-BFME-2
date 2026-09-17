@@ -2294,13 +2294,43 @@ void Rva0057C3B6_Anchor(Rva0057C3B6 *p)
 	p->Rva0057C3B6::~Rva0057C3B6();
 }
 
-class Rva00494A97_B2
+class Rva00589079
+{
+public:
+	virtual ~Rva00589079();
+
+private:
+	char m_pad04[8];
+};
+
+class Rva00494A97_S1
+{
+public:
+	virtual void f1();
+};
+
+class Rva00494A97_S2
 {
 public:
 	virtual void f2();
+
+private:
+	char m_pad04[12];
 };
 
-class Rva00494A97 : public Rva0049B47C, public MiBase1, public Rva00494A97_B2
+class Rva00494A97_S3
+{
+public:
+	virtual void f3();
+};
+
+class Rva00494A97_S4
+{
+public:
+	virtual void f4();
+};
+
+class Rva00494A97 : public Rva00589079, public Rva00494A97_S1, public Rva00494A97_S2, public Rva00494A97_S3, public Rva00494A97_S4
 {
 public:
 	virtual ~Rva00494A97()
