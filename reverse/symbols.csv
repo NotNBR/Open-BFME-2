@@ -1903,3 +1903,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??0?$_Vector_base@HV?$allocator@H@_STL@@@_STL@@QAE@ABV?$allocator@H@1@@Z,0x00211E58,ICF-folded empty vector base ctor (same 29B as matched BfmeE16 row); RankInfoCtor TU vector<Int> member
 ??4Overridable@@QAEAAV0@ABV0@@Z,0x001FD28E,ICF-folded trivial base copy (5B return-this like matched FX rows); RankInfo assign base call
 ??4?$vector@HV?$allocator@H@_STL@@@_STL@@QAEAAV01@ABV01@@Z,0x0021C21B,vector<Int> assign worker for RankInfo m_sciencesGranted; sole caller RankInfo assign 0x200382
+?Rva0050ED3@PoolMember@@QAEXXZ,0x0050ED3,opaque pool-member method (refcounted-deleter shape: InterlockedDecrement at +4 then dtor+free); called on +8 member-pointer with null check from vptr-body 0x4E18A2; member type opaque; identity unproven

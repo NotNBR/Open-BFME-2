@@ -8267,3 +8267,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?clone_materials@MeshModelClass@@IAEXABV1@@Z,,0x001881C0,204,Code/Libraries/Source/WWVegas/WW3D2/MeshModelClassCloneMaterials.cpp,matched,BFME1 meshmdlio clone_materials port (their 203B); explicit release keeps NULL inside branch; global ::new with failing-new skip; remapper callees pinned
 ??0RankInfo@@QAE@XZ,,0x0020010B,76,Code/GameEngine/Source/GameLogic/System/RankInfoCtor.cpp,matched,RankInfo ctor via BFME1 thunk plus BFME2 third Overridable word at +0x0C
 ??4RankInfo@@QAEAAV0@ABV0@@Z,,0x0020032B,99,Code/GameEngine/Source/GameLogic/System/RankInfoCtor.cpp,matched,RankInfo copy assignment via explicit memberwise plus pinned base and vector workers
+??1Rva004E18A2@@UAE@XZ,,0x004E18A2,19,Code/GameEngine/Source/Common/Rva004E18A2Dtor.cpp,matched,opaque single-inheritance dtor (vptr 0xC61C30 + conditional member-method tail-jmp to pinned 0x50ED3); /GX- suppresses SEH
