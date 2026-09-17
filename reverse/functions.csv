@@ -8275,3 +8275,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0RadiusDecal@@QAE@XZ,,0x00330DA4,22,Code/GameEngine/Source/GameClient/RadiusDecal_ctor.cpp,matched,BFME1 RadiusDecal ctor verbatim plus SSE extra-zero at +0x0C
 ?isSelectionLocked@BfmeSelectionState@@QBE_NXZ,,0x0004253A,20,Code/GameEngine/Source/GameClient/InGameUI_isSelectionLocked.cpp,matched,BFME2 selection guard outlined from selectMatching pair; true only if both flag bytes non-zero
 ?closeDataChunk@DataChunkOutput@@QAEXXZ,,0x00306C88,119,Code/GameEngine/Source/GameLogic/ScriptEngine/ConditionWriteDataChunk.cpp,matched,ZH DataChunk.cpp port; bare ::delete tail with flag-0 dtor plus separate free
+?setOpacity@Shadow@@QAEXH@Z,,0x003308F6,159,Code/GameEngine/Source/GameClient/Shadow_setOpacity.cpp,matched,BFME1 ShadowSetOpacity verbatim plus /O1 /Oy- for frame and 16-bit test encoding
