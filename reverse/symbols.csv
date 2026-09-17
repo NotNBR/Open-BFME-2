@@ -389,7 +389,7 @@ name,address,notes
 ??G?$_Deque_iterator@UBfmeE12@@U?$_Nonconst_traits@UBfmeE12@@@_STL@@@_STL@@QBE?AU01@H@Z,0x004221E6,address read from the REL32 displacement at a placed deque<12-byte element> body; stlport 4.5.3
 ??H?$_Deque_iterator@UBfmeE12@@U?$_Const_traits@UBfmeE12@@@_STL@@@_STL@@QBE?AU01@H@Z,0x00584E57
 ??H?$_Deque_iterator@UBfmeE12@@U?$_Nonconst_traits@UBfmeE12@@@_STL@@@_STL@@QBE?AU01@H@Z,0x00584E57,address read from the REL32 displacement at a placed deque<12-byte element> body; stlport 4.5.3
-??M@YA_NABU?$pair@VAsciiString@@V1@@@_STL@@0@Z,0x00206BCF,pair-lexicographic less (free pair<AsciiString,AsciiString>::operator<: if (a.first<b.first) true else if (b.first<a.first) false else a.second<b.second; 3x direct calls to primitive operator< at 0x5598C with +4 bumps; 65B); supersedes prior ??M single-string pin here (a function calling operator< cannot be operator< itself)
+??M@YA_NABU?$pair@VAsciiString@@V1@@_STL@@0@Z,0x00206BCF,pair-lexicographic less (free pair<AsciiString,AsciiString>::operator<: if (a.first<b.first) true else if (b.first<a.first) false else a.second<b.second; 3x direct calls to primitive operator< at 0x5598C with +4 bumps; 65B); supersedes prior ??M single-string pin here (a function calling operator< cannot be operator< itself)
 ??_H@YGXPAXIHP6EPAX0@Z@Z,0x00001423,address read from the REL32 displacement at a placed body; folded onto the body held there under another instantiation's name; stlport 4.5.3
 ??_L@YGXPAXIHP6EX0@Z1@Z,0x00629512,MSVC 7.1 eh vector constructor iterator; Ghidra names this address and the _Time_Info constructor at 0x00007920 calls it three times for the 14, 24 and 2 element string arrays
 ??_M@YGXPAXIHP6EX0@Z@Z,0x00629110,MSVC 7.1 eh vector destructor iterator; Ghidra names this address and the _Time_Info destructor at 0x00007A00 calls it three times for the 14, 24 and 2 element string arrays
@@ -1743,3 +1743,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?size@IntFrameList@@QBEIXZ,0x002923DF,frame-history size query; ICF-shares the address with the stlport list-int size row; serves FXList::shouldPlayFX
 ?push_back@IntFrameList@@QAEXABH@Z,0x0005548F,frame-history append; ICF-shares the address with the stlport list-int push_back row; serves FXList::shouldPlayFX
 ?Rva00330995SetTexture@@QAEXPAX@Z,0x00330995,decal texture applier in createRadiusDecal 0x331459 (thiscall on the slot-8-created RadiusDecal with the texture pointer); true method name not recovered
+?isSelectionLocked@BfmeSelectionState@@QBE_NXZ,0x0004253A,BFME2 selection-state guard testing bytes +0xB4/+0xB5; caller 0x29CEBB selectMatchingAcrossScreen returns 0 when true
