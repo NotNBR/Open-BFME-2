@@ -87,3 +87,28 @@ public:
 Rva008FCA3::~Rva008FCA3()
 {
 }
+
+class Rva0023AE08
+{
+public:
+	virtual ~Rva0023AE08();
+
+private:
+	char m_pad04[8];
+};
+
+class MiBase1_4C743
+{
+public:
+	virtual void f1();
+};
+
+class Rva004C743 : public Rva0023AE08, public MiBase1_4C743
+{
+public:
+	virtual ~Rva004C743();
+};
+
+Rva004C743::~Rva004C743()
+{
+}

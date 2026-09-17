@@ -1801,7 +1801,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??1Rva00A897D@@UAE@XZ,0x00A897D,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0x51A2A; identity unproven, address-derived name
 ??1Rva0084CEF@@UAE@XZ,0x0084CEF,opaque and-dtor (19B: member call 0x483E87 + and [esi+8]/[esi+0x18]); called by scalar-deleting-dtor at 0x91AB2; identity unproven, address-derived name
 ??1Rva00419E3@@UAE@XZ,0x00419E3,opaque vptr+and+jmp dtor (18B: vptr 0xBC2478, and [0xDE1B18],0, tail-jmp 0x1EE3DE); called by scalar-deleting-dtor at 0x41B69; identity unproven, address-derived name
-??1Rva004C743@@UAE@XZ,0x004C743,opaque 2-vptr+jmp dtor (18B: +0/+0xC, tail-jmp 0x23AE08); called by scalar-deleting-dtor at 0x4C97F; identity unproven, address-derived name
 ??1Rva0062AF7@@UAE@XZ,0x0062AF7,opaque 4-vptr MI dtor (32B: +0/+4/+0x10/+0x14, tail-jmp 0x28418A); called by scalar-deleting-dtor at 0x62E8D; identity unproven, address-derived name
 ??1Rva0090034@@UAE@XZ,0x0090034,opaque frameless member-release dtor (push esi/mov esi,ecx head); called by scalar-deleting-dtor at 0x900AB; identity unproven, address-derived name
 ??1Rva0090088@@UAE@XZ,0x0090088,opaque frameless member-release dtor (push esi/mov esi,ecx head); called by scalar-deleting-dtor at 0x900C7; identity unproven, address-derived name
@@ -1860,3 +1859,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??1Rva002D0588@@UAE@XZ,0x002D0588,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x4CA13; identity unproven, address-derived name
 ??1Rva00224A90@@UAE@XZ,0x00224A90,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x628FD; identity unproven, address-derived name
 ??1Rva002C5398@@UAE@XZ,0x002C5398,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x8FCA3; identity unproven, address-derived name
+??1Rva0023AE08@@UAE@XZ,0x0023AE08,opaque SEH dtor (mov-eax-cookie prologue); tail-called by 2-vptr dtor at 0x4C743; identity unproven, address-derived name
