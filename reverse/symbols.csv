@@ -1704,3 +1704,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?find@?$StringBase@G@@QBEPBGG@Z,0x00035AB0,StringBase<wchar_t>::find(wchar_t) newline search called by MapMetaData first-line at 0x301552 with pointer return used in null check and index math; mangling compiler-attested from TU build
 ?getDescription@MapMetaData@@QAE?AVUnicodeString@@XZ,0x003009CD,BFME1 MapMetaData::getDescription name; hidden-retptr UnicodeString loader called first by first-line at 0x301546 exactly as BFME1 first-line calls getDescription
 ?removeLastChar@?$StringBase@G@@QAEXXZ,0x000376E0,wide twin of pinned narrow removeLastChar at 0x36C50; MapMetaData base-name strips .map with 4 calls; ZH removeLastChar role; mangling follows the narrow pin pattern
+?GadgetListBoxIsFull@@YA_NPAVGameWindow@@@Z,0x00324822,BFME1 GadgetListBoxIsFull cdecl name; bool guard before SetBottomVisible in listbox insert at 0x326D5
+?GadgetListBoxSetBottomVisibleEntry@@YAXPAVGameWindow@@H@Z,0x003253FD,BFME1 SetBottomVisibleEntry cdecl name; tail setter taking the insert index at 0x326E1
+?Rva00324807@@YAHPAVGameWindow@@@Z,0x00324807,opaque null-guarded bottom-entry delegate for listbox insert; wraps winGetUserData with tail jump to 0x323F9C; true name unknown so address-derived
