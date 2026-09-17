@@ -970,3 +970,24 @@ void Rva00B6DD2_Anchor(Rva00B6DD2 *p)
 {
 	p->Rva00B6DD2::~Rva00B6DD2();
 }
+
+class Rva00B6971_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva00B6971 : public Rva0049B47C, public MiBase1, public Rva00B6971_B2
+{
+public:
+	virtual ~Rva00B6971()
+	{
+	}
+};
+
+// Anchor: forces out-of-line emission of the in-class destructor COMDAT,
+// including the scalar deleting destructor.
+void Rva00B6971_Anchor(Rva00B6971 *p)
+{
+	p->Rva00B6971::~Rva00B6971();
+}
