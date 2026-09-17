@@ -8262,3 +8262,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?GetLastLocalFile@CDownload@@UAEJPADH@Z,,0x006C9930,53,Code/Libraries/Source/WWVegas/WWDownload/CDownloadDownloadFile.cpp,matched,ZH GetLastLocalFile verbatim; null guard with E_FAIL then strncpy plus maxlen-1 terminator; supersedes retired opaque d_00884e10
 ??_GRva0004CA4C@@UAEPAXI@Z,,0x0004CA8B,28,Code/GameEngine/Source/Common/Rva002D22CADerived.cpp,matched,Scalar deleting dtor via home-TU emission; dtor rowed in same TU
 ??_GRva00589079@@UAEPAXI@Z,,0x005890FE,28,Code/GameEngine/Source/Common/Rva00589079Derived.cpp,matched,Scalar deleting dtor via home-TU emission; dtor rowed in same TU
+??_GRva00481F82@@UAEPAXI@Z,,0x00482118,28,Code/GameEngine/Source/Common/Rva00589079Derived.cpp,matched,Scalar deleting dtor via home-TU emission; dtor rowed in same TU
