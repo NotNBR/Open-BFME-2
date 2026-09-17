@@ -7814,3 +7814,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva005D8883@@UAE@XZ,,0x005D8883,11,Code/GameEngine/Source/Common/Rva005D8964Derived.cpp,matched,opaque derived dtor; vptr 0xC76190; tail-jmp opaque base 0x5D8964
 ??1Rva005AA735@@UAE@XZ,,0x005AA735,11,Code/GameEngine/Source/Common/Rva005DCB27Derived.cpp,matched,opaque derived dtor; vptr 0xC71FBC; tail-jmp opaque base 0x5DCB27
 ??1Rva005AA860@@UAE@XZ,,0x005AA860,11,Code/GameEngine/Source/Common/Rva005DCBE3Derived.cpp,matched,opaque derived dtor; vptr 0xC71FF4; tail-jmp opaque base 0x5DCBE3
+??1Rva00485983@@UAE@XZ,,0x00485983,25,Code/GameEngine/Source/Common/Rva0048593DDerived.cpp,matched,opaque MI-grandchild dtor; vptrs 0xC4A8D4/+0x0C 0xC4A818/+0x10 0xC4A810; tail-jmp opaque base 0x48593D (DieModule family)
