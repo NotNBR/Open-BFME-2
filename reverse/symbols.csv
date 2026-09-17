@@ -1716,3 +1716,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?Rva006CE3D0Cleanup@@YAXPAXHH@Z,0x006CE3D0,retail REL32 from ModuleTagString dtor at 0x006CE827; cdecl 3-arg cleanup called as (ptr 0 0); true identity not recovered
 ??1Rva004A9DF3Element@@QAE@XZ,0x004A9DF3,element dtor thunk for the 2x4B array at ModuleTagString+0x0C; retail ehvec_dtor call at 0x006CE82A passes it; true type not recovered
 ?configure@ShroudManager@@QAEXURegion3D@@M@Z,0x0073DBF0,BFME1 ShroudManagerImpl::configure shape (SEH frame; drainPending-analog 0x73D7D0; 3-call node walk over [esi+0x30]); called by ShroudManager::setRegion candidate 0x73DF50 with by-value Region3D + cellSize
+?Init@BfmeDGFSub10@@QAEXXZ,0x00655770,BfmeThingDGF sub10 initializer; retail thiscall from bfmeInitDGF at 0x00664DCF; true identity not recovered
+?Init@BfmeDGFArg@@QAEXPAX@Z,0x00657500,BfmeThingDGF arg initializer taking sub4; retail thiscall from bfmeInitDGF at 0x00664E02; true identity not recovered
+?writeDict@DataChunkOutput@@QAEXABVDict@@@Z,0x00307D85,ZH DataChunk.h writeDict; retail REL32 from map-object writer at 0x0030D5C7; property-dictionary chunk writer
