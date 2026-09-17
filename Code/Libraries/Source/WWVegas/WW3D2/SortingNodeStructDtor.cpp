@@ -186,6 +186,35 @@ SortingNodeStruct::SortingNodeStruct()
 {
 }
 
+template<class T>
+class DLListClass
+{
+public:
+	T *Head() { return static_cast<T *>(head); }
+
+private:
+	DLNodeClass<T> *head;
+	DLNodeClass<T> *tail;
+};
+
+void *__cdecl operator new(unsigned int size);
+
+static DLListClass<SortingNodeStruct> clean_list;
+
+// ?Get_Sorting_Struct@@YAPAVSortingNodeStruct@@XZ, retail 0x0012FD80 (128B).
+// Verbatim Open-BFME-1 shape: reuse a clean-list node when available,
+// otherwise allocate a 0x2A8-byte node (validates the TU layout).
+SortingNodeStruct *Get_Sorting_Struct()
+{
+	SortingNodeStruct *state = clean_list.Head();
+	if (state) {
+		state->Remove();
+		return state;
+	}
+	state = new SortingNodeStruct();
+	return state;
+}
+
 // Anchor: emits the implicit ??1SortingNodeStruct COMDAT this TU exists to place.
 void destroySortingNode(SortingNodeStruct *node)
 {
