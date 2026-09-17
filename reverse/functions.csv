@@ -7923,3 +7923,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?InitGameLogicRandom@@YAXI@Z,,0x00233FC7,44,Code/GameEngine/Source/Common/GameLogicRandomInit.cpp,matched,BFME1 random_value.cpp shape with frame-override; logic seed only
 ??0MissileLauncherBuildingUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CD933,66,Code/GameEngine/Source/GameLogic/Object/Update/MissileLauncherBuildingUpdateCtor.cpp,matched,opaque Rva0044EF5E base via pin; inherited slots re-stored; body-placed E16 vector
 ??0OCLUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CD3A4,47,Code/GameEngine/Source/GameLogic/Object/Update/OCLUpdateCtor.cpp,matched,opaque-base pattern; factory stub order; size 0x88
+??0SpawnPointProductionExitUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CCD7F,47,Code/GameEngine/Source/GameLogic/Object/Update/SpawnPointProductionExitUpdateCtor.cpp,matched,opaque-base pattern; factory stub order; size 0x88
