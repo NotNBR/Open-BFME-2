@@ -8011,3 +8011,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?ensureCharPage@FontCharsClass@@AAEXG@Z,,0x00155220,249,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassEnsureCharPage.cpp,matched,page-table grow helper; retail RE
 ?bfme_getBaseDisplayName@MapMetaData@@QAE?AVUnicodeString@@XZ,,0x00300AEA,404,Code/GameEngine/Source/GameClient/GUI/MapMetaData_getBaseDisplayName.cpp,matched,BFME1 base-name loader port plus B2 .map-strip tail; 1 pin same batch
 ?localPixelToRadar@Radar@@QAE_NPBUICoord2D@@PAU2@@Z,,0x002D81EC,248,Code/GameEngine/Source/Common/System/Radar_localPixelToRadar.cpp,matched,BFME1 RadarLocalPixelToRadar.cpp verbatim; /arch:SSE for scalar-SSE float path; inner size struct required for reg coloring
+?bfme_getDisplayName@MapMetaData@@QAE?AVUnicodeString@@_N@Z,,0x00300C7E,142,Code/GameEngine/Source/GameClient/GUI/MapMetaData_getDisplayName.cpp,matched,Numbered wrapper over base loader; cdecl format rides the stack; no new pins
