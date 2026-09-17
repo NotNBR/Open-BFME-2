@@ -7729,3 +7729,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva006FB9B0@@UAE@XZ,,0x006FB9B0,11,Code/GameEngine/Source/Common/Rva006DE350Derived.cpp,matched,opaque derived dtor
 ??1Rva006FBA10@@UAE@XZ,,0x006FBA10,11,Code/GameEngine/Source/Common/Rva006DE350Derived.cpp,matched,opaque derived dtor
 ??1Rva005EE2A0@@UAE@XZ,,0x005EE2A0,11,Code/GameEngine/Source/Common/Rva005EE30CChain.cpp,matched,opaque dtor tail-jmp opaque base pin
+??1Rva005EEDAA@@UAE@XZ,,0x005EEDAA,11,Code/GameEngine/Source/Common/Rva005EE30CChain.cpp,matched,opaque dtor tail-jmp opaque base pin
