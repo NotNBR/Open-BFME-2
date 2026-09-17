@@ -1740,3 +1740,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?getDisplayName@PlayerTemplate@@QBE?AVUnicodeString@@XZ,0x00449B8F,BFME1 PlayerTemplate::getDisplayName() const verbatim (BFME2 out-of-line 25B via StringBase copy pin 108); direct callee of DisplayName at 0x3FFBB4
 ?Rva0009017D@@YAPAXPBDM_NH@Z,0x0009017D,SEH font-handle worker (mov eax scope + __EH_prolog head); cdecl (name, float size, bold, extra) returning handle; direct callee x2 of Rva000902A6 at 0x902A6
 ??M@YA_NABVAsciiString@@0@Z,0x0005598C,free AsciiString::operator< (23B compare+setl via thiscall compare pin 1569 at 0x69D6); called directly x2 by map _M_find at 0x1F8437 (less inlined); resolves the _M_find landing TU
+?size@IntFrameList@@QBEIXZ,0x002923DF,frame-history size query; ICF-shares the address with the stlport list-int size row; serves FXList::shouldPlayFX
+?push_back@IntFrameList@@QAEXABH@Z,0x0005548F,frame-history append; ICF-shares the address with the stlport list-int push_back row; serves FXList::shouldPlayFX
+?Rva00330995SetTexture@@QAEXPAX@Z,0x00330995,decal texture applier in createRadiusDecal 0x331459 (thiscall on the slot-8-created RadiusDecal with the texture pointer); true method name not recovered
