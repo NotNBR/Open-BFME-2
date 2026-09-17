@@ -40,10 +40,14 @@ public:
 	int winSetHiliteImage(int index, const Image *image);
 	int winSetHiliteColor(int index, int color);
 	int winSetHiliteBorderColor(int index, int color);
+	void setRva003144FD(int value);
+	int getRva0031450A();
 
 private:
 	char m_pad[48];
 	WinInstanceData m_instData;
+	char m_pad2[136];
+	int m_unk214;
 };
 
 int GameWindow::winSetEnabledImage(int index, const Image *image)
@@ -116,4 +120,9 @@ int GameWindow::winSetHiliteBorderColor(int index, int color)
 		return -3;
 	m_instData.m_hiliteDrawData[index].borderColor = color;
 	return 0;
+}
+
+void GameWindow::setRva003144FD(int value)
+{
+	m_unk214 = value;
 }
