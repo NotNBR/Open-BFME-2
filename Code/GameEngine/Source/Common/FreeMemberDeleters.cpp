@@ -52,3 +52,18 @@ Rva004FCD14::~Rva004FCD14()
 	if (m_ptr04)
 		free(m_ptr04);
 }
+
+class Rva004FCD49
+{
+public:
+	virtual ~Rva004FCD49();
+
+private:
+	void *m_ptr04;
+};
+
+Rva004FCD49::~Rva004FCD49()
+{
+	if (m_ptr04)
+		free(m_ptr04);
+}
