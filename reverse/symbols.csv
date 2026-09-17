@@ -1904,3 +1904,5 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??4Overridable@@QAEAAV0@ABV0@@Z,0x001FD28E,ICF-folded trivial base copy (5B return-this like matched FX rows); RankInfo assign base call
 ??4?$vector@HV?$allocator@H@_STL@@@_STL@@QAEAAV01@ABV01@@Z,0x0021C21B,vector<Int> assign worker for RankInfo m_sciencesGranted; sole caller RankInfo assign 0x200382
 ?Rva0050ED3@PoolMember@@QAEXXZ,0x0050ED3,opaque pool-member method (refcounted-deleter shape: InterlockedDecrement at +4 then dtor+free); called on +8 member-pointer with null check from vptr-body 0x4E18A2; member type opaque; identity unproven
+??$__uninitialized_copy@PBHPAH@_STL@@YAPAHPBH0PAHABU__true_type@0@@Z,0x000179AF,stlport __uninitialized_copy<const int ptr>; retail dispatches POD path to msvcr71!memmove via 0xBBA688; read from REL32 in _M_allocate_and_copy at 0x0053BD39
+?allocate@?$allocator@H@_STL@@QBEPAHIPBX@Z,0x00068E15,identical-code fold with the allocator pins already at this address; read from the retail REL32 in vector<Int> _M_allocate_and_copy at 0x0053BD39
