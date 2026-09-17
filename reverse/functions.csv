@@ -7916,3 +7916,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva005CB23C@@UAE@XZ,,0x005CB23C,7,Code/GameEngine/Source/Common/Rva005CB23CBase.cpp,matched,opaque leaf base dtor; upgrades pin; 6 derived tail-call it
 ??1Rva0058AD7A@@UAE@XZ,,0x0058AD7A,7,Code/GameEngine/Source/Common/Rva0058AD7ABase.cpp,matched,opaque empty base dtor; upgrades pin; chain tail-calls it
 ?getNumPlayers@QuickMatchPreferences@@QAEHXZ,,0x005DF69E,80,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_getNumPlayers.cpp,matched,ZH verbatim int getter; same plumbing as OptionPreferences family
+?BFMEComputeCRC@@YAIPBEII@Z,,0x003EC8F7,42,Code/GameEngine/Source/GameNetwork/native_packet_crc.cpp,matched,ported from the Open-BFME-1 conversion; /Oy- keeps the ebp frame
