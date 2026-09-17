@@ -7538,3 +7538,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?getFirewallPortOverride@OptionPreferences@@QAEGXZ,,0x002E48CE,90,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_getFirewallPortOverride.cpp,matched,ZH getter minus the stale 0-65535 clamp (absent in retail); override default at GlobalData+0xA54
 ?hasRadar@Player@@QBE_NXZ,,0x002AA08E,35,Code/GameEngine/Source/Common/RTS/Player_hasRadar.cpp,matched,BFME1 hasRadar logic verbatim; radar fields at +0xA0/+0xA4/+0xA8
 ?GameGetColorComponents@@YAXHPAE000@Z,,0x002D2A9F,43,Code/GameEngine/Source/Common/System/color_ops.cpp,matched,BFME1 GameGetColorComponents verbatim; BFME2 retail 43B vs BFME1 44B
+?setPosition@RadiusDecal@@QAEXABUCoord3D@@@Z,,0x00330DFD,24,Code/GameEngine/Source/GameClient/RadiusDecal_setPosition.cpp,matched,BFME1 setPosition shape; shadow+0x04 null check with copy to shadow+0x08
