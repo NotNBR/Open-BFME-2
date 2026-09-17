@@ -1622,3 +1622,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ?winGetSize@GameWindow@@QAEHPAH0@Z,0x00313BC6,BFME1 GameWindow winGetSize non-virtual; localPixelToRadar +0x30 direct call target; GameWindow cluster near winGetScreenPosition 0x313B3C; ghidra 38B
 ?findDrawPositions@Radar@@QAEXHHHHPAUICoord2D@@0@Z,0x002D799C,BFME1 Radar findDrawPositions member; localPixelToRadar +0x49 direct call target in Radar cluster; ghidra 266B
 ?clear80@Rva001EAE6FHelper@@QAEPAV1@XZ,0x001EAE6F,Shared 0x80-byte memset helper (memset this 0 0x80 via 0x6291AE; returns this); 48 paired callers; construct +0x4/+0xf direct call targets
+?update@TimedOperationRef@@QAEIM_N@Z,0x003FE6A0,TU-local holder concept; null-checked throw plus virtual slot-1 update on the embedded TimedOperation; update +0x5c direct call target; ghidra 53B
