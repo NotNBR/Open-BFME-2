@@ -7863,3 +7863,12 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva005737AF@@UAE@XZ,,0x005737AF,11,Code/GameEngine/Source/Common/Rva005CB23CDerived.cpp,matched,opaque derived dtor; tail-jmp opaque base pin 0x5CB23C
 ??1Rva00145610@@UAE@XZ,,0x00145610,11,Code/GameEngine/Source/Common/Rva00145000Derived.cpp,matched,opaque derived dtor; vptr 0xBD3544; tail-jmp opaque SEH base pin 0x145000
 ??1Rva0015D0E0@@UAE@XZ,,0x0015D0E0,11,Code/GameEngine/Source/Common/Rva0015CC90Derived.cpp,matched,opaque derived dtor; vptr 0xBD3CF4; tail-jmp opaque SEH base pin 0x15CC90
+??1Rva006560E0@@UAE@XZ,,0x006560E0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva0065D1D0@@UAE@XZ,,0x0065D1D0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva0065E7D0@@UAE@XZ,,0x0065E7D0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva0065ECF0@@UAE@XZ,,0x0065ECF0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva0065F970@@UAE@XZ,,0x0065F970,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva00660060@@UAE@XZ,,0x00660060,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva00660BE0@@UAE@XZ,,0x00660BE0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva006672E0@@UAE@XZ,,0x006672E0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva00668120@@UAE@XZ,,0x00668120,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
