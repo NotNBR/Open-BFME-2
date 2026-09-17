@@ -123,3 +123,13 @@ void Rva00462151_Anchor(Rva00462151 *p)
 {
 	p->Rva00462151::~Rva00462151();
 }
+
+class Rva00484F5D : public Rva00484EF4
+{
+public:
+	virtual ~Rva00484F5D();
+};
+
+Rva00484F5D::~Rva00484F5D()
+{
+}
