@@ -3,15 +3,39 @@
 // the folded vtable 0x00BF2558 (shared with derived HealContainModuleData,
 // whose 36B ctor is matched in HealContainModuleDataCtorThunk.cpp) then
 // constructing the member at +8.
+// ?construct@Rva0025342CMember@@QAEPAV1@XZ @ 0x0025342C (73B): zeroes two
+// 0x80-byte blocks through the shared clear80 helper, initializes the
+// trailing state at +0x100, and returns this.
 // The +8 member's semantic identity is unproven: ZH OpenContain.h says the
 // first member is DieMuxData and DieModule.cpp already carries a
 // ??0DieMuxData@@ present-unmatched marker for the concept, but the body at
 // 0x0025342C has no independent identity yet, so the callee keeps an
 // address-derived name here (pinned) instead of a guessed class name.
+class Rva001EAE6FHelper
+{
+public:
+	void clear80();
+
+private:
+	char m_pad[0x80];
+};
+
 class Rva0025342CMember
 {
 public:
-	void construct();
+	Rva0025342CMember *construct();
+
+private:
+	Rva001EAE6FHelper m_sub0; // +0x00
+	Rva001EAE6FHelper m_sub1; // +0x80
+	int m_tail0; // +0x100, initialized through both the tail pointer
+	// below and directly (retail keeps both -1 stores; same-path
+	// duplicates are folded by the compiler, mixed paths are not)
+	int m_tail1; // +0x104
+	int m_tail2; // +0x108
+	unsigned char m_tailByte0; // +0x10C
+	unsigned char m_tailByte1; // +0x10D
+	unsigned char m_tailByte2; // +0x10E
 };
 
 class __declspec(novtable) OpenContainModuleData
@@ -28,6 +52,28 @@ private:
 	unsigned m_pad04;
 	Rva0025342CMember m_member08;
 };
+
+// ?construct@Rva0025342CMember@@QAEPAV1@XZ, retail 0x0025342C, 73 bytes.
+// Zeroes two 0x80-byte blocks through the shared helper, then initializes
+// the trailing state at +0x100. Helper identity unproven (pinned opaque).
+
+// ?construct@Rva0025342CMember@@QAEPAV1@XZ
+Rva0025342CMember *Rva0025342CMember::construct()
+{
+	m_sub0.clear80();
+	m_sub1.clear80();
+	int *tail = &m_tail0;
+	tail[0] = -1;
+	tail[1] = 0;
+	tail[2] = 0;
+	m_tail0 = -1;
+	m_tailByte0 = 0;
+	m_tailByte1 = 0;
+	m_tail1 = 0;
+	m_tail2 = 0;
+	m_tailByte2 = 0;
+	return this;
+}
 
 // ??0OpenContainModuleData@@QAE@XZ
 OpenContainModuleData::OpenContainModuleData()
