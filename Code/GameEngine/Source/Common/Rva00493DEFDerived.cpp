@@ -185,3 +185,19 @@ public:
 Rva004C4DE9::~Rva004C4DE9()
 {
 }
+
+class Rva004C5019_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva004C5019 : public Rva00493DEF, public MiBase1, public Rva004C5019_B2
+{
+public:
+	virtual ~Rva004C5019();
+};
+
+Rva004C5019::~Rva004C5019()
+{
+}
