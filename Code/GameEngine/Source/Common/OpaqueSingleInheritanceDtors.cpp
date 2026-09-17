@@ -112,3 +112,40 @@ public:
 Rva004C743::~Rva004C743()
 {
 }
+
+class Rva0028418A
+{
+public:
+	virtual ~Rva0028418A();
+};
+
+class MiBase1_62AF7
+{
+public:
+	virtual void f1();
+
+private:
+	char m_pad04[8];
+};
+
+class MiBase2_62AF7
+{
+public:
+	virtual void f2();
+};
+
+class MiBase3_62AF7
+{
+public:
+	virtual void f3();
+};
+
+class Rva0062AF7 : public Rva0028418A, public MiBase1_62AF7, public MiBase2_62AF7, public MiBase3_62AF7
+{
+public:
+	virtual ~Rva0062AF7();
+};
+
+Rva0062AF7::~Rva0062AF7()
+{
+}
