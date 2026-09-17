@@ -7522,3 +7522,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 ?Get_Motion@HAnimComboClass@@QAEPAVHAnimClass@@H@Z,,0x00196670,23,Code/Libraries/Source/WWVegas/WW3D2/HAnimComboClassGetMotion.cpp,matched,
 ?Get_Pivot_Weight_Map@HAnimComboClass@@QAEPAVPivotMapClass@@H@Z,,0x00196740,27,Code/Libraries/Source/WWVegas/WW3D2/HAnimComboClassGetMotion.cpp,matched,
 ?getCurrentVictim@AIUpdateInterface@@QBEPAVObject@@XZ,,0x00268D71,23,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterface_getCurrentVictim.cpp,matched,BFME2 AIUpdate logic; m_currentVictimID at +0x40; TheGameLogic DIR32
+?getWhichTurretForWeaponSlot@AIUpdateInterface@@QBE?AW4WhichTurretType@@W4WeaponSlotType@@PAM1@Z,,0x0026278A,94,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterface_getWhichTurretForWeaponSlot.cpp,matched,BFME2 AIUpdate logic; single-turret scan over m_turretAI at +0x20C; angle/pitch at +0x18/+0x1C
