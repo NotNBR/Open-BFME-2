@@ -7998,3 +7998,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?StartOutput@Debug@@EAAXW4StringType@DebugIOInterface@@PBDZZ,,0x00039B30,58,Code/Libraries/Source/debug/debug_debug.cpp,matched,Retail Debug StartOutput: Log==1 direct FlushOutput call and wvsprintfA stdcall import shape
 ??0OBBoxRenderObjClass@@QAE@ABVOBBoxClass@@@Z,,0x00176000,178,Code/Libraries/Source/WWVegas/WW3D2/OBBoxRenderObjFromOBBox.cpp,matched,
 ??0AABoxRenderObjClass@@QAE@ABUW3dBoxStruct@@@Z,,0x00175C40,143,Code/Libraries/Source/WWVegas/WW3D2/AABoxRenderObjFromDef.cpp,matched,
+?Clone@AABoxRenderObjClass@@UBEPAVRenderObjClass@@XZ,,0x00176300,78,Code/Libraries/Source/WWVegas/WW3D2/AABoxRenderObjClone.cpp,matched,
