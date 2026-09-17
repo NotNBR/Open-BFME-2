@@ -30,6 +30,7 @@ class GameWindow
 {
 public:
 	int winSetEnabledImage(int index, const Image *image);
+	int winSetEnabledColor(int index, int color);
 
 private:
 	char m_pad[48];
@@ -41,5 +42,13 @@ int GameWindow::winSetEnabledImage(int index, const Image *image)
 	if (index < 0 || index >= 9)
 		return -3;
 	m_instData.m_enabledDrawData[index].image = image;
+	return 0;
+}
+
+int GameWindow::winSetEnabledColor(int index, int color)
+{
+	if (index < 0 || index >= 9)
+		return -3;
+	m_instData.m_enabledDrawData[index].color = color;
 	return 0;
 }
