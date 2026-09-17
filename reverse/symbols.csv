@@ -1628,3 +1628,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva0058AD7A@@UAE@XZ,0x0058AD7A,opaque empty base dtor (vptr store plus ret, no cleanup); tail-called by opaque 0x5EE30C which 22 derived dtors tail-call; identity unproven
 ??1Rva00493DEF@@UAE@XZ,0x00493DEF,opaque MI base dtor (SEH, 3 vptrs incl shared 0xBEFCF8 secondary); 20 derived MI dtors tail-call it; identity unproven
 ??1Rva004D759C@@UAE@XZ,0x004D759C,opaque MI base dtor (SEH, vptrs incl shared patterns, list walk); 20 derived MI dtors tail-call it; identity unproven
+??1Rva006D6470@@UAE@XZ,0x006D6470,opaque SEH base dtor; 8 derived dtors tail-call it; identity unproven
