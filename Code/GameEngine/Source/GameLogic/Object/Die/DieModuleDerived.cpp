@@ -40,3 +40,19 @@ public:
 Rva0045CE6D::~Rva0045CE6D()
 {
 }
+
+class Rva004851FE_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva004851FE : public DieModule, public MiBase1, public Rva004851FE_B2
+{
+public:
+	virtual ~Rva004851FE();
+};
+
+Rva004851FE::~Rva004851FE()
+{
+}
