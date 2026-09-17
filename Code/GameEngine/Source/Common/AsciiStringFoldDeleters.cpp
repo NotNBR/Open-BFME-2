@@ -94,3 +94,17 @@ private:
 Rva00538C5F::~Rva00538C5F()
 {
 }
+
+class Rva005C31FB
+{
+public:
+	virtual ~Rva005C31FB();
+
+private:
+	char m_pad04[4];
+	AsciiStringMember m_member08;
+};
+
+Rva005C31FB::~Rva005C31FB()
+{
+}
