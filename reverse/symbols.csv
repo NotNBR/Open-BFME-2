@@ -1748,3 +1748,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?winSetEnabledImage@GameWindow@@QAEHHPBVImage@@@Z,0x003143B9,int-returning enabled-image setter (xor-eax-0 or -3); called by MainMenuScaleUpTransition::init 0x35E01E with (growWin 0 image)
 ??1Rva00484EF4@@UAE@XZ,0x00484EF4,opaque MI dtor (25B: vptrs +0/+0xC/+0x10, tertiary 0xC4A50C, tail-jmp 0x49B47C fold); called by scalar-deleting-dtor at 0x589038; identity unproven, address-derived name
 ??1Rva004BD763@@UAE@XZ,0x004BD763,opaque MI dtor (25B: vptrs +0/+0xC/+0x10, tertiary 0xC5AC18, tail-jmp 0x49B47C fold); called by scalar-deleting-dtor at 0x4BD844; identity unproven, address-derived name
+??1Rva00462151@@UAE@XZ,0x00462151,opaque MI dtor (25B: vptrs +0/+0xC/+0x10, tertiary 0xC42F1C, tail-jmp 0x49B47C fold); called by scalar-deleting-dtor at 0x4621FA; identity unproven, address-derived name
