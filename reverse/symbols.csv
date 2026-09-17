@@ -1687,3 +1687,5 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ?init@CustomAsciiStringShim@@QAEXPBD@Z,0x00037BA0,AsciiString init from chars for the volume-key temp; aliases the StringBase ctor row at the same address
 ?destroy@CustomAsciiStringShim@@QAEXXZ,0x00036410,AsciiString temp teardown for the volume-key temp; aliases the releaseBuffer pin at the same address
 ?find@CustomPreferenceMapShim@@QAEPAUCustomMapNodeShim@@PAUCustomAsciiStringShim@@@Z,0x001F8437,map find worker for the volume lookup; aliases the _M_find pin at the same address; read from the retail REL32 in this body
+??0Rva004930A0@@QAE@XZ,0x004930A0,opaque intermediate base DEFAULT ctor (SEH body); called this-only by DeliverPayloadAIUpdate and AIUpdateInterface ctors; identity unproven
+??0Rva00493C5A@@QAE@PAVThing@@PBVModuleData@@@Z,0x00493C5A,opaque intermediate base ctor (SEH body); called 2-arg by SupplyTruckAIUpdate ctor; identity unproven
