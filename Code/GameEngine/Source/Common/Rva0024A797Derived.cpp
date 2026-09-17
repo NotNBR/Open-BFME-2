@@ -488,3 +488,19 @@ public:
 Rva004A0C0E::~Rva004A0C0E()
 {
 }
+
+class Rva004A2BD1_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva004A2BD1 : public Rva0024A797, public MiBase1, public Rva004A2BD1_B2
+{
+public:
+	virtual ~Rva004A2BD1();
+};
+
+Rva004A2BD1::~Rva004A2BD1()
+{
+}
