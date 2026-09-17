@@ -1643,3 +1643,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ?clear@Rva000AD6F4@@QAEXXZ,0x000AD6F4,opaque guarded-delete helper (nulls member at +0 then ::delete via slot-0 plus operator delete); called with +4 adjust from 14B vptr bodies; exact method unproven
 ??1Rva004B96CC@@UAE@XZ,0x004B96CC,opaque MI base dtor; 3 derived MI dtors tail-call it; identity unproven
 ??1Rva00548948@@UAE@XZ,0x00548948,opaque base dtor; 3 derived dtors tail-call it; identity unproven
+??1Rva0055B0CC@@UAE@XZ,0x0055B0CC,opaque base dtor; 3 derived dtors tail-call it; identity unproven
