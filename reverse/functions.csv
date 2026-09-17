@@ -7901,3 +7901,8 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?getLastLadderPort@CustomMatchPreferences@@QAEGXZ,,0x005DF50A,81,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/CustomMatchPreferences_getLastLadderPort.cpp,matched,ZH verbatim short getter via atoi; same plumbing as OptionPreferences family; CustomMatch claimed per BFME2 tree presence and BFME1 twin
 ?getDisallowNonAsianText@CustomMatchPreferences@@QAE_NXZ,,0x0054F63A,92,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/CustomMatchPreferences_getDisallowNonAsianText.cpp,matched,ZH verbatim bool getter via raw _strcmpi import; register Bool pins AL-width neg-sbb-inc normalization; same plumbing as OptionPreferences family
 ?getMaxPing@QuickMatchPreferences@@QAEHXZ,,0x005DF6EE,81,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_getMaxPing.cpp,matched,ZH shape with BFME2 miss default -1; same plumbing as OptionPreferences family; MaxPing key is QuickMatch-only
+??_GRva0030714F@@UAEPAXI@Z,,0x00307133,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
+??_GRva004E194E@@UAEPAXI@Z,,0x004E1D32,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
+??_GRva004FA830@@UAEPAXI@Z,,0x005C4537,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
+??_GRva00538C5F@@UAEPAXI@Z,,0x0040FDB5,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
+??_GRva005C31FB@@UAEPAXI@Z,,0x005C327F,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
