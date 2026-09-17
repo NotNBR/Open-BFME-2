@@ -72,3 +72,19 @@ public:
 Rva0033EEC9::~Rva0033EEC9()
 {
 }
+
+class Rva00373CB1_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva00373CB1 : public Rva0024A797, public MiBase1, public Rva00373CB1_B2
+{
+public:
+	virtual ~Rva00373CB1();
+};
+
+Rva00373CB1::~Rva00373CB1()
+{
+}
