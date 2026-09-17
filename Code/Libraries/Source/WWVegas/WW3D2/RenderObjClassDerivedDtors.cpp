@@ -28,21 +28,12 @@
 // two vtable stores at +0x00/+0x08) and overrides nothing; the empty
 // destructor stores the derived vptrs and tail-jumps to the base
 // destructor, exactly like the matched CameraClass dtor at 0x00133A00.
-// Owner identities are unproven (opaque Rva names); the vptrs are DIR32
-// auto-patches (0xBD23C0/0xBD23B8 and 0xBD3FA8/0xBD3FA0). One ledger row
-// per destructor, landed one commit at a time.
+// The former Rva00130E80 entry was retired once a sibling agent proved it
+// is CollectionClass::~CollectionClass (row now in CollectionClassCopyCtor.cpp).
+// Owner identity is unproven (opaque Rva name); the vptrs are DIR32
+// auto-patches (0xBD3FA8/0xBD3FA0).
 
 #include "rendobj.h"
-
-class Rva00130E80 : public RenderObjClass
-{
-public:
-	virtual ~Rva00130E80();
-};
-
-Rva00130E80::~Rva00130E80()
-{
-}
 
 class Rva00166DE0 : public RenderObjClass
 {
