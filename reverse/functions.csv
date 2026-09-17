@@ -8179,3 +8179,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva00F2ECB@@UAEPAXI@Z,,0x0009A21C,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0xF2ECB; flag plus pinned operator delete
 ??_GRva007C0F5@@UAEPAXI@Z,,0x0009A238,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x7C0F5; flag plus pinned operator delete
 ??_GRva0010EDC2@@UAEPAXI@Z,,0x000A7797,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x10EDC2; flag plus pinned operator delete
+??_GRva0073EE55@@UAEPAXI@Z,,0x000A87F3,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x73EE55; flag plus pinned operator delete
