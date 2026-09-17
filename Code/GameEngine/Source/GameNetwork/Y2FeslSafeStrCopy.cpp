@@ -182,3 +182,24 @@ void Rva00674A50Holder::set(const char *src)
 {
 	Rva00655700(m_text, 37, src);
 }
+
+struct Rva00657480Inner
+{
+	char m_pad[144];
+	char m_text[16];
+};
+
+class Rva00657480Holder
+{
+public:
+	void set(const char *src);
+
+private:
+	char m_pad[4];
+	Rva00657480Inner *m_inner;
+};
+
+void Rva00657480Holder::set(const char *src)
+{
+	Rva00655700(m_inner->m_text, 16, src);
+}
