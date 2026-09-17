@@ -104,3 +104,13 @@ public:
 Rva003402D0::~Rva003402D0()
 {
 }
+
+class Rva0034144B : public Rva004D759C
+{
+public:
+	virtual ~Rva0034144B();
+};
+
+Rva0034144B::~Rva0034144B()
+{
+}
