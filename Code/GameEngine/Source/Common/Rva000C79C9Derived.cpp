@@ -40,3 +40,19 @@ public:
 Rva000CA119::~Rva000CA119()
 {
 }
+
+class Rva000CAEC6_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva000CAEC6 : public Rva000C79C9, public MiBase1, public Rva000CAEC6_B2
+{
+public:
+	virtual ~Rva000CAEC6();
+};
+
+Rva000CAEC6::~Rva000CAEC6()
+{
+}
