@@ -8333,3 +8333,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0024E30E@GateProxyBehavior@@SA?AW4NameKeyType@@XZ,,0x0024E30E,69,Code/GameEngine/Source/GameLogic/Object/Behavior/GateProxyBehaviorPoolKey.cpp,matched,
 ?rva00250A4E@SpawnedModelConditionCreate@@SA?AW4NameKeyType@@XZ,,0x00250A4E,69,Code/GameEngine/Source/GameLogic/Object/SpawnedModelConditionCreatePoolKey.cpp,matched,
 ?rva00251C31@SpecialPowerTimerRefreshSpecialPower@@SA?AW4NameKeyType@@XZ,,0x00251C31,69,Code/GameEngine/Source/GameLogic/Object/Update/SpecialPowerTimerRefreshPoolKey.cpp,matched,
+?rva0033EE84@ProjectileStreamUpdate@@SA?AW4NameKeyType@@XZ,,0x0033EE84,69,Code/GameEngine/Source/GameLogic/Object/Update/ProjectileStreamUpdatePoolKey.cpp,matched,
