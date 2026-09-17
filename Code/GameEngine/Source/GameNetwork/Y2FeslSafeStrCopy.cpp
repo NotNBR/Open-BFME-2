@@ -224,3 +224,30 @@ void Rva00657470Holder::set(unsigned char value)
 {
 	m_inner->m_flag = value;
 }
+
+struct Rva006573B0Inner
+{
+	char m_padA0[0xA0];
+	char m_strA[0x41];
+	char m_padE1[0x20];
+	char m_strB[0x41];
+	char m_strC[0x41];
+};
+
+class Rva006573B0Holder
+{
+public:
+	void set(const char *a, const char *b, const char *c);
+
+private:
+	char m_pad[4];
+	Rva006573B0Inner *m_inner;
+};
+
+// ?set@Rva006573B0Holder@@QAEXPBD00@Z
+void Rva006573B0Holder::set(const char *a, const char *b, const char *c)
+{
+	Rva00655700(m_inner->m_strA, 0x41, a);
+	Rva00655700(m_inner->m_strB, 0x41, b ? b : "");
+	Rva00655700(m_inner->m_strC, 0x41, c ? c : "");
+}

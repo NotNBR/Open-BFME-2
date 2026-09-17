@@ -8277,3 +8277,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?closeDataChunk@DataChunkOutput@@QAEXXZ,,0x00306C88,119,Code/GameEngine/Source/GameLogic/ScriptEngine/ConditionWriteDataChunk.cpp,matched,ZH DataChunk.cpp port; bare ::delete tail with flag-0 dtor plus separate free
 ?setOpacity@Shadow@@QAEXH@Z,,0x003308F6,159,Code/GameEngine/Source/GameClient/Shadow_setOpacity.cpp,matched,BFME1 ShadowSetOpacity verbatim plus /O1 /Oy- for frame and 16-bit test encoding
 ?Rva00330E15@RadiusDecal@@QAEXABUCoord3D@@@Z,,0x00330E15,24,Code/GameEngine/Source/GameClient/RadiusDecal_rva330E15.cpp,matched,Opaque RadiusDecal Coord setter to shadow+0x14 via twin caller 0xB3198 with setPosition
+?set@Rva006573B0Holder@@QAEXPBD00@Z,,0x006573B0,99,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,FESL bulk string setter; first source assumed non-null and other two fall back to empty
