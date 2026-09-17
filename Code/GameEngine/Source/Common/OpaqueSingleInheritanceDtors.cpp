@@ -71,3 +71,19 @@ public:
 Rva00628FD::~Rva00628FD()
 {
 }
+
+class Rva002C5398
+{
+public:
+	virtual ~Rva002C5398();
+};
+
+class Rva008FCA3 : public Rva002C5398
+{
+public:
+	virtual ~Rva008FCA3();
+};
+
+Rva008FCA3::~Rva008FCA3()
+{
+}
