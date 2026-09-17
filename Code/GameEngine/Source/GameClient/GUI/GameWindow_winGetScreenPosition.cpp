@@ -1,0 +1,58 @@
+// cl: /O1 /DNDEBUG /MD
+// ?winGetScreenPosition@GameWindow@@QAEHPAH0@Z
+// retail 0x00313B3C, 51 bytes. Dedicated TU.
+//
+// Ported from Open-BFME-1
+// Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp (which matches
+// 58B there): walk the parent chain accumulating the region origin. The
+// retail loop falls through with eax holding the null parent (which equals
+// WIN_ERR_OK), so there is no explicit return-value setup.
+
+typedef int Int;
+typedef int WinErr;
+
+static const WinErr WIN_ERR_OK = 0;
+
+struct ICoord2D
+{
+	Int x;
+	Int y;
+};
+
+struct IRegion2D
+{
+	ICoord2D lo;
+	ICoord2D hi;
+};
+
+class GameWindow
+{
+public:
+	Int winGetScreenPosition(Int *x, Int *y);
+
+private:
+	unsigned char m_unreconstructed_000[0x14];
+	IRegion2D m_region;				// +0x14 (lo+hi, 0x10 bytes)
+	unsigned char m_unreconstructed_024[0x200 - 0x24];
+	GameWindow *m_parent;			// +0x200
+};
+
+// ?winGetScreenPosition@GameWindow@@QAEHPAH0@Z
+Int GameWindow::winGetScreenPosition(Int *x, Int *y)
+{
+	GameWindow *parent = m_parent;
+
+	*x = m_region.lo.x;
+	*y = m_region.lo.y;
+
+	while (parent) {
+		*x += parent->m_region.lo.x;
+		*y += parent->m_region.lo.y;
+		parent = parent->m_parent;
+	}
+
+	// Retail falls through with eax holding the null parent (which equals
+	// WIN_ERR_OK), so return it directly instead of materializing the
+	// constant (which would cost an xor).
+	return (Int)parent;
+}
