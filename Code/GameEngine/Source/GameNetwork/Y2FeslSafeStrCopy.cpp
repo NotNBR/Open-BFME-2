@@ -167,3 +167,18 @@ void Rva0066D7E0Holder::set(const char *src)
 {
 	Rva00655700(m_text, 128, src);
 }
+
+class Rva00674A50Holder
+{
+public:
+	void set(const char *src);
+
+private:
+	char m_pad[140];
+	char m_text[37];
+};
+
+void Rva00674A50Holder::set(const char *src)
+{
+	Rva00655700(m_text, 37, src);
+}
