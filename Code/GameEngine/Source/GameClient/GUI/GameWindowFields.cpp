@@ -24,6 +24,8 @@ struct WinInstanceData
 {
 	char m_pad[24];
 	WinDrawData m_enabledDrawData[9];
+	WinDrawData m_disabledDrawData[9];
+	WinDrawData m_hiliteDrawData[9];
 };
 
 class GameWindow
@@ -31,6 +33,7 @@ class GameWindow
 public:
 	int winSetEnabledImage(int index, const Image *image);
 	int winSetEnabledColor(int index, int color);
+	int winSetEnabledBorderColor(int index, int color);
 
 private:
 	char m_pad[48];
@@ -50,5 +53,13 @@ int GameWindow::winSetEnabledColor(int index, int color)
 	if (index < 0 || index >= 9)
 		return -3;
 	m_instData.m_enabledDrawData[index].color = color;
+	return 0;
+}
+
+int GameWindow::winSetEnabledBorderColor(int index, int color)
+{
+	if (index < 0 || index >= 9)
+		return -3;
+	m_instData.m_enabledDrawData[index].borderColor = color;
 	return 0;
 }
