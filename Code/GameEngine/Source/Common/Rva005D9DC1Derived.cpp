@@ -23,3 +23,13 @@ public:
 Rva005D99BD::~Rva005D99BD()
 {
 }
+
+class Rva005D9D5A : public Rva005D9DC1
+{
+public:
+	virtual ~Rva005D9D5A();
+};
+
+Rva005D9D5A::~Rva005D9D5A()
+{
+}
