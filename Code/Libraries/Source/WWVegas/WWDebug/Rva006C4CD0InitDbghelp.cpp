@@ -20,14 +20,18 @@ typedef void *HMODULE;
 
 extern "C" __declspec(dllimport) HMODULE __stdcall LoadLibraryA(const char *name);
 extern "C" __declspec(dllimport) void *__stdcall GetProcAddress(HMODULE module, const char *name);
+extern "C" __declspec(dllimport) void *__stdcall GetCurrentProcess(void);
+extern "C" __declspec(dllimport) int __stdcall FreeLibrary(HMODULE module);
 
 class Rva006C4CD0Helper
 {
 public:
 	void initDbghelp(void);
+	void uninitDbghelp(void);
 
 	HMODULE m_hLib;			// +0x00
-	int m_flag;			// +0x04 (read by the cleanup sibling)
+	unsigned char m_flag;		// +0x04 (byte-wide per retail mov al;
+					// the 0x6C4D80 sibling stores it by byte)
 	void *m_symInitialize;		// +0x08
 	void *m_symCleanup;		// +0x0C
 	void *m_stackWalk;		// +0x10
@@ -54,4 +58,18 @@ void Rva006C4CD0Helper::initDbghelp(void)
 	m_symGetModuleBase = GetProcAddress(m_hLib, "SymGetModuleBase");
 	m_symGetSymFromAddr = GetProcAddress(m_hLib, "SymGetSymFromAddr");
 	m_symGetLineFromAddr = GetProcAddress(m_hLib, "SymGetLineFromAddr");
+}
+
+// ?uninitDbghelp@Rva006C4CD0Helper@@QAEXXZ
+// retail 0x006C4D50, 43 bytes. Same TU: runs SymCleanup through the slot at
+// +0xC when the flag at +4 says the table initialized, then frees the library.
+void Rva006C4CD0Helper::uninitDbghelp(void)
+{
+	if (m_hLib == NULL) {
+		return;
+	}
+	if (m_flag && m_symCleanup != NULL) {
+		((int (__stdcall *)(void *))m_symCleanup)(GetCurrentProcess());
+	}
+	FreeLibrary(m_hLib);
 }
