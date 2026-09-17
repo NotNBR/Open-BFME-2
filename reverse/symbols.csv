@@ -1857,3 +1857,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??1Rva007C0F5@@UAE@XZ,0x007C0F5,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0x9A238; identity unproven, address-derived name
 ??1Rva0010EDC2@@UAE@XZ,0x0010EDC2,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0xA7797; identity unproven, address-derived name
 ??1Rva0073EE55@@UAE@XZ,0x0073EE55,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0xA87F3; identity unproven, address-derived name
+??1Rva00AADC1@@UAE@XZ,0x00AADC1,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0xAB080; identity unproven, address-derived name
