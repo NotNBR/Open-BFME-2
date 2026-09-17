@@ -1680,3 +1680,6 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ?Get_Char_Data@FontCharsClass@@AAEPBUFontCharsClassCharDataStruct@@G@Z,0x00158520,struct-spelled alias of Get_Char_Data for the loadCharacterData TU (whose own mangling uses struct not class); same body as the matched PBV row
 ?ensureCharPage@FontCharsClass@@AAEXG@Z,0x00155220,page-table filler called with (this char) by loadCharacterData 0x158580; address read from its REL32; true identity unproven (opaque)
 ?loadCharBitmap@FontCharsClass@@AAEPBUFontCharsClassCharDataStruct@@G@Z,0x00156A60,glyph rasterizer called with (this char) on table miss by loadCharacterData 0x158580; address read from its REL32; true identity unproven (opaque)
+??0Rva00252B68@@QAE@PAVThing@@PBVModuleData@@@Z,0x00252B68,opaque intermediate base ctor (26B frameless: calls 0x306B19 plus vtable 0xBEFE48); 6 module-ctor callers incl QueueProductionExitUpdate and BattlePlanUpdate; identity unproven
+?Rva00268902@@QAEXXZ,0x00268902,opaque pool-free helper (thiscall, calls 0x26549E then pushes object to free-list at 0xDA60F0); called by module dtor 0x4907D1-head; identity unproven
+?Rva0026549E@@QAEXXZ,0x0026549E,opaque lock-free pool helper (no calls, manipulates free-list at 0xDA60F0); called by 0x268902; identity unproven
