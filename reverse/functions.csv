@@ -8055,3 +8055,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva00483C35@@UAE@XZ,,0x00483C35,46,Code/GameEngine/Source/Common/Rva0045D39EDerived.cpp,matched,
 ??1Rva00481805@@UAE@XZ,,0x00481805,7,Code/GameEngine/Source/Common/Rva00481805Dtor.cpp,matched,
 ?selectMatchingAcrossMap@InGameUI@@UAEHXZ,,0x0029CFC8,285,Code/GameEngine/Source/GameClient/InGameUI_selectMatchingAcrossMap.cpp,matched,BFME1 rva00448700 shape with BFME2 outlined guard and NULL region and inlined structure bit test at template plus 0x108
+?Get_DX8_Texture_Stage_State_Value_Name@DX8Wrapper@@SAXAAVStringClass@@W4D3DTEXTURESTAGESTATETYPE@@I@Z,,0x00120B90,266,Code/Libraries/Source/WWVegas/WW3D2/DX8WrapperGetTextureStageStateValueName.cpp,matched,
