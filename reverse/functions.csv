@@ -7931,3 +7931,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1SpawnPointProductionExitUpdate@@UAE@XZ,,0x004CCDB6,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque-base dtor pattern; vtab plus consts plus tail-jmp base pin
 ??_GSpawnPointProductionExitUpdate@@UAEPAXI@Z,,0x004CCE30,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor; flag plus free via pinned delete
 ??1SupplyCenterDockUpdate@@UAE@XZ,,0x004CDC33,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque-base dtor pattern; vtab plus consts plus tail-jmp base pin
+??_GSupplyCenterDockUpdate@@UAEPAXI@Z,,0x004CDC98,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor; flag plus free via pinned delete
