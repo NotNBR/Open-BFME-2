@@ -8186,3 +8186,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?_M_rva00625476@BfmeDfe6e4@@QAEXXZ,,0x00225476,28,Code/GameEngine/Source/Main/BfmeDfe6e4_M_rva00625476.cpp,matched,BfmeDfe6e4 guarded-counter inc; base-opts plus G7 for add-mem
 ?rva00225492@BfmeDfe6e4@@QAEXXZ,,0x00225492,56,Code/GameEngine/Source/Main/BfmeDfe6e4_rva00225492.cpp,matched,BfmeDfe6e4 timestamp refresh; GetCurrentThreadId gate plus time under lock
 ??1Rva00514E6B@@UAE@XZ,,0x00514E6B,11,Code/GameEngine/Source/Common/OpaqueSingleInheritanceDtors.cpp,matched,opaque single-inheritance dtor (vptr 0xBC93A0 + tail-jmp pinned base 0x40EDB); ??_G already live at 0xA883A
+??1Rva004CA13@@UAE@XZ,,0x0004CA13,11,Code/GameEngine/Source/Common/OpaqueSingleInheritanceDtors.cpp,matched,opaque single-inheritance dtor (vptr 0xBC4858 + tail-jmp pinned SEH base 0x2D0588); upgrades dtor pin to row; ??_G already live at 0x4CA1E
