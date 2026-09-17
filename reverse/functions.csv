@@ -7897,3 +7897,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva0054F508@@UAE@XZ,,0x0054F508,11,Code/GameEngine/Source/Common/Rva0044D56ADerived.cpp,matched,opaque derived dtor; tail-jmp opaque SEH base pin 0x44D56A
 ??1Rva004E3D2A@@UAE@XZ,,0x004E3D2A,11,Code/GameEngine/Source/Common/Rva004E3CD0Derived.cpp,matched,opaque derived dtor; tail-jmp opaque SEH base pin 0x4E3CD0
 ??1Rva004E3D47@@UAE@XZ,,0x004E3D47,11,Code/GameEngine/Source/Common/Rva004E3CD0Derived.cpp,matched,opaque derived dtor; tail-jmp opaque SEH base pin 0x4E3CD0
+??$make_pair@VAsciiString@@PBVFXList@@@_STL@@YA?AU?$pair@VAsciiString@@PBVFXList@@@0@ABVAsciiString@@ABQBVFXList@@@Z,,0x0032ACCF,27,Code/GameEngine/Source/Common/Thing/ThingTemplate.cpp,matched,gen-alias;object-symbol=??$make_pair@VAsciiString@@PBVFXList@@@_STL@@YA?AU?$pair@VAsciiString@@PBVFXList@@@0@ABVAsciiString@@ABQBVFXList@@@Z;C++ alias
