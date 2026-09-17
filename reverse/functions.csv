@@ -7730,3 +7730,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva006FBA10@@UAE@XZ,,0x006FBA10,11,Code/GameEngine/Source/Common/Rva006DE350Derived.cpp,matched,opaque derived dtor
 ??1Rva005EE2A0@@UAE@XZ,,0x005EE2A0,11,Code/GameEngine/Source/Common/Rva005EE30CChain.cpp,matched,opaque dtor tail-jmp opaque base pin
 ??1Rva005EEDAA@@UAE@XZ,,0x005EEDAA,11,Code/GameEngine/Source/Common/Rva005EE30CChain.cpp,matched,opaque dtor tail-jmp opaque base pin
+??1SortingNodeStruct@@QAE@XZ,,0x0012FCA0,213,Code/Libraries/Source/WWVegas/WW3D2/SortingNodeStructDtor.cpp,matched,BFME1 sortingrenderer.cpp port with 16 texture stages (retail ehvec count 0x10); 104-byte D3DLIGHT8 proven by flush rep-movsd 0x1A; TU-local replicas mangle identically so Remove resolves to 0x12DC00 and the texture element dtor to matched 0x17098D
