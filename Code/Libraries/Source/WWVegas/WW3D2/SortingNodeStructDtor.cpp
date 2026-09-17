@@ -164,6 +164,11 @@ struct SortingRenderStateStruct
 class SortingNodeStruct : public DLNodeClass<SortingNodeStruct>
 {
 public:
+	// ??0SortingNodeStruct@@QAE@XZ, retail 0x0012E840 (114B). An empty body:
+	// the base zeroing, the 16-way Textures construction, the shader-bits
+	// store and the material/vertex/index nulling are all implicit member
+	// initialization in declaration order.
+	SortingNodeStruct();
 	SortingRenderStateStruct sorting_state;
 
 	// Retail node extent is 0x2A8 (Get_Sorting_Struct news 0x2A8): 0xC list
@@ -175,6 +180,11 @@ public:
 	unsigned short min_vertex_index;
 	unsigned short vertex_count;
 };
+
+// ??0SortingNodeStruct@@QAE@XZ
+SortingNodeStruct::SortingNodeStruct()
+{
+}
 
 // Anchor: emits the implicit ??1SortingNodeStruct COMDAT this TU exists to place.
 void destroySortingNode(SortingNodeStruct *node)
