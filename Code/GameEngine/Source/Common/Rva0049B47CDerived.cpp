@@ -14,6 +14,9 @@ class Rva0049B47C
 {
 public:
 	virtual ~Rva0049B47C();
+
+private:
+	char m_pad04[8];
 };
 
 class Rva000CEB6F : public Rva0049B47C
@@ -53,5 +56,21 @@ public:
 };
 
 Rva00362EE3::~Rva00362EE3()
+{
+}
+
+class MiBase1
+{
+public:
+	virtual void f1();
+};
+
+class Rva004607E1 : public Rva0049B47C, public MiBase1
+{
+public:
+	virtual ~Rva004607E1();
+};
+
+Rva004607E1::~Rva004607E1()
 {
 }
