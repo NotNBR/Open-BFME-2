@@ -158,3 +158,42 @@ Rva004B0164::~Rva004B0164()
 	m_p20 = &s_dummy20;
 	m_tail88 = &s_dummy62C8;
 }
+
+class Rva004B29BE : public Rva0044EF5E
+{
+public:
+	virtual ~Rva004B29BE();
+};
+
+Rva004B29BE::~Rva004B29BE()
+{
+	m_p0C = &s_dummy0C;
+	m_p10 = &s_dummy10;
+	m_p20 = &s_dummy20;
+}
+
+class Rva004CC9BF : public Rva0044EF5E
+{
+public:
+	virtual ~Rva004CC9BF();
+};
+
+Rva004CC9BF::~Rva004CC9BF()
+{
+	m_p0C = &s_dummy0C;
+	m_p10 = &s_dummy10;
+	m_p20 = &s_dummy20;
+}
+
+class Rva004CDD39 : public Rva0044EF5E
+{
+public:
+	virtual ~Rva004CDD39();
+};
+
+Rva004CDD39::~Rva004CDD39()
+{
+	m_p0C = &s_dummy0C;
+	m_p10 = &s_dummy10;
+	m_p20 = &s_dummy20;
+}
