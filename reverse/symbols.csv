@@ -1657,3 +1657,6 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva0044D56A@@UAE@XZ,0x0044D56A,opaque SEH base dtor (vptr 0xC3EF60, AsciiString member at +0x18 via 0x36410, base 0x3B1F65); 2 derived 11B dtors tail-call it; identity unproven
 ??1Rva004E3CD0@@UAE@XZ,0x004E3CD0,opaque SEH base dtor; 2 derived 11B dtors tail-call it; identity unproven
 ??1Rva0054D2CF@@UAE@XZ,0x0054D2CF,opaque this-adjust middle dtor (vptr store, this+4, tail-jump); 2 derived 18B dtors tail-call it; identity unproven
+?CRC_String@@YAKPBD@Z,0x003EC922,copy-#1 1-arg CRC_String; 12 single-push call sites; shape plus family evidence; partial banked 0.9
+?CRC_Stringi@@YAKPAD@Z,0x003EC953,copy-#1 1-arg CRC_Stringi with inline toupper; called by in-family wrapper 0x3ECA44; partial banked 0.95
+??0Rva0044EF5E@@QAE@PAVThing@@PBVModuleData@@@Z,0x0044EF5E,opaque UpdateModule-derived intermediate base ctor (243B body: UpdateModule base call plus vtable 0xC3FBA8 plus members to +0x84); 28 module-ctor callers; identity unproven
