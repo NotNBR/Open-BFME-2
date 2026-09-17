@@ -1618,3 +1618,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ?winGetScreenPosition@GameWindow@@QAEHPAH0@Z,0x00313B3C,BFME1 same-name matched 58B; screenPixelToWorld +0x2a direct call target; ghidra 51B
 ?localPixelToRadar@Radar@@QAE_NPBUICoord2D@@PAU2@@Z,0x002D81EC,BFME1 same-name matched 327B; screenPixelToWorld +0x4a direct call target in Radar cluster; ghidra 248B
 ?radarToWorld@Radar@@QAE_NPBUICoord2D@@PAUCoord3D@@@Z,0x002D7744,BFME1 same-name matched 152B; screenPixelToWorld +0x5c tail-call target in Radar cluster; ghidra 133B
+??$__copy_ptrs@PAW4ParticleSystemID@@PAW41@@_STL@@YAPAW4ParticleSystemID@@PAW41@00ABU__false_type@0@@Z,0x0025BF40,ICF fold with matched ScienceType copy_ptrs row 5393 at same address; both are 4B-pointer memmoves; erase +0x14 direct call target
