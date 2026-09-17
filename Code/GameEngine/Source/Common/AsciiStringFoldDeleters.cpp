@@ -81,3 +81,16 @@ private:
 Rva004FA830::~Rva004FA830()
 {
 }
+
+class Rva00538C5F
+{
+public:
+	virtual ~Rva00538C5F();
+
+private:
+	AsciiStringMember m_member04;
+};
+
+Rva00538C5F::~Rva00538C5F()
+{
+}
