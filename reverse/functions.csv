@@ -8249,3 +8249,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?setRva003144FD@GameWindow@@QAEXH@Z,,0x003144FD,13,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
 ?getRva0031450A@GameWindow@@QAEHXZ,,0x0031450A,7,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
 ??1Rva004C1BAB@@UAE@XZ,,0x004C1BAB,35,Code/GameEngine/Source/Common/Rva004BF951Derived.cpp,matched,opaque 4-vptr MI dtor (+0/+0xC/+0x10/+0x100 + tail-jmp pinned base 0x4BF951); +0x100 proven by trailing store
+??_GRva004C1BAB@@UAEPAXI@Z,,0x004C1CEF,28,Code/GameEngine/Source/Common/Rva004BF951Derived.cpp,matched,emitted scalar deleting dtor from the dtor home TU; dtor row at 0x4C1BAB; flag plus pinned operator delete
