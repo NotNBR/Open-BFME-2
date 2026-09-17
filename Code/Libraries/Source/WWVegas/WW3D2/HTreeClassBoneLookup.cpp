@@ -46,6 +46,20 @@ private:
 	PivotClass *Pivot;					// +0x14
 };
 
+int HTreeClass::Get_Bone_Index(const char * name) const
+{
+	int i = 0;
+	if (NumPivots > i) {
+		do {
+			if (_strcmpi(Pivot[i].Name, name) == 0) {
+				return i;
+			}
+			++i;
+		} while (i < NumPivots);
+	}
+	return 0;
+}
+
 const char * HTreeClass::Get_Bone_Name(int boneidx) const
 {
 	assert(boneidx >= 0);
