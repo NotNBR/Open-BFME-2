@@ -57,6 +57,74 @@
 #define D3DMCS_MATERIAL 0
 #define D3DPATCHEDGE_CONTINUOUS 1
 #define D3DPATCHEDGE_DISCRETE 0
+#define D3DRS_ALPHAFUNC 25
+#define D3DRS_ALPHABLENDENABLE 27
+#define D3DRS_ALPHAREF 24
+#define D3DRS_ALPHATESTENABLE 15
+#define D3DRS_AMBIENT 139
+#define D3DRS_AMBIENTMATERIALSOURCE 147
+#define D3DRS_BLENDOP 171
+#define D3DRS_CLIPPLANEENABLE 152
+#define D3DRS_CLIPPING 136
+#define D3DRS_COLORVERTEX 141
+#define D3DRS_COLORWRITEENABLE 168
+#define D3DRS_CULLMODE 22
+#define D3DRS_DEBUGMONITORTOKEN 165
+#define D3DRS_DESTBLEND 20
+#define D3DRS_DIFFUSEMATERIALSOURCE 145
+#define D3DRS_DITHERENABLE 26
+#define D3DRS_EMISSIVEMATERIALSOURCE 148
+#define D3DRS_FILLMODE 8
+#define D3DRS_FOGCOLOR 34
+#define D3DRS_FOGDENSITY 38
+#define D3DRS_FOGENABLE 28
+#define D3DRS_FOGEND 37
+#define D3DRS_FOGSTART 36
+#define D3DRS_FOGTABLEMODE 35
+#define D3DRS_FOGVERTEXMODE 140
+#define D3DRS_INDEXEDVERTEXBLENDENABLE 167
+#define D3DRS_LASTPIXEL 16
+#define D3DRS_LIGHTING 137
+#define D3DRS_LOCALVIEWER 142
+#define D3DRS_MULTISAMPLEANTIALIAS 161
+#define D3DRS_MULTISAMPLEMASK 162
+#define D3DRS_NORMALIZENORMALS 143
+#define D3DRS_PATCHEDGESTYLE 163
+#define D3DRS_POINTSCALE_A 158
+#define D3DRS_POINTSCALE_B 159
+#define D3DRS_POINTSCALE_C 160
+#define D3DRS_POINTSCALEENABLE 157
+#define D3DRS_POINTSIZE 154
+#define D3DRS_POINTSIZE_MAX 166
+#define D3DRS_POINTSIZE_MIN 155
+#define D3DRS_POINTSPRITEENABLE 156
+#define D3DRS_RANGEFOGENABLE 48
+#define D3DRS_SHADEMODE 9
+#define D3DRS_SPECULARENABLE 29
+#define D3DRS_SPECULARMATERIALSOURCE 146
+#define D3DRS_SRCBLEND 19
+#define D3DRS_STENCILENABLE 52
+#define D3DRS_STENCILFAIL 53
+#define D3DRS_STENCILFUNC 56
+#define D3DRS_STENCILMASK 58
+#define D3DRS_STENCILPASS 55
+#define D3DRS_STENCILREF 57
+#define D3DRS_STENCILWRITEMASK 59
+#define D3DRS_STENCILZFAIL 54
+#define D3DRS_TEXTUREFACTOR 60
+#define D3DRS_TWEENFACTOR 170
+#define D3DRS_VERTEXBLEND 151
+#define D3DRS_WRAP0 128
+#define D3DRS_WRAP1 129
+#define D3DRS_WRAP2 130
+#define D3DRS_WRAP3 131
+#define D3DRS_WRAP4 132
+#define D3DRS_WRAP5 133
+#define D3DRS_WRAP6 134
+#define D3DRS_WRAP7 135
+#define D3DRS_ZENABLE 7
+#define D3DRS_ZFUNC 23
+#define D3DRS_ZWRITEENABLE 14
 #define D3DSHADE_FLAT 1
 #define D3DSHADE_GOURAUD 2
 #define D3DSHADE_PHONG 3
@@ -145,6 +213,11 @@
 #define D3DZB_TRUE 1
 #define D3DZB_USEW 2
 
+// BFME's headers type render states as unsigned long (KI mangling on the
+// landed Value_Name rows); the 195 arm below keeps BFME1's honest
+// (D3DRENDERSTATETYPE)195 DEPTHBIAS spelling through this alias.
+typedef unsigned long D3DRENDERSTATETYPE;
+
 class DX8Wrapper
 {
 public:
@@ -157,6 +230,7 @@ public:
     static const char *Get_DX8_Fog_Mode_Name(unsigned value);
     static const char *Get_DX8_Material_Source_Name(unsigned value);
     static const char *Get_DX8_Patch_Edge_Style_Name(unsigned value);
+    static const char *Get_DX8_Render_State_Name(unsigned long state);
     static const char *Get_DX8_Shade_Mode_Name(unsigned value);
     static const char *Get_DX8_Stencil_Op_Name(unsigned value);
     static const char *Get_DX8_Texture_Address_Name(unsigned value);
@@ -429,5 +503,82 @@ const char* DX8Wrapper::Get_DX8_Texture_Stage_State_Name(unsigned long state)
 	case D3DTSS_ALPHAARG0                 : return "D3DTSS_ALPHAARG0";
 	case D3DTSS_RESULTARG                 : return "D3DTSS_RESULTARG";
 	default										  : return "UNKNOWN";
+	}
+}
+
+const char* DX8Wrapper::Get_DX8_Render_State_Name(unsigned long state)
+{
+	switch (state) {
+	case D3DRS_ZENABLE                       : return "D3DRS_ZENABLE";
+	case D3DRS_FILLMODE                      : return "D3DRS_FILLMODE";
+	case D3DRS_SHADEMODE                     : return "D3DRS_SHADEMODE";
+	case D3DRS_ZWRITEENABLE                  : return "D3DRS_ZWRITEENABLE";
+	case D3DRS_ALPHATESTENABLE               : return "D3DRS_ALPHATESTENABLE";
+	case D3DRS_LASTPIXEL                     : return "D3DRS_LASTPIXEL";
+	case D3DRS_SRCBLEND                      : return "D3DRS_SRCBLEND";
+	case D3DRS_DESTBLEND                     : return "D3DRS_DESTBLEND";
+	case D3DRS_CULLMODE                      : return "D3DRS_CULLMODE";
+	case D3DRS_ZFUNC                         : return "D3DRS_ZFUNC";
+	case D3DRS_ALPHAREF                      : return "D3DRS_ALPHAREF";
+	case D3DRS_ALPHAFUNC                     : return "D3DRS_ALPHAFUNC";
+	case D3DRS_DITHERENABLE                  : return "D3DRS_DITHERENABLE";
+	case D3DRS_ALPHABLENDENABLE              : return "D3DRS_ALPHABLENDENABLE";
+	case D3DRS_FOGENABLE                     : return "D3DRS_FOGENABLE";
+	case D3DRS_SPECULARENABLE                : return "D3DRS_SPECULARENABLE";
+	case D3DRS_FOGCOLOR                      : return "D3DRS_FOGCOLOR";
+	case D3DRS_FOGTABLEMODE                  : return "D3DRS_FOGTABLEMODE";
+	case D3DRS_FOGSTART                      : return "D3DRS_FOGSTART";
+	case D3DRS_FOGEND                        : return "D3DRS_FOGEND";
+	case D3DRS_FOGDENSITY                   : return "D3DRS_FOGDENSITY";
+	// BFME's Direct3D 9 headers call this state D3DRS_DEPTHBIAS (195).
+	case (D3DRENDERSTATETYPE)195             : return "D3DRS_DEPTHBIAS";
+	case D3DRS_RANGEFOGENABLE                : return "D3DRS_RANGEFOGENABLE";
+	case D3DRS_STENCILENABLE                 : return "D3DRS_STENCILENABLE";
+	case D3DRS_STENCILFAIL                   : return "D3DRS_STENCILFAIL";
+	case D3DRS_STENCILZFAIL                  : return "D3DRS_STENCILZFAIL";
+	case D3DRS_STENCILPASS                   : return "D3DRS_STENCILPASS";
+	case D3DRS_STENCILFUNC                   : return "D3DRS_STENCILFUNC";
+	case D3DRS_STENCILREF                    : return "D3DRS_STENCILREF";
+	case D3DRS_STENCILMASK                   : return "D3DRS_STENCILMASK";
+	case D3DRS_STENCILWRITEMASK              : return "D3DRS_STENCILWRITEMASK";
+	case D3DRS_TEXTUREFACTOR                 : return "D3DRS_TEXTUREFACTOR";
+	case D3DRS_WRAP0                         : return "D3DRS_WRAP0";
+	case D3DRS_WRAP1                         : return "D3DRS_WRAP1";
+	case D3DRS_WRAP2                         : return "D3DRS_WRAP2";
+	case D3DRS_WRAP3                         : return "D3DRS_WRAP3";
+	case D3DRS_WRAP4                         : return "D3DRS_WRAP4";
+	case D3DRS_WRAP5                         : return "D3DRS_WRAP5";
+	case D3DRS_WRAP6                         : return "D3DRS_WRAP6";
+	case D3DRS_WRAP7                         : return "D3DRS_WRAP7";
+	case D3DRS_CLIPPING                      : return "D3DRS_CLIPPING";
+	case D3DRS_LIGHTING                      : return "D3DRS_LIGHTING";
+	case D3DRS_AMBIENT                       : return "D3DRS_AMBIENT";
+	case D3DRS_FOGVERTEXMODE                 : return "D3DRS_FOGVERTEXMODE";
+	case D3DRS_COLORVERTEX                   : return "D3DRS_COLORVERTEX";
+	case D3DRS_LOCALVIEWER                   : return "D3DRS_LOCALVIEWER";
+	case D3DRS_NORMALIZENORMALS              : return "D3DRS_NORMALIZENORMALS";
+	case D3DRS_DIFFUSEMATERIALSOURCE         : return "D3DRS_DIFFUSEMATERIALSOURCE";
+	case D3DRS_SPECULARMATERIALSOURCE        : return "D3DRS_SPECULARMATERIALSOURCE";
+	case D3DRS_AMBIENTMATERIALSOURCE         : return "D3DRS_AMBIENTMATERIALSOURCE";
+	case D3DRS_EMISSIVEMATERIALSOURCE        : return "D3DRS_EMISSIVEMATERIALSOURCE";
+	case D3DRS_VERTEXBLEND                   : return "D3DRS_VERTEXBLEND";
+	case D3DRS_CLIPPLANEENABLE               : return "D3DRS_CLIPPLANEENABLE";
+	case D3DRS_POINTSIZE                     : return "D3DRS_POINTSIZE";
+	case D3DRS_POINTSIZE_MIN                 : return "D3DRS_POINTSIZE_MIN";
+	case D3DRS_POINTSPRITEENABLE             : return "D3DRS_POINTSPRITEENABLE";
+	case D3DRS_POINTSCALEENABLE              : return "D3DRS_POINTSCALEENABLE";
+	case D3DRS_POINTSCALE_A                  : return "D3DRS_POINTSCALE_A";
+	case D3DRS_POINTSCALE_B                  : return "D3DRS_POINTSCALE_B";
+	case D3DRS_POINTSCALE_C                  : return "D3DRS_POINTSCALE_C";
+	case D3DRS_MULTISAMPLEANTIALIAS          : return "D3DRS_MULTISAMPLEANTIALIAS";
+	case D3DRS_MULTISAMPLEMASK               : return "D3DRS_MULTISAMPLEMASK";
+	case D3DRS_PATCHEDGESTYLE                : return "D3DRS_PATCHEDGESTYLE";
+	case D3DRS_DEBUGMONITORTOKEN             : return "D3DRS_DEBUGMONITORTOKEN";
+	case D3DRS_POINTSIZE_MAX                 : return "D3DRS_POINTSIZE_MAX";
+	case D3DRS_INDEXEDVERTEXBLENDENABLE      : return "D3DRS_INDEXEDVERTEXBLENDENABLE";
+	case D3DRS_COLORWRITEENABLE              : return "D3DRS_COLORWRITEENABLE";
+	case D3DRS_TWEENFACTOR                   : return "D3DRS_TWEENFACTOR";
+	case D3DRS_BLENDOP                       : return "D3DRS_BLENDOP";
+	default											  : return "UNKNOWN";
 	}
 }
