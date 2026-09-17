@@ -1,4 +1,4 @@
-// cl: /O1 /DNDEBUG /MD
+// cl: /O2 /DNDEBUG /MD
 
 // BfmeMsg::~BfmeMsg at 0x00655780 (7B). The FESL message base (vtable
 // 0xCE0BC4) proven by the landed BfmeMsgVJH ctor row. The 7B direct vptr
@@ -20,4 +20,14 @@ public:
 
 BfmeMsg::~BfmeMsg()
 {
+}
+
+// ??_GBfmeMsg@@UAEPAXI@Z, retail 0x00655880 (29B), is emitted by the
+// delete below. The trivial dtor inlines to nothing, leaving the vptr
+// reinstall plus conditional operator delete (no dtor call, like retail).
+
+// Anchor: emits the ??_G scalar-deleting-destructor COMDAT.
+void deleteBfmeMsg(BfmeMsg *p)
+{
+    delete p;
 }
