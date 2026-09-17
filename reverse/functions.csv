@@ -7565,3 +7565,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva0041FE0E@@UAE@XZ,,0x0041FE0E,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
 ??1Rva0044954D@@UAE@XZ,,0x0044954D,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
 ??1Rva006892F0@@UAE@XZ,,0x006892F0,11,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,opaque derived dtor tail-jmp GameEngineDeletingBase
+??1?$VectorClass@H@@UAE@XZ,,0x000023E3,11,Code/Libraries/Source/WWVegas/WWLib/vector_class_resize.cpp,matched,explicit int instantiation already emits vptr plus devirtualized Clear tail-jmp
