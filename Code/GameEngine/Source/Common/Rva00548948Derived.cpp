@@ -33,3 +33,13 @@ public:
 Rva00546CAD::~Rva00546CAD()
 {
 }
+
+class Rva00546F61 : public Rva00548948
+{
+public:
+	virtual ~Rva00546F61();
+};
+
+Rva00546F61::~Rva00546F61()
+{
+}
