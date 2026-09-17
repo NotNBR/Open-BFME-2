@@ -7973,3 +7973,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0PrisonDockUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CC6AF,95,Code/GameEngine/Source/GameLogic/Object/Update/PrisonDockUpdateCtor.cpp,matched,UpdateModule-direct base via row plus setWakeFrame pin; zero-reg trailing; factory stub order
 ??0BaikonurLaunchPower@@QAE@XZ,,0x004CAEE6,28,Code/GameEngine/Source/GameLogic/Object/Update/BaikonurLaunchPowerCtor.cpp,matched,root plus vector pattern; factory stub order
 ??0BattlePlanUpdate@@QAE@XZ,,0x004CB9F3,28,Code/GameEngine/Source/GameLogic/Object/Update/BattlePlanUpdateCtor.cpp,matched,root plus vector pattern; factory stub order
+??0CleanupHazardUpdate@@QAE@XZ,,0x004C964C,23,Code/GameEngine/Source/GameLogic/Object/Update/CleanupHazardUpdateCtor.cpp,matched,root default ctor; vtable plus two ints; factory stub order
