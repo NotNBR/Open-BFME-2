@@ -1913,3 +1913,5 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??0GenericObjectCreationNugget@@QAE@XZ,0x001F0E32,SEH ctor installing vtable 0xBE1160 called by parseObject new at 0x1F311B; BFME1-attested QAE mangling
 ??1GenericObjectCreationNugget@@MAE@XZ,0x001F31C6,parseObject new-unwind funclet target with vptr reinstall plus member teardown; BFME1-attested protected MAE mangling
 ??0Rva0042526Member@@QAE@XZ,0x00042526,opaque 76B bulk-zero member ctor (memset 0x4C via 0x291AE) at nugget +0xB4; called by GenericObjectCreationNugget ctor; identity unproven
+??1RvaVecAscii@@QAE@XZ,0x0002CC70,opaque 12B vector-member dtor (range-destroy via AsciiString _Destroy 0x2CB64); serves GenericObjectCreationNugget members +0x04/+0x114/+0x120; true element type unproven (AsciiString per destroyee)
+??1RvaVecAnimSet@@QAE@XZ,0x001F0D04,opaque 12B vector-member dtor (range-destroy via AnimSet _Destroy 0x1F0801); serves GenericObjectCreationNugget member +0x14; true element type unproven (AnimSet per destroyee)
