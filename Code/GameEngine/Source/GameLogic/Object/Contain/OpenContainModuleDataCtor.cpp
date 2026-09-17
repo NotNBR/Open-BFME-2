@@ -14,7 +14,7 @@
 class Rva001EAE6FHelper
 {
 public:
-	void clear80();
+	Rva001EAE6FHelper *clear80();
 
 private:
 	char m_pad[0x80];

@@ -1621,4 +1621,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??$__copy_ptrs@PAW4ParticleSystemID@@PAW41@@_STL@@YAPAW4ParticleSystemID@@PAW41@00ABU__false_type@0@@Z,0x0025BF40,ICF fold with matched ScienceType copy_ptrs row 5393 at same address; both are 4B-pointer memmoves; erase +0x14 direct call target
 ?winGetSize@GameWindow@@QAEHPAH0@Z,0x00313BC6,BFME1 GameWindow winGetSize non-virtual; localPixelToRadar +0x30 direct call target; GameWindow cluster near winGetScreenPosition 0x313B3C; ghidra 38B
 ?findDrawPositions@Radar@@QAEXHHHHPAUICoord2D@@0@Z,0x002D799C,BFME1 Radar findDrawPositions member; localPixelToRadar +0x49 direct call target in Radar cluster; ghidra 266B
-?clear80@Rva001EAE6FHelper@@QAEXXZ,0x001EAE6F,Shared 0x80-byte memset helper (memset this 0 0x80 via 0x6291AE; returns this); 48 paired callers; construct +0x4/+0xf direct call targets
+?clear80@Rva001EAE6FHelper@@QAEPAV1@XZ,0x001EAE6F,Shared 0x80-byte memset helper (memset this 0 0x80 via 0x6291AE; returns this); 48 paired callers; construct +0x4/+0xf direct call targets
