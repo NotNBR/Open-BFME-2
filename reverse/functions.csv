@@ -7872,3 +7872,7 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva00660BE0@@UAE@XZ,,0x00660BE0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
 ??1Rva006672E0@@UAE@XZ,,0x006672E0,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
 ??1Rva00668120@@UAE@XZ,,0x00668120,11,Code/Libraries/Source/DirtySock/BfmeDirtyBaseDerived.cpp,matched,opaque BfmeDirtyBase-derived dtor; tail-jmp matched base 0x658650
+??1Rva005D9A1E@@UAE@XZ,,0x005D9A1E,11,Code/GameEngine/Source/Common/Rva005EEE33Derived.cpp,matched,opaque chain dtor; tail-jmp opaque base 0x5EEE33
+??1Rva005D9F70@@UAE@XZ,,0x005D9F70,11,Code/GameEngine/Source/Common/Rva005EEE33Derived.cpp,matched,opaque chain dtor; tail-jmp opaque base 0x5EEE33
+??1Rva0045EA3F@@UAE@XZ,,0x0045EA3F,39,Code/GameEngine/Source/Common/Rva0045D39EDerived.cpp,matched,opaque 4th-level dtor; 5 vptrs; tail-jmp opaque base 0x45D39E
+??1Rva00461EEB@@UAE@XZ,,0x00461EEB,39,Code/GameEngine/Source/Common/Rva0045D39EDerived.cpp,matched,opaque 4th-level dtor; 5 vptrs; tail-jmp opaque base 0x45D39E
