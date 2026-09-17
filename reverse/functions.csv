@@ -7801,3 +7801,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva000658BA@@UAE@XZ,,0x000658BA,11,Code/Libraries/Source/WWVegas/WWLib/MultiListObjectDerivedDtors.cpp,matched,opaque MultiList-derived dtor; vptr 0xBC5C74; tail-jmp matched MultiListObjectClass dtor 0x6109C0
 ??1Rva0006EE6F@@UAE@XZ,,0x0006EE6F,11,Code/Libraries/Source/WWVegas/WW3D2/SimpleSceneDerivedDtors.cpp,matched,opaque SimpleScene-derived dtor; vptr 0xBC6310; tail-jmp matched SimpleSceneClass dtor 0x141DF0
 ??1Rva000647D4@@UAE@XZ,,0x000647D4,18,Code/GameEngine/Source/GameLogic/Object/LocomotorDerivedDtors.cpp,matched,opaque Locomotor-derived MI dtor; vptrs 0xBC5A5C/0xBC5A24 at +0/+4; tail-jmp matched Locomotor dtor 0x3067D2 (protected MAE base)
+??1Rva004BC83F@@UAE@XZ,,0x004BC83F,25,Code/GameEngine/Source/Common/Rva004BC4FCDerived.cpp,matched,opaque MI-grandchild dtor; vptrs 0xC5A868/+0xC shared 0xC5A040/+0x10 0xC5A600; tail-jmp opaque base 0x4BC4FC
