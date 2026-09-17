@@ -8025,3 +8025,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Begin_Scene_Inner@DX8Wrapper@@SAXXZ,,0x0011D2B0,31,Code/Libraries/Source/WWVegas/WW3D2/DX8WrapperBeginSceneInner.cpp,matched,DX8 BeginScene enter helper; G7 emits add-mem over inc for the call counter
 ?Get_Render_Target_Resolution@DX8Wrapper@@CAXAAH00AA_N@Z,,0x00121860,195,Code/Libraries/Source/WWVegas/WW3D2/WW3D_Get_Render_Target_Resolution.cpp,matched,BFME1 WW3D unit ported to the DX8Wrapper body behind the 0x116FF0 thunk; /G7 TU
 ??1ModuleTagString@@QAE@XZ,,0x006CE7F0,97,Code/GameEngine/Source/Common/Thing/ModuleTagStringDtor.cpp,matched,conditional cdecl cleanup plus ehvec of 2x4B array; 2 opaque pins same batch
+?getPristineBonePositions@Drawable@@QBEHPBDHPAUCoord3D@@PAVMatrix3D@@HH@Z,,0x0027274D,123,Code/GameEngine/Source/GameClient/Drawable_getPristineBonePositions.cpp,matched,BFME1 seven-arg form with B2 offsets and slots; G7 schedules count-to-ebx
