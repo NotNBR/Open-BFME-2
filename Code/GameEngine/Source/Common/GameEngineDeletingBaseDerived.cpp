@@ -122,3 +122,13 @@ public:
 Rva0041B8C7::~Rva0041B8C7()
 {
 }
+
+class Rva0041FE0E : public GameEngineDeletingBase
+{
+public:
+	virtual ~Rva0041FE0E();
+};
+
+Rva0041FE0E::~Rva0041FE0E()
+{
+}
