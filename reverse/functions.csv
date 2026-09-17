@@ -7889,3 +7889,7 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva004A11D4@@UAE@XZ,,0x004A11D4,32,Code/GameEngine/Source/Common/Rva0058A0F4Derived.cpp,matched,opaque MI-derived dtor; 4 vptrs; tail-jmp opaque SEH base pin 0x58A0F4
 ??1Rva004A7D55@@UAE@XZ,,0x004A7D55,32,Code/GameEngine/Source/Common/Rva0058A0F4Derived.cpp,matched,opaque MI-derived dtor; 4 vptrs; tail-jmp opaque SEH base pin 0x58A0F4
 ??1Rva00711330@@UAE@XZ,,0x00711330,18,Code/GameEngine/Source/Common/Rva00711330Dtor.cpp,matched,opaque derived dtor; vptr + member-clear at +0x20 (speed-form mov); tail-jmp opaque SEH base pin 0x6D6470; dedicated /O2 TU (/O1 compacts to and-form)
+??1Rva0035D0D1@@UAE@XZ,,0x0035D0D1,11,Code/GameEngine/Source/Common/Rva001DBAC3Derived.cpp,matched,opaque derived dtor; tail-jmp opaque leaf base pin 0x1DBAC3
+??1Rva0035D352@@UAE@XZ,,0x0035D352,11,Code/GameEngine/Source/Common/Rva001DBAC3Derived.cpp,matched,opaque derived dtor; tail-jmp opaque leaf base pin 0x1DBAC3
+??1Rva006DE2B0@@UAE@XZ,,0x006DE2B0,11,Code/GameEngine/Source/Common/Rva006D63C0Derived.cpp,matched,opaque derived dtor; tail-jmp opaque SEH base pin 0x6D63C0
+??1Rva006DE6C0@@UAE@XZ,,0x006DE6C0,11,Code/GameEngine/Source/Common/Rva006D63C0Derived.cpp,matched,opaque derived dtor; tail-jmp opaque SEH base pin 0x6D63C0
