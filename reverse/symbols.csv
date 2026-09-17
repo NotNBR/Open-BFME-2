@@ -1683,3 +1683,4 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ??0Rva00252B68@@QAE@PAVThing@@PBVModuleData@@@Z,0x00252B68,opaque intermediate base ctor (26B frameless: calls 0x306B19 plus vtable 0xBEFE48); 6 module-ctor callers incl QueueProductionExitUpdate and BattlePlanUpdate; identity unproven
 ?Rva00268902@@QAEXXZ,0x00268902,opaque pool-free helper (thiscall, calls 0x26549E then pushes object to free-list at 0xDA60F0); called by module dtor 0x4907D1-head; identity unproven
 ?Rva0026549E@@QAEXXZ,0x0026549E,opaque lock-free pool helper (no calls, manipulates free-list at 0xDA60F0); called by 0x268902; identity unproven
+??0Rva00362EC7@@QAE@PAVThing@@PBVModuleData@@@Z,0x00362EC7,opaque intermediate base ctor (26B frameless: calls 0x306B19 plus vtable 0xC170A4); called by CommandButtonHuntUpdate ctor; identity unproven
