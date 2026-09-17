@@ -27,3 +27,17 @@ private:
 Rva00217537::~Rva00217537()
 {
 }
+
+class Rva0030714F
+{
+public:
+	virtual ~Rva0030714F();
+
+private:
+	char m_pad04[4];
+	AsciiStringMember m_member08;
+};
+
+Rva0030714F::~Rva0030714F()
+{
+}
