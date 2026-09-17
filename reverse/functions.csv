@@ -7925,3 +7925,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0OCLUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CD3A4,47,Code/GameEngine/Source/GameLogic/Object/Update/OCLUpdateCtor.cpp,matched,opaque-base pattern; factory stub order; size 0x88
 ??0SpawnPointProductionExitUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CCD7F,47,Code/GameEngine/Source/GameLogic/Object/Update/SpawnPointProductionExitUpdateCtor.cpp,matched,opaque-base pattern; factory stub order; size 0x88
 ??0SupplyCenterDockUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,,0x004CDBFC,47,Code/GameEngine/Source/GameLogic/Object/Update/SupplyCenterDockUpdateCtor.cpp,matched,opaque-base pattern; factory stub order; size 0x88
+?radarToWorld@Radar@@QAE_NPBUICoord2D@@PAUCoord3D@@@Z,,0x002D7744,133,Code/GameEngine/Source/Common/System/Radar_radarToWorld.cpp,matched,BFME1 Radar.cpp clamp+scale shape with float height params per BFME1 BfmeTerrainHeightView
