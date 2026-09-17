@@ -1637,3 +1637,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva006DE350@@UAE@XZ,0x006DE350,opaque dtor asserting IsDestroyedGC (AptValue.inl:145) with vtable 0xCEAED0; 5 derived dtors tail-call it; exact method unproven
 ?Rva0061FCA0Hash@@YAIPBD@Z,0x0061FCA0,Case-insensitive DJB2 (tolower fold via import, times 0x21) over name bytes; free cdecl fn; FindOrCreatePrototypeId +0x17 direct call target; ghidra 49B
 ??0?$RefCountPtr@VTextureClass@@@@QAE@XZ,0x00326BE6,RefCountPtr<TextureClass> default nulling ctor (6B mov-mem-zero); SortingNodeStruct ctor +0x25 ehvec_ctor function arg over the 16 Textures; ICF-folded with the trivial-ctor group already at this address; ghidra 6B
+??1Rva004BB68E@@UAE@XZ,0x004BB68E,opaque MI base dtor; 4 derived MI dtors tail-call it; identity unproven
