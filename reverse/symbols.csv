@@ -1697,3 +1697,4 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 ?WriteGroupDataChunk@@YAXAAVDataChunkOutput@@PAVScriptList@@PAVScriptGroup@@@Z,0x003B6975,opens ScriptGroup chunk v3; group slot of WriteScriptListDataChunk called with (out this [this+4]); recurses subgroups and calls script writer 0x3B5994
 _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf into TLS buf + new[] + memcpy); throw-site helper for AI-kind and INI parsers; true name unknown
 ?_CxxThrowException@@YGXPAX0@Z,0x00629094,CRT-mangled stdcall spelling of the __CxxThrowException@8 thunk (same target); MSVC emits this name for a C++ _CxxThrowException declaration
+?getNextTokenOrNull@INI@@QAEPBDPBD@Z,0x0002DEED,ZH INI.h:329 OrNull worker; true extent 168B via ret-scan (getNextToken tail-calls it); returns token or NULL instead of throwing
