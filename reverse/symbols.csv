@@ -1910,3 +1910,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?_M_create_node@?$list@PAVObject@@V?$allocator@PAVObject@@@_STL@@@_STL@@IAEPAU?$_List_node@PAVObject@@@2@ABQAVObject@@@Z,0x001EB9AC,address read from the retail REL32 in list<Object*>::insert at 0x001EBD16
 
 ??0Rva006DCD20@@QAE@PAVThing@@PBVModuleData@@@Z,0x006DCD20,opaque base of ClientUpdateModule 0x6CBCB0 (38B: vtable 0xCEAED0 folded with ClientUpdateModule own, base 0x6DBBC0, bit-flags +4); NOT DrawableModule (different vtable family from Module block 0xC07E.., donor shape belongs to landed 0x306B19); identity unproven
+??1ObjectModule@@UAE@XZ,0x0049B47C,public-virtual spelling of the ObjectModule dtor for the slot-0 ??_G at 0x4A10FD (same address as the MAE pin and FX fold rows; dtor body itself unclaimed, 7B mov-vptr-ret fold point)

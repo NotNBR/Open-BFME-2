@@ -2806,3 +2806,28 @@ void Rva0084CEF_Anchor(Rva0084CEF *p)
 {
 	p->Rva0084CEF::~Rva0084CEF();
 }
+
+class ObjectModule_B2
+{
+public:
+	virtual void f2();
+};
+
+// Owner proven (unlike the opaque entries above): this deleting dtor sits
+// in slot 0 of the ObjectModule vtable (0xC07E1C, shared with the
+// DrawableModule twin) and calls the 0x49B47C fold point through the shared
+// base pin, matching retail 0x4A10FD.
+class ObjectModule : public Rva0049B47C, public MiBase1, public ObjectModule_B2
+{
+public:
+	virtual ~ObjectModule()
+	{
+	}
+};
+
+// Anchor: forces out-of-line emission of the in-class destructor COMDAT,
+// including the scalar deleting destructor.
+void ObjectModule_Anchor(ObjectModule *p)
+{
+	p->ObjectModule::~ObjectModule();
+}
