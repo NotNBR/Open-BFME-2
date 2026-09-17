@@ -155,6 +155,11 @@ class AABTreeClass;
 class HTreeClass;
 class RenderInfoClass;
 
+// Forward tag for the six BFME2-new ref-counted geometry buffers at
+// +0x3C/+0x40/+0x44/+0x48/+0x54/+0x5C (see the member comment). The element
+// type is unknown; only the ShareBuffer pointer shape is verified.
+class MeshGeometryUnknownBuffer;
+
 // Define which kind of index vector to use (16- or 32 bit)
 typedef Vector3i16 TriIndex;
 //typedef Vector3i TriIndex;
@@ -345,15 +350,30 @@ protected:
 	// honestly-unknown pad rather than a guessed shape.
 	ShareBufferClass<Vector3> *						VertexNorm;			// +0x34 (unverified placement)
 	ShareBufferClass<Vector4> *						PlaneEq;				// +0x38 (unverified placement)
-	char														_bfme_unk_3C[0x10];	// +0x3C..+0x4C: unidentified BFME2 fields
+	// BFME2-new ref-counted buffers (no BFME1/ZH counterpart -- BFME1's class
+	// ends at CullTree with only the 9 ShareBuffers above). Proven pointers
+	// (not pad) by two retail bodies:
+	//   - operator= 0x00168FE0 runs the full REF_PTR_SET idiom (Add_Ref at
+	//     [+4] plus Release_Ref plus store) over every slot +0x30..+0x5C.
+	//   - copy ctor 0x0016A230 mem-init-zeroes +0x40..+0x5C (pre-vptr run)
+	//     and body-zeroes +0x3C with the +0x30 block (post-vptr run).
+	// Element types are unknown so they ride on a forward-declared tag; only
+	// the pointer shape (a RefCountClass at [+4]) is verified. Do NOT merge
+	// +0x3C into an array with +0x30..+0x38: the copy ctor assigns +0x3C in
+	// the body while +0x40..+0x48 are mem-inits, so a single array member
+	// cannot reproduce both schedules.
+	ShareBufferClass<MeshGeometryUnknownBuffer> *UnknownBuffer3C;	// +0x3C (body-zeroed)
+	ShareBufferClass<MeshGeometryUnknownBuffer> *UnknownBuffer40;	// +0x40 (mem-init zeroed)
+	ShareBufferClass<MeshGeometryUnknownBuffer> *UnknownBuffer44;	// +0x44 (mem-init zeroed)
+	ShareBufferClass<MeshGeometryUnknownBuffer> *UnknownBuffer48;	// +0x48 (mem-init zeroed)
 	ShareBufferClass<uint32> *						VertexShadeIdx;	// +0x4C (proven)
 	// Same as VertexNorm/PlaneEq above: VertexBoneLink's existence is real
 	// (dx8renderer.cpp, meshmdlio.cpp reference it by name) but its exact
 	// sub-offset within this proven 8-byte gap is a placement choice.
 	ShareBufferClass<uint16> *						VertexBoneLink;	// +0x50 (unverified placement)
-	char														_bfme_unk_54[0x4];	// +0x54..+0x58: unidentified BFME2 fields
+	ShareBufferClass<MeshGeometryUnknownBuffer> *UnknownBuffer54;	// +0x54 (mem-init zeroed)
 	ShareBufferClass<uint8> *							PolySurfaceType;	// +0x58 (proven)
-	char														_bfme_unk_5C[0x4];	// +0x5C..+0x60: unidentified BFME2 fields
+	ShareBufferClass<MeshGeometryUnknownBuffer> *UnknownBuffer5C;	// +0x5C (mem-init zeroed)
 
 	Vector3													BoundBoxMin;		// +0x60 (proven)
 	Vector3													BoundBoxMax;		// +0x6C (proven)

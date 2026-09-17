@@ -113,6 +113,7 @@ static SimpleVecClass<Vector4> _PlaneEQArray(1024);
 static SimpleVecClass<Vector3> _VNormArray(1024);
 #endif
 
+// ?Compute_Ram_Size@MeshGeometryClass@@QAEHXZ present-unmatched
 int MeshGeometryClass::Compute_Ram_Size(void)
 {
 	int size = 0x194;
@@ -173,18 +174,27 @@ MeshGeometryClass::MeshGeometryClass(void) :
 	PolyCount(0),
 	VertexCount(0),
 	Poly(NULL),
-	PolySurfaceType(NULL),
-	Vertex(NULL),
-	VertexNorm(NULL),
-	PlaneEq(NULL),
+	// Vertex/VertexNorm/PlaneEq/UnknownBuffer3C are body-zeroed with the
+	// +0x30 block (retail default ctor at 0x168F30 zeroes them post-floats),
+	// while +0x40..+0x5C are mem-init zeroes like the copy ctor.
+	UnknownBuffer40(NULL),
+	UnknownBuffer44(NULL),
+	UnknownBuffer48(NULL),
 	VertexShadeIdx(NULL),
 	VertexBoneLink(NULL),
+	UnknownBuffer54(NULL),
+	PolySurfaceType(NULL),
+	UnknownBuffer5C(NULL),
 	BoundBoxMin(0,0,0),
 	BoundBoxMax(1,1,1),
 	BoundSphereCenter(0,0,0),
 	BoundSphereRadius(1),
 	CullTree(NULL)
 {
+	Vertex = NULL;
+	PlaneEq = NULL;
+	VertexNorm = NULL;
+	UnknownBuffer3C = NULL;
 }
 
 
@@ -2171,20 +2181,14 @@ void MeshGeometryClass::get_deformed_screenspace_vertices(Vector4 *dst_vert,cons
 			// Count equal matrices (the vertices should be pre-sorted by matrices they use)
 			for (int cnt = vi; cnt < vertex_count; cnt++) if (idx!=bonelink[cnt]) break;
 
-			// Transform to screenspace (x,y,z,w)
-			VectorProcessorClass::Transform(
-				dst_vert+vi,
-				src_vert+vi,
-				tm,
-				cnt-vi);
+		// Transform to screenspace (x,y,z,w). Single-line call: a wrapped
+		// call here trips find_declared_unmatched (it reads the opening
+		// line as a VectorProcessorClass::Transform definition).
+		VectorProcessorClass::Transform(dst_vert+vi, src_vert+vi, tm, cnt-vi);
 
-			vi=cnt;
-		}
-	} else {
-		VectorProcessorClass::Transform(
-			dst_vert,
-			src_vert,
-			prj,
-			vertex_count);
+		vi=cnt;
 	}
+} else {
+	VectorProcessorClass::Transform(dst_vert, src_vert, prj, vertex_count);
+}
 }
