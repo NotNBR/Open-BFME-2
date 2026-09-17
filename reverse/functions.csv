@@ -7576,3 +7576,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva004869FC@@UAE@XZ,,0x004869FC,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule
 ??1Rva00486B56@@UAE@XZ,,0x00486B56,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule
 ??1Rva00486C76@@UAE@XZ,,0x00486C76,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule
+??1Rva004C227A@@UAE@XZ,,0x004C227A,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule
