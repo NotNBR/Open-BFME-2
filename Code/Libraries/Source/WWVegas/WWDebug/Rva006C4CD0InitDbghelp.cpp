@@ -16,18 +16,25 @@
 #define NULL 0
 #endif
 
+#ifndef FALSE
+#define FALSE 0
+#define TRUE 1
+#endif
+
 typedef void *HMODULE;
 
 extern "C" __declspec(dllimport) HMODULE __stdcall LoadLibraryA(const char *name);
 extern "C" __declspec(dllimport) void *__stdcall GetProcAddress(HMODULE module, const char *name);
 extern "C" __declspec(dllimport) void *__stdcall GetCurrentProcess(void);
 extern "C" __declspec(dllimport) int __stdcall FreeLibrary(HMODULE module);
+extern "C" __declspec(dllimport) char *__cdecl strncpy(char *dst, const char *src, unsigned int n);
 
 class Rva006C4CD0Helper
 {
 public:
 	void initDbghelp(void);
 	void uninitDbghelp(void);
+	bool getSymbolName(unsigned long addr, char *buf, unsigned long maxlen);
 
 	HMODULE m_hLib;			// +0x00
 	unsigned char m_flag;		// +0x04 (byte-wide per retail mov al;
@@ -39,6 +46,18 @@ public:
 	void *m_symGetModuleBase;	// +0x18
 	void *m_symGetSymFromAddr;	// +0x1C
 	void *m_symGetLineFromAddr;	// +0x20
+};
+
+// IMAGEHLP_SYMBOL prefix: only the header fields plus enough name bytes to
+// make the 0x218 total the retail frame proves (4 displacement + 0x218).
+struct DbgSymbolInfo
+{
+	unsigned long m_sizeOfStruct;	// +0x00
+	unsigned long m_address;	// +0x04
+	unsigned long m_size;		// +0x08
+	unsigned long m_flags;		// +0x0C
+	unsigned long m_maxNameLength;	// +0x10
+	char m_name[0x204];		// +0x14
 };
 
 // ?initDbghelp@Rva006C4CD0Helper@@QAEXXZ
@@ -72,4 +91,34 @@ void Rva006C4CD0Helper::uninitDbghelp(void)
 		((int (__stdcall *)(void *))m_symCleanup)(GetCurrentProcess());
 	}
 	FreeLibrary(m_hLib);
+}
+
+// ?getSymbolName@Rva006C4CD0Helper@@QAE_NKPADK@Z
+// retail 0x006C4D80, 167 bytes. Same TU: resolve an address to its symbol
+// name through the slot at +0x1C, copying at most maxlen bytes into buf.
+// SymInitialize runs once through the slot at +8 (flag at +4); the strncpy
+// import resolves by name.
+bool Rva006C4CD0Helper::getSymbolName(unsigned long addr, char *buf, unsigned long maxlen)
+{
+	if (m_hLib == NULL) {
+		initDbghelp();
+	}
+	void *proc = GetCurrentProcess();
+	if (!m_flag && m_symInitialize != NULL) {
+		if (((int (__stdcall *)(void *, const char *, int))m_symInitialize)(proc, NULL, TRUE) != 0) {
+			m_flag = 1;
+		}
+	}
+	DbgSymbolInfo sym;
+	sym.m_sizeOfStruct = 0x218;
+	sym.m_maxNameLength = 0x200;
+	unsigned long disp = 0;
+	if (m_symGetSymFromAddr == NULL) {
+		return false;
+	}
+	if (((int (__stdcall *)(void *, unsigned long, unsigned long *, DbgSymbolInfo *))m_symGetSymFromAddr)(proc, addr, &disp, &sym) != 0) {
+		strncpy(buf, sym.m_name, maxlen);
+		return true;
+	}
+	return false;
 }

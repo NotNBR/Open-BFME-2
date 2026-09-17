@@ -8182,3 +8182,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva0073EE55@@UAEPAXI@Z,,0x000A87F3,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x73EE55; flag plus pinned operator delete
 ??_GRva00AADC1@@UAEPAXI@Z,,0x000AB080,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0xAADC1; flag plus pinned operator delete
 ??_GRva00AAD26@@UAEPAXI@Z,,0x000AB09C,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0xAAD26; flag plus pinned operator delete
+?getSymbolName@Rva006C4CD0Helper@@QAE_NKPADK@Z,,0x006C4D80,167,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque symbol-name resolver; SymGetSymFromAddr slot plus strncpy
