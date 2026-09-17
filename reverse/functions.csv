@@ -7940,3 +7940,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Get_Bone_Name@HTreeClass@@QBEPBDH@Z,,0x00160BB0,22,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassBoneLookup.cpp,matched,HTree bone name accessor; 0x58 pivots
 ?Get_Bone_Index@HTreeClass@@QBEHPBD@Z,,0x00160B60,68,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassBoneLookup.cpp,matched,HTree bone index search; i-first do-while plus 0x58 pivots
 ?Get_Parent_Index@HTreeClass@@QBEHH@Z,,0x00160BD0,35,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassBoneLookup.cpp,matched,HTree parent lookup; placed single-hit via dedicated unit
+??1Rva004B0164@@UAE@XZ,,0x004B0164,42,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor with trailing const; vtab pairs with 0x4B0292 ctor

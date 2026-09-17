@@ -138,3 +138,23 @@ Rva00494F1B::~Rva00494F1B()
 	m_p10 = &s_dummy10;
 	m_p20 = &s_dummy20;
 }
+
+static int s_dummy62D8;
+static int s_dummy62C8;
+
+class Rva004B0164 : public Rva0044EF5E
+{
+public:
+	virtual ~Rva004B0164();
+
+private:
+	const void *m_tail88;
+};
+
+Rva004B0164::~Rva004B0164()
+{
+	m_p0C = &s_dummy62D8;
+	m_p10 = &s_dummy10;
+	m_p20 = &s_dummy20;
+	m_tail88 = &s_dummy62C8;
+}
