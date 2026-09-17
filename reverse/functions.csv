@@ -7722,3 +7722,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva0056ACC5@@UAE@XZ,,0x0056ACC5,18,Code/GameEngine/Source/Common/Rva0056AC26Derived.cpp,matched,opaque MI dtor two vptrs
 ??1Rva0056ACDF@@UAE@XZ,,0x0056ACDF,18,Code/GameEngine/Source/Common/Rva0056AC26Derived.cpp,matched,opaque MI dtor two vptrs
 ??1Rva0056ACFF@@UAE@XZ,,0x0056ACFF,18,Code/GameEngine/Source/Common/Rva0056AC26Derived.cpp,matched,opaque MI dtor two vptrs
+??1Rva0056AE4A@@UAE@XZ,,0x0056AE4A,18,Code/GameEngine/Source/Common/Rva0056AC26Derived.cpp,matched,opaque MI dtor two vptrs
