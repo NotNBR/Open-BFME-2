@@ -8003,3 +8003,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0AABoxRenderObjClass@@QAE@ABVAABoxClass@@@Z,,0x00175CD0,262,Code/Libraries/Source/WWVegas/WW3D2/AABoxRenderObjFromAABox.cpp,matched,
 ??0AABoxRenderObjClass@@QAE@XZ,,0x00175BB0,136,Code/Libraries/Source/WWVegas/WW3D2/AABoxRenderObjDefaultCtor.cpp,matched,
 ?Init@BoxRenderObjClass@@SAXXZ,,0x00174E20,205,Code/Libraries/Source/WWVegas/WW3D2/BoxRenderObjInit.cpp,matched,
+?getFirstObject@GameLogic@@QAEPAVObject@@XZ,,0x0023CAD2,7,Code/GameEngine/Source/GameLogic/System/GameLogic_getFirstObject.cpp,matched,
