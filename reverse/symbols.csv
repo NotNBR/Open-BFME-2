@@ -1697,3 +1697,7 @@ _atan2f,0x000422CD,Statically linked CRT atan2f float adapter (fld/fst shuffle i
 _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf into TLS buf + new[] + memcpy); throw-site helper for AI-kind and INI parsers; true name unknown
 ?_CxxThrowException@@YGXPAX0@Z,0x00629094,CRT-mangled stdcall spelling of the __CxxThrowException@8 thunk (same target); MSVC emits this name for a C++ _CxxThrowException declaration
 ?getNextTokenOrNull@INI@@QAEPBDPBD@Z,0x0002DEED,ZH INI.h:329 OrNull worker; true extent 168B via ret-scan (getNextToken tail-calls it); returns token or NULL instead of throwing
+?DebugReAllocMemory@@YAPAXPAXI@Z,0x0003E4B0,retail REL32 from Debug::AddOutput grow path; DebugReAllocMemory wrapper body (GlobalReAlloc) rather than raw realloc
+?ScheduleFrameCommand@Debug@@AAEPAXHPBD@Z,0x00039720,sorted insert of (frame,cmd) into Debug +0x9E08 list; sole caller ExecCommand frame-prefix path; body 0.95 banked, needs bound-reload lever
+?registerObject@PartitionManager@@QAEXPAVObject@@@Z,0x002D7FEC,first call in Object::friend_notifyOfNewMapBoundary 0x28B5EE with ecx=TheRadar global and Object* arg; B1 casts TheRadar to PartitionManager for this call
+?addObjectToPathfindMap@BFMEPathfinderMapShim@@QAEXPAVObject@@@Z,0x002E7178,second call in Object::friend_notifyOfNewMapBoundary 0x28B5EE via TheAI->pathfinder()+0x10 with Object* arg; 11B wrapper pushing 0/0/1; B1 shim pattern
