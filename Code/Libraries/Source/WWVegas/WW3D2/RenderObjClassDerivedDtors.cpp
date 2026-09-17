@@ -44,12 +44,12 @@ Rva00130E80::~Rva00130E80()
 {
 }
 
-class Rva00166DDE : public RenderObjClass
+class Rva00166DE0 : public RenderObjClass
 {
 public:
-	virtual ~Rva00166DDE();
+	virtual ~Rva00166DE0();
 };
 
-Rva00166DDE::~Rva00166DDE()
+Rva00166DE0::~Rva00166DE0()
 {
 }
