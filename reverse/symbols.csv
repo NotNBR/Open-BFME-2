@@ -1744,3 +1744,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?push_back@IntFrameList@@QAEXABH@Z,0x0005548F,frame-history append; ICF-shares the address with the stlport list-int push_back row; serves FXList::shouldPlayFX
 ?Rva00330995SetTexture@@QAEXPAX@Z,0x00330995,decal texture applier in createRadiusDecal 0x331459 (thiscall on the slot-8-created RadiusDecal with the texture pointer); true method name not recovered
 ?isSelectionLocked@BfmeSelectionState@@QBE_NXZ,0x0004253A,BFME2 selection-state guard testing bytes +0xB4/+0xB5; caller 0x29CEBB selectMatchingAcrossScreen returns 0 when true
+??0Rva000B19A1@@QAE@PAVThing@@PBVModuleData@@@Z,0x000B19A1,opaque ClientUpdate-derived intermediate base ctor (28B frameless leaf: base call plus vtable 0xBC9690); called this-only with (Thing,ModuleData) by AnimatedParticleSysBoneClientUpdate 0xD181D and LaserUpdate 0xCA752; identity unproven
