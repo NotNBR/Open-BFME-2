@@ -149,3 +149,19 @@ public:
 Rva0062AF7::~Rva0062AF7()
 {
 }
+
+class Rva00605CA7
+{
+public:
+	virtual ~Rva00605CA7();
+};
+
+class Rva00605C6A : public Rva00605CA7
+{
+public:
+	virtual ~Rva00605C6A();
+};
+
+Rva00605C6A::~Rva00605C6A()
+{
+}
