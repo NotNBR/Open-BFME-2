@@ -7542,3 +7542,4 @@ _Rva0080ADE0,,0x00676CE0,542,Code/Libraries/Source/DirtySock/Rva0080ADE0Reset.cp
 _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matched,empty Gamespy table stub shared with BFME1
 ?screenPixelToWorld@Radar@@QAE_NPBUICoord2D@@PAUCoord3D@@@Z,,0x002D82E4,106,Code/GameEngine/Source/Common/System/Radar_screenPixelToWorld.cpp,matched,BFME1 screenPixelToWorld verbatim; window at +0x1430; 3 callees pinned
 ?erase@?$vector@W4ParticleSystemID@@V?$allocator@W4ParticleSystemID@@@_STL@@@_STL@@QAEPAW4ParticleSystemID@@PAW43@0@Z,,0x00532803,38,Code/GameEngine/Source/GameLogic/Object/Update/BoneFXUpdate_eraseParticleSystemID.cpp,matched,STLport vector ParticleSystemID range erase; copy_ptrs ICF pin
+??1GameEngineDeletingBase@@UAE@XZ,,0x001B4E74,14,Code/GameEngine/Source/Common/GameEngineDeletingBaseDtor.cpp,matched,vtable store plus tail-jmp to AsciiString member at plus 8 like Bucket
