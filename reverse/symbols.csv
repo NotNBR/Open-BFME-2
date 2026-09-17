@@ -1634,3 +1634,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva0049B47C@@UAE@XZ,0x0049B47C,opaque fold-point dtor (25 dtors fold here incl FX infos plus Snapshot plus ObjectModule); 5 derived dtors tail-call it; identity unproven
 ??1Rva003B1F65@@UAE@XZ,0x003B1F65,opaque SEH base dtor; 5 derived dtors tail-call it; identity unproven
 ??1Rva0056AC26@@UAE@XZ,0x0056AC26,opaque MI base dtor (SEH, vptrs at +0/+8); 5 derived MI dtors tail-call it; identity unproven
+??1Rva006DE350@@UAE@XZ,0x006DE350,opaque dtor asserting IsDestroyedGC (AptValue.inl:145) with vtable 0xCEAED0; 5 derived dtors tail-call it; exact method unproven
