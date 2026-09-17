@@ -8043,3 +8043,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0AudioEventRTS@@QAE@XZ,,0x00079514,64,Code/GameEngine/Source/Common/System/AudioEventRTSCtor.cpp,matched,frameless member stores; AsciiString pair plus 20.0f default; first-try exact
 ??1AudioEventRTS@@QAE@XZ,,0x000793FA,53,Code/GameEngine/Source/Common/System/AudioEventRTSDtor.cpp,matched,folded string teardown x2 with cookie states; forceinline dtor plus trivial base; first-try exact
 ??M@YA_NABU?$pair@VAsciiString@@V1@@_STL@@0@Z,,0x00206BCF,65,Code/Libraries/Source/WWVegas/WWLib/AsciiStringPairLess.cpp,matched,pair lexicographic less via boolean-expression form reproducing shared xor tails; primitive calls via operator pin 0x5598C; pin coexists
+??M@YA_NABVAsciiString@@0@Z,,0x0005598C,23,Code/Libraries/Source/WWVegas/WWLib/AsciiStringLess.cpp,matched,primitive string less via OR-false temp materialization; compare resolves via matched row; pin coexists; clears 0.83 partial
