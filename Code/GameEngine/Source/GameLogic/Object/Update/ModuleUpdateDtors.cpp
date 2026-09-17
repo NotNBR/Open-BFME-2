@@ -101,3 +101,60 @@ Rva004921B0::~Rva004921B0()
 	m_p10 = &s_dummy10;
 	m_p20 = &s_dummy20;
 }
+
+static int s_dummyDFD4;
+static int s_dummyEB30;
+static int s_dummyE184;
+static int s_dummyEB0C;
+
+class Rva00492439 : public Rva0044EF5E
+{
+public:
+	virtual ~Rva00492439();
+};
+
+Rva00492439::~Rva00492439()
+{
+	m_p0C = &s_dummy0C;
+	m_p10 = &s_dummy10;
+	m_p20 = &s_dummyDFD4;
+}
+
+class Rva00492C90 : public Rva0044EF5E
+{
+public:
+	virtual ~Rva00492C90();
+};
+
+Rva00492C90::~Rva00492C90()
+{
+	m_p0C = &s_dummy0C;
+	m_p10 = &s_dummyEB30;
+	m_p20 = &s_dummyE184;
+}
+
+class Rva00494E01 : public Rva0044EF5E
+{
+public:
+	virtual ~Rva00494E01();
+};
+
+Rva00494E01::~Rva00494E01()
+{
+	m_p0C = &s_dummy0C;
+	m_p10 = &s_dummyEB30;
+	m_p20 = &s_dummyEB0C;
+}
+
+class Rva00494F1B : public Rva0044EF5E
+{
+public:
+	virtual ~Rva00494F1B();
+};
+
+Rva00494F1B::~Rva00494F1B()
+{
+	m_p0C = &s_dummy0C;
+	m_p10 = &s_dummy10;
+	m_p20 = &s_dummy20;
+}
