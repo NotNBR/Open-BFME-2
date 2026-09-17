@@ -65,3 +65,19 @@ public:
 Rva0056ACDF::~Rva0056ACDF()
 {
 }
+
+class Rva0056ACFF_B1
+{
+public:
+	virtual void f1();
+};
+
+class Rva0056ACFF : public Rva0056AC26, public Rva0056ACFF_B1
+{
+public:
+	virtual ~Rva0056ACFF();
+};
+
+Rva0056ACFF::~Rva0056ACFF()
+{
+}
