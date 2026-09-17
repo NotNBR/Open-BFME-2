@@ -10,12 +10,12 @@ extern "C" __declspec(dllimport) unsigned long __stdcall WaitForSingleObject(
 extern "C" __declspec(dllimport) unsigned long __stdcall GetCurrentThreadId(
     void);
 
-struct BfmeThingQO
+struct DebugIOInterface
 {
-    void bfmeFlushQO(int);
+    // Minimal StringType for StartOutput's mangled name (values unused in
+    // this TU; retail keeps 7 types with Log==1).
+    enum StringType { Assert, Check, Log, Crash, Exception, CmdReply, StructuredCmdReply, Other, MAX };
 };
-
-void bfmeLogQO(BfmeThingQO *, int, const char *, ...);
 
 class Debug
 {
@@ -39,7 +39,9 @@ public:
     virtual void pad16(void);
     virtual void pad17(void);
     virtual void pad18(void);
-    virtual void pad19(void);
+    // (No pad19: with the two retail FlushOutput/StartOutput declarations
+    // below present, the compiler numbers StartOutput above at retail slot
+    // 0x50; keeping pad19 puts it at 0x54. Verified by build.)
     virtual void StartOutput(const char *, unsigned);
 
     struct FrameHashEntry
@@ -69,6 +71,13 @@ private:
 
     FrameHashEntry *GetFrameEntry(unsigned, unsigned, const char *, int);
 
+    // Retail Debug::FlushOutput / Debug::StartOutput (0x39300 / 0x39B30).
+    // Virtual so the declarations reproduce their exact mangled names;
+    // every call below qualifies them explicitly to keep the direct calls
+    // retail emits. Appended after the established vtable slots.
+    virtual void FlushOutput(bool);
+    virtual void StartOutput(DebugIOInterface::StringType, const char *, ...);
+
 public:
     Debug &LogBegin(const char *);
 };
@@ -81,7 +90,7 @@ Debug &Debug::LogBegin(const char *fileOrGroup)
     if (curType!=7)
     {
         if (curType!=1 || m_threadId!=GetCurrentThreadId())
-            ((BfmeThingQO *)this)->bfmeFlushQO(1);
+            Debug::FlushOutput(true);
     }
 
     curFrameEntry=GetFrameEntry(curStackFrame,4,fileOrGroup,0);
@@ -93,14 +102,14 @@ Debug &Debug::LogBegin(const char *fileOrGroup)
 
         if (curType==1 &&
             strcmp(curSource,curFrameEntry->fileOrGroup))
-            ((BfmeThingQO *)this)->bfmeFlushQO(1);
+            Debug::FlushOutput(true);
 
         if (curType!=1)
-            bfmeLogQO((BfmeThingQO *)this,1,(const char *)0x00BBE494,
+            Debug::StartOutput((DebugIOInterface::StringType)1,(const char *)0x00BBE494,
                       curFrameEntry->fileOrGroup);
     }
     else if (curType!=7)
-        ((BfmeThingQO *)this)->bfmeFlushQO(1);
+        Debug::FlushOutput(true);
 
     return *this;
 }

@@ -810,7 +810,6 @@ name,address,notes
 ?bfmeDoPW@@YAXPAD000@Z,0x00024FC0
 ?bfmeDrawSortingPrimitive@@YAXIIIII@Z,0x0011D710,Recovered five-unsigned sorting-draw role; complete 539-byte dynamic-buffer conversion and draw body independently decoded with two 65535 count guards and RAII cleanup
 ?bfmeFindQH@@YAPAHPAHH@Z,0x000245A0
-?bfmeFlushQO@BfmeThingQO@@QAEXH@Z,0x00039300
 ?bfmeGetMainWindowTitle@@YA?AVUnicodeString@@XZ,0x0023484D,window title UnicodeString helper called by initializeAppWindows
 ?bfmeGlobalCGD@@YAXXZ,0x00759600
 ?bfmeInit1019@@YAXPAD@Z,0x00629B14,address read from the REL32 displacement in DirtySock Rva007F0000Allocator at 0x0065CEE0; structural name from another lane; body not yet converted

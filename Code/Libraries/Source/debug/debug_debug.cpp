@@ -29,7 +29,20 @@
 //
 // Debug class implementation
 //////////////////////////////////////////////////////////////////////////////
+// Retail calls the wvsprintfA import with callee cleanup (__stdcall shape,
+// no add-esp after the call), while the headers below declare it __cdecl.
+// Hide the header declaration under a dummy name so a TU-local __stdcall
+// declaration can name the same import (cf. StartOutput, which inlines the
+// only wvsprintf use in this TU; wsprintfA is unaffected).
+#define wvsprintfA wvsprintfA_cdecl_unused
 #include "_pch.h"
+#undef wvsprintfA
+extern "C" __declspec(dllimport) int __stdcall wvsprintfA(char *out, const char *fmt, void *args);
+// (windows.h's `wvsprintf` macro was captured while the dummy name was
+// active; repoint it at the TU-local declaration. Its only user is
+// StartOutput below, which names wvsprintfA explicitly.)
+#undef wvsprintf
+#define wvsprintf wvsprintfA
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -720,7 +733,11 @@ bool Debug::CrashDone(bool die)
 // m_width at +0x9f50 and m_fillChar at +0x9f54. TU-local view so the placed
 // stream bodies in this TU keep their layout (cf. RetailDebugVersionView).
 struct RetailDebugOutView {
-  char _pad0[0x9c84];
+  char _pad0[0xc];
+  // (Private in the headers, so kept typeless here and cast back to
+  // Debug::IOFactoryListEntry inside Debug members, which may access it.)
+  void *firstIOFactoryLink;             // 0xc (retail FlushOutput loop)
+  char _pad0b[0x9c84 - 0x10];
   struct IoEntry {
     char *buffer;
     unsigned used;
@@ -728,9 +745,27 @@ struct RetailDebugOutView {
     bool lastWasCR;
   } ioBuffer[7];                      // 0x9c84, 16B stride; lastWasCR at +12
   int curType;                        // 0x9cf4; retail bails when it is 7
-  char _pad1[0x9f50 - 0x9cf4 - 4];
+  char curSource[256];                // 0x9cf8
+  char _pad1[0x9e78 - 0x9df8];
+  bool alwaysFlush;                   // 0x9e78 (retail FlushOutput second Write)
+  char _pad1b;                        // 0x9e79 (open: byte tested in AssertDone path)
+  bool timeStamp;                     // 0x9e7a (retail AddOutput timestamp split)
+  char _pad1c[0x9f50 - 0x9e7b];
   int m_width;                        // 0x9f50
   char m_fillChar;                    // 0x9f54
+};
+
+// Retail DebugIOInterface carries one more virtual than this TU's headers
+// declare: a bool query at slot +8 between Read (+4) and Write (+12). Proven
+// by the DebugIOFlat/Net/Ods/Con vtables (Write called at +0xc from retail
+// FlushOutput; slot +8 holds a shared return-false body at 0x73B660 except
+// for the console class, which returns its m_allocatedConsole flag at
+// 0x408C0). Only the Write slot is used below; the query keeps its slot.
+struct RetailDebugIOInterface {
+  virtual ~RetailDebugIOInterface() = 0;
+  virtual int Read(char *buf, int maxchar) = 0;
+  virtual bool OwnsConsole() = 0;     // slot +8; identity open (see above)
+  virtual void Write(int type, const char *src, const char *str) = 0;
 };
 
 Debug& Debug::operator<<(const char *str)
@@ -1287,20 +1322,21 @@ const char *Debug::AddLogGroup(const char *fileOrGroup, const char *descr)
   return cur->nameGroup;
 }
 
-// ?StartOutput@Debug@@EAAXW4StringType@DebugIOInterface@@PBDZZ present-unmatched
+// ?StartOutput@Debug@@EAAXW4StringType@DebugIOInterface@@PBDZZ
 void Debug::StartOutput(DebugIOInterface::StringType type, const char *fmt, ...)
 {
-  if (curType==DebugIOInterface::Log)
-    FlushOutput();
-  __ASSERT(curType==DebugIOInterface::StringType::MAX);
-  curType=type;
+  RetailDebugOutView *retail = (RetailDebugOutView *)this;
+  // Retail keeps 7 string types with Log==1 (this TU's headers have 8 with
+  // Log==2); a pending Log line is flushed first.
+  if (retail->curType==1)
+    Debug::FlushOutput(true);
+  retail->curType=type;
 
   // potentially dangerous (fixed string buffer...)
   va_list va;
   va_start(va,fmt);
-  wvsprintf(curSource,fmt,va);
+  wvsprintfA(retail->curSource,fmt,va);
   va_end(va);
-  __ASSERT(curSource[sizeof(curSource)-1]==0);
 }
 
 // ?AddOutput@Debug@@EAEXPBDI@Z present-unmatched
@@ -1367,56 +1403,46 @@ void Debug::AddOutput(const char *str, unsigned remainingLen)
   }
 }
 
-// ?FlushOutput@Debug@@EAEX_N@Z present-unmatched
+// ?FlushOutput@Debug@@EAEX_N@Z
 void Debug::FlushOutput(bool defaultLog)
 {
-  __ASSERT(curType!=DebugIOInterface::StringType::MAX);
+  (void)defaultLog;
+  RetailDebugOutView *retail = (RetailDebugOutView *)this;
+  // Retail bails when no valid destination type is set (this TU's headers
+  // have 8 string types with MAX==8; retail has 7 with MAX==7).
+  if (retail->curType==7)
+    return;
 
   // bail out early if buffer is still empty
-  if (!ioBuffer[curType].used)
+  if (!retail->ioBuffer[retail->curType].used)
   {
-    curType=DebugIOInterface::StringType::MAX;
+    retail->curType=7;
     return;
   }
 
   // need CR?
-  if (!ioBuffer[curType].lastWasCR)
+  if (!retail->ioBuffer[retail->curType].lastWasCR)
     operator<<("\n");
 
   // send string to all active I/O interfaces
-  bool hadWrite=!defaultLog;
-  for (IOFactoryListEntry *cur=firstIOFactory;cur;cur=cur->next)
+  for (Debug::IOFactoryListEntry *cur=(Debug::IOFactoryListEntry *)retail->firstIOFactoryLink;cur;cur=cur->next)
   {
     if (!cur->io)
       continue;
 
-    hadWrite=true;
-    cur->io->Write(curType,curSource,ioBuffer[curType].buffer);
+    // Retail's DebugIOInterface carries a bool query at slot +8 (see
+    // RetailDebugIOInterface), so Write sits at +0xc, not +0x8.
+    ((RetailDebugIOInterface *)cur->io)->Write(retail->curType,retail->curSource,retail->ioBuffer[retail->curType].buffer);
 
-    if (alwaysFlush)
-      cur->io->Write(curType,curSource,NULL);
-  }
-
-  // written nowhere?
-  if (!hadWrite&&curType!=DebugIOInterface::StringType::StructuredCmdReply)
-  {
-#ifdef HAS_LOGS
-    // then force output to a very simple default log file
-    // (non-Release builds only)
-    HANDLE h=CreateFile("default.log",GENERIC_WRITE,0,NULL,
-                        OPEN_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
-    SetFilePointer(h,0,NULL,FILE_END);
-    DWORD dwDummy;
-    WriteFile(h,ioBuffer[curType].buffer,strlen(ioBuffer[curType].buffer),&dwDummy,NULL);
-    CloseHandle(h);
-#endif
+    if (retail->alwaysFlush)
+      ((RetailDebugIOInterface *)cur->io)->Write(retail->curType,retail->curSource,NULL);
   }
 
   // empty buffer etc.
-  ioBuffer[curType].used=0;
-  *ioBuffer[curType].buffer=0;
-  curType=DebugIOInterface::StringType::MAX;
-  *curSource=0;
+  retail->ioBuffer[retail->curType].used=0;
+  *retail->ioBuffer[retail->curType].buffer=0;
+  retail->curType=7;
+  *retail->curSource=0;
 }
 
 // ?AddPatternEntry@Debug@@EAEXI_NPBD@Z present-unmatched
