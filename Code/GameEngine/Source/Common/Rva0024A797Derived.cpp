@@ -120,3 +120,19 @@ public:
 Rva003A49D1::~Rva003A49D1()
 {
 }
+
+class Rva003A4CAE_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva003A4CAE : public Rva0024A797, public MiBase1, public Rva003A4CAE_B2
+{
+public:
+	virtual ~Rva003A4CAE();
+};
+
+Rva003A4CAE::~Rva003A4CAE()
+{
+}
