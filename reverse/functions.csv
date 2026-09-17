@@ -8239,3 +8239,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?winSetEnabledImage@GameWindow@@QAEHHPBVImage@@@Z,,0x003143B9,36,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
 ?winSetEnabledColor@GameWindow@@QAEHHH@Z,,0x003143DD,34,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
 ?winSetEnabledBorderColor@GameWindow@@QAEHHH@Z,,0x003143FF,34,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
+?winSetDisabledImage@GameWindow@@QAEHHPBVImage@@@Z,,0x00314421,36,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
