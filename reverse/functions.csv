@@ -7934,3 +7934,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GSupplyCenterDockUpdate@@UAEPAXI@Z,,0x004CDC98,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,emitted scalar deleting dtor; flag plus free via pinned delete
 ??_GMissileLauncherBuildingUpdate@@UAEPAXI@Z,,0x004CDA19,28,Code/GameEngine/Source/GameLogic/Object/Update/MissileLauncherBuildingUpdateDtor.cpp,matched,emitted scalar deleting dtor; dtor call via pin; flag plus free
 ??1Rva00490D76@@UAE@XZ,,0x00490D76,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor; vtab pairs with 0x490D3F ctor; same consts as OCL; upgrade when stub order names it
+??1Rva004921B0@@UAE@XZ,,0x004921B0,32,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors.cpp,matched,opaque module dtor; vtab pairs with 0x492179 ctor; same consts as OCL; upgrade when stub order names it
