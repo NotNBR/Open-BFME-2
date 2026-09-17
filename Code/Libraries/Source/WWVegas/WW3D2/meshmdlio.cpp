@@ -1908,22 +1908,6 @@ void MeshModelClass::install_materials(MeshLoadContextClass * context)
 }
 
 
-void MeshModelClass::clone_materials(const MeshModelClass & srcmesh)
-{
-	/*
-	** Copy the material info and the materials within
-	*/
-	REF_PTR_RELEASE(MatInfo);
-	MatInfo = NEW_REF( MaterialInfoClass,(*(srcmesh.MatInfo)));
-
-	/*
-	** remap!
-	*/
-	MaterialRemapperClass remapper(srcmesh.MatInfo, MatInfo);
-	remapper.Remap_Mesh(srcmesh.CurMatDesc, CurMatDesc);
-}
-
-
 void MeshModelClass::install_alternate_material_desc(MeshLoadContextClass * context)
 {
 	if (context->AlternateMatDesc.Is_Empty() == false) {
