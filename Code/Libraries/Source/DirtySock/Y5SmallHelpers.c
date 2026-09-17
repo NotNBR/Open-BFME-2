@@ -907,3 +907,8 @@ void Rva0080EF50(unsigned char *object, const char *name, char *alias,
 	Rva008119A0(*(struct Rva008119A0Table **)(object + 0x64), name, alias, detail,
 		"TCP:~1:1024\tUDP:~1:1024", *(int *)(object + 0x8C));
 }
+
+void Rva008118C0(void *table)
+{
+	(void)table;
+}
