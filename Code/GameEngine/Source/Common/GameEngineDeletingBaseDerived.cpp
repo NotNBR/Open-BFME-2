@@ -102,3 +102,13 @@ public:
 Rva003E3BD4::~Rva003E3BD4()
 {
 }
+
+class Rva00419CD4 : public GameEngineDeletingBase
+{
+public:
+	virtual ~Rva00419CD4();
+};
+
+Rva00419CD4::~Rva00419CD4()
+{
+}
