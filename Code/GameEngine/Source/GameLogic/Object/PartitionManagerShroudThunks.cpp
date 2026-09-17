@@ -31,6 +31,12 @@ public:
 	void undoRevealMapForPlayerPermanently(int playerIndex);
 	CellShroudStatus getShroudStatusForPlayer(int playerIndex, const Coord3D *pos) const;
 	void setRegion(const Region3D *region, float cellSize);
+	// Opaque ShroudManager methods behind the 0x625300/10/20 run (targets
+	// 0x6276E0/0x627E40/0x627810); identities unproven, signatures read
+	// from the thunk call sites (region address / int / address).
+	void Rva006276E0(const Region3D *region);
+	void Rva00627E40(int value);
+	void Rva00627810(void *ptr);
 };
 
 class PartitionManager
@@ -40,6 +46,12 @@ public:
 	void undoRevealMapForPlayerPermanently(int playerIndex);
 	CellShroudStatus getShroudStatusForPlayer(int playerIndex, const Coord3D *pos) const;
 	void setRegion(const Region3D *region, float cellSize);
+	// Opaque thunks of the 0x625300/10/20 run (PartitionManager facade
+	// over the +0x10 shroud manager, same shape as the shroud thunks).
+	// 0x625300 upgrades banked pin 1720 to a row.
+	void rva00625300(const Region3D *region);
+	void rva00625310(int value);
+	void rva00625320(void *ptr);
 
 private:
 	char m_pad[0x10];
@@ -68,4 +80,22 @@ CellShroudStatus PartitionManager::getShroudStatusForPlayer(int playerIndex, con
 void PartitionManager::setRegion(const Region3D *region, float cellSize)
 {
 	m_shroudManager->setRegion(region, cellSize);
+}
+
+// ?rva00625300@PartitionManager@@QAEXPAURegion3D@@@Z
+void PartitionManager::rva00625300(const Region3D *region)
+{
+	m_shroudManager->Rva006276E0(region);
+}
+
+// ?rva00625310@PartitionManager@@QAEXH@Z
+void PartitionManager::rva00625310(int value)
+{
+	m_shroudManager->Rva00627E40(value);
+}
+
+// ?rva00625320@PartitionManager@@QAEXPAX@Z
+void PartitionManager::rva00625320(void *ptr)
+{
+	m_shroudManager->Rva00627810(ptr);
 }

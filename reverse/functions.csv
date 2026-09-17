@@ -8314,6 +8314,7 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0Rva00492C59@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00492C59,47,Code/GameEngine/Source/GameLogic/Object/Update/Rva00492C59Ctor.cpp,matched,opaque OCL-twin via base pin; 0x24DBD0 stub (0x88)
 ??0Rva00494DCA@@QAE@PAVThing@@PBVModuleData@@@Z,,0x00494DCA,47,Code/GameEngine/Source/GameLogic/Object/Update/Rva00494DCACtor.cpp,matched,opaque OCL-twin via base pin; 0x24DD98 stub (0x88)
 ??_GGenericObjectCreationNugget@@MAEPAXI@Z,,0x001F31AA,28,Code/GameEngine/Source/GameLogic/Object/GenericObjectCreationNuggetDtor.cpp,matched,home-TU emission beside the rowed dtor; protected MAE spelling is BFME1-authentic
-?rva00625310@PartitionManager@@QAEXH@Z,,0x00625310,8,Code/GameEngine/Source/GameLogic/Object/PartitionManagerShroudThunks.cpp,matched,
-?rva00625320@PartitionManager@@QAEXPAX@Z,,0x00625320,8,Code/GameEngine/Source/GameLogic/Object/PartitionManagerShroudThunks.cpp,matched,
+?rva00625310@PartitionManager@@QAEXH@Z,,0x00625310,8,Code/GameEngine/Source/GameLogic/Object/PartitionManagerShroudThunks.cpp,matched,opaque int thunk of the 0x625300 run
+?rva00625320@PartitionManager@@QAEXPAX@Z,,0x00625320,8,Code/GameEngine/Source/GameLogic/Object/PartitionManagerShroudThunks.cpp,matched,opaque address thunk of the 0x625300 run
 ?getColor@MultiplayerSettings@@QAEPAVMultiplayerColorDefinition@@H@Z,,0x00381373,68,Code/GameEngine/Source/Common/MultiplayerSettings.cpp,matched,BFME1-shape lazy numColors refill with retail offsets and address-taken key helper (pinned opaque lookup); scoped Os plus gotos converge the shared ret and NULL store
+?rva00625300@PartitionManager@@QAEXPBURegion3D@@@Z,,0x00625300,8,Code/GameEngine/Source/GameLogic/Object/PartitionManagerShroudThunks.cpp,matched,opaque region thunk (const-correct PBU spelling; PAU pin retired); pin-to-row upgrade
