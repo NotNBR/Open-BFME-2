@@ -7568,3 +7568,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1?$VectorClass@H@@UAE@XZ,,0x000023E3,11,Code/Libraries/Source/WWVegas/WWLib/vector_class_resize.cpp,matched,explicit int instantiation already emits vptr plus devirtualized Clear tail-jmp
 ??1Rva0045CE6D@@UAE@XZ,,0x0045CE6D,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule protected virtual base
 ??1Rva004851FE@@UAE@XZ,,0x004851FE,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule
+??1Rva00485425@@UAE@XZ,,0x00485425,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule
