@@ -52,3 +52,13 @@ public:
 Rva0025DB46::~Rva0025DB46()
 {
 }
+
+class Rva0026201C : public GameEngineDeletingBase
+{
+public:
+	virtual ~Rva0026201C();
+};
+
+Rva0026201C::~Rva0026201C()
+{
+}
