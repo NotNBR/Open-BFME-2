@@ -72,3 +72,19 @@ public:
 Rva00485425::~Rva00485425()
 {
 }
+
+class Rva0048593D_B2
+{
+public:
+	virtual void f2();
+};
+
+class Rva0048593D : public DieModule, public MiBase1, public Rva0048593D_B2
+{
+public:
+	virtual ~Rva0048593D();
+};
+
+Rva0048593D::~Rva0048593D()
+{
+}
