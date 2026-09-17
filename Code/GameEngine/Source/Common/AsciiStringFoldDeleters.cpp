@@ -54,3 +54,17 @@ private:
 Rva004E156B::~Rva004E156B()
 {
 }
+
+class Rva004E194E
+{
+public:
+	virtual ~Rva004E194E();
+
+private:
+	char m_pad04[8];
+	AsciiStringMember m_member0C;
+};
+
+Rva004E194E::~Rva004E194E()
+{
+}
