@@ -77,3 +77,22 @@ void Rva00300912Holder::write(DataChunkOutput *writer)
 		writer->writeAsciiString(it->first);
 	writer->closeDataChunk();
 }
+
+struct Rva00300998Holder
+{
+	Rva00300912Holder infos[8]; // +0x00
+	void writeList(DataChunkOutput *writer);
+};
+
+// ?writeList@Rva00300998Holder@@QAEXPAVDataChunkOutput@@@Z
+void Rva00300998Holder::writeList(DataChunkOutput *writer)
+{
+	writer->openDataChunk("MPPositionList", 0);
+	Rva00300912Holder *info = infos;
+	int remaining = 8;
+	do {
+		info->write(writer);
+		info++;
+	} while (--remaining);
+	writer->closeDataChunk();
+}
