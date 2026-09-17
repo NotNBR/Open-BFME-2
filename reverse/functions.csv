@@ -7579,3 +7579,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva004C227A@@UAE@XZ,,0x004C227A,25,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,opaque MI dtor three vptrs tail-jmp DieModule
 ??1Rva0025BFE3@@UAE@XZ,,0x0025BFE3,21,Code/GameEngine/Source/Common/FreeMemberDeleters.cpp,matched,opaque dtor null-checked free of member at plus 4
 ??1Rva0030F42E@@UAE@XZ,,0x0030F42E,21,Code/GameEngine/Source/Common/FreeMemberDeleters.cpp,matched,opaque dtor null-checked free of member at plus 4
+??1Rva004FCD14@@UAE@XZ,,0x004FCD14,21,Code/GameEngine/Source/Common/FreeMemberDeleters.cpp,matched,opaque dtor null-checked free of member at plus 4
