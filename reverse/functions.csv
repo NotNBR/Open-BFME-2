@@ -7906,3 +7906,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva004FA830@@UAEPAXI@Z,,0x005C4537,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
 ??_GRva00538C5F@@UAEPAXI@Z,,0x0040FDB5,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
 ??_GRva005C31FB@@UAEPAXI@Z,,0x005C327F,28,Code/GameEngine/Source/Common/AsciiStringFoldDeleters.cpp,matched,scalar deleting dtor; vtable slot 0
+?getDisallowAsianText@CustomMatchPreferences@@QAE_NXZ,,0x0054F5DE,92,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/CustomMatchPreferences_getDisallowAsianText.cpp,matched,ZH verbatim bool twin of NonAsian; register Bool plus raw _strcmpi import; same plumbing
