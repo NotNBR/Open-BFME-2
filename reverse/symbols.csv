@@ -1626,7 +1626,6 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ?update@TimedOperationRef@@QAEIM_N@Z,0x003FE6A0,TU-local holder concept; null-checked throw plus virtual slot-1 update on the embedded TimedOperation; update +0x5c direct call target; ghidra 53B
 ?Capture_Update@HTreeClass@@QAEXH@Z,0x001622B0,address read from the retail REL32 at 0x00162B84 (Base_Update) +0x001660D6 (Combo_Update) +5 more update-loop sites; searches 36B captured-bone records by pivot index and applies the held quaternion/translation (world-space aware)
 ??1Rva0024A797@@UAE@XZ,0x0024A797,opaque MI base dtor (3 vptrs tail-jmp 0x49B47C fold); 36 derived MI dtors tail-call it; identity unproven, address-derived name
-??1Rva0058AD7A@@UAE@XZ,0x0058AD7A,opaque empty base dtor (vptr store plus ret, no cleanup); tail-called by opaque 0x5EE30C which 22 derived dtors tail-call; identity unproven
 ??1Rva00493DEF@@UAE@XZ,0x00493DEF,opaque MI base dtor (SEH, 3 vptrs incl shared 0xBEFCF8 secondary); 20 derived MI dtors tail-call it; identity unproven
 ??1Rva004D759C@@UAE@XZ,0x004D759C,opaque MI base dtor (SEH, vptrs incl shared patterns, list walk); 20 derived MI dtors tail-call it; identity unproven
 ??1Rva006D6470@@UAE@XZ,0x006D6470,opaque SEH base dtor; 8 derived dtors tail-call it; identity unproven
@@ -1648,7 +1647,6 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva005DC73C@@UAE@XZ,0x005DC73C,opaque base dtor; 3 derived dtors tail-call it; identity unproven
 ??1Rva005AFE3F@@UAE@XZ,0x005AFE3F,opaque base dtor; 3 derived dtors tail-call it; identity unproven
 ??1Rva000C79C9@@UAE@XZ,0x000C79C9,opaque MI base dtor (SEH); 2 derived MI dtors tail-call it; identity unproven
-??1Rva005CB23C@@UAE@XZ,0x005CB23C,opaque leaf base dtor (7B mov-vptr plus ret); 6 derived 11B dtors tail-call it; identity unproven
 ??1Rva00145000@@UAE@XZ,0x00145000,opaque SEH base dtor; 11B derived dtor at 0x145610 tail-calls it; identity unproven
 ??1Rva0015CC90@@UAE@XZ,0x0015CC90,opaque SEH base dtor; 11B derived dtor at 0x15D0E0 tail-calls it; identity unproven
 ??1Rva0026E836@@UAE@XZ,0x0026E836,opaque SEH base dtor (5 vptrs +0/+0xC/+0x10/+0x20/+0x24 plus member cleanup); 3 derived 39B dtors tail-call it; identity unproven
@@ -1658,3 +1656,4 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ??1Rva006D63C0@@UAE@XZ,0x006D63C0,opaque SEH base dtor; 2 derived 11B dtors tail-call it; identity unproven
 ??1Rva0044D56A@@UAE@XZ,0x0044D56A,opaque SEH base dtor (vptr 0xC3EF60, AsciiString member at +0x18 via 0x36410, base 0x3B1F65); 2 derived 11B dtors tail-call it; identity unproven
 ??1Rva004E3CD0@@UAE@XZ,0x004E3CD0,opaque SEH base dtor; 2 derived 11B dtors tail-call it; identity unproven
+??1Rva0054D2CF@@UAE@XZ,0x0054D2CF,opaque this-adjust middle dtor (vptr store, this+4, tail-jump); 2 derived 18B dtors tail-call it; identity unproven
