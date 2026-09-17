@@ -8252,3 +8252,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva004C1BAB@@UAEPAXI@Z,,0x004C1CEF,28,Code/GameEngine/Source/Common/Rva004BF951Derived.cpp,matched,emitted scalar deleting dtor from the dtor home TU; dtor row at 0x4C1BAB; flag plus pinned operator delete
 ??1Rva00484F5D@@UAE@XZ,,0x00484F5D,25,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,opaque MI dtor (own 3 vptrs + tail-call pinned middle 0x484EF4)
 ??1Rva004BD78F@@UAE@XZ,,0x004BD78F,25,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,opaque MI dtor (own 3 vptrs + tail-call pinned middle 0x4BD763)
+??_GStructureCollapseUpdateModuleData@@UAEPAXI@Z,,0x00257B5E,28,Code/GameEngine/Source/Common/Thing/ModuleFactory.cpp,matched,Scalar deleting dtor via ModuleFactory TU emission; dtor stays pinned at 0x257B7A; free via ??3 resolving to 0x2FD60

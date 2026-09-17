@@ -1730,7 +1730,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?Get_DX8_Render_State_Value_Name@DX8Wrapper@@SAXAAVStringClass@@KI@Z,0x00121A10,snapshot render-state name resolver; called with the temp plus (state,value) in Set_DX8_Render_State 0x6615F
 ?Get_DX8_Texture_Stage_State_Value_Name@DX8Wrapper@@SAXAAVStringClass@@KI@Z,0x00120B90,snapshot texture-stage name resolver; called with the temp plus (state,value) in Set_DX8_Texture_Stage_State 0x661DD
 ??1StructureCollapseUpdateModuleData@@UAE@XZ,0x00257B7A,109B dtor (frees +0xAC buffer via 0x30830, destroys +0xA0 via 0x257544, ehvec-destroys +0x70 array, destroys +0x64 string via 0x36410, resets vptr to base 0xBBB554); called by deleting dtor 0x257B5E
-??_GStructureCollapseUpdateModuleData@@UAEPAXI@Z,0x00257B5E,20B scalar deleting dtor (dtor + conditional free via 0x2FD60); vtable slot0 of 0xBF43A8; land together with ctor+dtor from one TU (fake-ctor baggage otherwise)
 ?first@Rva000427195@@QAEPAXPAVRva000411084@@@Z,0x00427195,Eva event-name table head fetch; thiscall on Eva+0x34 with the iterator home, returns the first node or null; nodes are {next+0 name+4 key+8}
 ?next@Rva000411084@@QAEPAXXZ,0x00411084,Eva event-name iterator advance; thiscall on the node home with no stack args, returns the next node or null
 ?find@FXListMap@@QBEPAUFXListMapNode@@ABW4NameKeyType@@@Z,0x002888D4,NameKey find over the FXList name map; ICF-shares the address with the Armor hashtable _M_find row and the ObjectIdMap pin; serves FXListStore::findFXList
