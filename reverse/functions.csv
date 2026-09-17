@@ -7919,3 +7919,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?BFMEComputeCRC@@YAIPBEII@Z,,0x003EC8F7,42,Code/GameEngine/Source/GameNetwork/native_packet_crc.cpp,matched,ported from the Open-BFME-1 conversion; /Oy- keeps the ebp frame
 ?GetGameLogicRandomSeedCRC@@YAIXZ,,0x00233F70,17,Code/GameEngine/Source/Common/GameLogicRandomSeedCRC_get.cpp,matched,BFME1 random_value.cpp shape; hashes the logic seed via BFMEComputeCRC
 ?Release_Ref@TextureBaseClass@@QAEXXZ,,0x0061ED10,36,Code/Libraries/Source/WWVegas/WW3D2/TextureBaseReleaseRefThunk.cpp,matched,
+?InitRandom@@YAXI@Z,,0x00233F82,69,Code/GameEngine/Source/Common/GameLogicRandomInit.cpp,matched,BFME1 random_value.cpp shape with frame-override; /Ob0 keeps seedRandom calls out of line
