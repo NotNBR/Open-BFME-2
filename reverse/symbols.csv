@@ -1696,7 +1696,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?_CxxThrowException@@YGXPAX0@Z,0x00629094,CRT-mangled stdcall spelling of the __CxxThrowException@8 thunk (same target); MSVC emits this name for a C++ _CxxThrowException declaration
 ?getNextTokenOrNull@INI@@QAEPBDPBD@Z,0x0002DEED,ZH INI.h:329 OrNull worker; true extent 168B via ret-scan (getNextToken tail-calls it); returns token or NULL instead of throwing
 ?DebugReAllocMemory@@YAPAXPAXI@Z,0x0003E4B0,retail REL32 from Debug::AddOutput grow path; DebugReAllocMemory wrapper body (GlobalReAlloc) rather than raw realloc
-?ScheduleFrameCommand@Debug@@AAEPAXHPBD@Z,0x00039720,sorted insert of (frame,cmd) into Debug +0x9E08 list; sole caller ExecCommand frame-prefix path; body 0.95 banked, needs bound-reload lever
 ?registerObject@PartitionManager@@QAEXPAVObject@@@Z,0x002D7FEC,first call in Object::friend_notifyOfNewMapBoundary 0x28B5EE with ecx=TheRadar global and Object* arg; B1 casts TheRadar to PartitionManager for this call
 ?addObjectToPathfindMap@BFMEPathfinderMapShim@@QAEXPAVObject@@@Z,0x002E7178,second call in Object::friend_notifyOfNewMapBoundary 0x28B5EE via TheAI->pathfinder()+0x10 with Object* arg; 11B wrapper pushing 0/0/1; B1 shim pattern
 ?find@?$StringBase@G@@QBEPBGG@Z,0x00035AB0,StringBase<wchar_t>::find(wchar_t) newline search called by MapMetaData first-line at 0x301552 with pointer return used in null check and index math; mangling compiler-attested from TU build
@@ -1913,3 +1912,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??0MultiIniFieldParse@@QAE@XZ,0x0002BAA0,frameless 27B zeroing ctor over stack buffer at parseObject 0x1F311B; layout +0/+0x40/+0x80 matches BFME1 class
 ??0GenericObjectCreationNugget@@QAE@XZ,0x001F0E32,SEH ctor installing vtable 0xBE1160 called by parseObject new at 0x1F311B; BFME1-attested QAE mangling
 ??1GenericObjectCreationNugget@@MAE@XZ,0x001F31C6,parseObject new-unwind funclet target with vptr reinstall plus member teardown; BFME1-attested protected MAE mangling
+??0Rva0042526Member@@QAE@XZ,0x00042526,opaque 76B bulk-zero member ctor (memset 0x4C via 0x291AE) at nugget +0xB4; called by GenericObjectCreationNugget ctor; identity unproven
