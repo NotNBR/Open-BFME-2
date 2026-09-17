@@ -1915,3 +1915,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??0Rva0042526Member@@QAE@XZ,0x00042526,opaque 76B bulk-zero member ctor (memset 0x4C via 0x291AE) at nugget +0xB4; called by GenericObjectCreationNugget ctor; identity unproven
 ??1RvaVecAscii@@QAE@XZ,0x0002CC70,opaque 12B vector-member dtor (range-destroy via AsciiString _Destroy 0x2CB64); serves GenericObjectCreationNugget members +0x04/+0x114/+0x120; true element type unproven (AsciiString per destroyee)
 ??1RvaVecAnimSet@@QAE@XZ,0x001F0D04,opaque 12B vector-member dtor (range-destroy via AnimSet _Destroy 0x1F0801); serves GenericObjectCreationNugget member +0x14; true element type unproven (AnimSet per destroyee)
+??1Rva00360D26Member@@QAE@XZ,0x00360D26,opaque pool-aware member destructor at +0x8/+0xC of TransportContainModuleData; 13B forwarder body to pool op 0x360CB0; called twice by the 0x1DFA48 dtor
