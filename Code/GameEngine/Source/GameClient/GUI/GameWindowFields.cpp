@@ -126,3 +126,8 @@ void GameWindow::setRva003144FD(int value)
 {
 	m_unk214 = value;
 }
+
+int GameWindow::getRva0031450A()
+{
+	return m_unk214;
+}

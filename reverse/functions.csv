@@ -8247,3 +8247,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?winSetHiliteBorderColor@GameWindow@@QAEHHH@Z,,0x003144D8,37,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
 ??_GRva00494A97@@UAEPAXI@Z,,0x00494B9E,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x494A97; flag plus pinned operator delete
 ?setRva003144FD@GameWindow@@QAEXH@Z,,0x003144FD,13,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
+?getRva0031450A@GameWindow@@QAEHXZ,,0x0031450A,7,Code/GameEngine/Source/GameClient/GUI/GameWindowFields.cpp,matched,
