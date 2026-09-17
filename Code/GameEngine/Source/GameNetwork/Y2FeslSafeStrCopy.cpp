@@ -1,13 +1,15 @@
 // cl: /O2 /DNDEBUG /MD
 
-// FESL bounded string copy at 0x00655700 (98B). It lives in the GameSpy zone
-// (16 callers, all in 0x65xxxx-0x67xxxx) and shares the FESL assert channel
-// proven by Y2FeslAddressParse.cpp: the 0x006587A0 getter hands out the diag
-// object whose virtual slot 0xC reports (expression, file, line). Retail
-// litters the body with the util.h path and the two assert texts ("src" at
-// line 33, "strlen(src) < dstSize" at line 34); the copy itself rides the
-// pre-existing _strncpy thunk pin at 0x0062983E (plain `strncpy` decl, no
-// dllimport, no <string.h> hijack), so no new pins.
+// FESL bounded string copy at 0x00655700 (98B) plus the string/int setter at
+// 0x006557F0 (33B) that uses it. Both live in the GameSpy zone (16 and 3
+// callers respectively, all in 0x65xxxx-0x67xxxx) and share the FESL assert
+// channel proven by Y2FeslAddressParse.cpp: the 0x006587A0 getter hands out
+// the diag object whose virtual slot 0xC reports (expression, file, line).
+// Retail litters the body with the util.h path and the two assert texts
+// ("src" at line 33, "strlen(src) < dstSize" at line 34); the copy itself
+// rides the pre-existing _strncpy thunk pin at 0x0062983E, so no new pins.
+// Spell it plain `strncpy`: C decoration turns that into `_strncpy` (the pin),
+// while a manual `_strncpy` decl decorates to `__strncpy` and never resolves.
 
 #include <string.h>
 
@@ -36,4 +38,21 @@ void Rva00655700(char *dst, unsigned dstSize, const char *src)
 			"..\\..\\source\\include\\fesl/internal/util.h",
 			34);
 	strncpy(dst, src, dstSize);
+}
+
+class Rva006557F0Holder
+{
+public:
+	void set(const char *src, int value);
+
+private:
+	char m_pad[8];
+	char m_text[28];
+	int m_value;
+};
+
+void Rva006557F0Holder::set(const char *src, int value)
+{
+	Rva00655700(m_text, 28, src);
+	m_value = value;
 }
