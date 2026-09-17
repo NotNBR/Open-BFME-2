@@ -8330,3 +8330,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000CF161@W3DFloorDraw@@SA?AW4NameKeyType@@XZ,,0x000CF161,69,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/W3DFloorDrawPoolKey.cpp,matched,
 ?rva000D004C@W3DStreakDraw@@SA?AW4NameKeyType@@XZ,,0x000D004C,69,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/W3DStreakDrawPoolKey.cpp,matched,
 ?rva000D1866@W3DTornadoDraw@@SA?AW4NameKeyType@@XZ,,0x000D1866,69,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/W3DTornadoDrawPoolKey.cpp,matched,
+?rva0024E30E@GateProxyBehavior@@SA?AW4NameKeyType@@XZ,,0x0024E30E,69,Code/GameEngine/Source/GameLogic/Object/Behavior/GateProxyBehaviorPoolKey.cpp,matched,
