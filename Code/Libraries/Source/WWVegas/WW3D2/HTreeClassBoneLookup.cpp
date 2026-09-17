@@ -1,7 +1,8 @@
 // cl: /G7 /DNDEBUG /MD /EHsc
 //
-// HTreeClass::Get_Bone_Index (retail 0x00160B60, 68 bytes) and
-// HTreeClass::Get_Bone_Name (retail 0x00160BB0, 22 bytes).
+// HTreeClass::Get_Bone_Index (retail 0x00160B60, 68 bytes),
+// HTreeClass::Get_Bone_Name (retail 0x00160BB0, 22 bytes) and
+// HTreeClass::Get_Parent_Index (retail 0x00160BD0, 35 bytes).
 //
 // BFME 2 shrank Zero Hour's PivotClass (two 48-byte Matrix3D members plus
 // capture data) to 0x58-byte records: Name[16], Parent at +0x10, two
@@ -39,6 +40,7 @@ class HTreeClass
 public:
 	int Get_Bone_Index(const char * name) const;
 	const char * Get_Bone_Name(int boneidx) const;
+	int Get_Parent_Index(int bone_indx) const;
 
 private:
 	char Name[16];
@@ -66,4 +68,16 @@ const char * HTreeClass::Get_Bone_Name(int boneidx) const
 	assert(boneidx < NumPivots);
 
 	return Pivot[boneidx].Name;
+}
+
+int HTreeClass::Get_Parent_Index(int bone_indx) const
+{
+	assert(bone_indx >= 0);
+	assert(bone_indx < NumPivots);
+
+	if (Pivot[bone_indx].Parent != NULL) {
+		return Pivot[bone_indx].Parent->Index;
+	} else {
+		return 0;
+	}
 }
