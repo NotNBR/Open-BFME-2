@@ -203,3 +203,24 @@ void Rva00657480Holder::set(const char *src)
 {
 	Rva00655700(m_inner->m_text, 16, src);
 }
+
+struct Rva00657470Inner
+{
+	char m_pad[560];
+	unsigned char m_flag;
+};
+
+class Rva00657470Holder
+{
+public:
+	void set(unsigned char value);
+
+private:
+	char m_pad[4];
+	Rva00657470Inner *m_inner;
+};
+
+void Rva00657470Holder::set(unsigned char value)
+{
+	m_inner->m_flag = value;
+}

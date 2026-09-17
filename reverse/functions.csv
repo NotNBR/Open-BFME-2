@@ -8218,3 +8218,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva0066D7E0Holder@@QAEXPBD@Z,,0x0066D7E0,25,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
 ?set@Rva00674A50Holder@@QAEXPBD@Z,,0x00674A50,25,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
 ?set@Rva00657480Holder@@QAEXPBD@Z,,0x00657480,28,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
+?set@Rva00657470Holder@@QAEXE@Z,,0x00657470,16,Code/GameEngine/Source/GameNetwork/Y2FeslSafeStrCopy.cpp,matched,
