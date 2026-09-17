@@ -82,3 +82,18 @@ Rva00578C0E::~Rva00578C0E()
 	if (m_ptr04)
 		free(m_ptr04);
 }
+
+class Rva0057BCEC
+{
+public:
+	virtual ~Rva0057BCEC();
+
+private:
+	void *m_ptr04;
+};
+
+Rva0057BCEC::~Rva0057BCEC()
+{
+	if (m_ptr04)
+		free(m_ptr04);
+}
