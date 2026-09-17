@@ -1623,3 +1623,5 @@ _fprintf,0x002CEC42,statically linked CRT fprintf (not the msvcr71 import at 0xB
 ?findDrawPositions@Radar@@QAEXHHHHPAUICoord2D@@0@Z,0x002D799C,BFME1 Radar findDrawPositions member; localPixelToRadar +0x49 direct call target in Radar cluster; ghidra 266B
 ?clear80@Rva001EAE6FHelper@@QAEPAV1@XZ,0x001EAE6F,Shared 0x80-byte memset helper (memset this 0 0x80 via 0x6291AE; returns this); 48 paired callers; construct +0x4/+0xf direct call targets
 ?update@TimedOperationRef@@QAEIM_N@Z,0x003FE6A0,TU-local holder concept; null-checked throw plus virtual slot-1 update on the embedded TimedOperation; update +0x5c direct call target; ghidra 53B
+?Capture_Update@HTreeClass@@QAEXH@Z,0x001622B0,address read from the retail REL32 at 0x00162B84 (Base_Update) +0x001660D6 (Combo_Update) +5 more update-loop sites; searches 36B captured-bone records by pivot index and applies the held quaternion/translation (world-space aware)
+??1Rva0024A797@@UAE@XZ,0x0024A797,opaque MI base dtor (3 vptrs tail-jmp 0x49B47C fold); 36 derived MI dtors tail-call it; identity unproven, address-derived name
