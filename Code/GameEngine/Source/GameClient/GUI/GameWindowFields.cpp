@@ -35,6 +35,7 @@ public:
 	int winSetEnabledColor(int index, int color);
 	int winSetEnabledBorderColor(int index, int color);
 	int winSetDisabledImage(int index, const Image *image);
+	int winSetDisabledColor(int index, int color);
 
 private:
 	char m_pad[48];
@@ -70,5 +71,13 @@ int GameWindow::winSetDisabledImage(int index, const Image *image)
 	if (index < 0 || index >= 9)
 		return -3;
 	m_instData.m_disabledDrawData[index].image = image;
+	return 0;
+}
+
+int GameWindow::winSetDisabledColor(int index, int color)
+{
+	if (index < 0 || index >= 9)
+		return -3;
+	m_instData.m_disabledDrawData[index].color = color;
 	return 0;
 }
