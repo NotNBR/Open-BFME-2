@@ -9764,14 +9764,13 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?release@Rva007F9610Holder@@QAEXXZ,,0x00665B80,33,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F9610
 ?reset@Rva007F70D0Owner@@QAEXXZ,,0x006637C0,21,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F70D0
 ?reset@Rva007F7140Owner@@QAEXXZ,,0x00663830,21,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7140
-?allocate@Rva007F77B0Block@@QAEXH@Z,,0x00663EA0,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F77B0; ICF-folded in BFME1 so the name is this sweeps pick among its twins
+?allocate@Rva007F77B0Block@@QAEXH@Z,,0x00663EA0,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F77B0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ??0Rva00802D00Element@@QAE@XZ,,0x0066EE10,63,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x00802D00
 ?allocate@Rva007F78E0Block@@QAEXH@Z,,0x006645D0,76,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7F50
 ?allocate@Rva007F7860Block@@QAEXH@Z,,0x00663F50,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7890
 ?clear@Rva007F78E0Block@@QAEXXZ,,0x00663FA0,69,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F78E0
 ?allocate@Rva007F7810Block@@QAEXH@Z,,0x00663F00,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7810
 ?clear@Rva007F6CF0Block@@QAEXXZ,,0x006633E0,40,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F6CF0
-?clear@Rva007F7860Block@@QAEXXZ,,0x006633E0,40,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7860; ICF-folded with 6CF0 clear
 ?getUpgradeActivationMasks@UpgradeMuxData@@QBEXAAUUpgradeMaskType@@0@Z,,0x004CB189,369,Code/GameEngine/Source/Common/Thing/UpgradeMuxData_getUpgradeActivationMasks.cpp,matched,
 ?d_008790b0@@YAHH@Z,,0x006B8950,72,Code/GameEngine/Source/Common/D008790B0RandomSeed.cpp,matched,BFME1 byte-identical donor; b1 0x008790B0
 ?Rva009AA970DumpRaw@@YAXPAURva009AA970Info@@PAXH@Z,,0x001BB3B0,104,Code/GameEngine/Source/Common/Rva009AA970DumpRaw.cpp,matched,BFME1 byte-identical donor; b1 0x009AA970; fopen/fclose C-linkage per retail IAT
@@ -9779,3 +9778,8 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?bfmeScale@@YANI@Z,,0x006B8C60,25,Code/GameEngine/Source/Common/Bfme5TinyThree.cpp,matched,BFME1 byte-identical donor; b1 0x008793D0
 ?bfmeSetSign@Gen_0088A5D0@@QAEXE@Z,,0x00039880,25,Code/GameEngine/Source/Common/Bfme5TinyThree.cpp,matched,BFME1 donor with BFME2 sign offset 0x9F55 per retail bytes; b1 0x0088A5D0
 ?Rva009B47B0ReadBit@@YAHPAUVp6RawBits@@@Z,,0x001C50B0,74,Code/GameEngine/Source/Common/Rva009B47B0ReadBit.cpp,matched,BFME1 byte-identical donor; b1 0x009B47B0
+?bfmeResetVMP@BfmeCtxVMP@@QAEXXZ,,0x00666080,75,Code/GameEngine/Source/Common/BfmeConv1455.cpp,matched,BFME1 byte-identical donor; b1 0x007F9B30
+?bfmeDelTVC@BfmeThingTVC@@QAEPAXE@Z,,0x00665BD0,55,Code/GameEngine/Source/Common/BfmeConv1324.cpp,matched,BFME1 byte-identical donor; b1 0x007F9660
+??0BfmeThingTUA@@QAE@XZ,,0x0066CCC0,50,Code/GameEngine/Source/Common/BfmeConv1324.cpp,matched,BFME1 byte-identical donor; b1 0x008008E0
+?bfmeDelTVA@BfmeThingTVA@@QAEPAXE@Z,,0x00656C30,52,Code/GameEngine/Source/Common/BfmeConv1324.cpp,matched,BFME1 port; CloseHandle import plus scalar delete replace BFME1 helpers
+?bfmeDelTVB@BfmeThingTVB@@QAEPAXE@Z,,0x00176D90,54,Code/GameEngine/Source/Common/BfmeConv1324.cpp,matched,BFME1 port; SysFreeString plus array and scalar delete replace BFME1 helpers

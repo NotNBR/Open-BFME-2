@@ -2096,3 +2096,10 @@ _bfmeHash1229,0x006E7050
 ?ji_009f6ec6@@YAXXZ,0x00629506
 _bfmeMove1242,0x00629506
 ?erase@?$vector@VAsciiString@@V?$allocator@VAsciiString@@@_STL@@@_STL@@QAEPAVAsciiString@@PAV3@0@Z,0x002CCFC,STLport vector<AsciiString>::erase(first,last); 26B body forwards via 0x76614 then AsciiString range-destroy 0x2CB64 plus finish store (ret 8); 82 E8 callers image-wide pushing finish/start pairs incl the two vector::clear lowerings in getUpgradeActivationMasks 0x4CB189 slots; call site in Remap_Mesh 0x16F220 single-texture path; BFME1 meshmatdesc.h Get_Single_Texture attests semantics; 37B ebp-frame body
+??0Rva007E86B0Base@@QAE@XZ,0x00655770
+??0Rva7F4CC0Child@@QAE@XZ,0x00655770
+??0SnapshotDupReplica@@QAE@XZ,0x00655770
+?bfmeBase994C@BfmeC994@@QAEXXZ,0x00655770
+?bfmeInitTUA@BfmeSubTUA@@QAEXXZ,0x00655770
+dup_7e86b0,0x00655770
+?bfmeDtorTVA@BfmeThingTVA@@QAEXXZ,0x0065D180
