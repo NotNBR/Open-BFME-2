@@ -10153,3 +10153,4 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ??1BfmeThingDGD@@QAE@XZ,,0x00664710,363,Code/GameEngine/Source/GameNetwork/BfmeThingDGDDestructor.cpp,matched,BFME1 byte-identical donor with vtable-anchor repair; b1 0x007F8090
 ?Rva006E9160Init@@YGXPAUGen_006e9160_Triple@@@Z,,0x00043F99,32,Code/GameEngineDevice/Source/W3DDevice/GameClient/Gen_006e9160_Init.cpp,matched,BFME1 byte-identical donor; b1 0x006E9160
 ?bfmeGoCFF@BfmeThingCFF@@QAEXPAVBfmeOwnerCFF@@@Z,,0x0039D704,41,Code/GameEngine/Source/Common/BfmeConv593.cpp,matched,BFME1 byte-identical donor; b1 0x000EC860
+?aptKeyCode@@YAPAVAptValue@@XZ,,0x006E8C30,41,Code/GameEngine/Source/Common/SmallGaps/aptKeyCode.cpp,matched,BFME1 byte-identical donor; b1 0x008A5330
