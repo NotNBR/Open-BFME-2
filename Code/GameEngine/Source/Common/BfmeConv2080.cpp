@@ -62,7 +62,6 @@ void Rva009A8880Release(void *q);
 void releaseCodecState(CodecState **q);
 void freeCodecMemory(void *memory);
 
-// ?bfmeFreeCodecJW@@YAHPAPAUCodecState@@@Z present-unmatched
 int bfmeFreeCodecJW(CodecState **p)
 {
 	if (*p != 0)
