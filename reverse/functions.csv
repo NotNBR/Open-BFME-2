@@ -9330,3 +9330,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Get_Render_Device@WW3D@@SAHXZ,,0x00116F80,5,Code/Libraries/Source/WWVegas/WW3D2/ww3d.cpp,matched,E9 thunk to DX8 global getter; BFME1-confirmed
 ?Get_Render_Device@DX8Wrapper@@KAHXZ,,0x0011CDE0,6,Code/Libraries/Source/WWVegas/WW3D2/dx8wrapper.cpp,matched,global-int getter; target of WW3D E9 thunk
 ?Rva00116F50@@YA_NXZ,,0x00116F50,11,Code/Libraries/Source/WWVegas/WW3D2/DX8WrapperDeviceQueries.cpp,matched,DX8 next-device bool query
+?Rva00116F60Get@@YAHXZ,,0x00116F60,6,Code/Libraries/Source/WWVegas/WW3D2/DX8WrapperDeviceQueries.cpp,matched,Global dword getter
