@@ -10327,3 +10327,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?bfmeCellY@Gen_008F7CD0@@QBEHM@Z,,0x00739870,44,Code/GameEngine/Source/Common/BfmeConv1572.cpp,matched,BFME1 byte-identical donor b1 0x008F74B0; Y-file defines Y and X-twin lives at 0x739840
 ?next@Rva007F2350StatsCursor@@QAE_NPAVRva007F2350StatsRecord@@@Z,,0x0065EE40,333,Code/GameEngine/Source/GameNetwork/Rva007F2350StatsCursor.cpp,matched,BFME1 near-miss donor; b1 0x007F2350; immediate-only drift (single literal push)
 ?bfmeKillVF@BfmeThingVF@@QAEPAXH@Z,,0x006672B0,36,Code/GameEngine/Source/Common/BfmeThreeHundredSixtyThree.cpp,matched,BFME1 byte-identical donor b1 0x007FADA0; single ICF pick
+?bfmeStep1_009A75E0@@YAXXZ,,0x001C4300,140,Code/GameEngine/Source/Common/S3GuardedDelegates3.cpp,matched,BFME1 near-miss donor b1 0x009B3A00 immediate-only drift
