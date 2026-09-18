@@ -2921,3 +2921,4 @@ _CreateToolhelp32Snapshot@8,0x00687D98
 _bfme_debugAllocInnerDeallocate_82AD90,0x000237B0
 ?j_0082ad80@@YAXXZ,0x00023790
 _bfme_debugAllocInnerAllocate_82AD80,0x00023790
+?bfmeSymbolSZA@@YAXIPADI@Z,0x0003B9E0
