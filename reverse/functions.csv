@@ -8390,3 +8390,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004C2BC1@LevelGrantSpecialPower@@SA?AW4NameKeyType@@XZ,,0x004C2BC1,69,Code/GameEngine/Source/GameLogic/Object/SpecialPower/LevelGrantSpecialPowerPoolKey.cpp,matched,
 ?rva0004C2F25@ProductionSpeedBonus@@SA?AW4NameKeyType@@XZ,,0x004C2F25,69,Code/GameEngine/Source/GameLogic/Object/SpecialPower/ProductionSpeedBonusPoolKey.cpp,matched,
 ?rva0004C3147@OCLSpecialPower@@SA?AW4NameKeyType@@XZ,,0x004C3147,69,Code/GameEngine/Source/GameLogic/Object/SpecialPower/OCLSpecialPowerPoolKey.cpp,matched,
+?Rva0014CDCB_ReleaseTree@Rva0014CD63_Prototype@@QAEXXZ,,0x0014CDCB,25,Code/Libraries/Source/WWVegas/WW3D2/Rva0014CDCBReleaseTree.cpp,matched,slot6 counted-tree release shared by two prototype vtables; indirect slot0 only
+?rva00045876C@BridgeTowerBehavior@@SA?AW4NameKeyType@@XZ,,0x0045876C,69,Code/GameEngine/Source/GameLogic/Object/Behavior/BridgeTowerBehaviorPoolKey.cpp,matched,
