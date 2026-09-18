@@ -87,3 +87,14 @@ void OptionPreferences::setLANIPAddress(unsigned int ip)
 	AsciiString &slot = (*this)[key];
 	slot = text;
 }
+
+// ?setOnlineIPAddress@OptionPreferences@@QAEXI@Z
+void OptionPreferences::setOnlineIPAddress(unsigned int ip)
+{
+	AsciiString text;
+	text.format("%d.%d.%d.%d", ip >> 24,
+		((ip & 0xff0000) >> 16), ((ip & 0xff00) >> 8), (ip & 0xff));
+	AsciiString key("GameSpyIPAddress");
+	AsciiString &slot = (*this)[key];
+	slot = text;
+}
