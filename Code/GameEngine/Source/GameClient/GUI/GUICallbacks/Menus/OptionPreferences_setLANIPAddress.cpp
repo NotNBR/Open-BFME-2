@@ -1,0 +1,89 @@
+// cl: /O1 /DNDEBUG /MD /D_STLP_USE_STATIC_LIB
+// stlport
+//
+// ?setLANIPAddress@OptionPreferences@@QAEXI@Z, retail 0x002E50BB,
+// 143 bytes. Dedicated TU.
+//
+// ZH/BFME1 OptionPreferences::setLANIPAddress shape verbatim (four-octet
+// "%d.%d.%d.%d" format plus named key plus named slot split assigning through
+// the prefs map). Same push-sink recipe as the landed setCampaignDifficulty
+// sibling. Same string plumbing with pinned operator[]/assign/ctor/release/
+// format callees. Retail keeps default EH.
+
+#include <map>
+
+typedef bool Bool;
+typedef int Int;
+
+template <typename T> struct BfmeStringData
+{
+	int refCount;
+	unsigned short length;
+	unsigned short capacity;
+	T text[1];
+};
+
+template <typename T> class StringBase
+{
+	friend class AsciiString;
+private:
+	StringBase() {}
+	StringBase(const T *text);
+	StringBase(const StringBase<T> &other);
+	~StringBase() { releaseBuffer(); }
+	void releaseBuffer();
+	BfmeStringData<T> *m_data;
+
+public:
+	const T *str() const { return m_data ? &m_data->text[0] : (const T *)""; }
+};
+
+class AsciiString : private StringBase<char>
+{
+public:
+	AsciiString() { m_data = 0; }
+	AsciiString(const char *text) : StringBase<char>(text) {}
+	AsciiString(const AsciiString &other) : StringBase<char>(other) {}
+	~AsciiString() {}
+	AsciiString &operator=(const AsciiString &other);
+	void format(const char *fmt, ...);
+};
+
+bool operator<(const AsciiString &left, const AsciiString &right);
+
+namespace _STL
+{
+template <> struct less<AsciiString>
+{
+	bool operator()(const AsciiString &left, const AsciiString &right) const
+	{
+		return left < right;
+	}
+};
+}
+
+typedef _STL::map<AsciiString, AsciiString> AsciiPreferenceMap;
+
+namespace _STL
+{
+template <> AsciiString &map<AsciiString, AsciiString, less<AsciiString>, allocator<pair<const AsciiString, AsciiString> > >::operator[](const AsciiString &key);
+}
+
+class OptionPreferences : public AsciiPreferenceMap
+{
+public:
+	virtual ~OptionPreferences();
+	void setLANIPAddress(unsigned int ip);
+	void setOnlineIPAddress(unsigned int ip);
+};
+
+// ?setLANIPAddress@OptionPreferences@@QAEXI@Z
+void OptionPreferences::setLANIPAddress(unsigned int ip)
+{
+	AsciiString text;
+	text.format("%d.%d.%d.%d", ip >> 24,
+		((ip & 0xff0000) >> 16), ((ip & 0xff00) >> 8), (ip & 0xff));
+	AsciiString key("IPAddress");
+	AsciiString &slot = (*this)[key];
+	slot = text;
+}
