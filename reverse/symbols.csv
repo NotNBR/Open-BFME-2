@@ -1925,7 +1925,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??0HAnimPrototypeOwner@@QAE@ABVHierarchyPrototypeRef@@@Z,0x0014CED0,4-byte SEH owner copy ctor (by-ref HierarchyPrototypeRef, zeroes m_ptr then delegates to 0x14CDE4); called from a*-lookup 0x14CFBD and factory 0x14CF37
 ?Rva0061F0D0_Contains@@YA_NPBD@Z,0x0061F0D0,28B registry contains-check (null name/registry answers false else tail-calls lookup 0xA21170); called with lowercased a*-key from AnimExists 0x14CE5D
 ??0Rva0014CE67_Prototype@@QAE@PBDHH@Z,0x0014CE67,75B SEH 3-arg prototype ctor (base 0x61ED40 + vtable 0xBD37EC + counted-null + StringClass via 0xF0ED1 + args at +0x1C/+0x20; returns this); called from Create 0x14D058; arg2/3 types unproven (ints assumed)
-??1Rva0014CD63@@UAE@XZ,0x0014CD63,opaque 82B SEH prototype dtor (vptr 0xBD37EC + counted +0x14 + StringClass +0x18 via 0x610A40 + base 0x61ED80); called by scalar-deleting-dtor at 0x14CEB7; identity unproven, address-derived name
 ?Install_UV_Array@MeshMatDescClass@@QAEXHHPAVVector2@@H@Z,0x0015B960,BFME1 meshmatdesc.cpp Install_UV_Array (355B row @0x0092A560); BFME2 retail read_texcoords @0x1896D0 calls it with (DefMatDesc, pass, stage, uvs, count) plus 2 sibling UV-reader calls @0x189B37/@0x189C46
 ??0Rva00180023@@QAE@ABVHierarchyPrototypeRef@@@Z,0x00180023,4-byte SEH owner copy ctor (same shape as 0x17FBED/0x14CED0, own delegate); called from factory 0x18008A
 ??0Rva00136001@@QAE@ABVHierarchyPrototypeRef@@@Z,0x00136001,4-byte SEH owner copy ctor (same shape, own delegate); called from factory 0x136068
