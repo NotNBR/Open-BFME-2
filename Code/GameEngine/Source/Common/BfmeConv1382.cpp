@@ -35,3 +35,31 @@ void BfmeThingVJC::bfmeGoVJC(BfmeMsgVJC *m, int ratingMin, int ratingMax, int do
 	if (downloadMax > -1)
 		m->bfmeSet3VJC("downloadMax", downloadMax);
 }
+
+extern void *g_bfmeVJD;
+
+class BfmeThingVJD
+{
+public:
+	void bfmeGoVJD(BfmeMsgVJC *m, int ratingMin, int ratingMax, int topN, int periodType, int periodsPast, void *b);
+	void bfmeSubVJD(BfmeMsgVJC *m, int n, void *b);
+};
+
+void BfmeThingVJD::bfmeGoVJD(BfmeMsgVJC *m, int ratingMin, int ratingMax, int topN, int periodType, int periodsPast, void *b)
+{
+	void *g = g_bfmeVJD;
+	m->bfmeRunVJC();
+	m->m_bfme1c = 0x626c6f62;
+	m->bfmeSetVJC("TXN", g);
+	bfmeSubVJD(m, topN, b);
+	if (ratingMin > -1)
+		m->bfmeSet3VJC("ratingMin", ratingMin);
+	if (ratingMax > -1)
+		m->bfmeSet3VJC("ratingMax", ratingMax);
+	if (topN > 0)
+		m->bfmeSet3VJC("topN", topN);
+	if (periodType > -1)
+		m->bfmeSet3VJC("periodType", periodType);
+	if (periodsPast > -1)
+		m->bfmeSet3VJC("periodsPast", periodsPast);
+}
