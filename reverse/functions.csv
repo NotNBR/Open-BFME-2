@@ -8430,3 +8430,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004A34C6@BroadcastStealthUpdate@@SA?AW4NameKeyType@@XZ,,0x004A34C6,69,Code/GameEngine/Source/GameLogic/Object/Update/BroadcastStealthUpdatePoolKey.cpp,matched,
 ?rva0004A393C@InvisibilityUpdate@@SA?AW4NameKeyType@@XZ,,0x004A393C,69,Code/GameEngine/Source/GameLogic/Object/Update/InvisibilityUpdatePoolKey.cpp,matched,
 ?rva00045E9FA@ShipSlowDeathBehavior@@SA?AW4NameKeyType@@XZ,,0x0045E9FA,69,Code/GameEngine/Source/GameLogic/Object/Behavior/ShipSlowDeathBehaviorPoolKey.cpp,matched,
+?rva00046082D@WargBehavior@@SA?AW4NameKeyType@@XZ,,0x0046082D,69,Code/GameEngine/Source/GameLogic/Object/Behavior/WargBehaviorPoolKey.cpp,matched,
