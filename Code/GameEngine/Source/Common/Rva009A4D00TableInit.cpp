@@ -23,6 +23,15 @@ extern int g_rva00DFD950[];
 extern const short g_rva00BD7E60[];
 extern const short g_rva00BD7EE0[];
 
+// Rva009A4D00Init (90B @0x001B57D0) needs these same four addresses as
+// immediate constants: the extern spellings above emit lea-form address
+// materialization (93B) where retail uses mov-imm form (90B). The immediates
+// are the retail BFME2 bytes, verified by the gate, not guesses.
+static int *const g_00E23300 = (int *)0x00E23300;
+static int *const g_00DFD950 = (int *)0x00DFD950;
+static const short *const g_00BD7E60 = (const short *)0x00BD7E60;
+static const short *const g_00BD7EE0 = (const short *)0x00BD7EE0;
+
 typedef void (__cdecl *Rva009A8550Fn)(void *);
 extern Rva009A8550Fn volatile g_rva01356DA0;
 
@@ -67,13 +76,13 @@ void Rva009A8550Init(void)
 
 void Rva009A4D00Init(void)
 {
-	g_rva00E23300 = reinterpret_cast<Fn009A8430>(d_009a8430)();
+	*g_00E23300 = reinterpret_cast<Fn009A8430>(d_009a8430)();
 	Rva009A8550Init();
 
-	int *dst = g_rva00DFD950;
-	for (const short *src = g_rva00BD7E60; (int)src < (int)g_rva00BD7EE0; ++src, ++dst)
+	int *dst = g_00DFD950;
+	for (const short *src = g_00BD7E60; (int)src < (int)g_00BD7EE0; ++src, ++dst)
 		*dst = *src / 2 + 2;
 
-	reinterpret_cast<Fn009A5AA0>(d_009a5aa0)(g_rva00DFD950, g_rva00DFD950, g_rva00DFD950, 7);
+	reinterpret_cast<Fn009A5AA0>(d_009a5aa0)(g_00DFD950, g_00DFD950, g_00DFD950, 7);
 	bfmeRun_009A75E0();
 }
