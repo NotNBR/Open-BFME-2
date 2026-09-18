@@ -2014,3 +2014,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ??0RvaSmartPtr12@@QAE@ABV0@@Z,0x0004CC19,RvaSmartPtr12 copy ctor: copies dword at that plus helper 0x4CB9A or zeroes; call target of the RVO smart-ptr getter at 0x3FDA90 (hidden retptr copy into out)
 ?Peek_Texture@MaterialInfoClass@@QAE?AV?$RefCountPtr@VTextureClass@@@@H@Z,0x00135F35,BFME2 texture-owning rewrite of BFME1 Peek_Texture: returns RefCountPtr by value via hidden retptr (copy into out plus Add_Ref through 0x424BB then returns out); called with (src index out) from MaterialRemapperClass ctor Src and Dest fills plus 2 sibling sites 0x136D8A and 0x14B83A
 ?_bfme_debugReportingEnabled@@YA_NXZ,0x000387C0,BFME1-attested name for the matched placeholder row; Debug singleton flag check gating the GameLODManager report path; resolves getAudioLODIndex at 0x202C76
+??1PointGroupClass@@UAE@XZ,0x00178ED0
