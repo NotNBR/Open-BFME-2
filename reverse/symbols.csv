@@ -1924,3 +1924,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?lookupVersionValue@VersionBlockParser@@QAEPBDPBD0@Z,0x00427EDA,Version-block key lookup returning char* or default; called 7x in 0x23870E for ID USER MACHINE GUID TIME DATE CONFIG and 1x in 0x238646
 ??1VersionBlockParserInner@@QAE@XZ,0x002385FF,Version-block inner list dtor stepping 0x18 elements via 0x2385E6 then free via 0x30830; called with parser+4 at end of 0x23870E and 0x238646
 ?initVersionGlobals@@YAHXZ,0x00238646,Version global init filling ints at 0xDFE760-0xDFE76C and returning bool to 0xDFE774; called once via guard 0xDFE778 in 0x23870E
+??0HAnimPrototypeOwner@@QAE@ABVHierarchyPrototypeRef@@@Z,0x0014CED0,4-byte SEH owner copy ctor (by-ref HierarchyPrototypeRef, zeroes m_ptr then delegates to 0x14CDE4); called from a*-lookup 0x14CFBD and factory 0x14CF37
