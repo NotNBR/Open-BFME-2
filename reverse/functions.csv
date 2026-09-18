@@ -9387,3 +9387,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Blit_Char@FontCharsClass@@QAEXGPAGHHH@Z,,0x001587C0,215,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassBlitChar.cpp,matched,BFME1 BFME-blit verbatim plus load helper; caller inside Build_Sentence_Not_Centered
 ?get@Rva000788FFFloatField@@QBEMXZ,,0x000788FF,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,BFME1 DispFloatFieldGetters port; 7B fld getter at disp 0x4EC; second of 6-contiguous cluster
 ?get@Rva00078906FloatField@@QBEMXZ,,0x00078906,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,BFME1 DispFloatFieldGetters port; 7B fld getter at disp 0x4F0; third of 6-contiguous cluster
+?get@Rva0007890DFloatField@@QBEMXZ,,0x0007890D,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,BFME1 DispFloatFieldGetters port; 7B fld getter at disp 0x4F4; fourth of 6-contiguous cluster
