@@ -9760,3 +9760,15 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?bfmeFindV20@@YGHPBDII@Z,,0x000276B0,136,Code/GameEngine/Source/Common/BfmeConv1460.cpp,matched,BFME1 byte-identical donor; b1 0x0082E160
 ?isValid@ObjectFilter@@QBE_NXZ,,0x00360CED,57,Code/GameEngine/Source/GameLogic/Object/ObjectFilter_isValid.cpp,matched,ammo-descriptor validity gate over global 0x94-stride table with flag at +0x88; BFME1 Weapon_getRemainingAmmo same call shape
 ?bfmeCloseBT@BfmeHostBT@@QAEXPAX@Z,,0x00664C50,98,Code/GameEngine/Source/GameNetwork/BfmeConv1918.cpp,matched,BFME1 byte-identical donor; b1 0x007F85D0
+??0Rva00802E70Element@@QAE@XZ,,0x0066EF00,43,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x00802E70
+?release@Rva007F9610Holder@@QAEXXZ,,0x00665B80,33,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F9610
+?reset@Rva007F70D0Owner@@QAEXXZ,,0x006637C0,21,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F70D0
+?reset@Rva007F7140Owner@@QAEXXZ,,0x00663830,21,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7140
+?allocate@Rva007F77B0Block@@QAEXH@Z,,0x00663EA0,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F77B0; ICF-folded in BFME1 so the name is this sweeps pick among its twins
+??0Rva00802D00Element@@QAE@XZ,,0x0066EE10,63,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x00802D00
+?allocate@Rva007F78E0Block@@QAEXH@Z,,0x006645D0,76,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7F50
+?allocate@Rva007F7860Block@@QAEXH@Z,,0x00663F50,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7890
+?clear@Rva007F78E0Block@@QAEXXZ,,0x00663FA0,69,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F78E0
+?allocate@Rva007F7810Block@@QAEXH@Z,,0x00663F00,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7810
+?clear@Rva007F6CF0Block@@QAEXXZ,,0x006633E0,40,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F6CF0
+?clear@Rva007F7860Block@@QAEXXZ,,0x006633E0,40,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7860; ICF-folded with 6CF0 clear

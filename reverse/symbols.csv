@@ -2052,7 +2052,6 @@ _bfmeHash1229,0x006E7050
 ?bfmeLogGetESI@@YAPAVBfmeLogESI@@XZ,0x006587A0
 ?bfmeReportVJO@@YAPAVBfmeRVJO@@XZ,0x006587A0
 ?bfmeSet1251@BfmeSub1251@@QAEXPAX@Z,0x0066C760
-?allocate@Rva007F78E0Block@@QAEXH@Z,0x006645D0
 ?allocate@Rva00801600@@QAEXH@Z,0x0066DEB0
 ?allocate@Rva00802040Arr@@QAEXH@Z,0x0066DEB0
 ?bfmeUse1251@BfmeSub2_1251@@QAEXPAX@Z,0x006645D0
@@ -2068,7 +2067,6 @@ _bfmeHash1229,0x006E7050
 ?bfmeDtorBTYA@BfmeSlotTYA@@QAEXXZ,0x00663FA0
 ?clear@Rva007F6BA0@@QAEXXZ,0x006632D0
 ?clear@Rva007F6C60@@QAEXXZ,0x00663370
-?clear@Rva007F78E0Block@@QAEXXZ,0x00663FA0
 ?m@Gen_00800280@@QAEPAXXZ,0x00672310
 ?reset@Rva00800290Buffer@@QAEXXZ,0x0066C730
 ?Rva009A8550Init@@YAXXZ,0x001B8FB0
@@ -2097,3 +2095,4 @@ _bfmeHash1229,0x006E7050
 ?bfmeFreeVCC@@YAXPAXH@Z,0x0065D030
 ?ji_009f6ec6@@YAXXZ,0x00629506
 _bfmeMove1242,0x00629506
+?erase@?$vector@VAsciiString@@V?$allocator@VAsciiString@@@_STL@@@_STL@@QAEPAVAsciiString@@PAV3@0@Z,0x002CCFC,STLport vector<AsciiString>::erase(first,last); 26B body forwards via 0x76614 then AsciiString range-destroy 0x2CB64 plus finish store (ret 8); 82 E8 callers image-wide pushing finish/start pairs incl the two vector::clear lowerings in getUpgradeActivationMasks 0x4CB189 slots; call site in Remap_Mesh 0x16F220 single-texture path; BFME1 meshmatdesc.h Get_Single_Texture attests semantics; 37B ebp-frame body
