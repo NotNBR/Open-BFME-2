@@ -10422,3 +10422,4 @@ _math_sin,,0x007483D0,40,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 dono
 _math_abs,,0x007483A0,34,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
 _math_sqrt,,0x007485F0,34,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
 _math_randomseed,,0x00748A30,30,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+??$_Destroy@PAURva001D28F0Element@@@_STL@@YAXPAURva001D28F0Element@@0@Z,,0x00689CB0,33,Code/Libraries/Source/WWVegas/WWLib/Rva001D25F0VectorInsertOverflow.cpp,matched,vector TU already emits range destroy stride 0x1C via existing dtor row no source change
