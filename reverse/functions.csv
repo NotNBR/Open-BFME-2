@@ -10381,3 +10381,4 @@ _luaG_symbexec,,0x0074CEF0,437,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 
 ?notifyEcho@FeslEchoNotifier@@QAEXXZ,,0x0066D140,227,Code/GameEngine/Source/GameNetwork/FeslEchoNotifier.cpp,matched,BFME1 near-miss donor b1 0x00800D60 immediate-only drift
 ?d_008830d0@Rva008830D0Class@@QAEPAV1@H@Z,,0x0003CC80,21,Code/GameEngine/Source/Common/Bfme/Rva008830D0.cpp,matched,BFME1 donor with address-drift repair; retail pushes 0xBBE8DC which holds 0x
 ?Rva007E93C0@@YGXPAVRva007E8810Message@@PBD11HHH11_N2@Z,,0x006563B0,223,Code/GameEngine/Source/GameNetwork/Rva007E93C0Acct.cpp,matched,BFME1 near-miss donor b1 0x007E93C0 immediate-only drift
+?bfmeGoBDB@@YAXPAXPAVBfmeSubBDB@@@Z,,0x00663000,17,Code/GameEngine/Source/Common/BfmeConv443.cpp,matched,BFME1 byte-identical donor; b1 0x0021A2F0; thiscall shape refutes free-function twins; donor-attested bfmeDoBDB pin only
