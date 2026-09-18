@@ -23,3 +23,19 @@ int Rva0028A952WordIntField::get() const
 {
 	return m_value;
 }
+
+class Rva0006E185WordIntField
+{
+public:
+	int get() const;
+
+private:
+	char m_pad[0x5E2];
+	unsigned short m_value; // +0x5E2
+};
+
+// ?get@Rva0006E185WordIntField@@QBEHXZ
+int Rva0006E185WordIntField::get() const
+{
+	return m_value;
+}
