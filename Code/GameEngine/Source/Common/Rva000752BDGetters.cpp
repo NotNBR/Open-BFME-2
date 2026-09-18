@@ -11,3 +11,12 @@ int Rva000752BDGet(void)
 {
 	return g_Va00E08D30;
 }
+
+// ?Rva000752C3Get@@YAHXZ @ 0x000752C3 (6B): same shape over 0x00E08CA8.
+
+extern int g_Va00E08CA8;
+
+int Rva000752C3Get(void)
+{
+	return g_Va00E08CA8;
+}
