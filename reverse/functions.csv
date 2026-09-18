@@ -9382,3 +9382,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva0066DD00DwordField@@QBEHXZ,,0x0066DD00,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
 ?get@Rva0066EA50DwordField@@QBEHXZ,,0x0066EA50,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
 ?get@Rva0066EA60DwordField@@QBEHXZ,,0x0066EA60,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
+??1Rva005C3F02@@UAE@XZ,,0x005C3F02,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x5C3EE8
