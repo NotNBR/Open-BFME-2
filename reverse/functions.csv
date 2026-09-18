@@ -8348,3 +8348,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000452DA3@WallHubBehavior@@SA?AW4NameKeyType@@XZ,,0x00452DA3,69,Code/GameEngine/Source/GameLogic/Object/Behavior/WallHubBehaviorPoolKey.cpp,matched,
 ?rva0004561C1@BuildingBehavior@@SA?AW4NameKeyType@@XZ,,0x004561C1,69,Code/GameEngine/Source/GameLogic/Object/Behavior/BuildingBehaviorPoolKey.cpp,matched,
 ?rva000467EE1@TransportContain@@SA?AW4NameKeyType@@XZ,,0x00467EE1,69,Code/GameEngine/Source/GameLogic/Object/Contain/TransportContainPoolKey.cpp,matched,
+?rva00047A0E6@HordeGarrisonContain@@SA?AW4NameKeyType@@XZ,,0x0047A0E6,69,Code/GameEngine/Source/GameLogic/Object/Contain/HordeGarrisonContainPoolKey.cpp,matched,
