@@ -8652,3 +8652,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Resize@?$VectorClass@UWeightInfoStruct@NamedPivotMapClass@@@@UAE_NHPBUWeightInfoStruct@NamedPivotMapClass@@@Z,,0x00197270,375,Code/Libraries/Source/WWVegas/WW3D2/hanim_weight_vector_resize.cpp,matched,
 ?parseBitString32@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EB38,277,Code/GameEngine/Source/Common/System/INI_parseBitString32.cpp,matched,BFME1 parseBitString32 verbatim plus member scanIndexList and filler-throws
 ?parseBitString8@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F1DC,56,Code/GameEngine/Source/Common/System/INI_parseBitString8.cpp,matched,BFME1 parseBitString8 via landed parseBitString32 plus throw-1
+?parseBitString16@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F21A,62,Code/GameEngine/Source/Common/System/INI_parseBitString16.cpp,matched,BFME1 parseBitString16 verbatim via landed parseBitString32
