@@ -2252,3 +2252,5 @@ __strlwr,0x006299A6
 ?bfmeReset1015@BfmeL1015@@QAEXXZ,0x00655780
 ?clear@BfmeC994@@QAEXXZ,0x00655780
 ?m@Gen_007e86c0@@QAEXXZ,0x00655780
+?removeObjectFromLookupTable@GameLogic@@QAEXPAVObject@@@Z,0x00240144
+?addObjectToLookupTable@GameLogic@@QAEXPAVObject@@@Z,0x00242AC2
