@@ -10341,3 +10341,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?rva_192000_swap_unsigned_short@@YAXPAG0@Z,,0x00531F25,23,Code/GameEngine/Source/Common/Rva192000SwapUnsignedShort.cpp,matched,BFME1 byte-identical donor b1 0x00192000; single pick over bare thunks
 ?rva002E27F0@@YAXPAX00@Z,,0x000383D0,30,Code/GameEngine/Source/Common/Rva002E27F0Forward.cpp,matched,BFME1 near-miss donor; b1 0x002E27F0; ICF pick (3-arg arity refutes void twin); vtable slot 0x80 here not 0x94
 ?bfmeApply1040@@YAXPAUBfmeS1040@@H@Z,,0x001B70A0,277,Code/GameEngine/Source/Common/BfmeConv1040.cpp,matched,BFME1 donor with extern-array table repair; b1 0x009A6630
+?bfmeGo1040B@@YAXPAUBfmeS1040@@H@Z,,0x001B71C0,45,Code/GameEngine/Source/Common/BfmeConv1040.cpp,matched,BFME1 byte-identical donor; b1 0x009A6750
