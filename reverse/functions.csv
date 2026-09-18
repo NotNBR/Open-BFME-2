@@ -10364,3 +10364,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?bfmeGoVFD@@YGXPAUBfmeThingVFD@@@Z,,0x00663E50,50,Code/GameEngine/Source/Common/BfmeConv1351.cpp,matched,BFME1 byte-identical donor; b1 0x007F7760; body present-unmatched row-only
 _luaG_symbexec,,0x0074CEF0,437,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 near-miss donor b1 0x00996790; immediate-only drift in switch jump-table base
 ?bfmeDelTWA@BfmeThingTWA@@QAEPAXE@Z,,0x00664FF0,59,Code/GameEngine/Source/Common/BfmeConv1325.cpp,matched,BFME1 byte-identical donor extract; b1 0x007F8970; ICF-folded in BFME1 so the name is this sweep single pick among its twins
+?teardown@Rva007F55F0Host@@QAEXXZ,,0x00661E10,48,Code/GameEngine/Source/GameNetwork/Rva007F55F0Teardown.cpp,matched,BFME1 byte-identical donor; b1 teardown twin of bfmeDelTWB
