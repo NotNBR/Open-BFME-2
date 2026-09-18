@@ -230,6 +230,7 @@ LightClass::LightClass(const LightClass & src) :
  * HISTORY:                                                                                    *
  *   3/21/98    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ??4LightClass@@QAEAAV0@ABV0@@Z present-unmatched
 LightClass & LightClass::operator = (const LightClass & that)
 {
 	if (this != &that) {
@@ -285,29 +286,15 @@ LightClass::~LightClass(void)
  * HISTORY:                                                                                    *
  *   3/21/98    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ?Clone@LightClass@@QBEPAVRenderObjClass@@XZ present-unmatched
 RenderObjClass * LightClass::Clone(void) const
 {
 	return W3DNEW LightClass(*this);
 }
 
 
-/***********************************************************************************************
- * LightClass::Notify_Added -- lights add themselves to the VP list when added                 *
- *                                                                                             *
- * INPUT:                                                                                      *
- *                                                                                             *
- * OUTPUT:                                                                                     *
- *                                                                                             *
- * WARNINGS:                                                                                   *
- *                                                                                             *
- * HISTORY:                                                                                    *
- *   2/26/99    GTH : Created.                                                                 *
- *=============================================================================================*/
-void LightClass::Notify_Added(SceneClass * scene)
-{
-	RenderObjClass::Notify_Added(scene);
-	scene->Register(this,SceneClass::LIGHT);
-}
+/* NOTE: LightClass::Notify_Added lives in light_notify.cpp (split TU: direct
+** BFME1 scene.h keeps Scene::Register at retail vtable +0x38). */
 
 
 /***********************************************************************************************
@@ -322,6 +309,7 @@ void LightClass::Notify_Added(SceneClass * scene)
  * HISTORY:                                                                                    *
  *   2/26/99    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ?Notify_Removed@LightClass@@UAEXPAVSceneClass@@@Z present-unmatched
 void LightClass::Notify_Removed(SceneClass * scene)
 {
 	scene->Unregister(this,SceneClass::LIGHT);
@@ -342,6 +330,7 @@ void LightClass::Notify_Removed(SceneClass * scene)
  * HISTORY:                                                                                    *
  *   12/8/98    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ?Get_Obj_Space_Bounding_Sphere@LightClass@@QBEXAAVSphereClass@@@Z present-unmatched
 void LightClass::Get_Obj_Space_Bounding_Sphere(SphereClass & sphere) const
 {
 	sphere.Center.Set(0,0,0);
@@ -361,6 +350,7 @@ void LightClass::Get_Obj_Space_Bounding_Sphere(SphereClass & sphere) const
  * HISTORY:                                                                                    *
  *   12/8/98    GTH : Created.                                                                 *
  *=============================================================================================*/
+// ?Get_Obj_Space_Bounding_Box@LightClass@@QBEXAAVAABoxClass@@@Z present-unmatched
 void LightClass::Get_Obj_Space_Bounding_Box(AABoxClass & box) const
 {
 	float r = Get_Attenuation_Range();
