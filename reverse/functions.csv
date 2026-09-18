@@ -10041,3 +10041,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?Get_Char_Metric@FontCharsClass@@QAEHG@Z,,0x00158690,73,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClass_Get_Char_Metric.cpp,matched,BFME1 donor with loadCharacterData callee adaptation (sibling Spacing precedent); b1 0x00941400
 ?readBlock@Rva0096D2C0Owner@@QAE_NPAVBfmeChunkVFC@@PAURva0096D2C0Record@@@Z,,0x00188130,52,Code/GameEngine/Source/Common/Rva0096D2C0ReadBlock.cpp,matched,BFME1 byte-identical donor; b1 0x0096D2C0
 ?bfmeGoUVB@@YAHPAUBfmeRecUVB@@PAD@Z,,0x0066C480,98,Code/GameEngine/Source/Common/BfmeConv1344.cpp,matched,BFME1 byte-identical donor; b1 0x007FFFD0; 2 DIR32 string literal(s) agree
+?bfmeGoVJX@BfmeThingVJX@@QAEXH@Z,,0x006269E0,70,Code/GameEngine/Source/Common/BfmeConv1395.cpp,matched,BFME1 byte-identical donor; b1 0x009F4020
