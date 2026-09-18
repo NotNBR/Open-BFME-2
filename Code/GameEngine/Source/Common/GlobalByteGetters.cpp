@@ -85,3 +85,12 @@ unsigned char Rva0003C100GetByte(void)
 {
 	return g_Va00DE08A8;
 }
+
+// ?Rva00116F70GetByte@@YAEXZ @ 0x00116F70 (6B) over 0x00DEDA06.
+
+extern unsigned char g_Va00DEDA06;
+
+unsigned char Rva00116F70GetByte(void)
+{
+	return g_Va00DEDA06;
+}
