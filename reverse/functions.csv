@@ -9849,3 +9849,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?isReady@Rva007F57C0ThresholdPredicate@@QBEHXZ,,0x00661F70,22,Code/GameEngine/Source/Common/Rva007F57C0ThresholdPredicate.cpp,matched,BFME1 byte-identical donor; b1 0x007F57C0
 ?rva0066b3e0@@YAHHH@Z,,0x004D39F0,22,Code/GameEngine/Source/Common/Rva0066B3E0Adj.cpp,matched,BFME1 byte-identical donor; b1 0x0066B3E0
 ?set@Rva0026E4A0@@QAEAAV1@PAV1@@Z,,0x00262161,21,Code/GameEngine/Source/Common/Rva0026E4A0Set.cpp,matched,BFME1 byte-identical donor; b1 0x0026E4A0
+?assign@Rva00427A70@@QAEPAXPAPAX@Z,,0x005E7184,20,Code/GameEngine/Source/Common/Bfme/Rva00427A70_assign.cpp,matched,BFME1 byte-identical donor; b1 0x00427A70
