@@ -28,6 +28,7 @@ public:
 	StealthUpdate *getStealth() const;
 	AIUpdateInterface *getAI();
 	RadarObject *friend_getRadarData();
+	void *rva00313EA8() const;
 	Bool testStatus( ObjectStatusTypes bit ) const;
 	Bool isKindOf( KindOfType kind ) const;
 
@@ -75,6 +76,19 @@ AIUpdateInterface *Object::getAI()
 RadarObject *Object::friend_getRadarData()
 {
 	return m_radarData;
+}
+
+// ?rva00313EA8@Object@@QBEPAXXZ
+// Retail 0x00313EA8. Unclaimed 7B getter in the Object module run at
+// 0x313E8C..0x313EBD (behaviors/body/stealth/ai/radar all 7B here). Reads
+// [ecx+0x1A4], the slot between m_1A0 and m_radarData. Same-Object evidence:
+// FUN_004A03BF calls it on the same esi as the five proven getters and caches
+// the result alongside radar/ai (0xA0440/0xA044A/0xA0454). Semantic identity
+// (physics vs contain vs disabledMask vs partitionData) unproven, so the name
+// keeps the address token per the opaque convention.
+void *Object::rva00313EA8() const
+{
+	return m_1A4;
 }
 
 // ?testStatus@Object@@QBE_NW4ObjectStatusTypes@@@Z
