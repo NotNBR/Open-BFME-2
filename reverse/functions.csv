@@ -9251,3 +9251,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00204094@@YAXXZ,,0x00204094,83,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_setFrame.cpp,matched,
 ?Rva00171670GetByte@@YAEXZ,,0x00171670,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DEC3DA
 ?enable@Rva0033F971ByteOneSetter@@QAEXXZ,,0x0033F971,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte one-setter
+?disable@Rva0033F979ByteZeroSetter@@QAEXXZ,,0x0033F979,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte zero-setter
