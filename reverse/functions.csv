@@ -8459,3 +8459,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?setMaxPoints@QuickMatchPreferences@@QAEXH@Z,,0x005DF8CF,121,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_setMaxPoints.cpp,matched,ZH setMaxPoints verbatim with named key and slot split
 ?setMinPoints@QuickMatchPreferences@@QAEXH@Z,,0x005DF948,121,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_setMinPoints.cpp,matched,ZH setMinPoints verbatim with named key and slot split
 ?setWaitTime@QuickMatchPreferences@@QAEXH@Z,,0x005DF9C1,121,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_setWaitTime.cpp,matched,ZH setWaitTime verbatim with named key and slot split
+?setNumPlayers@QuickMatchPreferences@@QAEXH@Z,,0x005DFA3A,121,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_setNumPlayers.cpp,matched,ZH setNumPlayers verbatim with named key and slot split
