@@ -9968,3 +9968,7 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeReplaceV53@@YGXIIPADI@Z,,0x0002B750,241,Code/GameEngine/Source/Common/BfmeConv1497.cpp,matched,BFME1 byte-identical donor; b1 0x00831BE0
 ?bfmeWrapInsertV52@@YGXPAD00@Z,,0x0002B970,86,Code/GameEngine/Source/Common/BfmeConv1496.cpp,matched,BFME1 byte-identical donor; b1 0x00831E00
 ?bfmeInitCodecJX@@YAHPAPAUCodecState@@HH@Z,,0x001B5840,176,Code/GameEngine/Source/Common/BfmeConv2080.cpp,matched,BFME1 byte-identical donor; b1 0x009A4D80
+?bfmeFwdVML@BfmeStrVML@@QAEXHHHHH@Z,,0x0002B420,52,Code/GameEngine/Source/Common/BfmeConv1433.cpp,matched,BFME1 byte-identical donor; b1 0x008318B0
+?bfmeWrapInsertV51@@YGXPAD00@Z,,0x0002BA10,81,Code/GameEngine/Source/Common/BfmeConv1495.cpp,matched,BFME1 byte-identical donor; b1 0x00831EA0
+?copy@?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@QBEIPADII@Z,,0x00024F20,152,Code/Libraries/Source/WWVegas/WWLib/stlport_narrow_string_copy.cpp,matched,BFME1 byte-identical donor; b1 0x0082C490
+?bfmeInsertV23@BfmeStrV23@@QAEPAV1@IPAV1@@Z,,0x0002A970,185,Code/GameEngine/Source/Common/BfmeConv1463.cpp,matched,BFME1 byte-identical donor; b1 0x00830FC0
