@@ -8369,3 +8369,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B627F@MaxHealthUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B627F,69,Code/GameEngine/Source/Common/System/MaxHealthUpgradePoolKey.cpp,matched,
 ?rva0004B63E3@ModelConditionUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B63E3,69,Code/GameEngine/Source/Common/System/ModelConditionUpgradePoolKey.cpp,matched,
 ?rva0004B66D9@AttributeModifierUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B66D9,69,Code/GameEngine/Source/Common/System/AttributeModifierUpgradePoolKey.cpp,matched,
+?rva0004B6802@CastleUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B6802,69,Code/GameEngine/Source/Common/System/CastleUpgradePoolKey.cpp,matched,
