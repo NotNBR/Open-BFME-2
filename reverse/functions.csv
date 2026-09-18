@@ -8557,3 +8557,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseUnsignedByte@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EE6D,75,Code/GameEngine/Source/Common/System/INI_parseUnsignedByte.cpp,matched,
 ?parseShort@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EEB9,79,Code/GameEngine/Source/Common/System/INI_parseShort.cpp,matched,
 ??$__linear_insert@PAUS4SortElem8@@U1@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@0U1@US4Cmp00625C10@@@Z,,0x006262E0,114,Code/Libraries/Source/WWVegas/WWLib/stlport_linear_insert_s4sortelem8_desc.cpp,matched,Descending twin of 0x626260; greater-than; unguarded arm via alias pin to 0x625A30
+?rva000486E31@AssistedTargetingUpdate@@SA?AW4NameKeyType@@XZ,,0x00486E31,69,Code/GameEngine/Source/GameLogic/Object/Update/AssistedTargetingUpdatePoolKey.cpp,matched,cached pool-name key; pool string AssistedTargetingUpdate; /O1 static-guard EH; nameToKey row
