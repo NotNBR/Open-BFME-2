@@ -60,8 +60,20 @@ public:
 
 private:
 	Node *_M_clone_node_for_copy(Node *x);
+	Node *_M_create_node(const Value &x);
 	Node *_M_copy(Node *x, Node *p);
 };
+
+template <class Key, class Value, class KeyOfValue, class Compare, class Alloc>
+typename _Rb_tree<Key, Value, KeyOfValue, Compare, Alloc>::Node *
+_Rb_tree<Key, Value, KeyOfValue, Compare, Alloc>::_M_clone_node_for_copy(Node *x)
+{
+	Node *top = _M_create_node(x->m_value);
+	top->m_color = x->m_color;
+	top->m_left = 0;
+	top->m_right = 0;
+	return top;
+}
 
 template <class Key, class Value, class KeyOfValue, class Compare, class Alloc>
 typename _Rb_tree<Key, Value, KeyOfValue, Compare, Alloc>::Node *
@@ -92,5 +104,6 @@ typedef allocator<MapIntIntValue> MapIntIntAlloc;
 typedef _Rb_tree<int, MapIntIntValue, MapIntIntKeyOf, MapIntIntCompare, MapIntIntAlloc> MapIntIntTree;
 
 template MapIntIntTree::Node *MapIntIntTree::_M_copy(Node *x, Node *p);
+template MapIntIntTree::Node *MapIntIntTree::_M_clone_node_for_copy(Node *x);
 
 }
