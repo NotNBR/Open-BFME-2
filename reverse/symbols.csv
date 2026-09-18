@@ -2983,3 +2983,4 @@ _bfmeFreeBYX@4,0x0065478A
 ?setTimeOfDay@W3DGameClientShadowShim@@QAEXW4TimeOfDay@@@Z,0x0009A64D
 ?bfmeGet@Gen_009292E0@@QBE?AVBfmeHandleCX@@HH@Z,0x0015A180
 ?bfmeGetAUZA@BfmeSubAUZA@@QBE?AUBfmeHandleUZA@@HH@Z,0x0015A180
+??$__copy@PAURva001D28F0Element@@PAU1@H@_STL@@YAPAURva001D28F0Element@@PAU1@00ABUrandom_access_iterator_tag@0@PAH@Z,0x00689450
