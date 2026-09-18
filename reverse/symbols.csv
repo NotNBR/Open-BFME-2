@@ -1999,4 +1999,3 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?Rva001171B0@@YAXXZ,0x001171B0,opaque: Win9x-branch texture worker called from Reset_D3D_Device 0x00431E0 (SEH body with Lock and Release_Ref calls); address proven by REL32, semantic identity unproven
 ?clipCursorToClient@@YAXXZ,0x000430C8,clip cursor to client rect via GetClientRect plus ClientToScreen plus ClipCursor imports; BFME1-confirmed name; called from Reset_D3D_Device 0x00431E5
 ?searchEntries@VersionBlockParser@@SAPBXPBX00PBQBD0H@Z,0x00427DEA,binary search over 0x18 version records with range resolution; called by findEntry wrapper 0x427EB9; opaque helper
-?Get_Render_Device@DX8Wrapper@@KAHXZ,0x0011CDE0,DX8 render-device-index global getter (mov eax,[0xDB5FD0]; ret); target of WW3D E9 thunk 0x116F80 which BFME1 source calls as DX8Wrapper::Get_Render_Device

@@ -1571,7 +1571,6 @@ int DX8Wrapper::Get_Render_Device_Count(void)
 	return _RenderDeviceNameTable.Count();
 
 }
-// ?Get_Render_Device@DX8Wrapper@@ present-unmatched
 int DX8Wrapper::Get_Render_Device(void)
 {
 	assert(IsInitted);
