@@ -9247,3 +9247,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva003BA648DwordSlot@@QAEXH@Z,,0x003BA648,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?rva00203B47@Rva00203B47Host@@QAE_NXZ,,0x00203B47,106,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_appGate.cpp,matched,
 ?rva00203C21@@YAXXZ,,0x00203C21,89,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_setSides.cpp,matched,
+?rva001DCD1C@GameLogic@@QAE_NXZ,,0x001DCD1C,32,Code/GameEngine/Source/GameLogic/System/GameLogicModeGateChecks.cpp,matched,

@@ -12,14 +12,22 @@ class GameLogic
 {
 public:
     bool rva0042219(void);
+    bool rva001DCD1C(void);
 
 private:
     char m_pad[0x110];
     int m_gameMode;
+    int m_unk114;
 };
 
 // ?rva0042219@GameLogic@@QAE_NXZ
 bool GameLogic::rva0042219(void)
 {
     return m_gameMode != 9 && m_gameMode != 4 && m_gameMode != 7;
+}
+
+// ?rva001DCD1C@GameLogic@@QAE_NXZ at retail 0x001DCD1C (32B).
+bool GameLogic::rva001DCD1C(void)
+{
+    return m_gameMode == 8 || (m_gameMode == 9 && m_unk114 != 3);
 }
