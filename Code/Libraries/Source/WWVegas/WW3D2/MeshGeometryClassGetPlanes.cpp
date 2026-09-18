@@ -1,17 +1,13 @@
-// ?get_planes@MeshGeometryClass@@IAEPAVVector4@@_N@Z
-// partial score=0.8 date=2026-09-15
-// cl: /DNDEBUG /MD /EHsc
+// cl: /DNDEBUG /MD /EHsc /G7
 // ?get_planes@MeshGeometryClass@@IAEPAVVector4@@_N@Z
 //
 // MeshGeometryClass::get_planes at 0x0016AC00 (136 bytes): lazily builds
-// the cached plane-equation buffer and returns its array.  Lives in its
-// own unit (like the HTreeClass one-body units) because its codegen needs
-// different flags from the neighbouring getPlanesChecked row.
-//
-// The plane buffer is a ShareBufferClass<Vector4> (24 bytes, array at
-// +0x0C); the count comes from PolyCount at +0x24 and the cache lives at
-// +0x48.  Only two out-of-line callees, both already matched: scalar
-// operator new and ShareBufferClass<Vector4>::ShareBufferClass.
+// the cached plane-equation buffer and returns its array. Ported from
+// Open-BFME-1 MeshGeometryClass_Get_Planes.cpp with BFME2 adaptations:
+// PlaneEq at +0x48 (B1 +0x50), PolyCount at +0x24, plain scalar new
+// (no pool glue), Array at +0x0C. Only two out-of-line callees, both
+// already matched: scalar operator new and ShareBufferClass<Vector4>
+// constructor. /G7 for the cmp-mem create-test (load-hoist family).
 
 class Vector4;
 void *__cdecl operator new(unsigned int size);
