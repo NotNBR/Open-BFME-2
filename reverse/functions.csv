@@ -9396,3 +9396,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseTooltip@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x00315BA3,82,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseTooltip.cpp,matched,
 ?createListener@MilesAudioManager@@QAEXXZ,,0x00053B63,62,Code/GameEngineDevice/Source/MilesAudioDevice/MilesAudioManagerCreateListener.cpp,matched,BFME1 CreateListener verbatim plus listener flag; array-end lands on count
 ?clearRva0029B060@InGameUI@@UAEXXZ,,0x0029B060,8,Code/GameEngine/Source/GameClient/InGameUI_Rva0029B04D.cpp,matched,InGameUI slot-100 clearer over unsigned field plus0x7EC; vtable-proven class; leaf with no calls
+?mergeRva0029AF3F@InGameUI@@UAEXPBH0PAH@Z,,0x0029AF3F,67,Code/GameEngine/Source/GameClient/InGameUI_Rva0029AF3F.cpp,matched,InGameUI slot-91 bounds merge over int pairs with shared max-store tail; vtable-proven class; leaf with no calls
