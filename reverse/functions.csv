@@ -8358,3 +8358,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B3D61@LevelUpUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B3D61,69,Code/GameEngine/Source/Common/System/LevelUpUpgradePoolKey.cpp,matched,
 ?rva0004B3EC6@LocomotorSetUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B3EC6,69,Code/GameEngine/Source/Common/System/LocomotorSetUpgradePoolKey.cpp,matched,
 ?rva0004B4727@RadarUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B4727,69,Code/GameEngine/Source/Common/System/RadarUpgradePoolKey.cpp,matched,
+?rva0004B48F9@StatusBitsUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B48F9,69,Code/GameEngine/Source/Common/System/StatusBitsUpgradePoolKey.cpp,matched,
