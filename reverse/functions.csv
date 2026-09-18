@@ -10319,3 +10319,4 @@ _math_log10,,0x007486A0,38,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 by
 ?usesInlineBuffer@Rva00892500Object@@QAE_NXZ,,0x006CD4E0,18,Code/GameEngine/Source/Common/Rva00892500InlinePointerPredicate.cpp,matched,BFME1 donor single twin kept; b1 0x00892500; ICF pick among twins
 __Locale_collate_create,,0x00022E00,242,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,BFME1 near-miss donor; b1 locale facets; immediate-only drift
 __Locale_monetary_create,,0x00022F00,509,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,BFME1 near-miss donor; b1 locale facets; immediate-only drift
+__Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,BFME1 near-miss donor; b1 locale facets; immediate-only drift
