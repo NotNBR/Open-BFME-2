@@ -69,7 +69,6 @@ extern Rva007EB810Diag *Rva007EB810Get();
 extern void *bfmeGo929C();
 void rva007FF100Encode(unsigned int length, const char *source, void *destination);
 
-// ?bfmeGoVIY@BfmeThingVIY@@QAEXPAVBfmeMsgVIX@@PAX1111@Z present-unmatched
 void BfmeThingVIY::bfmeGoVIY(BfmeMsgVIX *m, void *a, void *b, void *c, void *d, void *e)
 {
 	void *g = g_bfmeGVIY;
