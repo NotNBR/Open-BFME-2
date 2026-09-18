@@ -11,8 +11,8 @@ public:
 
 private:
 	char m_bfmeHead[0xC8];					// +0x00
-	const void *m_ptr;					// +0xCC
-	Gen_0092D720 m_embedded;				// +0xD0
+	const void *m_ptr;					// +0xC8
+	Gen_0092D720 m_embedded;				// +0xCC
 };
 
 // ?bfmeSet@Gen_0092E440@@QAEXPBD@Z

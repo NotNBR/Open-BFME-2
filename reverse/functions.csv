@@ -10125,3 +10125,4 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?addInt64@Rva007E8810Message@@QAEXPBD_J@Z,,0x00655F00,93,Code/GameEngine/Source/GameNetwork/FeslMessage_addInt64_rva007E8E90.cpp,matched,BFME1 byte-identical donor; b1 0x007E8E90; 1 DIR32 string literal(s) agree
 ?bfmeSet@Gen_0092E440@@QAEXPBD@Z,,0x0014BB20,66,Code/GameEngine/Source/Common/Bfme5MeshNameOrTextSet.cpp,matched,BFME1 donor; head 0xC8 not 0xCC per retail imms; bfmeAssign pin; b1 0x0092E440
 ?bfmeGoBJE@BfmeThingBJE@@QAEPAXPAX@Z,,0x0016FBF0,23,Code/GameEngine/Source/Common/BfmeConv476.cpp,matched,BFME1 byte-identical donor; b1 0x0092FD40
+?bfmeMakeBZB@@YAPAXPAX@Z,,0x001B6890,63,Code/GameEngine/Source/Common/BfmeMakeBZB.cpp,matched,BFME1 byte-identical donor; b1 0x009A5E20
