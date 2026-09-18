@@ -10117,3 +10117,6 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?bfmeMakeSubJX@@YAPAUBfmeSubJX@@XZ,,0x001B7990,73,Code/GameEngine/Source/Common/Rva009A6DA0ReleaseBuffers.cpp,matched,BFME1 donor; Rva009A6DF0 static pin; b1 0x009A6F20
 ?onGame@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00663020,104,Code/GameEngine/Source/GameNetwork/V2FeslBrowserGame.cpp,matched,BFME1 byte-identical donor; b1 0x007F6890
 ?notify@Rva00809BF0Owner@@QAEXPAURva00809500Entry@@@Z,,0x00675AF0,102,Code/GameEngine/Source/GameNetwork/Y4FeslEcnlNotify.cpp,matched,BFME1 byte-identical donor; b1 0x00809BF0; 2 DIR32 string literal(s) agree
+?bfmeGoSKA@BfmeThingSKA@@QAEXHH@Z,,0x00675D00,53,Code/GameEngine/Source/Common/BfmeConv1293.cpp,matched,BFME1 byte-identical donor; b1 0x00809E00
+??1FileInfoStruct@MixFileCreator@@QAE@XZ,,0x0052DD64,17,Code/Libraries/Source/WWVegas/WWLib/MixFileCreator_FileInfoStruct_dtor.cpp,matched,BFME1 byte-identical donor; b1 0x003F6EA0; true-name releaseInto pin at decoded REL32 target; sweep j and Pathfind guesses dropped
+?run@Rva009F40E0Owner@@QAEXPAPAXI@Z,,0x00626AA0,72,Code/GameEngine/Source/Common/Rva009F40E0Recursive.cpp,matched,BFME1 donor; self-recursive self-pin; b1 0x009F40E0
