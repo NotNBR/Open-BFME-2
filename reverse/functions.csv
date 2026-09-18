@@ -9890,3 +9890,4 @@ _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRe
 ?pword@ios_base@_STL@@QAEAAPAXH@Z,,0x0001C010,117,Code/Libraries/Source/WWVegas/WWLib/stlport_ios_base_iword.cpp,matched,BFME1 byte-identical donor; b1 0x0083F140
 ?rva0082C160Deref@@YAHPAH@Z,,0x00024C20,19,Code/GameEngine/Source/Common/Rva0082C160Deref.cpp,matched,BFME1 byte-identical donor b1 0x0082C160
 ?invokeForMode@Rva007E3410Object@@QAEXXZ,,0x00106A06,19,Code/GameEngine/Source/Common/Rva007E3410VirtualCall.cpp,matched,BFME1 byte-identical donor b1 0x007E3410
+?get@Rva0066B100@@QAEHH@Z,,0x004D38C5,19,Code/GameEngine/Source/Common/Rva0066B100Get.cpp,matched,BFME1 byte-identical donor b1 0x0066B100
