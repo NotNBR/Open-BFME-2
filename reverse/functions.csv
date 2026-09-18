@@ -10265,3 +10265,4 @@ _Rva0088E1A0ShowAssertCrashDialog,,0x0003D880,410,Code/Libraries/Source/WWVegas/
 ??0Gen_008812D0@@QAE@XZ,,0x006C1490,102,Code/GameEngine/Source/Common/BfmeGridRasterCircle.cpp,matched,BFME1 byte-identical donor; b1 0x00881AA0
 ?deallocate@?$__debug_alloc@V__new_alloc@_STL@@@_STL@@SAXPAXI@Z,,0x00024160,154,Code/Libraries/Source/WWVegas/WWLib/STLDebugAllocDeallocate.cpp,matched,object-symbol=_bfme_DebugAllocDeallocate_82B780;BFME1 byte-identical donor; b1 0x0082B780
 ?allocate@?$__debug_alloc@V__new_alloc@_STL@@@_STL@@SAPAXI@Z,,0x000240E0,120,Code/Libraries/Source/WWVegas/WWLib/STLDebugAllocAllocate.cpp,matched,object-symbol=_bfme_DebugAllocAllocate_82B700;BFME1 byte-identical donor; b1 0x0082B700
+?rva00882050PatchImport@@YA_NPBD00PAX@Z,,0x0002FE20,236,Code/GameEngine/Source/Common/Bfme/Rva00882050ImportPatch.cpp,matched,BFME1 near-miss donor; b1 0x00882050; callback cell to LoadLibraryA import
