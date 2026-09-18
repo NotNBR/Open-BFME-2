@@ -8753,3 +8753,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?release@Rva006D0F20@@QAEXXZ,,0x006D0F20,42,Code/GameEngine/Source/Common/Thing/Rva006D0F20Release.cpp,matched,Sub-block release: direct dec-mem via sub local plus teardown and sized free (block 28)
 ?get@Rva0002BAF1ByteField@@QBEEXZ,,0x0002BAF1,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter family pilot
 ?get@Rva00038CB0ByteField@@QBEEXZ,,0x00038CB0,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva000421F6ByteField@@QBEEXZ,,0x000421F6,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
