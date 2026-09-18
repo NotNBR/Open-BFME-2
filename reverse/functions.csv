@@ -8896,3 +8896,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva004F030EByteField@@QBEEXZ,,0x004F030E,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
 ?get@Rva004F0315ByteField@@QBEEXZ,,0x004F0315,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
 ?get@Rva004F04F5ByteField@@QBEEXZ,,0x004F04F5,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0050791AByteField@@QBEEXZ,,0x0050791A,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
