@@ -9215,3 +9215,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva0006E1A1GetByte@@YAEXZ,,0x0006E1A1,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DEDA05
 ?Rva00110094GetByte@@YAEXZ,,0x00110094,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DEC3D7
 ?Rva000308D0GetByte@@YAEXZ,,0x000308D0,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DE0818
+?set@Rva003BA5A9ByteSlot@@QAEXE@Z,,0x003BA5A9,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?Rva0003C100GetByte@@YAEXZ,,0x0003C100,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DE08A8
