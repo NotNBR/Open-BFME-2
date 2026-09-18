@@ -9812,3 +9812,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?dispatchIndexedValue@@YAXPAXH0HPAH1@Z,,0x00699630,66,Code/GameEngine/Source/GameNetwork/GameSpy/ChatDispatchIndexedValue.cpp,matched,BFME1 byte-identical donor; b1 0x00858070
 ?Rva0083F3B0Duplicate@@YAPAXPBUU2Elem8@@H@Z,,0x0001C2C0,59,Code/GameEngine/Source/Common/U2AllocatedRangeCopy8.cpp,matched,BFME1 donor with malloc import repair; b1 0x0083F3B0
 ?bfmeWriteQN@@YGXHPAXPAD@Z,,0x00040B10,59,Code/GameEngine/Source/Common/BfmeTwoHundredNinetySeven.cpp,matched,BFME1 byte-identical donor; b1 0x008911C0
+?d_00889780@Rva00889780Class@@QAEXPBDH@Z,,0x00038850,58,Code/GameEngine/Source/Common/Bfme/Rva00889780.cpp,matched,BFME1 donor with empty-string VA + layout repair; b1 0x00889780
