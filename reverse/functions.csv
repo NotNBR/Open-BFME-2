@@ -9277,3 +9277,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00204806@Rva00204806Host@@QAEXXZ,,0x00204806,55,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_canAppContinue.cpp,matched,ScriptEngine CanAppContinue gate; opaque host; calls frame setter 0x204094; latch at 0xDFE15C
 ?set@Rva00078ACEByteSlot@@QAEXE@Z,,0x00078ACE,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?_bfme_updateClientDebugFrame@ScriptEngine@@QAEXXZ,,0x00204806,55,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_updateClientDebugFrame.cpp,matched,
+?set@Rva00381E05ByteSlot@@QAEXE@Z,,0x00381E05,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
