@@ -1,0 +1,13 @@
+// cl: /GX-
+// ?Rva00078BEEGet@@YAHXZ @ 0x00078BEE (6B): global dword getter reading
+// 0x001FDEB4 (mov eax,[mem]; ret). Ported from Open-BFME-1
+// Code/GameEngine/Source/Common/GlobalDwordGetters.cpp (same shape).
+// First of an adjacent pair (0x78BEE/F4); dedicated TU so no caller
+// inlines the load (Rva007EB810Get precedent).
+
+extern int g_Va001FDEB4;
+
+int Rva00078BEEGet(void)
+{
+	return g_Va001FDEB4;
+}
