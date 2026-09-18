@@ -9649,3 +9649,8 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Is_Bone_Captured@HTreeClass@@QBE_NH@Z,,0x00162030,48,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassIsBoneCaptured.cpp,matched,sorted 36B captured-record walk over Begin End at this+0x1C 0x20 via placed Animatable forwarder call; Control_Bone record model; /G7 loop pad; boolean-expression tail
 ?Remap_Texture@MaterialRemapperClass@@QAE?AVBfmeHandleCX@@ABV2@@Z,,0x0016EC00,196,Code/Libraries/Source/WWVegas/WW3D2/MaterialRemapTexture.cpp,matched,verbatim BFME1 MaterialRemapTexture port; null arm returns empty handle
 ?get_planes@MeshGeometryClass@@IAEPAVVector4@@_N@Z,,0x0016AC00,136,Code/Libraries/Source/WWVegas/WW3D2/MeshGeometryClassGetPlanes.cpp,matched,BFME1 Get_Planes port with BFME2 offsets PlaneEq +0x48 PolyCount +0x24 plus plain new and /G7 for cmp-mem create-test
+?bfmeSkipVH@@YAHPBEH@Z,,0x006F39A0,1463,Code/GameEngine/Source/Common/BfmeOneHundredTwentyFive.cpp,matched,BFME1 byte-identical donor; b1 0x008B5AF0
+?bfmeSkipVE@@YAHPBEH@Z,,0x006D65B0,1461,Code/GameEngine/Source/Common/BfmeOneHundredTwentyFive.cpp,matched,BFME1 byte-identical donor; b1 0x008A9150
+?bfmeSkipVD@@YAHPBEH@Z,,0x006E7DA0,1459,Code/GameEngine/Source/Common/BfmeOneHundredTwentyFive.cpp,matched,BFME1 byte-identical donor; b1 0x008A3EE0
+?bfmeSkipVG@@YAHPBEH@Z,,0x006F2EE0,1458,Code/GameEngine/Source/Common/BfmeOneHundredTwentyFive.cpp,matched,BFME1 byte-identical donor; b1 0x008B5050
+?Rva009A9070CopyStreams@@YAXPAURva009A9070Context@@PAURva009A9070Source@@H@Z,,0x001B9AC0,299,Code/GameEngine/Source/Common/Rva009A9070CopyStreams.cpp,matched,BFME1 byte-identical donor; b1 0x009A9070

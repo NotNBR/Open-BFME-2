@@ -2023,3 +2023,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?Get_Texture@MeshMatDescClass@@QBE?AVBfmeHandleCX@@HHH@Z,0x0015A910,BfmeHandleCX handle return (hidden retptr) over TextureArray slots +0xC8; call site in Remap_Mesh 0x16F220 array-texture path; BFME1 meshmatdesc.h Get_Texture attests semantics; 80B body slot-reads plus WORD Add_Ref
 ?Remap_Texture@MaterialRemapperClass@@QAE?AVBfmeHandleCX@@ABV2@@Z,0x0016EC00,call sites in Remap_Mesh 0x16F220 both texture paths (value in/out through temp); BFME1 MaterialRemapTexture.cpp matched row attests name and mangling exactly; 196B vs BFME1 194B
 ?Get_Single_Texture@MeshMatDescClass@@QBE?AVBfmeHandleCX@@HH@Z,0x000D2026,BfmeHandleCX handle return over single Texture slots; call site in Remap_Mesh 0x16F220 single-texture path; BFME1 meshmatdesc.h Get_Single_Texture attests semantics; 37B ebp-frame body
+?d_009a8c50@@YAXXZ,0x001B96A0
