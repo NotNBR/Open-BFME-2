@@ -9840,3 +9840,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ??0GhostObjectManagerEnergyDup@@QAE@XZ,,0x006558A0,29,Code/GameEngine/Source/GameLogic/Object/GhostObjectManagerEnergyDupCtor.cpp,matched,BFME1 byte-identical donor; b1 0x007E87F0
 ?Rva009A9960@@YAXPAXHI@Z,,0x001BA3A0,28,Code/GameEngine/Source/Common/Rva009A9960CopyBytes.cpp,matched,BFME1 byte-identical donor; b1 0x009A9960
 ?call@Rva007EFF60@@QAEXPAX0@Z,,0x0065CE50,28,Code/GameEngine/Source/Common/Rva007EFF60CallbackDispatch.cpp,matched,BFME1 byte-identical donor; b1 0x007EFF60
+?rva0034f9d0Insert@@YGXPAURva0034F9D0Head@@PAURva0034F9D0Node@@1@Z,,0x003B23DE,25,Code/GameEngine/Source/Common/Rva0034F9D0ListInsert.cpp,matched,BFME1 byte-identical donor; b1 0x0034F9D0
