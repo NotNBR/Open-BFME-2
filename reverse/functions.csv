@@ -9786,3 +9786,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?addSlot@Rva008063B0Owner@@QAEXHH@Z,,0x006723E0,71,Code/GameEngine/Source/Common/SmallGaps/Rva008063B0AddSlot.cpp,matched,BFME1 byte-identical donor; b1 0x008063B0; 2 DIR32 string literal(s) agree
 ?lookup@Rva007FA2C0@@QAEPAURva007F96C0Rec@@PAX@Z,,0x00665AD0,71,Code/GameEngine/Source/GameNetwork/FeslTransactor_lookup_rva007F9530.cpp,matched,BFME1 byte-identical donor; b1 0x007F9530
 ?bfmeStepsEU@BfmeHostEU@@QAEHPBVBfmeShapeEU@@@Z,,0x0073B750,140,Code/GameEngine/Source/Common/BfmeConv2042.cpp,matched,BFME1 donor with ceil import per retail IAT slot 0xBBA578; b1 0x008F93B0
+?releaseNode@Rva009A2C30Table@@QAEXPAURva009A2C30Node@@@Z,,0x00758BD0,71,Code/GameEngine/Source/Common/SmallGaps/Rva009A2C30ReleaseNode.cpp,matched,BFME1 byte-identical donor; b1 0x009A2C30
