@@ -10414,3 +10414,11 @@ _errormessage,,0x0074DEB0,52,Code/Libraries/Source/Lua/lstate.c,matched,BFME1 by
 ?Rva009EBEC0@@YA?AVAssetReference@@ABVAssetName@@@Z,,0x0061F410,196,Code/GameEngineDevice/Source/W3DDevice/GameClient/Rva009EBEC0.cpp,matched,BFME1 donor with empty-string repair; b1 fallback address replaced by verified literal
 ?Rva0081C5C0Count@@YAHXZ,,0x006893D0,34,Code/GameEngine/Source/Common/U2FixedSlotSearches.cpp,matched,BFME1 byte-identical donor b1 0x0081C5C0; ICF-folded in BFME1 single pick; body already in TU with 4 claimed siblings
 ?bfmeGoAUZA@BfmeThingAUZA@@QBE?AUBfmeHandleUZA@@HH@Z,,0x00149540,43,Code/GameEngine/Source/Common/BfmeConv1347.cpp,matched,BFME1 donor with layout repair (m_bfmeSub at +0x94 not +0x9C); b1 0x0092CA60; ICF-folded in BFME1 single pick among twins
+_math_ldexp,,0x007487C0,62,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+_math_atan,,0x007484C0,42,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+_math_tan,,0x00748430,42,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+_math_cos,,0x00748400,40,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+_math_sin,,0x007483D0,40,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+_math_abs,,0x007483A0,34,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+_math_sqrt,,0x007485F0,34,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
+_math_randomseed,,0x00748A30,30,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 donor; ICF single pick disambiguated by FPU opcode
