@@ -8644,3 +8644,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?getNextSubToken@INI@@QAEPBDPBD@Z,,0x0002E06B,92,Code/GameEngine/Source/Common/System/INI_getNextSubToken.cpp,matched,
 ?parseCoord3D@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F507,81,Code/GameEngine/Source/Common/System/INI_parseCoord3D.cpp,matched,
 ?parseCoord2D@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F558,58,Code/GameEngine/Source/Common/System/INI_parseCoord2D.cpp,matched,
+?DebugReAllocMemory@@YAPAXPAXI@Z,,0x0003E4B0,189,Code/Libraries/Source/debug/DebugReAllocMemory.cpp,matched,
