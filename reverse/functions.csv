@@ -10099,3 +10099,4 @@ _atexit,,0x006291F8,18,Code/Libraries/Source/WWVegas/WWDebug/AtexitThunk.cpp,mat
 ?Rva007F7C70@BfmeHostBT@@QAEXPAVRva007E8810Message@@@Z,,0x006642F0,119,Code/GameEngine/Source/GameNetwork/Rva007F7C70FeslGameRecord.cpp,matched,BFME1 byte-identical donor; b1 0x007F7C70; 2 DIR32 string literal(s) agree
 ?bfmeGoSWA@@YAXHHH@Z,,0x00023CD0,39,Code/GameEngine/Source/Common/BfmeConv1303.cpp,matched,BFME1 byte-identical donor; b1 0x0082B2F0
 ?bfmePassSWA@BfmeThingSWA@@QAEXH@Z,,0x0002B290,27,Code/GameEngine/Source/Common/BfmeConv1303.cpp,matched,BFME1 byte-identical donor; b1 0x00831720
+?getInt64@Rva007E8810Message@@QAE_JPBD_J@Z,,0x006559C0,70,Code/GameEngine/Source/GameNetwork/FeslMessage_getInt64_rva007E8930.cpp,matched,BFME1 byte-identical donor; b1 0x007E8930; 1 DIR32 string literal(s) agree

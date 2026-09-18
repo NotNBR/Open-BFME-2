@@ -2624,3 +2624,7 @@ _bfmeSearch1155,0x00029EB0
 ?d_008f8800@@YAXXZ,0x0073AD90
 ?updateCellsTouched@PartitionData@@AAEXXZ,0x0073AD90
 __onexit,0x006291D2
+?bfmeFwdSWA@BfmeThingSWA@@QAEXH@Z,0x0002A930
+?j_0002ed2f@@YAXXZ,0x0002A930
+?j_000203d8@@YAXXZ,0x0052DD41
+?releaseToPool@PathfindCellInfo@@QAEXPAX@Z,0x0052DD41
