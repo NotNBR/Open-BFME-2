@@ -2011,3 +2011,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?get@Rva00091A56@@QBEHXZ,0x00091A56,4-byte pointer fetch at +0x24 used by Object rva0028AF65 ammo gate; true owner unproven
 ?getAudioLODIndex@GameLODManager@@QAEHABVAsciiString@@@Z,0x00202C76,BFME1-attested GameLODManager audio LOD table lookup; thiscall on the TU-local TheGameLODManager global with the pref value AsciiString; resolves OptionPreferences getAudioLOD at 0x2E4767
 ??1Rva00143F60@@UAE@XZ,0x00143F60,retail REL32 from scalar deleting dtor at 0x00143FF0 and vtable installs 0xBD34FC/0xBD34F0 with array delete idiom
+??0RvaSmartPtr12@@QAE@ABV0@@Z,0x0004CC19,RvaSmartPtr12 copy ctor: copies dword at that plus helper 0x4CB9A or zeroes; call target of the RVO smart-ptr getter at 0x3FDA90 (hidden retptr copy into out)
