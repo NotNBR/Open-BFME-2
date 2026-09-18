@@ -26,6 +26,12 @@ int BfmeThingDWD::bfmeLockDWD()
 	return 0;
 }
 
+void BfmeThingDWD::bfmeUnlockDWD()
+{
+	LeaveCriticalSection(m_bfmeCs);
+	m_bfmeHeld = 0;
+}
+
 void BfmeThingDWD::bfmeReleaseDWD()
 {
 	if (m_bfmeHeld)

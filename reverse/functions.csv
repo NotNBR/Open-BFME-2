@@ -9916,3 +9916,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?m@T_007ea120@@QAEXXZ,,0x006570D0,458,Code/GameEngine/Source/GameNetwork/Rva007EA120Teardown.cpp,matched,BFME1 byte-identical donor; b1 0x007EA120
 ?forwardSentinel@@YAXXZ,,0x006572B0,20,Code/GameEngine/Source/Common/forwardSentinel.cpp,matched,BFME1 byte-identical donor; b1 0x007EA300
 ?bfmeLockDWD@BfmeThingDWD@@QAEHXZ,,0x00628C56,19,Code/GameEngine/Source/Common/BfmeConv790.cpp,matched,BFME1 donor; Win32 EnterCriticalSection import per retail IAT (BFME1 wraps it as bfmeEnterDWD); b1 0x009F6909; ICF-folded in BFME1 so the name is this sweep pick among its twins
+?bfmeUnlockDWD@BfmeThingDWD@@QAEXXZ,,0x00628CAD,17,Code/GameEngine/Source/Common/BfmeConv790.cpp,matched,BFME1 donor; Win32 LeaveCriticalSection import per retail IAT (BFME1 wraps it as bfmeLeaveDWD); b1 0x009F6960; ICF-folded in BFME1 so the name is this sweep pick among its twins
