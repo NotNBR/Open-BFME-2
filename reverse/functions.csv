@@ -8461,3 +8461,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?setWaitTime@QuickMatchPreferences@@QAEXH@Z,,0x005DF9C1,121,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_setWaitTime.cpp,matched,ZH setWaitTime verbatim with named key and slot split
 ?setNumPlayers@QuickMatchPreferences@@QAEXH@Z,,0x005DFA3A,121,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_setNumPlayers.cpp,matched,ZH setNumPlayers verbatim with named key and slot split
 ?setMaxPing@QuickMatchPreferences@@QAEXH@Z,,0x005DFAB3,121,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/QuickMatchPreferences_setMaxPing.cpp,matched,ZH setMaxPing verbatim with named key and slot split
+?parsePrerequisites@ThingTemplate@@KAXPAVINI@@PAX1PBX@Z,,0x0033EBB5,54,Code/GameEngine/Source/Common/Thing/ThingTemplateParsePrerequisites.cpp,matched,BFME1 thunk port; vec at plus0x324; static table global; erase via opaque pin
