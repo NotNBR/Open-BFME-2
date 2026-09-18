@@ -1925,3 +1925,4 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??1VersionBlockParserInner@@QAE@XZ,0x002385FF,Version-block inner list dtor stepping 0x18 elements via 0x2385E6 then free via 0x30830; called with parser+4 at end of 0x23870E and 0x238646
 ?initVersionGlobals@@YAHXZ,0x00238646,Version global init filling ints at 0xDFE760-0xDFE76C and returning bool to 0xDFE774; called once via guard 0xDFE778 in 0x23870E
 ??0HAnimPrototypeOwner@@QAE@ABVHierarchyPrototypeRef@@@Z,0x0014CED0,4-byte SEH owner copy ctor (by-ref HierarchyPrototypeRef, zeroes m_ptr then delegates to 0x14CDE4); called from a*-lookup 0x14CFBD and factory 0x14CF37
+?Rva0061F0D0_Contains@@YA_NPBD@Z,0x0061F0D0,28B registry contains-check (null name/registry answers false else tail-calls lookup 0xA21170); called with lowercased a*-key from AnimExists 0x14CE5D
