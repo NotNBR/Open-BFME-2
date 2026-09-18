@@ -8705,3 +8705,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?friend_lookupScience@ScienceStore@@QBE?AW4ScienceType@@PBD@Z,,0x001FF65D,81,Code/GameEngine/Source/Common/RTS/ScienceStoreFriendLookupScience.cpp,matched,ZH Science.cpp verbatim (public const); isValidScience row; filler+throw idiom; Science-not-known literal
 ??4MultiplayerColorDefinition@@QAEPAV0@ABV0@@Z,,0x00380CAE,127,Code/GameEngine/Source/Common/MultiplayerColorDefinitionCtor.cpp,matched,
 ?newMultiplayerColorDefinition@MultiplayerSettings@@QAEPAVMultiplayerColorDefinition@@VAsciiString@@@Z,,0x003813B7,137,Code/GameEngine/Source/Common/MultiplayerSettingsNewColor.cpp,matched,
+?dup_002EC6E@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EC6E,65,Code/GameEngine/Source/Common/System/INI_dup002EC6E.cpp,matched,Opaque byte-sized index-list parser; userData table plus throw-1 tail
