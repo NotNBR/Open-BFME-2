@@ -8601,3 +8601,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??$__partial_sort@PAUS4SortElem8@@U1@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@000US4Cmp00625C10@@@Z,,0x006265B0,125,Code/Libraries/Source/WWVegas/WWLib/stlport_partial_sort_s4sortelem8_desc.cpp,matched,Descending twin; make_heap plus adjust plus sort_heap all matched rows
 ?rva000495344@CommandButtonHuntUpdate@@SA?AW4NameKeyType@@XZ,,0x00495344,69,Code/GameEngine/Source/GameLogic/Object/Update/CommandButtonHuntUpdatePoolKey.cpp,matched,cached pool-name key; pool string CommandButtonHuntUpdate; /O1 static-guard EH; nameToKey row
 ?dup_002F02F@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F02F,83,Code/GameEngine/Source/Common/System/INI_dup002F02F.cpp,matched,
+??$__pop_heap@PAUS4SortElem8@@HU1@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@00U1@US4Cmp00625C10@@PAH@Z,,0x00625EF0,55,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_s4sortelem8_desc.cpp,matched,
+??$__pop_heap@PAUS4SortElem8@@HU1@US4Cmp00625BB0@@@_STL@@YAXPAUS4SortElem8@@00U1@US4Cmp00625BB0@@PAH@Z,,0x00625EB0,55,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_s4sortelem8.cpp,matched,
