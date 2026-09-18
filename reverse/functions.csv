@@ -9295,3 +9295,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva000B2392ByteSlot@@QAEXE@Z,,0x000B2392,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?lessKeyEntry@VersionBlockKeyCompare@@QBE_NPBDPBUVersionBlockEntry@@@Z,,0x00427C6B,29,Code/GameEngine/Source/Common/VersionBlockKeyCompare.cpp,matched,version-block table search key-compare leaf key-vs-record; called from worker 0x427DEA; strcmp via existing thunk pin; opaque holder
 ?set@Rva000B28F9ByteSlot@@QAEXE@Z,,0x000B28F9,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?set@Rva000B290DByteSlot@@QAEXE@Z,,0x000B290D,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
