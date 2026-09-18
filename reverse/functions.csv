@@ -10229,3 +10229,4 @@ _EnumLocalesProcA@4,,0x00021470,242,Code/Libraries/Source/WWVegas/WWLib/stlport_
 ??1MaterialCollectorClass@@QAE@XZ,,0x001702F0,216,Code/Libraries/Source/WWVegas/WW3D2/MaterialCollectorDestructor.cpp,matched,BFME1 byte-identical donor; b1 0x00931120
 ??0DX8MeshRendererClass@@QAE@XZ,,0x00145AA0,101,Code/Libraries/Source/WWVegas/WW3D2/DX8MeshRendererCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00947680
 _peerStopGame,,0x00699410,65,Code/GameEngine/Source/GameNetwork/GameSpy/peerStopGame.cpp,matched,BFME1 byte-identical donor b1 0x00857E50; calls repaired to matched pi helpers no new pins
+??1S4Dtor00587B30@@UAE@XZ,,0x006E96D0,95,Code/GameEngine/Source/Common/S4TwoMemberDestructors.cpp,matched,BFME1 near-miss donor; b1 0x00587B30; immediate-only drift first member +0x20 not +0x18
