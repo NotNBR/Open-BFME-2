@@ -10071,3 +10071,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeAssignV14@BfmeStrV14@@QAEPAV1@PAD0ID@Z,,0x000297D0,119,Code/GameEngine/Source/Common/BfmeConv1453.cpp,matched,BFME1 byte-identical donor; b1 0x00830030
 ?d_00889d70@Rva00889D70Class@@QAE_NPAX0@Z,,0x00038E40,85,Code/GameEngine/Source/Common/Bfme/Rva00889D70.cpp,matched,BFME1 donor; alloc callee is matched DebugAllocMemory (no pin); b1 0x00889D70
 ?bfmeFindQW@BfmeThingQW@@QAEHEI@Z,,0x00027830,107,Code/GameEngine/Source/Common/BfmeThreeHundredFive.cpp,matched,BFME1 byte-identical donor; b1 0x0082E2E0
+?d_00885af0@Rva00885AF0Class@@QAEXXZ,,0x006CA600,81,Code/GameEngine/Source/Common/Bfme/Rva00885AF0.cpp,matched,BFME1 donor; vtable imm 0xCE8A38; closesocket via existing true pin (sweep ji pin stale); b1 0x00885AF0
