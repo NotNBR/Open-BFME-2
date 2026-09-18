@@ -9842,3 +9842,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?call@Rva007EFF60@@QAEXPAX0@Z,,0x0065CE50,28,Code/GameEngine/Source/Common/Rva007EFF60CallbackDispatch.cpp,matched,BFME1 byte-identical donor; b1 0x007EFF60
 ?rva0034f9d0Insert@@YGXPAURva0034F9D0Head@@PAURva0034F9D0Node@@1@Z,,0x003B23DE,25,Code/GameEngine/Source/Common/Rva0034F9D0ListInsert.cpp,matched,BFME1 byte-identical donor; b1 0x0034F9D0
 ?peerParseQuery@@YAHPAXPADHPAUsockaddr@@@Z,,0x00698B30,34,Code/GameEngine/Source/GameNetwork/GameSpy/Thread/PeerParseQueryThunk.cpp,matched,BFME1 byte-identical donor; b1 0x00857570
+?setAt@Rva009F6948Array@@QAEXHABQAX@Z,,0x00628C95,24,Code/GameEngine/Source/Common/Rva009F6948IndexedSet.cpp,matched,BFME1 byte-identical donor; b1 0x009F6948
