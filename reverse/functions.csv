@@ -8410,3 +8410,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva0017FC1E_MakeOwner@@YA?AVHTreePrototypeOwner@@PBD@Z,,0x0017FC1E,94,Code/Libraries/Source/WWVegas/WW3D2/Rva0017FC1EFactory.cpp,matched,probe mixed named plus temporary returns
 ?rva00048E8AC@DeployStyleAIUpdate@@SA?AW4NameKeyType@@XZ,,0x0048E8AC,69,Code/GameEngine/Source/GameLogic/Object/Update/DeployStyleAIUpdatePoolKey.cpp,matched,
 ?rva0004907F7@ArrowStormUpdate@@SA?AW4NameKeyType@@XZ,,0x004907F7,69,Code/GameEngine/Source/GameLogic/Object/Update/ArrowStormUpdatePoolKey.cpp,matched,
+?rva000491264@DamageFieldUpdate@@SA?AW4NameKeyType@@XZ,,0x00491264,69,Code/GameEngine/Source/GameLogic/Object/Update/DamageFieldUpdatePoolKey.cpp,matched,
