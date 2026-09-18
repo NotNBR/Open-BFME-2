@@ -10382,6 +10382,7 @@ _luaG_symbexec,,0x0074CEF0,437,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 
 ?d_008830d0@Rva008830D0Class@@QAEPAV1@H@Z,,0x0003CC80,21,Code/GameEngine/Source/Common/Bfme/Rva008830D0.cpp,matched,BFME1 donor with address-drift repair; retail pushes 0xBBE8DC which holds 0x
 ?Rva007E93C0@@YGXPAVRva007E8810Message@@PBD11HHH11_N2@Z,,0x006563B0,223,Code/GameEngine/Source/GameNetwork/Rva007E93C0Acct.cpp,matched,BFME1 near-miss donor b1 0x007E93C0 immediate-only drift
 ?bfmeGoBDB@@YAXPAXPAVBfmeSubBDB@@@Z,,0x00663000,17,Code/GameEngine/Source/Common/BfmeConv443.cpp,matched,BFME1 byte-identical donor; b1 0x0021A2F0; thiscall shape refutes free-function twins; donor-attested bfmeDoBDB pin only
+?load@Rva007E8F20Country@@QAE_NPAVRva007E8810Message@@H@Z,,0x00655F90,243,Code/GameEngine/Source/GameNetwork/Rva007E90C0Names.cpp,matched,BFME1 near-miss donor b1 0x007E8F20 immediate-only drift
 ?m@T_009f4fb0@@QAEXPAURva009F5970StateInit@@@Z,,0x006276E0,129,Code/GameEngine/Source/Common/Bfme/T_009F4FB0.cpp,matched,BFME1 near-miss donor b1 0x009F4FB0; list head plus 0x114 repair same as bfmeAddEQR lane; callees via existing pins
 ?allocate@Rva00801600@@QAEXH@Z,,0x0066DEB0,75,Code/GameEngine/Source/GameNetwork/Rva00801BD0FeslAlloc.cpp,matched,BFME1 byte-identical donor; b1 0x00801BD0; ICF-folded in BFME1 so the name is this sweep single pick among its twins
 ?rva0082C740Find@@YAPAHPAHH@Z,,0x00025310,21,Code/GameEngine/Source/Common/Rva0082C740Find.cpp,matched,BFME1 byte-identical donor; b1 0x0082C740; ICF-folded in BFME1 so the name is this sweep's pick among its twins
@@ -10390,3 +10391,7 @@ _luaG_symbexec,,0x0074CEF0,437,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 
 ?run@Glo012F1024Item@@QAEXXZ,,0x005654FF,45,Code/GameEngine/Source/Common/Glo012F1024ItemRun.cpp,matched,BFME1 byte-identical donor; b1 0x003AE330; ICF-folded in BFME1 so the name is this sweep single pick among its twins
 ?Clone@GridClassicEnvironmentMapperClass@@UBEPAVTextureMapperClass@@XZ,,0x0013D330,85,Code/Libraries/Source/WWVegas/WW3D2/GridClassicEnvironmentMapperClone.cpp,matched,BFME1 near-miss donor; b1 0x009220C0; alloc 0x34 plain new plus matched base copy
 ?selectStorage@Rva000B56F0Object@@QAEPAXXZ,,0x004331B3,19,Code/GameEngine/Source/Common/Rva000B56F0SelectStorage.cpp,matched,BFME1 donor with layout repair; inline store 0xBC so flag sits at retail +0xC4; b1 0x000B56F0; single pick among the 0x004331B3 twins
+?get@Rva007E9130Errors@@QAE_NPADPAHH@Z,,0x00656190,151,Code/GameEngine/Source/GameNetwork/Rva007E90C0Names.cpp,matched,BFME1 byte-identical donor b1 0x007E9130
+?get@Rva007E90C0Names@@QAE_NPADH@Z,,0x00656120,104,Code/GameEngine/Source/GameNetwork/Rva007E90C0Names.cpp,matched,BFME1 donor b1 0x007E90C0; twin Rva007E91D0Names folds here
+?get@Rva007E9240SubAccounts@@QAE_NPADH@Z,,0x00656230,104,Code/GameEngine/Source/GameNetwork/Rva007E90C0Names.cpp,matched,BFME1 donor b1 0x007E9240
+?get@Rva007E91D0Names@@QAE_NPADH@Z,,0x00656120,104,Code/GameEngine/Source/GameNetwork/Rva007E90C0Names.cpp,matched,BFME1 donor b1 0x007E91D0; ICF-folds to twin at same address
