@@ -10222,3 +10222,4 @@ _EnumLocalesProcA@4,,0x00021470,242,Code/Libraries/Source/WWVegas/WWLib/stlport_
 ?LogRegisters@DebugExceptionhandler@@CAXAAVDebug@@PAU_EXCEPTION_POINTERS@@@Z,,0x0003DA20,678,Code/Libraries/Source/WWVegas/WWDebug/DebugExceptionhandler_LogRegisters.cpp,matched,BFME1 donor; b1 0x0088E340; windows-shim plus literal repairs
 ?bfmeOpenVIF@@YAHPAUBfmeLuaVHR@@@Z,,0x0074A490,133,Code/GameEngine/Source/Common/BfmeConv1373.cpp,matched,BFME1 byte-identical donor; b1 0x00993330; 1 DIR32 string literal(s) agree
 ?bfmeGoBFG@BfmeThingBFG@@QAEXXZ,,0x0025F00D,19,Code/GameEngine/Source/Common/BfmeConv455.cpp,matched,BFME1 byte-identical donor; b1 0x0045C470
+?bfmeGoBEC@BfmeThingBEC@@QAEXXZ,,0x00483BBB,18,Code/GameEngine/Source/Common/BfmeConv448.cpp,matched,BFME1 byte-identical donor; b1 0x0020D850
