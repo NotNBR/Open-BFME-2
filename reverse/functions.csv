@@ -9079,3 +9079,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva0036739CDwordField@@QBEHXZ,,0x0036739C,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva0036CBF2DwordField@@QBEHXZ,,0x0036CBF2,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?Get_Texture_Name@BFME2ParticleTextureHandle@@QBE?AVStringClass@@XZ,,0x00129D30,176,Code/Libraries/Source/WWVegas/WW3D2/BFME2ParticleTextureHandleGetName.cpp,matched,BFME1 TextureHandleGetName port with inlined 2-arg StringClass initializer plus G7 add scheduling
+?dup_002C485@@YAXXZ,,0x0002C485,45,Code/Libraries/Source/WWVegas/WWLib/stlport_construct_asciistring.cpp,matched,object-symbol=??$_Construct@VAsciiString@@V1@@_STL@@YAXPAVAsciiString@@ABV1@@Z;C++ alias; true name spent at 0x142CC0 with Buffer-model bytes; this 45B StringBase flavor triple-proven by ThingTemplate emission plus 6 AsciiString-vector callers
