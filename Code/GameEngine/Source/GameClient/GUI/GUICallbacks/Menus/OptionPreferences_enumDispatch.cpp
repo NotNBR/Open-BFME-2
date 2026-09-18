@@ -90,6 +90,13 @@ public:
 	Int Rva002E42AFDispatch(Int index);
 	Int Rva002E42EEForward();
 	Int Rva002E42F6Forward();
+	Int Rva002E42FEForward();
+	Int Rva002E4306Forward();
+	Int Rva002E430EForward();
+	Int Rva002E4316Forward();
+	Int Rva002E431EForward();
+	Int Rva002E4326Forward();
+	Int Rva002E432EForward();
 };
 
 // ?Rva002E42AFDispatch@OptionPreferences@@QAEHH@Z
@@ -108,4 +115,46 @@ Int OptionPreferences::Rva002E42EEForward(void)
 Int OptionPreferences::Rva002E42F6Forward(void)
 {
 	return Rva002E42AFDispatch(1);
+}
+
+// ?Rva002E42FEForward@OptionPreferences@@QAEHXZ
+Int OptionPreferences::Rva002E42FEForward(void)
+{
+	return Rva002E42AFDispatch(2);
+}
+
+// ?Rva002E4306Forward@OptionPreferences@@QAEHXZ
+Int OptionPreferences::Rva002E4306Forward(void)
+{
+	return Rva002E42AFDispatch(3);
+}
+
+// ?Rva002E430EForward@OptionPreferences@@QAEHXZ
+Int OptionPreferences::Rva002E430EForward(void)
+{
+	return Rva002E42AFDispatch(4);
+}
+
+// ?Rva002E4316Forward@OptionPreferences@@QAEHXZ
+Int OptionPreferences::Rva002E4316Forward(void)
+{
+	return Rva002E42AFDispatch(5);
+}
+
+// ?Rva002E431EForward@OptionPreferences@@QAEHXZ
+Int OptionPreferences::Rva002E431EForward(void)
+{
+	return Rva002E42AFDispatch(6);
+}
+
+// ?Rva002E4326Forward@OptionPreferences@@QAEHXZ
+Int OptionPreferences::Rva002E4326Forward(void)
+{
+	return Rva002E42AFDispatch(7);
+}
+
+// ?Rva002E432EForward@OptionPreferences@@QAEHXZ
+Int OptionPreferences::Rva002E432EForward(void)
+{
+	return Rva002E42AFDispatch(8);
 }
