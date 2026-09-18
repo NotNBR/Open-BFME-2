@@ -10209,3 +10209,5 @@ _f_luaopen,,0x0074DEF0,110,Code/Libraries/Source/Lua/lstate.c,matched,BFME1 byte
 ??0Rva00800920Owner@@QAE@PAURva00800920Host@@@Z,,0x0066CD00,210,Code/GameEngine/Source/GameNetwork/Rva00800920FeslCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00800920
 ?bfmeGoVJM@BfmeThingVJM@@QAEXHH@Z,,0x00663140,92,Code/GameEngine/Source/Common/BfmeConv1390.cpp,matched,BFME1 byte-identical donor; b1 0x007F69B0
 ?bfmeGo@Rva00800B70Owner@@QAEPAXE@Z,,0x0066CF50,90,Code/GameEngine/Source/GameNetwork/Rva00800B70FeslDtor.cpp,matched,BFME1 byte-identical donor; b1 0x00800B70
+?d_008794c0@@YAXHPAH@Z,,0x006B8D50,58,Code/GameEngine/Source/Common/D008794C0RegistryStatus.cpp,matched,BFME1 byte-identical donor; b1 0x008794C0
+?d_008859d0@Rva008859D0Class@@QAEXPBDPAD@Z,,0x006CA4E0,93,Code/GameEngine/Source/Common/Bfme/Rva008859D0.cpp,matched,BFME1 donor with format-literal repair; b1 0x008859D0; plus0x34 layout proves class
