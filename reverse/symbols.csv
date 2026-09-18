@@ -1992,3 +1992,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?isOccupied@GameSlot@@QBE_NXZ,0x003FF0FB,BFME1 GameSlot predicate mangling (slot-state plus occupancy byte); called by RecorderClass::isMultiplayer slot scan
 ?rva00085124@GameLogic@@QAE_NXZ,0x00085124,opaque GameLogic predicate (mode at +0x110 is 4 or 7); called by RecorderClass::isMultiplayer as reject gate; identity unproven
 ??0Locomotor@@QAE@PBVLocomotorTemplate@@@Z,0x005C96EB,BFME1 Locomotor.h public ctor; sole caller is newLocomotor 0x5C9886 passing template at ebp+8; target prologue matches EH ctor shape
+?Get_Maximum_Extent@Vector3HollowSphereRandomizer@@UAEMXZ,0x007234A0,ICF-fold alias of SolidSphere Get_Maximum_Extent at same address; both vtables carry it in slots 3 and 6
