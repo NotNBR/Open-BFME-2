@@ -9859,3 +9859,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?get@Rva007E9EF0@@QAEPAURva007E9EF0Cached@@XZ,,0x00656EA0,56,Code/GameEngine/Source/Common/Q3LazyCachedAccessor.cpp,matched,BFME1 byte-identical donor; b1 0x007E9EF0
 ?get@Rva007E9F30@@QAEPAURva007E9F30Cached@@XZ,,0x00656EE0,56,Code/GameEngine/Source/Common/Q3LazyCachedAccessor.cpp,matched,BFME1 byte-identical donor; b1 0x007E9F30
 _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRetail.cpp,matched,BFME1 byte-identical donor; b1 0x0081F420
+?SeedNextCommandIDFromPlayerCount@@YAXH@Z,,0x00581194,20,Code/GameEngine/Source/GameNetwork/SeedNextCommandIDFromPlayerCount.cpp,matched,BFME1 donor b1 0x00682CF0; global VA differs (BFME2 0x00DD2DB4 per neighbor GenerateNextCommandID at 0x5811A8)
