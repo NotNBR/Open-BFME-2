@@ -9814,3 +9814,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?bfmeWriteQN@@YGXHPAXPAD@Z,,0x00040B10,59,Code/GameEngine/Source/Common/BfmeTwoHundredNinetySeven.cpp,matched,BFME1 byte-identical donor; b1 0x008911C0
 ?d_00889780@Rva00889780Class@@QAEXPBDH@Z,,0x00038850,58,Code/GameEngine/Source/Common/Bfme/Rva00889780.cpp,matched,BFME1 donor with empty-string VA + layout repair; b1 0x00889780
 ?Rva009A9920@@YAXPAEHI@Z,,0x001BA360,56,Code/GameEngine/Source/Common/Rva009A9920Average.cpp,matched,BFME1 byte-identical donor; b1 0x009A9920
+??0Rva005B1A00@@QAE@XZ,,0x0043132D,53,Code/GameEngine/Source/Common/Rva005B1A00Ctor.cpp,matched,BFME1 donor with vtable-literal repair; b1 0x005B1A00
