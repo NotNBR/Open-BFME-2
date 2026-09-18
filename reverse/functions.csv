@@ -10293,3 +10293,4 @@ _set2,,0x0074C3F0,26,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-ide
 ?bfmeGo1039C@BfmeD1039@@QAEPAVBfmeC1039@@XZ,,0x00187630,44,Code/GameEngine/Source/Common/BfmeConv1039.cpp,matched,BFME1 near-miss donor C-only; b1 0x0096A580; alloc 0x34 to 0x38
 ?bfmeDo1052@BfmeH1052@@QAEXHPAVBfmeI1052@@H@Z,,0x0066CFB0,164,Code/GameEngine/Source/Common/BfmeConv1052Do.cpp,matched,BFME1 near-miss donor trial as-is
 ?invoke@Rva00958C80@@QAEJVBfmeBstrVGP@@0JJJJJJPAX@Z,,0x00177010,170,Code/GameEngine/Source/GameNetwork/WOLBrowser/WebBrowserComWrappers.cpp,matched,BFME1 near-miss donor trimmed to served invoke; b1 0x00958C80; 2 callee pins same batch
+?Set_Visible@ParticleEmitterClass@@UAEXHH@Z,,0x001A1480,34,Code/Libraries/Source/WWVegas/WW3D2/ParticleEmitterVisibilityWrappers.cpp,matched,BFME1 near-miss donor Set_Visible-only; b1 0x0097EA40; slot 0x214 to 0x210
