@@ -10110,3 +10110,5 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?d_00891fa0@@YAXXZ,,0x006CC820,81,Code/GameEngine/Source/Common/Rva00891FA0Diagnostics.cpp,matched,BFME1 byte-identical donor; b1 0x00891FA0; 1 DIR32 string literal(s) agree; Send slots are .data ptrs not imports
 ?bfmeFind1228@@YAPBUBfmeW1228@@PBDI@Z,,0x0070FE80,99,Code/GameEngine/Source/Common/BfmeConv1228.cpp,matched,BFME1 byte-identical donor; b1 0x008D4250
 ??0Rva00801FB0Elem@@QAE@XZ,,0x0066E270,106,Code/GameEngine/Source/GameNetwork/Rva00801FB0FeslElemCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00801FB0
+?process@Gen_00942BC0@@QAEXPAX00@Z,,0x00159FC0,40,Code/GameEngine/Source/Common/Gen_00942BC0.cpp,matched,BFME1 byte-identical donor; b1 0x00942BC0
+??0Rva00802380Owner@@QAE@XZ,,0x0066E570,37,Code/GameEngine/Source/GameNetwork/Rva00802330FeslCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00802330
