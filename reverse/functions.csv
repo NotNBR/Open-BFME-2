@@ -9565,3 +9565,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva004CFB6DAsciiField@@QBE?AVAsciiString@@XZ,,0x004CFB6D,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x1D8 via StringBase copy 0x365F0; 3 callers
 ?get@Rva004DC902AsciiField@@QBE?AVAsciiString@@XZ,,0x004DC902,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x188 via StringBase copy 0x365F0; 2 callers
 ?get@Rva00656F30DwordField@@QBEHXZ,,0x00656F30,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva00656F40DwordField@@QBEHXZ,,0x00656F40,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
