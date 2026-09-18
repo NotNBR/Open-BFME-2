@@ -10219,3 +10219,4 @@ _luaO_equalObj,,0x0074E0C0,92,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 
 ??0Rva00803890Owner@@QAE@EPAUBfmeOwnerUNC@@@Z,,0x0066F860,104,Code/GameEngine/Source/GameNetwork/FeslBrowserFactory_ctor.cpp,matched,BFME1 byte-identical donor; b1 0x00803820; vtable-literal repair to sacrificial anchors
 _FreeGame,,0x00606EE0,101,Code/GameEngine/Source/GameNetwork/GameSpy/gstats/FreeGameBfme.cpp,matched,BFME1 byte-identical donor; b1 0x009D2B70
 _EnumLocalesProcA@4,,0x00021470,242,Code/Libraries/Source/WWVegas/WWLib/stlport_EnumLocalesProcA.cpp,matched,STLport donor in distinct TU; undecorated lstrcmpi import repair for IAT 0x00BBA150; b1 0x0084E210
+?LogRegisters@DebugExceptionhandler@@CAXAAVDebug@@PAU_EXCEPTION_POINTERS@@@Z,,0x0003DA20,678,Code/Libraries/Source/WWVegas/WWDebug/DebugExceptionhandler_LogRegisters.cpp,matched,BFME1 donor; b1 0x0088E340; windows-shim plus literal repairs
