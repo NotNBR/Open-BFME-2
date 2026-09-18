@@ -1,0 +1,30 @@
+// cl: /O1 /DNDEBUG /MD /EHsc
+
+// ?getSlot@GameInfo@@QAEPAVGameSlot@@H@Z @0x3FF29F (29B):
+// GameInfo::getSlot. BFME1 GameInfo.cpp shape (a null check on the array
+// itself, kept by the compiler as lea/test, plus bounds guards), except
+// BFME2 spells the bounds as separate guards: the && form lays the dead
+// null tail mid-function, while retail shares it at the end.
+
+typedef int Int;
+
+enum { MAX_SLOTS = 8 };
+
+class GameSlot;
+
+class GameInfo
+{
+public:
+	GameSlot *getSlot(Int slotNum);
+private:
+	char m_pad[0x18];
+	GameSlot *m_slot[8];
+};
+
+// ?getSlot@GameInfo@@QAEPAVGameSlot@@H@Z
+GameSlot *GameInfo::getSlot(Int slotNum)
+{
+	if (m_slot == 0)
+		return 0;
+	return (slotNum < 0 || slotNum >= MAX_SLOTS) ? 0 : m_slot[slotNum];
+}
