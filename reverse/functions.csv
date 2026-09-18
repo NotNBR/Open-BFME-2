@@ -10185,3 +10185,4 @@ _luaH_free,,0x007507D0,60,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-
 ?onConnectionMade@FeslConnectionHandler@@QAEXXZ,,0x006656E0,37,Code/GameEngine/Source/Common/BfmeConv1296.cpp,matched,BFME1 byte-identical donor; b1 0x007F9140; string-anchored
 ?onConnectionBroken@FeslConnectionHandler@@QAEXXZ,,0x00665710,37,Code/GameEngine/Source/Common/BfmeConv1296.cpp,matched,BFME1 byte-identical donor; b1 0x007F9170; string-anchored
 ?bfmeGoDEA@@YAIPAVBfmeThingDEA@@@Z,,0x00323D9D,23,Code/GameEngine/Source/Common/BfmeConv671.cpp,matched,BFME1 byte-identical donor; b1 0x004B6930
+?Rva009B4880PredictValue@@YAXPAURva009B4880State@@HPAFPBURva009B4880Neighbor@@2@Z,,0x001C5180,126,Code/GameEngine/Source/Common/BfmeVp6PredictValue.cpp,matched,BFME1 byte-identical donor; b1 0x009B4880
