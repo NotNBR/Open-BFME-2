@@ -9415,3 +9415,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva0038899CByteSlot@@QAEXE@Z,,0x0038899C,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
 ?set@Rva003889D2ByteSlot@@QAEXE@Z,,0x003889D2,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
 ?getNthPlayer@PlayerList@@QAEPAVPlayer@@H@Z,,0x002A7A29,22,Code/GameEngine/Source/Common/RTS/PlayerList_getNthPlayer.cpp,matched,BFME1 PlayerList.cpp verbatim with BFME2 bound 20 not 32
+?set@Rva0039D495ByteSlot@@QAEXE@Z,,0x0039D495,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
