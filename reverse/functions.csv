@@ -8834,3 +8834,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva001D28F0Element@@QAE@XZ,,0x00689500,119,Code/Libraries/Source/WWVegas/WWLib/Rva001D28F0ElementDtor.cpp,matched,
 ?get@Rva002A9879ByteField@@QBEEXZ,,0x002A9879,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
 ?get@Rva002A98AFByteField@@QBEEXZ,,0x002A98AF,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva002AA22AByteField@@QBEEXZ,,0x002AA22A,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
