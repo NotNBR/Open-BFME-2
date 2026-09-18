@@ -2962,3 +2962,5 @@ ___GetLCIDFromName,0x000221B0,File-static locale resolver in stlport_LocaleFacet
 ?first@Rva00800550Chain@@QAEPAXXZ,0x0066CA00
 ?popFront@Rva00800550Chain@@QAEXXZ,0x0066CA10
 ?bfmeDoBDB@BfmeSubBDB@@QAEXPAXH@Z,0x00662D70
+?bfmeSetQQ@BfmeThingQQ@@QAEXPBDI@Z,0x00039B70
+?bfmeSetQR@BfmeThingQR@@QAEXPBDI@Z,0x00039B70
