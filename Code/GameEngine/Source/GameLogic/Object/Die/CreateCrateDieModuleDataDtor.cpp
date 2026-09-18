@@ -75,4 +75,4 @@ CreateCrateDieModuleData::~CreateCrateDieModuleData()
 	m_crateNameList.clear();
 }
 // ??1?$list@VAsciiString@@V?$allocator@VAsciiString@@@_STL@@@_STL@@QAE@XZ present-unmatched
-// ??_GCreateCrateDieModuleData@@UAEPAXI@Z present-unmatched
+// ??_GCreateCrateDieModuleData@@UAEPAXI@Z
