@@ -8719,3 +8719,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?isInMultiplayerGame@GameLogic@@QAE_NXZ,,0x00042235,23,Code/GameEngine/Source/GameLogic/System/GameLogicIsInMultiplayerGame.cpp,matched,ZH GameLogic.h:404 verbatim; mode +0x110 LAN-or-NET; 43 callers; pin coexists
 ?Rva001D5470_CpuFeatureProbe@@YAHXZ,,0x001D5470,160,Code/GameEngine/Source/Common/CpuFeatureProbe.cpp,matched,
 ?bfmeQueryCpuTierFlags@@YAXPAH00@Z,,0x001C4390,140,Code/GameEngine/Source/Common/CpuTierFlags.cpp,matched,
+?parseStaticTextData@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x00315283,47,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseStaticTextData.cpp,matched,BFME1 GameWindowManagerScript verbatim; dispatch table at 0x9BE198 pairs STATICTEXTDATA with 0x715283; 2x strtok plus scanBool pin; TextData centered at plus 4
