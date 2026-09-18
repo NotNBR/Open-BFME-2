@@ -2592,3 +2592,5 @@ _bfmeSearch1155,0x00029EB0
 ?Compute_Ram_Size@MeshGeometryClass@@QAEHXZ,0x0016ADC0
 ?Compute_Ram_Size@MeshMatDescClass@@QAEHXZ,0x0015CAE0
 ?bfmeTotalVNQ@BfmeThingVNQ@@QAEHXZ,0x0016EEE0
+?ChangeBuffer@EAStringC@@AAEXIIIW4CBPushZero@1@I@Z,0x006D4AA0
+?bfmeReserveVKK@BfmeStrVKK@@QAEXIHIHI@Z,0x006D4AA0

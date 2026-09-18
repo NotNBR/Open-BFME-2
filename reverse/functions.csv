@@ -10079,3 +10079,5 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?GetHInstanceAt@CAtlBaseModule@ATL@@QAEPAXH@Z,,0x00628D8F,78,Code/GameEngine/Source/Common/CAtlBaseModuleGetHInstanceAt.cpp,matched,BFME1 byte-identical donor; b1 0x009F6A42
 ?AddResourceInstance@CAtlBaseModule@ATL@@QAE_NPAX@Z,,0x00628ED3,59,Code/GameEngine/Source/Common/CAtlBaseModuleAddResourceInstance.cpp,matched,BFME1 donor; CSimpleArray Add pin at 0x628DDD; b1 0x009F6B86
 ?Compute_Ram_Size@MeshModelClass@@QAEHXZ,,0x001880E0,67,Code/Libraries/Source/WWVegas/WW3D2/MeshModelClass_ComputeRamSize.cpp,matched,BFME1 donor with BFME2 base repair 0x94 to 0x8C; retail reads +0x8C/+0x90/+0x98; b1 0x0096C9B0
+?bfmeReverseVKK@BfmeStrVKK@@QAEPAV1@XZ,,0x006D59A0,75,Code/GameEngine/Source/Common/BfmeConv1404.cpp,matched,BFME1 byte-identical donor; b1 0x0089F3D0
+?bfmeTruncVKK@BfmeStrVKK@@QAEXI@Z,,0x006D6230,31,Code/GameEngine/Source/Common/BfmeConv1404.cpp,matched,BFME1 byte-identical donor; b1 0x0089EC50
