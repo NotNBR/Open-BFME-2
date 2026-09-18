@@ -1924,7 +1924,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?initVersionGlobals@@YAHXZ,0x00238646,Version global init filling ints at 0xDFE760-0xDFE76C and returning bool to 0xDFE774; called once via guard 0xDFE778 in 0x23870E
 ??0HAnimPrototypeOwner@@QAE@ABVHierarchyPrototypeRef@@@Z,0x0014CED0,4-byte SEH owner copy ctor (by-ref HierarchyPrototypeRef, zeroes m_ptr then delegates to 0x14CDE4); called from a*-lookup 0x14CFBD and factory 0x14CF37
 ?Rva0061F0D0_Contains@@YA_NPBD@Z,0x0061F0D0,28B registry contains-check (null name/registry answers false else tail-calls lookup 0xA21170); called with lowercased a*-key from AnimExists 0x14CE5D
-??0Rva0014CE67_Prototype@@QAE@PBDHH@Z,0x0014CE67,75B SEH 3-arg prototype ctor (base 0x61ED40 + vtable 0xBD37EC + counted-null + StringClass via 0xF0ED1 + args at +0x1C/+0x20; returns this); called from Create 0x14D058; arg2/3 types unproven (ints assumed)
 ?Install_UV_Array@MeshMatDescClass@@QAEXHHPAVVector2@@H@Z,0x0015B960,BFME1 meshmatdesc.cpp Install_UV_Array (355B row @0x0092A560); BFME2 retail read_texcoords @0x1896D0 calls it with (DefMatDesc, pass, stage, uvs, count) plus 2 sibling UV-reader calls @0x189B37/@0x189C46
 ??0Rva00180023@@QAE@ABVHierarchyPrototypeRef@@@Z,0x00180023,4-byte SEH owner copy ctor (same shape as 0x17FBED/0x14CED0, own delegate); called from factory 0x18008A
 ??0Rva00136001@@QAE@ABVHierarchyPrototypeRef@@@Z,0x00136001,4-byte SEH owner copy ctor (same shape, own delegate); called from factory 0x136068
@@ -1980,3 +1979,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?getMachineName@IPEnumeration@@QAE?AVAsciiString@@XZ,0x0050C1FD,ZH/BFME1 IPEnumeration machine-name loader; hidden-ret AsciiString temp for the desync filename format
 ??1IPEnumeration@@QAE@XZ,0x0050C283,ZH/BFME1 IPEnumeration dtor; address-list teardown for the desync enumeration localRelease; REL32-decoded from the loadD3DCursorTextures body
 ?scanInt@@YAHPBDAAH@Z,0x00314E96,GameWindowManagerScript file-static sscanf wrapper; REL32 x2 from parseSliderData 0x3151EC; mangling compiler-attested via TU nm; sscanf import 0xBBA5E4
+??0StringClass@@QAE@PBD_N@Z,0x000F0ED1,StringClass 2-arg ctor (name,flag): empty-init from global 0xDD528C + _mbslen + Get_String pre-size via 0x610B00 row + assign-PBD via 0xF0E8D row; 14 E8 callers incl proto ctor 0x14CE92/factory+owner family; second param bool (byte-tested, forwarded to Get_String _N slot)
