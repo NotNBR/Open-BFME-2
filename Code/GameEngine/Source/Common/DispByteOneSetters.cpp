@@ -65,3 +65,17 @@ void Rva000203ADDByteZeroSetter::disable()
 {
 	m_enabled = 0;
 }
+
+class Rva0033F971ByteOneSetter
+{
+public:
+	void enable();
+
+	char m_lead[0x3C6];
+	unsigned char m_enabled;
+};
+
+void Rva0033F971ByteOneSetter::enable()
+{
+	m_enabled = 1;
+}
