@@ -10275,3 +10275,4 @@ _Rva0088E1A0ShowAssertCrashDialog,,0x0003D880,410,Code/Libraries/Source/WWVegas/
 ?clear@Rva00801600@@QAEXXZ,,0x0066D900,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 56; b1 0x00801600
 ?sendCreateGameRequest@BfmeSinkSKA@@QAEXHHHPBD@Z,,0x006700C0,199,Code/GameEngine/Source/GameNetwork/FeslTidMessageSender.cpp,matched,BFME1 byte-identical donor b1 0x00804080 ICF pick 6 literals
 ?bfmeSendSKA@BfmeSinkSKA@@QAEXHHH@Z,,0x00670050,103,Code/GameEngine/Source/GameNetwork/FeslTidMessageSender.cpp,matched,BFME1 byte-identical donor b1 0x00804010 ICF pick 1 literal
+?bfmeMakeQB@BfmeThingQB@@QAEXIPAX@Z,,0x00024CF0,59,Code/GameEngine/Source/Common/BfmeTwoHundredEightyFive.cpp,matched,BFME1 byte-identical donor; b1 0x0082C230; ICF-folded in BFME1 so the name is this sweep's pick among its twins
