@@ -9530,3 +9530,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GFVFCategoryList@@UAEPAXI@Z,,0x00144890,27,Code/Libraries/Source/WWVegas/WW3D2/FVFCategoryListDtor.cpp,matched,scalar deleting dtor over the FVFCategoryList dtor; vtable slot 0
 ??1TextureCategoryList@@UAE@XZ,,0x001446F0,95,Code/Libraries/Source/WWVegas/WW3D2/TextureCategoryListDtor.cpp,matched,TextureCategoryList dtor; vtable 0xBD34E4; renderer plus0x1C member; FVF recipe clone
 ??_GTextureCategoryList@@UAEPAXI@Z,,0x00144870,27,Code/Libraries/Source/WWVegas/WW3D2/TextureCategoryListDtor.cpp,matched,scalar deleting dtor over the TextureCategoryList dtor; vtable slot 0
+?getRemainingAmmo@Weapon@@QBEI_N@Z,,0x002CC578,105,Code/GameEngine/Source/GameLogic/Object/Weapon_getRemainingAmmo.cpp,matched,BFME1 Weapon_getRemainingAmmo.cpp port; ammo descriptor at +0x120 provider at +0x250; provider virtual slot 0x114
