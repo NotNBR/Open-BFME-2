@@ -125,6 +125,28 @@ Many functions match verbatim. Reconcile against the binary (the source of truth
 assert strings keep the original tree layout (`C:\projects\bfme2patch103\bfme2\Code\...`) —
 place each conversion at that exact `Code/` path.
 
+### Donor files BFME 1 has already converted
+
+`tools/bfme1_sweep.py` compares `lotrbfme.exe` against `game.dat` directly and serves the
+BFME 1 source files whose bodies are **byte-identical** here, so the conversion is a copy.
+`scan` (~3 min) writes `build/bfme1_sweep/match.json`; `ranked`, `show` and `packets` serve
+from it instantly, and each packet carries the donor path, its copy difficulty, the
+`symbols.csv` pins its call sites need and the exact `add_match.py` lines. `land <file>` runs
+those steps and reverts cleanly if the gate refuses. Claim and pin state are re-read at serve
+time, not cached, so a scan does not go stale as rows land around it.
+
+Its scope is byte-exact transfers only, and that is narrower than it sounds. The
+BFME1-verbatim rows already in this ledger — `getBrightness` (0x002E4A47), `hasGotOnline`,
+`getRemainingAmmo` — are *source*-verbatim and byte-**divergent**: BFME 1's bodies are three
+to six bytes longer and only 15–31 of ~90–105 bytes agree. No binary comparison can reach
+them; they need a compile-based sweep like `zh_sweep.py`. Do not re-derive this.
+
+Neither image has a `.reloc` directory, so the sweep derives relocation slots from the
+instruction stream and forgives a difference only where both images independently place the
+same kind of slot at the same offset. `scan` prints a control figure — the number of its
+placements that reproduce a boundary this repo matched independently — and refuses the run
+if it falls. Treat that number, not the candidate count, as the health check.
+
 For exact function sizes, the full function inventory, and the bulk-port pipeline, see
 `tools/ghidra/README.md`.
 

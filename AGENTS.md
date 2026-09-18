@@ -14,6 +14,12 @@ An explicit request or assigned lane overrides the queue:
 3. `python3 tools/list_naked_candidates.py Code` serves a byte-true dump from
    `Code/gen_asm/`, boundary already proven. **Prefer the coverage-first reference sweep below when compatible reference units are available; otherwise converting dumps to real C++ is the default work.**
       
+3b. `python3 tools/bfme1_sweep.py ranked` serves BFME 1 source files whose
+   bodies are byte-identical in game.dat — the conversion is `cp`. `scan`
+   refreshes it in ~3 minutes; `show <file>` prints a packet with the pins and
+   `add_match.py` lines already written out. Byte-exact transfers only; see
+   `docs/matching.md`.
+
 4. `python3 tools/next_work.py` for identity/structural work; it explains its
    own tiers.
 5. `python3 tools/place_bodies.py <sources>` mines the units the ledger already
