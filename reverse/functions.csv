@@ -9869,3 +9869,4 @@ _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRe
 ?set@Rva0016A490@@QAEXPAURva0016A490Node@@@Z,,0x00262107,16,Code/GameEngine/Source/Common/Rva0016A490Set.cpp,matched,BFME1 byte-identical donor; b1 0x0016A490
 ?set@Rva00149DF0@@QAEAAV1@PBQAURva00149DF0Obj@@@Z,,0x002FD651,16,Code/GameEngine/Source/Common/Rva00149DF0Set.cpp,matched,BFME1 byte-identical donor; b1 0x00149DF0
 ?maybePrepend@PartitionData@@QAEXXZ,,0x0073A0E0,16,Code/GameEngine/Source/GameLogic/Object/PartitionData_maybePrepend.cpp,matched,BFME1 byte-identical donor; b1 0x008F7B20
+?invoke@Rva007EB6F0Object@@QAEXXZ,,0x00658680,16,Code/GameEngine/Source/Common/Rva007EB6F0VirtualTail.cpp,matched,BFME1 byte-identical donor; b1 0x007EB6F0
