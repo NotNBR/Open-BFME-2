@@ -8350,3 +8350,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000467EE1@TransportContain@@SA?AW4NameKeyType@@XZ,,0x00467EE1,69,Code/GameEngine/Source/GameLogic/Object/Contain/TransportContainPoolKey.cpp,matched,
 ?rva00047A0E6@HordeGarrisonContain@@SA?AW4NameKeyType@@XZ,,0x0047A0E6,69,Code/GameEngine/Source/GameLogic/Object/Contain/HordeGarrisonContainPoolKey.cpp,matched,
 ?rva00047B51E@AODHordeContain@@SA?AW4NameKeyType@@XZ,,0x0047B51E,69,Code/GameEngine/Source/GameLogic/Object/Contain/AODHordeContainPoolKey.cpp,matched,
+??_GRva0014CD63@@UAEPAXI@Z,,0x0014CEB4,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x14CD63; flag plus pinned operator delete

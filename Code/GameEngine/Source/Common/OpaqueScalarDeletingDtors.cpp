@@ -2831,3 +2831,28 @@ void ObjectModule_Anchor(ObjectModule *p)
 {
 	p->ObjectModule::~ObjectModule();
 }
+
+class Rva0014CD63_B2
+{
+public:
+	virtual void f2();
+};
+
+// Owner unproven (opaque): this deleting dtor calls the 82B SEH prototype
+// dtor at 0x0014CD63 (vptr 0xBD37EC, counted +0x14, StringClass +0x18)
+// through the opaque pin, then frees via the pinned ??3. Retail 0x0014CEB4
+// has no E8 callers (dead or indirect-only).
+class Rva0014CD63 : public Rva0049B47C, public MiBase1, public Rva0014CD63_B2
+{
+public:
+	virtual ~Rva0014CD63()
+	{
+	}
+};
+
+// Anchor: forces out-of-line emission of the in-class destructor COMDAT,
+// including the scalar deleting destructor.
+void Rva0014CD63_Anchor(Rva0014CD63 *p)
+{
+	p->Rva0014CD63::~Rva0014CD63();
+}
