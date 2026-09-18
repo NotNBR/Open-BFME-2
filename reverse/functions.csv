@@ -9912,3 +9912,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?getShroudStatusForPlayer@ShroudManagerImpl008FBA40@@QBE?AW4CellShroudStatus@@HHH@Z,,0x0073B8D0,99,Code/GameEngine/Source/Common/RTS/ShroudManagerImpl008FBA40.cpp,matched,BFME1 donor sibling of the near-miss getPropShroudStatusForPlayer; b1 0x008F9530; player states 16x6B -> 20x8B
 ??0ServiceHubImpl@@QAE@PAX00000@Z,,0x00657DD0,780,Code/GameEngine/Source/GameNetwork/ServiceHubImpl_ctor.cpp,matched,BFME1 byte-identical donor; b1 0x007EAE30; 18 DIR32 string literal(s) agree
 ?copyName@@YGXPAURva00808C20Entry@@PBU1@@Z,,0x00674B70,44,Code/GameEngine/Source/Common/SmallGaps/copyName.cpp,matched,BFME1 byte-identical donor; b1 0x00808C20
+?bfmeGoBLF@BfmeThingBLF@@QAEXPAX@Z,,0x00674B40,25,Code/GameEngine/Source/Common/BfmeConv487.cpp,matched,BFME1 byte-identical donor; b1 0x00808BF0
