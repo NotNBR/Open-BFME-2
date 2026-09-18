@@ -67,6 +67,9 @@ class Object
 {
 public:
     BfmeAmmoProvider *getAmmoProvider() const { return m_ammoProvider; }
+    // Owner-side ammo-availability gate used by Weapon::isAmmoReady; true name
+    // unproven (address proven by REL32, body reads Object+0x330).
+    Bool rva0028AF65() const;
 
     char m_padding[0x250];
     BfmeAmmoProvider *m_ammoProvider;
@@ -86,6 +89,9 @@ public:
     virtual void unused();
     UnsignedInt getRemainingAmmo(Bool countReloadingAsEmpty) const;
     WeaponStatus computeStatus(Bool *changed) const;
+    // Owner-has-usable-ammo gate for the empty-clip READY path; true name
+    // unproven (BFME1 attempt: bfmeAmmoReady). Adjacent to computeStatus.
+    Bool isAmmoReady() const;
 
 private:
     WeaponTemplate *m_template;
@@ -118,4 +124,15 @@ UnsignedInt Weapon::getRemainingAmmo(Bool countReloadingAsEmpty) const
         return 0;
 
     return m_ammoInClip;
+}
+
+Bool Weapon::isAmmoReady() const
+{
+    Object *owner = TheGameLogic->findObjectByID(m_ownerID);
+    if (owner != 0)
+    {
+        if (owner->rva0028AF65())
+            return true;
+    }
+    return false;
 }
