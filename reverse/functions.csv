@@ -9082,3 +9082,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?dup_002C485@@YAXXZ,,0x0002C485,45,Code/Libraries/Source/WWVegas/WWLib/stlport_construct_asciistring.cpp,matched,object-symbol=??$_Construct@VAsciiString@@V1@@_STL@@YAXPAVAsciiString@@ABV1@@Z;C++ alias; true name spent at 0x142CC0 with Buffer-model bytes; this 45B StringBase flavor triple-proven by ThingTemplate emission plus 6 AsciiString-vector callers
 ?get@Rva0037E15EDwordField@@QBEHXZ,,0x0037E15E,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,
 ?get@Rva00375A6CDwordField@@QBEHXZ,,0x00375A6C,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva00381D34DwordField@@QBEHXZ,,0x00381D34,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
