@@ -9353,3 +9353,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva00600084@@UAE@XZ,,0x00600084,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x60006A
 ??1Rva005C7CBB@@UAE@XZ,,0x005C7CBB,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x5C7CA1
 ?getLastLadderAddr@CustomMatchPreferences@@QAE?AVAsciiString@@XZ,,0x005DF4B9,81,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/CustomMatchPreferences_getLastLadderAddr.cpp,matched,BFME1 UserPreferences shim port; key slot null falls out of the by value return shape; init destroy alias pins
+?Blit_Char@FontCharsClass@@QAEXGPAGHHH@Z,,0x001588A0,222,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassBlitChar.cpp,matched,BFME1 BFME-blit nibble port plus x-bias clamp and unconditional OR; retail RE
