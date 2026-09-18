@@ -9274,3 +9274,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva000633BDByteSlot@@QAEXE@Z,,0x000633BD,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0006E2B5ByteSlot@@QAEXE@Z,,0x0006E2B5,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva00078B2BByteSlot@@QAEXE@Z,,0x00078B2B,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?rva00204806@Rva00204806Host@@QAEXXZ,,0x00204806,55,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_canAppContinue.cpp,matched,ScriptEngine CanAppContinue gate; opaque host; calls frame setter 0x204094; latch at 0xDFE15C
