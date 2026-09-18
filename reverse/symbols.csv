@@ -2254,3 +2254,5 @@ __strlwr,0x006299A6
 ?m@Gen_007e86c0@@QAEXXZ,0x00655780
 ?removeObjectFromLookupTable@GameLogic@@QAEXPAVObject@@@Z,0x00240144
 ?addObjectToLookupTable@GameLogic@@QAEXPAVObject@@@Z,0x00242AC2
+??0Rva007E8810Message@@QAE@XZ,0x006558C0,ICF-fold twin of rowed ??0Rva007E8810 (row 9808, same 60B): BFME1 folds both at 0x007E8810 (row 5402 + pin 3544); BFME2 onAccept calls 0x006558C0 as the message ctor (retail +0x5b)
+?onBusy@Rva007FA2C0@@QAEHPAX@Z,0x00665F20,int-returning FESL busy op called by onAccept (retail +0x144); donor declares int onBusy(void*); BFME1 twin calls the same shape
