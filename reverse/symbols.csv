@@ -2827,3 +2827,4 @@ _lua_pushcclosure,0x00747640
 _lua_ref,0x00747A70
 _lua_setglobal,0x00747920
 _lua_tostring,0x007473B0
+?copyPlane009AF0D0@@YAXPAURva009AF320Context@@IHIIPAE1PBI@Z,0x001BFAC0
