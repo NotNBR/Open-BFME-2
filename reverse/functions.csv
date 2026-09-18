@@ -8372,3 +8372,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B6802@CastleUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B6802,69,Code/GameEngine/Source/Common/System/CastleUpgradePoolKey.cpp,matched,
 ?rva0004B6ABF@GeometryUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B6ABF,69,Code/GameEngine/Source/Common/System/GeometryUpgradePoolKey.cpp,matched,
 ?rva0004B708A@ReplaceSelfUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B708A,69,Code/GameEngine/Source/Common/System/ReplaceSelfUpgradePoolKey.cpp,matched,
+?rva0004B7F3D@RemoveUpgradeUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B7F3D,69,Code/GameEngine/Source/Common/System/RemoveUpgradeUpgradePoolKey.cpp,matched,
