@@ -9935,3 +9935,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?Notify_Removed@LightClass@@UAEXPAVSceneClass@@@Z,,0x00130F20,31,Code/Libraries/Source/WWVegas/WW3D2/light_notify.cpp,matched,BFME1 byte-identical donor b1 0x0093BE40
 ??0TTriggerInfo@@QAE@XZ,,0x0028A60A,19,Code/GameEngine/Source/GameLogic/Object/Object_TTriggerInfoCtor.cpp,matched,BFME1 byte-identical donor; b1 0x001BD370
 ??1ServiceHubImpl@@QAE@XZ,,0x00657690,625,Code/GameEngine/Source/GameNetwork/ServiceHubImpl_dtor.cpp,matched,BFME1 byte-identical donor; b1 0x007EA6F0; 34 DIR32 string literal(s) agree
+?bfmeDelTWC@BfmeThingTWC@@QAEPAXE@Z,,0x00674A80,73,Code/GameEngine/Source/Common/BfmeConv1325TWC.cpp,matched,BFME1 byte-identical donor extract; b1 0x00808B30
