@@ -330,3 +330,74 @@ def test_ledger_note_carries_no_comma():
         strings=[{"offset": 1, "bfme1": "x", "bfme2": "x", "agree": True}]), tier="T3"))
     assert "," not in note
     assert "0x00900000" in note and "ICF-folded" in note and "1 DIR32" in note
+
+
+# ---- commit-gate tiers: found by landing wave 1 into the hooks, not by reading them
+
+def donor_tree(tmp_path, monkeypatch, files):
+    """A fake submodule holding `files` {relative path: text}."""
+    for relative, text in files.items():
+        path = tmp_path / "bfme1" / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text)
+    monkeypatch.setattr(bfme1_sweep, "BFME1", tmp_path / "bfme1")
+    monkeypatch.setattr(bfme1_sweep, "ROOT", tmp_path / "bfme2")
+    (tmp_path / "bfme2").mkdir(exist_ok=True)
+
+
+def test_copy_tier_holds_a_naked_lift(tmp_path, monkeypatch):
+    """AGENTS.md: a lift is not a conversion, and conversion_gate refuses it."""
+    donor_tree(tmp_path, monkeypatch, {
+        "Code/GameEngine/Source/Common/X.cpp": "void __declspec(naked) f() { __asm { ret } }\n"})
+    tier, note, _, _ = bfme1_sweep.copy_tier("Code/GameEngine/Source/Common/X.cpp")
+    assert tier == "L" and "naked" in note
+
+
+def test_copy_tier_holds_a_root_the_hook_does_not_allow(tmp_path, monkeypatch):
+    """.githooks/pre-commit refused Code/stlport/ after the file had already built."""
+    donor_tree(tmp_path, monkeypatch, {"Code/stlport/X.cpp": "int f() { return 1; }\n"})
+    tier, note, _, _ = bfme1_sweep.copy_tier("Code/stlport/X.cpp")
+    assert tier == "P" and "stlport" in note
+
+
+def test_copy_tier_keeps_inline_asm_landable(tmp_path, monkeypatch):
+    """Only naked/__emit is a lift; ordinary inline __asm is what the MMX donors use."""
+    donor_tree(tmp_path, monkeypatch, {
+        "Code/GameEngine/Source/Common/X.cpp": "void f() { __asm { emms } }\n"})
+    assert bfme1_sweep.copy_tier("Code/GameEngine/Source/Common/X.cpp")[0] == "A"
+
+
+def test_group_files_holds_a_donor_that_defines_unplaced_functions(tmp_path, monkeypatch):
+    """The hook's find_declared_unmatched refuses a source with any function the
+    ledger lacks, so a donor is only landable whole when everything it defines
+    was placed -- not just the bodies the sweep found."""
+    src = "Code/GameEngine/Source/Common/X.cpp"
+    donor_tree(tmp_path, monkeypatch, {src: "int f() { return 1; }\n"})
+    (tmp_path / "b1.csv").write_text(
+        "name,export_rva,target_rva,target_size,source,status,notes\n"
+        f"?placed@@YAHXZ,,0x1000,32,{src},matched,\n"
+        f"?tiny@@YAHXZ,,0x2000,7,{src},matched,\n")
+    (tmp_path / "b2.csv").write_text("name,export_rva,target_rva,target_size,source,status,notes\n")
+    (tmp_path / "sym.csv").write_text("name,address,notes\n")
+    monkeypatch.setattr(bfme1_sweep, "BFME1_LEDGER", tmp_path / "b1.csv")
+    monkeypatch.setattr(bfme1_sweep, "BFME2_LEDGER", tmp_path / "b2.csv")
+    monkeypatch.setattr(bfme1_sweep, "BFME2_SYMBOLS", tmp_path / "sym.csv")
+    payload = {"records": [record(name="?placed@@YAHXZ", source=src, size=32)]}
+
+    assert bfme1_sweep.group_files(payload) == [], "held by default"
+    held = bfme1_sweep.group_files(payload, include_held=True)
+    assert [(e["copy_tier"], len(e["bodies"])) for e in held] == [("S", 1)]
+    assert "1 function(s)" in held[0]["copy_note"] and "?tiny@@YAHXZ" in held[0]["copy_note"]
+
+
+def test_remove_rows_drops_only_the_named_source(tmp_path, monkeypatch):
+    ledger = tmp_path / "functions.csv"
+    ledger.write_bytes(b"name,export_rva,target_rva,target_size,source,status,notes\n"
+                       b"?a@@YAXXZ,,0x1,8,Code/x.cpp,matched,\n"
+                       b"?b@@YAXXZ,,0x2,8,Code/y.cpp,matched,\n"
+                       b"?c@@YAXXZ,,0x3,8,Code/x.cpp,matched,\n")
+    monkeypatch.setattr(bfme1_sweep, "BFME2_LEDGER", ledger)
+    bfme1_sweep.remove_rows("Code/x.cpp")
+    text = ledger.read_bytes().decode()
+    assert "?b@@YAXXZ" in text and "?a@@YAXXZ" not in text and "?c@@YAXXZ" not in text
+    assert b"\r" not in ledger.read_bytes(), "must keep canonical LF"

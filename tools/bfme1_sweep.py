@@ -105,6 +105,15 @@ FLAGGED_SUBSTRINGS = {
 }
 
 GEN_SOURCE_PREFIXES = ("Code/gen_small", "Code/gen_asm", "Code/masm_dumps")
+# .githooks/pre-commit refuses a NEW source anywhere else under Code/. Wave 1
+# landed Code/stlport/CodecvtWideNarrow.cpp clean and could not commit it.
+PLACEMENT_ROOTS = ("Code/GameEngine/", "Code/GameEngineDevice/", "Code/Libraries/",
+                   "Code/gen_small/", "Code/gen_asm/", "Code/masm_dumps/")
+LIFT_RE = re.compile(r"__declspec\s*\(\s*naked\s*\)|__emit")
+# Tiers that are held out of the served queue. Each one is a gate this repo's
+# hooks enforce, found by landing a wave into it rather than by reading the hook.
+HELD_COPY_TIERS = {"L", "P", "S"}
+COPY_ORDER = {"A": 0, "B": 1, "C": 2, "D": 3, "S": 4, "P": 5, "L": 6}
 INCLUDE_RE = re.compile(r'^\s*#\s*include\s*([<"])([^">]+)[">]', re.M)
 CL_RE = re.compile(r"^// cl:(.*)$", re.M)
 
@@ -425,6 +434,12 @@ def bfme2_headers():
 def copy_tier(source):
     """How much work moving this donor file is, and why.
 
+    L: the donor is itself a naked/__emit lift; the conversion gate refuses it.
+    P: the destination is outside the roots the pre-commit hook allows.
+    S: the donor defines functions the sweep never placed (set by group_files,
+       which is where the sibling rows are known); the hook's
+       find_declared_unmatched gate refuses a source with an undeclared
+       definition, so the file cannot land whole.
     A: no project includes -- `cp` is the conversion.
     B: quotes project headers, which have to exist here too.
     C: its `// cl:` names vendored-tree include paths that are one level deeper
@@ -441,6 +456,12 @@ def copy_tier(source):
     cl_line = cl_match.group(1).strip() if cl_match else ""
     stlport = "// stlport" in text
     project = [name for quote, name in INCLUDE_RE.findall(text) if quote == '"']
+    if LIFT_RE.search(text):
+        return ("L", "donor carries a __declspec(naked)/__emit body: a lift, which the "
+                "conversion gate refuses (AGENTS.md anti-lift policy)", cl_line, stlport)
+    if not source.startswith(PLACEMENT_ROOTS):
+        return ("P", f"{source.split('/')[1]}/ is not an allowed root for a new source "
+                "(.githooks/pre-commit placement rule)", cl_line, stlport)
     if (ROOT / source).exists():
         return "D", f"{source} already exists in this repo", cl_line, stlport
     if "reference/CnC_Generals_Zero_Hour" in cl_line or "reference/shims" in cl_line:
@@ -683,12 +704,34 @@ def body_tier(record, claims, pins):
     return "T1", reasons, []
 
 
+def bfme1_siblings():
+    """{source: {name}} -- every clean function Open-BFME-1 claims per source, any size.
+
+    donor_rows() drops bodies under --min-size, and the scan drops ambiguous
+    ones, but the pre-commit hook refuses a source that defines ANY function
+    the ledger lacks. So the placed bodies are not the file's contents: a donor
+    is only landable whole if everything it defines was placed.
+    """
+    siblings = defaultdict(set)
+    with BFME1_LEDGER.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            source = row.get("source") or ""
+            if not source.startswith("Code/") or source.startswith(GEN_SOURCE_PREFIXES):
+                continue
+            notes = row.get("notes") or ""
+            if "gen-" in notes or "vendored=" in notes:
+                continue
+            siblings[source].add(row["name"])
+    return siblings
+
+
 TIER_ORDER = {"T1": 0, "T2": 1, "T3": 2, "T4": 3}
 
 
-def group_files(payload, include_refused=False, tiers=("T1", "T2", "T3")):
+def group_files(payload, include_refused=False, tiers=("T1", "T2", "T3"), include_held=False):
     claims = Claims(ledger_claims(BFME2_LEDGER))
     pins = pinned_symbols()
+    siblings = bfme1_siblings()
     files = defaultdict(lambda: {"bodies": [], "held": []})
     for record in payload["records"]:
         tier, reasons, pin_lines = body_tier(record, claims, pins)
@@ -704,6 +747,15 @@ def group_files(payload, include_refused=False, tiers=("T1", "T2", "T3")):
         if verdict == "refused" and not include_refused:
             continue
         tier, note, cl_line, stlport = copy_tier(source)
+        placed = {record["name"] for record in bucket["bodies"] + bucket["held"]}
+        unplaced = sorted(siblings.get(source, set()) - placed)
+        if unplaced and tier in ("A", "B", "C"):
+            tier = "S"
+            note = (f"donor also defines {len(unplaced)} function(s) the sweep did not place "
+                    f"(under {MIN_FUNC}B or ambiguous), so the hook's find_declared_unmatched "
+                    f"gate refuses the file: {', '.join(unplaced[:2])}")
+        if tier in HELD_COPY_TIERS and not include_held:
+            continue
         bodies = sorted(bucket["bodies"], key=lambda r: (TIER_ORDER[r["tier"]], -r["size"]))
         served.append({
             "source": source,
@@ -719,14 +771,15 @@ def group_files(payload, include_refused=False, tiers=("T1", "T2", "T3")):
             "held": bucket["held"],
         })
     served.sort(key=lambda entry: (TIER_ORDER[entry["best_tier"]],
-                                   {"A": 0, "B": 1, "C": 2, "D": 3}[entry["copy_tier"]],
+                                   COPY_ORDER[entry["copy_tier"]],
                                    -entry["bytes"]))
     return served
 
 
 def do_ranked(args):
     payload = load_matches()
-    served = group_files(payload, include_refused=args.include_refused)
+    served = group_files(payload, include_refused=args.include_refused,
+                         include_held=args.include_held or bool(args.copy_tier))
     if args.copy_tier:
         served = [entry for entry in served if entry["copy_tier"] in args.copy_tier]
     if args.tier:
@@ -902,9 +955,16 @@ def find_entry(served, source):
 
 
 def do_show(args):
-    served = group_files(load_matches(), include_refused=True)
+    served = group_files(load_matches(), include_refused=True, include_held=True)
     print(packet_text(find_entry(served, args.source)))
     return 0
+
+
+def remove_rows(source):
+    """Drop every ledger row claiming `source`, keeping the file's own terminators."""
+    text = BFME2_LEDGER.read_bytes().decode("utf-8")
+    kept = [row for row in text.split("\n") if f",{source}," not in row]
+    BFME2_LEDGER.write_bytes("\n".join(kept).encode("utf-8"))
 
 
 def do_land(args):
@@ -914,8 +974,10 @@ def do_land(args):
     row does not byte-match, so all this owns is the copy and the pin lines --
     and putting those back, which it does before it reports anything.
     """
-    served = group_files(load_matches(), include_refused=args.include_refused)
+    served = group_files(load_matches(), include_refused=args.include_refused, include_held=True)
     entry = find_entry(served, args.source)
+    if entry["copy_tier"] in HELD_COPY_TIERS:
+        raise SystemExit(f"bfme1_sweep: held (copy-tier {entry['copy_tier']}): {entry['copy_note']}")
     wanted = ("T1", "T2", "T3") if args.allow_icf else ("T1", "T2")
     bodies = [body for body in entry["bodies"] if body["tier"] in wanted]
     if not bodies:
@@ -985,6 +1047,22 @@ def do_land(args):
                       "'bfme1_sweep donor: <what cl did instead>'", file=sys.stderr)
         return 1
 
+    # The pre-commit hook refuses a source defining any function the ledger
+    # lacks. Run its own check now, while the file is still ours to unwind,
+    # rather than leave a staged file the commit will reject. The heuristic in
+    # group_files predicts this; this is the ground truth.
+    declared = subprocess.run(
+        [sys.executable, str(ROOT / "tools" / "find_declared_unmatched.py"), "--fail",
+         "--staged", source], cwd=ROOT, capture_output=True, text=True)
+    if declared.returncode != 0:
+        remove_rows(source)
+        subprocess.run(["git", "rm", "--cached", "--quiet", "--", source], cwd=ROOT)
+        dest.unlink(missing_ok=True)
+        print(f"bfme1_sweep: {source} defines functions the ledger does not declare, which the "
+              "pre-commit hook refuses. Rows and copy reverted (pins kept: they are additive "
+              "and later files may resolve through them):", file=sys.stderr)
+        print("\n".join(declared.stdout.splitlines()[:6]), file=sys.stderr)
+        return 1
     # A pin is an additive candidate, and a wrong one still byte-matches -- the
     # gate proves nothing about it. This is the check AGENTS.md asks for, run
     # here so `land` cannot leave a fresh inconsistency behind unreported.
@@ -1018,7 +1096,9 @@ def main(argv=None):
     ranked.add_argument("--limit", type=int, default=40)
     ranked.add_argument("--json", action="store_true")
     ranked.add_argument("--tier", action="append", choices=["T1", "T2", "T3"])
-    ranked.add_argument("--copy-tier", action="append", choices=["A", "B", "C", "D"])
+    ranked.add_argument("--copy-tier", action="append", choices=sorted(COPY_ORDER))
+    ranked.add_argument("--include-held", action="store_true",
+                        help="also list donors held out by a commit gate (tiers L, P, S)")
     ranked.add_argument("--include-refused", action="store_true",
                         help="also list donors held out on licence grounds")
     ranked.set_defaults(func=do_ranked)

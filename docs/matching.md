@@ -135,6 +135,14 @@ from it instantly, and each packet carries the donor path, its copy difficulty, 
 those steps and reverts cleanly if the gate refuses. Claim and pin state are re-read at serve
 time, not cached, so a scan does not go stale as rows land around it.
 
+Three commit gates hold a donor out of the served queue, because a file can build and byte-match
+and still not be committable (`ranked --include-held` lists them): **L** the donor is itself a
+`__declspec(naked)`/`__emit` lift (the anti-lift gate); **P** its path is outside the roots
+`.githooks/pre-commit` allows for a new source (`Code/stlport/` is not one); **S** it defines
+functions the sweep never placed, and `find_declared_unmatched` refuses a source with any
+definition the ledger lacks. Wave 1 found all three by landing into them; the tiers agreed with
+31 of 31 of that wave's files.
+
 Its scope is byte-exact transfers only, and that is narrower than it sounds. The
 BFME1-verbatim rows already in this ledger — `getBrightness` (0x002E4A47), `hasGotOnline`,
 `getRemainingAmmo` — are *source*-verbatim and byte-**divergent**: BFME 1's bodies are three
