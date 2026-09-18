@@ -9385,3 +9385,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva0057C3B6@@UAE@XZ,,0x0057C3B6,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x57C39C
 ?get@Rva000788F8FloatField@@QBEMXZ,,0x000788F8,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,BFME1 DispFloatFieldGetters port; 7B fld getter at disp 0x4E8; first of 6-contiguous cluster
 ?Blit_Char@FontCharsClass@@QAEXGPAGHHH@Z,,0x001587C0,215,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassBlitChar.cpp,matched,BFME1 BFME-blit verbatim plus load helper; caller inside Build_Sentence_Not_Centered
+?get@Rva000788FFFloatField@@QBEMXZ,,0x000788FF,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,BFME1 DispFloatFieldGetters port; 7B fld getter at disp 0x4EC; second of 6-contiguous cluster
