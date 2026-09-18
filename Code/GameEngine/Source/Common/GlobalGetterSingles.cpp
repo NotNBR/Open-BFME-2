@@ -13,3 +13,12 @@ int Rva0001D1C0Get(void)
 {
 	return g_Va00DA6CC8;
 }
+
+// ?Rva00020E80Get@@YAHXZ @ 0x00020E80 (6B) over 0x00DA7188.
+
+extern int g_Va00DA7188;
+
+int Rva00020E80Get(void)
+{
+	return g_Va00DA7188;
+}
