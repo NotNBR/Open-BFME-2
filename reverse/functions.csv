@@ -10217,3 +10217,4 @@ _luaO_equalObj,,0x0074E0C0,92,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 
 ?bfmeGo969D@BfmeD969@@QAEXXZ,,0x006617C0,39,Code/GameEngine/Source/Common/BfmeConv969.cpp,matched,BFME1 byte-identical donor; b1 0x007F4D20
 ?initFromMessage@Rva0080A940Owner@@QAEXPAVRva007E8810Message@@@Z,,0x00676840,103,Code/GameEngine/Source/GameNetwork/Y4FeslFavGameInit.cpp,matched,BFME1 byte-identical donor; b1 favgame init; finish pin only
 ??0Rva00803890Owner@@QAE@EPAUBfmeOwnerUNC@@@Z,,0x0066F860,104,Code/GameEngine/Source/GameNetwork/FeslBrowserFactory_ctor.cpp,matched,BFME1 byte-identical donor; b1 0x00803820; vtable-literal repair to sacrificial anchors
+_FreeGame,,0x00606EE0,101,Code/GameEngine/Source/GameNetwork/GameSpy/gstats/FreeGameBfme.cpp,matched,BFME1 byte-identical donor; b1 0x009D2B70
