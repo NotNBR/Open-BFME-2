@@ -10120,3 +10120,4 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?bfmeGoSKA@BfmeThingSKA@@QAEXHH@Z,,0x00675D00,53,Code/GameEngine/Source/Common/BfmeConv1293.cpp,matched,BFME1 byte-identical donor; b1 0x00809E00
 ??1FileInfoStruct@MixFileCreator@@QAE@XZ,,0x0052DD64,17,Code/Libraries/Source/WWVegas/WWLib/MixFileCreator_FileInfoStruct_dtor.cpp,matched,BFME1 byte-identical donor; b1 0x003F6EA0; true-name releaseInto pin at decoded REL32 target; sweep j and Pathfind guesses dropped
 ?run@Rva009F40E0Owner@@QAEXPAPAXI@Z,,0x00626AA0,72,Code/GameEngine/Source/Common/Rva009F40E0Recursive.cpp,matched,BFME1 donor; self-recursive self-pin; b1 0x009F40E0
+?Rva007EB8B0@@YAXPAVRva007EB8B0Log@@IPBDZZ,,0x00658820,101,Code/GameEngine/Source/GameNetwork/Rva007EB8B0Log.cpp,matched,BFME1 byte-identical donor; b1 0x007EB8B0; 2 DIR32 string literal(s) agree
