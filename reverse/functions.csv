@@ -10106,3 +10106,7 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?onBusy@Rva007FA2C0@@QAEHPAX@Z,,0x00665F20,142,Code/GameEngine/Source/GameNetwork/Rva007F99B0Busy.cpp,matched,BFME1 byte-identical donor; b1 0x007F99B0
 ?bfmeGoSTA@@YAXHHH@Z,,0x00023D00,36,Code/GameEngine/Source/Common/BfmeConv1300.cpp,matched,BFME1 byte-identical donor; b1 0x0082B320
 ?bfmeClearVHW@BfmeThingVHW@@QAEXXZ,,0x0066DF10,104,Code/GameEngine/Source/Common/BfmeConv1369.cpp,matched,BFME1 byte-identical donor; b1 0x00801C40
+?onLobbyCounts@Rva007F66B0Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00662E40,124,Code/GameEngine/Source/GameNetwork/V2FeslBrowserLobbyCounts.cpp,matched,BFME1 byte-identical donor; b1 0x007F66B0
+?d_00891fa0@@YAXXZ,,0x006CC820,81,Code/GameEngine/Source/Common/Rva00891FA0Diagnostics.cpp,matched,BFME1 byte-identical donor; b1 0x00891FA0; 1 DIR32 string literal(s) agree; Send slots are .data ptrs not imports
+?bfmeFind1228@@YAPBUBfmeW1228@@PBDI@Z,,0x0070FE80,99,Code/GameEngine/Source/Common/BfmeConv1228.cpp,matched,BFME1 byte-identical donor; b1 0x008D4250
+??0Rva00801FB0Elem@@QAE@XZ,,0x0066E270,106,Code/GameEngine/Source/GameNetwork/Rva00801FB0FeslElemCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00801FB0
