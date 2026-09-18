@@ -146,7 +146,6 @@ name,address,notes
 ??0BFME2MotionChannel@@QAE@XZ,0x001A465B,base motion-channel ctor; Type and Pivot or-minus-1 then vtable; ghidra 17 bytes
 ??0BFME2ScopedRenderEvent@@QAE@PBD0I@Z,0x00117CF0,"Descriptive scope ctor: label256 group64; bounded copy and BeginEvent wrapper11F340(label,color); RET12 full167"
 ??0BFME2StreamMotionChannel@@QAE@XZ,0x001B2138,Descriptive stream-channel constructor; calls base1A465B to initialize type and pivot then zeros payload pointer28 and installs BD7624; factory encoding1 and2 allocate44 bytes and invoke it before installing derived tables
-??0BFMEDesyncCheck@@QAE@XZ,0x002CEA22,BFME2 client frame desync record constructor called by GameEngine slot 39; enable flag and GameLogic CRC path match the BFME1 BFMEDesyncCheck analogue
 ??0BaikonurLaunchPowerModuleData@@QAE@XZ,0x0039A027
 ??0BehaviorModule@@QAE@PAVThing@@PBVModuleData@@@Z,0x00253330,address read from the REL32 displacement at a placed body
 ??0BfmeDynamicNativeVB@@QAE@IGII@Z,0x0013AC00,Recovered native vertex-buffer constructor; complete 106-byte body calls verified-layout base then Device9 buffer creation; four arguments and 32-byte allocation independently decoded
@@ -1978,4 +1977,7 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ??4CursorTextureSlot@@QAEXABVBFME2ParticleTextureHandle@@@Z,0x000424D0,counted-holder assign used by image-wide sites incl W3DMouse cursor fill; void return is load-bearing for the caller null-test register; REL32-decoded from the loadD3DCursorTextures body
 ?Get_Surface_Level@CursorTextureSlot@@QAE?AVW3DRadarResetSurface@@XZ,0x00132D70,holder surface fetch returning reset-surface holder by value; REL32-decoded from the loadD3DCursorTextures body with 32 image-wide callers
 ??4W3DRadarResetSurface@@QAEAAV0@ABV0@@Z,0x00072381,reset-surface holder assign with virtual AddRef Release; REL32-decoded from the loadD3DCursorTextures body
+?getCRC@GameLogic@@QAEIH@Z,0x0023CB2C,BFME2 GameLogic CRC builder called by the desync report with mode 0; ZH/BFME1 getCRC name with BFME2 single-int shape
+?getMachineName@IPEnumeration@@QAE?AVAsciiString@@XZ,0x0050C1FD,ZH/BFME1 IPEnumeration machine-name loader; hidden-ret AsciiString temp for the desync filename format
+??1IPEnumeration@@QAE@XZ,0x0050C283,ZH/BFME1 IPEnumeration dtor; address-list teardown for the desync enumeration localRelease; REL32-decoded from the loadD3DCursorTextures body
 ?scanInt@@YAHPBDAAH@Z,0x00314E96,GameWindowManagerScript file-static sscanf wrapper; REL32 x2 from parseSliderData 0x3151EC; mangling compiler-attested via TU nm; sscanf import 0xBBA5E4
