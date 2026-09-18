@@ -8448,3 +8448,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?scanInt@INI@@QAEHPBD@Z,,0x0002ECCF,104,Code/GameEngine/Source/Common/System/INI_scanInt.cpp,matched,
 ?parsePrerequisiteScience@@YAXPAVINI@@PAX1PBX@Z,,0x0033EABD,93,Code/GameEngine/Source/Common/Thing/ThingTemplateParsePrerequisiteScience.cpp,matched,BFME1 thunk shape; getNextToken0 plus outlined science push_back; 4 pins same batch
 ?parsePrerequisiteUnit@@YAXPAVINI@@PAX1PBX@Z,,0x0033EA47,118,Code/GameEngine/Source/Common/Thing/ThingTemplateParsePrerequisiteUnit.cpp,matched,BFME1 unit-thunk shape; in-place AsciiString temp; addUnitPrereq pin same batch
+?friend_parseRankDefinition@RankInfoStore@@SAXPAVINI@@@Z,,0x0020038E,269,Code/GameEngine/Source/GameLogic/System/RankInfoParse.cpp,matched,BFME1 RankInfoParse verbatim plus BFME2 scanInt TABLE literal and filler throws; late home via storedInfo copy (probe v8/v11: defining store pins early but copy sinks late)
