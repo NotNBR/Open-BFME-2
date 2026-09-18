@@ -9980,3 +9980,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?rva007F8790@BfmeThingTWA@@QAEXPBDH0E@Z,,0x00664E10,139,Code/GameEngine/Source/GameNetwork/Rva007F8790Demangler.cpp,matched,BFME1 byte-identical donor; b1 0x007F8790; 3 DIR32 string literal(s) agree
 ?accept@Rva00809500Sink@@QAEXPAURva00809500Entry@@@Z,,0x00674DF0,127,Code/GameEngine/Source/GameNetwork/Y4FeslFavGameAddress_accept.cpp,matched,BFME1 donor accept-only extract; b1 0x0080A9B0; notifyAddress sibling open
 ?send@Rva007FA2C0@@QAEHPAVRva007FA5E0Arg@@@Z,,0x00666B30,105,Code/GameEngine/Source/GameNetwork/Rva007FA5E0Send.cpp,matched,BFME1 byte-identical donor; b1 0x007FA5E0; 1 DIR32 string literal(s) agree
+?onDispatch@Rva00800E50Owner@@QAEXPAURva00800E50Header@@@Z,,0x0066D230,230,Code/GameEngine/Source/GameNetwork/Y2FeslDemanglerDispatch.cpp,matched,BFME1 byte-identical donor; b1 0x00800E50; 2 DIR32 string literals agree

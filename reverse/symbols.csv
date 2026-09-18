@@ -2381,3 +2381,9 @@ _bfmeLen1153,0x00006F30
 ?releaseCodecCallback@@YAXPAPAX@Z,0x001B68D0
 ?releaseCodecState@@YAXPAPAUCodecState@@@Z,0x001B56A0
 ?_M_throw_out_of_range@?$_String_base@DV?$allocator@D@_STL@@@_STL@@QBEXXZ,0x00023A40,retail REL32 from basic_string copy at 0x00024F3E targets this 11B empty frame body shared with row 2282 alloc_proxy dtor; BFME1 precedent pin 14595
+?Rva007F91D0@@YAXPAURva00800E50Header@@PBD@Z,0x00665770
+?bfmeDo1052@BfmeH1052@@QAEXHPAVBfmeI1052@@H@Z,0x0066CFB0
+?bfmeDo1052@Rva00800E50Owner@@QAEXHPAURva00800E50Stamp@@H@Z,0x0066CFB0
+?bfmeFreeVNC@Rva00800E50Owner@@QAEXPAVRva007E8810Message@@@Z,0x0066D0B0
+?onConnectReply@Rva00800780Owner@@QAEXPAVRva007E8810Message@@@Z,0x0066CB90
+?onConnectReply@Rva00800E50Owner@@QAEXPAVRva007E8810Message@@@Z,0x0066CB90
