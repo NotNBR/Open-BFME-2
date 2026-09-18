@@ -10141,3 +10141,6 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?bfmeRunRE@BfmeThingRE@@QAEXXZ,,0x006574A0,44,Code/GameEngine/Source/Common/BfmeThreeHundredTwelve.cpp,matched,BFME1 byte-identical donor; b1 0x007EA4F0
 ?clear@Rva00803080@@QAEXXZ,,0x0066F040,79,Code/GameEngine/Source/GameNetwork/Rva00802FD0FeslClear.cpp,matched,BFME1 byte-identical donor; b1 0x00802FD0
 ?rva00802240@Rva00802380Owner@@QAEPAXPBD@Z,,0x0066E4D0,44,Code/GameEngine/Source/GameNetwork/Rva00802240FeslLookup.cpp,matched,BFME1 byte-identical donor; b1 0x00802240
+?bfmeRunRG@BfmeThingRG@@QAEXXZ,,0x006574D0,44,Code/GameEngine/Source/Common/BfmeThreeHundredThirteen.cpp,matched,BFME1 byte-identical donor; b1 0x007EA520
+?bfmeGoBCE@BfmeThingBCE@@QAEXXZ,,0x00656E90,16,Code/GameEngine/Source/Common/BfmeConv441.cpp,matched,BFME1 byte-identical donor; b1 0x007E9EE0
+?bfmeFillCount82DD70@@YAPADPADIABD@Z,,0x00026BD0,42,Code/GameEngine/Source/Common/BfmeFillCount82DD70.cpp,matched,BFME1 byte-identical donor; b1 0x0082DD70; callee rva0082ADB0Fill pre-pinned at 0x000237C0; sweep dup pin stale
