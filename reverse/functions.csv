@@ -9622,3 +9622,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?prepare_shader@PointGroupClass@@QAEXXZ,,0x00179180,108,Code/Libraries/Source/WWVegas/WW3D2/PointGroupClassPrepareShader.cpp,matched,BFME1 prepare_shader port; SSE byte-form gradient arms; layout matches matched ctor
 ??1PointGroupClass@@UAE@XZ,,0x00178ED0,194,Code/Libraries/Source/WWVegas/WW3D2/PointGroupClassDestructor.cpp,matched,BFME1 dtor port; six sharebuf releases plus texture release
 ??_GPointGroupClass@@UAEPAXI@Z,,0x00179A20,28,Code/Libraries/Source/WWVegas/WW3D2/PointGroupClassDestructor.cpp,matched,scalar deleting dtor via Force delete anchor; calls dtor plus operator delete
+??1TextureRemapStruct@MaterialRemapperClass@@QAE@XZ,,0x0016EBA0,84,Code/Libraries/Source/WWVegas/WW3D2/MaterialRemapperClassCtor.cpp,matched,place_bodies hit: implicit dtor releasing Src plus Dest RefCountPtr pair via Release_Ref 0x1ED10 with two EH states

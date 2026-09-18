@@ -68,7 +68,6 @@ private:
 };
 
 // ??0TextureRemapStruct@MaterialRemapperClass@@QAE@XZ present-unmatched
-// ??1TextureRemapStruct@MaterialRemapperClass@@QAE@XZ present-unmatched
 class MaterialInfoClass
 {
 public:
