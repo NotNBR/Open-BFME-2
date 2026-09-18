@@ -9344,3 +9344,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva003BC392Holder@@QAEX_N@Z,,0x003BC392,19,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptActions_Rva003BC392.cpp,matched,Opaque TerrainLogic byte setter with null guard and setne-built bool caller
 ?set@Rva003BC37CHolder@@QAEXM@Z,,0x003BC37C,19,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptActions_Rva003BC37C.cpp,matched,Opaque GameLogic float setter at plus0xD40 with no E8 callers
 ?rva006C8380@@YAHXZ,,0x006C8380,21,Code/Libraries/Source/profile/ProfileHookGate.cpp,matched,Profile hook gate calling optional global hook with (1 0); opaque identity
+?forwardLowerBound@VersionBlockParser@@SAPBXPBX0PBQBD0@Z,,0x00427DB4,27,Code/GameEngine/Source/Common/VersionBlockBoundForwarders.cpp,matched,Version-block lower-bound adapter appending the unread trailing flag; sole caller is the searchEntries worker 0x427DEA; bound resolves via matched row
