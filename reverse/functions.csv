@@ -9550,3 +9550,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GRva001447B0@@UAEPAXI@Z,,0x001448B0,27,Code/Libraries/Source/WWVegas/WW3D2/Rva001447B0Dtor.cpp,matched,opaque scalar deleting dtor; vtable slot 0
 ??$_Construct@U?$pair@$$CBW4NameKeyType@@VFXList@@@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBW4NameKeyType@@VFXList@@@0@ABU10@@Z,,0x0016CC30,29,Code/Libraries/Source/WWVegas/WWLib/stlport_construct_fxlist.cpp,matched,
 ?Invalidate@DX8MeshRendererClass@@QAEX_N@Z,,0x00145FA0,265,Code/Libraries/Source/WWVegas/WW3D2/DX8MeshRendererClass_Invalidate_Thunk.cpp,matched,BFME1 Invalidate thunk port minus RegisteredMeshList reset plus slot0-result delete idiom
+?hasSeenLogoMovies@OptionPreferences@@QAE_NXZ,,0x002E498F,92,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_hasSeenLogoMovies.cpp,matched,ZH getter verbatim twin of DisallowNonAsianText; HasSeenLogoMovies key; miss false; yes compare
