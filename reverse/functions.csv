@@ -9221,3 +9221,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?check@Rva003B489CHolder@@QBE_NPBX@Z,,0x003B489C,27,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptLeafCheck.cpp,matched,Script leaf over +0x38 table; clone of group leaf recipe
 ?Rva00171650GetByte@@YAEXZ,,0x00171650,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DEC410
 ?skipScript@Rva003B48B9Holder@@QAEHPAX@Z,,0x003B48B9,43,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptSkipCheck.cpp,matched,Script skip over +0x38 table; clone of group skip recipe
+?set@Rva0031ED12DwordSlot@@QAEXH@Z,,0x0031ED12,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
