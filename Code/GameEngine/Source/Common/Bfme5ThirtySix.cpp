@@ -16,3 +16,21 @@ void __cdecl bfmeCopy(const void *source, unsigned int bytes, void *destination)
 {
 	memcpy(destination, source, bytes);
 }
+
+// ?bfmeCopyMmx@@YAXPAXHH@Z
+// "offset" is an assembler keyword, so the stride cannot carry that name.
+void __cdecl bfmeCopyMmx(void *source, int stride, int bytes)
+{
+	__asm
+	{
+		mov esi, source
+		mov ecx, stride
+		mov edx, bytes
+	bfmeNext:
+		movq mm0, [esi]
+		movq [esi+ecx], mm0
+		add esi, 8
+		sub edx, 8
+		jg bfmeNext
+	}
+}
