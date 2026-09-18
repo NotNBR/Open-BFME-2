@@ -9579,3 +9579,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva006F76A0DwordField@@QBEHXZ,,0x006F76A0,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva00741C20DwordField@@QBEHXZ,,0x00741C20,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva00389E2DNarrowField@@QBE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ,,0x00389E2D,30,Code/GameEngine/Source/Common/System/StlportStringRvoGetters.cpp,matched,RVO Stlport narrow-string getter member +0xB4 via 0x9170 row
+?get@Rva00389E4BNarrowField@@QBE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ,,0x00389E4B,30,Code/GameEngine/Source/Common/System/StlportStringRvoGetters.cpp,matched,RVO Stlport narrow-string getter member +0xC4 via 0x9170 row

@@ -63,3 +63,19 @@ StlportNarrowString Rva00389E2DNarrowField::get() const
 {
 	return m_value;
 }
+
+class Rva00389E4BNarrowField
+{
+public:
+	StlportNarrowString get() const;
+
+private:
+	char m_pad[0xC4];
+	StlportNarrowString m_value; // +0xC4
+};
+
+// ?get@Rva00389E4BNarrowField@@QBE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ
+StlportNarrowString Rva00389E4BNarrowField::get() const
+{
+	return m_value;
+}
