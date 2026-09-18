@@ -9526,3 +9526,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva006E3700DwordSlot@@QAEXH@Z,,0x006E3700,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?get@Rva00001000DwordField@@QBEHXZ,,0x00001000,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?set@Rva00001007ByteSlot@@QAEXE@Z,,0x00001007,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+??1FVFCategoryList@@UAE@XZ,,0x00144750,95,Code/Libraries/Source/WWVegas/WW3D2/FVFCategoryListDtor.cpp,matched,BFME2 list-class dtor; vtable 0xBD34E8 shared with Init new-site; Prev-predicate corrected to Next-based Is_Empty
+??_GFVFCategoryList@@UAEPAXI@Z,,0x00144890,27,Code/Libraries/Source/WWVegas/WW3D2/FVFCategoryListDtor.cpp,matched,scalar deleting dtor over the FVFCategoryList dtor; vtable slot 0
