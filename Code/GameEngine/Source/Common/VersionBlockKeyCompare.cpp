@@ -24,6 +24,7 @@ class VersionBlockKeyCompare
 {
 public:
 	bool lessEntryKey(const VersionBlockEntry *entry, const char *key) const;
+	bool lessKeyEntry(const char *key, const VersionBlockEntry *entry) const;
 };
 
 // ?lessEntryKey@VersionBlockKeyCompare@@QBE_NPBUVersionBlockEntry@@PBD@Z
@@ -31,4 +32,11 @@ bool VersionBlockKeyCompare::lessEntryKey(const VersionBlockEntry *entry, const 
 {
 	const char *entryKey = entry->m_key;
 	return (strcmp(entryKey, key) < 0) || false;
+}
+
+// ?lessKeyEntry@VersionBlockKeyCompare@@QBE_NPBDPBUVersionBlockEntry@@@Z
+bool VersionBlockKeyCompare::lessKeyEntry(const char *key, const VersionBlockEntry *entry) const
+{
+	const char *entryKey = entry->m_key;
+	return (strcmp(key, entryKey) < 0) || false;
 }
