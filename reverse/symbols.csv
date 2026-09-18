@@ -2935,3 +2935,5 @@ _lua_typename,0x007470D0
 ??$_Construct@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBVAsciiString@@PAVThingTemplate@@@0@ABU10@@Z,0x0016CC30
 ?bfmeAskCFC@BfmeOuterCFC@@QAE_NXZ,0x004C0D4F
 ?bfmeUseFDE@BfmeThingFDE@@QAEXPAX@Z,0x004B9B99
+?bfmeAlloc1039@@YAPAXH@Z,0x0002FDA0
+?bfmeInit1039@BfmeC1039@@QAEXPAVBfmeD1039@@@Z,0x00186E00
