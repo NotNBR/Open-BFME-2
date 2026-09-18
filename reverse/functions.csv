@@ -9025,3 +9025,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?isMultiplayer@RecorderClass@@QAE_NXZ,,0x0037B18C,110,Code/GameEngine/Source/Common/System/RecorderIsMultiplayer.cpp,matched,BFME1 Recorder_isMultiplayer.cpp shape with BFME2 layout and rewritten mode-gate tail
 ?getSlot@GameInfo@@QAEPAVGameSlot@@H@Z,,0x003FF29F,31,Code/GameEngine/Source/GameNetwork/GameInfoGetSlot.cpp,matched,BFME1 GameInfo.cpp shape with separate null guard and ternary bounds
 ?Create_Render_Obj@@YAPAVRenderObjClass@@PBD@Z,,0x00136175,199,Code/GameEngineDevice/Source/W3DDevice/GameClient/Create_Render_Obj.cpp,matched,Free render-object factory via registry prototype and slot-15 virtual
+??0DebugCmdInterfaceDebug@@QAE@XZ,,0x00038670,70,Code/Libraries/Source/WWVegas/WWDebug/DebugCmdInterfaceDebugCtor.cpp,matched,BFME1 DebugCmdInterfaceDebugConstructorThunk verbatim; empty two-vtable EH ctor (base DebugCmdInterface vtable then derived); /EHa /Oy- manual SEH; address-locality + 70B-exact + B1 three-way 70B family evidence
+
