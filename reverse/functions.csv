@@ -9860,3 +9860,7 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?get@Rva007E9F30@@QAEPAURva007E9F30Cached@@XZ,,0x00656EE0,56,Code/GameEngine/Source/Common/Q3LazyCachedAccessor.cpp,matched,BFME1 byte-identical donor; b1 0x007E9F30
 _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRetail.cpp,matched,BFME1 byte-identical donor; b1 0x0081F420
 ?SeedNextCommandIDFromPlayerCount@@YAXH@Z,,0x00581194,20,Code/GameEngine/Source/GameNetwork/SeedNextCommandIDFromPlayerCount.cpp,matched,BFME1 donor b1 0x00682CF0; global VA differs (BFME2 0x00DD2DB4 per neighbor GenerateNextCommandID at 0x5811A8)
+?calcDotProduct@@YAMABUCoord3D@@0@Z,,0x006BD370,21,Code/GameEngine/Source/Common/System/GeometryPointLineDistSquared.cpp,matched,BFME1 byte-identical donor; b1 0x0087DAF0
+?calcDistSquared@@YAMABUCoord3D@@0@Z,,0x006BD650,39,Code/GameEngine/Source/Common/System/GeometryPointLineDistSquared.cpp,matched,BFME1 byte-identical donor; b1 0x0087DE90
+?calcPointToLineDistSquared@@YAMABUCoord3D@@00@Z,,0x006BD680,248,Code/GameEngine/Source/Common/System/GeometryPointLineDistSquared.cpp,matched,BFME1 byte-identical donor; b1 0x0087DEC0
+?isIntersectedByLineSegment@GeometryInfo@@QBE_NABUCoord3D@@00@Z,,0x006BD780,59,Code/GameEngine/Source/Common/System/GeometryPointLineDistSquared.cpp,matched,BFME1 byte-identical donor; b1 0x0087DFC0
