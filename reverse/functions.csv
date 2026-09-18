@@ -8654,3 +8654,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseBitString8@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F1DC,56,Code/GameEngine/Source/Common/System/INI_parseBitString8.cpp,matched,BFME1 parseBitString8 via landed parseBitString32 plus throw-1
 ?parseBitString16@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F21A,62,Code/GameEngine/Source/Common/System/INI_parseBitString16.cpp,matched,BFME1 parseBitString16 verbatim via landed parseBitString32
 ?parseIndexList@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EC4E,31,Code/GameEngine/Source/Common/System/INI_parseIndexList.cpp,matched,BFME1 parseIndexList one-liner through member scanIndexList
+?parseLookupList@INI@@SAXPAV1@PAX1PBX@Z,,0x0002ECAF,31,Code/GameEngine/Source/Common/System/INI_parseLookupList.cpp,matched,BFME1 parseLookupList one-liner through member scanLookupList
