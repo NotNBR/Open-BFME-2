@@ -78,3 +78,20 @@ Rva0029BC80::Rva0029BC80()
 	m_at08 = 0;
 	m_at0C = 0;
 }
+
+class Rva000EC1E0
+{
+public:
+	void * m_at00;
+	int m_at04;
+	int m_at08;
+	char m_at0C;
+	Rva000EC1E0();
+};
+Rva000EC1E0::Rva000EC1E0()
+{
+	m_at00 = &R2Data01085DBC;
+	m_at04 = 0;
+	m_at08 = 0;
+	m_at0C = 0;
+}
