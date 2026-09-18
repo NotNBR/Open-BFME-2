@@ -8603,3 +8603,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?dup_002F02F@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F02F,83,Code/GameEngine/Source/Common/System/INI_dup002F02F.cpp,matched,
 ??$__pop_heap@PAUS4SortElem8@@HU1@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@00U1@US4Cmp00625C10@@PAH@Z,,0x00625EF0,55,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_s4sortelem8_desc.cpp,matched,
 ??$__pop_heap@PAUS4SortElem8@@HU1@US4Cmp00625BB0@@@_STL@@YAXPAUS4SortElem8@@00U1@US4Cmp00625BB0@@PAH@Z,,0x00625EB0,55,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_s4sortelem8.cpp,matched,
+??$__make_heap@PAUS4SortElem8@@US4Cmp00625BB0@@@_STL@@YAXPAUS4SortElem8@@0US4Cmp00625BB0@@@Z,,0x00626090,28,Code/Libraries/Source/WWVegas/WWLib/stlport_make_heap_fwd_s4sortelem8.cpp,matched,
+??$__make_heap@PAUS4SortElem8@@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@0US4Cmp00625C10@@@Z,,0x006260B0,28,Code/Libraries/Source/WWVegas/WWLib/stlport_make_heap_fwd_s4sortelem8_desc.cpp,matched,
