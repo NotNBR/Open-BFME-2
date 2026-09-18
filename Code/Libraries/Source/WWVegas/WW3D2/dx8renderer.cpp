@@ -2219,7 +2219,6 @@ void DX8MeshRendererClass::Register_Mesh_Type(MeshModelClass* mmc)
 
 static unsigned statistics_requested=0;
 
-// ?Request_Log_Statistics@DX8MeshRendererClass@@ present-unmatched
 void DX8MeshRendererClass::Request_Log_Statistics()
 {
 	statistics_requested=WW3D::Get_Frame_Count();
