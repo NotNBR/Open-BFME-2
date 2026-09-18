@@ -9799,3 +9799,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?bfmeGoTDA@BfmeThingTDA@@QAEXXZ,,0x006586D0,29,Code/GameEngine/Source/Common/BfmeConv1309.cpp,matched,BFME1 byte-identical donor; b1 0x007EB740
 ?bfmeGoTDB@@YAXXZ,,0x0073F9D1,35,Code/GameEngine/Source/Common/BfmeConv1309.cpp,matched,BFME1 byte-identical donor; b1 0x007CC360; ICF-folded in BFME1 so the name is this sweep pick among its twins
 ?bfmeOp1209@BfmeA1209@@QAEXPBUBfmeS1209@@@Z,,0x0070E3E0,84,Code/GameEngine/Source/Common/BfmeConv1209.cpp,matched,BFME1 byte-identical donor; b1 0x008D2BB0; BFME1 dllimport bfmeNotify1209 is a runtime-filled callback cell in BFME2
+?bfmeReleaseDWD@BfmeThingDWD@@QAEXXZ,,0x00628CE7,23,Code/GameEngine/Source/Common/BfmeConv790.cpp,matched,BFME1 donor; Win32 LeaveCriticalSection import per retail IAT slot 0xBBA204 (BFME1 wraps it as bfmeLeaveDWD); b1 0x009F699A
