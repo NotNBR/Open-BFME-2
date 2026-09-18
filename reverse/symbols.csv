@@ -1952,3 +1952,5 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??1ProductionPrerequisite@@QAE@XZ,0x004F5115,BFME1 dtor mangling; vector teardown via 0x30830; 5 callers incl 3 cluster
 ?push_back@?$vector@VProductionPrerequisite@@V?$allocator@VProductionPrerequisite@@@_STL@@@_STL@@QAEXABVProductionPrerequisite@@@Z,0x0033EA10,0x24 stride is 3x12B prereq vectors via inline _Construct 0x2D0C17; 3 prereq-cluster callers
 ?addUnitPrereq@ProductionPrerequisite@@QAEXVAsciiString@@_N@Z,0x004F52CB,BFME1 (AsciiString bool) mangling; by-value unit at +8 plus bool at +0xC; prereq-cluster caller
+?bfmeFindUpgradeByName@@YAPBVUpgradeTemplate@@PBD@Z,0x0033970D,BFME1-donor-backed upgrade lookup (global-guard plus AsciiString temp plus lookup call plus teardown); sole caller is parsePrerequisiteUpgrade 0x33EB1A passing a prereq token
+?push_back@?$vector@PBVUpgradeTemplate@@V?$allocator@PBVUpgradeTemplate@@@_STL@@@_STL@@QAEXABQBVUpgradeTemplate@@@Z,0x004DFCB0,vector<const UpgradeTemplate*> push_back for the prereq-upgrades member (REL32 from parsePrerequisiteUpgrade 0x33EB1A); ICF-folds with the ModuleData-const plus Nugget plus RankInfo rows at this address
