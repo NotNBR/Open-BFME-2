@@ -309,12 +309,7 @@ RenderObjClass * LightClass::Clone(void) const
  * HISTORY:                                                                                    *
  *   2/26/99    GTH : Created.                                                                 *
  *=============================================================================================*/
-// ?Notify_Removed@LightClass@@UAEXPAVSceneClass@@@Z present-unmatched
-void LightClass::Notify_Removed(SceneClass * scene)
-{
-	scene->Unregister(this,SceneClass::LIGHT);
-	RenderObjClass::Notify_Removed(scene);
-}
+/* NOTE: LightClass::Notify_Removed lives in light_notify.cpp (same split as Notify_Added). */
 
 
 

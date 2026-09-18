@@ -9931,3 +9931,5 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?Rva007FC270@@YGXPAVRva007E8810Message@@@Z,,0x00668770,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FC270
 ?Rva007FCC80@@YGXPAVRva007E8810Message@@@Z,,0x00669180,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCC80
 ?Rva007FCCA0@@YGXPAVRva007E8810Message@@@Z,,0x006691A0,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCCA0
+?bfmeFreeVNC@BfmeMgrVNC@@QAEXPAVBfmeKeyVNC@@@Z,,0x0066D0B0,132,Code/GameEngine/Source/Common/BfmeConv1503.cpp,matched,BFME1 byte-identical donor; b1 0x00800CD0; 3 DIR32 string literal(s) agree
+?Notify_Removed@LightClass@@UAEXPAVSceneClass@@@Z,,0x00130F20,31,Code/Libraries/Source/WWVegas/WW3D2/light_notify.cpp,matched,BFME1 byte-identical donor b1 0x0093BE40

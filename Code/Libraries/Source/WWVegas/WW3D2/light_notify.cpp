@@ -17,3 +17,12 @@ void LightClass::Notify_Added(SceneClass * scene)
 	RenderObjClass::Notify_Added(scene);
 	scene->Register(this,SceneClass::LIGHT);
 }
+
+/***********************************************************************************************
+ * LightClass::Notify_Removed -- lights remove themselves from the VP list when removed        *
+ *=============================================================================================*/
+void LightClass::Notify_Removed(SceneClass * scene)
+{
+	scene->Unregister(this,SceneClass::LIGHT);
+	RenderObjClass::Notify_Removed(scene);
+}
