@@ -10084,3 +10084,13 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeInsertQX@BfmeThingQX@@QAEPAU1@IIE@Z,,0x0002A140,104,Code/GameEngine/Source/Common/BfmeThreeHundredSix.cpp,matched,BFME1 byte-identical donor; b1 0x00830A50
 ?bfmeApplyEB@@YAXPAVBfmeObjEB@@@Z,,0x006BE450,96,Code/GameEngine/Source/Common/Rva0087EBB0Max.cpp,matched,BFME1 byte-identical donor; b1 0x0087EBB0
 ?bfmeFillQT@@YAPAPAHPAPAHI0@Z,,0x000246C0,95,Code/GameEngine/Source/Common/BfmeThreeHundredTwo.cpp,matched,BFME1 byte-identical donor; b1 0x0082BD20
+?onLobby@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00663600,138,Code/GameEngine/Source/GameNetwork/V2FeslBrowserRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007F6F10
+??0W3DSmudgeManager@@QAE@XZ,,0x000A60F0,48,Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DSmudgeManagerConstructor.cpp,matched,BFME1 byte-identical donor; b1 0x00722120
+?erase@Rva0082C6E0Vector@@QAEPAURva0082C6E0Value@@PAU2@@Z,,0x000252B0,90,Code/GameEngine/Source/Common/Rva0082C6E0VectorErase.cpp,matched,BFME1 byte-identical donor; b1 0x0082C6E0
+?bfmeMakeQF@BfmeThingQF@@QAEXIPBD@Z,,0x00025050,63,Code/GameEngine/Source/Common/BfmeTwoHundredNinety.cpp,matched,BFME1 byte-identical donor; b1 0x0082C530
+?d_00886a20@Rva00886A20Class@@QAEHPBDH@Z,,0x006CB530,114,Code/GameEngine/Source/Common/Bfme/Rva00886A20.cpp,matched,BFME1 donor; fopen mode rb at 0xBD2384; d_008859d0 pin own-class spelling; b1 0x00886A20
+?bfmeGoSXA@@YAXHHHH@Z,,0x00023D30,56,Code/GameEngine/Source/Common/BfmeConv1304.cpp,matched,BFME1 byte-identical donor; b1 0x0082B350
+?bfmeFindZP@BfmeOwnerZP@@QAEXPAVBfmeKeyZP@@@Z,,0x0066EC60,53,Code/GameEngine/Source/Common/BfmeConv1882.cpp,matched,BFME1 byte-identical donor; b1 0x00802B30
+?bfmeGoVMQ@BfmeThingVMQ@@QAE_NPBDD@Z,,0x00655A50,73,Code/GameEngine/Source/Common/BfmeConv1459.cpp,matched,BFME1 byte-identical donor; b1 0x007E89C0
+?onRegion@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00663570,138,Code/GameEngine/Source/GameNetwork/V2FeslBrowserRecords.cpp,matched,BFME1 byte-identical donor; b1 region twin; pins 0x661890+0x66EEB0
+?friend_updateCellsTouched@PartitionData@@QAEXXZ,,0x0073B250,37,Code/GameEngine/Source/GameLogic/Object/PartitionData_friendUpdateCellsTouched.cpp,matched,BFME1 byte-identical donor; b1 0x008F8BF0
