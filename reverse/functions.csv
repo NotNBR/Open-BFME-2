@@ -9202,3 +9202,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?usesSystemMapDir@LANPreferences@@QAE_NXZ,,0x0043C32A,90,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/LANPreferences_usesSystemMapDir.cpp,matched,ZH LanLobbyMenu.cpp:148 LANPreferences::usesSystemMapDir verbatim (miss TRUE plus stricmp yes); key temp via opaque helper pin at 0x43BB6A; anchor UseSystemMapDir
 ?Rva0002BACFGet@@YAHXZ,,0x0002BACF,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DDF578
 ?Rva0006E16FGet@@YAHXZ,,0x0006E16F,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DB5FA0
+?Rva000A8F36Get@@YAHXZ,,0x000A8F36,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DB5FC8
