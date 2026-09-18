@@ -9190,3 +9190,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva00078BEEGet@@YAHXZ,,0x00078BEE,6,Code/GameEngine/Source/Common/Rva00078BEEGetters.cpp,matched,Global dword getter reading 0x001FDEB4
 ?Rva00078BF4Get@@YAHXZ,,0x00078BF4,6,Code/GameEngine/Source/Common/Rva00078BEEGetters.cpp,matched,Global dword getter reading 0x001FDEB0
 ?Rva0011009AGet@@YAHXZ,,0x0011009A,6,Code/GameEngine/Source/Common/Rva0011009AGetters.cpp,matched,Global dword getter reading 0x00DB5FD4
+?Rva001100A0Get@@YAHXZ,,0x001100A0,6,Code/GameEngine/Source/Common/Rva0011009AGetters.cpp,matched,Global dword getter reading 0x00DB5FD8
