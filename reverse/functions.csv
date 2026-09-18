@@ -9789,3 +9789,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?releaseNode@Rva009A2C30Table@@QAEXPAURva009A2C30Node@@@Z,,0x00758BD0,71,Code/GameEngine/Source/Common/SmallGaps/Rva009A2C30ReleaseNode.cpp,matched,BFME1 byte-identical donor; b1 0x009A2C30
 ?bfmeRegisterZC@BfmeOwnerZC@@QAEXXZ,,0x006611A0,67,Code/GameEngine/Source/Common/BfmeConv1871.cpp,matched,BFME1 byte-identical donor; b1 0x007F46F0
 ?assertFailed@Rva008013F0Browser@@QAEXH@Z,,0x0066D740,30,Code/GameEngine/Source/Common/U2FeslGameBrowserAsserts.cpp,matched,BFME1 byte-identical donor; b1 0x008013F0; 2 DIR32 string literal(s) agree
+?Rva009A6600InitBlocks@@YAXPAX@Z,,0x001B7070,37,Code/GameEngine/Source/Common/Rva009A4D00TableInit.cpp,matched,BFME1 byte-identical donor; b1 0x009A6600
