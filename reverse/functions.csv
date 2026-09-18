@@ -10301,3 +10301,8 @@ _set2,,0x0074C3F0,26,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-ide
 ?initPattern@@YAXPAURva009C2930Owner@@I@Z,,0x001D3230,53,Code/GameEngine/Source/Common/SmallGaps/initPattern.cpp,matched,BFME1 byte-identical donor; b1 0x009C2930; ICF pick among twins
 ?Rva009B6D40@@YAPAHPAURva009B6D40Context@@H@Z,,0x001C7640,53,Code/GameEngine/Source/Common/Rva009B6D40InitPattern.cpp,matched,BFME1 byte-identical donor; b1 0x009B6D40; ICF pick among twins
 ?Rva0083F2F0Duplicate@@YAPAXPBXI@Z,,0x0001C120,55,Code/GameEngine/Source/Common/U2AllocatedRangeCopies.cpp,matched,BFME1 donor with malloc-memmove import repair; b1 0x0083F2F0; ICF pick among twins
+_lua_mathlibopen,,0x00748A50,78,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 byte-identical donor; b1 0x009918F0; 1 DIR32 string literal(s) agree
+_math_log,,0x00748670,38,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 byte-identical donor; b1 0x00991510
+_math_log10,,0x007486A0,38,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 byte-identical donor; b1 0x00991540
+?bfmeGoVHR@@YAHPAUBfmeLuaVHR@@@Z,,0x0074AF10,92,Code/GameEngine/Source/Common/BfmeConv1367.cpp,matched,BFME1 byte-identical donor; b1 0x00993DB0; ICF-folded in BFME1 so the name is this sweep pick among its twins; 1 DIR32 string literal(s) agree
+?bfmeGoVHS@@YAHPAUBfmeLuaVHR@@@Z,,0x0074AF70,109,Code/GameEngine/Source/Common/BfmeConv1367.cpp,matched,BFME1 byte-identical donor; b1 0x00993E10; ICF-folded in BFME1 so the name is this sweep pick among its twins; 1 DIR32 string literal(s) agree
