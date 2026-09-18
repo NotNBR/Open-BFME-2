@@ -8344,3 +8344,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000398538@CastleBehavior@@SA?AW4NameKeyType@@XZ,,0x00398538,69,Code/GameEngine/Source/GameLogic/Object/Behavior/CastleBehaviorPoolKey.cpp,matched,
 ?rva0003A4CCD@StrafeAreaUpdate@@SA?AW4NameKeyType@@XZ,,0x003A4CCD,69,Code/GameEngine/Source/GameLogic/Object/Update/StrafeAreaUpdatePoolKey.cpp,matched,
 ?rva0003ECCD6@ThreatFinderUpdate@@SA?AW4NameKeyType@@XZ,,0x003ECCD6,69,Code/GameEngine/Source/GameLogic/Object/Update/ThreatFinderUpdatePoolKey.cpp,matched,
+?rva000403A61@AttributeModifierPoolUpdate@@SA?AW4NameKeyType@@XZ,,0x00403A61,69,Code/GameEngine/Source/GameLogic/Object/Update/AttributeModifierPoolUpdatePoolKey.cpp,matched,
