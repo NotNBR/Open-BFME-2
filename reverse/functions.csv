@@ -10014,3 +10014,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ??0BfmeThingTWA@@QAE@PAVRva007EAServiceList@@@Z,,0x00664DB0,95,Code/GameEngine/Source/GameNetwork/BfmeThingTWAConstructor.cpp,matched,BFME1 byte-identical donor; b1 0x007F8730
 ?send@Rva007EAD30Owner@@QAEXXZ,,0x00657CD0,83,Code/GameEngine/Source/GameNetwork/Rva007EAD30Send.cpp,matched,BFME1 byte-identical donor; b1 0x007EAD30
 ?send@Rva007EADC0Owner@@QAEXXZ,,0x00657D60,83,Code/GameEngine/Source/GameNetwork/Rva007EAD30Send.cpp,matched,BFME1 byte-identical donor; b1 0x007EADC0
+?bfmeInsertV22@BfmeStrV22@@QAEPAV1@IPAD@Z,,0x0002ABE0,170,Code/GameEngine/Source/Common/BfmeConv1462.cpp,matched,BFME1 byte-identical donor; b1 0x00831230
