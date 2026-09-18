@@ -9290,3 +9290,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?CrashBegin@Debug@@QAEAAV1@PBDHH@Z,,0x0003AD80,329,Code/Libraries/Source/WWVegas/WWDebug/Debug_CrashBegin.cpp,matched,BFME1 Debug_CrashBegin_0088BA10 port with 3-arg filler and Error-in file block
 ?rva0020487E@Rva002048xxHolder@@QAEHH@Z,,0x0020487E,16,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_indexedTable.cpp,matched,20B-stride table indexer returning leading slot dword; opaque holder
 ?rva0020488E@Rva002048xxHolder@@QAEHH@Z,,0x0020488E,20,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_indexedTable.cpp,matched,20B-stride table indexer returning slot+0x10 dword plus 4; opaque holder
+?set@Rva0008BD13ByteSlot@@QAEXE@Z,,0x0008BD13,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
