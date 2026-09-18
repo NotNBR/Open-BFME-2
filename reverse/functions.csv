@@ -9028,3 +9028,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0DebugCmdInterfaceDebug@@QAE@XZ,,0x00038670,70,Code/Libraries/Source/WWVegas/WWDebug/DebugCmdInterfaceDebugCtor.cpp,matched,BFME1 DebugCmdInterfaceDebugConstructorThunk verbatim; empty two-vtable EH ctor (base DebugCmdInterface vtable then derived); /EHa /Oy- manual SEH; address-locality + 70B-exact + B1 three-way 70B family evidence
 
 ?newLocomotor@LocomotorStore@@QBEPAVLocomotor@@PBVLocomotorTemplate@@@Z,,0x005C9886,58,Code/GameEngine/Source/GameLogic/Object/LocomotorStore_newLocomotor.cpp,matched,BFME1 LocomotorStore_newLocomotor verbatim with 0x26C sizeof; ctor pin 0x5C96EB
+??1DebugCmdInterfaceDebug@@UAE@XZ,,0x00039980,55,Code/Libraries/Source/WWVegas/WWDebug/DebugCmdInterfaceDebugCtor.cpp,matched,Implicit dtor via delete anchor; B1 has FreeConsole member while B2 is memberless with base reinstall only; explicit-empty gives 61B two-store while implicit gives 55B exact

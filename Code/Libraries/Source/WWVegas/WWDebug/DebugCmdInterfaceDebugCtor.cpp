@@ -29,3 +29,13 @@ public:
 DebugCmdInterfaceDebug::DebugCmdInterfaceDebug(void)
 {
 }
+
+// Anchor: emits the implicit ??1 scalar-dtor COMDAT plus the ??_G
+// scalar-deleting-destructor COMDAT. The dtor MUST stay implicit (no
+// declaration): an explicitly-defined empty dtor emits the derived vtable
+// reinstall at entry (61B), while retail's implicit dtor keeps only the
+// EH state plus the base reinstall (55B). Probe-proven in build/.
+void deleteCmdInterfaceDebug(DebugCmdInterfaceDebug *p)
+{
+	delete p;
+}
