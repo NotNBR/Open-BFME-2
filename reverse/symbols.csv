@@ -2457,3 +2457,5 @@ _bfmeCopy1154,0x00024FC0
 ?releaseCodecMembers@@YAXPAUCodecState@@@Z,0x001B5530
 ?reset@Rva00802290Owner@@QAEXXZ,0x0066E520
 ?setHpState@Rva008022A0Owner@@QAEXH@Z,0x0066E530
+?bfmeAddVMO@BfmeListVMO@@QAEXPAVBfmeSvcVMO@@@Z,0x00657500
+?bfmeRemoveVMO@BfmeListVMO@@QAEXPAVBfmeSvcVMO@@@Z,0x00657540
