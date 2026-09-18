@@ -8700,3 +8700,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?findSpecialPowerCompletionDie@Object@@QBEPAVSpecialPowerCompletionDie@@XZ,,0x0028BE2B,84,Code/GameEngine/Source/GameLogic/Object/ObjectFindSpecialPowerCompletionDie.cpp,matched,ZH Object.cpp verbatim (const QBE donor-proven); findModule row; Weapon + ObjectCreationList callers mirror ZH
 ??1CreateCrateDieModuleData@@UAE@XZ,,0x0035CCCA,89,Code/GameEngine/Source/GameLogic/Object/Die/CreateCrateDieModuleDataDtor.cpp,matched,ZH CreateCrateDie.h clear plus implicit teardown over BFME2 string at +0x10 and list at +0x3C
 ??_GCreateCrateDieModuleData@@UAEPAXI@Z,,0x0035CF10,28,Code/GameEngine/Source/GameLogic/Object/Die/CreateCrateDieModuleDataDtor.cpp,matched,Scalar deleter co-emitted with the ModuleData dtor; flag plus global delete
+??0MultiplayerColorDefinition@@QAE@XZ,,0x00380C4E,90,Code/GameEngine/Source/Common/MultiplayerColorDefinitionCtor.cpp,matched,

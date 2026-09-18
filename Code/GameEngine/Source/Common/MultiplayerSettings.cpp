@@ -91,14 +91,11 @@ MultiplayerSettings::MultiplayerSettings()
   m_gotDefaultStartingMoney = false;
 }  // end MultiplayerSettings
 
-MultiplayerColorDefinition::MultiplayerColorDefinition()
-{
-	m_tooltipName.clear();
-	m_rgbValue.setFromInt(0xFFFFFFFF);
-	m_rgbValueNight=m_rgbValue;
-	m_color = 0xFFFFFFFF;
-	m_colorNight = m_color;
-}
+// MultiplayerColorDefinition's default ctor lives in
+// MultiplayerColorDefinitionCtor.cpp (dedicated TU: retail 0x00380C4E needs
+// the __EH_prolog cookie SEH style plus two BFME2-added RGBColors that this
+// TU's ZH-shaped view does not carry; a same-TU definition would also capture
+// this TU's callers' REL32 locally). Declared via the shim header.
 
 // Retail color-list window: the list lives at +0x34, the lazy numColors at
 // +0x40 (refilled from +0x38 while zero), the observer definition at +0x44
