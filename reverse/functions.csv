@@ -10241,3 +10241,4 @@ _peerStopGame,,0x00699410,65,Code/GameEngine/Source/GameNetwork/GameSpy/peerStop
 ?Rva008D4F80@@YAPBUR4Word@@PBDI@Z,,0x007104F0,130,Code/GameEngine/Source/Common/R4PerfectHashWordSets.cpp,matched,BFME1 byte-identical donor; b1 0x008D4F80; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ?Rva008D5DC0@@YAPBUR4Word@@PBDI@Z,,0x00711A20,130,Code/GameEngine/Source/Common/R4PerfectHashWordSets.cpp,matched,BFME1 byte-identical donor; b1 0x008D5DC0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ?bfmeResetGrid@BfmeTaintManager@@QAEXXZ,,0x006C0A50,82,Code/GameEngine/Source/Common/Bfme5SeventySix.cpp,matched,BFME1 near-miss donor; b1 0x00881070; immediate-only drift grid member +0x10 not +0x0C
+??1Gen_dtor_009f2600@@UAE@XZ,,0x00627DE0,84,Code/GameEngine/Source/Common/Gen_dtor_009f2600.cpp,matched,BFME1 near-miss donor; b1 0x009F5970; immediate-only drift 21 elements not 17
