@@ -10100,3 +10100,8 @@ _atexit,,0x006291F8,18,Code/Libraries/Source/WWVegas/WWDebug/AtexitThunk.cpp,mat
 ?bfmeGoSWA@@YAXHHH@Z,,0x00023CD0,39,Code/GameEngine/Source/Common/BfmeConv1303.cpp,matched,BFME1 byte-identical donor; b1 0x0082B2F0
 ?bfmePassSWA@BfmeThingSWA@@QAEXH@Z,,0x0002B290,27,Code/GameEngine/Source/Common/BfmeConv1303.cpp,matched,BFME1 byte-identical donor; b1 0x00831720
 ?getInt64@Rva007E8810Message@@QAE_JPBD_J@Z,,0x006559C0,70,Code/GameEngine/Source/GameNetwork/FeslMessage_getInt64_rva007E8930.cpp,matched,BFME1 byte-identical donor; b1 0x007E8930; 1 DIR32 string literal(s) agree
+?bfmeSizeVID@BfmeThingVID@@QAEHXZ,,0x0018D220,128,Code/GameEngine/Source/Common/BfmeConv1372.cpp,matched,BFME1 byte-identical donor; b1 0x00959500
+?bfmeFwdVMC@@YAXHHH@Z,,0x00026300,50,Code/GameEngine/Source/Common/BfmeConv1425.cpp,matched,BFME1 byte-identical donor; b1 0x0082D070
+_Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWDebug/Rva0088E090ResumeOtherThreads.cpp,matched,BFME1 donor; CloseHandle real import name; Thread32 stub pins; b1 0x0088E090
+?onBusy@Rva007FA2C0@@QAEHPAX@Z,,0x00665F20,142,Code/GameEngine/Source/GameNetwork/Rva007F99B0Busy.cpp,matched,BFME1 byte-identical donor; b1 0x007F99B0
+?bfmeGoSTA@@YAXHHH@Z,,0x00023D00,36,Code/GameEngine/Source/Common/BfmeConv1300.cpp,matched,BFME1 byte-identical donor; b1 0x0082B320
