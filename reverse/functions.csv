@@ -9694,3 +9694,65 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?set@Rva00661BA0PairAssign@@QAEXABUPairRva00661BA0PairAssign@@@Z,,0x0058B948,24,Code/GameEngine/Source/Common/SmallLeafBodies3.cpp,matched,BFME1 byte-identical donor; b1 0x00661BA0
 ?set@Rva0043A630PairAssign@@QAEXABUPairRva0043A630PairAssign@@@Z,,0x0029A275,18,Code/GameEngine/Source/Common/SmallLeafBodies3.cpp,matched,BFME1 byte-identical donor; b1 0x0043A630
 ?set@Rva00746050PairAssign@@QAEXABUPairRva00746050PairAssign@@@Z,,0x0008BCB6,18,Code/GameEngine/Source/Common/SmallLeafBodies3.cpp,matched,BFME1 byte-identical donor; b1 0x00746050
+?bfmeExpand3to5Mmx@@YAXPBXHPAX@Z,,0x001D1F90,202,Code/GameEngine/Source/Common/BfmeExpand3to5Mmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C1690
+?setList0@Rva007F8200Owner@@QAEXPAPAXH@Z,,0x00664880,148,Code/GameEngine/Source/GameNetwork/V2FeslElementLists.cpp,matched,BFME1 byte-identical donor; b1 0x007F8200
+?setList1@Rva007F8200Owner@@QAEXPAPAXH@Z,,0x00664920,148,Code/GameEngine/Source/GameNetwork/V2FeslElementLists.cpp,matched,BFME1 byte-identical donor; b1 0x007F82A0
+?setList2@Rva007F8200Owner@@QAEXPAPAXH@Z,,0x006649C0,148,Code/GameEngine/Source/GameNetwork/V2FeslElementLists.cpp,matched,BFME1 byte-identical donor; b1 0x007F8340
+?Rva009AAFE0BuildTable@@YAXPAURva009AAFE0Context@@PBE@Z,,0x001BBA20,200,Code/GameEngine/Source/Common/Rva009AAFE0BuildTable.cpp,matched,BFME1 byte-identical donor; b1 0x009AAFE0
+?rva009C7140BinkSse@@YAXPBXPAXH00@Z,,0x001D7A40,192,Code/GameEngine/Source/Common/Rva009C7140BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C7140
+?bfmeCombine1236@@YAXPAUBfmeTransform1236@@00@Z,,0x006F6840,188,Code/GameEngine/Source/Common/BfmeCombine1236.cpp,matched,BFME1 byte-identical donor; b1 0x008BCED0
+?rva009C7200BinkSse@@YAXPBXPAXH00@Z,,0x001D7B00,188,Code/GameEngine/Source/Common/Rva009C7200BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C7200
+?Rva009C5CA0@@YAXPAF0PAH@Z,,0x001D65A0,182,Code/GameEngine/Source/Common/Rva009C5CA0FixedPoint.cpp,matched,BFME1 byte-identical donor; b1 0x009C5CA0
+?bind@Rva007EA320Owner@@QAEXPAX0@Z,,0x006572D0,89,Code/GameEngine/Source/GameNetwork/Rva007EA320Bind.cpp,matched,BFME1 byte-identical donor; b1 0x007EA320
+?bind@Rva007EA380Owner@@QAEXPAX0@Z,,0x00657330,89,Code/GameEngine/Source/GameNetwork/Rva007EA320Bind.cpp,matched,BFME1 byte-identical donor; b1 0x007EA380
+?Rva009C84D0Vp6Filter@@YAXPAURva009C84D0Vp6Context@@PAXHH@Z,,0x001D8DD0,170,Code/GameEngine/Source/Common/Rva009C84D0Vp6Filter.cpp,matched,BFME1 byte-identical donor; b1 0x009C84D0
+?bfmeInitVCB@BfmeThingVCB@@QAEXPAUBfmeSrcVCB@@H@Z,,0x0066E9D0,82,Code/GameEngine/Source/Common/BfmeConv1349.cpp,matched,BFME1 byte-identical donor; b1 0x00802810
+?bfmeGoVCC@@YGXPAUBfmeThingVCC@@@Z,,0x00666030,79,Code/GameEngine/Source/Common/BfmeConv1349.cpp,matched,BFME1 byte-identical donor; b1 0x007F9AC0
+?rva009C6F20BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D7820,159,Code/GameEngine/Source/Common/Rva009C6F20BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C6F20
+?bfmeFindFirstOfVMG@@YA?AUBfmeRIterVMG@@U1@0PBD1@Z,,0x00026EA0,147,Code/GameEngine/Source/Common/BfmeConv1430.cpp,matched,BFME1 byte-identical donor; b1 0x0082DED0
+?rva009C6FC0BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D78C0,146,Code/GameEngine/Source/Common/Rva009C6FC0BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C6FC0
+?Rva009A9720@@YAXPAEHI@Z,,0x001BA160,136,Code/GameEngine/Source/Common/Rva009A9720InterpRows2.cpp,matched,BFME1 byte-identical donor; b1 0x009A9720
+?rva008F8C70@ShroudManagerImpl008FBA40@@QAEXPAVCDEProvider@@0@Z,,0x0073B2C0,136,Code/GameEngine/Source/Common/RTS/BfmeOwnerCDEUpdate.cpp,matched,BFME1 byte-identical donor; b1 0x008F8C70
+?Rva009AB760Initialize@@YAXPAURva009AB760Context@@@Z,,0x001BC1A0,135,Code/GameEngine/Source/Common/Rva009AB760Initialize.cpp,matched,BFME1 byte-identical donor; b1 0x009AB760
+?append@Rva00800460Arena@@QAEPADPBD@Z,,0x0066C8B0,135,Code/GameEngine/Source/GameNetwork/Y2FeslArenaAppend.cpp,matched,BFME1 byte-identical donor; b1 0x00800460; 4 DIR32 string literal(s) agree
+?rva009C66F0BinkMmx@@YAXPBXPAXHHHH0@Z,,0x001D6FF0,134,Code/GameEngine/Source/Common/Rva009C66F0BinkMmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C66F0
+?Rva0087E900@@YAXPAURva0087E900Coord@@PBU1@PBURva0087E900Shape@@M@Z,,0x006BE190,132,Code/GameEngine/Source/GameLogic/Object/Rva0087E900Transform.cpp,matched,BFME1 byte-identical donor; b1 0x0087E900
+?remove@Rva007EAServiceList@@QAEXPAVRva00803080@@@Z,,0x00657540,72,Code/GameEngine/Source/GameNetwork/Y2FeslServiceList.cpp,matched,BFME1 byte-identical donor; b1 0x007EA590; 2 DIR32 string literal(s) agree
+?add@Rva007EAServiceList@@QAEXPAVRva00803080@@@Z,,0x00657500,60,Code/GameEngine/Source/GameNetwork/Y2FeslServiceList.cpp,matched,BFME1 byte-identical donor; b1 0x007EA550; 2 DIR32 string literal(s) agree
+?rva009C8130@@YAHPBEH@Z,,0x001D8A30,130,Code/GameEngine/Source/Common/Rva009C8130ByteDispersion.cpp,matched,BFME1 byte-identical donor; b1 0x009C8130
+?Rva009AC5D0ReadBits@@YAIPAURva009AC5D0State@@I@Z,,0x001BCFC0,129,Code/GameEngine/Source/Common/Rva009AC5D0ReadBits.cpp,matched,BFME1 byte-identical donor; b1 0x009AC5D0
+?bfmeAssign@Gen_0075EF90@@QAEAAV1@ABV1@@Z,,0x000B4682,129,Code/GameEngine/Source/Common/BfmeOneHundredThirtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x0075EF90
+?remove@Rva009A3300HashTable@@QAEXPAURva009A3300Node@@@Z,,0x00759030,127,Code/GameEngine/Source/Common/System/Rva009A3300HashTableRemove.cpp,matched,BFME1 byte-identical donor; b1 0x009A3300
+?parseGeometryOffset@GeometryInfo@@SAXPAVINI@@PAX1PBX@Z,,0x006BD610,64,Code/GameEngine/Source/Common/System/GeometryParseActiveAndOffset.cpp,matched,BFME1 byte-identical donor; b1 0x0087DE50
+?rva009C6780BinkMmx@@YAXPBXPAXHHHH0@Z,,0x001D7080,125,Code/GameEngine/Source/Common/Rva009C6780BinkMmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C6780
+?bfmeCalcBWF@BfmeCalcBWF@@QAE_NPAVBfmeRetBWF@@M0@Z,,0x006BD900,120,Code/GameEngine/Source/Common/BfmeCalcBWF.cpp,matched,BFME1 byte-identical donor; b1 0x0087E0D0
+?notify@Rva007EA0A0Owner@@QAEXPAX@Z,,0x00657050,118,Code/GameEngine/Source/GameNetwork/Rva007EA0A0Notify.cpp,matched,BFME1 byte-identical donor; b1 0x007EA0A0
+??0Rva007FA990@@QAE@PAX@Z,,0x00666EC0,117,Code/GameEngine/Source/GameNetwork/Rva007FA990Ctor.cpp,matched,BFME1 byte-identical donor; b1 0x007FA990
+?Rva009B62A0ExpandTable@@YAXPBIPAG@Z,,0x001C6BA0,116,Code/GameEngine/Source/Common/Rva009B62A0ExpandTable.cpp,matched,BFME1 byte-identical donor; b1 0x009B62A0
+?Rva009B4600DecodeBool@@YAHPAXH@Z,,0x001C4F00,114,Code/GameEngine/Source/Common/Rva009B4600DecodeBool.cpp,matched,BFME1 byte-identical donor; b1 0x009B4600
+?Rva009B4800DecodeBool@@YAHPAURva009B4800State@@H@Z,,0x001C5100,114,Code/GameEngine/Source/Common/Rva009B4800DecodeBool.cpp,matched,BFME1 byte-identical donor; b1 0x009B4800
+?bfmeFillZJ@@YAXPAUBfmeGridZJ@@@Z,,0x001B6930,58,Code/GameEngine/Source/GameNetwork/BfmeOneHundredFiftyEight.cpp,matched,BFME1 byte-identical donor; b1 0x009A5EC0
+?bfmeFindZI@BfmeThingZI@@QAEPAUBfmeEntryZI@@HH@Z,,0x006631D0,56,Code/GameEngine/Source/GameNetwork/BfmeOneHundredFiftyEight.cpp,matched,BFME1 byte-identical donor; b1 0x007F6A40
+?rva009C81C0TableInit@@YAXPAX@Z,,0x001D8AC0,113,Code/GameEngine/Source/Common/Rva009C81C0TableInit.cpp,matched,BFME1 byte-identical donor; b1 0x009C81C0
+?rva009C6CB0BinkMmx@@YAXPAX0PBX11H@Z,,0x001D75B0,110,Code/GameEngine/Source/Common/Rva009C6CB0BinkMmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C6CB0
+?rva009C6D30BinkCopy@@YAXPBXPAXH@Z,,0x001D7630,110,Code/GameEngine/Source/Common/Rva009C6D30BinkCopy.cpp,matched,BFME1 byte-identical donor; b1 0x009C6D30
+??A?$CSimpleArray@PAXV?$CSimpleArrayEqualHelper@PAX@ATL@@@ATL@@QAEAAPAXH@Z,,0x00628C6E,39,Code/GameEngine/Source/Common/AtlSimpleArrayHInstanceAdd.cpp,matched,BFME1 byte-identical donor; b1 0x009F6921
+?RemoveAt@?$CSimpleArray@PAXV?$CSimpleArrayEqualHelper@PAX@ATL@@@ATL@@QAEHH@Z,,0x00628BE2,67,Code/GameEngine/Source/Common/AtlSimpleArrayHInstanceAdd.cpp,matched,BFME1 byte-identical donor; b1 0x009F6883
+?rva007F76F0@Rva00802240Host@@QAEHPAURva007F76F0Vector@@PBD@Z,,0x00663DE0,105,Code/GameEngine/Source/GameNetwork/Rva007F76F0FeslKeyIndex.cpp,matched,BFME1 byte-identical donor; b1 0x007F76F0
+?bfmeGoUUA@BfmeThingUUA@@QAEXXZ,,0x0066EFC0,104,Code/GameEngine/Source/Common/BfmeConv1343.cpp,matched,BFME1 byte-identical donor; b1 0x00802F50; 6 DIR32 string literal(s) agree
+?bfmeReportBT@BfmeHostBT@@QAEXHH@Z,,0x00664280,103,Code/GameEngine/Source/GameNetwork/BfmeHostBT_bfmeReportBT.cpp,matched,BFME1 byte-identical donor; b1 0x007F7C00
+?bfmeReset@Gen_00808B80@@QAEXXZ,,0x00674AD0,101,Code/GameEngine/Source/Common/BfmeOneHundredEleven.cpp,matched,BFME1 byte-identical donor; b1 0x00808B80
+?bfmeSetSizeVLR@BfmeBufVLR@@QAEXH@Z,,0x00658730,98,Code/GameEngine/Source/Common/BfmeConv1417.cpp,matched,BFME1 byte-identical donor; b1 0x007EB7A0
+?Rva008791E0Remove@@YAHPAXPAPAX@Z,,0x006B8A80,96,Code/GameEngine/Source/Common/D008791E0HandleTableRemove.cpp,matched,BFME1 byte-identical donor; b1 0x008791E0
+?rva009C7760BinkSse@@YAXPAX0PBX11H@Z,,0x001D8060,95,Code/GameEngine/Source/Common/Rva009C7760BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C7760
+?Rva009B4680Normalize@@YAHPAURva009B4680State@@@Z,,0x001C4F80,93,Code/GameEngine/Source/Common/Rva009B4680Normalize.cpp,matched,BFME1 byte-identical donor; b1 0x009B4680
+?bfmeTakeFT@BfmeThingFT@@QAEAAV1@PBV1@@Z,,0x00154AF0,91,Code/GameEngine/Source/Common/BfmeOneHundredNinetyEight.cpp,matched,BFME1 byte-identical donor; b1 0x0093D9B0
+?bfmeFindFirstOfVMD@@YAPBDPBD000@Z,,0x00026E40,90,Code/GameEngine/Source/Common/BfmeConv1426.cpp,matched,BFME1 byte-identical donor; b1 0x0082DE70
+?bfmeInit1251@BfmeA1251@@QAEXPAVBfmeB1251@@PAVBfmeS1251@@@Z,,0x0066E900,89,Code/GameEngine/Source/Common/BfmeConv1251.cpp,matched,BFME1 byte-identical donor; b1 0x008026C0
+?claim@Rva00800460Arena@@QAEPAXH_N@Z,,0x0066C850,87,Code/GameEngine/Source/GameNetwork/Y2FeslArenaClaim.cpp,matched,BFME1 byte-identical donor; b1 0x008003F0; 2 DIR32 string literal(s) agree
+?bfmeAllocSlotVPE@BfmeMgrVPE@@QAEPAUBfmeSlotVPE@@XZ,,0x00665A70,84,Code/GameEngine/Source/Common/BfmeConv1559.cpp,matched,BFME1 byte-identical donor; b1 0x007F94D0; 2 DIR32 string literal(s) agree
+?bfmeSignedEJ@@YAMPBVBfmePosEJ@@PAVBfmeObjEJ@@@Z,,0x006270D0,83,Code/GameEngine/Source/Common/BfmeConv2034.cpp,matched,BFME1 byte-identical donor; b1 0x009F4800
+??0BfmeA1187@@QAE@XZ,,0x00672340,82,Code/GameEngine/Source/Common/BfmeConv1187.cpp,matched,BFME1 byte-identical donor; b1 0x00806300
+?bfmeInit1186@@YAXPAUBfmeBits1186@@PAE@Z,,0x001BCEE0,81,Code/GameEngine/Source/Common/BfmeConv1186.cpp,matched,BFME1 byte-identical donor; b1 0x009AC4E0
+?step@Rva009AAF80State@@QAEHXZ,,0x001BB9C0,81,Code/GameEngine/Source/Common/Rva009AAF80ArithmeticStep.cpp,matched,BFME1 byte-identical donor; b1 0x009AAF80
+?bfmeAddPack8MmxRow@@YAXPAX0PBX1H@Z,,0x001D7560,75,Code/GameEngine/Source/Common/BfmeAddPack8MmxRow.cpp,matched,BFME1 byte-identical donor; b1 0x009C6C60
