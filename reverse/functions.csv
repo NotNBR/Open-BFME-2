@@ -10277,3 +10277,9 @@ _Rva0088E1A0ShowAssertCrashDialog,,0x0003D880,410,Code/Libraries/Source/WWVegas/
 ?bfmeSendSKA@BfmeSinkSKA@@QAEXHHH@Z,,0x00670050,103,Code/GameEngine/Source/GameNetwork/FeslTidMessageSender.cpp,matched,BFME1 byte-identical donor b1 0x00804010 ICF pick 1 literal
 ?bfmeMakeQB@BfmeThingQB@@QAEXIPAX@Z,,0x00024CF0,59,Code/GameEngine/Source/Common/BfmeTwoHundredEightyFive.cpp,matched,BFME1 byte-identical donor; b1 0x0082C230; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ?bfmeGoCCD@BfmeThingCCD@@QAEHXZ,,0x004C1121,38,Code/GameEngine/Source/Common/BfmeConv575.cpp,matched,BFME1 near-miss donor; b1 0x00215580; sub +0xD0 to +0xF0
+?d_00884e50@Rva00884E50Class@@QAEHXZ,,0x006C9970,95,Code/GameEngine/Source/Common/Bfme/Rva00884E50.cpp,matched,BFME1 byte-identical donor; b1 0x00884E50; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+_deprecated_funcs,,0x0074C900,53,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x009957A0
+_lua_baselibopen,,0x0074C940,50,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x009957E0; 2 DIR32 string literal(s) agree
+_luaB_type,,0x0074BC80,45,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00994B20
+_deprecated_func,,0x0074C8E0,32,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00995780; 1 DIR32 string literal(s) agree
+_set2,,0x0074C3F0,26,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00995290

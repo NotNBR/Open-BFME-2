@@ -2923,3 +2923,12 @@ _bfme_debugAllocInnerDeallocate_82AD90,0x000237B0
 _bfme_debugAllocInnerAllocate_82AD80,0x00023790
 ?bfmeSymbolSZA@@YAXIPADI@Z,0x0003B9E0
 ?bfmeAskCCD@BfmeOuterCCD@@QAE_NXZ,0x004C0D4F
+?close@Rva00885980@@QAEHXZ,0x006CA490
+?d_00885980@Rva00885980Class@@QAEHXZ,0x006CA490
+_deprecated_funcs,0x0074C900
+_luaL_checkany,0x00751970
+_luaL_openlib,0x007514F0
+_luaL_verror,0x00751530
+_lua_rawseti,0x007479F0
+_lua_type,0x007470A0
+_lua_typename,0x007470D0
