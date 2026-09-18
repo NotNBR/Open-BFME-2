@@ -9127,3 +9127,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?enable@Rva00042F57ByteOneSetter@@QAEXXZ,,0x00042F57,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte one-setter
 ?set@Rva0029A2DEByteSlot@@QAEXE@Z,,0x0029A2DE,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0029A2EBByteSlot@@QAEXE@Z,,0x0029A2EB,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?set@Rva0029A2F8ByteSlot@@QAEXE@Z,,0x0029A2F8,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
