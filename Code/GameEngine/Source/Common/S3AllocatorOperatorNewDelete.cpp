@@ -27,3 +27,15 @@ void *Gen007F0130::operator new(unsigned int size)
 {
 	return Gen007EFFC0()->allocate(size, 0);
 }
+
+class Gen007F0170
+{
+public:
+	static void operator delete(void *block);
+};
+
+// ??3Gen007F0170@@SAXPAX@Z
+void Gen007F0170::operator delete(void *block)
+{
+	Gen007EFFC0()->release(block, 0);
+}
