@@ -8718,3 +8718,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0042235@GameLogic@@QAE_NXZ,,0x00042235,23,Code/GameEngine/Source/GameLogic/System/GameLogicModeGateChecks.cpp,matched,Mode gate leaf for desync report; accepts modes 1 5
 ?scanBool@@YAHPBDAA_N@Z,,0x00314E42,43,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_scanBool.cpp,matched,GameWindowManagerScript file-static sscanf wrapper; framed Oy-minus Bool tail
 ?isInMultiplayerGame@GameLogic@@QAE_NXZ,,0x00042235,23,Code/GameEngine/Source/GameLogic/System/GameLogicIsInMultiplayerGame.cpp,matched,ZH GameLogic.h:404 verbatim; mode +0x110 LAN-or-NET; 43 callers; pin coexists
+?Rva001D5470_CpuFeatureProbe@@YAHXZ,,0x001D5470,160,Code/GameEngine/Source/Common/CpuFeatureProbe.cpp,matched,
