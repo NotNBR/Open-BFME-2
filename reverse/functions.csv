@@ -9426,7 +9426,6 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Request_Log_Statistics@DX8MeshRendererClass@@SAXXZ,,0x00143D00,11,Code/Libraries/Source/WWVegas/WW3D2/dx8renderer.cpp,matched,static frame-count snapshot; globals proven by matched Log_Statistics_String head
 ??1UpgradeModuleData@@UAE@XZ,,0x00255A42,48,Code/GameEngine/Source/GameLogic/Object/Upgrade/UpgradeModuleDataDtor.cpp,matched,BFME1 UpgradeModuleDataDestructorThunk port; single string at +0x4C; base vtable install with trivial base inlined; identity via scalar deleter 0x4BC7E2 and GrantScience base call 0x25637D
 ??0AnimationSteeringUpdateModuleData@@QAE@XZ,,0x004BD651,50,Code/GameEngine/Source/GameLogic/Object/Update/AnimationSteeringUpdateModuleDataCtor.cpp,matched,BFME1 AnimationSteeringUpdate port; vtable then +0x08 member via opaque 0x3623E5 pin; ModuleData vptr-plus-tag base; reloc-named by ModuleFactory call site
-?getPlayerFromMask@PlayerList@@QAEPAVPlayer@@H@Z,,0x002A7A6F,49,Code/GameEngine/Source/Common/RTS/PlayerList_getPlayerFromMask.cpp,matched,BFME1 PlayerList.cpp crash-less twin of findPlayerWithNameKey; mask at +0x3AC; five ThePlayerList callers
 ?set@Rva004647FDByteSlot@@QAEXE@Z,,0x004647FD,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0046F84CByteSlot@@QAEXE@Z,,0x0046F84C,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0047A2A9ByteSlot@@QAEXE@Z,,0x0047A2A9,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
@@ -9474,3 +9473,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?disable@Rva00513819ByteZeroSetter@@QAEXXZ,,0x00513819,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte zero-setter
 ?disable@Rva005B0232ByteZeroSetter@@QAEXXZ,,0x005B0232,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte zero-setter
 ?set@Rva000419CFDwordSlot@@QAEXH@Z,,0x000419CF,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?Rva002A7A6F@PlayerList@@QAEPAVPlayer@@H@Z,,0x002A7A6F,49,Code/GameEngine/Source/Common/RTS/PlayerList_Rva002A7A6F.cpp,matched,Opaque rename of retracted getPlayerFromMask claim; TRUE mask bodies at 0x2A7B91 and 0x2A7BC9 banked as partials
