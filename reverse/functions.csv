@@ -10001,3 +10001,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?handleConnectingProtocolReply@Rva007F6260GameBrowser@@QAEXPAVRva007E8810Message@@@Z,,0x006629F0,122,Code/GameEngine/Source/GameNetwork/Rva007F6260GameBrowserConnect.cpp,matched,BFME1 byte-identical donor; b1 0x007F6260; 2 DIR32 string literal(s) agree
 ?handleLoginReply@Rva007F5720GameBrowser@@QAEXPAVRva007E8810Message@@@Z,,0x00661ED0,110,Code/GameEngine/Source/GameNetwork/Rva007F5720GameBrowserLogin.cpp,matched,BFME1 byte-identical donor; b1 0x007F5720; 2 DIR32 string literal(s) agree
 ?bfmeGo992C@BfmeC992@@QAEXPAVBfmeAsk992@@@Z,,0x006622A0,58,Code/GameEngine/Source/Common/BfmeConv992.cpp,matched,BFME1 byte-identical donor; b1 0x007F5B00
+?bfmeAllocJT@@YAHPAVBfmeThingJT@@@Z,,0x001B55E0,179,Code/GameEngine/Source/Common/BfmeConv2079.cpp,matched,BFME1 byte-identical donor; b1 0x009A4B10
