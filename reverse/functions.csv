@@ -9267,3 +9267,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva002E4326Forward@OptionPreferences@@QAEHXZ,,0x002E4326,7,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_enumDispatch.cpp,matched,forwarder passing row 7 to the enum dispatcher; opaque identity
 ?Rva002E432EForward@OptionPreferences@@QAEHXZ,,0x002E432E,7,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_enumDispatch.cpp,matched,forwarder passing row 8 to the enum dispatcher; opaque identity
 ?CheckBegin@Debug@@QAEAAV1@PBDHH0@Z,,0x0003A750,333,Code/Libraries/Source/WWVegas/WWDebug/Debug_CheckBegin.cpp,matched,BFME1 Debug_CheckBegin_0088B3E0 port; ret 0x10 with unread ebp+0x10 and expr at +0x14; 2-arg StartOutput at slot 0x50 via reverse overload order
+?set@Rva0026230BByteSlot@@QAEXE@Z,,0x0026230B,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
