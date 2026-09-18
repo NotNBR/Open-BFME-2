@@ -10285,3 +10285,4 @@ _deprecated_func,,0x0074C8E0,32,Code/Libraries/Source/Lua/lbaselib.c,matched,BFM
 _set2,,0x0074C3F0,26,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00995290
 ?Rva009B64A0BuildTone@@YAXPAE@Z,,0x001C6DA0,331,Code/GameEngine/Source/Common/Rva009B64A0BuildTone.cpp,matched,BFME1 near-miss donor trial as-is
 ??0AssetReference@@QAE@ABV0@@Z,,0x000424BB,21,Code/GameEngineDevice/Source/W3DDevice/GameClient/Rva009EBDC0.cpp,matched,place_bodies placement of TU-emitted copy ctor; Peek_Texture Add_Ref caller evidence
+?clear@Rva00802A10@@QAEXXZ,,0x0066EB40,81,Code/GameEngine/Source/Common/S3PolymorphicArrayClear128.cpp,matched,BFME1 byte-identical donor b1 0x00802A10 stride-128 sibling of landed 28/64/48/56 family
