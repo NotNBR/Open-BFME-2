@@ -2944,3 +2944,6 @@ _lua_typename,0x007470D0
 ?d_00891320@@YAXXZ,0x00040C40
 _luaL_check_number,0x00751A80
 _lua_settagmethod,0x0074FE80
+?getFilename@INI@@QBE?AVAsciiString@@XZ,0x0002C005,hidden-retptr AsciiString getter over INI m_filename +0x10; sole callee shape at both parseSubtitle %s/title sites; BFME1 donor getFilename
+?getLineNum@INI@@QBEHXZ,0x0002BBED,BFME1-donor-attested INI line getter; retail forwards via helper; single call site in parseSubtitle throw block
+??0INIException@@QAA@HPBDZZ,0x0002F681,variadic INIException ctor spelling of the matched _rva002f681_fill body; coexists with that opaque pin per 0x120F0 triple-name precedent

@@ -10313,3 +10313,5 @@ _math_log10,,0x007486A0,38,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 by
 ?bfmeAllocJX@@YAPAUCodecState@@XZ,,0x001B56F0,216,Code/GameEngine/Source/Common/BfmeConv2080.cpp,matched,unclaimed_scan exact of TU-emitted body; FreeOneJT thunk pin
 ?Rva009A6DF0InitializeBuffers@@YAHPAURva009A6DA0Buffer@@@Z,,0x001B7860,206,Code/GameEngine/Source/Common/Rva009A6DA0ReleaseBuffers.cpp,matched,unclaimed_scan exact of TU-emitted body; ReleaseBuffers pin
 ?bfmeFreeJT@@YAXPAVBfmeThingJT@@@Z,,0x001B5530,166,Code/GameEngine/Source/Common/BfmeConv2079.cpp,matched,unclaimed_scan exact of TU-emitted body
+?parseSubtitle@@YAXPAVINI@@PAX1PBX@Z,,0x006885B0,194,Code/GameEngine/Source/GameClient/parseSubtitle.cpp,matched,BFME1 near-miss donor b1 0x0081D7C0; immediate-only drift: VideoPlayer getVideo slot 0x6c not 0x58
+?get@Rva00801900Get@@QAEHPBD@Z,,0x0066DC00,59,Code/GameEngine/Source/GameNetwork/FeslHost_get_rva00801900.cpp,matched,BFME1 byte-identical donor; b1 0x00801900; ICF-folded in BFME1 so the name is this sweep's pick among its twins
