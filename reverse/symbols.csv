@@ -2672,3 +2672,7 @@ _bfmeHash1228,0x0070F880
 ?_M_release_lock@NodeAllocMutex@_STL@@QAEXXZ,0x00013260
 ?m@Gen_0082ad50@@QAEXXZ,0x00013260
 ?bfmeCallCIB@@YAHPAX000@Z,0x006594F0
+?overflow@BfmeVec2E@@QAEXPAUBfmeElem2E@@ABU2@ABUBfmeFalse2E@@I_N@Z,0x006BFD30
+?overflow@BfmeVec440@@QAEXPAUBfmeElem440@@ABU2@ABUBfmeFalse440@@I_N@Z,0x006BFD30
+?calcBoundingStuff@BfmeSubCNG@@QAEXXZ,0x006BE700
+?bfmeFmtVJJ@BfmeThingVJJ@@QAEXPADH@Z,0x00655820
