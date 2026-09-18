@@ -10116,3 +10116,4 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?allocate@Rva00801570@@QAEXH@Z,,0x0066DE60,75,Code/GameEngine/Source/GameNetwork/Rva00801B70FeslAlloc.cpp,matched,BFME1 byte-identical donor; b1 0x00801B70
 ?bfmeMakeSubJX@@YAPAUBfmeSubJX@@XZ,,0x001B7990,73,Code/GameEngine/Source/Common/Rva009A6DA0ReleaseBuffers.cpp,matched,BFME1 donor; Rva009A6DF0 static pin; b1 0x009A6F20
 ?onGame@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00663020,104,Code/GameEngine/Source/GameNetwork/V2FeslBrowserGame.cpp,matched,BFME1 byte-identical donor; b1 0x007F6890
+?notify@Rva00809BF0Owner@@QAEXPAURva00809500Entry@@@Z,,0x00675AF0,102,Code/GameEngine/Source/GameNetwork/Y4FeslEcnlNotify.cpp,matched,BFME1 byte-identical donor; b1 0x00809BF0; 2 DIR32 string literal(s) agree
