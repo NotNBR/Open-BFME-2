@@ -2922,3 +2922,4 @@ _bfme_debugAllocInnerDeallocate_82AD90,0x000237B0
 ?j_0082ad80@@YAXXZ,0x00023790
 _bfme_debugAllocInnerAllocate_82AD80,0x00023790
 ?bfmeSymbolSZA@@YAXIPADI@Z,0x0003B9E0
+?bfmeAskCCD@BfmeOuterCCD@@QAE_NXZ,0x004C0D4F
