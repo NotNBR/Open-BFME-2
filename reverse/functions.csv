@@ -8696,3 +8696,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B6142@ExperienceScalarUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B6142,69,Code/GameEngine/Source/GameLogic/Object/Upgrade/ExperienceScalarUpgradePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
 ?rva0004BA437@TransitionDamageFX@@SA?AW4NameKeyType@@XZ,,0x004BA437,69,Code/GameEngine/Source/GameLogic/Object/Die/TransitionDamageFXPoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
 ?rva0004BAE83@EvacuateDamage@@SA?AW4NameKeyType@@XZ,,0x004BAE83,69,Code/GameEngine/Source/GameLogic/Object/Die/EvacuateDamagePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
+?rva0004BD60C@CivilianSpawnCollide@@SA?AW4NameKeyType@@XZ,,0x004BD60C,69,Code/GameEngine/Source/GameLogic/Object/Die/CivilianSpawnCollidePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
