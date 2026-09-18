@@ -8418,3 +8418,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva0014CF01_MakeOwner@@YA?AVHAnimPrototypeOwner@@PBD@Z,,0x0014CF01,94,Code/Libraries/Source/WWVegas/WW3D2/Rva0014CF01Factory.cpp,matched,anim owner factory via mixed-return recipe; HAnim owner pin
 ?rva00049B310@OCLUpdate@@SA?AW4NameKeyType@@XZ,,0x0049B310,69,Code/GameEngine/Source/GameLogic/Object/Update/OCLUpdatePoolKey.cpp,matched,
 ?rva00049B5DC@AttributeModifierAuraUpdate@@SA?AW4NameKeyType@@XZ,,0x0049B5DC,69,Code/GameEngine/Source/GameLogic/Object/Update/AttributeModifierAuraUpdatePoolKey.cpp,matched,
+?Rva00180054_MakeOwner@@YA?AVRva00180023@@PBD@Z,,0x00180054,94,Code/Libraries/Source/WWVegas/WW3D2/Rva00180054Factory.cpp,matched,owner factory via mixed-return recipe
+
