@@ -1,0 +1,26 @@
+// Dword immediate setters: eleven-byte __thiscall members with one shape:
+//
+//     mov dword ptr [ecx+<DISP>],<IMM32> / ret
+//
+// One dword at a fixed displacement from `this` is set to a hardcoded
+// immediate and nothing is read back. The imm-form mirror of the byte
+// one-setter family (DispByteOneSetters.cpp); the BFME1 Rva00511250DwordSetter
+// `apply` pattern, spelled here without parameters since retail cleans none
+// (`ret`, not `ret 4`). Only the class names follow this tree's Disp*
+// convention (address-derived Rva<addr>DwordImmSetter, identity unrecoverable
+// from 11 bytes). Every displacement here is a disp32 (MSVC 7.1 uses disp8
+// whenever the offset fits, so every offset is at least 0x80).
+// No // cl: line (defaults match the frameless 11-byte shape).
+class Rva0023C7B0DwordImmSetter
+{
+public:
+	void apply();
+
+	char m_lead[0x90];
+	unsigned int m_value;
+};
+
+void Rva0023C7B0DwordImmSetter::apply()
+{
+	m_value = 7;
+}
