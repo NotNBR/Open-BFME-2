@@ -10355,3 +10355,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?rva0082BE40Copy@@YAPAURva0082C6E0Value@@PAU1@00@Z,,0x000247A0,25,Code/GameEngine/Source/Common/Rva0082BE40Copy.cpp,matched,BFME1 byte-identical donor; b1 0x0082BE40; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ??0Rva0033A4F0@@QAE@ABV0@@Z,,0x00204B33,27,Code/GameEngine/Source/Common/Rva0033A4F0Copy.cpp,matched,BFME1 byte-identical donor b1 0x0033A4F0 single ICF pick
 ?bfmeResetSH@BfmeThingSH@@QAEXXZ,,0x000FE290,19,Code/GameEngine/Source/Common/BfmeThreeHundredThirtySix.cpp,matched,BFME1 byte-identical donor b1 0x007AB150; single pick over bare thunk
+??0Rva003B7160@@QAE@XZ,,0x004E14CD,20,Code/GameEngine/Source/Common/R2ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x003B7160

@@ -6,6 +6,7 @@
 
 extern int R2Data010EC784;
 extern int R2Data010EC760;
+extern int R2Data01085DBC;
 
 class Rva003B85D0
 {
@@ -24,4 +25,22 @@ Rva003B85D0::Rva003B85D0()
 	m_at08 = 0;
 	m_at0C = 0;
 	m_at10 = 0;
+}
+
+class Rva003B7160
+{
+public:
+	void * m_at00;
+	int m_at04;
+	char m_at08;
+	char m_pad09[ 0x3 ];
+	int m_at0C;
+	Rva003B7160();
+};
+Rva003B7160::Rva003B7160()
+{
+	m_at00 = &R2Data010EC760;
+	m_at04 = 0;
+	m_at08 = 0;
+	m_at0C = 0;
 }
