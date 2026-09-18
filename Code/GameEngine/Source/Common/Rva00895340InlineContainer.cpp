@@ -46,7 +46,6 @@ private:
 
 // Its 46-byte out-of-line copy is uniquely located at 0x00892C30 after
 // relocation-aware whole-image verification.
-// ??0Gen_uw_00893e70@@QAE@XZ present-unmatched
 inline Gen_uw_00893e70::Gen_uw_00893e70()
 	: m_count(0), m_capacity(0), m_data(m_inline)
 {
