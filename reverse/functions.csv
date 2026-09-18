@@ -8647,3 +8647,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?DebugReAllocMemory@@YAPAXPAXI@Z,,0x0003E4B0,189,Code/Libraries/Source/debug/DebugReAllocMemory.cpp,matched,
 ?ProfileReAllocMemory@@YAPAXPAXI@Z,,0x006C54B0,186,Code/Libraries/Source/profile/ProfileReAllocMemory.cpp,matched,
 ?parseRGBColor@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F259,165,Code/GameEngine/Source/Common/System/INI_parseRGBColor.cpp,matched,BFME1 parseRGBColor verbatim plus BFME2 filler-throw and reciprocal scale
+?parseRGBAColorInt@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F2FF,254,Code/GameEngine/Source/Common/System/INI_parseRGBAColorInt.cpp,matched,BFME1 parseRGBAColorInt verbatim plus BFME2 sepsColon member and filler-throws
