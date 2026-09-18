@@ -13,3 +13,12 @@ unsigned char Rva0004CAB1GetByte(void)
 {
 	return g_Va00DB5F7D;
 }
+
+// ?Rva0004CAB7GetByte@@YAEXZ @ 0x0004CAB7 (6B) over 0x00DEC3D9.
+
+extern unsigned char g_Va00DEC3D9;
+
+unsigned char Rva0004CAB7GetByte(void)
+{
+	return g_Va00DEC3D9;
+}

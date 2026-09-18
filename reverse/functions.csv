@@ -9205,3 +9205,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva000A8F36Get@@YAHXZ,,0x000A8F36,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DB5FC8
 ?Rva000EDF40Get@@YAHXZ,,0x000EDF40,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DEDA24
 ?Rva0004CAB1GetByte@@YAEXZ,,0x0004CAB1,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DB5F7D
+?Rva0004CAB7GetByte@@YAEXZ,,0x0004CAB7,6,Code/GameEngine/Source/Common/GlobalByteGetters.cpp,matched,Global byte getter reading 0x00DEC3D9
