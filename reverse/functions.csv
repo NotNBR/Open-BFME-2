@@ -9590,3 +9590,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva003FDA90SmartField@@QBE?AVRvaSmartPtr12@@XZ,,0x003FDA90,30,Code/GameEngine/Source/Common/System/SmartPtrRvoGetter.cpp,matched,RVO smart-ptr getter member +0x15C via 0x4CC19 pin
 ?get@Rva004FDCE1AsciiField@@QBE?AVAsciiString@@XZ,,0x004FDCE1,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString getter member +0x1B0 via 0x365F0 row
 ?get@Rva0011C6F0FloatField@@QBEMXZ,,0x0011C6F0,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter
+?get@Rva0015E1A0FloatField@@QBEMXZ,,0x0015E1A0,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter
