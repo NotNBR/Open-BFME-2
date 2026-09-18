@@ -8744,3 +8744,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseInputCallback@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x00316434,76,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseInputCallback.cpp,matched,
 ?parseTooltipCallback@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x00316480,76,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseTooltipCallback.cpp,matched,
 ?parseDrawCallback@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x003164CC,76,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseDrawCallback.cpp,matched,
+??1BfmeNonRefSceneList@@UAE@XZ,,0x00141780,96,Code/Libraries/Source/WWVegas/WW3D2/BfmeNonRefSceneList_dtor.cpp,matched,
