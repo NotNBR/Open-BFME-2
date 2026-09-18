@@ -9937,3 +9937,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ??1ServiceHubImpl@@QAE@XZ,,0x00657690,625,Code/GameEngine/Source/GameNetwork/ServiceHubImpl_dtor.cpp,matched,BFME1 byte-identical donor; b1 0x007EA6F0; 34 DIR32 string literal(s) agree
 ?bfmeDelTWC@BfmeThingTWC@@QAEPAXE@Z,,0x00674A80,73,Code/GameEngine/Source/Common/BfmeConv1325TWC.cpp,matched,BFME1 byte-identical donor extract; b1 0x00808B30
 ?setID@Object@@IAEXW4ObjectID@@@Z,,0x0028B532,55,Code/GameEngine/Source/GameLogic/Object/Object_setID.cpp,matched,BFME1 byte-identical donor; b1 0x001BEC70
+?bfmeTestSKA@BfmeSubSKA@@QAEDH@Z,,0x00675590,84,Code/GameEngine/Source/GameNetwork/Y4FeslSubTest.cpp,matched,BFME1 byte-identical donor; b1 0x00809690
