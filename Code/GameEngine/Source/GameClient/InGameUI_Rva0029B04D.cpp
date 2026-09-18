@@ -26,7 +26,6 @@ void InGameUI::setRva0029B04D(int value)
 		m_7EC = value;
 }
 
-// ?clearRva0029B060@InGameUI@@UAEXXZ present-unmatched
 void InGameUI::clearRva0029B060()
 {
 	m_7EC = 0;
