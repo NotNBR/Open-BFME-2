@@ -7,8 +7,9 @@
 
 // present-unmatched: BFME-only helper, no Zero Hour counterpart.
 //
-// Retail: 0x00682CF0, 20 bytes. mov eax,[esp+4]; add eax,0Ah; imul eax,eax,3E8h;
-// mov word ptr [012BA084h],ax; ret.
+// Retail: 0x00581194, 20 bytes. mov eax,[esp+4]; add eax,0Ah; imul eax,eax,3E8h;
+// mov word ptr [00DD2DB4h],ax; ret. (BFME1 donor b1 0x00682CF0 stores to
+// 012BA084h; BFME2 moved the static.)
 //
 // 012BA084h is the exact address of NetworkUtil.cpp's GenerateNextCommandID()
 // static UnsignedShort commandID (that function loads/increments the very same
