@@ -10156,3 +10156,14 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?aptKeyCode@@YAPAVAptValue@@XZ,,0x006E8C30,41,Code/GameEngine/Source/Common/SmallGaps/aptKeyCode.cpp,matched,BFME1 byte-identical donor; b1 0x008A5330
 ?d_00885920@Rva00885920Class@@QAEHXZ,,0x006CA430,59,Code/GameEngine/Source/Common/Bfme/Rva00885920.cpp,matched,BFME1 donor subset; b1 0x00885920; sibling claimed elsewhere so omitted
 ?bfmeGoUSC@@YAHPAXH@Z,,0x001BCF40,40,Code/GameEngine/Source/Common/BfmeConv1342.cpp,matched,BFME1 byte-identical donor; b1 0x009AC550
+?bfmeGoDSE@BfmeThingDSE@@QAEXXZ,,0x0055A614,19,Code/GameEngine/Source/Common/BfmeConv771.cpp,matched,BFME1 byte-identical donor; b1 0x000B7420
+?bfmeGoDSF@BfmeThingDSF@@QAEXXZ,,0x00270221,19,Code/GameEngine/Source/Common/BfmeConv771.cpp,matched,BFME1 byte-identical donor; b1 0x00410B40
+?bfmeFilterBlockByIndexMmx@@YAXHPAXH@Z,,0x001D1650,622,Code/GameEngine/Source/Common/BfmeFilterBlockByIndexMmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C0D50; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+?bfmeResetUB@BfmeThingUB@@QAEXXZ,,0x0061ED80,17,Code/GameEngine/Source/Common/BfmeThreeHundredFiftyThree.cpp,matched,BFME1 byte-identical donor; b1 0x009EB810
+?bfmeSetOT@BfmeThingOT@@QAEXPADH@Z,,0x0002B380,34,Code/GameEngine/Source/Common/BfmeTwoHundredFiftyFive.cpp,matched,BFME1 byte-identical donor; b1 0x00831810
+??1Rva00078460@@QAE@XZ,,0x0022D9F3,16,Code/GameEngine/Source/Common/Rva00078460Dtor.cpp,matched,BFME1 byte-identical donor; b1 0x00078460
+?bfmeFilterBlockPairByIndexMmx@@YAXHPAXH@Z,,0x001D1A20,882,Code/GameEngine/Source/Common/BfmeFilterBlockPairByIndexMmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C1120; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+_luaV_lessthan,,0x0074EA40,233,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor; b1 0x009978E0; vendored=lua-4.0.1
+?bfmeFilterRowByIndex12Mmx@@YAXHPAXH@Z,,0x001D1DA0,483,Code/GameEngine/Source/Common/BfmeFilterRowByIndex12Mmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C14A0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+_luaV_pack,,0x0074ECD0,186,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor; b1 0x00997B70; vendored=lua-4.0.1
+?bfmeFilterRowByIndex8Mmx@@YAXHPAXH@Z,,0x001D18C0,352,Code/GameEngine/Source/Common/BfmeFilterRowByIndex8Mmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C0FC0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
