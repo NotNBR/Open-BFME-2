@@ -10012,3 +10012,5 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ??1Rva007F9C50@@QAE@XZ,,0x006661A0,171,Code/GameEngine/Source/GameNetwork/Rva007F9C50Dtor.cpp,matched,BFME1 byte-identical donor; b1 0x007F9C50
 ??0Gen_uw_00893e70@@QAE@XZ,,0x006CDBA0,46,Code/GameEngine/Source/Common/Rva00895340InlineContainer.cpp,matched,BFME1 byte-identical donor; b1 0x00892C30; ICF-folded in BFME1 so the name is this sweep pick among its twins
 ??0BfmeThingTWA@@QAE@PAVRva007EAServiceList@@@Z,,0x00664DB0,95,Code/GameEngine/Source/GameNetwork/BfmeThingTWAConstructor.cpp,matched,BFME1 byte-identical donor; b1 0x007F8730
+?send@Rva007EAD30Owner@@QAEXXZ,,0x00657CD0,83,Code/GameEngine/Source/GameNetwork/Rva007EAD30Send.cpp,matched,BFME1 byte-identical donor; b1 0x007EAD30
+?send@Rva007EADC0Owner@@QAEXXZ,,0x00657D60,83,Code/GameEngine/Source/GameNetwork/Rva007EAD30Send.cpp,matched,BFME1 byte-identical donor; b1 0x007EADC0
