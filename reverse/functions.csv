@@ -10295,3 +10295,4 @@ _set2,,0x0074C3F0,26,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-ide
 ?invoke@Rva00958C80@@QAEJVBfmeBstrVGP@@0JJJJJJPAX@Z,,0x00177010,170,Code/GameEngine/Source/GameNetwork/WOLBrowser/WebBrowserComWrappers.cpp,matched,BFME1 near-miss donor trimmed to served invoke; b1 0x00958C80; 2 callee pins same batch
 ?Set_Visible@ParticleEmitterClass@@UAEXHH@Z,,0x001A1480,34,Code/Libraries/Source/WWVegas/WW3D2/ParticleEmitterVisibilityWrappers.cpp,matched,BFME1 near-miss donor Set_Visible-only; b1 0x0097EA40; slot 0x214 to 0x210
 ?Rva001207B0Init@@YAXPAX@Z,,0x001207B0,152,Code/Libraries/Source/WWVegas/WW3D2/DX8CapsRecreate.cpp,matched,BFME1 near-miss donor d_00906e70 b1 0x00906E70; 0x2E4 caps + base-pointer delete; keeps standing pin name
+?bfmeGo1039E@@YAXPAUBfmeQ1039@@H@Z,,0x00747540,45,Code/GameEngine/Source/Common/BfmeConv1039E.cpp,matched,BFME1 byte-identical donor; b1 0x009903E0
