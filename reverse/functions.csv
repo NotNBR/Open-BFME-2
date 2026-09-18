@@ -10213,3 +10213,4 @@ _f_luaopen,,0x0074DEF0,110,Code/Libraries/Source/Lua/lstate.c,matched,BFME1 byte
 ?d_008859d0@Rva008859D0Class@@QAEXPBDPAD@Z,,0x006CA4E0,93,Code/GameEngine/Source/Common/Bfme/Rva008859D0.cpp,matched,BFME1 donor with format-literal repair; b1 0x008859D0; plus0x34 layout proves class
 _luaO_equalObj,,0x0074E0C0,92,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 byte-identical donor; b1 0x00996F60
 ?Rva009AF320CopyPlanes@@YAXPAURva009AF320Context@@HH@Z,,0x001BFD10,368,Code/GameEngine/Source/Common/Rva009AF320CopyPlanes.cpp,matched,BFME1 byte-identical donor; b1 0x009AF320
+?deallocate@?$__malloc_alloc@$0A@@_STL@@SAXPAXI@Z,,0x00023A70,18,Code/Libraries/Source/WWVegas/WWLib/STLMallocAlloc0Deallocate.cpp,matched,BFME1 byte-identical donor; b1 0x0082B100;object-symbol=_bfme_MallocAlloc0Deallocate_82B100
