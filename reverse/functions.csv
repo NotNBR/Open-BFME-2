@@ -9115,3 +9115,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva005686B9WordField@@QBEGXZ,,0x005686B9,8,Code/GameEngine/Source/Common/DispWordFieldGetters.cpp,matched,Disp32 word getter
 ?get@Rva0059EAE8WordField@@QBEGXZ,,0x0059EAE8,8,Code/GameEngine/Source/Common/DispWordFieldGetters.cpp,matched,Disp32 word getter
 ?Class_ID@Vector3HollowSphereRandomizer@@UBEIXZ,,0x0013C5F0,6,Code/Libraries/Source/WWVegas/WWMath/Vector3HollowSphereRandomizerClassID.cpp,matched,BFME1 v3_rnd.h verbatim return CLASSID_HOLLOWSPHERE 2; vtable 0xCEFD1C slot carries 0x13C5F0
+?set@Rva0029A2D1ByteSlot@@QAEXE@Z,,0x0029A2D1,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter

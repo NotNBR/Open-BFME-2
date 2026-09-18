@@ -1,0 +1,27 @@
+// Disp32 byte setters: thirteen-byte __thiscall members with one shape:
+//
+//     mov al,[esp+4] / mov [ecx+<DISP>],al / ret 4
+//
+// One byte is taken from the stack argument slot and stored at a fixed
+// displacement from `this`. Ported from Open-BFME-1
+// (Code/GameEngine/Source/Common/DispByteFieldSetters.cpp): the
+// BFME_DISP_BYTE_SETTER macro is verbatim (unsigned char set over a lead
+// array), only the class names follow this tree's Disp* convention
+// (address-derived Rva<addr>ByteSlot, identity unrecoverable from 13 bytes).
+// Every displacement here is a disp32 (MSVC 7.1 uses disp8 whenever the
+// offset fits, so every offset is at least 0x80).
+// No // cl: line (defaults match the frameless 13-byte shape).
+#define BFME_DISP_BYTE_SETTER(NAME, DISP) \
+	class NAME \
+	{ \
+	public: \
+		void set(unsigned char value); \
+		char m_lead[DISP]; \
+		unsigned char m_value; \
+	}; \
+	void NAME::set(unsigned char value) \
+	{ \
+		m_value = value; \
+	}
+
+BFME_DISP_BYTE_SETTER(Rva0029A2D1ByteSlot, 0x8BB)
