@@ -9990,3 +9990,6 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ??0BfmeThingDGD@@QAE@PAX@Z,,0x00664620,228,Code/GameEngine/Source/GameNetwork/BfmeThingDGDConstructor.cpp,matched,BFME1 donor with BFME2 vtable-VA repair; b1 0x007F7FA0
 ?send@Rva007EAC30Owner@@QAEXH@Z,,0x00657BD0,193,Code/GameEngine/Source/GameNetwork/Rva007EAC30Send.cpp,matched,BFME1 byte-identical donor; b1 0x007EAC30
 ?bfmeReplace1152@BfmeS1152@@QAEXIIPAVBfmeR1152@@@Z,,0x00026730,128,Code/GameEngine/Source/Common/BfmeConv1152.cpp,matched,BFME1 byte-identical donor; b1 0x0082DAD0
+?dispatch@Rva007FA2C0@@QAEXPAX0@Z,,0x00666810,80,Code/GameEngine/Source/GameNetwork/Rva007FA240Walk.cpp,matched,BFME1 byte-identical donor; b1 0x007FA2C0
+?walk@Rva007FA2C0@@QAEXI@Z,,0x00666790,80,Code/GameEngine/Source/GameNetwork/Rva007FA240Walk.cpp,matched,BFME1 byte-identical donor; b1 0x007FA240
+?scan@Rva007FA2C0@@QAEXPAX@Z,,0x00666860,43,Code/GameEngine/Source/GameNetwork/Rva007FA240Walk.cpp,matched,BFME1 byte-identical donor; b1 0x007FA310
