@@ -9865,3 +9865,4 @@ _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRe
 ?calcPointToLineDistSquared@@YAMABUCoord3D@@00@Z,,0x006BD680,248,Code/GameEngine/Source/Common/System/GeometryPointLineDistSquared.cpp,matched,BFME1 byte-identical donor; b1 0x0087DEC0
 ?isIntersectedByLineSegment@GeometryInfo@@QBE_NABUCoord3D@@00@Z,,0x006BD780,59,Code/GameEngine/Source/Common/System/GeometryPointLineDistSquared.cpp,matched,BFME1 byte-identical donor; b1 0x0087DFC0
 ?getWheelInfo@Drawable@@QBEPBUTWheelInfo@@XZ,,0x00318B83,17,Code/GameEngine/Source/GameClient/DrawableFields.cpp,matched,BFME1 donor b1 0x0077F6B0; BFME2 holder ptr at +0x88 not +0x138; TU-scoped; shim untouched
+?set@Rva00409580@@QAEXH@Z,,0x003624B4,16,Code/GameEngine/Source/Common/Rva00409580Set.cpp,matched,BFME1 byte-identical donor; b1 0x00409580
