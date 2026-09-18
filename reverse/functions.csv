@@ -8620,3 +8620,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00049A67C@HordeAIUpdate@@SA?AW4NameKeyType@@XZ,,0x0049A67C,69,Code/GameEngine/Source/GameLogic/Object/Update/HordeAIUpdatePoolKey.cpp,matched,cached pool-name key; pool string HordeAIUpdate; /O1 static-guard EH; nameToKey row
 ?rva00049ACD0@HordeWorkerAIUpdate@@SA?AW4NameKeyType@@XZ,,0x0049ACD0,69,Code/GameEngine/Source/GameLogic/Object/Update/HordeWorkerAIUpdatePoolKey.cpp,matched,cached pool-name key; pool string HordeWorkerAIUpdate; /O1 static-guard EH; nameToKey row
 ?dup_002EE10@INI@@QAEMPBD@Z,,0x0002EE10,16,Code/GameEngine/Source/Common/System/INI_dup002EE10.cpp,matched,
+??$__pop_heap_aux@PAUS4SortElem8@@U1@US4Cmp00625BB0@@@_STL@@YAXPAUS4SortElem8@@00US4Cmp00625BB0@@@Z,,0x00626010,57,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_aux_s4sortelem8.cpp,matched,
+??$__pop_heap_aux@PAUS4SortElem8@@U1@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@00US4Cmp00625C10@@@Z,,0x00626050,57,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_aux_s4sortelem8_desc.cpp,matched,
