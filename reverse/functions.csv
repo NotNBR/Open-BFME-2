@@ -10225,3 +10225,7 @@ _EnumLocalesProcA@4,,0x00021470,242,Code/Libraries/Source/WWVegas/WWLib/stlport_
 ?bfmeGoBEC@BfmeThingBEC@@QAEXXZ,,0x00483BBB,18,Code/GameEngine/Source/Common/BfmeConv448.cpp,matched,BFME1 byte-identical donor; b1 0x0020D850
 ?bfmeGoBHF@@YAHPAVBfmeSubBHF@@@Z,,0x00324968,21,Code/GameEngine/Source/Common/BfmeConv465.cpp,matched,BFME1 byte-identical donor; b1 0x004B7AC0
 ?bfmeCreate@Gen_0035B680@@QAEPAVBfmeCreated_0035B680@@XZ,,0x001701E0,93,Code/GameEngine/Source/Common/Bfme5MakeAndReturn.cpp,matched,BFME1 near-miss donor; b1 0x0035B680; immediate-only drift push 0x38 not 0x40
+?bfmeResetSF@BfmeThingSF@@QAEXXZ,,0x003601C5,22,Code/GameEngine/Source/Common/BfmeThreeHundredThirtyFour.cpp,matched,BFME1 byte-identical donor; b1 0x0059D850
+??1MaterialCollectorClass@@QAE@XZ,,0x001702F0,216,Code/Libraries/Source/WWVegas/WW3D2/MaterialCollectorDestructor.cpp,matched,BFME1 byte-identical donor; b1 0x00931120
+??0DX8MeshRendererClass@@QAE@XZ,,0x00145AA0,101,Code/Libraries/Source/WWVegas/WW3D2/DX8MeshRendererCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00947680
+_peerStopGame,,0x00699410,65,Code/GameEngine/Source/GameNetwork/GameSpy/peerStopGame.cpp,matched,BFME1 byte-identical donor b1 0x00857E50; calls repaired to matched pi helpers no new pins
