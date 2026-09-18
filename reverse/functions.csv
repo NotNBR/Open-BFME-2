@@ -9892,3 +9892,4 @@ _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRe
 ?invokeForMode@Rva007E3410Object@@QAEXXZ,,0x00106A06,19,Code/GameEngine/Source/Common/Rva007E3410VirtualCall.cpp,matched,BFME1 byte-identical donor b1 0x007E3410
 ?get@Rva0066B100@@QAEHH@Z,,0x004D38C5,19,Code/GameEngine/Source/Common/Rva0066B100Get.cpp,matched,BFME1 byte-identical donor b1 0x0066B100
 ?distCalcProc_BoundaryAndBoundary_3D@@YAMPBUCoord3D@@PBVObject@@H@Z,,0x00627130,145,Code/GameEngine/Source/GameLogic/Object/PartitionManager_bfmeDistanceBoundary3D.cpp,matched,BFME1 byte-identical donor; b1 0x009F4860
+?Rva009B6950DecodeScale@@YAHPAE@Z,,0x001C7250,211,Code/GameEngine/Source/Common/Rva009B6950DecodeScale.cpp,matched,BFME1 byte-identical donor; b1 0x009B6950

@@ -2126,3 +2126,4 @@ dup_7e86b0,0x00655770
 ??$grow_array@J@_STL@@YAPAU?$GrowPair@J@0@PAU10@PAJII@Z,0x0001BE30
 ??$grow_array@PAX@_STL@@YAPAU?$GrowPair@PAX@0@PAU10@PAPAXII@Z,0x0001BE30
 ?bfmeZDeltaToCenter@BfmeBoundaryGeometry3D@@QBEMXZ,0x0073A1C0
+?bfmeGoUSC@@YAHPAXH@Z,0x001BCF40
