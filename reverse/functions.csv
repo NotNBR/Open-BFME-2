@@ -8751,3 +8751,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Rva006D1210Destroy@@YAXPAX@Z,,0x006D1210,32,Code/GameEngine/Source/Common/Thing/Rva006D1210Destroy.cpp,matched,Destroy helper: null-guarded release via 0x6D0F20 plus sized free (block 16) via 0x6DB270
 ?detach@Rva006CD530@@QAEXXZ,,0x006CD530,35,Code/GameEngine/Source/Common/Thing/Rva006CD530Detach.cpp,matched,Per-node teardown: release head ref and destroy at zero; second call reloads the member to keep this parked
 ?release@Rva006D0F20@@QAEXXZ,,0x006D0F20,42,Code/GameEngine/Source/Common/Thing/Rva006D0F20Release.cpp,matched,Sub-block release: direct dec-mem via sub local plus teardown and sized free (block 28)
+?get@Rva0002BAF1ByteField@@QBEEXZ,,0x0002BAF1,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter family pilot
