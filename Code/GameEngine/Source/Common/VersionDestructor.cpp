@@ -8,6 +8,9 @@ class StringBase
 {
 	friend class AsciiString;
 
+public:
+	void set(const char *text);
+
 private:
     StringBase() : m_data(0) {}
     StringBase(const StringBase<T> &other);
@@ -34,10 +37,49 @@ public:
 	{
 		m_data.releaseBuffer();
 	}
+	AsciiString &operator=(const char *text)
+	{
+		m_data.set(text);
+		return *this;
+	}
 
 private:
 	StringBase<char> m_data;
 };
+
+// Opaque version-block parser behind initializeBuildMetadata. Retail
+// constructs one from the 512-byte block at 0xA25000, reads the seven
+// metadata keys through it, then tears down its inner list.
+class VersionBlockParserInner
+{
+public:
+	~VersionBlockParserInner();
+private:
+	// Retail dtor reads [this] and [this+4] as a start/end pair for
+	// 0x18-byte elements (via 0x2385E6) then frees [this] (via 0x30830):
+	// a 12-byte vector-like list (start/finish/alloc).
+	void *m_start;
+	void *m_finish;
+	void *m_alloc;
+};
+
+class VersionBlockParser
+{
+public:
+	VersionBlockParser(const char *versionBlock);
+	~VersionBlockParser() {}
+	const char *lookupVersionValue(const char *key, const char *defaultValue);
+private:
+	int m_unk0;
+	VersionBlockParserInner m_inner;
+};
+
+extern int g_versionMajor;
+extern int g_versionMinor;
+extern int g_versionBuildNum;
+extern int g_versionLocalBuildNum;
+extern const char g_versionBlock[];
+int initVersionGlobals();
 
 class Version
 {
@@ -83,3 +125,21 @@ AsciiString Version::getAsciiVersion()
 }
 
 AsciiString Version::getAsciiBuildLocation() { return m_buildLocation; }
+
+void Version::initializeBuildMetadata()
+{
+	static unsigned char s_initResult = initVersionGlobals() != 0;
+	m_major = g_versionMajor;
+	m_minor = g_versionMinor;
+	m_buildNum = g_versionBuildNum;
+	m_localBuildNum = g_versionLocalBuildNum;
+	VersionBlockParser parser(g_versionBlock);
+	m_buildTitle = parser.lookupVersionValue("ID", "sometitle");
+	m_buildUser = parser.lookupVersionValue("USER", "somebody");
+	m_buildLocation = parser.lookupVersionValue("MACHINE", "somewhere");
+	m_buildGuid = parser.lookupVersionValue("GUID", "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
+	m_buildTime = parser.lookupVersionValue("TIME", "15:50:55");
+	m_buildDate = parser.lookupVersionValue("DATE", "Sep 25 2006");
+	m_buildConfiguration = parser.lookupVersionValue("CONFIG", "Release");
+	m_showFullVersion = false;
+}

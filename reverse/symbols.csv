@@ -1920,3 +1920,7 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?Rva0061F230_GetPrototype@@YA?AVHierarchyPrototypeRef@@PBD@Z,0x0061F230,asset-registry prototype lookup returning counted HierarchyPrototypeRef via hidden slot (null name writes null ref); called with lowercased h* key from Get_HTree 0x17FCCA and sibling 0x17FB1E plus 14 render-asset sites; BFME1 GetHTree analog
 ??0HTreePrototypeOwner@@QAE@ABVHierarchyPrototypeRef@@@Z,0x0017FBED,4-byte SEH owner copy ctor (by-ref HierarchyPrototypeRef, zeroes m_ptr then delegates to 0x17FB0F); called only from Get_HTree 0x17FCDA and sibling 0x17FC54
 ?Release_Ref@HierarchyPrototype@@QAEXXZ,0x0061ED10,36B dec-WORD-at-4 conditional-virtual release body; called as thiscall on prototype refs by Get_HTree temp/owner teardown
+??0VersionBlockParser@@QAE@PBD@Z,0x00428C04,Version-block parser ctor from 512B block at 0xA25000; called with parser local in initializeBuildMetadata 0x23870E and global init 0x238646
+?lookupVersionValue@VersionBlockParser@@QAEPBDPBD0@Z,0x00427EDA,Version-block key lookup returning char* or default; called 7x in 0x23870E for ID USER MACHINE GUID TIME DATE CONFIG and 1x in 0x238646
+??1VersionBlockParserInner@@QAE@XZ,0x002385FF,Version-block inner list dtor stepping 0x18 elements via 0x2385E6 then free via 0x30830; called with parser+4 at end of 0x23870E and 0x238646
+?initVersionGlobals@@YAHXZ,0x00238646,Version global init filling ints at 0xDFE760-0xDFE76C and returning bool to 0xDFE774; called once via guard 0xDFE778 in 0x23870E
