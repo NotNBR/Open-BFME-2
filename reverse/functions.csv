@@ -10269,3 +10269,7 @@ _Rva0088E1A0ShowAssertCrashDialog,,0x0003D880,410,Code/Libraries/Source/WWVegas/
 ?copyfmt@?$basic_ios@GV?$char_traits@G@_STL@@@_STL@@QAEAAV12@ABV12@@Z,,0x0001C540,117,Code/Libraries/Source/WWVegas/WWLib/stlport_basic_ios_copyfmt_w.cpp,matched,BFME1 byte-identical donor; b1 0x0083F610; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ??0?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@QAE@ABV?$allocator@D@1@@Z,,0x000270D0,124,Code/Libraries/Source/WWVegas/WWLib/stlport_narrow_string_allocator_ctor.cpp,matched,BFME1 near-miss donor trial as-is
 ?bfmeGoSZA@@YAXPAVBfmeStreamSZA@@PAUBfmeCtxSZA@@@Z,,0x0003CBC0,85,Code/GameEngine/Source/Common/BfmeConv1305.cpp,matched,BFME1 byte-identical donor; b1 0x0088D850; ICF-folded in BFME1 so the name is this sweep's pick among its twins; 1 DIR32 string literal(s) agree
+?clear@Rva007F6BA0@@QAEXXZ,,0x006632D0,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 28; b1 0x007F6BA0
+?clear@Rva007F6C60@@QAEXXZ,,0x00663370,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 64; b1 0x007F6C60
+?clear@Rva00801570@@QAEXXZ,,0x0066D890,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 48; b1 0x00801570
+?clear@Rva00801600@@QAEXXZ,,0x0066D900,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 56; b1 0x00801600
