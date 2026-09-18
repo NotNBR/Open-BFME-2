@@ -9337,3 +9337,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?destroy@ParticleSystem@@QAEXXZ,,0x001F462C,50,Code/GameEngine/Source/GameClient/System/ParticleSystem_destroy.cpp,matched,BFME1 ParticleSys destroy port; slave plus0x15C flag plus0x1A4; Make pin for null slave
 ??1BfmeParticleSystemHandle@@QAE@XZ,,0x0004CBC0,55,Code/GameEngine/Source/GameClient/System/ParticleSystemHandle_dtor.cpp,matched,Intrusive unlink port of BFME1 ListClear idiom; head at plus0x9C-A0; pin pre-existed
 ?lowerBound@VersionBlockParser@@SAPBXPBX0PBQBD0H@Z,,0x00427D0E,83,Code/GameEngine/Source/Common/VersionBlockSearch.cpp,matched,
+?upperBound@VersionBlockParser@@SAPBXPBX0PBQBD0H@Z,,0x00427D61,83,Code/GameEngine/Source/Common/VersionBlockSearch.cpp,matched,

@@ -33,6 +33,7 @@ class VersionBlockParser
 {
 public:
 	static const void *lowerBound(const void *first, const void *last, const char *const *key, const void *comp, int filler);
+	static const void *upperBound(const void *first, const void *last, const char *const *key, const void *comp, int filler);
 	static const void *searchEntries(const void *found, const void *first, const void *last, const char *const *key, const void *match, int flags);
 	static const void *findEntry(const void *found, const void *first, const void *last, const char *const *key, const void *match);
 };
@@ -51,6 +52,25 @@ const void *VersionBlockParser::lowerBound(const void *first, const void *last, 
 			recordCount = recordCount - halfCount - 1;
 		} else {
 			recordCount = halfCount;
+		}
+	}
+	(void)filler;
+	return first;
+}
+
+// ?upperBound@VersionBlockParser@@SAPBXPBX0PBQBD0H@Z
+const void *VersionBlockParser::upperBound(const void *first, const void *last, const char *const *key, const void *comp, int filler)
+{
+	int recordCount = (int)((const char *)last - (const char *)first) / 24;
+	while (recordCount > 0) {
+		int halfCount = recordCount >> 1;
+		const VersionBlockEntry *midEntry = (const VersionBlockEntry *)((const char *)first + halfCount * 24);
+		// Same slot-as-this convention as lowerBound (lea ecx,[ebp+0x14]).
+		if (((const VersionBlockKeyCompare *)&comp)->lessKeyEntry(*key, midEntry)) {
+			recordCount = halfCount;
+		} else {
+			first = midEntry + 1;
+			recordCount = recordCount - halfCount - 1;
 		}
 	}
 	(void)filler;
