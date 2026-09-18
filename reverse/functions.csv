@@ -8641,3 +8641,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseAngleReal@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F0D5,34,Code/GameEngine/Source/Common/System/INI_parseAngleReal.cpp,matched,
 ?dup_002F0F7@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F0F7,39,Code/GameEngine/Source/Common/System/INI_dup002F0F7.cpp,matched,
 ?parseAsciiString@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F11E,60,Code/GameEngine/Source/Common/System/INI_parseAsciiString.cpp,matched,
+?getNextSubToken@INI@@QAEPBDPBD@Z,,0x0002E06B,92,Code/GameEngine/Source/Common/System/INI_getNextSubToken.cpp,matched,
