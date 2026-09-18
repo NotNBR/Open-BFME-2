@@ -8656,3 +8656,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseIndexList@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EC4E,31,Code/GameEngine/Source/Common/System/INI_parseIndexList.cpp,matched,BFME1 parseIndexList one-liner through member scanIndexList
 ?parseLookupList@INI@@SAXPAV1@PAX1PBX@Z,,0x0002ECAF,31,Code/GameEngine/Source/Common/System/INI_parseLookupList.cpp,matched,BFME1 parseLookupList one-liner through member scanLookupList
 ?parseBitInInt32@INI@@SAXPAV1@PAX1PBX@Z,,0x0002E86C,41,Code/GameEngine/Source/Common/System/INI_parseBitInInt32.cpp,matched,BFME1 parseBitInInt32 verbatim
+?parsePercentToReal@INI@@SAXPAV1@PAX1PBX@Z,,0x0002F1BA,34,Code/GameEngine/Source/Common/System/INI_parsePercentToReal.cpp,matched,BFME1 parsePercentToReal via sepsPercent member and 0.01 helper
