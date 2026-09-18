@@ -55,3 +55,19 @@ int Rva0033A444WordIntField::get() const
 {
 	return m_value;
 }
+
+class Rva00391614WordIntField
+{
+public:
+	int get() const;
+
+private:
+	char m_pad[0x5DC];
+	unsigned short m_value; // +0x5DC
+};
+
+// ?get@Rva00391614WordIntField@@QBEHXZ
+int Rva00391614WordIntField::get() const
+{
+	return m_value;
+}
