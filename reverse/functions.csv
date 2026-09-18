@@ -10284,3 +10284,4 @@ _luaB_type,,0x0074BC80,45,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byt
 _deprecated_func,,0x0074C8E0,32,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00995780; 1 DIR32 string literal(s) agree
 _set2,,0x0074C3F0,26,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00995290
 ?Rva009B64A0BuildTone@@YAXPAE@Z,,0x001C6DA0,331,Code/GameEngine/Source/Common/Rva009B64A0BuildTone.cpp,matched,BFME1 near-miss donor trial as-is
+??0AssetReference@@QAE@ABV0@@Z,,0x000424BB,21,Code/GameEngineDevice/Source/W3DDevice/GameClient/Rva009EBDC0.cpp,matched,place_bodies placement of TU-emitted copy ctor; Peek_Texture Add_Ref caller evidence
