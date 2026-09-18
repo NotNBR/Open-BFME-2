@@ -9233,6 +9233,7 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva003BA5C3ByteSlot@@QAEXE@Z,,0x003BA5C3,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva003BA5D0ByteSlot@@QAEXE@Z,,0x003BA5D0,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva00105D7CByteSlot@@QAEXE@Z,,0x00105D7C,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
-?set@Rva0031ED1FDwordSlot@@QAEXH@Z,,0x0031ED1F,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva00105D89ByteSlot@@QAEXE@Z,,0x00105D89,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?Rva00171660Get@@YAHXZ,,0x00171660,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DB5F90
+?getIdealStaticGameDetail@OptionPreferences@@QAEHXZ,,0x002E429B,20,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_getStaticGameDetail.cpp,matched,ZH OptionsMenu.cpp:409 ideal LOD via slot-0x1C enum virtual over table 0xDB95F4 with miss default -1; consumer is LOD init at 0x202865
+?getStaticGameDetail@OptionPreferences@@QAEHXZ,,0x002E427D,30,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_getStaticGameDetail.cpp,matched,ZH OptionsMenu.cpp:418 static LOD via slot-0x1C enum virtual over table 0xDB95F4 with live LOD default at globals 0xDFE144+0x1768
