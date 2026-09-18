@@ -10331,3 +10331,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?give@Rva00809500Owner@@QAEXPAURva00809500Entry@@@Z,,0x00675400,27,Code/GameEngine/Source/Common/U2HandleLeaves.cpp,matched,BFME1 byte-identical donor b1 0x00809500; single ICF pick
 ?handle@Gen009F5040@@QAEXXZ,,0x00627770,148,Code/GameEngine/Source/Common/Gen009F5040Handle.cpp,matched,BFME1 near-miss donor; b1 0x009F5040; member-offset drift +0x30 (m_node +0x120); calculate pin
 ?bfmeCopy@@YAXPBXIPAX@Z,,0x001B9BF0,31,Code/GameEngine/Source/Common/Bfme5ThirtySix.cpp,matched,BFME1 byte-identical donor; b1 0x009A91A0
+?bfmeInitTC@BfmeThingTC@@QAEPAV1@PAX@Z,,0x00521623,27,Code/GameEngine/Source/Common/BfmeThreeHundredFortyTwo.cpp,matched,BFME1 byte-identical donor b1 0x00511190; single ICF pick over bare thunk
