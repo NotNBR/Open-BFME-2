@@ -10359,3 +10359,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ??0Rva007E3430@@QAE@XZ,,0x00106A19,20,Code/GameEngine/Source/Common/R2ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x007E3430
 ??0Rva0029BC80@@QAE@XZ,,0x0049CB72,16,Code/GameEngine/Source/Common/R2ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x0029BC80
 ??0Rva000EC1E0@@QAE@XZ,,0x004E188E,20,Code/GameEngine/Source/Common/R2ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x000EC1E0; ICF-folded in BFME1 so the name is this sweep single pick among its twins
+??2Gen007F0130@@SAPAXI@Z,,0x0065D010,20,Code/GameEngine/Source/Common/S3AllocatorOperatorNewDelete.cpp,matched,BFME1 byte-identical donor; b1 0x007F0130; ICF-folded so single pick among new twins
