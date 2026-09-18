@@ -9994,3 +9994,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?walk@Rva007FA2C0@@QAEXI@Z,,0x00666790,80,Code/GameEngine/Source/GameNetwork/Rva007FA240Walk.cpp,matched,BFME1 byte-identical donor; b1 0x007FA240
 ?scan@Rva007FA2C0@@QAEXPAX@Z,,0x00666860,43,Code/GameEngine/Source/GameNetwork/Rva007FA240Walk.cpp,matched,BFME1 byte-identical donor; b1 0x007FA310
 ?Rva009EBCE0_GetPrototype@@YA?AVRva009EBCE0AssetReference@@PBD@Z,,0x0061F230,211,Code/Libraries/Source/WWVegas/WW3D2/RegistryPrototypeLookup.cpp,matched,BFME1 byte-identical donor; b1 0x009EBCE0
+?bfmeGoVJR@BfmeThingVJR@@QAEXHHHH@Z,,0x006627F0,206,Code/GameEngine/Source/GameNetwork/BfmeGameBrowserVJR.cpp,matched,BFME1 byte-identical donor; b1 0x007F6050
