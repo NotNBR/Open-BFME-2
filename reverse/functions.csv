@@ -9058,3 +9058,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva002AA21CDwordField@@QBEHXZ,,0x002AA21C,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ??0BfmeCacheBZA@@QAE@PAVBfmeThingBZA@@@Z,,0x00660CD0,46,Code/GameEngine/Source/Common/BfmeMakeBZA.cpp,matched,BfmeCacheBZA ctor via place_bodies from the bfmeMakeBZA TU (placement-new inlines at factory; out-of-line copy placed here unclaimed)
 ?get@Rva002B224BDwordField@@QBEHXZ,,0x002B224B,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva002B245FDwordField@@QBEHXZ,,0x002B245F,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
