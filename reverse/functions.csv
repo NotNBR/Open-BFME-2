@@ -10407,3 +10407,4 @@ _luaG_symbexec,,0x0074CEF0,437,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 
 ?set@Rva004F0700PairAssign@@QAEXABUPairRva004F0700PairAssign@@@Z,,0x00743260,18,Code/GameEngine/Source/Common/SmallLeafBodies3.cpp,matched,BFME1 byte-identical donor; b1 0x004F0700; ICF-folded in BFME1 single pick; macro body already emitted in-TU
 __Locale_time_create,,0x00022A00,1018,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,exact-ambiguous copy; assignment proven by verify_string_refs
 ??0LineEmissionVolumeInfo@FXParticleSystem@@QAE@ABV01@@Z,0x003A653B,0x003A653B,63,Code/GameEngine/Source/GameClient/System/FXParticleSystem/fx_particle_system.cpp,matched,BFME1 byte-identical donor b1 0x005D5A90; ICF-folded in BFME1 single pick; inline base copy plus derived vtable
+?bfmeSetRegion@Gen_008812D0@@QAEXPBURegion3D@@M@Z,,0x006C1500,123,Code/GameEngine/Source/Common/Bfme5SeventySix.cpp,matched,BFME1 donor shape; b1 0x00881B10; pin coexists with row

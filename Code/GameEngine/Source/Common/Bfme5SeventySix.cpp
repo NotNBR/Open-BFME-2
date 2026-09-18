@@ -55,6 +55,11 @@ class Gen_008812D0
 public:
 	void bfmeReset();
 	void bfmeSetRegion(const Region3D *region, Real cellSize);
+	void bfmeConfigure(Region3D region, Real cellSize);
+
+private:
+	Region3D m_bfmeRegion;					// +0x00
+	Real m_bfmeCellSize;					// +0x18
 };
 
 class BfmeTaintManager
@@ -76,4 +81,17 @@ void BfmeTaintManager::bfmeResetGrid()
 	region.lo.zero();
 	region.hi.zero();
 	m_bfmeGrid->bfmeSetRegion(&region, 0.0f);
+}
+
+// ?bfmeSetRegion@Gen_008812D0@@QAEXPBURegion3D@@M@Z
+void Gen_008812D0::bfmeSetRegion(const Region3D *region, Real cellSize)
+{
+	if (cellSize <= 0.0f)
+		cellSize = m_bfmeCellSize;
+
+	if (!(region->width() < 0.0f)
+		&& !(region->height() < 0.0f))
+	{
+		bfmeConfigure(*region, cellSize);
+	}
 }
