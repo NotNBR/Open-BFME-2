@@ -10208,3 +10208,4 @@ _f_luaopen,,0x0074DEF0,110,Code/Libraries/Source/Lua/lstate.c,matched,BFME1 byte
 ?Rva009AABB0CodecDispatch@@YAXPAURva009AABB0Context@@@Z,,0x001BB5F0,121,Code/GameEngine/Source/Common/Rva009AABB0CodecDispatch.cpp,matched,BFME1 byte-identical donor; b1 0x009AABB0; 1 DIR32 string literal(s) agree
 ??0Rva00800920Owner@@QAE@PAURva00800920Host@@@Z,,0x0066CD00,210,Code/GameEngine/Source/GameNetwork/Rva00800920FeslCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00800920
 ?bfmeGoVJM@BfmeThingVJM@@QAEXHH@Z,,0x00663140,92,Code/GameEngine/Source/Common/BfmeConv1390.cpp,matched,BFME1 byte-identical donor; b1 0x007F69B0
+?bfmeGo@Rva00800B70Owner@@QAEPAXE@Z,,0x0066CF50,90,Code/GameEngine/Source/GameNetwork/Rva00800B70FeslDtor.cpp,matched,BFME1 byte-identical donor; b1 0x00800B70
