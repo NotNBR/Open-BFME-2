@@ -9015,3 +9015,7 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?captureGroup@Rva003B40A1Holder@@QAEPAXPAX@Z,,0x003B40A1,21,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptGroupCapture.cpp,matched,First capture wrapper over the matched 0x3B3F09 worker; forwards record words +4/+8 with holder adjusted to the +0x0C table
 ?findUpgrade@UpgradeCenter@@QBEPBVUpgradeTemplate@@ABVAsciiString@@@Z,,0x0026F26D,28,Code/GameEngine/Source/Common/System/UpgradeCenterFindUpgrade.cpp,matched,ZH Upgrade.cpp verbatim; nameToKey row 0x9FA65 plus findUpgradeByKey row 0x26EEB8; zero pins
 ?getNameAndDescription@ScienceStore@@QBE_NW4ScienceType@@AAVUnicodeString@@1@Z,,0x001FF449,52,Code/GameEngine/Source/Common/RTS/ScienceStoreNameDescription.cpp,matched,BFME1 Science.cpp verbatim shape with UnicodeString inline set forwarders
+?captureGroup@Rva003B40B6Holder@@QAEPAXPAX@Z,,0x003B40B6,21,Code/GameEngine/Source/GameLogic/ScriptEngine/Rva003B40B6Capture.cpp,matched,Capture-group thunk over the 0x3B3F09 indexed walker; plus-0x2C table side
+
+?rva006C4E30@@YAXXZ,,0x006C4E30,27,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque guarded dbghelp init; first caller tail-jumps initDbghelp on the global object
+?rva006C4E50@@YAXXZ,,0x006C4E50,61,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque guarded dbghelp uninit; last caller inlines uninitDbghelp SymCleanup plus FreeLibrary
