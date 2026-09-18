@@ -9896,3 +9896,6 @@ _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRe
 ?copyPlane009AF0D0@@YAXPAURva009AF200Context@@IHIIPAE1PBI@Z,,0x001BFAC0,303,Code/GameEngine/Source/Common/Rva009AF0D0CopyPlane.cpp,matched,BFME1 byte-identical donor; b1 0x009AF0D0
 ?Rva009B6320DecodeTree@@YAXPAURva009B6320Node@@HPAHPAEHH@Z,,0x001C6C20,175,Code/GameEngine/Source/Common/Rva009B6320DecodeTree.cpp,matched,BFME1 byte-identical donor; b1 0x009B6320
 ?Rva009B5830ReconstructBlock@@YAXPAURva009B5830State@@H@Z,,0x001C6130,184,Code/GameEngine/Source/Common/Rva009B5830ReconstructBlock.cpp,matched,BFME1 byte-identical donor; b1 0x009B5830
+?Rva008043F0Connect@@YAXPAURva00804150ProtoMangleRef@@HPBD@Z,,0x00670430,65,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x008043F0
+?apply@Rva00478E90@@QAEHPAX@Z,,0x0031415A,19,Code/GameEngine/Source/Common/Rva00478E90Set.cpp,matched,BFME1 byte-identical donor; b1 0x00478E90
+_ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x00804330
