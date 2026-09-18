@@ -24,7 +24,6 @@ const void *VersionBlockParser::forwardLowerBound(const void *first, const void 
 	return VersionBlockParser::lowerBound(first, last, key, match, 0);
 }
 
-// ?forwardUpperBound@VersionBlockParser@@SAPBXPBX0PBQBD0@Z present-unmatched
 const void *VersionBlockParser::forwardUpperBound(const void *first, const void *last, const char *const *key, const void *match)
 {
 	return VersionBlockParser::upperBound(first, last, key, match, 0);
