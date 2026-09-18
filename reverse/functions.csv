@@ -10094,3 +10094,5 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeGoVMQ@BfmeThingVMQ@@QAE_NPBDD@Z,,0x00655A50,73,Code/GameEngine/Source/Common/BfmeConv1459.cpp,matched,BFME1 byte-identical donor; b1 0x007E89C0
 ?onRegion@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00663570,138,Code/GameEngine/Source/GameNetwork/V2FeslBrowserRecords.cpp,matched,BFME1 byte-identical donor; b1 region twin; pins 0x661890+0x66EEB0
 ?friend_updateCellsTouched@PartitionData@@QAEXXZ,,0x0073B250,37,Code/GameEngine/Source/GameLogic/Object/PartitionData_friendUpdateCellsTouched.cpp,matched,BFME1 byte-identical donor; b1 0x008F8BF0
+_atexit,,0x006291F8,18,Code/Libraries/Source/WWVegas/WWDebug/AtexitThunk.cpp,matched,BFME1 byte-identical donor; b1 0x009F6E26;object-symbol=__atexit
+?rva008B8F80AtoiOrZero@@YAHPBD@Z,,0x006D9760,26,Code/Libraries/Source/EA/Apt/Rva008B8F80AtoiOrZero.cpp,matched,BFME1 byte-identical donor; b1 0x008B8F80; sweep ji pin stale (static _atoi already pinned at 0x00629838); no new pins
