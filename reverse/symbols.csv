@@ -2795,3 +2795,13 @@ _luaH_setint,0x007509E0
 _luaH_setstrnum,0x00750A10
 _luaS_new,0x00750390
 _luaV_strcomp,0x0074E9D0
+?_M_initialize_map@?$Deque_base@UGen_t_008fb350_p12pod@@V?$allocator@UGen_t_008fb350_p12pod@@@_STL@@@_STL@@IAEXI@Z,0x0073C9D0
+?_M_initialize_map@?$Deque_base@URva008FA2B0Element@@V?$allocator@URva008FA2B0Element@@@_STL@@@_STL@@IAEXI@Z,0x0073C9D0
+?bfmeUnlink@Gen_008F7AC0@@QAEXXZ,0x0073A0A0
+?configure@ShroudManagerImpl008FBA40@@QAEXURegion3D@@M@Z,0x0073DBF0
+?processPending@ShroudManagerImpl008FBA40@@AAEX_N@Z,0x0073D4F0
+?unlink@PartitionData@@QAEXXZ,0x0073A0A0
+?bfmeAskBJA@BfmeThingBJA@@QAE_NXZ,0x00256996
+?bfmeAskBJB@BfmeThingBJB@@QAE_NXZ,0x00256996
+?bfmeAskDSK@BfmeThingDSK@@QAE_NXZ,0x00256996
+?j_0002d538@@YAXXZ,0x00256996

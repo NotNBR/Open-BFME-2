@@ -10167,3 +10167,11 @@ _luaV_lessthan,,0x0074EA40,233,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byt
 ?bfmeFilterRowByIndex12Mmx@@YAXHPAXH@Z,,0x001D1DA0,483,Code/GameEngine/Source/Common/BfmeFilterRowByIndex12Mmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C14A0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 _luaV_pack,,0x0074ECD0,186,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor; b1 0x00997B70; vendored=lua-4.0.1
 ?bfmeFilterRowByIndex8Mmx@@YAXHPAXH@Z,,0x001D18C0,352,Code/GameEngine/Source/Common/BfmeFilterRowByIndex8Mmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C0FC0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+_luaV_tostring,,0x0074E360,164,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor; b1 0x00997200; vendored=lua-4.0.1; 3 DIR32 string literal(s) agree
+?bfmeDeblockEdgeByIndexMmx@@YAXPAURva009C2170Ctx@@PAXH@Z,,0x001D2A70,424,Code/GameEngine/Source/Common/BfmeDeblockEdgeByIndexMmx.cpp,matched,BFME1 byte-identical donor; b1 0x009C2170; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+_call_arith,,0x0074E9A0,42,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor; b1 0x00997840; vendored=lua-4.0.1; 1 DIR32 string literal(s) agree
+?rva009C7060BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D7960,102,Code/GameEngine/Source/Common/Rva009C7060BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C7060; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+?rva009C70D0BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D79D0,100,Code/GameEngine/Source/Common/Rva009C70D0BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C70D0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+?bfmeGoBJA@BfmeThingBJA@@QAEXXZ,,0x0025697F,23,Code/GameEngine/Source/Common/BfmeConv468.cpp,matched,BFME1 byte-identical donor; b1 0x00128760
+?rva009C72C0BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D7BC0,95,Code/GameEngine/Source/Common/Rva009C72C0BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C72C0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+?rva009C7320BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D7C20,93,Code/GameEngine/Source/Common/Rva009C7320BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C7320; ICF-folded in BFME1 so the name is this sweep's pick among its twins
