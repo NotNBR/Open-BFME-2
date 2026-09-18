@@ -56,3 +56,19 @@ AsciiString Rva00274DB6AsciiField::get() const
 {
 	return m_value;
 }
+
+class Rva00291775AsciiField
+{
+public:
+	AsciiString get() const;
+
+private:
+	char m_pad[0x318];
+	AsciiString m_value; // +0x318
+};
+
+// ?get@Rva00291775AsciiField@@QBE?AVAsciiString@@XZ
+AsciiString Rva00291775AsciiField::get() const
+{
+	return m_value;
+}
