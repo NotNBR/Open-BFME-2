@@ -1,0 +1,27 @@
+// Disp32 dword setters: thirteen-byte __thiscall members with one shape:
+//
+//     mov eax,[esp+4] / mov [ecx+<DISP>],eax / ret 4
+//
+// One dword is taken from the stack argument slot and stored at a fixed
+// displacement from `this`. Ported from Open-BFME-1
+// (Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp): the
+// BFME_DISP_DWORD_SETTER macro is verbatim (void set over a lead array),
+// only the class names follow this tree's Disp* convention
+// (address-derived Rva<addr>DwordSlot, identity unrecoverable from 13 bytes).
+// Every displacement here is a disp32 (MSVC 7.1 uses disp8 whenever the
+// offset fits, so every offset is at least 0x80).
+// No // cl: line (defaults match the frameless 13-byte shape).
+#define BFME_DISP_DWORD_SETTER(NAME, DISP) \
+	class NAME \
+	{ \
+	public: \
+		void set(int value); \
+		char m_lead[DISP]; \
+		int m_value; \
+	}; \
+	void NAME::set(int value) \
+	{ \
+		m_value = value; \
+	}
+
+BFME_DISP_DWORD_SETTER(Rva0029A2C4DwordSlot, 0x8B4)
