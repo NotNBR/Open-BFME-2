@@ -49,3 +49,12 @@ int Rva0002BACFGet(void)
 {
 	return g_Va00DDF578;
 }
+
+// ?Rva0006E16FGet@@YAHXZ @ 0x0006E16F (6B) over 0x00DB5FA0.
+
+extern int g_Va00DB5FA0;
+
+int Rva0006E16FGet(void)
+{
+	return g_Va00DB5FA0;
+}
