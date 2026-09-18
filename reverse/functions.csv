@@ -10205,4 +10205,5 @@ _luaH_free,,0x007507D0,60,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-
 ?Rva007FCC50@@YGXPAVRva007E8810Message@@H@Z,,0x00669150,47,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCC50; 1 DIR32 string literal(s) agree
 ?Rva007FCE70@@YGXPAVRva007E8810Message@@H@Z,,0x00669370,47,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCE70; 1 DIR32 string literal(s) agree
 _f_luaopen,,0x0074DEF0,110,Code/Libraries/Source/Lua/lstate.c,matched,BFME1 byte-identical donor; b1 0x00996D90; vendored=lua-4.0.1
+?Rva009AABB0CodecDispatch@@YAXPAURva009AABB0Context@@@Z,,0x001BB5F0,121,Code/GameEngine/Source/Common/Rva009AABB0CodecDispatch.cpp,matched,BFME1 byte-identical donor; b1 0x009AABB0; 1 DIR32 string literal(s) agree
 ??0Rva00800920Owner@@QAE@PAURva00800920Host@@@Z,,0x0066CD00,210,Code/GameEngine/Source/GameNetwork/Rva00800920FeslCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00800920
