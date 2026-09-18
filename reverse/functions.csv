@@ -8726,3 +8726,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseComboBoxData@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x00315146,166,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseComboBoxData.cpp,matched,BFME1 GameWindowManagerScript shape; dispatch table at 0x9BE198 pairs COMBOBOXDATA with 0x715146; trailing options as bits 0x10 0x40 in Int at plus 0xC; scanInt scanBool pins
 ??0Rva0014CE67_Prototype@@QAE@PBDHH@Z,,0x0014CE67,75,Code/GameEngine/Source/Common/Rva0014CE67Ctor.cpp,matched,
 ?getMachineName@IPEnumeration@@QAE?AVAsciiString@@XZ,,0x0050C1FD,132,Code/GameEngine/Source/GameNetwork/IPEnumerationGetMachineName.cpp,matched,BFME1 IPEnumeration.cpp donor; empty-string fallback plus hostname copy
+??0StringClass@@QAE@PBD_N@Z,,0x000F0ED1,70,Code/Libraries/Source/WWVegas/WWLib/wwstring_ctor_pbd_bool.cpp,matched,
