@@ -2974,3 +2974,5 @@ ___GetLCIDFromName,0x000221B0,File-static locale resolver in stlport_LocaleFacet
 ?j_0002a969@Glo012F1024Item@@QAEXXZ,0x00565344
 ?j_0002eeec@@YAXXZ,0x005651D2
 ?j_0002eeec@Glo012F1024Item@@QAEXXZ,0x005651D2
+??1SubsystemInterface@@UAE@XZ,0x001B4E74
+??1?$_Rb_tree@W4NameKeyType@@U?$pair@$$CBW4NameKeyType@@PAVOpen2Held880FC0@@@_STL@@U?$_Select1st@U?$pair@$$CBW4NameKeyType@@PAVOpen2Held880FC0@@@_STL@@@3@U?$less@W4NameKeyType@@@3@V?$allocator@U?$pair@$$CBW4NameKeyType@@PAVOpen2Held880FC0@@@_STL@@@3@@_STL@@QAE@XZ,0x00627DE0
