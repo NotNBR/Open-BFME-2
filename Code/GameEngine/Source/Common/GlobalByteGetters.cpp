@@ -22,3 +22,12 @@ unsigned char Rva0004CAB7GetByte(void)
 {
 	return g_Va00DEC3D9;
 }
+
+// ?Rva00131062GetByte@@YAEXZ @ 0x00131062 (6B) over 0x00DB5F98.
+
+extern unsigned char g_Va00DB5F98;
+
+unsigned char Rva00131062GetByte(void)
+{
+	return g_Va00DB5F98;
+}
