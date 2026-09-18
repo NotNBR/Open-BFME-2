@@ -8340,3 +8340,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??0ThreadClass@@QAE@PBD@Z,,0x00610430,72,Code/Libraries/Source/WWVegas/WWLib/ThreadClassCtor.cpp,matched,ThreadClass 1-arg ctor via dedicated G7 TU with three nulls for threadId handle priority plus strcpy-or-No-name memcpy; G7 flips strcpy increment to retail add
 ?Free_Character_Arrays@FontCharsClass@@AAEXXZ,,0x00154890,166,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassFreeCharacterArrays.cpp,matched,FontCharsClass Free_Character_Arrays via dedicated TU reusing load-unit layout plus BFME1 verbatim plus explicit array delete for the unicode table
 ?rva000373109@MineshaftPortalBehaviour@@SA?AW4NameKeyType@@XZ,,0x00373109,69,Code/GameEngine/Source/GameLogic/Object/Behavior/MineshaftPortalBehaviourPoolKey.cpp,matched,
+?rva00039085C@PhysicsBehavior@@SA?AW4NameKeyType@@XZ,,0x0039085C,69,Code/GameEngine/Source/GameLogic/Object/Behavior/PhysicsBehaviorPoolKey.cpp,matched,
