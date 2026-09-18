@@ -1,0 +1,37 @@
+// cl: /O2 /Ob0
+
+// Retail stores the class vtable (0x00BC64B0) here; the BFME1 donor baked
+// its own vtable VA as a literal, which cannot transfer. The address of a
+// sacrificial anchor stands in (mov-imm-DIR32, patched from retail); a plain
+// extern would load through a register and reschedule the stores.
+static int Rva0081C2F0VTableAnchor;
+
+class Rva0081C2F0
+{
+	void *m_vt;
+	int m_04, m_08, m_0C, m_10, m_14, m_18, m_1C;
+	float m_20;
+	int m_24;
+	char m_28;
+
+public:
+	Rva0081C2F0 &set(int n);
+};
+
+Rva0081C2F0 &Rva0081C2F0::set(int n)
+{
+	m_20 = 1.0f;
+	m_vt = (void *)&Rva0081C2F0VTableAnchor;
+	m_04 = 0;
+	m_08 = 0;
+	m_0C = 0;
+	m_10 = 0;
+	m_14 = 0;
+	m_18 = 0;
+	m_1C = 0;
+	m_24 = n;
+	m_28 = 0;
+	if (n >= 6 || n < 0)
+		m_24 = 0;
+	return *this;
+}
