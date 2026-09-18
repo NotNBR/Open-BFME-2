@@ -2003,3 +2003,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?clear@Rva003B3204@@QAEXXZ,0x003B3204,opaque guarded-delete helper (self-recursive chain shape); first clear target of double helper 0x3B4071; exact method unproven
 ?clear@Rva003B31DF@@QAEXXZ,0x003B31DF,opaque guarded-delete helper (self-recursive chain shape); second clear target of double helper 0x3B4071; exact method unproven
 ?getFont@FontLibrary@@QAEPAVGameFont@@PBVAsciiString@@M_N@Z,0x002189E1,FontLibrary getFont helper taking name pointer plus float size plus bool bold; parseFont REL32 plus dozens of other font fetch sites read the same address
+??0Rva003623E5Member@@QAE@XZ,0x003623E5,opaque member-base ctor; sole site lea ecx [esi+8] in AnimationSteeringUpdateModuleData ctor 0x4BD651; 0x94-frame SEH body; identity unproven
