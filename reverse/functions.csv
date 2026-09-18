@@ -8362,3 +8362,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B4A99@StatusBitsUpgradeIfEldestKindof@@SA?AW4NameKeyType@@XZ,,0x004B4A99,69,Code/GameEngine/Source/Common/System/StatusBitsUpgradeIfEldestKindofPoolKey.cpp,matched,
 ?rva0004B4BC7@DoCommandUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B4BC7,69,Code/GameEngine/Source/Common/System/DoCommandUpgradePoolKey.cpp,matched,
 ?rva0004B5333@StealthUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B5333,69,Code/GameEngine/Source/Common/System/StealthUpgradePoolKey.cpp,matched,
+?rva0004B55EE@WeaponBonusUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B55EE,69,Code/GameEngine/Source/Common/System/WeaponBonusUpgradePoolKey.cpp,matched,
