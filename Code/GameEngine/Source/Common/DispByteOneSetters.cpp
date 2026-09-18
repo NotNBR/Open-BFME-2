@@ -219,3 +219,17 @@ void Rva000B2B33ByteOneSetter::enable()
 {
 	m_enabled = 1;
 }
+
+class Rva000B380CByteOneSetter
+{
+public:
+	void enable();
+
+	char m_lead[0x94];
+	unsigned char m_enabled;
+};
+
+void Rva000B380CByteOneSetter::enable()
+{
+	m_enabled = 1;
+}
