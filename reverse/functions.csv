@@ -8575,3 +8575,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00048FFD4@LargeGroupBonusUpdate@@SA?AW4NameKeyType@@XZ,,0x0048FFD4,69,Code/GameEngine/Source/GameLogic/Object/Update/LargeGroupBonusUpdatePoolKey.cpp,matched,cached pool-name key; pool string LargeGroupBonusUpdate; /O1 static-guard EH; nameToKey row
 ??$__adjust_heap@PAUS4SortElem8@@HU1@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@HHU1@US4Cmp00625C10@@@Z,,0x00625CF0,122,Code/Libraries/Source/WWVegas/WWLib/stlport_adjust_heap_s4sortelem8_desc.cpp,matched,Descending twin; tail via alias pin to 0x625AD0
 ?parseReal@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EFC0,28,Code/GameEngine/Source/Common/System/INI_parseReal.cpp,matched,
+?rva00049056B@SiegeAIUpdate@@SA?AW4NameKeyType@@XZ,,0x0049056B,69,Code/GameEngine/Source/GameLogic/Object/Update/SiegeAIUpdatePoolKey.cpp,matched,cached pool-name key; pool string SiegeAIUpdate; /O1 static-guard EH; nameToKey row
