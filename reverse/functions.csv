@@ -8382,3 +8382,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004BB98A@SquishCollide@@SA?AW4NameKeyType@@XZ,,0x004BB98A,69,Code/GameEngine/Source/GameLogic/Object/Die/SquishCollidePoolKey.cpp,matched,
 ?rva0004BC344@HordeMemberCollide@@SA?AW4NameKeyType@@XZ,,0x004BC344,69,Code/GameEngine/Source/GameLogic/Object/Die/HordeMemberCollidePoolKey.cpp,matched,
 ?rva0004BF848@ActiveBody@@SA?AW4NameKeyType@@XZ,,0x004BF848,69,Code/GameEngine/Source/GameLogic/Object/Body/ActiveBodyPoolKey.cpp,matched,
+?rva0004C09B5@StructureBody@@SA?AW4NameKeyType@@XZ,,0x004C09B5,69,Code/GameEngine/Source/GameLogic/Object/Body/StructureBodyPoolKey.cpp,matched,
