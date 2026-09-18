@@ -2849,3 +2849,8 @@ _lua_pushstring,0x007475E0
 _lua_pushusertag,0x00747650
 _lua_settop,0x00746F40
 _lua_touserdata,0x00747490
+?bfmeTailSF@BfmeThingSF@@QAEXXZ,0x001DBAC3
+_bfmeVftSF,0x00816778
+?bfmeOneEBF@BfmeThingEBF@@QAEXXZ,0x0025EF23
+?bfmeTailBFG@BfmeThingBFG@@QAEXXZ,0x0025EF23
+?j_000286a0@@YAXXZ,0x0025EF23
