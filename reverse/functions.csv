@@ -10182,3 +10182,6 @@ _luaH_new,,0x00750770,87,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-i
 _luaH_free,,0x007507D0,60,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor; b1 0x00999670; vendored=lua-4.0.1
 ??0ShroudManagerImpl008FBA40@@QAE@XZ,,0x0073E310,214,Code/GameEngine/Source/Common/RTS/ShroudManagerImpl008FBA40CtorDrain.cpp,matched,BFME1 byte-identical donor in distinct TU; b1 0x008FB960
 ?drainPending@ShroudManagerImpl008FBA40@@QAEXXZ,,0x0073D7D0,54,Code/GameEngine/Source/Common/RTS/ShroudManagerImpl008FBA40CtorDrain.cpp,matched,BFME1 byte-identical donor in distinct TU; b1 0x008FAFD0
+?onConnectionMade@FeslConnectionHandler@@QAEXXZ,,0x006656E0,37,Code/GameEngine/Source/Common/BfmeConv1296.cpp,matched,BFME1 byte-identical donor; b1 0x007F9140; string-anchored
+?onConnectionBroken@FeslConnectionHandler@@QAEXXZ,,0x00665710,37,Code/GameEngine/Source/Common/BfmeConv1296.cpp,matched,BFME1 byte-identical donor; b1 0x007F9170; string-anchored
+?bfmeGoDEA@@YAIPAVBfmeThingDEA@@@Z,,0x00323D9D,23,Code/GameEngine/Source/Common/BfmeConv671.cpp,matched,BFME1 byte-identical donor; b1 0x004B6930
