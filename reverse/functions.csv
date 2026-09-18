@@ -8375,3 +8375,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B7F3D@RemoveUpgradeUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B7F3D,69,Code/GameEngine/Source/Common/System/RemoveUpgradeUpgradePoolKey.cpp,matched,
 ?rva0004B82CB@BuildableHeroListUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B82CB,69,Code/GameEngine/Source/Common/System/BuildableHeroListUpgradePoolKey.cpp,matched,
 ?rva0004B85FA@CommandPointsUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B85FA,69,Code/GameEngine/Source/Common/System/CommandPointsUpgradePoolKey.cpp,matched,
+?rva0004B91AB@ExperienceLevelCreate@@SA?AW4NameKeyType@@XZ,,0x004B91AB,69,Code/GameEngine/Source/Common/System/ExperienceLevelCreatePoolKey.cpp,matched,
