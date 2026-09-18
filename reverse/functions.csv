@@ -8689,3 +8689,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004AC942@PartTheHeavensUpdate@@SA?AW4NameKeyType@@XZ,,0x004AC942,69,Code/GameEngine/Source/GameLogic/Object/Update/PartTheHeavensUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
 ?rva0004ACED8@RousingSpeechUpdate@@SA?AW4NameKeyType@@XZ,,0x004ACED8,69,Code/GameEngine/Source/GameLogic/Object/Update/RousingSpeechUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
 ?rva0004AD5CE@GloriousChargeUpdate@@SA?AW4NameKeyType@@XZ,,0x004AD5CE,69,Code/GameEngine/Source/GameLogic/Object/Update/GloriousChargeUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
+?rva0004B087C@AIGateUpdate@@SA?AW4NameKeyType@@XZ,,0x004B087C,69,Code/GameEngine/Source/GameLogic/Object/Update/AIGateUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
