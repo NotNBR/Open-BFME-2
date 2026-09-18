@@ -9791,3 +9791,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?assertFailed@Rva008013F0Browser@@QAEXH@Z,,0x0066D740,30,Code/GameEngine/Source/Common/U2FeslGameBrowserAsserts.cpp,matched,BFME1 byte-identical donor; b1 0x008013F0; 2 DIR32 string literal(s) agree
 ?Rva009A6600InitBlocks@@YAXPAX@Z,,0x001B7070,37,Code/GameEngine/Source/Common/Rva009A4D00TableInit.cpp,matched,BFME1 byte-identical donor; b1 0x009A6600
 ?appendTestRaw@@YAXPAVBfmeRawBuffer@@@Z,,0x001BB670,67,Code/GameEngine/Source/Common/TestRawAppend.cpp,matched,BFME1 byte-identical donor; b1 0x009AAC30; 1 DIR32 string literal(s) agree
+?bfmeGaussPdf@@YANNNN@Z,,0x001B6970,65,Code/GameEngine/Source/Common/BfmeGaussPdf.cpp,matched,BFME1 byte-identical donor; b1 0x009A5F00
