@@ -94,6 +94,7 @@ protected:
 	virtual ~MeshModelClass();
 	bool read_texcoords(ChunkLoadClass &cload, MeshLoadContextClass *context);
 	bool read_stage_texcoords(ChunkLoadClass &cload, MeshLoadContextClass *context);
+	bool read_Rva00189B50(ChunkLoadClass &cload, MeshLoadContextClass *context);
 
 private:
 	char m_pad0[0x28 - 4];
@@ -173,5 +174,57 @@ bool MeshModelClass::read_stage_texcoords(ChunkLoadClass &cload, MeshLoadContext
 	}
 
 	matdesc->Install_UV_Array(context->CurPass, context->CurTexStage, uvs, elementcount);
+	return true;
+}
+
+// ?read_Rva00189B50@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z
+// Retail 0x00189B50 (260 bytes: ret C2 08 00 at 0x189C51): bulk UV reader with
+// stage -1, no Has_UV select, DefMatDesc direct. Same V-flip skeleton as
+// read_stage_texcoords. Called solely from read_material_pass (single E8 caller
+// at 0x18B485) for W3D_CHUNK_STAGE_TEXCOORDS (0x4A) directly under MATERIAL_PASS
+// (pass-level dispatch table at 0x18B4D4; SCG 0x3E ignored there, TEXTURE_STAGE
+// 0x48 goes to read_texture_stage). Dispatcher evidence via co-lane E8 scan.
+bool MeshModelClass::read_Rva00189B50(ChunkLoadClass &cload, MeshLoadContextClass *context)
+{
+	unsigned elementcount;
+	Vector2 *uvs;
+	MeshMatDescClass *matdesc = DefMatDesc;
+
+	elementcount = cload.Cur_Chunk_Length() / sizeof(W3dTexCoordStruct);
+
+	context->TempUVArray.Uninitialised_Grow(elementcount);
+	uvs = &context->TempUVArray[0];
+
+	if (uvs != NULL) {
+		unsigned totalbytes = elementcount * sizeof(W3dTexCoordStruct);
+		if (cload.Read(uvs, totalbytes) < totalbytes) {
+			return false;
+		}
+
+		unsigned total = elementcount;
+		unsigned done = 0;
+		if ((int)total >= 4) {
+			unsigned iters = (total - 4) / 4 + 1;
+			float *yf = &uvs[1].Y;
+			done = iters * 4;
+			do {
+				yf[-2] = 1.0f - yf[-2];
+				yf[0] = 1.0f - yf[0];
+				yf[2] = 1.0f - yf[2];
+				yf[4] = 1.0f - yf[4];
+				yf += 8;
+			} while (--iters != 0);
+		}
+		if (done < total) {
+			float *yf = &uvs[done].Y;
+			unsigned left = total - done;
+			do {
+				*yf = 1.0f - *yf;
+				yf += 2;
+			} while (--left != 0);
+		}
+	}
+
+	matdesc->Install_UV_Array(context->CurPass, -1, uvs, elementcount);
 	return true;
 }
