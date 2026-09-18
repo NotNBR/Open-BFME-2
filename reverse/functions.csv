@@ -8488,3 +8488,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?allocate@?$allocator@UAngleFXInfo@@@_STL@@QBEPAUAngleFXInfo@@IPBX@Z,,0x006258E0,30,Code/GameEngine/Source/GameLogic/Object/Update/AngleFXInfoVectorInsertOverflow.cpp,matched,placed by masked whole-.text search of the compiled body - single hit
 ?rva000363102@LaserUpdate@@SA?AW4NameKeyType@@XZ,,0x00363102,69,Code/GameEngine/Source/GameLogic/Object/Update/LaserUpdatePoolKey.cpp,matched,
 ?scanBool@INI@@QAE_NPBD@Z,,0x0002D14A,101,Code/GameEngine/Source/Common/System/INI_scanBool.cpp,matched,
+?rva00036B89B@GiantBirdAIUpdate@@SA?AW4NameKeyType@@XZ,,0x0036B89B,69,Code/GameEngine/Source/GameLogic/Object/Update/GiantBirdAIUpdatePoolKey.cpp,matched,cached pool-name key; pool string GiantBirdAIUpdate; /O1 static-guard EH; nameToKey row
