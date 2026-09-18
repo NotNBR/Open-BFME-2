@@ -8747,3 +8747,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1BfmeNonRefSceneList@@UAE@XZ,,0x00141780,96,Code/Libraries/Source/WWVegas/WW3D2/BfmeNonRefSceneList_dtor.cpp,matched,
 ?drainChain@Rva006CEAD0@@QAEXXZ,,0x006CEAD0,57,Code/GameEngine/Source/Common/Thing/ModuleInfoNuggetChainDrain.cpp,matched,Opaque chain-drain: Nugget+0 member teardown via detach 0x6CD530 plus sized free 0x6DB270; AsciiString name already held by 5B row 0x48BA39
 ?Rva006CFDF0DecRef@@YAHPAH@Z,,0x006CFDF0,12,Code/GameEngine/Source/Common/Thing/Rva006CFDF0DecRef.cpp,matched,Refcount decrement leaf for the Nugget-chain blocks; anonymous predecrement (a named local anticipates eax and drops the trailing mov)
+?Rva006D1210Destroy@@YAXPAX@Z,,0x006D1210,32,Code/GameEngine/Source/Common/Thing/Rva006D1210Destroy.cpp,matched,Destroy helper: null-guarded release via 0x6D0F20 plus sized free (block 16) via 0x6DB270

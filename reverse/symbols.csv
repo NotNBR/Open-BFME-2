@@ -1987,3 +1987,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?lookup56@Rva00DFF024Registry@@QAEPAXHH@Z,0x002D2371,46B thiscall wrapper over lookup 0x2D225F; index minus-1 tries slot 5 then slot 6 else direct; sole caller is the winclass verb 0x31639C
 ?detach@Rva006CD530@@QAEXXZ,0x006CD530,opaque thiscall member (no args); called as mov ecx,esi + E8 from chain drain at 0x006CEAD0:0x6CEAEB; identity unproven
 ?freeBlock@Rva006DB270@@QAEXPAXH@Z,0x006DB270,opaque thiscall (block,size); called as mov ecx,[0xE176E8] + push 8 + push esi + E8 from 0x006CEAD0:0x6CEAF9; identity unproven
+?release@Rva006D0F20@@QAEXXZ,0x006D0F20,opaque thiscall member (no args); called as mov ecx,esi + E8 from destroy helper 0x006D1210:0x6D121B; identity unproven
