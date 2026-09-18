@@ -8489,3 +8489,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000363102@LaserUpdate@@SA?AW4NameKeyType@@XZ,,0x00363102,69,Code/GameEngine/Source/GameLogic/Object/Update/LaserUpdatePoolKey.cpp,matched,
 ?scanBool@INI@@QAE_NPBD@Z,,0x0002D14A,101,Code/GameEngine/Source/Common/System/INI_scanBool.cpp,matched,
 ?rva00036B89B@GiantBirdAIUpdate@@SA?AW4NameKeyType@@XZ,,0x0036B89B,69,Code/GameEngine/Source/GameLogic/Object/Update/GiantBirdAIUpdatePoolKey.cpp,matched,cached pool-name key; pool string GiantBirdAIUpdate; /O1 static-guard EH; nameToKey row
+?rva000373CCA@StealthUpdate@@SA?AW4NameKeyType@@XZ,,0x00373CCA,69,Code/GameEngine/Source/GameLogic/Object/Update/StealthUpdatePoolKey.cpp,matched,cached pool-name key; pool string StealthUpdate; /O1 static-guard EH; nameToKey row
