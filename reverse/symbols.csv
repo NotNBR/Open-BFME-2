@@ -1988,3 +1988,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?freeBlock@Rva006DB270@@QAEXPAXH@Z,0x006DB270,opaque thiscall (block,size); called as mov ecx,[0xE176E8] + push 8 + push esi + E8 from 0x006CEAD0:0x6CEAF9; identity unproven
 ?release@Rva006D0F20@@QAEXXZ,0x006D0F20,opaque thiscall member (no args); called as mov ecx,esi + E8 from destroy helper 0x006D1210:0x6D121B; identity unproven
 ?teardown@Rva006D0280@@QAEXXZ,0x006D0280,opaque thiscall member (no args); called as mov ecx,esi + E8 from release 0x006D0F20:0x6D0F35; identity unproven
+?teardown@Rva00688980@@QAEXXZ,0x00688980,called as 0-arg thiscall on the +0x18 member by Rva001D28F0Element dtor 0x689500 with the result freed via ??3 (explicit-teardown-plus-delete); body is SEH with a 0x6888D0 call plus conditional free plus two 0x36410 clears (dtor-shaped but vptr-less, so pinned as a method)
