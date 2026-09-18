@@ -104,7 +104,6 @@ int bfmeInitCodecJX(CodecState **p, int a, int b)
 	return 1;
 }
 
-// ?bfmeAllocJX@@YAPAUCodecState@@XZ present-unmatched
 CodecState *bfmeAllocJX()
 {
 	int cfg[14];

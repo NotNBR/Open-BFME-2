@@ -2371,7 +2371,6 @@ _bfmeLen1153,0x00006F30
 ?valid@W3DVideoBuffer@@UAE_NXZ,0x00655950
 ?Rva009A6EC0Release@@YAXPAPAX@Z,0x001B7930
 ?Rva009A8C30@@YAXPAVRva009A8C30Owner@@@Z,0x001B9680
-?bfmeAllocJX@@YAPAUCodecState@@XZ,0x001B56F0
 ?bfmeCheckJX@@YAHPAUCodecState@@@Z,0x001B9410
 ?bfmeMakeBZB@@YAPAXPAX@Z,0x001B6890
 ?bfmeMakeSubJX@@YAPAUBfmeSubJX@@XZ,0x001B7990
@@ -2933,6 +2932,7 @@ _lua_type,0x007470A0
 _lua_typename,0x007470D0
 ?resize@?$hashtable@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@VAsciiString@@U?$hash@VAsciiString@@@rts@@U?$_Select1st@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@@2@U?$equal_to@VAsciiString@@@5@V?$allocator@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@@2@@_STL@@QAEXI@Z,0x0016DD70
 ??$_Construct@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBVAsciiString@@PAVThingTemplate@@@0@ABU10@@Z,0x0016CC30
+?bfmeFreeOneJT@@YAXPAX@Z,0x001B6410,5B ILT thunk at this RVA jumps to matched bfmeTwoBZB body at 0x1B63A0; called from bfmeAllocJX at 0x1B56F0
 ?bfmeAskCFC@BfmeOuterCFC@@QAE_NXZ,0x004C0D4F
 ?bfmeUseFDE@BfmeThingFDE@@QAEXPAX@Z,0x004B9B99
 ?bfmeAlloc1039@@YAPAXH@Z,0x0002FDA0
