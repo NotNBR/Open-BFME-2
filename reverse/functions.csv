@@ -10320,3 +10320,4 @@ _math_log10,,0x007486A0,38,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 by
 __Locale_collate_create,,0x00022E00,242,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,BFME1 near-miss donor; b1 locale facets; immediate-only drift
 __Locale_monetary_create,,0x00022F00,509,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,BFME1 near-miss donor; b1 locale facets; immediate-only drift
 __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,BFME1 near-miss donor; b1 locale facets; immediate-only drift
+?apply@Rva00803620Sink@@QAEXHPADHH0@Z,,0x00674C00,330,Code/GameEngine/Source/GameNetwork/Y4FeslLanGameApply.cpp,matched,BFME1 near-miss donor; b1 0x00808CB0; immediate-only drift (single call); pins LanGame-ctor 0x6748B0 + FieldAddress-get 0x66D7D0

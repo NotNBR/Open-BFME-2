@@ -2949,3 +2949,5 @@ _lua_settagmethod,0x0074FE80
 ??0INIException@@QAA@HPBDZZ,0x0002F681,variadic INIException ctor spelling of the matched _rva002f681_fill body; coexists with that opaque pin per 0x120F0 triple-name precedent
 ___GetLCIDFromName,0x000221B0,File-static locale resolver in stlport_LocaleFacets.cpp; retail prologue parses lname into stack buffers (362B); called by numeric/monetary/collate create bodies
 ?squash@Rva0084E030Buffer@@QAEXXZ,0x00021290,Frameless digit-squash loop called from numeric/monetary create buf sites
+??0Rva00808920LanGame@@QAE@H@Z,0x006748B0
+?get@Rva007EA650FieldAddress@@QAEPADXZ,0x0066D7D0
