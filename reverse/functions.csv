@@ -10175,3 +10175,10 @@ _call_arith,,0x0074E9A0,42,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-id
 ?bfmeGoBJA@BfmeThingBJA@@QAEXXZ,,0x0025697F,23,Code/GameEngine/Source/Common/BfmeConv468.cpp,matched,BFME1 byte-identical donor; b1 0x00128760
 ?rva009C72C0BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D7BC0,95,Code/GameEngine/Source/Common/Rva009C72C0BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C72C0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ?rva009C7320BinkSse@@YAXPBXPAXHHHH0@Z,,0x001D7C20,93,Code/GameEngine/Source/Common/Rva009C7320BinkSse.cpp,matched,BFME1 byte-identical donor; b1 0x009C7320; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+?bfmeGoTA@BfmeThingTA@@QAEXXZ,,0x00016B60,36,Code/GameEngine/Source/Common/BfmeConv909.cpp,matched,BFME1 donor subset without undeclared sibling defs; b1 0x00840780
+?bfmeGoBJB@BfmeThingBJB@@QAEXXZ,,0x00256A1C,23,Code/GameEngine/Source/Common/BfmeConv472.cpp,matched,BFME1 byte-identical donor; b1 0x00128860
+_checktag,,0x0074FC40,25,Code/Libraries/Source/Lua/ltm.c,matched,BFME1 byte-identical donor; b1 0x00998AE0; vendored=lua-4.0.1; 1 DIR32 string literal(s) agree
+_luaH_new,,0x00750770,87,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor; b1 0x00999610; vendored=lua-4.0.1
+_luaH_free,,0x007507D0,60,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor; b1 0x00999670; vendored=lua-4.0.1
+??0ShroudManagerImpl008FBA40@@QAE@XZ,,0x0073E310,214,Code/GameEngine/Source/Common/RTS/ShroudManagerImpl008FBA40CtorDrain.cpp,matched,BFME1 byte-identical donor in distinct TU; b1 0x008FB960
+?drainPending@ShroudManagerImpl008FBA40@@QAEXXZ,,0x0073D7D0,54,Code/GameEngine/Source/Common/RTS/ShroudManagerImpl008FBA40CtorDrain.cpp,matched,BFME1 byte-identical donor in distinct TU; b1 0x008FAFD0
