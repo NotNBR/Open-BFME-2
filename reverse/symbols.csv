@@ -2015,3 +2015,7 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?Peek_Texture@MaterialInfoClass@@QAE?AV?$RefCountPtr@VTextureClass@@@@H@Z,0x00135F35,BFME2 texture-owning rewrite of BFME1 Peek_Texture: returns RefCountPtr by value via hidden retptr (copy into out plus Add_Ref through 0x424BB then returns out); called with (src index out) from MaterialRemapperClass ctor Src and Dest fills plus 2 sibling sites 0x136D8A and 0x14B83A
 ?_bfme_debugReportingEnabled@@YA_NXZ,0x000387C0,BFME1-attested name for the matched placeholder row; Debug singleton flag check gating the GameLODManager report path; resolves getAudioLODIndex at 0x202C76
 ??1PointGroupClass@@UAE@XZ,0x00178ED0
+?Rva001207B0Init@@YAXPAX@Z,0x001207B0,first call in Do_Onetime_Device_Dependent_Inits with the device global; recreates the 0x2E4 caps object at [0xDEDA7C] via operator new plus ctor 0x12C670 (BFME1 ComputeCaps position; body differs)
+??0DX8MeshRendererClass@@QAE@XZ,0x00145AA0,BFME2 DX8MeshRendererClass ctor; 0x4C operator-new site in Do_Onetime with Init following (BFME1 m_body 0x4C parallel); frameless body installs vtables 0xBD34FC/0xBD34E4/0xBD34E8 with list self-links
+?getStaticGameLODIndex@GameLODManager@@QAEHVAsciiString@@@Z,0x00202C30,BFME1-attested by-value AsciiString lookup; 5-entry table; resolves parseStaticGameLODDefinition at 0x202F05
+??1LineGroupClass@@UAE@XZ,0x001B3510
