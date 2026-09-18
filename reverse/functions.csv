@@ -8378,3 +8378,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B91AB@ExperienceLevelCreate@@SA?AW4NameKeyType@@XZ,,0x004B91AB,69,Code/GameEngine/Source/Common/System/ExperienceLevelCreatePoolKey.cpp,matched,
 ?rva0004BAB55@ReflectDamage@@SA?AW4NameKeyType@@XZ,,0x004BAB55,69,Code/GameEngine/Source/GameLogic/Object/Die/ReflectDamagePoolKey.cpp,matched,
 ?rva0004BB0EB@HordeTransportContainDamage@@SA?AW4NameKeyType@@XZ,,0x004BB0EB,69,Code/GameEngine/Source/GameLogic/Object/Die/HordeTransportContainDamagePoolKey.cpp,matched,
+?rva0004BB470@CallHelpOnDamage@@SA?AW4NameKeyType@@XZ,,0x004BB470,69,Code/GameEngine/Source/GameLogic/Object/Die/CallHelpOnDamagePoolKey.cpp,matched,
