@@ -10186,3 +10186,6 @@ _luaH_free,,0x007507D0,60,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-
 ?onConnectionBroken@FeslConnectionHandler@@QAEXXZ,,0x00665710,37,Code/GameEngine/Source/Common/BfmeConv1296.cpp,matched,BFME1 byte-identical donor; b1 0x007F9170; string-anchored
 ?bfmeGoDEA@@YAIPAVBfmeThingDEA@@@Z,,0x00323D9D,23,Code/GameEngine/Source/Common/BfmeConv671.cpp,matched,BFME1 byte-identical donor; b1 0x004B6930
 ?Rva009B4880PredictValue@@YAXPAURva009B4880State@@HPAFPBURva009B4880Neighbor@@2@Z,,0x001C5180,126,Code/GameEngine/Source/Common/BfmeVp6PredictValue.cpp,matched,BFME1 byte-identical donor; b1 0x009B4880
+?Rva007FC170@@YGXPAVRva007E8810Message@@PBD111@Z,,0x00668670,146,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FC170; 5 DIR32 string literal(s) agree
+?Rva007FB390@@YGXPAVRva007E8810Message@@PBD11_N@Z,,0x006678A0,120,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FB390; 4 DIR32 string literal(s) agree
+?Rva007FB9F0@@YGXPAVRva007E8810Message@@PBD_N@Z,,0x00667F00,91,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FB9F0; 3 DIR32 string literal(s) agree
