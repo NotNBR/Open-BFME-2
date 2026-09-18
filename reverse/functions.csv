@@ -8984,3 +8984,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva0026FF33DwordField@@QBEHXZ,,0x0026FF33,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva0026FF3ADwordField@@QBEHXZ,,0x0026FF3A,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva0026FF41DwordField@@QBEHXZ,,0x0026FF41,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva0026FF48DwordField@@QBEHXZ,,0x0026FF48,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
