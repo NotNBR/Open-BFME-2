@@ -9292,3 +9292,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0020488E@Rva002048xxHolder@@QAEHH@Z,,0x0020488E,20,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_indexedTable.cpp,matched,20B-stride table indexer returning slot+0x10 dword plus 4; opaque holder
 ?set@Rva0008BD13ByteSlot@@QAEXE@Z,,0x0008BD13,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0008EFAAByteSlot@@QAEXE@Z,,0x0008EFAA,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?set@Rva000B2392ByteSlot@@QAEXE@Z,,0x000B2392,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
