@@ -2934,3 +2934,4 @@ _lua_type,0x007470A0
 _lua_typename,0x007470D0
 ?resize@?$hashtable@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@VAsciiString@@U?$hash@VAsciiString@@@rts@@U?$_Select1st@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@@2@U?$equal_to@VAsciiString@@@5@V?$allocator@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@@2@@_STL@@QAEXI@Z,0x0016DD70
 ??$_Construct@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBVAsciiString@@PAVThingTemplate@@@0@ABU10@@Z,0x0016CC30
+?bfmeAskCFC@BfmeOuterCFC@@QAE_NXZ,0x004C0D4F
