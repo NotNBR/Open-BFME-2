@@ -1865,7 +1865,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??1Rva003FCE38@@UAE@XZ,0x003FCE38,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x5C4B1B (plus 3 SEH base-callers); identity unproven, address-derived name
 ??1Rva001E3624@@UAE@XZ,0x001E3624,opaque dtor (push esi/mov esi,ecx head, vptr 0xBDDC48); tail-called by single-inheritance dtor at 0x3FA776; identity unproven, address-derived name
 ??1Rva005C3F02@@UAE@XZ,0x005C3F02,opaque this-adjust dtor (14B: vptr + add ecx,4 + tail-jmp 0x5C3EE8; deferred lane); called by scalar-deleting-dtor at 0x5C3F10; identity unproven, address-derived name
-??1Rva005CB8D4@@UAE@XZ,0x005CB8D4,opaque this-adjust dtor (14B: vptr + add ecx,4 + tail-jmp 0x5CB892; deferred lane); called by scalar-deleting-dtor at 0x5CB8E2; identity unproven, address-derived name
 ??1Rva004E32F2@@UAE@XZ,0x004E32F2,opaque this-adjust dtor (14B: vptr + add ecx,0xC + tail-jmp 0x2B80CE; deferred lane); called by scalar-deleting-dtor at 0x4E37B3; identity unproven, address-derived name
 ??1Rva002CEC0A@@UAE@XZ,0x002CEC0A,opaque this-adjust dtor (14B: vptr + add ecx,4 + tail-jmp 0x2CC70; deferred lane); called by scalar-deleting-dtor at 0x2CEC18; identity unproven, address-derived name
 ??1Rva0061ED80@@UAE@XZ,0x0061ED80,opaque vector-destroying dtor (17B: member+0xC via ehvec 0x42FD80 + vptr); tail-called by single-inheritance dtor at 0x180EA0; identity unproven, address-derived name
@@ -2001,3 +2000,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?clear@Rva005FC1CA@@QAEXXZ,0x005FC1CA,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x5FC1E4; exact method unproven
 ?clear@Rva0060006A@@QAEXXZ,0x0060006A,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x600084; exact method unproven
 ?clear@Rva005C7CA1@@QAEXXZ,0x005C7CA1,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x5C7CBB; exact method unproven
+?clear@Rva005CB892@@QAEXXZ,0x005CB892,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x5CB8D4; exact method unproven
