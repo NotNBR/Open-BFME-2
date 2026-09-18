@@ -9533,3 +9533,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?getRemainingAmmo@Weapon@@QBEI_N@Z,,0x002CC578,105,Code/GameEngine/Source/GameLogic/Object/Weapon_getRemainingAmmo.cpp,matched,BFME1 Weapon_getRemainingAmmo.cpp port; ammo descriptor at +0x120 provider at +0x250; provider virtual slot 0x114
 ?isAmmoReady@Weapon@@QBE_NXZ,,0x002CC3FF,35,Code/GameEngine/Source/GameLogic/Object/Weapon_getRemainingAmmo.cpp,matched,Owner ammo-availability gate adjacent to computeStatus; Object 0x28AF65 helper pinned opaque
 ?rva0028AF65@Object@@QBE_NXZ,,0x0028AF65,17,Code/GameEngine/Source/GameLogic/Object/Object_Rva0028AF65.cpp,matched,Object ammo gate for Weapon isAmmoReady; advances this by 0x330 and null-checks callee dword; callee stays pinned
+?get@Rva00085516FloatField@@QBEMXZ,,0x00085516,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter
