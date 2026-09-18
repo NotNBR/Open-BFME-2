@@ -9821,3 +9821,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ??0Rva00802680Owner@@QAE@XZ,,0x0066E880,51,Code/GameEngine/Source/GameNetwork/Rva00802640FeslCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00802640
 ?set@Rva007F4980@@QAEXPAXH@Z,,0x00661430,51,Code/GameEngine/Source/GameNetwork/Rva007F4980Slot.cpp,matched,BFME1 byte-identical donor; b1 0x007F4980
 ??0Rva00161220@@QAE@XZ,,0x004EF5CE,50,Code/GameEngine/Source/Common/Rva00161220Ctor.cpp,matched,BFME1 donor with vtable-literal repair; b1 0x00161220
+?fillBytes@@YAPAXPAXHI@Z,,0x001B6420,49,Code/GameEngine/Source/Common/SmallGaps/fillBytes.cpp,matched,BFME1 byte-identical donor; b1 0x009A5990
