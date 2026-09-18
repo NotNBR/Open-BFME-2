@@ -2955,3 +2955,4 @@ ___GetLCIDFromName,0x000221B0,File-static locale resolver in stlport_LocaleFacet
 ?bfmeBaseTC@BfmeThingTC@@QAEXXZ,0x0031454D
 ?bfmeDoBNH@@YAXPAVBfmeThingBNH@@PAXHH@Z,0x00132D89,BFME1-attested free helper called from BfmeThingBNH::bfmeGoBNH; same call slot as BFME2LoadParticleTexture pin (texture-loader family)
 ?isAnyKindOf@Thing@@QBE_NABV?$BitFlags@$0EF@@@@Z,0x0030ADC7
+??0Rva0033CopyBase@@QAE@ABV0@@Z,0x0020492B
