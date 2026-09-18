@@ -20,9 +20,15 @@ public:
 	char m_pad[0xC];
 	Rva002048x0Elem *m_items;
 	int rva0020487E(int index);
+	int rva0020488E(int index);
 };
 
 int Rva002048xxHolder::rva0020487E(int index)
 {
 	return m_items[index].m_first;
+}
+
+int Rva002048xxHolder::rva0020488E(int index)
+{
+	return m_items[index].m_field10 + 4;
 }
