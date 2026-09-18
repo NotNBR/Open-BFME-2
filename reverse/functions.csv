@@ -8389,3 +8389,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004C23D4@InvisibilitySpecialPower@@SA?AW4NameKeyType@@XZ,,0x004C23D4,69,Code/GameEngine/Source/GameLogic/Object/SpecialPower/InvisibilitySpecialPowerPoolKey.cpp,matched,
 ?rva0004C2BC1@LevelGrantSpecialPower@@SA?AW4NameKeyType@@XZ,,0x004C2BC1,69,Code/GameEngine/Source/GameLogic/Object/SpecialPower/LevelGrantSpecialPowerPoolKey.cpp,matched,
 ?rva0004C2F25@ProductionSpeedBonus@@SA?AW4NameKeyType@@XZ,,0x004C2F25,69,Code/GameEngine/Source/GameLogic/Object/SpecialPower/ProductionSpeedBonusPoolKey.cpp,matched,
+?rva0004C3147@OCLSpecialPower@@SA?AW4NameKeyType@@XZ,,0x004C3147,69,Code/GameEngine/Source/GameLogic/Object/SpecialPower/OCLSpecialPowerPoolKey.cpp,matched,
