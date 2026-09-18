@@ -9338,3 +9338,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1BfmeParticleSystemHandle@@QAE@XZ,,0x0004CBC0,55,Code/GameEngine/Source/GameClient/System/ParticleSystemHandle_dtor.cpp,matched,Intrusive unlink port of BFME1 ListClear idiom; head at plus0x9C-A0; pin pre-existed
 ?lowerBound@VersionBlockParser@@SAPBXPBX0PBQBD0H@Z,,0x00427D0E,83,Code/GameEngine/Source/Common/VersionBlockSearch.cpp,matched,
 ?upperBound@VersionBlockParser@@SAPBXPBX0PBQBD0H@Z,,0x00427D61,83,Code/GameEngine/Source/Common/VersionBlockSearch.cpp,matched,
+??1Rva005F38CA@@UAE@XZ,,0x005F38CA,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x5F35D3
