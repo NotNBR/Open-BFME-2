@@ -9976,3 +9976,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeFwdVMN@BfmeStrVMN@@QAEXHHHH@Z,,0x0002B4A0,57,Code/GameEngine/Source/Common/BfmeConv1434.cpp,matched,BFME1 byte-identical donor; b1 0x00831930
 ?bfmeFwdVMP@BfmeStrVMP@@QAEXHHHH@Z,,0x0002B9D0,60,Code/GameEngine/Source/Common/BfmeConv1437.cpp,matched,BFME1 byte-identical donor; b1 0x00831E60
 ?connect@Rva008006C0Owner@@QAEHPBD0H@Z,,0x0066CAD0,178,Code/GameEngine/Source/GameNetwork/Y2FeslDemanglerConnect.cpp,matched,BFME1 byte-identical donor; b1 0x008006C0; 2 DIR32 string literals agree
+?rva007F95A0@Rva007FA2C0@@QAEXPAURva007FA170Slot@@I@Z,,0x00665B30,46,Code/GameEngine/Source/GameNetwork/FeslTransactor_timeoutStamp_rva007F95A0.cpp,matched,BFME1 byte-identical donor; b1 0x007F95A0
