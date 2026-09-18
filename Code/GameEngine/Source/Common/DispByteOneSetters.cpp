@@ -569,3 +569,17 @@ void Rva0029AB03ByteZeroSetter::disable()
 {
 	m_enabled = 0;
 }
+
+class Rva0036859FByteZeroSetter
+{
+public:
+	void disable();
+
+	char m_lead[0x558];
+	unsigned char m_enabled;
+};
+
+void Rva0036859FByteZeroSetter::disable()
+{
+	m_enabled = 0;
+}
