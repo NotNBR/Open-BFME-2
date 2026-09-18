@@ -9925,3 +9925,9 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?Rva007FB810@@YGXPAVRva007E8810Message@@PBDH@Z,,0x00667D20,121,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests2.cpp,matched,BFME1 byte-identical donor; b1 0x007FB810; 4 DIR32 string literal(s) agree
 ??0Rva007FBC60Game@@QAE@PAVRva007E8810Message@@@Z,,0x00668160,518,Code/GameEngine/Source/GameNetwork/Y4FeslGameDetailRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007FBC60; 3 DIR32 string literal(s) agree
 ??0Rva007FC020Ticket@@QAE@PAVRva007E8810Message@@@Z,,0x00668520,240,Code/GameEngine/Source/GameNetwork/Y4FeslGameDetailRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007FC020; 7 DIR32 string literal(s) agree
+?Rva007FBA70@@YGXPAVRva007E8810Message@@PAXH@Z,,0x00667F80,44,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FBA70
+?Rva007FAF90@@YGXPAVRva007E8810Message@@@Z,,0x006674A0,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FAF90
+?Rva007FBA50@@YGXPAVRva007E8810Message@@@Z,,0x00667F60,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FBA50
+?Rva007FC270@@YGXPAVRva007E8810Message@@@Z,,0x00668770,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FC270
+?Rva007FCC80@@YGXPAVRva007E8810Message@@@Z,,0x00669180,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCC80
+?Rva007FCCA0@@YGXPAVRva007E8810Message@@@Z,,0x006691A0,30,Code/GameEngine/Source/GameNetwork/Y4FeslSimpleRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCCA0
