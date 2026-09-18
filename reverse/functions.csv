@@ -10312,3 +10312,4 @@ _math_log10,,0x007486A0,38,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 by
 ?d_00889720@Rva00889720Class@@QAE_NXZ,,0x000387F0,54,Code/GameEngine/Source/Common/Bfme/Rva00889720.cpp,matched,BFME1 donor with import repair
 ?bfmeAllocJX@@YAPAUCodecState@@XZ,,0x001B56F0,216,Code/GameEngine/Source/Common/BfmeConv2080.cpp,matched,unclaimed_scan exact of TU-emitted body; FreeOneJT thunk pin
 ?Rva009A6DF0InitializeBuffers@@YAHPAURva009A6DA0Buffer@@@Z,,0x001B7860,206,Code/GameEngine/Source/Common/Rva009A6DA0ReleaseBuffers.cpp,matched,unclaimed_scan exact of TU-emitted body; ReleaseBuffers pin
+?bfmeFreeJT@@YAXPAVBfmeThingJT@@@Z,,0x001B5530,166,Code/GameEngine/Source/Common/BfmeConv2079.cpp,matched,unclaimed_scan exact of TU-emitted body
