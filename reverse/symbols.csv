@@ -2947,3 +2947,5 @@ _lua_settagmethod,0x0074FE80
 ?getFilename@INI@@QBE?AVAsciiString@@XZ,0x0002C005,hidden-retptr AsciiString getter over INI m_filename +0x10; sole callee shape at both parseSubtitle %s/title sites; BFME1 donor getFilename
 ?getLineNum@INI@@QBEHXZ,0x0002BBED,BFME1-donor-attested INI line getter; retail forwards via helper; single call site in parseSubtitle throw block
 ??0INIException@@QAA@HPBDZZ,0x0002F681,variadic INIException ctor spelling of the matched _rva002f681_fill body; coexists with that opaque pin per 0x120F0 triple-name precedent
+___GetLCIDFromName,0x000221B0,File-static locale resolver in stlport_LocaleFacets.cpp; retail prologue parses lname into stack buffers (362B); called by numeric/monetary/collate create bodies
+?squash@Rva0084E030Buffer@@QAEXXZ,0x00021290,Frameless digit-squash loop called from numeric/monetary create buf sites
