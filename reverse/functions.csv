@@ -9254,3 +9254,7 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?disable@Rva0033F979ByteZeroSetter@@QAEXXZ,,0x0033F979,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte zero-setter
 ?disable@Rva0041FDDEByteZeroSetter@@QAEXXZ,,0x0041FDDE,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte zero-setter
 ?enable@Rva0041FDE6ByteOneSetter@@QAEXXZ,,0x0041FDE6,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte one-setter
+?Rva002E42AFDispatch@OptionPreferences@@QAEHH@Z,,0x002E42AF,35,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_enumDispatch.cpp,matched,slot-0x1C enum dispatch over 12B-entry table 0xDBD120 with zero default; /G7 for imul stride; opaque identity
+?Rva002E42EEForward@OptionPreferences@@QAEHXZ,,0x002E42EE,7,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_enumDispatch.cpp,matched,forwarder passing row 0 to the enum dispatcher; opaque identity
+?Rva002E42F6Forward@OptionPreferences@@QAEHXZ,,0x002E42F6,7,Code/GameEngine/Source/GameClient/GUI/GUICallbacks/Menus/OptionPreferences_enumDispatch.cpp,matched,forwarder passing row 1 to the enum dispatcher; opaque identity
+??_GRva002E4272@@UAEPAXI@Z,,0x002E42D2,28,Code/GameEngine/Source/Common/Rva002E4272DeletingDestructor.cpp,matched,scalar-deleting dtor for the opaque Rva002E4272 class; complete dtor rowed at 0x2E4272; noinline keeps the local dtor out of line
