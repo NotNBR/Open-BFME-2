@@ -10322,3 +10322,4 @@ __Locale_monetary_create,,0x00022F00,509,Code/Libraries/Source/WWVegas/WWLib/stl
 __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleFacets.cpp,matched,BFME1 near-miss donor; b1 locale facets; immediate-only drift
 ?apply@Rva00803620Sink@@QAEXHPADHH0@Z,,0x00674C00,330,Code/GameEngine/Source/GameNetwork/Y4FeslLanGameApply.cpp,matched,BFME1 near-miss donor; b1 0x00808CB0; immediate-only drift (single call); pins LanGame-ctor 0x6748B0 + FieldAddress-get 0x66D7D0
 ?setup@Rva007F6A80Host@@QAEXXZ,,0x00663210,46,Code/GameEngine/Source/GameNetwork/Rva007F6A80Setup.cpp,matched,BFME1 byte-identical donor; b1 0x007F6A80; ICF-folded in BFME1 so the name is this sweep single pick
+?next@Rva007F05A0BlobCursor@@QAE_NPAVRva007F0CB0BlobRecord@@@Z,,0x0065D3A0,865,Code/GameEngine/Source/GameNetwork/Rva007F05A0BlobCursor.cpp,matched,BFME1 near-miss donor; b1 0x007F05A0; immediate-only drift (2 literal pushes)
