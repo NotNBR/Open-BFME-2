@@ -2008,3 +2008,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?isValid@ObjectFilter@@QBE_NXZ,0x00360CED,ammo-descriptor validity over the ScienceInfo vector; BFME1 Weapon_getRemainingAmmo.cpp uses the same ObjectFilter isValid call shape
 ?isAmmoReady@Weapon@@QBE_NXZ,0x002CC3FF,owner-has-usable-ammo gate for the empty-clip READY path; true name unproven (BFME1 attempt used bfmeAmmoReady)
 ?rva0028AF65@Object@@QBE_NXZ,0x0028AF65,Object ammo-availability gate called by Weapon isAmmoReady; true name unproven; body adds 0x330 then checks dword at +0x24
+?get@Rva00091A56@@QBEHXZ,0x00091A56,4-byte pointer fetch at +0x24 used by Object rva0028AF65 ammo gate; true owner unproven
