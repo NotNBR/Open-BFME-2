@@ -10335,3 +10335,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?bfmeCopyMmx@@YAXPAXHH@Z,,0x001D26E0,31,Code/GameEngine/Source/Common/Bfme5ThirtySix.cpp,matched,BFME1 byte-identical donor; b1 0x009C1DE0
 ?bfmeAverageMmx@@YAXPAXHH@Z,,0x001D2680,86,Code/GameEngine/Source/Common/Bfme5ThirtySix.cpp,matched,BFME1 byte-identical donor; b1 0x009C1D80
 ?set@Rva004733E0@@QAEPAV1@PBV1@@Z,,0x0030BF66,26,Code/GameEngine/Source/Common/Rva004733E0Set.cpp,matched,BFME1 byte-identical donor b1 0x004733E0; single pick and 4B0280 twin stays unclaimed
+?bfmeExpandMmx@@YAXPBXHPAX@Z,,0x001D2700,193,Code/GameEngine/Source/Common/Bfme5ThirtySix.cpp,matched,BFME1 byte-identical donor; b1 0x009C1E00
