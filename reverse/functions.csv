@@ -10251,3 +10251,4 @@ _Rva0088E1A0ShowAssertCrashDialog,,0x0003D880,410,Code/Libraries/Source/WWVegas/
 ??1BfmeHolderBY@@QAE@XZ,,0x0015DC40,90,Code/GameEngine/Source/Common/BfmeHolderDtorBY.cpp,matched,BFME1 near-miss donor; b1 0x0092A3D0; pad 0x74 to 0x78 per retail add esi imm
 ??1Rva008A2C80@@UAE@XZ,,0x006E5FF0,106,Code/GameEngine/Source/Common/Rva008A2C80RefDrop.cpp,matched,BFME1 byte-identical donor; b1 0x008A2C80; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ??1Gen_uw_00893e70@@QAE@XZ,,0x006CE570,97,Code/GameEngine/Source/Common/Rva00893E70ContainerDestructor.cpp,matched,BFME1 byte-identical donor; b1 0x00893E70; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+?remove@Gen009F5040@@QAEXPAUGen009F5040Node@@@Z,,0x00627570,134,Code/GameEngine/Source/Common/Gen009F5040Handle.cpp,matched,BFME1 near-miss donor; b1 0x009F4E40; immediate-only drift mask member +0x11C not +0xEC
