@@ -2981,3 +2981,5 @@ _bfmeFreeAYX@4,0x0065477E
 _bfmeFreeBYX@4,0x0065478A
 ?setTimeOfDay@W3DGameClientWaterShim@@QAEXW4TimeOfDay@@@Z,0x0007E18D
 ?setTimeOfDay@W3DGameClientShadowShim@@QAEXW4TimeOfDay@@@Z,0x0009A64D
+?bfmeGet@Gen_009292E0@@QBE?AVBfmeHandleCX@@HH@Z,0x0015A180
+?bfmeGetAUZA@BfmeSubAUZA@@QBE?AUBfmeHandleUZA@@HH@Z,0x0015A180
