@@ -8435,3 +8435,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004619AD@FakePathfindPortalBehaviour@@SA?AW4NameKeyType@@XZ,,0x004619AD,69,Code/GameEngine/Source/GameLogic/Object/Behavior/FakePathfindPortalBehaviourPoolKey.cpp,matched,
 ?rva00047C03A@SiegeEngineContain@@SA?AW4NameKeyType@@XZ,,0x0047C03A,69,Code/GameEngine/Source/GameLogic/Object/Contain/SiegeEngineContainPoolKey.cpp,matched,
 ?read_Rva00189B50@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x00189B50,260,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTexcoords.cpp,matched,
+?Has_UV@MeshMatDescClass@@QAE_NHH@Z,,0x00187F50,26,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTexcoords.cpp,matched,Placed out-of-line copy of the TU inline Has_UV via place_bodies. UVSource at +0x30. Leaf.
