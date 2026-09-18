@@ -143,11 +143,29 @@ functions the sweep never placed, and `find_declared_unmatched` refuses a source
 definition the ledger lacks. Wave 1 found all three by landing into them; the tiers agreed with
 31 of 31 of that wave's files.
 
-Its scope is byte-exact transfers only, and that is narrower than it sounds. The
-BFME1-verbatim rows already in this ledger — `getBrightness` (0x002E4A47), `hasGotOnline`,
+`bfme1_sweep.py near` serves the donors that *almost* match: the same function either side
+of a BFME 1 -> BFME 2 change, where the difference is the agent's work. A candidate has to
+clear every one of: at least 90% of the bytes outside the relocation slots BOTH images accept,
+an unclaimed address, and positive boundary evidence (a Ghidra start, or a preceding `int3`
+run). An address interior to a known function is refused outright. Only `immediate-only` and
+`imm+reg` are queued; `register-swap` is the MSVC-regalloc wall `drift_classify.py` documents,
+and `structural` is reconstruction rather than a copy and a tweak. A near candidate is an
+unverified identity claim, which is why it never enters `ranked` -- that queue's worth is the
+promise "copy it and it byte-matches" -- and why `land` refuses one. Nothing is claimed until
+`add_match` byte-verifies it, so a wrong candidate costs a look and never a bad match.
+
+Score a near miss only against the relocation fields the two images BOTH accept. The DIR32
+pass claims any four-byte window addressing the image, and some straddle an opcode:
+`add ecx,0x120` is `81 C1 20 01 00 00`, whose window at the modrm byte reads `0x0120C181`.
+Mask that and the body scores 100% against `add ecx,0x17c` -- a struct field that moved, which
+is precisely what the tier exists to surface.
+
+Both tiers still work by placing donor BYTES in game.dat, and that is narrower than it
+sounds even with the near tier. The BFME1-verbatim rows already in this ledger — `getBrightness` (0x002E4A47), `hasGotOnline`,
 `getRemainingAmmo` — are *source*-verbatim and byte-**divergent**: BFME 1's bodies are three
 to six bytes longer and only 15–31 of ~90–105 bytes agree. No binary comparison can reach
-them; they need a compile-based sweep like `zh_sweep.py`. Do not re-derive this.
+them -- not even as near misses, because the needle they are searched by never matches.
+They need a compile-based sweep like `zh_sweep.py`. Do not re-derive this.
 
 Neither image has a `.reloc` directory, so the sweep derives relocation slots from the
 instruction stream and forgives a difference only where both images independently place the

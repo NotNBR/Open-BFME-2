@@ -401,3 +401,231 @@ def test_remove_rows_drops_only_the_named_source(tmp_path, monkeypatch):
     text = ledger.read_bytes().decode()
     assert "?b@@YAXXZ" in text and "?a@@YAXXZ" not in text and "?c@@YAXXZ" not in text
     assert b"\r" not in ledger.read_bytes(), "must keep canonical LF"
+
+
+# ---- the donor's walk is authoritative about WHERE fields are
+
+# A body whose DIR32 the TARGET's own forward walk never claims, because a
+# differing field value made an earlier four-byte window read as an address and
+# that window was claimed first. This is the LocaleCodePageQueries.c shape: one
+# slot holding KERNEL32!GetLocaleInfoA on the donor side and the very same
+# import on the target side, refused at 96-98% because the two walks disagreed
+# about the offset. Requiring both sides to agree is what made that a near miss
+# instead of the exact match it is.
+WIDE_IMAGE = 0x1000000
+_PREFIX = b"\x90\x90\x90\x90\xB8"          # nops then `mov eax, <dir32>`
+_TAIL = b"\x33\xC0\xC3" + b"\x90" * 8
+DIVERGENT_DONOR = _PREFIX + bytes([0x01, 0x10, 0x40, 0x00]) + _TAIL   # 0x00401001
+DIVERGENT_TARGET = _PREFIX + bytes([0x01, 0x50, 0x00, 0x01]) + _TAIL  # 0x01005001
+
+
+def wide_images(tmp_path):
+    donor = tmp_path / "a.exe"
+    donor.write_bytes(make_pe(DIVERGENT_DONOR.ljust(0x200, b"\xCC"), image_size=WIDE_IMAGE))
+    target = tmp_path / "b.exe"
+    target.write_bytes(make_pe(DIVERGENT_TARGET.ljust(0x200, b"\xCC"), image_size=WIDE_IMAGE))
+    return bfme1_sweep.Image(donor), bfme1_sweep.Image(target)
+
+
+def test_the_two_walks_really_do_disagree(tmp_path):
+    """Guards the fixture: if this stops holding the next test proves nothing."""
+    donor, target = wide_images(tmp_path)
+    size = len(DIVERGENT_DONOR)
+    assert bfme1_sweep.volatile_fields(donor.text[:size], donor) == {5: "dir32"}
+    assert bfme1_sweep.volatile_fields(target.text[:size], target) == {4: "dir32"}
+
+
+def test_explain_forgives_a_dir32_the_target_walk_did_not_claim(tmp_path):
+    donor, target = wide_images(tmp_path)
+    size = len(DIVERGENT_DONOR)
+    unexplained, dir32, _ = bfme1_sweep.explain(
+        *donor_side(donor, size), target.text[:size], TEXT_RVA, TEXT_RVA, donor, target)
+    assert unexplained == 0, "a DIR32 addressing both images is a relocation, not a difference"
+    assert [slot for slot, _, _ in dir32] == [5]
+    assert dir32[0][1] == 0x00401001 and dir32[0][2] == 0x01005001
+
+
+def test_relaxation_does_not_forgive_a_value_outside_the_target_image(tmp_path):
+    """The donor still decides where a field is; the target still has to hold
+    something relocation-shaped there, or the bytes are ordinary code."""
+    donor, _ = wide_images(tmp_path)
+    stray = _PREFIX + bytes([0x01, 0x50, 0x00, 0x7F]) + _TAIL      # 0x7F005001: no image
+    path = tmp_path / "c.exe"
+    path.write_bytes(make_pe(stray.ljust(0x200, b"\xCC"), image_size=WIDE_IMAGE))
+    target = bfme1_sweep.Image(path)
+    size = len(DIVERGENT_DONOR)
+    unexplained, dir32, _ = bfme1_sweep.explain(
+        *donor_side(donor, size), target.text[:size], TEXT_RVA, TEXT_RVA, donor, target)
+    assert dir32 == []
+    assert unexplained > 0
+
+
+# ---- import-name pre-flight
+
+def import_donor(tmp_path, monkeypatch, declaration):
+    src = "Code/GameEngine/Source/Common/X.cpp"
+    donor_tree(tmp_path, monkeypatch, {src: declaration})
+    return src
+
+
+def entry(name):
+    from pe_imports import ImportEntry
+    return ImportEntry("msvcr71.dll", name, None)
+
+
+ALIASED = ('extern "C" __declspec(dllimport) void *__cdecl '
+           't2_block_copy(void *dst, const void *src, unsigned int n);\n')
+
+
+def test_import_alias_is_flagged_when_the_donor_invents_a_name(tmp_path, monkeypatch):
+    """verify_import_refs reads the import at the slot the RETAIL body reaches
+    and demands the source's COFF name match it, so an invented name can never
+    be pinned -- it has to be renamed. Byte comparison cannot see this: each
+    image holds a valid DIR32 into its own IAT."""
+    src = import_donor(tmp_path, monkeypatch, ALIASED)
+    note = bfme1_sweep.import_alias_note(src, [entry("memmove")])
+    assert note and "t2_block_copy" in note and "memmove" in note
+    assert "no pin can fix this" in note
+
+
+def test_import_alias_is_silent_when_the_declaration_matches(tmp_path, monkeypatch):
+    src = import_donor(tmp_path, monkeypatch, ALIASED)
+    assert bfme1_sweep.import_alias_note(src, [entry("t2_block_copy")]) is None
+
+
+def test_import_alias_accepts_the_underscore_spelling(tmp_path, monkeypatch):
+    """An import library may publish the decorated or the undecorated name;
+    coff_import_names is what arbitrates, so both must pass."""
+    src = import_donor(tmp_path, monkeypatch,
+                       'extern "C" __declspec(dllimport) void *__cdecl memmove(void *, const void *, unsigned);\n')
+    assert bfme1_sweep.import_alias_note(src, [entry("memmove")]) is None
+
+
+def test_import_alias_is_silent_without_a_dllimport_or_without_imports(tmp_path, monkeypatch):
+    plain = import_donor(tmp_path, monkeypatch, "int f() { return 1; }\n")
+    assert bfme1_sweep.import_alias_note(plain, [entry("memmove")]) is None
+    src = import_donor(tmp_path, monkeypatch, ALIASED)
+    assert bfme1_sweep.import_alias_note(src, []) is None
+
+
+# ---- near misses: scoring, boundary evidence, and which classes are served
+
+def test_alignment_ignores_relocation_slots(tmp_path):
+    """A relocation is not a difference, so it must not drag the score down."""
+    donor, target = wide_images(tmp_path)
+    size = len(DIVERGENT_DONOR)
+    body, fields, _ = donor_side(donor, size)
+    assert bfme1_sweep.alignment(body, fields, target.text[:size]) == 1.0
+    changed = bytearray(target.text[:size])
+    changed[0] ^= 0xFF                       # a real difference, outside any field
+    assert bfme1_sweep.alignment(body, fields, bytes(changed)) < 1.0
+
+
+def test_boundaries_refuse_the_interior_of_a_known_function(tmp_path):
+    """Positive evidence against: an address inside a known body cannot start one.
+    'unknown' is not refused, it just is not corroboration."""
+    path = tmp_path / "b.exe"
+    path.write_bytes(make_pe(b"\x90" * 0x100 + b"\xcc\xcc\xcc" + b"\x90" * 0x100))
+    image = bfme1_sweep.Image(path)
+    boundaries = bfme1_sweep.Boundaries({TEXT_RVA: 64}, image)
+    assert boundaries.evidence(TEXT_RVA) == "ghidra-start"
+    assert boundaries.evidence(TEXT_RVA + 32) is None, "interior must be refused"
+    assert boundaries.evidence(TEXT_RVA + 0x103) == "int3-padded"
+    assert boundaries.evidence(TEXT_RVA + 0x80) == "unknown"
+
+
+def test_classify_near_names_a_changed_literal(tmp_path):
+    """The mechanical class: same shape, a literal moved. Here a struct field
+    offset, which is the commonest real BFME1 -> BFME2 drift."""
+    left = b"\xC7\x86\x58\x00\x00\x00\x00\x00\x00\x00\xC3"   # mov [esi+0x58],0
+    right = b"\xC7\x86\x7C\x00\x00\x00\x00\x00\x00\x00\xC3"  # mov [esi+0x7c],0
+    kind, hint = bfme1_sweep.classify_near(left, right, {}, tmp_path / "d")
+    assert kind == "immediate-only", hint
+    assert "0x58" in hint and "0x7c" in hint
+
+
+def test_classify_near_separates_a_register_swap(tmp_path):
+    left = b"\x8B\x08\xC3"                                   # mov ecx,[eax]
+    right = b"\x8B\x10\xC3"                                  # mov edx,[eax]
+    kind, _ = bfme1_sweep.classify_near(left, right, {}, tmp_path / "d")
+    assert kind == "register-swap"
+    assert kind not in bfme1_sweep.NEAR_SERVED, \
+        "drift_classify records this as an MSVC-regalloc wall; it must not be queued"
+
+
+def test_classify_near_calls_a_different_opcode_structural(tmp_path):
+    left = b"\x8B\x08\xC3"                                   # mov ecx,[eax]
+    right = b"\x03\x08\xC3"                                  # add ecx,[eax]
+    kind, _ = bfme1_sweep.classify_near(left, right, {}, tmp_path / "d")
+    assert kind == "structural"
+    assert kind not in bfme1_sweep.NEAR_SERVED
+
+
+def test_classify_near_masks_relocation_slots_before_comparing(tmp_path):
+    """Two different addresses in a DIR32 must not read as a changed literal."""
+    left = b"\xB8" + struct.pack("<I", 0x00401000) + b"\xC3"
+    right = b"\xB8" + struct.pack("<I", 0x00502000) + b"\xC3"
+    kind, hint = bfme1_sweep.classify_near(left, right, {1: "dir32"}, tmp_path / "d")
+    assert kind != "immediate-only", f"a relocation is not a literal ({hint})"
+
+
+def test_near_packet_says_it_will_not_byte_match_and_gives_the_diff():
+    donor = b"\xC7\x86\x58\x00\x00\x00\x00\x00\x00\x00\xC3"
+    window = b"\xC7\x86\x7C\x00\x00\x00\x00\x00\x00\x00\xC3"
+    entry = {
+        "name": "?fn@@QAEXXZ", "source": "Code/GameEngine/Source/Common/X.cpp",
+        "bfme1_rva": 0x900000, "size": len(donor), "bfme2_rva": 0x500000,
+        "alignment": 0.97, "boundary": "ghidra-start", "ghidra_size": len(donor),
+        "klass": "immediate-only", "hint": "1 literal(s)", "copy_tier": "A",
+        "copy_note": "self-contained", "cl": "/O2", "stlport": False,
+        "policy": "ok", "policy_note": "", "donor": donor, "window": window, "fields": {},
+    }
+    text = bfme1_sweep.near_packet(entry)
+    assert "WILL NOT BYTE-MATCH AS COPIED" in text
+    assert "| +0x002 | 58 | 7C |" in text, "the differing byte must be shown"
+    assert "same size" in text
+    assert "tools/add_match.py '?fn@@QAEXXZ' 0x00500000" in text
+    assert "re_log.py record" in text
+    # A repaired near miss still has to resolve its call sites, and the first
+    # one landed needed four pins the packet did not mention.
+    assert "tools/decode_calls.py '?fn@@QAEXXZ' --rva 0x00500000" in text
+
+
+def test_a_spurious_dir32_over_an_immediate_does_not_hide_the_difference(tmp_path):
+    """`add ecx,0x120` is 81 C1 20 01 00 00, and the four-byte window at the
+    modrm byte reads 0x0120C181 -- an address, so the DIR32 pass claims it.
+    Masking that field would score this 100% against `add ecx,0x17c` and hide a
+    struct offset that moved, which is exactly what the near tier is for."""
+    donor_body = b"\x8D\x44\x24\x04\x50\x81\xC1\x20\x01\x00\x00\xC3"
+    target_body = b"\x8D\x44\x24\x04\x50\x81\xC1\x7C\x01\x00\x00\xC3"
+    # The straddling window is 0x0120C181, so the image has to be big enough to
+    # contain it -- as both retail images are.
+    (tmp_path / "a.exe").write_bytes(
+        make_pe(donor_body.ljust(0x200, b"\xCC"), image_size=WIDE_IMAGE))
+    (tmp_path / "b.exe").write_bytes(
+        make_pe(target_body.ljust(0x200, b"\xCC"), image_size=WIDE_IMAGE))
+    donor = bfme1_sweep.Image(tmp_path / "a.exe")
+    target = bfme1_sweep.Image(tmp_path / "b.exe")
+    size = len(donor_body)
+    raw = bfme1_sweep.volatile_fields(donor.text[:size], donor)
+    assert 5 in raw, "fixture guard: the straddling window must be claimed"
+
+    agreed = bfme1_sweep.agreed_fields(
+        donor.text[:size], raw, target.text[:size], TEXT_RVA, TEXT_RVA, donor, target)
+    assert 5 not in agreed, "the target does not hold an address there, so it is not a field"
+    assert bfme1_sweep.alignment(donor.text[:size], agreed, target.text[:size]) < 1.0
+
+    kind, hint = bfme1_sweep.classify_near(
+        donor.text[:size], target.text[:size], agreed, tmp_path / "d")
+    assert kind == "immediate-only", hint
+    assert "0x120" in hint and "0x17c" in hint
+
+
+def test_classify_near_reports_reloc_value_when_masking_leaves_no_difference(tmp_path):
+    """Identical once masked means every difference sat in a relocation slot.
+    That is not a code difference and must not be mislabelled imm+reg."""
+    left = b"\xB8" + struct.pack("<I", 0x00401000) + b"\xC3"
+    right = b"\xB8" + struct.pack("<I", 0x00402000) + b"\xC3"
+    kind, _ = bfme1_sweep.classify_near(left, right, {1: "dir32"}, tmp_path / "d")
+    assert kind == "reloc-value"
+    assert kind not in bfme1_sweep.NEAR_SERVED
