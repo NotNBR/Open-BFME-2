@@ -164,16 +164,11 @@ MultiplayerColorDefinition * MultiplayerSettings::findMultiplayerColorDefinition
 	return NULL;
 }
 
-MultiplayerColorDefinition * MultiplayerSettings::newMultiplayerColorDefinition(AsciiString name)
-{
- 	MultiplayerColorDefinition tmp;
-	Int numColors = getNumColors();
-
-	m_colorList[numColors] = tmp;
-	m_numColors = m_colorList.size();
-
-	return &m_colorList[numColors];
-}
+// MultiplayerColorDefinition *newMultiplayerColorDefinition lives in
+// MultiplayerSettingsNewColor.cpp (dedicated TU: retail 0x003813B7 lowers the
+// list assign to the opaque lookup helper plus the color operator= row, with
+// inline numColors refills; a same-TU definition would capture those REL32
+// locally). Declared via the shim header.
 
 void MultiplayerSettings::addStartingMoneyChoice( const Money & money, Bool isDefault )
 {
