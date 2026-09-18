@@ -8403,3 +8403,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000486598@FXListDie@@SA?AW4NameKeyType@@XZ,,0x00486598,69,Code/GameEngine/Source/GameLogic/Object/Die/FXListDiePoolKey.cpp,matched,
 ?rva00048B16A@DynamicShroudClearingRangeUpdate@@SA?AW4NameKeyType@@XZ,,0x0048B16A,69,Code/GameEngine/Source/GameLogic/Object/Update/DynamicShroudClearingRangeUpdatePoolKey.cpp,matched,
 ?rva00048B690@FireSpreadUpdate@@SA?AW4NameKeyType@@XZ,,0x0048B690,69,Code/GameEngine/Source/GameLogic/Object/Update/FireSpreadUpdatePoolKey.cpp,matched,
+?rva00048BDB3@FireWeaponUpdate@@SA?AW4NameKeyType@@XZ,,0x0048BDB3,69,Code/GameEngine/Source/GameLogic/Object/Update/FireWeaponUpdatePoolKey.cpp,matched,
