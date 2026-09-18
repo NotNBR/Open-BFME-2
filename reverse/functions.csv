@@ -8394,3 +8394,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00045876C@BridgeTowerBehavior@@SA?AW4NameKeyType@@XZ,,0x0045876C,69,Code/GameEngine/Source/GameLogic/Object/Behavior/BridgeTowerBehaviorPoolKey.cpp,matched,
 ?rva000459002@EnragedBehavior@@SA?AW4NameKeyType@@XZ,,0x00459002,69,Code/GameEngine/Source/GameLogic/Object/Behavior/EnragedBehaviorPoolKey.cpp,matched,
 ?rva0004599E5@SiegeDockingBehavior@@SA?AW4NameKeyType@@XZ,,0x004599E5,69,Code/GameEngine/Source/GameLogic/Object/Behavior/SiegeDockingBehaviorPoolKey.cpp,matched,
+?rva00045A3CE@AutoAbilityBehavior@@SA?AW4NameKeyType@@XZ,,0x0045A3CE,69,Code/GameEngine/Source/GameLogic/Object/Behavior/AutoAbilityBehaviorPoolKey.cpp,matched,
