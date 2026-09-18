@@ -136,6 +136,7 @@ public:
 	int m_count;
 };
 
+// ?clear@Rva007F7860Block@@QAEXXZ present-unmatched
 void Rva007F7860Block::clear()
 {
 	if( m_data )
