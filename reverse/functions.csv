@@ -10126,3 +10126,7 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?bfmeSet@Gen_0092E440@@QAEXPBD@Z,,0x0014BB20,66,Code/GameEngine/Source/Common/Bfme5MeshNameOrTextSet.cpp,matched,BFME1 donor; head 0xC8 not 0xCC per retail imms; bfmeAssign pin; b1 0x0092E440
 ?bfmeGoBJE@BfmeThingBJE@@QAEPAXPAX@Z,,0x0016FBF0,23,Code/GameEngine/Source/Common/BfmeConv476.cpp,matched,BFME1 byte-identical donor; b1 0x0092FD40
 ?bfmeMakeBZB@@YAPAXPAX@Z,,0x001B6890,63,Code/GameEngine/Source/Common/BfmeMakeBZB.cpp,matched,BFME1 byte-identical donor; b1 0x009A5E20
+?grokIf1@BfmeIf1VMK@@QAEXXZ,,0x00024850,32,Code/GameEngine/Source/Common/BfmeGrokOdIf0.cpp,matched,BFME1 byte-identical donor; b1 0x0082BDE0
+?grokIf0@BfmeIf0VMJ@@QAEXXZ,,0x00024830,27,Code/GameEngine/Source/Common/BfmeGrokOdIf0.cpp,matched,BFME1 byte-identical donor; b1 0x0082BDC0
+?bfmeAddFO@BfmeHostFO@@QAEHPBD0@Z,,0x0066DCA0,82,Code/GameEngine/Source/Common/BfmeConv2049.cpp,matched,BFME1 byte-identical donor; b1 0x008019A0
+?go@Rva007E8980@@QAEXHE@Z,,0x00655A10,51,Code/GameEngine/Source/Common/Rva007E8980Guard.cpp,matched,BFME1 byte-identical donor; b1 0x007E8980
