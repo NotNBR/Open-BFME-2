@@ -186,17 +186,6 @@ void MultiplayerSettings::addStartingMoneyChoice( const Money & money, Bool isDe
   }
 }
 
-MultiplayerColorDefinition * MultiplayerColorDefinition::operator =(const MultiplayerColorDefinition& other)
-{
-	m_tooltipName = other.getTooltipName();
-	m_rgbValue = other.getRGBValue();
-	m_color = other.getColor();
-	m_rgbValueNight = other.getRGBNightValue();
-	m_colorNight = other.getNightColor();
-
-	return this;
-}
-
 void MultiplayerColorDefinition::setColor( RGBColor rgb )
 {
 	m_color = rgb.getAsInt() | 0xFF << 24;

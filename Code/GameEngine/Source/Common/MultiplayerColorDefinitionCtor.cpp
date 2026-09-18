@@ -36,12 +36,16 @@ class AsciiString : public StringBase<char>
 {
 public:
 	void clear();
+	AsciiString &operator=(const AsciiString &other);
+	// Inline teardown to the 0x36410 fold (writeNameKey/openDataChunk
+	// precedent): temp destruction emits a direct releaseBuffer call, which
+	// is what retail does here. A declare-only dtor instead resolves via the
+	// evidence-free 0x6CEAD0 pin (re_log proves that address is a 57B
+	// list-destroy, not the scalar dtor) and mismatches.
+	__forceinline ~AsciiString() { releaseBuffer(); }
 
-	// Non-trivial dtor for EH tracking only (ModuleDataCtor idiom): it gives
-	// the cookie-SEH frame plus unwind states with no emitted call, since the
-	// body below tears down via clear(), never via the dtor. Funclet relocs
-	// referencing it are skipped by the gate.
-	~AsciiString();
+protected:
+	void releaseBuffer();
 };
 
 struct RGBColor
@@ -56,6 +60,8 @@ class MultiplayerColorDefinition
 {
 public:
 	MultiplayerColorDefinition();
+	MultiplayerColorDefinition *operator=(const MultiplayerColorDefinition &other);
+	AsciiString getTooltipName() const;
 
 private:
 	AsciiString m_tooltipName; // +0x00
@@ -85,4 +91,24 @@ MultiplayerColorDefinition::MultiplayerColorDefinition()
 	m_colorNight = unsetWhite;
 	m_rgbExtra1.setFromInt(unsetWhite);
 	m_rgbExtra2.setFromInt(unsetWhite);
+}
+
+// ??4MultiplayerColorDefinition@@QAEPAV0@ABV0@@Z, retail 0x00380CAE, 127 bytes.
+// Same TU as the ctor (same shells/flags; neither body calls the other, so no
+// same-TU capture). Retail reads every member directly off `other` -- only
+// the tooltip goes through the out-of-line getter (0x2E4336, pinned) plus the
+// 0x366F0 assign fold and the 0x36410 temp teardown -- then copies the two
+// BFME2-added RGBColors and the flag byte like the ZH ones.
+// ??4MultiplayerColorDefinition@@QAEPAV0@ABV0@@Z
+MultiplayerColorDefinition *MultiplayerColorDefinition::operator=(const MultiplayerColorDefinition &other)
+{
+	m_tooltipName = other.getTooltipName();
+	m_rgbValue = other.m_rgbValue;
+	m_color = other.m_color;
+	m_rgbValueNight = other.m_rgbValueNight;
+	m_colorNight = other.m_colorNight;
+	m_rgbExtra1 = other.m_rgbExtra1;
+	m_rgbExtra2 = other.m_rgbExtra2;
+	m_extraFlag = other.m_extraFlag;
+	return this;
 }
