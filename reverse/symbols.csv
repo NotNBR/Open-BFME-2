@@ -1978,3 +1978,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ??4CursorTextureSlot@@QAEXABVBFME2ParticleTextureHandle@@@Z,0x000424D0,counted-holder assign used by image-wide sites incl W3DMouse cursor fill; void return is load-bearing for the caller null-test register; REL32-decoded from the loadD3DCursorTextures body
 ?Get_Surface_Level@CursorTextureSlot@@QAE?AVW3DRadarResetSurface@@XZ,0x00132D70,holder surface fetch returning reset-surface holder by value; REL32-decoded from the loadD3DCursorTextures body with 32 image-wide callers
 ??4W3DRadarResetSurface@@QAEAAV0@ABV0@@Z,0x00072381,reset-surface holder assign with virtual AddRef Release; REL32-decoded from the loadD3DCursorTextures body
+?scanInt@@YAHPBDAAH@Z,0x00314E96,GameWindowManagerScript file-static sscanf wrapper; REL32 x2 from parseSliderData 0x3151EC; mangling compiler-attested via TU nm; sscanf import 0xBBA5E4
