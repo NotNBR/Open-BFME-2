@@ -9825,3 +9825,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?apply@Rva007F91A0Host@@QAEXH@Z,,0x00665740,48,Code/GameEngine/Source/GameNetwork/Rva007F91A0Log.cpp,matched,BFME1 byte-identical donor; b1 0x007F91A0
 ?Rva0005D6D0DisableImmTextFrameService@@YAXXZ,,0x00001CF0,47,Code/GameEngine/Source/Common/Rva0005D6D0DisableImmTextFrameService.cpp,matched,BFME1 byte-identical donor; b1 0x0005D6D0
 ??0BfmeThingTTD@@QAE@XZ,,0x005B6ED1,45,Code/GameEngine/Source/Common/BfmeConv1323.cpp,matched,BFME1 donor with CoInitializeEx import repair; b1 0x00690940
+??0Rva005A7A90@@QAE@XZ,,0x004296C2,44,Code/GameEngine/Source/Common/Rva005A7A90Ctor.cpp,matched,BFME1 donor with vtable-literal repair; b1 0x005A7A90
