@@ -8354,3 +8354,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004B3423@ArmorUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B3423,69,Code/GameEngine/Source/Common/System/ArmorUpgradePoolKey.cpp,matched,
 ?rva0004B3653@BaseUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B3653,69,Code/GameEngine/Source/Common/System/BaseUpgradePoolKey.cpp,matched,
 ?rva0004B3A4B@CommandSetUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B3A4B,69,Code/GameEngine/Source/Common/System/CommandSetUpgradePoolKey.cpp,matched,
+?rva0004B3C30@DelayedUpgrade@@SA?AW4NameKeyType@@XZ,,0x004B3C30,69,Code/GameEngine/Source/Common/System/DelayedUpgradePoolKey.cpp,matched,
