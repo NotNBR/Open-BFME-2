@@ -9545,3 +9545,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva000B28CFFloatField@@QBEMXZ,,0x000B28CF,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter
 ?get@Rva000D43D3FloatField@@QBEMXZ,,0x000D43D3,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter
 ?get@Rva000EFB0DFloatField@@QBEMXZ,,0x000EFB0D,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter
+??1Rva00144690@@UAE@XZ,,0x00144690,95,Code/Libraries/Source/WWVegas/WW3D2/Rva00144690Dtor.cpp,matched,opaque list-class dtor; vtable 0xBD34E0; FVF recipe
+??_GRva00144690@@UAEPAXI@Z,,0x00144850,27,Code/Libraries/Source/WWVegas/WW3D2/Rva00144690Dtor.cpp,matched,opaque scalar deleting dtor; vtable slot 0
