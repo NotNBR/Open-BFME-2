@@ -9503,3 +9503,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva0030C8AEDwordSlot@@QAEXH@Z,,0x0030C8AE,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva0030C93DDwordSlot@@QAEXH@Z,,0x0030C93D,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva003140F8DwordSlot@@QAEXH@Z,,0x003140F8,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?set@Rva00332B28DwordSlot@@QAEXH@Z,,0x00332B28,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
