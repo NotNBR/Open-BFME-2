@@ -9783,3 +9783,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ??0BfmeThingTUA@@QAE@XZ,,0x0066CCC0,50,Code/GameEngine/Source/Common/BfmeConv1324.cpp,matched,BFME1 byte-identical donor; b1 0x008008E0
 ?bfmeDelTVA@BfmeThingTVA@@QAEPAXE@Z,,0x00656C30,52,Code/GameEngine/Source/Common/BfmeConv1324.cpp,matched,BFME1 port; CloseHandle import plus scalar delete replace BFME1 helpers
 ?bfmeDelTVB@BfmeThingTVB@@QAEPAXE@Z,,0x00176D90,54,Code/GameEngine/Source/Common/BfmeConv1324.cpp,matched,BFME1 port; SysFreeString plus array and scalar delete replace BFME1 helpers
+?addSlot@Rva008063B0Owner@@QAEXHH@Z,,0x006723E0,71,Code/GameEngine/Source/Common/SmallGaps/Rva008063B0AddSlot.cpp,matched,BFME1 byte-identical donor; b1 0x008063B0; 2 DIR32 string literal(s) agree
