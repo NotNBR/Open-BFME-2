@@ -1868,7 +1868,6 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??1Rva002CEC0A@@UAE@XZ,0x002CEC0A,opaque this-adjust dtor (14B: vptr + add ecx,4 + tail-jmp 0x2CC70; deferred lane); called by scalar-deleting-dtor at 0x2CEC18; identity unproven, address-derived name
 ??1Rva0061ED80@@UAE@XZ,0x0061ED80,opaque vector-destroying dtor (17B: member+0xC via ehvec 0x42FD80 + vptr); tail-called by single-inheritance dtor at 0x180EA0; identity unproven, address-derived name
 ??1Rva004E18A2@@UAE@XZ,0x004E18A2,opaque null-check+jmp dtor (18B: vptr + member+8 load/test/je + tail-jmp 0x50ED3); called by scalar-deleting-dtor at 0x4E1D16; identity unproven, address-derived name
-??1Rva0057C3B6@@UAE@XZ,0x0057C3B6,opaque this-adjust dtor (14B: vptr + add ecx,4 + tail-jmp 0x57C39C; deferred lane); called by scalar-deleting-dtor at 0x57C4E2; identity unproven, address-derived name
 ??1Rva00494A97@@UAE@XZ,0x00494A97,opaque MI dtor (39B: 4+ vptr stores); called by scalar-deleting-dtor at 0x494B9E; identity unproven, address-derived name
 ?rva0035A2DC@Rva0035A2DC@@QAEXPAURegion3D@@M@Z,0x0035A2DC,SEH region-plus-float grid allocator (region math then cell-grid new[] via 0x2FDE0 and ehvec 0x629512); called with (region; [0xDFE758]+0xD4 float) on [GameLogic+0x170] from setActiveBoundary 0x280742 and with +0xD8 float from 0x2440BB/0x246E5A; identity unproven so class and method keep the address token
 ??1Rva00589079@@UAE@XZ,0x00589079,opaque MI dtor (4 vptr stores + const at +0x24 + tail-jmp to 0x24A797 row); dtor-shaped base tail-called by Rva00494A97 dtor
@@ -2001,3 +2000,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?clear@Rva005C7CA1@@QAEXXZ,0x005C7CA1,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x5C7CBB; exact method unproven
 ?clear@Rva005CB892@@QAEXXZ,0x005CB892,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x5CB8D4; exact method unproven
 ?clear@Rva005C3EE8@@QAEXXZ,0x005C3EE8,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x5C3F02; exact method unproven
+?clear@Rva0057C39C@@QAEXXZ,0x0057C39C,opaque guarded-delete helper (nulls ptr at +0 then slot-0 call plus operator delete); tail-call target of this-adjust dtor 0x57C3B6; exact method unproven
