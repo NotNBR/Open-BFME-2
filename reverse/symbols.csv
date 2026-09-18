@@ -1979,3 +1979,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ??1IPEnumeration@@QAE@XZ,0x0050C283,ZH/BFME1 IPEnumeration dtor; address-list teardown for the desync enumeration localRelease; REL32-decoded from the loadD3DCursorTextures body
 ?scanInt@@YAHPBDAAH@Z,0x00314E96,GameWindowManagerScript file-static sscanf wrapper; REL32 x2 from parseSliderData 0x3151EC; mangling compiler-attested via TU nm; sscanf import 0xBBA5E4
 ??0StringClass@@QAE@PBD_N@Z,0x000F0ED1,StringClass 2-arg ctor (name,flag): empty-init from global 0xDD528C + _mbslen + Get_String pre-size via 0x610B00 row + assign-PBD via 0xF0E8D row; 14 E8 callers incl proto ctor 0x14CE92/factory+owner family; second param bool (byte-tested, forwarded to Get_String _N slot)
+?scanShort@@YAHPBDAAF@Z,0x00314E6D,GameWindowManagerScript file-static sscanf wrapper Short out-param; REL32 from parseTextEntryData 0x3152B2; mangling compiler-attested via TU nm
