@@ -9772,3 +9772,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?allocate@Rva007F7810Block@@QAEXH@Z,,0x00663F00,75,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7810
 ?clear@Rva007F6CF0Block@@QAEXXZ,,0x006633E0,40,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F6CF0
 ?clear@Rva007F7860Block@@QAEXXZ,,0x006633E0,40,Code/GameEngine/Source/GameNetwork/V2FeslArrayBlocks.cpp,matched,BFME1 byte-identical donor; b1 0x007F7860; ICF-folded with 6CF0 clear
+?getUpgradeActivationMasks@UpgradeMuxData@@QBEXAAUUpgradeMaskType@@0@Z,,0x004CB189,369,Code/GameEngine/Source/Common/Thing/UpgradeMuxData_getUpgradeActivationMasks.cpp,matched,
