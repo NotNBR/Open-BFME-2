@@ -10112,3 +10112,7 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ??0Rva00801FB0Elem@@QAE@XZ,,0x0066E270,106,Code/GameEngine/Source/GameNetwork/Rva00801FB0FeslElemCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00801FB0
 ?process@Gen_00942BC0@@QAEXPAX00@Z,,0x00159FC0,40,Code/GameEngine/Source/Common/Gen_00942BC0.cpp,matched,BFME1 byte-identical donor; b1 0x00942BC0
 ??0Rva00802380Owner@@QAE@XZ,,0x0066E570,37,Code/GameEngine/Source/GameNetwork/Rva00802330FeslCtor.cpp,matched,BFME1 byte-identical donor; b1 0x00802330
+?bfmeCopyFC@@YAPAUBfmeElemFC@@PAU1@00@Z,,0x006BFA00,47,Code/GameEngine/Source/Common/Rva0087FFC0Copy.cpp,matched,BFME1 byte-identical donor; b1 0x0087FFC0
+?allocate@Rva00801570@@QAEXH@Z,,0x0066DE60,75,Code/GameEngine/Source/GameNetwork/Rva00801B70FeslAlloc.cpp,matched,BFME1 byte-identical donor; b1 0x00801B70
+?bfmeMakeSubJX@@YAPAUBfmeSubJX@@XZ,,0x001B7990,73,Code/GameEngine/Source/Common/Rva009A6DA0ReleaseBuffers.cpp,matched,BFME1 donor; Rva009A6DF0 static pin; b1 0x009A6F20
+?onGame@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00663020,104,Code/GameEngine/Source/GameNetwork/V2FeslBrowserGame.cpp,matched,BFME1 byte-identical donor; b1 0x007F6890
