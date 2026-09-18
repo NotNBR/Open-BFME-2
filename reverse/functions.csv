@@ -8384,3 +8384,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004BF848@ActiveBody@@SA?AW4NameKeyType@@XZ,,0x004BF848,69,Code/GameEngine/Source/GameLogic/Object/Body/ActiveBodyPoolKey.cpp,matched,
 ?rva0004C09B5@StructureBody@@SA?AW4NameKeyType@@XZ,,0x004C09B5,69,Code/GameEngine/Source/GameLogic/Object/Body/StructureBodyPoolKey.cpp,matched,
 ?rva0004C0AAC@SymbioticStructuresBody@@SA?AW4NameKeyType@@XZ,,0x004C0AAC,69,Code/GameEngine/Source/GameLogic/Object/Body/SymbioticStructuresBodyPoolKey.cpp,matched,
+?rva0004C1885@FreeLifeBody@@SA?AW4NameKeyType@@XZ,,0x004C1885,69,Code/GameEngine/Source/GameLogic/Object/Body/FreeLifeBodyPoolKey.cpp,matched,
