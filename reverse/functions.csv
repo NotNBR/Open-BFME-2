@@ -10232,3 +10232,4 @@ _peerStopGame,,0x00699410,65,Code/GameEngine/Source/GameNetwork/GameSpy/peerStop
 ??1S4Dtor00587B30@@UAE@XZ,,0x006E96D0,95,Code/GameEngine/Source/Common/S4TwoMemberDestructors.cpp,matched,BFME1 near-miss donor; b1 0x00587B30; immediate-only drift first member +0x20 not +0x18
 ?GadgetListBoxGetSlider@@YAPAVGameWindow@@PAV1@@Z,,0x002C02E7,23,Code/GameEngine/Source/GameClient/GUI/GameWindowManager.cpp,matched,BFME1 byte-identical donor; b1 0x0047A560; placed by masked whole-.text search of the compiled body - single hit
 ?rva008fa850@BfmeOwnerCDE@@QAEXPAX@Z,,0x0073D440,170,Code/GameEngine/Source/Common/BfmeOwnerCDECreate.cpp,matched,BFME1 near-miss donor; b1 0x008FA850; immediate-only drift thing size 0x11C not 0xE0
+?Rva009A79D0Vp6Filter@@YAXPBEPAGHPBH2@Z,,0x001B8430,295,Code/GameEngine/Source/Common/BfmeGo79D0.cpp,matched,BFME1 near-miss donor; b1 0x009A79D0; immediate-only drift table address auto-patches
