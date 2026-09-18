@@ -52,60 +52,13 @@ public:
 typedef Rva007E8810Message FeslTxnMessage;
 
 // ---- 'AUTH' ---------------------------------------------------------------
-
-void __stdcall Rva007FAE40( FeslTxnMessage *msg, const char *lkey,
-	const char *prod, const char *vers, const char *pres, const char *rsrc )
-{
-	msg->reset();
-	msg->m_category = 'AUTH';
-	msg->m_depth = 3;
-	msg->addString( "LKEY", lkey );
-	msg->addString( "PROD", prod );
-	msg->addString( "VERS", vers );
-	msg->addString( "PRES", pres );
-	if( rsrc && *rsrc )
-		msg->addString( "RSRC", rsrc );
-	else
-		msg->addString( "RSRC", "CSO" );
-}
-
-void __stdcall Rva007FAEE0( FeslTxnMessage *msg, const char *user,
-	const char *pass, const char *prod, const char *vers, const char *pres,
-	const char *rsrc )
-{
-	msg->reset();
-	msg->m_category = 'AUTH';
-	msg->m_depth = 3;
-	msg->addString( "USER", user );
-	msg->addString( "PASS", pass );
-	msg->addString( "PROD", prod );
-	msg->addString( "VERS", vers );
-	msg->addString( "PRES", pres );
-	if( rsrc && *rsrc )
-		msg->addString( "RSRC", rsrc );
-	else
-		msg->addString( "RSRC", "CSO" );
-}
+// NOTE: Rva007FAE40 / Rva007FAEE0 omitted here: ICF-folded in lotrbfme.exe
+// (ambiguous with Rva007FAFB0/Rva007FB620 twins at 0x006674C0/0x00667B30 and
+// Rva007FAE40/Rva007FAEE0 twins at 0x00667350/0x006673F0). Only the 17 clean
+// T1 bodies are claimed from this TU.
 
 // ---- 'USCH' ---------------------------------------------------------------
-
-void __stdcall Rva007FAFB0( FeslTxnMessage *msg, const char *user,
-	const char *domain, const char *rsrc, bool dist, int maxResults )
-{
-	msg->reset();
-	msg->m_category = 'USCH';
-	msg->m_depth = 3;
-	msg->addString( "USER", user );
-	if( domain && strlen( domain ) != 0 )
-		msg->addString( "DOMN", domain );
-	if( rsrc && strlen( rsrc ) != 0 )
-		msg->addString( "RSRC", rsrc );
-	if( dist )
-		msg->addString( "DIST", "T" );
-	else
-		msg->addString( "DIST", "F" );
-	msg->addInt( "MAXR", maxResults );
-}
+// NOTE: Rva007FAFB0 omitted here: ICF-folded twin (see above).
 
 // ---- 'PADD' / 'PDEL' / 'TCKL' ---------------------------------------------
 
@@ -163,19 +116,7 @@ void __stdcall Rva007FB4B0( FeslTxnMessage *msg, const char *user,
 		msg->addString( "LSRC", lsrc );
 }
 
-void __stdcall Rva007FB620( FeslTxnMessage *msg, const char *user,
-	const char *group, const char *lsrc, bool pres )
-{
-	msg->reset();
-	msg->m_category = 'RDEM';
-	msg->m_depth = 3;
-	msg->addString( "USER", user );
-	if( group && strlen( group ) != 0 )
-		msg->addString( "GROUP", group );
-	if( lsrc && strlen( lsrc ) != 0 )
-		msg->addString( "LSRC", lsrc );
-	msg->addString( "PRES", pres ? "Y" : "N" );
-}
+// NOTE: Rva007FB620 omitted here: ICF-folded twin (see 'AUTH' note above).
 
 // ---- 'GINV' / 'GRVK' / 'EPST' ---------------------------------------------
 
