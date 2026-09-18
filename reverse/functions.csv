@@ -9646,3 +9646,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva006C03E0FloatField@@QBEMXZ,,0x006C03E0,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,
 ?get@Rva00723490FloatField@@QBEMXZ,,0x00723490,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,
 ?get@Rva0073A1C0FloatField@@QBEMXZ,,0x0073A1C0,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,
+?Is_Bone_Captured@HTreeClass@@QBE_NH@Z,,0x00162030,48,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassIsBoneCaptured.cpp,matched,sorted 36B captured-record walk over Begin End at this+0x1C 0x20 via placed Animatable forwarder call; Control_Bone record model; /G7 loop pad; boolean-expression tail
