@@ -1051,11 +1051,19 @@ def do_land(args):
     # lacks. Run its own check now, while the file is still ours to unwind,
     # rather than leave a staged file the commit will reject. The heuristic in
     # group_files predicts this; this is the ground truth.
+    #
+    # `--staged` reads the ledger from the git INDEX, and add_match only ever
+    # writes the working tree. Without staging the ledger first the check judges
+    # a file against a ledger that does not yet hold its rows and reports "ZERO
+    # matched rows" for a body that just verified -- which wave 2 did seven times
+    # in a row, unwinding good files. Stage it, then ask.
+    subprocess.run(["git", "add", "--", "reverse/functions.csv"], cwd=ROOT, check=True)
     declared = subprocess.run(
         [sys.executable, str(ROOT / "tools" / "find_declared_unmatched.py"), "--fail",
          "--staged", source], cwd=ROOT, capture_output=True, text=True)
     if declared.returncode != 0:
         remove_rows(source)
+        subprocess.run(["git", "add", "--", "reverse/functions.csv"], cwd=ROOT, check=True)
         subprocess.run(["git", "rm", "--cached", "--quiet", "--", source], cwd=ROOT)
         dest.unlink(missing_ok=True)
         print(f"bfme1_sweep: {source} defines functions the ledger does not declare, which the "
