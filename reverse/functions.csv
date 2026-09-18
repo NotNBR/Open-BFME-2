@@ -8686,3 +8686,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0004A812E@ToppleUpdate@@SA?AW4NameKeyType@@XZ,,0x004A812E,69,Code/GameEngine/Source/GameLogic/Object/Update/ToppleUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
 ?rva0004A8D99@DelayedLuaEventUpdate@@SA?AW4NameKeyType@@XZ,,0x004A8D99,69,Code/GameEngine/Source/GameLogic/Object/Update/DelayedLuaEventUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
 ?rva0004AC686@DestroyEnvironmentUpdate@@SA?AW4NameKeyType@@XZ,,0x004AC686,69,Code/GameEngine/Source/GameLogic/Object/Update/DestroyEnvironmentUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
+?rva0004AC942@PartTheHeavensUpdate@@SA?AW4NameKeyType@@XZ,,0x004AC942,69,Code/GameEngine/Source/GameLogic/Object/Update/PartTheHeavensUpdatePoolKey.cpp,matched,cached pool-name key; /O1 static-guard EH; nameToKey row
