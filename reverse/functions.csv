@@ -8406,3 +8406,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00048BDB3@FireWeaponUpdate@@SA?AW4NameKeyType@@XZ,,0x0048BDB3,69,Code/GameEngine/Source/GameLogic/Object/Update/FireWeaponUpdatePoolKey.cpp,matched,
 ?rva00048C6DF@FlammableUpdate@@SA?AW4NameKeyType@@XZ,,0x0048C6DF,69,Code/GameEngine/Source/GameLogic/Object/Update/FlammableUpdatePoolKey.cpp,matched,
 ?rva00048D761@FloatUpdate@@SA?AW4NameKeyType@@XZ,,0x0048D761,69,Code/GameEngine/Source/GameLogic/Object/Update/FloatUpdatePoolKey.cpp,matched,
+?rva00048E0FA@FloodUpdate@@SA?AW4NameKeyType@@XZ,,0x0048E0FA,69,Code/GameEngine/Source/GameLogic/Object/Update/FloodUpdatePoolKey.cpp,matched,
+?Rva0017FC1E_MakeOwner@@YA?AVHTreePrototypeOwner@@PBD@Z,,0x0017FC1E,94,Code/Libraries/Source/WWVegas/WW3D2/Rva0017FC1EFactory.cpp,matched,probe mixed named plus temporary returns
