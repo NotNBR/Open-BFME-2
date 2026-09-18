@@ -8555,3 +8555,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000486C95@KeepObjectDie@@SA?AW4NameKeyType@@XZ,,0x00486C95,69,Code/GameEngine/Source/GameLogic/Object/Die/KeepObjectDiePoolKey.cpp,matched,cached pool-name key; pool string KeepObjectDie; /O1 static-guard EH; nameToKey row
 ?parseByte@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EE22,74,Code/GameEngine/Source/Common/System/INI_parseByte.cpp,matched,
 ?parseUnsignedByte@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EE6D,75,Code/GameEngine/Source/Common/System/INI_parseUnsignedByte.cpp,matched,
+?parseShort@INI@@SAXPAV1@PAX1PBX@Z,,0x0002EEB9,79,Code/GameEngine/Source/Common/System/INI_parseShort.cpp,matched,
