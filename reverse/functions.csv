@@ -9906,3 +9906,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?Rva009A8880Release@@YAXPAX@Z,,0x001B92D0,129,Code/GameEngine/Source/Common/Rva009A8880Release.cpp,matched,BFME1 donor; pin-to-row upgrade; b1 codec release
 ?eq@Rva001DCB90@@QBEHPBVObj001DCB90@@@Z,,0x00261046,18,Code/GameEngine/Source/Common/Rva001DCB90Eq.cpp,matched,BFME1 byte-identical donor; b1 0x001DCB90
 ??0GhostObjectManager@@QAE@XZ,,0x00305933,20,Code/GameEngine/Source/GameLogic/Object/GhostObject.cpp,matched,BFME1 byte-identical donor; b1 0x001B3AA0
+?set@Rva002918E0Object@@QAEXE@Z,,0x004B23B3,18,Code/GameEngine/Source/Common/Rva002918E0ConditionalFlag.cpp,matched,BFME1 byte-identical donor; b1 0x002918E0
