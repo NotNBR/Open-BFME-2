@@ -1947,3 +1947,7 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ?preprocessMacro@INI@@SAPBDPBD@Z,0x0002D0A9,INI static macro pre-expansion (digit fast path + shift/XOR hash over macro table); scanReal 0x2EDA5 first REL32 + 6 more INI-parse callers; BFME1 INIPreprocessMacro.cpp
 ?parseMathExpression@INI@@QAEMPBDP81@AEM0@Z@Z,0x0002E46A,INI thiscall #ADD(/#SUBTRACT( math evaluator (sole caller scanReal 0x2EDC6 passes text + &INI::scanReal value callback); name provisional
 ?parseIntMathExpression@INI@@QAEHPBDP81@AEH0@Z@Z,0x0002E0C9,INI thiscall #ADD(/#SUBTRACT( int math evaluator (sole caller scanInt 0x2ECF0 passes text + &INI::scanInt value callback); name provisional
+?scanScience@INI@@SA?AW4ScienceType@@PBD@Z,0x00338A8D,BFME1-attested INI static; 11B forwarder to ScienceStore worker 0x1FF65D via global 0xDFE0E0; 4 science-parse callers
+??0ProductionPrerequisite@@QAE@XZ,0x004F527A,BFME1 ctor mangling; 3x 0x611E58 vector inits at +0 +0xC +0x18; 3 prereq-cluster callers
+??1ProductionPrerequisite@@QAE@XZ,0x004F5115,BFME1 dtor mangling; vector teardown via 0x30830; 5 callers incl 3 cluster
+?push_back@?$vector@VProductionPrerequisite@@V?$allocator@VProductionPrerequisite@@@_STL@@@_STL@@QAEXABVProductionPrerequisite@@@Z,0x0033EA10,0x24 stride is 3x12B prereq vectors via inline _Construct 0x2D0C17; 3 prereq-cluster callers
