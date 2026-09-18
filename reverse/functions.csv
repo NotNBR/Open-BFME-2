@@ -8445,3 +8445,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?read_texture_stage@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x0018B080,247,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTextureStage.cpp,matched,BFME1 MeshModelVertexColors port of their 247B row at 0x0096ED60; same size. Bool direct returns with error var plus return-error idiom. PER_FACE is inline Seek-if-size-matches via Seek pin 0x6150C0. read_texture_ids via pin 0x189140. /O2 /G7 frameless no-EH.
 ?validate@ThingTemplate@@QAEXXZ,,0x0033B4CD,108,Code/GameEngine/Source/Common/Thing/ThingTemplateValidate.cpp,matched,BFME2 rewrite of ZH validate; shadow default via usePluralShadowName plus two wide-string fallbacks; all callees pre-resolved
 ?scanReal@INI@@QAEMPBD@Z,,0x0002EDA5,107,Code/GameEngine/Source/Common/System/INI_scanReal.cpp,matched,
+?scanInt@INI@@QAEHPBD@Z,,0x0002ECCF,104,Code/GameEngine/Source/Common/System/INI_scanInt.cpp,matched,
