@@ -22,3 +22,12 @@ int Rva00020E80Get(void)
 {
 	return g_Va00DA7188;
 }
+
+// ?Rva00020E90Get@@YAHXZ @ 0x00020E90 (6B) over 0x00DA718C.
+
+extern int g_Va00DA718C;
+
+int Rva00020E90Get(void)
+{
+	return g_Va00DA718C;
+}
