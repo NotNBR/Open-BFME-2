@@ -8773,3 +8773,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva0008EFA3ByteField@@QBEEXZ,,0x0008EFA3,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
 ?get@Rva0008EFC5ByteField@@QBEEXZ,,0x0008EFC5,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
 ?get@Rva000930D9ByteField@@QBEEXZ,,0x000930D9,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva00094ADCByteField@@QBEEXZ,,0x00094ADC,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
