@@ -9759,3 +9759,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?Rva009B50F0DecodeToken@@YAHPAEHH@Z,,0x001C59F0,270,Code/GameEngine/Source/Common/Rva009B50F0DecodeToken.cpp,matched,BFME1 byte-identical donor; b1 0x009B50F0
 ?bfmeFindV20@@YGHPBDII@Z,,0x000276B0,136,Code/GameEngine/Source/Common/BfmeConv1460.cpp,matched,BFME1 byte-identical donor; b1 0x0082E160
 ?isValid@ObjectFilter@@QBE_NXZ,,0x00360CED,57,Code/GameEngine/Source/GameLogic/Object/ObjectFilter_isValid.cpp,matched,ammo-descriptor validity gate over global 0x94-stride table with flag at +0x88; BFME1 Weapon_getRemainingAmmo same call shape
+?bfmeCloseBT@BfmeHostBT@@QAEXPAX@Z,,0x00664C50,98,Code/GameEngine/Source/GameNetwork/BfmeConv1918.cpp,matched,BFME1 byte-identical donor; b1 0x007F85D0
