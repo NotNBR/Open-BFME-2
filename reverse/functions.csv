@@ -9398,3 +9398,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?clearRva0029B060@InGameUI@@UAEXXZ,,0x0029B060,8,Code/GameEngine/Source/GameClient/InGameUI_Rva0029B04D.cpp,matched,InGameUI slot-100 clearer over unsigned field plus0x7EC; vtable-proven class; leaf with no calls
 ?mergeRva0029AF3F@InGameUI@@UAEXPBH0PAH@Z,,0x0029AF3F,67,Code/GameEngine/Source/GameClient/InGameUI_Rva0029AF3F.cpp,matched,InGameUI slot-91 bounds merge over int pairs with shared max-store tail; vtable-proven class; leaf with no calls
 ?parseFont@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x00315BF5,218,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseFont.cpp,matched,
+?removeRecycleRva0029DFC5@@YGXPAX0@Z,,0x0029DFC5,36,Code/GameEngine/Source/GameClient/InGameUI_RemoveRecycle.cpp,matched,Intrusive list unlink plus freelist recycle with predecessor out-param; sole caller is InGameUI slot-96 remover 0x29F77E; freelist 0xDB8FF4 rides extern; leaf
