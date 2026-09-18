@@ -46,3 +46,15 @@ void Rva008013F0Browser::assertFailed(int)
 	                       "\\views\\feslbuild_main\\jabba\\fesl\\source\\gamebrowser\\gamebrowsergame.cpp",
 	                       529);
 }
+
+struct Rva00802980Browser
+{
+	void assertFailed(int cookie);
+};
+
+void Rva00802980Browser::assertFailed(int)
+{
+	Rva007EB810Get()->fail("false",
+	                       "\\views\\feslbuild_main\\jabba\\fesl\\source\\gamebrowser\\gamebrowserlobby.cpp",
+	                       321);
+}

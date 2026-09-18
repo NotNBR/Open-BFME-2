@@ -9806,3 +9806,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?acquireSlot@BfmeSlotPool@@QAEPAUBfmeSlotRecord@@XZ,,0x00665FF0,61,Code/GameEngine/Source/Common/BfmeSlotPool.cpp,matched,BFME1 byte-identical donor; b1 0x007F9A80
 ?Rva009A8550Init@@YAXXZ,,0x001B8FB0,79,Code/GameEngine/Source/Common/Rva009A4D00TableInit.cpp,matched,BFME1 byte-identical donor; b1 0x009A8550; ICF-folded in BFME1 so the name is this sweep pick among its twins
 ??0Rva007E8810@@QAE@XZ,,0x006558C0,60,Code/GameEngine/Source/Common/Rva007E8810Ctor.cpp,matched,BFME1 byte-identical donor; b1 0x007E8810
+?assertFailed@Rva00802980Browser@@QAEXH@Z,,0x0066EAD0,30,Code/GameEngine/Source/Common/U2FeslGameBrowserAsserts.cpp,matched,BFME1 byte-identical donor; b1 0x00802980; 2 DIR32 string literal(s) agree
