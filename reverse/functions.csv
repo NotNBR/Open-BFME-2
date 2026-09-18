@@ -9248,3 +9248,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00203B47@Rva00203B47Host@@QAE_NXZ,,0x00203B47,106,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_appGate.cpp,matched,
 ?rva00203C21@@YAXXZ,,0x00203C21,89,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_setSides.cpp,matched,
 ?rva001DCD1C@GameLogic@@QAE_NXZ,,0x001DCD1C,32,Code/GameEngine/Source/GameLogic/System/GameLogicModeGateChecks.cpp,matched,
+?rva00204094@@YAXXZ,,0x00204094,83,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptEngine_setFrame.cpp,matched,

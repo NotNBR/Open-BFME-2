@@ -1,0 +1,57 @@
+// cl: /O1
+// ScriptEngine frame setter at retail 0x00204094 (83B).
+// Decoded from retail bytes (all verified):
+// - Calls rva00203C21 row (SetTheSidesList gate, 89B) then GetProcAddress
+//   for SetFrameNumber (kernel32 import, IAT 0xBBA1F8 auto).
+// - Calls rva001DCD1C mode gate row (GameLogic +0x110/+0x114, 32B) via
+//   TheGameLogic; else virtual slot 0x7C on the object at [0xDFE77C].
+// - App module at [0xDFE158]; latch-free early outs.
+// Human-readable names; opaque free function (no this, standard ret).
+
+typedef int HMODULE;
+
+extern "C" __declspec(dllimport) void *__stdcall GetProcAddress(HMODULE module, const char *name);
+
+class GameLogic
+{
+public:
+	bool rva001DCD1C();
+};
+
+#define TheGameLogic (*(GameLogic **)0x00DFE78C)
+#define TheAppModule (*(HMODULE *)0x00DFE158)
+
+void rva00203C21();
+
+class Rva00DFE77CHolder
+{
+public:
+	virtual void slot00(); virtual void slot01(); virtual void slot02(); virtual void slot03();
+	virtual void slot04(); virtual void slot05(); virtual void slot06(); virtual void slot07();
+	virtual void slot08(); virtual void slot09(); virtual void slot0A(); virtual void slot0B();
+	virtual void slot0C(); virtual void slot0D(); virtual void slot0E(); virtual void slot0F();
+	virtual void slot10(); virtual void slot11(); virtual void slot12(); virtual void slot13();
+	virtual void slot14(); virtual void slot15(); virtual void slot16(); virtual void slot17();
+	virtual void slot18(); virtual void slot19(); virtual void slot1A(); virtual void slot1B();
+	virtual void slot1C(); virtual void slot1D(); virtual void slot1E(); virtual int slot1F();
+};
+
+#define TheRva00DFE77C (*(Rva00DFE77CHolder **)0x00DFE77C)
+#define TheRva00DFEF10 (*(void **)0x00DFEF10)
+
+void rva00204094()
+{
+	if (!TheAppModule)
+		return;
+	rva00203C21();
+	typedef void (__cdecl *SetFrameProc)(int value);
+	SetFrameProc proc = (SetFrameProc)GetProcAddress(TheAppModule, "SetFrameNumber");
+	if (!proc)
+		return;
+	int value;
+	if (!TheGameLogic->rva001DCD1C())
+		value = TheRva00DFE77C->slot1F();
+	else
+		value = *(int *)((char *)TheRva00DFEF10 + 0xFC);
+	proc(value);
+}
