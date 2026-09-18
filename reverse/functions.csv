@@ -10036,3 +10036,6 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeFlushGM@BfmeOwnerGM@@QAEXXZ,,0x0066F5A0,64,Code/GameEngine/Source/Common/BfmeConv1720.cpp,matched,BFME1 byte-identical donor; b1 0x00803550
 ?bfmeGoVJF@@YGXPAVBfmeMsgVJF@@PAUBfmePairVJF@@H@Z,,0x0065E930,144,Code/GameEngine/Source/Common/BfmeConv1384.cpp,matched,BFME1 byte-identical donor; b1 0x007F1E00; 3 DIR32 string literal(s) agree
 ?bfmeStartAEB@BfmeThingAEB@@QAEXPAVBfmeOwnerAEB@@@Z,,0x0066F560,60,Code/GameEngine/Source/Common/BfmeThreeHundredEightyFive.cpp,matched,BFME1 byte-identical donor; b1 0x00803510
+?bfmeResizeVME@BfmeStrVME@@QAEXID@Z,,0x0002A0B0,98,Code/GameEngine/Source/Common/BfmeConv1427.cpp,matched,BFME1 byte-identical donor; b1 0x008309C0
+?bfmeAppendRangeV36@@YGXPAVBfmeStrV36@@HH@Z,,0x0002A870,136,Code/GameEngine/Source/Common/BfmeConv1477.cpp,matched,BFME1 byte-identical donor; b1 0x00830F00
+?Get_Char_Metric@FontCharsClass@@QAEHG@Z,,0x00158690,73,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClass_Get_Char_Metric.cpp,matched,BFME1 donor with loadCharacterData callee adaptation (sibling Spacing precedent); b1 0x00941400
