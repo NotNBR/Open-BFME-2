@@ -9804,3 +9804,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?Rva00990210Lookup@@YAIPAURva00990210Range@@H@Z,,0x00747370,62,Code/GameEngine/Source/Common/Rva00990210RecordLookup.cpp,matched,BFME1 byte-identical donor; b1 0x00990210
 ?Rva009A4D00Init@@YAXXZ,,0x001B57D0,90,Code/GameEngine/Source/Common/Rva009A4D00TableInit.cpp,matched,BFME1 donor; 90B body uses imm-form BFME2 data addresses as extern spellings emit 93B lea-form; b1 0x009A4D00
 ?acquireSlot@BfmeSlotPool@@QAEPAUBfmeSlotRecord@@XZ,,0x00665FF0,61,Code/GameEngine/Source/Common/BfmeSlotPool.cpp,matched,BFME1 byte-identical donor; b1 0x007F9A80
+?Rva009A8550Init@@YAXXZ,,0x001B8FB0,79,Code/GameEngine/Source/Common/Rva009A4D00TableInit.cpp,matched,BFME1 byte-identical donor; b1 0x009A8550; ICF-folded in BFME1 so the name is this sweep pick among its twins
