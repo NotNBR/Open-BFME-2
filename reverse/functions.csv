@@ -8714,3 +8714,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseRadioButtonData@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x0031522E,47,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseRadioButtonData.cpp,matched,BFME1 GameWindowManagerScript verbatim; GROUP via scanInt pin; RadioButtonData group at plus 4
 ?scanInt@@YAHPBDAAH@Z,,0x00314E96,22,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_scanInt.cpp,matched,GameWindowManagerScript file-static sscanf wrapper; dedicated TU for push-mem FF15 shape; pin coexists
 ??0IPEnumeration@@QAE@XZ,,0x00318329,10,Code/GameEngine/Source/GameNetwork/IPEnumerationCtor.cpp,matched,BFME1 IPEnumeration.cpp verbatim; 8B object with no vtable
+?rva0042219@GameLogic@@QAE_NXZ,,0x00042219,28,Code/GameEngine/Source/GameLogic/System/GameLogicModeGateChecks.cpp,matched,Mode gate leaf for desync report; rejects modes 9 4 7
