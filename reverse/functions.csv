@@ -9410,3 +9410,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?set@Rva00381D49ByteSlot@@QAEXE@Z,,0x00381D49,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
 ?set@Rva00381D5DByteSlot@@QAEXE@Z,,0x00381D5D,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
 ?set@Rva0038612CByteSlot@@QAEXE@Z,,0x0038612C,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
+?set@Rva00388951ByteSlot@@QAEXE@Z,,0x00388951,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
