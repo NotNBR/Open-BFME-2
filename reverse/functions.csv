@@ -9778,3 +9778,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?bfmeMask@@YAHPAVBfmeThingBW@@@Z,,0x006A45B0,25,Code/GameEngine/Source/Common/Bfme5TinyThree.cpp,matched,BFME1 byte-identical donor; b1 0x008636E0
 ?bfmeScale@@YANI@Z,,0x006B8C60,25,Code/GameEngine/Source/Common/Bfme5TinyThree.cpp,matched,BFME1 byte-identical donor; b1 0x008793D0
 ?bfmeSetSign@Gen_0088A5D0@@QAEXE@Z,,0x00039880,25,Code/GameEngine/Source/Common/Bfme5TinyThree.cpp,matched,BFME1 donor with BFME2 sign offset 0x9F55 per retail bytes; b1 0x0088A5D0
+?Rva009B47B0ReadBit@@YAHPAUVp6RawBits@@@Z,,0x001C50B0,74,Code/GameEngine/Source/Common/Rva009B47B0ReadBit.cpp,matched,BFME1 byte-identical donor; b1 0x009B47B0
