@@ -10396,3 +10396,4 @@ _luaG_symbexec,,0x0074CEF0,437,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 
 ?get@Rva007E9240SubAccounts@@QAE_NPADH@Z,,0x00656230,104,Code/GameEngine/Source/GameNetwork/Rva007E90C0Names.cpp,matched,BFME1 donor b1 0x007E9240
 ?get@Rva007E91D0Names@@QAE_NPADH@Z,,0x00656120,104,Code/GameEngine/Source/GameNetwork/Rva007E90C0Names.cpp,matched,BFME1 donor b1 0x007E91D0; ICF-folds to twin at same address
 ?go@Rva00803620Host@@QAEXPAVRva00803620Getter@@@Z,,0x0066F660,172,Code/GameEngine/Source/GameNetwork/Rva00803620FeslAttrs.cpp,matched,BFME1 near-miss donor b1 0x00803620 immediate-only drift
+?copy@Rva005A4660@@QBEXPAI0@Z,,0x001EE035,27,Code/GameEngine/Source/Common/Bfme/Rva005A4660Copy.cpp,matched,BFME1 byte-identical donor; b1 0x005A4660; ICF-folded in BFME1 single pick; words at retail +0x4F0C/+0x4F10
