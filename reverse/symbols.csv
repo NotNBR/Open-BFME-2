@@ -2913,3 +2913,11 @@ _CreateToolhelp32Snapshot@8,0x00687D98
 ??0BfmeRecEQR@@QAE@PAX0PAPAV0@@Z,0x006257C0
 ?bfmeLinkEQR@BfmeHostEQR@@QAEXPAVBfmeRecEQR@@@Z,0x006274B0
 ?bfmeFreeDMC@@YAXPAX@Z,0x0002FD60
+?Get_Current_Asset@AssetRegistry@@QAE?AVAssetReference@@XZ,0x006214D0
+?d_009eef10@@YAXXZ,0x006214D0
+??RBfmeRangeUpdaterFC@@QAEXHHH@Z,0x006C0EE0
+?bfmeConfigure@Gen_008812D0@@QAEXURegion3D@@M@Z,0x006C11E0
+?deallocate@__new_alloc@_STL@@SAXPAXI@Z,0x000237B0
+_bfme_debugAllocInnerDeallocate_82AD90,0x000237B0
+?j_0082ad80@@YAXXZ,0x00023790
+_bfme_debugAllocInnerAllocate_82AD80,0x00023790
