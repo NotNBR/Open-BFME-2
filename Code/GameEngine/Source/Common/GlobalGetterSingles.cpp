@@ -94,3 +94,14 @@ int Rva000B29C3Get(void)
 {
 	return g_Va00DE1B40;
 }
+
+// ?Rva000B29C9Set@@YAXH@Z @ 0x000B29C9 (10B): global dword setter over
+// 0x00DB3BDC (mov eax,[esp+4]; mov [mem],eax; ret 4). Same honest
+// address-derived naming as the getters above.
+
+extern int g_Va00DB3BDC;
+
+void Rva000B29C9Set(int value)
+{
+	g_Va00DB3BDC = value;
+}
