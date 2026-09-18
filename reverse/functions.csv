@@ -10068,3 +10068,5 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeCtorVLY@BfmeThingVLY@@QAEPAV1@XZ,,0x00026C10,28,Code/GameEngine/Source/Common/BfmeConv1424.cpp,matched,BFME1 byte-identical donor; b1 0x0082DDE0
 ?bfmeCtorVLZ@BfmeThingVLZ@@QAEPAV1@XZ,,0x00026C30,33,Code/GameEngine/Source/Common/BfmeConv1424.cpp,matched,BFME1 byte-identical donor; b1 0x0082DE00
 ?bfmeFind1155@BfmeS1155@@QAEIPBDII@Z,,0x0002A3A0,120,Code/GameEngine/Source/Common/BfmeConv1155.cpp,matched,BFME1 byte-identical donor; b1 0x0082F7C0
+?bfmeAssignV14@BfmeStrV14@@QAEPAV1@PAD0ID@Z,,0x000297D0,119,Code/GameEngine/Source/Common/BfmeConv1453.cpp,matched,BFME1 byte-identical donor; b1 0x00830030
+?d_00889d70@Rva00889D70Class@@QAE_NPAX0@Z,,0x00038E40,85,Code/GameEngine/Source/Common/Bfme/Rva00889D70.cpp,matched,BFME1 donor; alloc callee is matched DebugAllocMemory (no pin); b1 0x00889D70
