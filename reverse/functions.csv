@@ -9637,3 +9637,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva0015DF10FloatField@@QBEMXZ,,0x0015DF10,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,
 ?get@Rva0015DF20FloatField@@QBEMXZ,,0x0015DF20,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,
 ?get@Rva0015DF30FloatField@@QBEMXZ,,0x0015DF30,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,
+?get@Rva0015DF40FloatField@@QBEMXZ,,0x0015DF40,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,
