@@ -10349,3 +10349,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?invoke@Rva0088D930Object@@QAEPAV1@H@Z,,0x0003CCC0,21,Code/GameEngine/Source/Common/Rva0088D930VirtualDispatch.cpp,matched,BFME1 donor plus literal repair to BBFAA0
 ?rva0082D9D0Add@@YAXPAHH@Z,,0x00026640,21,Code/GameEngine/Source/Common/Rva0082D9D0Add.cpp,matched,BFME1 byte-identical donor b1 0x0082D9D0; single pick and D9F0 twin stays unclaimed
 ?bfmeGoBMD@BfmeThingBMD@@QAEXXZ,,0x00481A54,26,Code/GameEngine/Source/Common/BfmeConv491.cpp,matched,BFME1 donor shape; b1 0x00203110; ICF pick; sink call resolves to matched findUpgrade row 0x26F26D (no new pins)
+??0Rva003B85D0@@QAE@XZ,,0x004E1937,23,Code/GameEngine/Source/Common/R2ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x003B85D0
