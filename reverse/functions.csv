@@ -10055,3 +10055,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?rva00809330@BfmeThingUNC@@QAEXPAVBfmeC994@@H@Z,,0x00675230,198,Code/GameEngine/Source/GameNetwork/Y4FeslPlayerData.cpp,matched,BFME1 byte-identical donor; b1 0x00809330; 4 DIR32 string literal(s) agree
 ?bfmeAppendVKG@BfmeBufVKG@@QAEPAV1@PBDI@Z,,0x006D52A0,93,Code/Libraries/Source/EA/Apt/AptString/EAStringAppendBounded.cpp,matched,BFME1 byte-identical donor b1 0x0089EC70
 ?fillRandom008747F0@@YAXPAH@Z,,0x006B4090,65,Code/GameEngine/Source/Common/Rva008747F0RandomFill.cpp,matched,BFME1 byte-identical donor; b1 0x008747F0
+?Rva009B5090DecodeMode@@YAHPAE@Z,,0x001C5990,68,Code/GameEngine/Source/Common/BfmeTwoBitModeDecode.cpp,matched,BFME1 byte-identical donor; b1 0x009B5090
