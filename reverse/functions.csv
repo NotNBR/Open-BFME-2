@@ -9949,3 +9949,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?bfmeSubVIY@BfmeThingVIY@@QAEXPAVBfmeMsgVIX@@PAX1@Z,,0x0065DF80,171,Code/GameEngine/Source/Common/BfmeConv1380.cpp,matched,BFME1 byte-identical donor; b1 0x007F1400; 5 DIR32 string literals agree
 ?bfmeGoVIY@BfmeThingVIY@@QAEXPAVBfmeMsgVIX@@PAX1111@Z,,0x0065E270,105,Code/GameEngine/Source/Common/BfmeConv1380.cpp,matched,BFME1 byte-identical donor; b1 0x007F16F0; 3 DIR32 string literals agree
 ?bfmeGoVIX@@YGXPAVBfmeMsgVIX@@PAX1111@Z,,0x006568F0,129,Code/GameEngine/Source/Common/BfmeConv1380.cpp,matched,BFME1 byte-identical donor; b1 0x007E9900; ICF-folded in BFME1 so the name is this sweep pick among its twins; 6 DIR32 string literals agree
+?process@Gen0080AB50@@QAEXI@Z,,0x00675420,359,Code/GameEngine/Source/GameNetwork/Y4FeslFavGameList.cpp,matched,BFME1 byte-identical donor; b1 0x00809520; 3 DIR32 string literals agree
