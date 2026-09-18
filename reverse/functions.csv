@@ -10144,3 +10144,9 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?bfmeRunRG@BfmeThingRG@@QAEXXZ,,0x006574D0,44,Code/GameEngine/Source/Common/BfmeThreeHundredThirteen.cpp,matched,BFME1 byte-identical donor; b1 0x007EA520
 ?bfmeGoBCE@BfmeThingBCE@@QAEXXZ,,0x00656E90,16,Code/GameEngine/Source/Common/BfmeConv441.cpp,matched,BFME1 byte-identical donor; b1 0x007E9EE0
 ?bfmeFillCount82DD70@@YAPADPADIABD@Z,,0x00026BD0,42,Code/GameEngine/Source/Common/BfmeFillCount82DD70.cpp,matched,BFME1 byte-identical donor; b1 0x0082DD70; callee rva0082ADB0Fill pre-pinned at 0x000237C0; sweep dup pin stale
+?initPool@Rva00803080@@QAEXXZ,,0x0066F120,71,Code/GameEngine/Source/GameNetwork/Rva008030C0FeslPoolInit.cpp,matched,BFME1 byte-identical donor; b1 0x008030C0
+??0Rva009F69B1@@QAE@XZ,,0x00628CFE,26,Code/GameEngine/Source/Common/Rva009F69B1Ctor.cpp,matched,BFME1 byte-identical donor; b1 0x009F69B1
+?bfmeOneSVA@BfmeThingSVA@@QAEXH@Z,,0x0002A380,29,Code/GameEngine/Source/Common/BfmeConv1302.cpp,matched,BFME1 byte-identical donor; b1 0x0082FAF0
+?rva008C3E70Adapter@@YGXHHH@Z,,0x006E058B,26,Code/GameEngine/Source/Common/Rva008C3E70CallAdapter.cpp,matched,BFME1 byte-identical donor; b1 0x008C3E70
+?bfmeTwoSVA@BfmeThingSVA@@QAEXH@Z,,0x0002A120,29,Code/GameEngine/Source/Common/BfmeConv1302.cpp,matched,BFME1 byte-identical donor; b1 0x00830A30
+?bfmeFwdVMT@BfmeStrVMT@@QAEXHH@Z,,0x0002A900,43,Code/GameEngine/Source/Common/BfmeConv1440.cpp,matched,BFME1 byte-identical donor; b1 0x00830F90
