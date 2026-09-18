@@ -10135,3 +10135,9 @@ _Rva0088E090ResumeOtherThreads,,0x0003D770,107,Code/Libraries/Source/WWVegas/WWD
 ?bfmeLookupZL@BfmeHostZL@@QAEPAXPBD@Z,,0x0066D6D0,51,Code/GameEngine/Source/Common/BfmeConv2109.cpp,matched,BFME1 byte-identical donor; b1 0x00801380
 ?bfmeOneCNG@BfmeSubCNG@@QAEXPAX@Z,,0x006BEB00,62,Code/GameEngine/Source/Common/Rva0087F270GeometryRecordUpdate.cpp,matched,BFME1 byte-identical donor; b1 0x0087F270; calcBoundingStuff pin @0x6BE700 (donor member spelling)
 ?bfmeGoVJJ@BfmeThingVJJ@@QAEXPAVBfmeMsgVJJ@@@Z,,0x006766E0,80,Code/GameEngine/Source/Common/BfmeConv1387.cpp,matched,BFME1 byte-identical donor; b1 0x0080A7E0
+?bfmeFindAEA@BfmeThingAEA@@QAE_NPAUBfmeKeyAEA@@PAX@Z,,0x0066ECA0,60,Code/GameEngine/Source/Common/BfmeThreeHundredEightyFour.cpp,matched,BFME1 byte-identical donor; b1 0x00802B70
+?d_00889dd0@Rva00889DD0Class@@QAEXH@Z,,0x00038EA0,55,Code/GameEngine/Source/Common/Bfme/Rva00889DD0.cpp,matched,BFME1 byte-identical donor; b1 0x00889DD0
+?lookup2A8@Rva00801340Owner@@QAEPAXPBD@Z,,0x0066D690,51,Code/GameEngine/Source/GameNetwork/Rva00801340FeslLookup.cpp,matched,BFME1 byte-identical donor; b1 0x00801340
+?bfmeRunRE@BfmeThingRE@@QAEXXZ,,0x006574A0,44,Code/GameEngine/Source/Common/BfmeThreeHundredTwelve.cpp,matched,BFME1 byte-identical donor; b1 0x007EA4F0
+?clear@Rva00803080@@QAEXXZ,,0x0066F040,79,Code/GameEngine/Source/GameNetwork/Rva00802FD0FeslClear.cpp,matched,BFME1 byte-identical donor; b1 0x00802FD0
+?rva00802240@Rva00802380Owner@@QAEPAXPBD@Z,,0x0066E4D0,44,Code/GameEngine/Source/GameNetwork/Rva00802240FeslLookup.cpp,matched,BFME1 byte-identical donor; b1 0x00802240
