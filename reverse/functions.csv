@@ -10343,3 +10343,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?bfmeApply1040@@YAXPAUBfmeS1040@@H@Z,,0x001B70A0,277,Code/GameEngine/Source/Common/BfmeConv1040.cpp,matched,BFME1 donor with extern-array table repair; b1 0x009A6630
 ?bfmeGo1040B@@YAXPAUBfmeS1040@@H@Z,,0x001B71C0,45,Code/GameEngine/Source/Common/BfmeConv1040.cpp,matched,BFME1 byte-identical donor; b1 0x009A6750
 ?rva00523630@@YGHFF@Z,,0x003EFEA0,18,Code/GameEngine/Source/Common/Rva00523630Cmp.cpp,matched,BFME1 byte-identical donor b1 0x00523630 single ICF pick
+?bfmeGoBNH@BfmeThingBNH@@QAEPAV1@PAX@Z,,0x000EF966,27,Code/GameEngine/Source/Common/BfmeConv499.cpp,matched,BFME1 byte-identical donor; b1 0x006D65B0; ICF pick; callee bfmeDoBNH pinned at 0x132D89 alongside BFME2LoadParticleTexture pin
