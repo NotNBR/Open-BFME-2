@@ -8346,3 +8346,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva0003ECCD6@ThreatFinderUpdate@@SA?AW4NameKeyType@@XZ,,0x003ECCD6,69,Code/GameEngine/Source/GameLogic/Object/Update/ThreatFinderUpdatePoolKey.cpp,matched,
 ?rva000403A61@AttributeModifierPoolUpdate@@SA?AW4NameKeyType@@XZ,,0x00403A61,69,Code/GameEngine/Source/GameLogic/Object/Update/AttributeModifierPoolUpdatePoolKey.cpp,matched,
 ?rva000452DA3@WallHubBehavior@@SA?AW4NameKeyType@@XZ,,0x00452DA3,69,Code/GameEngine/Source/GameLogic/Object/Behavior/WallHubBehaviorPoolKey.cpp,matched,
+?rva0004561C1@BuildingBehavior@@SA?AW4NameKeyType@@XZ,,0x004561C1,69,Code/GameEngine/Source/GameLogic/Object/Behavior/BuildingBehaviorPoolKey.cpp,matched,
