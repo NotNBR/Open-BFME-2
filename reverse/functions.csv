@@ -10081,3 +10081,5 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?Compute_Ram_Size@MeshModelClass@@QAEHXZ,,0x001880E0,67,Code/Libraries/Source/WWVegas/WW3D2/MeshModelClass_ComputeRamSize.cpp,matched,BFME1 donor with BFME2 base repair 0x94 to 0x8C; retail reads +0x8C/+0x90/+0x98; b1 0x0096C9B0
 ?bfmeReverseVKK@BfmeStrVKK@@QAEPAV1@XZ,,0x006D59A0,75,Code/GameEngine/Source/Common/BfmeConv1404.cpp,matched,BFME1 byte-identical donor; b1 0x0089F3D0
 ?bfmeTruncVKK@BfmeStrVKK@@QAEXI@Z,,0x006D6230,31,Code/GameEngine/Source/Common/BfmeConv1404.cpp,matched,BFME1 byte-identical donor; b1 0x0089EC50
+?bfmeInsertQX@BfmeThingQX@@QAEPAU1@IIE@Z,,0x0002A140,104,Code/GameEngine/Source/Common/BfmeThreeHundredSix.cpp,matched,BFME1 byte-identical donor; b1 0x00830A50
+?bfmeApplyEB@@YAXPAVBfmeObjEB@@@Z,,0x006BE450,96,Code/GameEngine/Source/Common/Rva0087EBB0Max.cpp,matched,BFME1 byte-identical donor; b1 0x0087EBB0
