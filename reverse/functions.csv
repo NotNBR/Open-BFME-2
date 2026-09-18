@@ -9792,3 +9792,7 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?Rva009A6600InitBlocks@@YAXPAX@Z,,0x001B7070,37,Code/GameEngine/Source/Common/Rva009A4D00TableInit.cpp,matched,BFME1 byte-identical donor; b1 0x009A6600
 ?appendTestRaw@@YAXPAVBfmeRawBuffer@@@Z,,0x001BB670,67,Code/GameEngine/Source/Common/TestRawAppend.cpp,matched,BFME1 byte-identical donor; b1 0x009AAC30; 1 DIR32 string literal(s) agree
 ?bfmeGaussPdf@@YANNNN@Z,,0x001B6970,65,Code/GameEngine/Source/Common/BfmeGaussPdf.cpp,matched,BFME1 byte-identical donor; b1 0x009A5F00
+?assignFrom@Rva0082BD80Slot@@QAEPAV1@PBH@Z,,0x000247C0,26,Code/GameEngine/Source/Common/Rva0082B290Slot.cpp,matched,BFME1 byte-identical donor; b1 0x0082BD80
+?set@Rva0082B290Slot@@QAEPAV1@H@Z,,0x00023CB0,24,Code/GameEngine/Source/Common/Rva0082B290Slot.cpp,matched,BFME1 byte-identical donor; b1 0x0082B290; ICF-folded in BFME1 so the name is this sweep pick among its twins
+?set@Rva0082B2B0Slot@@QAEPAV1@H@Z,,0x00023CB0,24,Code/GameEngine/Source/Common/Rva0082B290Slot.cpp,matched,BFME1 byte-identical donor; b1 0x0082B2B0; ICF-folded with owner
+?set@Rva0082B2D0Slot@@QAEPAV1@H@Z,,0x00023CB0,24,Code/GameEngine/Source/Common/Rva0082B290Slot.cpp,matched,BFME1 byte-identical donor; b1 0x0082B2D0; ICF-folded with owner
