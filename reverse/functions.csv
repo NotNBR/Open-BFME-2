@@ -9939,3 +9939,5 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?setID@Object@@IAEXW4ObjectID@@@Z,,0x0028B532,55,Code/GameEngine/Source/GameLogic/Object/Object_setID.cpp,matched,BFME1 byte-identical donor; b1 0x001BEC70
 ?bfmeTestSKA@BfmeSubSKA@@QAEDH@Z,,0x00675590,84,Code/GameEngine/Source/GameNetwork/Y4FeslSubTest.cpp,matched,BFME1 byte-identical donor; b1 0x00809690
 ??1Rva00808920LanGame@@QAE@XZ,,0x006755F0,91,Code/GameEngine/Source/GameNetwork/Rva008097D0LanTheaterRemove.cpp,matched,BFME1 byte-identical donor; b1 0x008096F0
+?skipWhitespace@@YAPADPAD@Z,,0x000357C0,42,Code/GameEngine/Source/Common/System/AsciiString_skipWhitespace.cpp,matched,BFME1 byte-identical donor; b1 0x00887260
+??0Rva007F0CB0BlobRecord@@QAE@PAVRva007E8810Message@@@Z,,0x0065D8D0,470,Code/GameEngine/Source/GameNetwork/V2FeslBlobRecordPopulate.cpp,matched,BFME1 byte-identical donor; b1 0x007F0D40
