@@ -9899,3 +9899,4 @@ _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRe
 ?Rva008043F0Connect@@YAXPAURva00804150ProtoMangleRef@@HPBD@Z,,0x00670430,65,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x008043F0
 ?apply@Rva00478E90@@QAEHPAX@Z,,0x0031415A,19,Code/GameEngine/Source/Common/Rva00478E90Set.cpp,matched,BFME1 byte-identical donor; b1 0x00478E90
 _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangleHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x00804330
+?Rva009A8910Initialize@@YAHPAURva009A8910Context@@H@Z,,0x001B9360,167,Code/GameEngine/Source/Common/Rva009A8910Initialize.cpp,matched,BFME1 byte-identical donor; b1 0x009A8910
