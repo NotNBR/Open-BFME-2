@@ -9855,3 +9855,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ?get@Rva007E9DB0@@QAEPAURva007E9DB0Cached@@XZ,,0x00656D60,56,Code/GameEngine/Source/Common/Q3LazyCachedAccessor.cpp,matched,BFME1 byte-identical donor; b1 0x007E9DB0
 ?get@Rva007E9DF0@@QAEPAURva007E9DF0Cached@@XZ,,0x00656DA0,56,Code/GameEngine/Source/Common/Q3LazyCachedAccessor.cpp,matched,BFME1 byte-identical donor; b1 0x007E9DF0
 ?get@Rva007E9E30@@QAEPAURva007E9E30Cached@@XZ,,0x00656DE0,56,Code/GameEngine/Source/Common/Q3LazyCachedAccessor.cpp,matched,BFME1 byte-identical donor; b1 0x007E9E30
+?get@Rva007E9E70@@QAEPAURva007E9E70Cached@@XZ,,0x00656E20,56,Code/GameEngine/Source/Common/Q3LazyCachedAccessor.cpp,matched,BFME1 byte-identical donor; b1 0x007E9E70
