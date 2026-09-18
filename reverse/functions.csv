@@ -8623,3 +8623,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??$__pop_heap_aux@PAUS4SortElem8@@U1@US4Cmp00625BB0@@@_STL@@YAXPAUS4SortElem8@@00US4Cmp00625BB0@@@Z,,0x00626010,57,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_aux_s4sortelem8.cpp,matched,
 ??$__pop_heap_aux@PAUS4SortElem8@@U1@US4Cmp00625C10@@@_STL@@YAXPAUS4SortElem8@@00US4Cmp00625C10@@@Z,,0x00626050,57,Code/Libraries/Source/WWVegas/WWLib/stlport_pop_heap_aux_s4sortelem8_desc.cpp,matched,
 ?rva00049BFDD@RadiateFearUpdate@@SA?AW4NameKeyType@@XZ,,0x0049BFDD,69,Code/GameEngine/Source/GameLogic/Object/Update/RadiateFearUpdatePoolKey.cpp,matched,cached pool-name key; pool string RadiateFearUpdate; /O1 static-guard EH; nameToKey row
+?rva00049C471@GiveUpgradeUpdate@@SA?AW4NameKeyType@@XZ,,0x0049C471,69,Code/GameEngine/Source/GameLogic/Object/Update/GiveUpgradeUpdatePoolKey.cpp,matched,cached pool-name key; pool string GiveUpgradeUpdate; /O1 static-guard EH; nameToKey row
