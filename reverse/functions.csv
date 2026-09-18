@@ -10329,3 +10329,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?bfmeKillVF@BfmeThingVF@@QAEPAXH@Z,,0x006672B0,36,Code/GameEngine/Source/Common/BfmeThreeHundredSixtyThree.cpp,matched,BFME1 byte-identical donor b1 0x007FADA0; single ICF pick
 ?bfmeStep1_009A75E0@@YAXXZ,,0x001C4300,140,Code/GameEngine/Source/Common/S3GuardedDelegates3.cpp,matched,BFME1 near-miss donor b1 0x009B3A00 immediate-only drift
 ?give@Rva00809500Owner@@QAEXPAURva00809500Entry@@@Z,,0x00675400,27,Code/GameEngine/Source/Common/U2HandleLeaves.cpp,matched,BFME1 byte-identical donor b1 0x00809500; single ICF pick
+?handle@Gen009F5040@@QAEXXZ,,0x00627770,148,Code/GameEngine/Source/Common/Gen009F5040Handle.cpp,matched,BFME1 near-miss donor; b1 0x009F5040; member-offset drift +0x30 (m_node +0x120); calculate pin
