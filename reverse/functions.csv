@@ -9832,3 +9832,4 @@ _Rva009BD470Vp6FilterSse,,0x001CDD70,253,Code/GameEngine/Source/Common/BfmeConv9
 ??0Rva007F4DA0@@QAE@XZ,,0x00661830,33,Code/GameEngine/Source/Common/Rva007F4DA0Ctor.cpp,matched,BFME1 byte-identical donor; b1 0x007F4DA0
 ?_bfme_debugRecordCallsite@@YAXH@Z,,0x00038790,33,Code/GameEngine/Source/Common/Debug_recordCallsite.cpp,matched,BFME1 byte-identical donor; b1 0x008896A0
 ??0Energy@@QAE@XZ,,0x00674870,32,Code/GameEngine/Source/Common/RTS/EnergyConstructorThunk.cpp,matched,BFME1 byte-identical donor; b1 0x00808880
+?bfmeIsReady@@YAHPBVBfmeThingDA@@@Z,,0x006A4590,32,Code/GameEngine/Source/Common/Bfme5ThirtyThree.cpp,matched,BFME1 donor with unserved ReplaceDots trimmed; b1 0x008636C0
