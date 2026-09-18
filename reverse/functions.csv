@@ -10324,3 +10324,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?setup@Rva007F6A80Host@@QAEXXZ,,0x00663210,46,Code/GameEngine/Source/GameNetwork/Rva007F6A80Setup.cpp,matched,BFME1 byte-identical donor; b1 0x007F6A80; ICF-folded in BFME1 so the name is this sweep single pick
 ?next@Rva007F05A0BlobCursor@@QAE_NPAVRva007F0CB0BlobRecord@@@Z,,0x0065D3A0,865,Code/GameEngine/Source/GameNetwork/Rva007F05A0BlobCursor.cpp,matched,BFME1 near-miss donor; b1 0x007F05A0; immediate-only drift (2 literal pushes)
 ?bfmeCellX@Gen_008F7CD0@@QBEHM@Z,,0x00739840,44,Code/GameEngine/Source/Common/BfmeConv1570.cpp,matched,BFME1 byte-identical donor b1 0x008F7480; X-file defines X and Y-twin lives at 0x739870
+?bfmeCellY@Gen_008F7CD0@@QBEHM@Z,,0x00739870,44,Code/GameEngine/Source/Common/BfmeConv1572.cpp,matched,BFME1 byte-identical donor b1 0x008F74B0; Y-file defines Y and X-twin lives at 0x739840
