@@ -10273,3 +10273,5 @@ _Rva0088E1A0ShowAssertCrashDialog,,0x0003D880,410,Code/Libraries/Source/WWVegas/
 ?clear@Rva007F6C60@@QAEXXZ,,0x00663370,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 64; b1 0x007F6C60
 ?clear@Rva00801570@@QAEXXZ,,0x0066D890,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 48; b1 0x00801570
 ?clear@Rva00801600@@QAEXXZ,,0x0066D900,78,Code/GameEngine/Source/Common/S3PolymorphicArrayClear.cpp,matched,BFME1 donor stride 56; b1 0x00801600
+?sendCreateGameRequest@BfmeSinkSKA@@QAEXHHHPBD@Z,,0x006700C0,199,Code/GameEngine/Source/GameNetwork/FeslTidMessageSender.cpp,matched,BFME1 byte-identical donor b1 0x00804080 ICF pick 6 literals
+?bfmeSendSKA@BfmeSinkSKA@@QAEXHHH@Z,,0x00670050,103,Code/GameEngine/Source/GameNetwork/FeslTidMessageSender.cpp,matched,BFME1 byte-identical donor b1 0x00804010 ICF pick 1 literal
