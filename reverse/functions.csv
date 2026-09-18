@@ -8413,3 +8413,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000491264@DamageFieldUpdate@@SA?AW4NameKeyType@@XZ,,0x00491264,69,Code/GameEngine/Source/GameLogic/Object/Update/DamageFieldUpdatePoolKey.cpp,matched,
 ?rva000491667@MonitorConditionUpdate@@SA?AW4NameKeyType@@XZ,,0x00491667,69,Code/GameEngine/Source/GameLogic/Object/Update/MonitorConditionUpdatePoolKey.cpp,matched,
 ?rva0004999AC@OneRingPenaltyUpdate@@SA?AW4NameKeyType@@XZ,,0x004999AC,69,Code/GameEngine/Source/GameLogic/Object/Update/OneRingPenaltyUpdatePoolKey.cpp,matched,
+?rva000499F64@SpecialEnemySenseUpdate@@SA?AW4NameKeyType@@XZ,,0x00499F64,69,Code/GameEngine/Source/GameLogic/Object/Update/SpecialEnemySenseUpdatePoolKey.cpp,matched,
