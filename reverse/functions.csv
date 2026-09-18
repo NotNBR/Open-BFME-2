@@ -8702,3 +8702,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GCreateCrateDieModuleData@@UAEPAXI@Z,,0x0035CF10,28,Code/GameEngine/Source/GameLogic/Object/Die/CreateCrateDieModuleDataDtor.cpp,matched,Scalar deleter co-emitted with the ModuleData dtor; flag plus global delete
 ??0MultiplayerColorDefinition@@QAE@XZ,,0x00380C4E,90,Code/GameEngine/Source/Common/MultiplayerColorDefinitionCtor.cpp,matched,
 ?isValidScience@ScienceStore@@QBE_NW4ScienceType@@@Z,,0x001FF50D,18,Code/GameEngine/Source/Common/RTS/ScienceStoreIsValidScience.cpp,matched,ZH Science.cpp verbatim (public const Bool); findScienceInfo pin; neg/sbb/neg null normalization
+?friend_lookupScience@ScienceStore@@QBE?AW4ScienceType@@PBD@Z,,0x001FF65D,81,Code/GameEngine/Source/Common/RTS/ScienceStoreFriendLookupScience.cpp,matched,ZH Science.cpp verbatim (public const); isValidScience row; filler+throw idiom; Science-not-known literal
