@@ -9394,3 +9394,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva00078914FloatField@@QBEMXZ,,0x00078914,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,BFME1 DispFloatFieldGetters port; 7B fld getter at disp 0x500; fifth of 6-contiguous cluster
 ?setRva0029B04D@InGameUI@@UAEXH@Z,,0x0029B04D,19,Code/GameEngine/Source/GameClient/InGameUI_Rva0029B04D.cpp,matched,InGameUI slot-99 monotonic max-setter over unsigned field plus0x7EC; vtable-proven class; leaf with no calls
 ?parseTooltip@@YA_NPADPAVWinInstanceData@@0PAX@Z,,0x00315BA3,82,Code/GameEngine/Source/GameClient/GUI/GameWindowManagerScript_parseTooltip.cpp,matched,
+?createListener@MilesAudioManager@@QAEXXZ,,0x00053B63,62,Code/GameEngineDevice/Source/MilesAudioDevice/MilesAudioManagerCreateListener.cpp,matched,BFME1 CreateListener verbatim plus listener flag; array-end lands on count
