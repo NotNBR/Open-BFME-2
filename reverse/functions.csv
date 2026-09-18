@@ -8400,3 +8400,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000485A2F@CreateObjectDieIfEldestKindof@@SA?AW4NameKeyType@@XZ,,0x00485A2F,69,Code/GameEngine/Source/GameLogic/Object/Die/CreateObjectDieIfEldestKindofPoolKey.cpp,matched,
 ?rva000486155@CrushDie@@SA?AW4NameKeyType@@XZ,,0x00486155,69,Code/GameEngine/Source/GameLogic/Object/Die/CrushDiePoolKey.cpp,matched,
 ?rva0004864C9@DestroyDie@@SA?AW4NameKeyType@@XZ,,0x004864C9,69,Code/GameEngine/Source/GameLogic/Object/Die/DestroyDiePoolKey.cpp,matched,
+?rva000486598@FXListDie@@SA?AW4NameKeyType@@XZ,,0x00486598,69,Code/GameEngine/Source/GameLogic/Object/Die/FXListDiePoolKey.cpp,matched,
