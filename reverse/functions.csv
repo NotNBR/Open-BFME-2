@@ -10361,3 +10361,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ??0Rva000EC1E0@@QAE@XZ,,0x004E188E,20,Code/GameEngine/Source/Common/R2ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x000EC1E0; ICF-folded in BFME1 so the name is this sweep single pick among its twins
 ??2Gen007F0130@@SAPAXI@Z,,0x0065D010,20,Code/GameEngine/Source/Common/S3AllocatorOperatorNewDelete.cpp,matched,BFME1 byte-identical donor; b1 0x007F0130; ICF-folded so single pick among new twins
 ??3Gen007F0170@@SAXPAX@Z,,0x0065D030,20,Code/GameEngine/Source/Common/S3AllocatorOperatorNewDelete.cpp,matched,BFME1 byte-identical donor; b1 0x007F0170; ICF-folded so single pick among delete twins
+?bfmeGoVFD@@YGXPAUBfmeThingVFD@@@Z,,0x00663E50,50,Code/GameEngine/Source/Common/BfmeConv1351.cpp,matched,BFME1 byte-identical donor; b1 0x007F7760; body present-unmatched row-only
