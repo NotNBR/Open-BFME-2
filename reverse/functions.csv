@@ -9350,3 +9350,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??1Rva005CD1A9@@UAE@XZ,,0x005CD1A9,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x5CD14D
 ?get@Rva0006E032FloatField@@QBEMXZ,,0x0006E032,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter
 ??1Rva005FC1E4@@UAE@XZ,,0x005FC1E4,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x5FC1CA
+??1Rva00600084@@UAE@XZ,,0x00600084,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper pin 0x60006A
