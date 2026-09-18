@@ -23,9 +23,18 @@ struct VersionBlockEntry
 class VersionBlockKeyCompare
 {
 public:
+	bool lessEntries(const VersionBlockEntry *left, const VersionBlockEntry *right) const;
 	bool lessEntryKey(const VersionBlockEntry *entry, const char *key) const;
 	bool lessKeyEntry(const char *key, const VersionBlockEntry *entry) const;
 };
+
+// ?lessEntries@VersionBlockKeyCompare@@QBE_NPBUVersionBlockEntry@@0@Z
+bool VersionBlockKeyCompare::lessEntries(const VersionBlockEntry *left, const VersionBlockEntry *right) const
+{
+	const char *rightKey = right->m_key;
+	const char *leftKey = left->m_key;
+	return (strcmp(leftKey, rightKey) < 0) || false;
+}
 
 // ?lessEntryKey@VersionBlockKeyCompare@@QBE_NPBUVersionBlockEntry@@PBD@Z
 bool VersionBlockKeyCompare::lessEntryKey(const VersionBlockEntry *entry, const char *key) const
