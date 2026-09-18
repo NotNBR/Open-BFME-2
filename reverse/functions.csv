@@ -9429,3 +9429,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?getPlayerFromMask@PlayerList@@QAEPAVPlayer@@H@Z,,0x002A7A6F,49,Code/GameEngine/Source/Common/RTS/PlayerList_getPlayerFromMask.cpp,matched,BFME1 PlayerList.cpp crash-less twin of findPlayerWithNameKey; mask at +0x3AC; five ThePlayerList callers
 ?set@Rva004647FDByteSlot@@QAEXE@Z,,0x004647FD,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0046F84CByteSlot@@QAEXE@Z,,0x0046F84C,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?set@Rva0047A2A9ByteSlot@@QAEXE@Z,,0x0047A2A9,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
