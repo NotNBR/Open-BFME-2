@@ -2584,3 +2584,11 @@ _bfmeSearch1155,0x00029EB0
 ?bfmeInsertV14@BfmeStrV14@@QAEXPADID@Z,0x00029530
 ?bfmeGoOR@@YAXPAX0E@Z,0x00026F40
 ?bfmeSearchQW@@YAPADPAD0E@Z,0x00026F40
+??$_M_find@U?$pair@HH@_STL@@@?$hashtable@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@U?$pair@HH@2@URva00927800Hash@@U?$_Select1st@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@2@URva00927800Eq@@V?$allocator@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@2@@_STL@@ABEPAU?$_Hashtable_node@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@1@ABU?$pair@HH@1@@Z,0x0016D710
+??$_M_find@U?$pair@HH@_STL@@@?$hashtable@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@U?$pair@HH@2@URva00928590Hash@@U?$_Select1st@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@2@URva00928590Eq@@V?$allocator@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@2@@_STL@@ABEPAU?$_Hashtable_node@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@1@ABU?$pair@HH@1@@Z,0x0016D710
+?_M_insert@?$hashtable@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@U?$pair@HH@2@URva00928590Hash@@U?$_Select1st@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@2@URva00928590Eq@@V?$allocator@U?$pair@$$CBU?$pair@HH@_STL@@H@_STL@@@2@@_STL@@QAEAAU?$pair@$$CBU?$pair@HH@_STL@@H@2@ABU32@@Z,0x0016E230
+??1?$CComCritSecLock@VCComCriticalSection@ATL@@@ATL@@QAE@XZ,0x00628CE7
+?Add@?$CSimpleArray@PAXV?$CSimpleArrayEqualHelper@PAX@ATL@@@ATL@@QAEHABQAX@Z,0x00628DDD
+?Compute_Ram_Size@MeshGeometryClass@@QAEHXZ,0x0016ADC0
+?Compute_Ram_Size@MeshMatDescClass@@QAEHXZ,0x0015CAE0
+?bfmeTotalVNQ@BfmeThingVNQ@@QAEHXZ,0x0016EEE0
