@@ -805,29 +805,11 @@ Quaternion Build_Quaternion(const Matrix4x4 & mat)
  * HISTORY:                                                                                    * 
  *   02/28/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
-Matrix3x3 Build_Matrix3(const Quaternion & q)
-{
-	Matrix3x3 m;
-
-	m[0][0] = (float)(1.0 - 2.0 * (q[1] * q[1] + q[2] * q[2]));
-	m[0][1] = (float)(2.0 * (q[0] * q[1] - q[2] * q[3]));
-	m[0][2] = (float)(2.0 * (q[2] * q[0] + q[1] * q[3]));
-
-	m[1][0] = (float)(2.0 * (q[0] * q[1] + q[2] * q[3]));
-	m[1][1] = (float)(1.0 - 2.0f * (q[2] * q[2] + q[0] * q[0]));
-	m[1][2] = (float)(2.0 * (q[1] * q[2] - q[0] * q[3]));
-
-	m[2][0] = (float)(2.0 * (q[2] * q[0] - q[1] * q[3]));
-	m[2][1] = (float)(2.0 * (q[1] * q[2] + q[0] * q[3]));
-	m[2][2] =(float)(1.0 - 2.0 * (q[1] * q[1] + q[0] * q[0]));
-
-	return m;
-}
-
-// Build_Matrix4 (Matrix4 spelling) lives in the dedicated quat_BuildMatrix4.cpp TU:
-// quat.cpp builds at /arch:SSE2 for its 17 matched bodies, but that body only
-// matches at /arch:SSE, and Matrix4x4 is a typedef to Matrix4 so both spellings
-// are the same symbol and cannot share a TU.
+// Build_Matrix3/Build_Matrix4 (Matrix3/Matrix4 spellings) live in the dedicated
+// quat_BuildMatrix3.cpp / quat_BuildMatrix4.cpp TUs: quat.cpp builds at
+// /arch:SSE2 for its matched bodies, but those bodies only match at /arch:SSE,
+// and Matrix3x3/Matrix4x4 are typedefs to Matrix3/Matrix4 so both spellings are
+// the same symbols and cannot share a TU.
   
 void Quaternion::Rotate_X(float theta)
 {
