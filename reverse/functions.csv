@@ -9391,3 +9391,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva001588A0@FontCharsClass@@QAEXGPAGHHH@Z,,0x001588A0,222,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassRva001588A0.cpp,matched,Opaque nibble-blit twin of Blit_Char with x-bias clamp and unconditional OR; caller in unidentified 0x158E90
 ?clear@Rva003B4071@@QAEXXZ,,0x003B4071,48,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque double guarded-delete (second-then-first via member pointers); locals pin regs
 ??1Rva003B4100@@UAE@XZ,,0x003B4100,14,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,opaque dtor explicit clear call on member at +4; helper row 0x3B4071
+?get@Rva00078914FloatField@@QBEMXZ,,0x00078914,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,BFME1 DispFloatFieldGetters port; 7B fld getter at disp 0x500; fifth of 6-contiguous cluster
+?setRva0029B04D@InGameUI@@UAEXH@Z,,0x0029B04D,19,Code/GameEngine/Source/GameClient/InGameUI_Rva0029B04D.cpp,matched,InGameUI slot-99 monotonic max-setter over unsigned field plus0x7EC; vtable-proven class; leaf with no calls
