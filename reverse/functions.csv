@@ -8342,3 +8342,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva000373109@MineshaftPortalBehaviour@@SA?AW4NameKeyType@@XZ,,0x00373109,69,Code/GameEngine/Source/GameLogic/Object/Behavior/MineshaftPortalBehaviourPoolKey.cpp,matched,
 ?rva00039085C@PhysicsBehavior@@SA?AW4NameKeyType@@XZ,,0x0039085C,69,Code/GameEngine/Source/GameLogic/Object/Behavior/PhysicsBehaviorPoolKey.cpp,matched,
 ?rva000398538@CastleBehavior@@SA?AW4NameKeyType@@XZ,,0x00398538,69,Code/GameEngine/Source/GameLogic/Object/Behavior/CastleBehaviorPoolKey.cpp,matched,
+?rva0003A4CCD@StrafeAreaUpdate@@SA?AW4NameKeyType@@XZ,,0x003A4CCD,69,Code/GameEngine/Source/GameLogic/Object/Update/StrafeAreaUpdatePoolKey.cpp,matched,
