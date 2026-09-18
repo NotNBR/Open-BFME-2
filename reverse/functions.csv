@@ -9125,3 +9125,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ??_GVector3Randomizer@@UAEPAXI@Z,,0x007235D0,30,Code/Libraries/Source/WWVegas/WWMath/Vector3RandomizerDeletingDestructors.cpp,matched,Base scalar-deleting dtor; all four concrete randomizer vtables fold slot 0 here; calls base dtor plus matched operator delete
 ??$__uninitialized_copy@PBVAsciiString@@PAV1@@_STL@@YAPAVAsciiString@@PBV1@0PAV1@ABU__false_type@0@@Z,,0x0002C4B2,38,Code/GameEngine/Source/Common/Thing/AsciiStringUninitializedCopy.cpp,matched,STLport uninitialized_copy StringBase stride 4 via opaque Construct pin at 0x2C485
 ?enable@Rva00042F57ByteOneSetter@@QAEXXZ,,0x00042F57,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte one-setter
+?set@Rva0029A2DEByteSlot@@QAEXE@Z,,0x0029A2DE,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
