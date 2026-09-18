@@ -1999,3 +1999,4 @@ _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-
 ?Set_Render_Device@WW3D@@SA?AW4WW3DErrorType@@HHHHH_N00@Z,0x00116F10,WW3D 8-arg Set forwarder tail-calling DX8Wrapper Set at 0x00124FF0; called from Reset_D3D_Device active/inactive arms
 ?Rva001171B0@@YAXXZ,0x001171B0,opaque: Win9x-branch texture worker called from Reset_D3D_Device 0x00431E0 (SEH body with Lock and Release_Ref calls); address proven by REL32, semantic identity unproven
 ?clipCursorToClient@@YAXXZ,0x000430C8,clip cursor to client rect via GetClientRect plus ClientToScreen plus ClipCursor imports; BFME1-confirmed name; called from Reset_D3D_Device 0x00431E5
+?searchEntries@VersionBlockParser@@SAPBXPBX00PBQBD0H@Z,0x00427DEA,binary search over 0x18 version records with range resolution; called by findEntry wrapper 0x427EB9; opaque helper
