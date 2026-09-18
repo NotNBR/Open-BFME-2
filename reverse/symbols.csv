@@ -813,7 +813,6 @@ name,address,notes
 ?bfmeInitDGD@BfmeThingDGD@@QAEPAV1@PAX@Z,0x00664620
 ?bfmeInitDGF@BfmeThingDGF@@QAEPAV1@PAX@Z,0x00664DB0
 ?bfmeInitDGG@BfmeThingDGG@@QAEPAV1@PAX@Z,0x00666EC0
-?bfmeMakeBZA@@YAPAVBfmeCacheBZA@@PAVBfmeThingBZA@@@Z,0x006612C0
 ?bfmeMakeOX@@YAHPAX@Z,0x00006F30
 ?bfmeNextResource@@YA?AUBfmeResetAnyRef@@XZ,0x0061F310,Recovered resource registry role; iterator at RVA 0x6214D0 filters virtual type tags and returns an owning four-byte reference with WORD refcount
 ?bfmeOneBZB@@YAXPAX@Z,0x001B65F0
