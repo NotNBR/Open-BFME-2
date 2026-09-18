@@ -9027,3 +9027,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?Create_Render_Obj@@YAPAVRenderObjClass@@PBD@Z,,0x00136175,199,Code/GameEngineDevice/Source/W3DDevice/GameClient/Create_Render_Obj.cpp,matched,Free render-object factory via registry prototype and slot-15 virtual
 ??0DebugCmdInterfaceDebug@@QAE@XZ,,0x00038670,70,Code/Libraries/Source/WWVegas/WWDebug/DebugCmdInterfaceDebugCtor.cpp,matched,BFME1 DebugCmdInterfaceDebugConstructorThunk verbatim; empty two-vtable EH ctor (base DebugCmdInterface vtable then derived); /EHa /Oy- manual SEH; address-locality + 70B-exact + B1 three-way 70B family evidence
 
+?newLocomotor@LocomotorStore@@QBEPAVLocomotor@@PBVLocomotorTemplate@@@Z,,0x005C9886,58,Code/GameEngine/Source/GameLogic/Object/LocomotorStore_newLocomotor.cpp,matched,BFME1 LocomotorStore_newLocomotor verbatim with 0x26C sizeof; ctor pin 0x5C96EB
