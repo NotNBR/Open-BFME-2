@@ -10060,3 +10060,6 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ??0Rva007F0CB0BlobRecord@@QAE@XZ,,0x0065D840,130,Code/GameEngine/Source/GameNetwork/V2FeslBlobRecordCtor.cpp,matched,BFME1 byte-identical donor; b1 0x007F0CB0
 ?bfmeNext1221@@YAIXZ,,0x0070F830,68,Code/GameEngine/Source/Common/BfmeConv1221.cpp,matched,BFME1 byte-identical donor; b1 0x008D3C00
 ?bfmeParseYA@BfmeOwnerYA@@QAEXPBD@Z,,0x00661D80,90,Code/GameEngine/Source/Common/BfmeConv1857.cpp,matched,BFME1 byte-identical donor; b1 0x007F5560
+?d_00889c90@Rva00889C90Class@@QAEXPAX0@Z,,0x00038D60,129,Code/GameEngine/Source/Common/Bfme/Rva00889C90.cpp,matched,BFME1 donor; realloc callee is matched DebugReAllocMemory (no pin); b1 0x00889C90
+?rva007F7640@BfmeThingZI@@QAEXPAVRva007E8810Message@@@Z,,0x00663D30,144,Code/GameEngine/Source/GameNetwork/Rva007F7640GameBrowserEntry.cpp,matched,BFME1 byte-identical donor; b1 0x007F7640; 4 DIR32 string literal(s) agree
+?bfmeResizeV17@BfmeVecV17@@QAEXIH@Z,,0x0002A300,126,Code/GameEngine/Source/Common/BfmeConv1457.cpp,matched,BFME1 byte-identical donor; b1 0x0082FA70
