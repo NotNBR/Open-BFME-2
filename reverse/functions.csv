@@ -10311,3 +10311,4 @@ _math_log10,,0x007486A0,38,Code/Libraries/Source/Lua/lmathlib.c,matched,BFME1 by
 ?at@Rva0082C300Buf@@QAEPADH@Z,,0x00024DC0,45,Code/GameEngine/Source/Common/Rva0082C300At.cpp,matched,BFME1 byte-identical donor; b1 0x0082C300; ICF-folded in BFME1 with at at b1 0x0082C330 so the name is this sweep pick among its twins; single-pick and twin not rowed; grow resolves via pre-existing pin at 0x00023A40
 ?d_00889720@Rva00889720Class@@QAE_NXZ,,0x000387F0,54,Code/GameEngine/Source/Common/Bfme/Rva00889720.cpp,matched,BFME1 donor with import repair
 ?bfmeAllocJX@@YAPAUCodecState@@XZ,,0x001B56F0,216,Code/GameEngine/Source/Common/BfmeConv2080.cpp,matched,unclaimed_scan exact of TU-emitted body; FreeOneJT thunk pin
+?Rva009A6DF0InitializeBuffers@@YAHPAURva009A6DA0Buffer@@@Z,,0x001B7860,206,Code/GameEngine/Source/Common/Rva009A6DA0ReleaseBuffers.cpp,matched,unclaimed_scan exact of TU-emitted body; ReleaseBuffers pin

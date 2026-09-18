@@ -2651,7 +2651,6 @@ _bfmeHash1228,0x0070F880
 ?copyFrom@BfmeElem440@@QAEXPBU1@@Z,0x000929E8
 ?copyFrom@BfmeElemFC@@QAEXPAU1@@Z,0x000929E8
 ?j_0002b355@@YAXXZ,0x000929E8
-?Rva009A6DF0InitializeBuffers@@YAHPAURva009A6DA0Buffer@@@Z,0x001B7860
 ??0Rva007FBEF0GameRecord@@QAE@PAVRva007E8810Message@@@Z,0x006683F0
 ?store@Rva00802B30Element@@QAEXPBVRva007FBEF0GameRecord@@@Z,0x0066EC60
 ?bfmeSendSKA@BfmeSinkSKA@@QAEXHHH@Z,0x00670050
@@ -2933,6 +2932,7 @@ _lua_typename,0x007470D0
 ?resize@?$hashtable@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@VAsciiString@@U?$hash@VAsciiString@@@rts@@U?$_Select1st@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@@2@U?$equal_to@VAsciiString@@@5@V?$allocator@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@@2@@_STL@@QAEXI@Z,0x0016DD70
 ??$_Construct@U?$pair@$$CBVAsciiString@@PAVThingTemplate@@@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBVAsciiString@@PAVThingTemplate@@@0@ABU10@@Z,0x0016CC30
 ?bfmeFreeOneJT@@YAXPAX@Z,0x001B6410,5B ILT thunk at this RVA jumps to matched bfmeTwoBZB body at 0x1B63A0; called from bfmeAllocJX at 0x1B56F0
+?Rva009A6DA0ReleaseBuffers@@YAXPAURva009A6DA0Buffer@@@Z,0x001B7810,called 5x from InitializeBuffers at 0x1B7860 in the same TU; ghidra FUN_005b7810 67B
 ?bfmeAskCFC@BfmeOuterCFC@@QAE_NXZ,0x004C0D4F
 ?bfmeUseFDE@BfmeThingFDE@@QAEXPAX@Z,0x004B9B99
 ?bfmeAlloc1039@@YAPAXH@Z,0x0002FDA0
