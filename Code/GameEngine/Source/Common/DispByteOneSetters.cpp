@@ -387,3 +387,17 @@ void Rva002A87F1ByteOneSetter::enable()
 {
 	m_enabled = 1;
 }
+
+class Rva00406D5FByteOneSetter
+{
+public:
+	void enable();
+
+	char m_lead[0x1D8];
+	unsigned char m_enabled;
+};
+
+void Rva00406D5FByteOneSetter::enable()
+{
+	m_enabled = 1;
+}
