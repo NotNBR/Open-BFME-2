@@ -9562,3 +9562,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?get@Rva00382216AsciiField@@QBE?AVAsciiString@@XZ,,0x00382216,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x1B8 via StringBase copy 0x365F0; caller at 0x3869A2
 ?get@Rva00095224AsciiField@@QBE?AVAsciiString@@XZ,,0x00095224,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0xAC via StringBase copy 0x365F0; caller at 0x956C7
 ?get@Rva0046AA11AsciiField@@QBE?AVAsciiString@@XZ,,0x0046AA11,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x308 via StringBase copy 0x365F0; caller at 0x46CFBF
+?get@Rva004CFB6DAsciiField@@QBE?AVAsciiString@@XZ,,0x004CFB6D,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x1D8 via StringBase copy 0x365F0; 3 callers
