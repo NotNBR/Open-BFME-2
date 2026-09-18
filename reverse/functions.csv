@@ -8407,7 +8407,6 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva00048C6DF@FlammableUpdate@@SA?AW4NameKeyType@@XZ,,0x0048C6DF,69,Code/GameEngine/Source/GameLogic/Object/Update/FlammableUpdatePoolKey.cpp,matched,
 ?rva00048D761@FloatUpdate@@SA?AW4NameKeyType@@XZ,,0x0048D761,69,Code/GameEngine/Source/GameLogic/Object/Update/FloatUpdatePoolKey.cpp,matched,
 ?rva00048E0FA@FloodUpdate@@SA?AW4NameKeyType@@XZ,,0x0048E0FA,69,Code/GameEngine/Source/GameLogic/Object/Update/FloodUpdatePoolKey.cpp,matched,
-?Rva0017FC1E_MakeOwner@@YA?AVHTreePrototypeOwner@@PBD@Z,,0x0017FC1E,94,Code/Libraries/Source/WWVegas/WW3D2/Rva0017FC1EFactory.cpp,matched,probe mixed named plus temporary returns
 ?rva00048E8AC@DeployStyleAIUpdate@@SA?AW4NameKeyType@@XZ,,0x0048E8AC,69,Code/GameEngine/Source/GameLogic/Object/Update/DeployStyleAIUpdatePoolKey.cpp,matched,
 ?rva0004907F7@ArrowStormUpdate@@SA?AW4NameKeyType@@XZ,,0x004907F7,69,Code/GameEngine/Source/GameLogic/Object/Update/ArrowStormUpdatePoolKey.cpp,matched,
 ?rva000491264@DamageFieldUpdate@@SA?AW4NameKeyType@@XZ,,0x00491264,69,Code/GameEngine/Source/GameLogic/Object/Update/DamageFieldUpdatePoolKey.cpp,matched,
@@ -8422,3 +8421,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 
 ?Check@Rva0093C4A0Target@@QAE_NPBGPAGH@Z,,0x00154580,172,Code/Libraries/Source/WWVegas/WW3D2/Rva0093C4A0TargetCheck.cpp,matched,bfme1 WW3D2 Rva0093C4A0 port with BFME2 global plus G7
 ?read_texcoords@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x001896D0,167,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTexcoords.cpp,matched,BFME1 meshmdlio.cpp read_texcoords port of their 170B Open-BFME5 clean C++ row d_0096e330. BFME2 167B via /O2 SSE2 with direct TempUVArray member spelling. Install_UV_Array pin at 0x15B960.
+?read_stage_texcoords@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x00189A20,293,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTexcoords.cpp,matched,BFME1 MeshModelVertexColors.cpp read_stage_texcoords port of their 178B row at 0x0096E690. BFME2 293B via /O2 SSE2 with bulk Read plus manual 4x V-flip plus scalar remainder. Has_UV inline with AlternateMatDesc at context plus 0x124. Install_UV_Array pin at 0x15B960.

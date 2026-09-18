@@ -57,7 +57,15 @@ class MeshMatDescClass
 {
 public:
 	void Install_UV_Array(int pass, int stage, Vector2 *uvs, int count);
+	bool Has_UV(int pass, int stage) { return UVSource[pass][stage] != -1; }
+
+private:
+	char m_pad0[0x30];
+	int UVSource[4][2];
+	char m_pad1[0x118 - 0x50];
 };
+
+typedef char MeshMatDescSizeCheck[sizeof(MeshMatDescClass) == 0x118 ? 1 : -1];
 
 class MeshLoadContextClass
 {
@@ -74,8 +82,8 @@ private:
 public:
 	int CurPass;
 	int CurTexStage;
-private:
-	char m_pad1[0x23C - 0x94];
+	char m_padA[0x124 - 0x94];
+	MeshMatDescClass AlternateMatDesc;
 public:
 	SimpleVecClass<Vector2> TempUVArray;
 };
@@ -85,6 +93,7 @@ class MeshModelClass
 protected:
 	virtual ~MeshModelClass();
 	bool read_texcoords(ChunkLoadClass &cload, MeshLoadContextClass *context);
+	bool read_stage_texcoords(ChunkLoadClass &cload, MeshLoadContextClass *context);
 
 private:
 	char m_pad0[0x28 - 4];
@@ -114,5 +123,55 @@ bool MeshModelClass::read_texcoords(ChunkLoadClass &cload, MeshLoadContextClass 
 		DefMatDesc->Install_UV_Array(context->CurPass, context->CurTexStage, uvarray, elementcount);
 	}
 
+	return true;
+}
+
+// ?read_stage_texcoords@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z
+bool MeshModelClass::read_stage_texcoords(ChunkLoadClass &cload, MeshLoadContextClass *context)
+{
+	unsigned elementcount;
+	Vector2 *uvs;
+	MeshMatDescClass *matdesc = DefMatDesc;
+
+	if (DefMatDesc->Has_UV(context->CurPass, context->CurTexStage)) {
+		matdesc = &context->AlternateMatDesc;
+	}
+
+	elementcount = cload.Cur_Chunk_Length() / sizeof(W3dTexCoordStruct);
+
+	context->TempUVArray.Uninitialised_Grow(elementcount);
+	uvs = &context->TempUVArray[0];
+
+	if (uvs != NULL) {
+		unsigned totalbytes = elementcount * sizeof(W3dTexCoordStruct);
+		if (cload.Read(uvs, totalbytes) < totalbytes) {
+			return false;
+		}
+
+		unsigned total = elementcount;
+		unsigned done = 0;
+		if ((int)total >= 4) {
+			unsigned iters = (total - 4) / 4 + 1;
+			float *yf = &uvs[1].Y;
+			done = iters * 4;
+			do {
+				yf[-2] = 1.0f - yf[-2];
+				yf[0] = 1.0f - yf[0];
+				yf[2] = 1.0f - yf[2];
+				yf[4] = 1.0f - yf[4];
+				yf += 8;
+			} while (--iters != 0);
+		}
+		if (done < total) {
+			float *yf = &uvs[done].Y;
+			unsigned left = total - done;
+			do {
+				*yf = 1.0f - *yf;
+				yf += 2;
+			} while (--left != 0);
+		}
+	}
+
+	matdesc->Install_UV_Array(context->CurPass, context->CurTexStage, uvs, elementcount);
 	return true;
 }
