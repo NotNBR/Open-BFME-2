@@ -1932,3 +1932,10 @@ _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf i
 ??0Rva00180023@@QAE@ABVHierarchyPrototypeRef@@@Z,0x00180023,4-byte SEH owner copy ctor (same shape as 0x17FBED/0x14CED0, own delegate); called from factory 0x18008A
 ??0Rva00136001@@QAE@ABVHierarchyPrototypeRef@@@Z,0x00136001,4-byte SEH owner copy ctor (same shape, own delegate); called from factory 0x136068
 ??0Rva0015145C@@QAE@ABVHierarchyPrototypeRef@@@Z,0x0015145C,4-byte SEH owner copy ctor (same shape, own delegate); called from factory 0x15152B
+?Peek_Texture@MeshLoadContextClass@@AAE?AVBfmeHandleCX@@H@Z,0x00188700,BFME1 MeshModelMaterialIds pin 12112 attests mangling; address read from retail REL32 at 0x001891B9 in read_texture_ids; 40B handle loader over array +0x110 with WORD AddRef at +4
+?Set_Single_Texture@MeshMatDescClass@@QAEXABVBfmeHandleCX@@HH@Z,0x0015A7A0,BFME1 pin 12637 attests mangling; address read from retail REL32 at 0x001891CB in read_texture_ids; 61B handle install over Texture +0x78
+?Set_Texture@MeshMatDescClass@@QAEXHABVBfmeHandleCX@@HH@Z,0x0015DCC0,BFME1 pin 12642 attests mangling; address read from retail REL32 at 0x00189228 in read_texture_ids; 73B indexed handle install
+?Release_Ref@TextureClass@@QAEXXZ,0x0061ED10,BFME1 matched row 17411 attests mangling; address read from retail REL32 at 0x001891E0 in read_texture_ids; shares landed 36B TextureBase release body
+?Set_Shader@MeshMatDescClass@@QAEXHVShaderClass@@H@Z,0x0015DCA0,Set_Shader address from REL32 at 0x00188AA2 in read_shader_ids per-poly path; tree meshmatdesc.cpp attests name and index-plus-Shader-by-value shape; 3 stack args ret-16
+?Set_Single_Material@MeshMatDescClass@@QAEXPAVVertexMaterialClass@@H@Z,0x0015A760,BFME1 matched row 20533 attests mangling; address read from retail REL32 at 0x00188954 in read_vertex_material_ids; 53B-class single install
+?Set_Material@MeshMatDescClass@@QAEXHPAVVertexMaterialClass@@H@Z,0x0015D2A0,BFME1 matched row 20438 attests mangling; address read from retail REL32 at 0x00188998 in read_vertex_material_ids; indexed install
