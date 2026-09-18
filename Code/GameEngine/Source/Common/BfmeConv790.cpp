@@ -19,6 +19,13 @@ struct BfmeThingDWD
 	char m_bfmeHeld;
 };
 
+int BfmeThingDWD::bfmeLockDWD()
+{
+	EnterCriticalSection(m_bfmeCs);
+	m_bfmeHeld = 1;
+	return 0;
+}
+
 void BfmeThingDWD::bfmeReleaseDWD()
 {
 	if (m_bfmeHeld)
