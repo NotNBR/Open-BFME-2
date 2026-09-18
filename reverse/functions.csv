@@ -8669,3 +8669,4 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?parseDurationUnsignedShort@INI@@SAXPAV1@PAX1PBX@Z,,0x00338B76,70,Code/GameEngine/Source/Common/System/INI_parseDurationUnsignedShort.cpp,matched,BFME1 duration-ushort twin via 0.005f global double-ceil and ftol2
 ?rva000252CDF@UpgradeSoundSelectorClientBehavior@@SA?AW4NameKeyType@@XZ,,0x00252CDF,69,Code/GameEngine/Source/GameLogic/Object/Behavior/UpgradeSoundSelectorClientBehaviorPoolKey.cpp,matched,cached pool-name key; pool string UpgradeSoundSelectorClientBehavior; /O1 static-guard EH; nameToKey row
 ?parseVelocityReal@INI@@SAXPAV1@PAX1PBX@Z,,0x00338BBD,37,Code/GameEngine/Source/Common/System/INI_parseVelocityReal.cpp,matched,BFME1 velocity verb via 0.2 global factor-first
+?parseAccelerationReal@INI@@SAXPAV1@PAX1PBX@Z,,0x00338BE3,43,Code/GameEngine/Source/Common/System/INI_parseAccelerationReal.cpp,matched,BFME1 accel verb via squared 0.2 global factor-first
