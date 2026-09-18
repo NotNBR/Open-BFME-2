@@ -9996,3 +9996,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?Rva009EBCE0_GetPrototype@@YA?AVRva009EBCE0AssetReference@@PBD@Z,,0x0061F230,211,Code/Libraries/Source/WWVegas/WW3D2/RegistryPrototypeLookup.cpp,matched,BFME1 byte-identical donor; b1 0x009EBCE0
 ?bfmeGoVJR@BfmeThingVJR@@QAEXHHHH@Z,,0x006627F0,206,Code/GameEngine/Source/GameNetwork/BfmeGameBrowserVJR.cpp,matched,BFME1 byte-identical donor; b1 0x007F6050
 ?bfmeGoVJQ@BfmeThingVJQ@@QAEXH@Z,,0x006628C0,191,Code/GameEngine/Source/GameNetwork/BfmeGameBrowserVJQ.cpp,matched,BFME1 byte-identical donor; b1 0x007F6120
+?rva0080AA80@Rva00803620Sink@@QAEXPAURva00809500Entry@@@Z,,0x00676980,204,Code/GameEngine/Source/GameNetwork/Rva0080AA80LanTheater.cpp,matched,BFME1 byte-identical donor; b1 0x0080AA80; 3 DIR32 string literal(s) agree
