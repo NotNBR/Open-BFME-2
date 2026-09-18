@@ -47,6 +47,8 @@ public:
 }
 
 typedef _STL::basic_string<char, _STL::char_traits<char>, _STL::allocator<char> > StlportNarrowString;
+typedef unsigned short WideChar;
+typedef _STL::basic_string<WideChar, _STL::char_traits<WideChar>, _STL::allocator<WideChar> > StlportWideString;
 
 class Rva00389E2DNarrowField
 {
@@ -108,6 +110,22 @@ private:
 
 // ?get@Rva00389F2CNarrowField@@QBE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ
 StlportNarrowString Rva00389F2CNarrowField::get() const
+{
+	return m_value;
+}
+
+class Rva00389E69WideField
+{
+public:
+	StlportWideString get() const;
+
+private:
+	char m_pad[0x284];
+	StlportWideString m_value; // +0x284
+};
+
+// ?get@Rva00389E69WideField@@QBE?AV?$basic_string@GV?$char_traits@G@_STL@@V?$allocator@G@2@@_STL@@XZ
+StlportWideString Rva00389E69WideField::get() const
 {
 	return m_value;
 }
