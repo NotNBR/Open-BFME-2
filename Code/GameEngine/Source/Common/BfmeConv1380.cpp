@@ -15,7 +15,6 @@ public:
 extern void *g_bfmeFVIX;
 extern void *g_bfmeGVIY;
 
-// ?bfmeGoVIX@@YGXPAVBfmeMsgVIX@@PAX1111@Z present-unmatched
 void __stdcall bfmeGoVIX(BfmeMsgVIX *m, void *email, void *parentalEmail, void *countryCode, void *eaMail, void *thirdPartyMail)
 {
 	void *g = g_bfmeFVIX;
