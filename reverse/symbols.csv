@@ -2257,3 +2257,14 @@ __strlwr,0x006299A6
 ??0Rva007E8810Message@@QAE@XZ,0x006558C0,ICF-fold twin of rowed ??0Rva007E8810 (row 9808, same 60B): BFME1 folds both at 0x007E8810 (row 5402 + pin 3544); BFME2 onAccept calls 0x006558C0 as the message ctor (retail +0x5b)
 ?onBusy@Rva007FA2C0@@QAEHPAX@Z,0x00665F20,int-returning FESL busy op called by onAccept (retail +0x144); donor declares int onBusy(void*); BFME1 twin calls the same shape
 ?Rva009B4390CodecCall@@YAXPAXH0HHHHHHHHHHHH@Z,0x001C4C90
+?addBool@Rva007E8810Message@@QAEXPBD_N@Z,0x00655A10
+?addInt64@Rva007E8810Message@@QAEXPBD_J@Z,0x00655F00
+?bfmeSet2VIW@BfmeMsgVIW@@QAEXPBDPAX1@Z,0x00655F00
+?bfmeSet2VIX@BfmeMsgVIX@@QAEXPBDPAX1@Z,0x00655F00
+?bfmeSet2VJF@BfmeMsgVJF@@QAEXPBDPAX1@Z,0x00655F00
+?bfmeSet4VIW@BfmeMsgVIW@@QAEXPBDPAX@Z,0x00655A10
+?bfmeSet4VIX@BfmeMsgVIX@@QAEXPBDPAX@Z,0x00655A10
+?bfmeSubVIY@BfmeThingVIY@@QAEXPAVBfmeMsgVIX@@PAX1@Z,0x0065DF80
+?d_007e8ef0@@YAXXZ,0x00655F60
+?go@Rva007E8980@@QAEXHE@Z,0x00655A10
+?rva007E8EF0@BfmeMsgVIX@@QAEXPBDPAX@Z,0x00655F60
