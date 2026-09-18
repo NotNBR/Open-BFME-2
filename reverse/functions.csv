@@ -10346,3 +10346,4 @@ __Locale_numeric_create,,0x00022890,354,Code/Libraries/Source/WWVegas/WWLib/stlp
 ?bfmeGoBNH@BfmeThingBNH@@QAEPAV1@PAX@Z,,0x000EF966,27,Code/GameEngine/Source/Common/BfmeConv499.cpp,matched,BFME1 byte-identical donor; b1 0x006D65B0; ICF pick; callee bfmeDoBNH pinned at 0x132D89 alongside BFME2LoadParticleTexture pin
 ?bfmeGoVIV@@YGXPAVBfmeMsgVIT@@PAD11111@Z,,0x00656750,173,Code/GameEngine/Source/Common/BfmeConv1378.cpp,matched,BFME1 byte-identical donor; b1 0x007E9760; 7 DIR32 string literals agree
 ?invoke@Rva0088D910Object@@QAEPAV1@H@Z,,0x0003CCA0,21,Code/GameEngine/Source/Common/Rva0088D910VirtualDispatch.cpp,matched,BFME1 donor plus empty-literal repair 0x0107301C to 0x00BBAC1C
+?invoke@Rva0088D930Object@@QAEPAV1@H@Z,,0x0003CCC0,21,Code/GameEngine/Source/Common/Rva0088D930VirtualDispatch.cpp,matched,BFME1 donor plus literal repair to BBFAA0
