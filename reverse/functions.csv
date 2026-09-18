@@ -9987,3 +9987,4 @@ _ProtoMangleDestroy,,0x00670370,80,Code/Libraries/Source/DirtySock/Y2ProtoMangle
 ?process@Gen_00943CF0@@QAEXPAPAUGen_00943CF0_Node@@@Z,,0x00141C40,82,Code/GameEngine/Source/Common/Gen_00943CF0.cpp,matched,BFME1 byte-identical donor; b1 0x00943CF0
 ?Rva007F93E0@@YAPAXPAX00@Z,,0x00665980,170,Code/GameEngine/Source/GameNetwork/FeslMessage_send_rva007F93E0.cpp,matched,BFME1 byte-identical donor; b1 0x007F93E0
 ?bfmeGoVJS@BfmeThingVJS@@QAEXHHH@Z,,0x006623D0,213,Code/GameEngine/Source/GameNetwork/BfmeGameBrowserVJS.cpp,matched,BFME1 byte-identical donor; b1 0x007F5C30; 3 DIR32 string literal(s) agree
+??0BfmeThingDGD@@QAE@PAX@Z,,0x00664620,228,Code/GameEngine/Source/GameNetwork/BfmeThingDGDConstructor.cpp,matched,BFME1 donor with BFME2 vtable-VA repair; b1 0x007F7FA0
