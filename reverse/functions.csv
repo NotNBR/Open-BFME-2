@@ -9421,3 +9421,5 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?rva002360DE@GlobalData@@QBE?AVAsciiString@@XZ,,0x002360DE,30,Code/GameEngine/Source/Common/System/GlobalDataRva002360DE.cpp,matched,
 ?set@Rva0044E5C0ByteSlot@@QAEXE@Z,,0x0044E5C0,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,
 ?rva002360FC@GlobalData@@QBE?AVUnicodeString@@XZ,,0x002360FC,30,Code/GameEngine/Source/Common/System/GlobalDataRva002360DE.cpp,matched,
+?Clear_Pending_Delete_Lists@DX8MeshRendererClass@@QAEXXZ,,0x00144580,91,Code/Libraries/Source/WWVegas/WW3D2/DX8MeshRendererClearPendingDeleteLists.cpp,matched,BFME1 dx8renderer verbatim with member lists at +0x1C/+0x34 and global-scope delete
+?Shutdown@DX8MeshRendererClass@@QAEXXZ,,0x00148010,18,Code/Libraries/Source/WWVegas/WW3D2/DX8MeshRendererClearPendingDeleteLists.cpp,matched,BFME1 Shutdown verbatim minus TempVertexBuffer TempNormalBuffer clears
