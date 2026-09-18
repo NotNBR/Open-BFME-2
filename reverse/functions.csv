@@ -9878,3 +9878,4 @@ _REF_encode@16,,0x0068B050,108,Code/Libraries/Source/Compression/EAC/REFEncodeRe
 ?set@Rva002DF730@@QAEXE@Z,,0x00331640,17,Code/GameEngine/Source/Common/Rva002DF730Set.cpp,matched,BFME1 byte-identical donor; b1 0x002DF730
 ?set@Rva008F8C30@@QAEXHH@Z,,0x0073B280,17,Code/GameEngine/Source/Common/Rva008F8C30Set.cpp,matched,BFME1 byte-identical donor; b1 0x008F8C30
 ?setValue@Rva007F5700ValueAndState@@QAEXH@Z,,0x00661EB0,17,Code/GameEngine/Source/Common/Rva007F5700ValueAndStateSetter.cpp,matched,BFME1 byte-identical donor; b1 0x007F5700
+?apply@Rva00478F40@@QAEHXZ,,0x003141AA,18,Code/GameEngine/Source/Common/Rva00478F40Apply.cpp,matched,BFME1 byte-identical donor; b1 0x00478F40
