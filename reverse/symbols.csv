@@ -3038,7 +3038,6 @@ _luaK_concat,0x00752180
 _luaK_patchlistaux,0x00751FF0
 _luaK_setcallreturns,0x00751EF0
 _luaK_testgo,0x00752FC0
-_luaK_tostack,0x00753160
 _luaM_growaux,0x00750AE0
 _luaX_error,0x00757150
 ?bfmeFindByteInRange@@YAPADPAD0D@Z,0x00026C60
@@ -3162,3 +3161,4 @@ _LoadHeader,0x00756B10
 ??0Rva000B6D8B@@QAE@XZ,0x000B6D8B,opaque helper-member ctor called on MinefieldBehavior+0x24 (SEH body: vtable 0xBC9CF0 plus ehvec 3x24B); boundary proven by pops plus ret ahead; identity unproven
 ?bfmeCallJA@BfmeHookJA@@QAEPAUBfmeSlotJA@@XZ,0x001E35DF
 _luaK_deltastack,0x00751DE0
+_need_value,0x00752140
