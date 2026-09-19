@@ -2917,11 +2917,9 @@ _chatLeaveChannel,0x006A18B0,
 _chatRetryWithNickA,0x006A33C0,address read from the REL32 displacement at a placed body
 _check,0x00753890
 _check_match,0x00753960
-_checkname,0x00753B40
 _chunk,0x00756110
 _close_func,0x007540E0
 _closesocket@4,0x00655676,PE-verified FF25 import thunk to wsock32.dll!closesocket via IAT 0x00BBA994; independently read from retail import directory
-_code_string,0x00753A70
 _codelineinfo,0x007521D0
 _connect@12,0x0065569A,PE-verified FF25 import thunk to wsock32.dll!connect via IAT 0x00BBA97C; independently read from retail import directory
 _constructor,0x00755110
@@ -2932,7 +2930,6 @@ _current_time,0x00656BB0,GameSpy nonport.c Win32 current_time returns GetTickCou
 _d_0088d240,0x0003C550
 _deprecated_funcs,0x0074C900
 _discharge,0x00752BD0
-_error_expected,0x00753850
 _explist1,0x007541B0
 _fabs,0x00629210,MSVCRT import thunk identified by four retail call targets and Ghidra
 _forbody,0x007544E0
@@ -3071,7 +3068,6 @@ _memmove,0x00629506,address read from the REL32 displacements in DirtySock Y4Tex
 _memset,0x006291AE,CRT memset import thunk; Ghidra labels the retail call target at 0x6291AE
 _msleep,0x0060A830,GameSpy callee already byte-verified in Code/GameEngine/Source/GameNetwork/GameSpy/nonport.c at commit 982a47813b69; direct call from _gpiProcessSearch
 _need_value,0x00752140
-_new_localvar,0x00753BF0
 _next,0x007537E0
 _ntohl@4,0x0065565E,address read from the REL32 displacement at placed _piStagingRoomHash 0x006A79E0
 _open_func,0x00754080
@@ -3135,7 +3131,6 @@ _realloc,0x0003E4B0,retail REL32 at both allocation sites in DebugLogTyped
 _recfields,0x00754DD0
 _recv@16,0x006556E8,PE thunk ff2548a9bb00 jumps through IAT 0x00BBA948 to wsock32.dll!recv; Ghidra independently names same thunk
 _recvfrom@24,0x00655664,PE-verified FF25 import thunk to wsock32.dll!recvfrom via IAT 0x00BBA940; independently read from retail import directory
-_removelocalvars,0x00753CB0
 _rva002bcab_scanIndex,0x0002BCAB,index-list worker (token,table,found-out,throw-flag) behind member scanIndexList; null-table and miss throws via filler; true name unproven (NOT B1 static scanIndexList: 4 args vs 2)
 _rva002f681_fill,0x0002F681,variadic INIException {msg;code} filler (vsnprintf into TLS buf + new[] + memcpy); throw-site helper for AI-kind and INI parsers; true name unknown
 _select@20,0x0065566A,PE-verified FF25 import thunk to wsock32.dll!select via IAT 0x00BBA99C; independently read from retail import directory

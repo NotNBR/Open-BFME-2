@@ -11001,3 +11001,8 @@ _lua_iolibopen,,0x0074B5D0,28,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,B
 ?disable@Rva006005D0ZeroSetter@@QAEXXZ,,0x006005D0,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
 ?get@Rva00094A9CFloatField@@QBEMXZ,,0x00094A9C,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter; address-derived opaque holder
 ?get@Rva00094AEAFloatField@@QBEMXZ,,0x00094AEA,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter; address-derived opaque holder
+_removelocalvars,,0x00753CB0,52,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
+_error_expected,,0x00753850,59,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
+_code_string,,0x00753A70,88,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
+_checkname,,0x00753B40,90,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
+_new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan

@@ -152,7 +152,6 @@ static int string_constant (FuncState *fs, TString *s) {
 }
 
 
-// _checkname present-unmatched
 static int checkname (LexState *ls) {
   return string_constant(ls->fs, str_checkname(ls));
 }
@@ -177,7 +176,6 @@ static int luaI_registerlocalvar (LexState *ls, TString *varname) {
 
 /* `error_expected' and `new_localvar' are defined for retail's inline
    context but unrowed here; the markers keep the unmatched-def gate honest. */
-// _error_expected present-unmatched
 static void new_localvar (LexState *ls, TString *name, int n) {
   FuncState *fs = ls->fs;
   luaX_checklimit(ls, fs->nactloc+n+1, MAXLOCALS, "local variables");
@@ -223,7 +221,6 @@ static void adjustlocalvars (LexState *ls, int nvars) {
 }
 
 
-// _removelocalvars present-unmatched
 static void removelocalvars (LexState *ls, int nvars) {
   FuncState *fs = ls->fs;
   while (nvars--)
@@ -298,7 +295,6 @@ static void forbody (LexState *ls, int nvar, OpCode prepfor, OpCode loopfor) {
 }
 
 
-// _code_string present-unmatched
 static void code_string (LexState *ls, TString *s) {
   luaK_kstr(ls, string_constant(ls->fs, s));
 }
