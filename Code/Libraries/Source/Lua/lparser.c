@@ -480,7 +480,6 @@ static int recfields (LexState *ls) {
 }
 
 
-// _listfields present-unmatched
 static int listfields (LexState *ls) {
   /* listfields -> exp1 { ',' exp1 } [','] */
   FuncState *fs = ls->fs;
