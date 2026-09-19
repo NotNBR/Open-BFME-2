@@ -11301,3 +11301,4 @@ _lua_gettop,,0x00746F30,13,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-i
 _luaF_newclosure,,0x00751B00,57,Code/Libraries/Source/Lua/lfunc.c,matched,BFME1 byte-identical donor b1 lfunc.c; exact; unblocks luaV_closure
 _luaV_closure,,0x0074E490,130,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c static closure; exact; unblocks luaV_Cclosure
 _luaV_Cclosure,,0x0074E520,28,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact; unblocks lua_pushcclosure
+_lua_pushcclosure,,0x00747640,5,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c jmp thunk; exact via unclaimed_scan
