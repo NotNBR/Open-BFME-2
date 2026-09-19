@@ -11530,3 +11530,4 @@ _lua_getn,,0x00747CB0,133,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol
 _lua_concat,,0x00747D40,44,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_concat; emitted by lapi.c object; vendored=lua-4.0.1
 _lua_copytagmethods,,0x0074FC90,318,Code/Libraries/Source/Lua/ltm.c,matched,object-symbol=_lua_copytagmethods; emitted by ltm.c object; vendored=lua-4.0.1
 _lua_gettagmethod,,0x0074FDF0,139,Code/Libraries/Source/Lua/ltm.c,matched,object-symbol=_lua_gettagmethod; emitted by ltm.c object; vendored=lua-4.0.1
+_luaF_freeproto,,0x00751C00,149,Code/Libraries/Source/Lua/lfunc.c,matched,object-symbol=_luaF_freeproto; emitted by lfunc.c object; vendored=lua-4.0.1
