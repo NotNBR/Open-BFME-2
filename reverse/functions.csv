@@ -11558,3 +11558,4 @@ _luaU_undump,,0x00756D10,133,Code/Libraries/Source/Lua/lundump.c,matched,object-
 ?get@Rva0040CAC5SubDwordField@@QBEHXZ,,0x0040CAC5,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
 ?name@Rva001EAE63Named@@QBEPBDXZ,,0x001EAE63,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning LinearCampaign; vtable ref in .rdata; address-derived placeholder name
 ??_GRva0034004C@@UAEPAXI@Z,,0x0034422D,28,Code/GameEngine/Source/Common/Rva004D759CDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+_luaB_next,,0x0074BCB0,61,Code/Libraries/Source/Lua/lbaselib.c,matched,object-symbol=_luaB_next; emitted by lbaselib.c object; vendored=lua-4.0.1
