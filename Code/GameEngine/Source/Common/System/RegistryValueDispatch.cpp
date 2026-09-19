@@ -137,3 +137,15 @@ const char *GetRegistryInstallerRegPath()
     }
     return g_InstallerRegPathValue;
 }
+
+// ?GetRegistryOnlineServer@@YAPBDXZ, retail 0x0002FA40, 27 bytes.
+// Lazy OnlineServer reader: same once-gate, cached pointer at 0x00DA7588.
+const char *GetRegistryOnlineServer()
+{
+    if (!g_registryValuesLoaded)
+    {
+        g_registryValuesLoaded = true;
+        LoadRegistryValues();
+    }
+    return g_OnlineServerValue;
+}
