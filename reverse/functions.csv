@@ -11523,3 +11523,4 @@ _lua_getref,,0x00747860,115,Code/Libraries/Source/Lua/lapi.c,matched,object-symb
 _luaV_Lclosure,,0x0074E540,28,Code/Libraries/Source/Lua/lvm.c,matched,object-symbol=_luaV_Lclosure; emitted by lvm.c object; vendored=lua-4.0.1
 _lua_setgcthreshold,,0x00747B60,44,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_setgcthreshold; emitted by lapi.c object; vendored=lua-4.0.1
 _luaB_error,,0x0074B8D0,31,Code/Libraries/Source/Lua/lbaselib.c,matched,object-symbol=_luaB_error; emitted by lbaselib.c object; vendored=lua-4.0.1
+_luaS_freeall,,0x0074FFB0,55,Code/Libraries/Source/Lua/lstring.c,matched,object-symbol=_luaS_freeall; emitted by lstring.c object; vendored=lua-4.0.1
