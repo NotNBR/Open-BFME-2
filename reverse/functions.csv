@@ -11494,3 +11494,5 @@ _luaM_growaux,,0x00750AE0,97,Code/Libraries/Source/Lua/lmem.c,matched,BFME1 byte
 ?get@Rva00030CB0MaskedDwordField@@QBEHXZ,,0x00030CB0,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
 ?name@Rva000B6DCCNamed@@QBEPBDXZ,,0x000B6DCC,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning LuaEventParameters; vtable ref in .rdata; address-derived placeholder name
 ?get@Rva00203502MaskedDwordField@@QBEHXZ,,0x00203502,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
+_math_pow,,0x00748620,65,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.pow via check_number x2 + pow + pushnumber; callees pinned
+?get@Rva0045D397MaskedDwordField@@QBEHXZ,,0x0045D397,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
