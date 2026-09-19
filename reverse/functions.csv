@@ -11006,3 +11006,4 @@ _error_expected,,0x00753850,59,Code/Libraries/Source/Lua/lparser.c,matched,BFME1
 _code_string,,0x00753A70,88,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
 _checkname,,0x00753B40,90,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
 _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
+?Get_Description@ShaderClass@@QBEABVStringClass@@AAV2@@Z,,0x00138280,1032,Code/Libraries/Source/WWVegas/WW3D2/shader.cpp,matched,BFME1 donor plus BFME2 GRADIENT_MODULATE_OR_2X 7th primary-gradient case

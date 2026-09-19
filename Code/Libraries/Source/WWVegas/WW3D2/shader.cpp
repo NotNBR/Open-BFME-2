@@ -1171,7 +1171,13 @@ bool ShaderClass::Is_Backface_Culling_Inverted(void)
 	return (_PolygonCullMode == D3DCULL_CCW);
 }
 
-// ?Get_Description@ShaderClass@@ present-unmatched
+// BFME2 added a 7th primary-gradient value (retail Get_Description at
+// 0x138280 prints GRADIENT_MODULATE_OR_2X for bits 10-12 == 6). The shared
+// shader.h still ends at GRADIENT_MODULATE2X, so the value lives here until
+// the header catches up; unqualified lookup will prefer the enumerator once
+// it exists, so this line goes inert on its own.
+static const ShaderClass::PriGradientType GRADIENT_MODULATE_OR_2X = (ShaderClass::PriGradientType)6;
+
 const StringClass& ShaderClass::Get_Description(StringClass& str) const
 {
 	str="";
@@ -1219,6 +1225,7 @@ const StringClass& ShaderClass::Get_Description(StringClass& str) const
 	case GRADIENT_BUMPENVMAP: str+="GRADIENT_BUMPENVMAP | "; break;
 	case GRADIENT_BUMPENVMAPLUMINANCE: str+="GRADIENT_BUMPENVMAPLUMINANCE | "; break;
 	case GRADIENT_MODULATE2X: str+="GRADIENT_MODULATE2X | "; break;
+	case GRADIENT_MODULATE_OR_2X: str+="GRADIENT_MODULATE_OR_2X | "; break;
 	}
 
 	switch (Get_Secondary_Gradient()) {
