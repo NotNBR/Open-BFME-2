@@ -495,7 +495,6 @@ name,address,notes
 ??1Rva001EE3DE@@UAE@XZ,0x001EE3DE,opaque SEH dtor (mov-eax-cookie prologue); tail-called by and-dtor at 0x419E3; identity unproven, address-derived name
 ??1Rva00224A90@@UAE@XZ,0x00224A90,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x628FD; identity unproven, address-derived name
 ??1Rva0023AE08@@UAE@XZ,0x0023AE08,opaque SEH dtor (mov-eax-cookie prologue); tail-called by 2-vptr dtor at 0x4C743; identity unproven, address-derived name
-??1Rva0024A797@@UAE@XZ,0x0024A797,opaque MI base dtor (3 vptrs tail-jmp 0x49B47C fold); 36 derived MI dtors tail-call it; identity unproven, address-derived name
 ??1Rva00260A3C@@UAE@XZ,0x00260A3C,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0x453F5; identity unproven, address-derived name
 ??1Rva0026E836@@UAE@XZ,0x0026E836,opaque SEH base dtor (5 vptrs +0/+0xC/+0x10/+0x20/+0x24 plus member cleanup); 3 derived 39B dtors tail-call it; identity unproven
 ??1Rva0028418A@@UAE@XZ,0x0028418A,opaque SEH dtor (mov-eax-cookie prologue); tail-called by 4-vptr dtor at 0x62AF7; identity unproven, address-derived name

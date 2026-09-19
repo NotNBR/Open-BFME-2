@@ -1,15 +1,17 @@
 // cl: /O1 /MD
 //
 // ??_GRva0024A797@@UAEPAXI@Z at retail 0x002533E0 (28B): emitted scalar
-// deleting destructor for the pinned opaque MI middle Rva0024A797 (25B
-// order-B body tail-jumping the 0x49B47C fold). The dtor call resolves via
-// the existing pin; the middle itself stays unclaimed (order-B wall, see the
-// 0x484EF4 partial bank). Operator delete resolves via the pinned ??3.
+// deleting destructor for the opaque MI middle Rva0024A797 (25B order-B body
+// tail-jumping the 0x49B47C fold). The middle uses the shared-PrimaryP model
+// (order +0x10/+0/+0xC, per-middle B2, tail-jump to the pinned fold;
+// Rva0049B47C throw() is truthful and mangle-safe). The dtor call resolves
+// via the row once the pin upgrades; operator delete via its pin. The anchor
+// new/deletes (devirtualized direct ??_G call) to emit the COMDAT.
 
 class Rva0049B47C
 {
 public:
-	virtual ~Rva0049B47C();
+	virtual ~Rva0049B47C() throw();
 
 private:
 	char m_pad04[8];
@@ -21,6 +23,15 @@ public:
 	virtual void f1();
 };
 
+// Per-TU PrimaryP (named to avoid colliding with the sibling TU's shared
+// one): user empty dtor shares P's vptrs for retail order; inlines away so
+// the middle still tail-calls the fold.
+class PrimaryP24A797 : public Rva0049B47C, public MiBase1
+{
+public:
+	~PrimaryP24A797() {}
+};
+
 class Rva0024A797_B2
 {
 public:
@@ -30,17 +41,22 @@ private:
 	char m_pad08[12];
 };
 
-class Rva0024A797 : public Rva0049B47C, public MiBase1, public Rva0024A797_B2
+class Rva0024A797 : public PrimaryP24A797, public Rva0024A797_B2
 {
 public:
-	virtual ~Rva0024A797()
-	{
-	}
+	virtual ~Rva0024A797();
 };
 
-// Anchor: forces out-of-line emission of the in-class destructor COMDAT,
-// including the scalar deleting destructor.
-void Rva0024A797_Anchor(Rva0024A797 *p)
+Rva0024A797::~Rva0024A797()
 {
-	p->Rva0024A797::~Rva0024A797();
+}
+
+void *operator new(unsigned int size);
+void operator delete(void *p);
+
+// Anchor: new/delete devirtualizes to a direct ??_G call, emitting the COMDAT.
+void Rva0024A797_Anchor()
+{
+	Rva0024A797 *p = new Rva0024A797;
+	delete p;
 }
