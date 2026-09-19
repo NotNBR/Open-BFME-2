@@ -10603,6 +10603,12 @@ _rehash,,0x00750830,183,Code/Libraries/Source/Lua/ltable.c,matched,TU-local stat
 ?get@Rva0036750CDwordField@@QBEHXZ,,0x0036750C,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 _luaH_setint,,0x007509E0,42,Code/Libraries/Source/Lua/ltable.c,matched,unclaimed_scan exact modulo relocs; single call to luaH_set row; emitted by ltable.c object; vendored=lua-4.0.1
 _luaH_setstrnum,,0x00750A10,55,Code/Libraries/Source/Lua/ltable.c,matched,unclaimed_scan exact modulo relocs; single call to luaH_set row; emitted by ltable.c object; vendored=lua-4.0.1
-_luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099EC90; 2 DIR32 string literal(s) agree
 _luaK_kstr,,0x00752780,139,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099ED80; 2 DIR32 string literal(s) agree
 _luaK_infix,,0x007536C0,70,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099FCC0
+?get@Rva005C4AF9DwordField@@QBEHXZ,,0x005C4AF9,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva0040CA36DwordField@@QBEHXZ,,0x0040CA36,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+_luaT_tag,,0x0074FDD0,28,Code/Libraries/Source/Lua/ltm.c,matched,call-free type switch unblocking call_binTM double call; emitted by ltm.c object; vendored=lua-4.0.1
+?get@Rva004E062EDwordField@@QBEHXZ,,0x004E062E,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva0057E556DwordField@@QBEHXZ,,0x0057E556,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva005C4AE9DwordField@@QBEHXZ,,0x005C4AE9,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+_luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099EC90; 2 DIR32 string literal(s) agree
