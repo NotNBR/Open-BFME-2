@@ -11535,3 +11535,6 @@ _luaF_freeclosure,,0x00751CA0,46,Code/Libraries/Source/Lua/lfunc.c,matched,objec
 _luaH_remove,,0x00750620,178,Code/Libraries/Source/Lua/ltable.c,matched,object-symbol=_luaH_remove; emitted by ltable.c object; vendored=lua-4.0.1
 _LoadNumber,,0x007564D0,27,Code/Libraries/Source/Lua/lundump.c,matched,object-symbol=_LoadNumber; emitted by lundump.c object; vendored=lua-4.0.1
 _luaU_undump,,0x00756D10,133,Code/Libraries/Source/Lua/lundump.c,matched,object-symbol=_luaU_undump; emitted by lundump.c object; vendored=lua-4.0.1
+??_GRva00253EF5@@UAEPAXI@Z,,0x00253ED9,28,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+?get@Rva00151DB8SubDwordField@@QBEHXZ,,0x00151DB8,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
+??_GRva0033EEC9@@UAEPAXI@Z,,0x0033F017,28,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
