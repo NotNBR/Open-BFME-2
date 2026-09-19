@@ -12025,3 +12025,4 @@ _luaG_typeerror,,0x0074D250,66,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 
 ?name@Rva002A7A23Named@@QBEPBDXZ,,0x002A7A23,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning PlayerList; vtable ref; address-derived placeholder name
 ?name@Rva002A92E4Named@@QBEPBDXZ,,0x002A92E4,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning SkirmishAIManager; vtable ref; address-derived placeholder name
 ?name@Rva002AC360Named@@QBEPBDXZ,,0x002AC360,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning LightPointSystem; vtable ref; address-derived placeholder name
+?name@Rva002AD0C0Named@@QBEPBDXZ,,0x002AD0C0,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning PlayerRelationMap; vtable ref; address-derived placeholder name
