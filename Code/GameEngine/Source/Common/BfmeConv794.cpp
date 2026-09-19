@@ -1,9 +1,10 @@
 // A sub-object call followed by its drop (trimmed from a five-body donor;
-// the other four are declared-only here).
+// the other three are declared-only here).
 //
-// The T2 body needs one ledger pin (bfmeCallDXH at 0x0070E5D0); the donor's
-// dllimport names (bfmeCloseDXK/bfmeCvtDXI) belong to the skipped DXK/DXI
-// bodies, so this TU declares no imports.
+// The T2 body needs one ledger pin (bfmeCallDXH at 0x0070E5D0). The DXK body
+// below reaches oleaut32!SysFreeString for the BSTR handle (the donor's
+// bfmeCloseDXK import name) and the ledger's ??_V array-delete helper for
+// the payload (the donor's bfmeFreeDXK).
 
 class BfmeSubDXH
 {
@@ -43,3 +44,21 @@ struct BfmeThingDXK
 	void *m_bfmeH;
 	void *m_bfmeP;
 };
+
+extern "C" __declspec(dllimport) void __stdcall SysFreeString(void *value);
+void __cdecl operator delete[](void *p);
+
+// ?bfmeGoDXKa@BfmeThingDXK@@QAEXXZ
+//
+// The donor's bfmeGoDXKa/bfmeGoDXKb twins are source-identical (the sweep's
+// pick is DXKa); the ICF-sharing Close/delTVB names are eliminated by the
+// void return plus the SysFreeString import. The body is dead in game.dat
+// (no callers, no data refs).
+void BfmeThingDXK::bfmeGoDXKa()
+{
+	if (m_bfmeH)
+		SysFreeString(m_bfmeH);
+	void *p = m_bfmeP;
+	if (p)
+		::operator delete[](p);
+}

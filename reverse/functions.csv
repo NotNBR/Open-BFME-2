@@ -10880,3 +10880,4 @@ _settabsi,,0x00747DE0,32,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-i
 _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor; b1 0x0099DED0
 ?set@Rva0048C500ByteSlot@@QAEXE@Z,,0x0048C500,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0048F358ByteSlot@@QAEXE@Z,,0x0048F358,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?bfmeGoDXKa@BfmeThingDXK@@QAEXXZ,,0x00176B60,34,Code/GameEngine/Source/Common/BfmeConv794.cpp,matched,BFME1 donor b1 0x009587F0; SysFreeString import plus ledger array-delete; void return eliminates ICF twins
