@@ -10495,3 +10495,4 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?bfmeGoDVIW@@YGXPAVBfmeMsgVIW@@PAX1H@Z,,0x0065DBE0,83,Code/GameEngine/Source/Common/BfmeConv1379.cpp,matched,BFME1 donor; 8 fold-twins cut by ret-0x10 + Run/Set/Set2/Set3 call run; b1 0x007F1050
 ?Rva007FCCC0@@YGXPAVRva007E8810Message@@HHHHPBD@Z,,0x006691C0,224,Code/GameEngine/Source/GameNetwork/Y4FeslAttributeRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCCC0; 11 DIR32 string literal(s) agree
 ?Rva007FC8F0@@YGXPAVRva007E8810Message@@PBURva007FC810Attribute@@H@Z,,0x00668DF0,153,Code/GameEngine/Source/GameNetwork/Y4FeslAttributeRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FC8F0; 1 DIR32 string literal(s) agree
+?parseGeometryActive@GeometryInfo@@SAXPAVINI@@PAX1PBX@Z,,0x006BD590,61,Code/GameEngine/Source/Common/System/GeometryParseActiveAndOffset.cpp,matched,BFME1 donor; 6 fold-twins cut by parseBool callee 0x2E850 + end-4 m_enabled; b1 0x0087DE10
