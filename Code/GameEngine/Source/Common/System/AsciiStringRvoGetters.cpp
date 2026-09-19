@@ -248,3 +248,19 @@ AsciiString Rva0059F322AsciiField::get() const
 {
 	return m_value;
 }
+
+class Rva0059F340AsciiField
+{
+public:
+	AsciiString get() const;
+
+private:
+	char m_pad[0xFDC];
+	AsciiString m_value; // +0xFDC
+};
+
+// ?get@Rva0059F340AsciiField@@QBE?AVAsciiString@@XZ
+AsciiString Rva0059F340AsciiField::get() const
+{
+	return m_value;
+}
