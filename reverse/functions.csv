@@ -11178,3 +11178,4 @@ _luaO_chunkid,,0x0074E210,267,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 
 _luaO_openspace,,0x0074E120,58,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _exp1,,0x00754270,33,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _openwithcontrol,,0x0074B490,312,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1 byte-identical donor; b1 liolib.c openwithcontrol; exact via unclaimed_scan
+?get@Rva0008BD27FloatField@@QBEMXZ,,0x0008BD27,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter; address-derived opaque holder
