@@ -11035,3 +11035,6 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?get@Rva001D96F0LeaField@@QBEPAXXZ,,0x001D96F0,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
 ?apply@Rva0007DEA1DwordImmSetter@@QAEXXZ,,0x0007DEA1,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple middle (7DE9A/A1/A8)
 ?apply@Rva0007DEA8DwordImmSetter@@QAEXXZ,,0x0007DEA8,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple last (7DE9A/A1/A8)
+?get@Rva00042280LeaGetter@@QBEPAXXZ,,0x00042280,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
+?get@Rva002035A9ByteField@@QBEEXZ,,0x002035A9,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
+?get@Rva002259EFByteField@@QBEEXZ,,0x002259EF,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
