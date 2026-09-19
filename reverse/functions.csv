@@ -11428,3 +11428,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ??0Rva007F9B80@@QAE@PAX@Z,,0x006660D0,208,Code/GameEngine/Source/GameNetwork/Rva007F9B80Ctor.cpp,matched,BFME1 byte-identical donor; b1 0x007F9B80
 ?name@Rva00065212Named@@QBEPBDXZ,,0x00065212,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning ModuleData; shared base-virtual slot reused by 187 vtables with 004B3FD0 ahead; address-derived placeholder name
 ?name@Rva00041FC9Named@@QBEPBDXZ,,0x00041FC9,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning GameLogic; vtable refs at 0x7C25D8 and 0x7EE128 in descriptor tails closed by 5B5384; address-derived placeholder name
+?close@File@@UAEXXZ,,0x0060259A,52,Code/GameEngine/Source/Common/System/File.cpp,matched,BFME1 File.cpp port (one-arg setName drift); /O1 for bl-zero form; ::delete-this via slot0 + ??3
