@@ -10941,3 +10941,4 @@ _need_value,,0x00752140,61,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 _luaK_patchlist,,0x00752610,56,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_getlabel,,0x00752740,51,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_goiftrue,,0x007530C0,37,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_luaK_code1,,0x00752670,26,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
