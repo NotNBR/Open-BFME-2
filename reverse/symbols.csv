@@ -2996,6 +2996,8 @@ _luaG_binerror,0x0074D2B0
 _luaG_getline,0x0074CA90
 _luaG_ordererror,0x0074D2E0
 _luaG_typeerror,0x0074D250
+_lua_getinfo,0x0074D330,luaL_argerror 0x751820 +0x20 E8 decodes here; debug info query; ldebug.c
+_lua_getstack,0x0074CA30,luaL_argerror 0x751820 +0x10 E8 decodes here; stack level query; ldebug.c
 _luaH_getnum,0x007504C0
 _luaH_new,0x00750770
 _luaH_setint,0x007509E0
@@ -3014,7 +3016,6 @@ _luaK_patchlistaux,0x00751FF0
 _luaK_setcallreturns,0x00751EF0
 _luaK_storevar,0x00752E10
 _luaK_testgo,0x00752FC0
-_luaL_argerror,0x00751820
 _luaL_check_lstr,0x007519A0
 _luaL_checktype,0x00751900
 _luaL_findstring,0x00751490
