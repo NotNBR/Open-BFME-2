@@ -11159,3 +11159,4 @@ _open_func,,0x00754080,87,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte
 ?apply@Rva003916A4DwordImmSetter@@QAEXXZ,,0x003916A4,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?get@Rva002A9821LeaGetter@@QBEPAXXZ,,0x002A9821,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?apply@Rva003F3F7CDwordImmSetter@@QAEXXZ,,0x003F3F7C,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?apply@Rva003F7BC5DwordImmSetter@@QAEXXZ,,0x003F7BC5,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
