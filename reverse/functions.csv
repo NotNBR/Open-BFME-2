@@ -11189,3 +11189,5 @@ _openwithcontrol,,0x0074B490,312,Code/Libraries/Source/Lua/liolib_bfme1.c,matche
 _block,,0x007544B0,46,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 ?get@Rva0011C430ByteField@@QBEEXZ,,0x0011C430,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter quad-family drain; address-derived opaque holder
 ?get@Rva002E05EELeaGetter@@QBEPAXXZ,,0x002E05EE,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
+?apply@Rva004E1416DwordImmSetter@@QAEXXZ,,0x004E1416,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?get@Rva0031A9CELeaGetter@@QBEPAXXZ,,0x0031A9CE,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
