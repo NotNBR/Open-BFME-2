@@ -11058,3 +11058,4 @@ _string_constant,,0x00753A20,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME
 ?apply@Rva004EDFFFDwordImmSetter@@QAEXXZ,,0x004EDFFF,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple middle
 ?get@Rva002B2366ByteField@@QBEEXZ,,0x002B2366,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?apply@Rva004EE006DwordImmSetter@@QAEXXZ,,0x004EE006,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple last
+?get@Rva00299C74LeaField@@QBEPAXXZ,,0x00299C74,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter at negative displacement; address-derived opaque holder
