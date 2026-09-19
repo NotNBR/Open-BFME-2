@@ -3164,3 +3164,4 @@ __CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper ca
 ?Is_Empty@MeshMatDescClass@@QAE_NXZ,0x0015A6C0,install_alternate_material_desc 0x188290 +0x25 E8 decodes here; empty check on context AlternateMatDesc; meshmatdesc.cpp
 ?getWhichTurretForCurWeapon@AIUpdateInterface@@QBE?AW4WhichTurretType@@XZ,0x0026275E,retail E8 from BattlePlanUpdate::isTurretInNaturalPosition at 0x0049779D; no-arg const thiscall returning turret index; ZH AIUpdate.h non-virtual role
 ?isTurretInNaturalPosition@AIUpdateInterface@@QBE_NW4WhichTurretType@@@Z,0x0026269C,retail E8 from BattlePlanUpdate::isTurretInNaturalPosition at 0x004977AA; one-int-arg const thiscall returning bool; ZH AIUpdate.h non-virtual role
+?recenterTurret@AIUpdateInterface@@QAEXW4WhichTurretType@@@Z,0x0026266C,retail E8 from BattlePlanUpdate::recenterTurret at 0x00497786; one-int-arg thiscall delegating via turret array +0x20C; ZH AIUpdate.h non-virtual role
