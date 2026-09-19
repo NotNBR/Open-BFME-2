@@ -2994,7 +2994,6 @@ _listfields,0x00754EA0
 _localtime,0x0062987A,CRT localtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
 _luaC_checkGC,0x00751470
 _luaG_getline,0x0074CA90
-_luaG_ordererror,0x0074D2E0
 _luaG_typeerror,0x0074D250
 _lua_getinfo,0x0074D330,luaL_argerror 0x751820 +0x20 E8 decodes here; debug info query; ldebug.c
 _lua_getstack,0x0074CA30,luaL_argerror 0x751820 +0x10 E8 decodes here; stack level query; ldebug.c

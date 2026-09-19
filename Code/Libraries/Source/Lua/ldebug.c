@@ -136,3 +136,13 @@ void luaG_binerror (lua_State *L, StkId p1, int t, const char *op) {
   LUA_ASSERT(ttype(p1) != t, "must be an error");
   luaG_typeerror(L, p1, op);
 }
+
+
+void luaG_ordererror (lua_State *L, StkId top) {
+  const char *t1 = luaO_typename(top-2);
+  const char *t2 = luaO_typename(top-1);
+  if (t1[2] == t2[2])
+    luaO_verror(L, "attempt to compare two %.10s values", t1);
+  else
+    luaO_verror(L, "attempt to compare %.10s with %.10s", t1, t2);
+}
