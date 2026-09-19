@@ -54,3 +54,12 @@ int Rva0018026EGet(void)
 {
 	return 0x4D455348;
 }
+
+// ?Rva00180581Get@@YAHXZ @ 0x00180581 (6B): returns 0x50415254.
+// Follows a leave/ret (prev C9-C3), carried by 1 .rdata slot (0x7D5004)
+// in the parallel vtable to Rva0018026EGet, no direct callers, no branch
+// sources. Opaque address-derived name.
+int Rva00180581Get(void)
+{
+	return 0x50415254;
+}
