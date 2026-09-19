@@ -11533,3 +11533,4 @@ _lua_gettagmethod,,0x0074FDF0,139,Code/Libraries/Source/Lua/ltm.c,matched,object
 _luaF_freeproto,,0x00751C00,149,Code/Libraries/Source/Lua/lfunc.c,matched,object-symbol=_luaF_freeproto; emitted by lfunc.c object; vendored=lua-4.0.1
 _luaF_freeclosure,,0x00751CA0,46,Code/Libraries/Source/Lua/lfunc.c,matched,object-symbol=_luaF_freeclosure; emitted by lfunc.c object; vendored=lua-4.0.1
 _luaH_remove,,0x00750620,178,Code/Libraries/Source/Lua/ltable.c,matched,object-symbol=_luaH_remove; emitted by ltable.c object; vendored=lua-4.0.1
+_LoadNumber,,0x007564D0,27,Code/Libraries/Source/Lua/lundump.c,matched,object-symbol=_LoadNumber; emitted by lundump.c object; vendored=lua-4.0.1
