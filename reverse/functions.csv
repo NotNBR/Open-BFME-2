@@ -11350,3 +11350,4 @@ _luaS_createudata,,0x007502D0,184,Code/Libraries/Source/Lua/lstring.c,matched,BF
 _luaV_getglobal,,0x0074E760,148,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
 _luaD_init,,0x0074D4B0,62,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
 _luaD_checkstack,,0x0074D650,88,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
+_luaD_breakrun,,0x0074DE30,59,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan

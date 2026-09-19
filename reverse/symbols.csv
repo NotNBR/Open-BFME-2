@@ -3169,5 +3169,4 @@ _luaH_get,0x00750550
 _luaT_realtag,0x0074FC60
 _luaH_getstr,0x00750510
 _luaG_typeerror,0x0074D250
-_luaD_breakrun,0x0074DE30
 _message,0x0074DDC0
