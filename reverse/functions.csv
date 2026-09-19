@@ -10930,3 +10930,4 @@ _discharge,,0x00752BD0,520,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 _luaK_adjuststack,,0x00752A10,441,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 ??0GridClassicEnvironmentMapperClass@@QAE@ABVINIClass@@PBDI@Z,,0x0013D2F0,37,Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp,matched,placed by masked whole-text search of the compiled body - single hit; base GridTextureMapper ctor already matched
 _luaK_storevar,,0x00752E10,421,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_luaK_patchlistaux,,0x00751FF0,332,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
