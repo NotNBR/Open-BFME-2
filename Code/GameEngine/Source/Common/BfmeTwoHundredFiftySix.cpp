@@ -1,58 +1,30 @@
-// cl: /DNDEBUG /DWIN32 /D_WINDOWS /MD /EHsc /D_STLP_USE_STATIC_LIB /Od
-// stlport
+// cl: /Od
+// Port of Open-BFME-1 Code/GameEngine/Source/Common/BfmeTwoHundredFiftySix.cpp
+// (near-miss donor: ?bfmeSetOU@BfmeThingOU@@QAEPAV1@E@Z @0x00830C30, 30B).
+// Only the served setter is carried here.
 //
-// ?bfmeSetOU@BfmeThingOU@@QAEPAV1@E@Z @ 0x0002A850 (30B). Near-miss donor
-// from Open-BFME-1 BfmeTwoHundredFiftySix.cpp (b1 0x00830C30): the frame
-// (spare[0x14] plus the saved this, sub esp,0x18) and the return-this shape
-// carry over verbatim -- the sole drift is the callee. BFME1 calls its
-// opaque bfmeDoOU worker; game.dat calls the matched narrow-string
-// push_back at 0x0000C330 with this as the string object (mov ecx, never
-// lea), so BfmeThingOU derives from the STLport narrow string here and the
-// setter pushes through the base. No new pins.
+// WHAT THE BODY IS. An unoptimised frame setter: it spills `this`, pushes
+// the byte argument and delegates to the private worker, returning `this`.
+// Retail routes the worker call at 0x0000C330, the rowed 84-byte stlport
+// narrow-string push_back body (ghidra concurs on the extent): the worker is
+// that append operation on the string at +0, folded onto a single address in
+// BFME2. BFME1 pins the same worker name at 0x0003BC23, so the name is kept
+// and the pin transposed to the BFME2 fold address; the call itself is the
+// byte-match proof.
 
-namespace _STL
-{
-
-template <class T>
-class char_traits {};
-
-template <class T>
-class allocator {};
-
-template <class Pointer, class Value, class Alloc>
-class _STLP_alloc_proxy : public Alloc
-{
-public:
-	Pointer _M_data;
-};
-
-template <class CharT, class Traits, class Alloc>
-class basic_string
-{
-public:
-	typedef unsigned int size_type;
-	void reserve(size_type amount);
-	void push_back(CharT value);
-
-private:
-	CharT *_M_start;
-	CharT *_M_finish;
-	_STLP_alloc_proxy<CharT *, CharT, Alloc> _M_end_of_storage;
-};
-
-}
-
-class BfmeThingOU : public _STL::basic_string<char, _STL::char_traits<char>, _STL::allocator<char> >
+class BfmeThingOU
 {
 public:
 	BfmeThingOU *bfmeSetOU(unsigned char one);
+
+	void bfmeDoOU(unsigned char one);
 };
 
 BfmeThingOU *BfmeThingOU::bfmeSetOU(unsigned char one)
 {
 	unsigned char spare[0x14];
 
-	push_back(one);
+	bfmeDoOU(one);
 
 	return this;
 }
