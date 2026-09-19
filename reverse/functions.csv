@@ -11969,3 +11969,4 @@ _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alia
 ?apply@Rva000A8E95DwordImmSetter@@QAEXXZ,,0x000A8E95,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?apply@Rva0010846EDwordImmSetter@@QAEXXZ,,0x0010846E,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?apply@Rva00108650DwordImmSetter@@QAEXXZ,,0x00108650,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+??0RayCollisionTestClass@@QAE@ABV0@ABVMatrix3D@@@Z,,0x001493B0,64,Code/Libraries/Source/WWVegas/WW3D2/RayCollisionCopyCtor.cpp,matched,ZH coltest.h inline port + _bfme_flag42(false); LineSeg 2-arg ctor inlines to Set@0x718F70; end-adjacent to update_bounding_box@0x1493F0
