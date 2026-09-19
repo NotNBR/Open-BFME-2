@@ -10820,3 +10820,4 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?bfmeGo1036E@BfmeE1036@@QAEXXZ,,0x00664FC0,37,Code/GameEngine/Source/Common/BfmeConv1036.cpp,matched,BFME1 donor with callee repair; release helper is rowed ProtoMangleDestroy
 ?addSubtitle@SubtitleManager@@QAEXABVAsciiString@@IHHHHH@Z,,0x00688AA0,105,Code/GameEngine/Source/GameClient/SubtitleManagerAccessors.cpp,matched,BFME1 byte-identical donor; b1 0x0081DDD0
 ?bfmeAssignVGO@BfmeRefVGO@@QAEAAV1@ABV1@@Z,,0x006CDB10,66,Code/GameEngine/Source/Common/BfmeConv1355.cpp,matched,BFME1 byte-identical donor; b1 0x00892B90
+?bfmeGoDWE@BfmeThingDWE@@QAEXXZ,,0x00154820,26,Code/GameEngine/Source/Common/BfmeConv791.cpp,matched,BFME1 byte-identical donor; b1 0x0093C700
