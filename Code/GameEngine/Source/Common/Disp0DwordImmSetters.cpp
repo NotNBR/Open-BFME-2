@@ -1090,6 +1090,19 @@ void Rva0005EA2ABDwordImmSetter::apply()
 	m_value = 0x00C780F4;
 }
 
+class Rva0005E6810DwordImmSetter
+{
+public:
+	void apply();
+
+	unsigned int m_value;
+};
+
+void Rva0005E6810DwordImmSetter::apply()
+{
+	m_value = 0x00C77E28;
+}
+
 class Rva000575395DwordImmSetter
 {
 public:
@@ -1101,4 +1114,17 @@ public:
 void Rva000575395DwordImmSetter::apply()
 {
 	m_value = 0x00C6E5B4;
+}
+
+class Rva000549C6DDwordImmSetter
+{
+public:
+	void apply();
+
+	unsigned int m_value;
+};
+
+void Rva000549C6DDwordImmSetter::apply()
+{
+	m_value = 0x00C6A68C;
 }
