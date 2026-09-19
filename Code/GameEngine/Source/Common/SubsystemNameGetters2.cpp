@@ -41,3 +41,4 @@ BFME_LITERAL_NAME_GETTER(Rva00253DF7Named, "HordeNotifyTargetsOfImminentProbable
 BFME_LITERAL_NAME_GETTER(Rva00253ED3Named, "NotifyTargetsOfImminentProbableCrushingUpdate")
 BFME_LITERAL_NAME_GETTER(Rva00254BF1Named, "ModelConditionSoundSelectorClientBehavior")
 BFME_LITERAL_NAME_GETTER(Rva00279669Named, "Drawable")
+BFME_LITERAL_NAME_GETTER(Rva0028417CNamed, "TerrainLogic")

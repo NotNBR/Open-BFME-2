@@ -12010,3 +12010,4 @@ _luaL_addstring,,0x007516C0,42,Code/Libraries/Source/Lua/lauxlib.c,matched,gen-a
 ?name@Rva00253ED3Named@@QBEPBDXZ,,0x00253ED3,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning NotifyTargetsOfImminentProbableCrushingUpdate; vtable ref; address-derived placeholder name
 ?name@Rva00254BF1Named@@QBEPBDXZ,,0x00254BF1,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning ModelConditionSoundSelectorClientBehavior; vtable ref; address-derived placeholder name
 ?name@Rva00279669Named@@QBEPBDXZ,,0x00279669,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning Drawable; vtable ref; address-derived placeholder name
+?name@Rva0028417CNamed@@QBEPBDXZ,,0x0028417C,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning TerrainLogic; vtable ref; address-derived placeholder name
