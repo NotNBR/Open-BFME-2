@@ -11580,3 +11580,4 @@ _math_atan2,,0x007484F0,67,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math
 _math_ceil,,0x00748540,41,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.ceil via check_number + pushnumber; callees pinned
 _math_floor,,0x00748570,41,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.floor via check_number + pushnumber; callees pinned
 ?get@Rva0033F94DAddDwordField@@QBEHXZ,,0x0033F94D,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?name@Rva00286F81Named@@QBEPBDXZ,,0x00286F81,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning FireLogicSystem; vtable ref in .rdata; address-derived placeholder name
