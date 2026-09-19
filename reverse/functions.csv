@@ -10861,3 +10861,4 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?push_back@?$vector@VMoney@@V?$allocator@VMoney@@@_STL@@@_STL@@QAEXABVMoney@@@Z,,0x006BF950,59,Code/GameEngine/Source/Common/MoneyVectorPushBack.cpp,matched,BFME1 byte-identical donor; b1 0x0087FF10
 _lua_dblibopen,,0x00748380,21,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-identical donor; b1 0x00991220
 ?set@Rva002B2203ByteSlot@@QAEXE@Z,,0x002B2203,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+_settabsi,,0x00747DE0,32,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-identical donor; b1 0x00990C80
