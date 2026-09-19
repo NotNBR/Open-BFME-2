@@ -12052,3 +12052,4 @@ _lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 by
 ?name@Rva002FE03BNamed@@QBEPBDXZ,,0x002FE03B,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning TAiData; vtable ref; address-derived placeholder name
 _readname,,0x007570C0,141,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor vendored lua-4.0.1 llex static
 ?Return_File@RawFileFactoryClass@@QAEXPAVFileClass@@@Z,,0x006132A0,36,Code/Libraries/Source/WWVegas/WWLib/ffactory.cpp,matched,bare global delete per closeDataChunk lesson; was plain delete flag-1
+?name@Rva000C1246Named@@QBEPBDXZ,,0x000C1246,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DScriptedModelDraw; vtable ref at 0xBCA098 with slot pattern; address-derived placeholder name
