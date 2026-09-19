@@ -10446,5 +10446,4 @@ __Locale_compose_name,,0x00020680,977,Code/Libraries/Source/WWVegas/WWLib/Locale
 ??0Rva009F5970State@@QAE@XZ,,0x00627FB0,142,Code/GameEngine/Source/Common/Rva009F5970StateCtor.cpp,matched,BFME1 near-miss donor b1 0x009F5B70; array count 17 to 21 plus XZ gen-shim pins
 ?build@Rva007FAB30Context@@QAEXPBD00PAX11@Z,,0x00667060,341,Code/GameEngine/Source/GameNetwork/Rva007FAB30FeslEndpoint.cpp,matched,BFME1 byte-identical donor; b1 0x007FAB30; 3 DIR32 string literal(s) agree
 ??0Rva003AD160@@QAE@ABV0@@Z,,0x004CBF6D,45,Code/GameEngine/Source/Common/Rva003AD160Copy.cpp,matched,BFME1 donor with member repair; members 2-3 are WeaponTemplateSetHead matched at 0x45455; Str pin 0xA8C7C same batch
-??0Rva003AD160@@QAE@ABV0@@Z,,0x004CBF6D,45,Code/GameEngine/Source/Common/Rva003AD160Copy.cpp,matched,BFME1 donor with member repair; members 2-3 are WeaponTemplateSetHead matched at 0x45455; Str pin 0xA8C7C same batch
 ?Rva007F91D0@@YAXPAURva00800E50Header@@PBD@Z,,0x00665770,477,Code/GameEngine/Source/GameNetwork/Rva007F91D0DemanglerLog.cpp,matched,BFME1 near-miss donor; b1 0x007F91D0; immediate-only drift
