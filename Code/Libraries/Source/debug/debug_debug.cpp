@@ -1339,22 +1339,22 @@ void Debug::StartOutput(DebugIOInterface::StringType type, const char *fmt, ...)
   va_end(va);
 }
 
-// ?AddOutput@Debug@@EAEXPBDI@Z present-unmatched
 void Debug::AddOutput(const char *str, unsigned remainingLen)
 {
+  RetailDebugOutView *retail = (RetailDebugOutView *)this;
   // bail out if no valid destination type
   // (valid, can happen if hitting a disabled log for the first time)
-  if (curType==DebugIOInterface::StringType::MAX)
+  if (retail->curType==7)
     return;
 
   while (remainingLen)
   {
     // if we're doing timestamps we have to split at each '\n'
     unsigned len;
-    if (timeStamp)
+    if (retail->timeStamp)
     {
       // add timestamp now?
-      if (ioBuffer[curType].lastWasCR)
+      if (retail->ioBuffer[retail->curType].lastWasCR)
       {
         SYSTEMTIME systime;
         GetLocalTime(&systime);
@@ -1364,41 +1364,77 @@ void Debug::AddOutput(const char *str, unsigned remainingLen)
                       systime.wSecond,systime.wMilliseconds);
 
         unsigned tsLen=strlen(ts);
-        memcpy(ioBuffer[curType].buffer+ioBuffer[curType].used,ts,tsLen+1);
-        ioBuffer[curType].used+=tsLen;
+        memcpy(retail->ioBuffer[retail->curType].buffer+retail->ioBuffer[retail->curType].used,ts,tsLen+1);
+        retail->ioBuffer[retail->curType].used+=tsLen;
       }
 
       // search for next '\n'
-      const char *p=strchr(str,'\n');
-      p=p?p+1:str+remainingLen;
+      const char *p=str;
+      const char *end=str+remainingLen;
+      if (p!=end) {
+        do {
+          if (*p=='\n') { ++p; break; }
+          ++p;
+        } while (p!=end);
+      }
       len=p-str;
     }
     else
       len=remainingLen;
 
-    if (ioBuffer[curType].used+len+64>=ioBuffer[curType].alloc)
+    // count newlines: each one gains a CR when stored
+    unsigned newlines=0;
+    for (unsigned i=0;i<len;++i)
+      if (str[i]=='\n')
+        ++newlines;
+
+    if (retail->ioBuffer[retail->curType].used+newlines+len+64>=retail->ioBuffer[retail->curType].alloc)
     {
       // no, must grow buffer
-      ioBuffer[curType].alloc+=len+1024;
-      ioBuffer[curType].buffer=(char *)
-          DebugReAllocMemory(ioBuffer[curType].buffer,ioBuffer[curType].alloc);
+      retail->ioBuffer[retail->curType].alloc+=newlines+len+1024;
+      retail->ioBuffer[retail->curType].buffer=(char *)
+          DebugReAllocMemory(retail->ioBuffer[retail->curType].buffer,retail->ioBuffer[retail->curType].alloc);
     }
 
-    // add to buffer (with NUL)
-    memcpy(ioBuffer[curType].buffer+ioBuffer[curType].used,str,len+1);
-    ioBuffer[curType].used+=len;
+    if (newlines)
+    {
+      // expand LFs to CRLF while storing (with NUL)
+      const char *src=str;
+      char *dst=retail->ioBuffer[retail->curType].buffer+retail->ioBuffer[retail->curType].used;
+      if (len>0)
+      {
+        unsigned n=len;
+        do
+        {
+          *dst++=*src++;
+          if (dst[-1]=='\n')
+          {
+            dst[-1]='\r';
+            *dst++='\n';
+          }
+        } while (--n);
+      }
+      *dst=0;
+      retail->ioBuffer[retail->curType].used+=len+newlines;
+    }
+    else
+    {
+      // add to buffer (with NUL)
+      memcpy(retail->ioBuffer[retail->curType].buffer+retail->ioBuffer[retail->curType].used,str,len+1);
+      retail->ioBuffer[retail->curType].used+=len;
+    }
 
     // last char CR?
-    ioBuffer[curType].lastWasCR=str[len-1]=='\n';
+    retail->ioBuffer[retail->curType].lastWasCR=str[len-1]=='\n';
     str+=len;
     remainingLen-=len;
 
-    // are we writing a log string?
-    if (curType==DebugIOInterface::Log&&ioBuffer[curType].lastWasCR)
+    // are we writing a log string? (retail keeps Log==1)
+    if (retail->curType==1&&retail->ioBuffer[retail->curType].lastWasCR)
     {
       // yes, flush out now
-      FlushOutput();
-      curType=DebugIOInterface::Log;
+      Debug::FlushOutput(true);
+      retail->curType=1;
     }
   }
 }
