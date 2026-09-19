@@ -10789,3 +10789,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?set@Rva007AECC0Slot@@QAEXIH@Z,,0x0010896A,22,Code/GameEngine/Source/Common/Rva007AECC0Slot.cpp,matched,BFME1 byte-identical donor; b1 0x007AECC0
 ?GadgetComboBoxSetMaxChars@@YAXPAVGameWindow@@H@Z,,0x003226E7,28,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetComboBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B3980
 ?GadgetComboBoxSetMaxDisplay@@YAXPAVGameWindow@@H@Z,,0x00322703,17,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetComboBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B39B0
+?bfmeGoEMC@@YGXPAVBfmeObjEMC@@PAX1@Z,,0x00665470,29,Code/GameEngine/Source/Common/BfmeConv819.cpp,matched,BFME1 byte-identical donor; b1 0x007F8DF0
