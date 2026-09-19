@@ -11298,3 +11298,4 @@ _luaS_init,,0x0074FF60,80,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte
 _luaS_newfixed,,0x007503C0,56,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c; exact via unclaimed_scan
 _luaS_new,,0x00750390,42,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c; exact via unclaimed_scan
 _lua_gettop,,0x00746F30,13,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
+_luaF_newclosure,,0x00751B00,57,Code/Libraries/Source/Lua/lfunc.c,matched,BFME1 byte-identical donor b1 lfunc.c; exact; unblocks luaV_closure
