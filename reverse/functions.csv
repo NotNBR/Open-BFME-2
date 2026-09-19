@@ -10595,3 +10595,5 @@ _luaH_mainposition,,0x00750400,88,Code/Libraries/Source/Lua/ltable.c,matched,has
 ?get@Rva003F3FCEDwordField@@QBEHXZ,,0x003F3FCE,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 _luaK_testgo,,0x00752FC0,251,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099F5C0
 _luaH_set,,0x007508F0,233,Code/Libraries/Source/Lua/ltable.c,matched,hash insert with mainposition and equalObj rows plus lua_error and realloc pins plus rehash pin; recursion self-serves; emitted by ltable.c object; vendored=lua-4.0.1
+_rehash,,0x00750830,183,Code/Libraries/Source/Lua/ltable.c,matched,TU-local static; numuse inlined; setnodevector and luaH_set rows plus realloc pin resolve calls; emitted by ltable.c object; vendored=lua-4.0.1
+?get@Rva0040315ADwordField@@QBEHXZ,,0x0040315A,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
