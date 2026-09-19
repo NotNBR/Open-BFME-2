@@ -3128,3 +3128,5 @@ Gen_f265_b7a8aa_0081dad0,0x006887F0
 ?bfmeInitUBB@BfmeSubUBB@@QAEXH@Z,0x00313581
 ?bfmeCallEBC@BfmeOwnerEBC@@QAEXXZ,0x0046094C
 ?bfmeCallEBD@BfmeSubEBD@@QAEXXZ,0x00383EEA
+??0Money@@QAE@ABV0@@Z,0x00063BE4
+?_M_insert_overflow@?$vector@VMoney@@V?$allocator@VMoney@@@_STL@@@_STL@@IAEXPAVMoney@@ABV3@ABU__false_type@2@I_N@Z,0x006BF5E0
