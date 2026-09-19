@@ -105,3 +105,12 @@ int Rva00507552Get(void)
 {
 	return 0x00C63FD0;
 }
+
+// ?Rva00510D87Get@@YAHXZ @ 0x00510D87 (6B): returns 0x006D1E55.
+// Follows an SEH leave/ret (0x510D85-86) with a sub/cmp-style function
+// after. 7 .rdata refs, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00510D87Get(void)
+{
+	return 0x006D1E55;
+}
