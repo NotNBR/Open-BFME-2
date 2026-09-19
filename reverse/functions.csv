@@ -10451,3 +10451,4 @@ __Locale_compose_name,,0x00020680,977,Code/Libraries/Source/WWVegas/WWLib/Locale
 ?bfmeProbeSse2@@YAHXZ,,0x001D5540,78,Code/GameEngine/Source/Common/BfmeImageFilter.cpp,matched,BFME1 near-miss donor; b1 0x009C4C40; immediate-only drift
 _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFME1 donor verbatim; b1 0x009945A0; 6 callee pins same batch (5 lua API + bfmeLogMsg574)
 ?Rva007FB550@@YGXPAVRva007E8810Message@@HPBD11_N@Z,,0x00667A60,208,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FB550; 5 DIR32 string literal(s) agree
+?bfmeGo912C@BfmeThing912C@@QAEXXZ,,0x006276B0,34,Code/GameEngine/Source/Common/BfmeConv912.cpp,matched,BFME1 near-miss donor; b1 0x009F4F80; immediate-only drift
