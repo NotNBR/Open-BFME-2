@@ -202,3 +202,11 @@ int Rva0056B767Get(void)
 {
 	return 0x00C6BB18;
 }
+
+// ?Rva000A8F58Get@@YAHXZ @ 0x000A8F58 (6B): returns 0x00DB4CF0. Opens a
+// contiguous pair (58/F0 then 5E/F8, 8 apart) after a ret-4. Tail-jumped
+// from thunk 0x62972, 1 direct E8 caller, Ghidra-6. Opaque name.
+int Rva000A8F58Get(void)
+{
+	return 0x00DB4CF0;
+}
