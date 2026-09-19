@@ -320,3 +320,11 @@ int Rva001A13F0Get(void)
 {
 	return 15;
 }
+
+// ?Rva002856F7Get@@YAHXZ @ 0x002856F7 (6B): returns 0x00DFEA50. Opens a
+// contiguous pair (F7 then FD) after a ret. Carried at 0x7FB708 and
+// 0x7FB70C, no direct callers, no branch sources. Opaque name.
+int Rva002856F7Get(void)
+{
+	return 0x00DFEA50;
+}
