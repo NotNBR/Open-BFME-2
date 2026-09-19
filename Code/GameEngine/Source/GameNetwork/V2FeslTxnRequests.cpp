@@ -90,15 +90,25 @@ extern const char * const g_Rva0130A7A4;
 
 /* omitted recovery-lane function body */
 
-
 /* omitted recovery-lane function body */
 
+void __stdcall Rva007F3E50( Rva007E8810Message *msg, FeslInt64 clubId )
+{
+	const char *txn = g_Rva0130A774;
+	msg->reset();
+	msg->m_category = 'club';
+	msg->addString( "TXN", txn );
+	msg->addInt64( "clubId", clubId );
+}
 
-/* omitted recovery-lane function body */
-
-
-/* omitted recovery-lane function body */
-
+void __stdcall Rva007F3F40( Rva007E8810Message *msg, FeslInt64 clubId )
+{
+	const char *txn = g_Rva0130A744;
+	msg->reset();
+	msg->m_category = 'club';
+	msg->addString( "TXN", txn );
+	msg->addInt64( "clubId", clubId );
+}
 
 void __stdcall Rva007F3F90( Rva007E8810Message *msg, FeslInt64 clubId, int state )
 {
@@ -132,8 +142,28 @@ void __stdcall Rva007F3A80( Rva007E8810Message *msg, FeslInt64 clubId, FeslInt64
 	msg->addInt( "state", state );
 }
 
-/* omitted recovery-lane function body */
+void __stdcall Rva007F3B50( Rva007E8810Message *msg, FeslInt64 clubId,
+	FeslInt64 userId, const Rva007F3B50Attribute *attributes, unsigned int count )
+{
+	const char *txn = g_Rva0130A75C;
+	unsigned int i;
 
+	msg->reset();
+	msg->m_category = 'club';
+	msg->addString( "TXN", txn );
+	msg->addInt64( "clubId", clubId );
+	msg->addInt64( "userId", userId );
+	msg->addInt( "attributes.[]", count );
+	for( i = 0; i < count; ++i )
+	{
+		char key[ 0x40 ] = "";
+
+		sprintf( key, "attributes.%d.key", i );
+		msg->addString( key, attributes[ i ].key );
+		sprintf( key, "attributes.%d.value", i );
+		msg->addString( key, attributes[ i ].value );
+	}
+}
 
 void __stdcall Rva007F2D10( Rva007E8810Message *msg, const char *key, int periodId )
 {
@@ -219,5 +249,3 @@ void __stdcall Rva007F4240( Rva007E8810Message *msg, const char *clientString,
 	if( clientType )
 		msg->addString( "clientType", clientType );
 }
-
-
