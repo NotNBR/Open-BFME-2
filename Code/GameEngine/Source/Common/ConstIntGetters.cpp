@@ -25,3 +25,15 @@ int Rva00182D20Get(void)
 {
 	return 12;
 }
+
+// ?Rva0013C650Get@@YAHXZ @ 0x0013C650 (6B): returns 3. CC-island
+// (7xCC before, 10xCC after) between the 0x13C630 environment-mapper ctor
+// and 0x13C660, carried by 2 .rdata slots (one Vector3Randomizer vtable).
+// The value matches CLASSID_SOLIDCYLINDER but the body also sits in an
+// unrelated randomizer vtable slot, so the linker folded several const-3
+// returners here and no single class identity is witnessed; the row stays
+// address-derived. No direct callers, no branch sources.
+int Rva0013C650Get(void)
+{
+	return 3;
+}
