@@ -216,7 +216,6 @@ static void enterbreak (FuncState *fs, Breaklabel *bl) {
 }
 
 
-// _adjustlocalvars present-unmatched
 static void adjustlocalvars (LexState *ls, int nvars) {
   FuncState *fs = ls->fs;
   while (nvars--)
