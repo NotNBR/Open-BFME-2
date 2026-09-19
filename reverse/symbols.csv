@@ -2989,3 +2989,4 @@ _Module32First@8,0x00687D92
 _Module32Next@8,0x00687D8C
 ?bfmeGoVJH@BfmeOwner803BF0@@QAEXH@Z,0x0066F9B0
 ?bfmeFillInsV38@BfmeStrV38@@QAEPAV1@PAD0ID@Z,0x000297D0
+?bfmeMakeResultA@BfmeResultSourceA@@QAE?AUBfmeResultA@@H@Z,0x00628980
