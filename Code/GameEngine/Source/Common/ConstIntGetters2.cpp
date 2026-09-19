@@ -380,3 +380,11 @@ int Rva0033F437Get(void)
 {
 	return 0x00C11114;
 }
+
+// ?Rva0033F45AGet@@YAHXZ @ 0x0033F45A (6B): returns 0x00C11164.
+// Follows a pop/ret-4 (prev C2-04-00), carried by 1 .rdata slot, no direct
+// callers, no branch sources. Opaque address-derived name.
+int Rva0033F45AGet(void)
+{
+	return 0x00C11164;
+}
