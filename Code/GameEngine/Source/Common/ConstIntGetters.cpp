@@ -543,3 +543,12 @@ int Rva0019F020Get(void)
 {
 	return 25;
 }
+
+// ?Rva006C7580Get@@YAHXZ @ 0x006C7580 (6B): returns 0x00CE7D14.
+// Follows a ret-12 (0x6C757D-7F) with CC padding, 8xCC after, carried
+// at 1 .rdata slot, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva006C7580Get(void)
+{
+	return 0x00CE7D14;
+}
