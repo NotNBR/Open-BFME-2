@@ -29,3 +29,27 @@ unsigned short DataChunkInput::getChunkVersion()
 
 	return m_chunkStack->m_version;
 }
+
+// Table of contents for the chunk-name registry. Layout mirrors the ZH
+// DataChunkTableOfContents (list head, entry count, next ID allocator,
+// header-open flag); declaration order is what the bytes prove: retail
+// stores NULL, 0, 1, false in that order.
+class DataChunkTableOfContents
+{
+public:
+	DataChunkTableOfContents();
+
+	void *m_list;				// +0x00
+	int m_listLength;			// +0x04
+	unsigned int m_nextID;		// +0x08
+	bool m_headerOpened;		// +0x0C
+};
+
+// ??0DataChunkTableOfContents@@QAE@XZ
+DataChunkTableOfContents::DataChunkTableOfContents() :
+	m_list(0),
+	m_nextID(1),
+	m_listLength(0),
+	m_headerOpened(false)
+{
+}
