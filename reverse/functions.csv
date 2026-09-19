@@ -10883,3 +10883,4 @@ _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte
 ?bfmeGoDXKa@BfmeThingDXK@@QAEXXZ,,0x00176B60,34,Code/GameEngine/Source/Common/BfmeConv794.cpp,matched,BFME1 donor b1 0x009587F0; SysFreeString import plus ledger array-delete; void return eliminates ICF twins
 ?setBit8@Rva008993E0Owner@@QAEXH@Z,,0x006D6440,32,Code/GameEngine/Source/Common/SmallGaps/Rva008993E0Bit8Access.cpp,matched,BFME1 byte-identical donor; b1 0x008993E0
 ?getBit8@Rva008993E0Owner@@QAEHXZ,,0x006D6460,10,Code/GameEngine/Source/Common/SmallGaps/Rva008993E0Bit8Access.cpp,matched,BFME1 byte-identical donor; b1 0x00899400
+?get@Rva004FDD6DAsciiField@@QBE?AVAsciiString@@XZ,,0x004FDD6D,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x1DC via StringBase copy 0x365F0
