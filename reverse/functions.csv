@@ -12350,3 +12350,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 ?Rva002856FDGet@@YAHXZ,,0x002856FD,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDFE794; contiguous pair tail with 2 refs and no callers; opaque name
 ?Rva007FBB20@@YAPAVRva007FBB20Object@@PAX@Z,,0x00668030,45,Code/GameEngine/Source/Common/Q3MakeDerivedFamily.cpp,matched,BFME1 byte-identical donor b1 0x007FBB20 ambiguous resolved by address map error 6 Ghidra-45 exact trimmed sibling
 ?Rva003ABD55Get@@YAHXZ,,0x003ABD55,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC1C59C; prev ret with 2 refs and no callers; opaque name
+?Rva003AC9A1Get@@YAHXZ,,0x003AC9A1,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC1C96C; prev ret with 2 refs and no callers; opaque name

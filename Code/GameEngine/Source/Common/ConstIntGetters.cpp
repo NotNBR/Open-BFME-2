@@ -345,3 +345,12 @@ int Rva003ABD55Get(void)
 {
 	return 0x00C1C59C;
 }
+
+// ?Rva003AC9A1Get@@YAHXZ @ 0x003AC9A1 (6B): returns 0x00C1C96C.
+// Follows a ret (0x3AC9A0) with a sub/cmp-style function after. Carried
+// at 0x81C948 and 0x81D19C, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva003AC9A1Get(void)
+{
+	return 0x00C1C96C;
+}
