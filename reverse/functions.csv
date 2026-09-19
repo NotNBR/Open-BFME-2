@@ -11172,3 +11172,4 @@ _open_func,,0x00754080,87,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte
 ?get@Rva002C8E8ALeaGetter@@QBEPAXXZ,,0x002C8E8A,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 _luaK_code0,,0x00752650,23,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_lastisopen,,0x00751EB0,56,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_number_constant,,0x00751E30,123,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
