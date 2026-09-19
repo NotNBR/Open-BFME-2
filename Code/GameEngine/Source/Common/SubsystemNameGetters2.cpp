@@ -16,3 +16,4 @@
 	}
 
 BFME_LITERAL_NAME_GETTER(Rva00252E50Named, "TerrainResourceClientBehavior")
+BFME_LITERAL_NAME_GETTER(Rva002533CDNamed, "UpdateModule")
