@@ -78,3 +78,12 @@ int Rva00309E65Get(void)
 {
 	return 0x00DBD860;
 }
+
+// ?Rva00309E7FGet@@YAHXZ @ 0x00309E7F (6B): returns 0x00DBD918.
+// Third copier/getter pair in the run (rep movsd into 0xDBD918, ret at
+// 0x309E7E). 11 direct E8 callers, Ghidra-6, no branch sources.
+// Opaque address-derived name.
+int Rva00309E7FGet(void)
+{
+	return 0x00DBD918;
+}
