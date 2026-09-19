@@ -10442,3 +10442,4 @@ _math_randomseed,,0x00748A30,30,Code/Libraries/Source/Lua/lmathlib.c,matched,BFM
 ?bfmeInstallCpuDispatchTable@@YAXXZ,,0x001C1750,881,Code/GameEngine/Source/Common/BfmeCodecCpuDispatch.cpp,matched,BFME1 byte-identical donor verbatim (file from 253ac5e2 batch); explain_mismatch exact 881B
 ?bfmeMakeResultA@BfmeResultSourceA@@QAE?AUBfmeResultA@@H@Z,,0x00628980,209,Code/GameEngine/Source/Common/BfmeResultSourceA.cpp,matched,BFME1 donor reworked to raw payload view; b1 0x009F6600; retail frees item buffer via plain free not stlport dtor
 ??6Debug@@QAEAAV0@_J@Z,,0x0003B510,83,Code/Libraries/Source/WWVegas/WWDebug/debug_operator_long.cpp,matched,BFME1 near-miss donor trimmed to i64; b1 0x0088C290; prefix radix +0xC layout repair; qualified AddOutput via pre-pinned EAE pin with zero new pins
+__Locale_compose_name,,0x00020680,977,Code/Libraries/Source/WWVegas/WWLib/LocaleComposeName.c,matched,BFME1 near-miss donor b1 0x0084D3A0 immediate-only drift DIR32 auto-patch
