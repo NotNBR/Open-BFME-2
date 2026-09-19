@@ -10877,3 +10877,4 @@ _settabsi,,0x00747DE0,32,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-i
 ??0Rva002E2680@@QAE@XZ,,0x00332AEF,16,Code/GameEngine/Source/Common/S1CallThenMemberStore.cpp,matched,BFME1 byte-identical donor; b1 0x002E2680
 ?init@TextOnFrameTransition@@UAEXPAVGameWindow@@@Z,,0x0035FA90,23,Code/GameEngine/Source/GameClient/GUI/TextOnFrameTransitionInit.cpp,matched,BFME1 byte-identical donor; b1 0x005A02B0
 ?bfmeGo939D@@YGHD@Z,,0x003E53B1,23,Code/GameEngine/Source/Common/BfmeConv939_Go939D.cpp,matched,BFME1 byte-identical donor; b1 0x00324340
+_LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor; b1 0x0099DED0
