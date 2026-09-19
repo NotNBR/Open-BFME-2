@@ -11418,3 +11418,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?apply@Rva0005970E6DwordImmSetter@@QAEXXZ,,0x005970E6,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-800BC700-C3
 ?apply@Rva00057C51EDwordImmSetter@@QAEXXZ,,0x0057C51E,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-B863C300-C3
 ?apply@Rva000579656DwordImmSetter@@QAEXXZ,,0x00579656,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-9CBCBF00-C3
+?apply@Rva00057571CDwordImmSetter@@QAEXXZ,,0x0057571C,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-0CE6C600-C3
