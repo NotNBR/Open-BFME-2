@@ -12050,3 +12050,4 @@ _lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 by
 ?name@Rva002DE57FNamed@@QBEPBDXZ,,0x002DE57F,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning GameState; vtable ref; address-derived placeholder name
 ?name@Rva002F21EBNamed@@QBEPBDXZ,,0x002F21EB,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning Pathfinder; vtable ref; address-derived placeholder name
 ?name@Rva002FE03BNamed@@QBEPBDXZ,,0x002FE03B,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning TAiData; vtable ref; address-derived placeholder name
+_readname,,0x007570C0,141,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor vendored lua-4.0.1 llex static
