@@ -3176,3 +3176,4 @@ _luaL_prepbuffer,0x00751620
 _luaL_pushresult,0x007516F0
 ?readInt@DataChunkInput@@QAEHXZ,0x00306E78
 ?addWaypointLink@TerrainLogic@@IAEXHH@Z,0x0027F009
+??0SpecialPowerModuleData@@QAE@XZ,0x005488C5,retail REL32 from FireWeaponPowerModuleData at 0x00546AF2; ZH SpecialPowerModuleData base; defined present-unmatched in SpecialPowerModule.cpp

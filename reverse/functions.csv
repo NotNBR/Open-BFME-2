@@ -11871,3 +11871,9 @@ _luaI_classend,,0x00748F10,105,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_s
 ?get@Rva00314105DwordField@@QBEHXZ,,0x00314105,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva00238D74DwordField@@QBEHXZ,,0x00238D74,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva0036CBD9DwordField@@QBEHXZ,,0x0036CBD9,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+??0FireWeaponPowerModuleData@@QAE@XZ,,0x00546AEF,25,Code/GameEngine/Source/GameLogic/Object/SpecialPower/FireWeaponPower.cpp,matched,ZH FireWeaponPower.cpp donor shape; retail-faithful 0x18 base view; base pin 0x5488C5; vtable DIR32 auto
+?set@Rva0043282FDwordSlot@@QAEXH@Z,,0x0043282F,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?set@Rva004A9BD1DwordSlot@@QAEXH@Z,,0x004A9BD1,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?set@Rva00477D94DwordSlot@@QAEXH@Z,,0x00477D94,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?set@Rva002628B6DwordSlot@@QAEXH@Z,,0x002628B6,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?set@Rva00552C2CDwordSlot@@QAEXH@Z,,0x00552C2C,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,
