@@ -145,3 +145,14 @@ void MaterialInfoClass::Reset_Texture_Mappers()
 		VertexMaterials.Vector[materialIndex]->Reset_Mappers();
 	}
 }
+
+bool MaterialInfoClass::Has_Time_Variant_Texture_Mappers()
+{
+	int vmatCount = VertexMaterials.Count();
+	for (int materialIndex = 0; materialIndex < vmatCount; materialIndex++) {
+		if (VertexMaterials.Vector[materialIndex]->Are_Mappers_Time_Variant()) {
+			return true;
+		}
+	}
+	return false;
+}
