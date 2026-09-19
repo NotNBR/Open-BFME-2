@@ -27,6 +27,7 @@
 #include "ldebug.h"
 #include "lobject.h"
 #include "lopcodes.h"
+#include "lfunc.h"
 
 #define VD 100
 
@@ -148,8 +149,79 @@ void luaG_ordererror (lua_State *L, StkId top) {
 }
 
 
-int luaG_getline (int *lineinfo, int pc, int refline, int *prefi) {
-  int refi;
+static int isLmark (StkId o) {
+  return (o && ttype(o) == LUA_TMARK && !infovalue(o)->func->isC);
+}
+
+
+static StkId aux_stackedfunction (lua_State *L, int level, StkId top) {
+  int i;
+  for (i = (top-1) - L->stack; i>=0; i--) {
+    if (is_T_MARK(L->stack[i].ttype)) {
+      if (level == 0)
+        return L->stack+i;
+      level--;
+    }
+  }
+  return NULL;
+}
+
+
+static int currentpc (StkId f) {
+  CallInfo *ci = infovalue(f);
+  LUA_ASSERT(isLmark(f), "function has no pc");
+  if (ci->pc)
+    return (*ci->pc - ci->func->f.l->code) - 1;
+  else
+    return -1;  /* function is not active */
+}
+
+
+static const char *getobjname (lua_State *L, StkId obj, const char **name) {
+  StkId func = aux_stackedfunction(L, 0, obj);
+  if (!isLmark(func))
+    return NULL;  /* not an active Lua function */
+  else {
+    Proto *p = infovalue(func)->func->f.l;
+    int pc = currentpc(func);
+    int stackpos = obj - (func+1);  /* func+1 == function base */
+    Instruction i = luaG_symbexec(p, pc, stackpos);
+    LUA_ASSERT(pc != -1, "function must be active");
+    switch (GET_OPCODE(i)) {
+      case OP_GETGLOBAL: {
+        *name = p->kstr[GETARG_U(i)]->str;
+        return "global";
+      }
+      case OP_GETLOCAL: {
+        *name = luaF_getlocalname(p, GETARG_U(i)+1, pc);
+        LUA_ASSERT(*name, "local must exist");
+        return "local";
+      }
+      case OP_PUSHSELF:
+      case OP_GETDOTTED: {
+        *name = p->kstr[GETARG_U(i)]->str;
+        return "field";
+      }
+      default:
+        return NULL;  /* no useful name found */
+    }
+  }
+}
+
+
+void luaG_typeerror (lua_State *L, StkId o, const char *op) {
+  const char *name;
+  const char *kind = getobjname(L, o, &name);
+  const char *t = luaO_typename(o);
+  if (kind)
+    luaO_verror(L, "attempt to %.30s %.20s `%.40s' (a %.10s value)",
+                op, kind, name, t);
+  else
+    luaO_verror(L, "attempt to %.30s a %.10s value", op, t);
+}
+
+
+int luaG_getline (int *lineinfo, int pc, int refline, int *prefi) {  int refi;
   if (lineinfo == NULL || pc == -1)
     return -1;  /* no line info or function is not active */
   refi = prefi ? *prefi : 0;
