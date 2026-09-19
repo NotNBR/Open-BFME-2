@@ -578,3 +578,12 @@ int Rva00200BBAGet(void)
 {
 	return 0x00C080B0;
 }
+
+// ?Rva00517F2BGet@@YAHXZ @ 0x00517F2B (6B): returns 0x006D2025.
+// Follows a leave/ret (0x517F29-2A) with a B8-imm/call function after
+// (0x517F31). Carried at 0x866444, no direct callers, no branch
+// sources. Opaque address-derived name.
+int Rva00517F2BGet(void)
+{
+	return 0x006D2025;
+}
