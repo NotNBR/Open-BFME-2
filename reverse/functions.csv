@@ -11973,3 +11973,4 @@ _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alia
 ?allow@PartitionFilterRejectByKindOf@@UAE_NPAVObject@@@Z,,0x0026115D,25,Code/GameEngine/Source/GameLogic/Object/PartitionFilterRejectByKindOfAllow.cpp,matched,ZH packet 90.5pct; dedicated TU with 28B masks and cast offsets; pins isKindOfMulti
 ?apply@Rva001F0409DwordImmSetter@@QAEXXZ,,0x001F0409,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?apply@Rva00203611DwordImmSetter@@QAEXXZ,,0x00203611,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?apply@Rva005753E2DwordImmSetter@@QAEXXZ,,0x005753E2,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
