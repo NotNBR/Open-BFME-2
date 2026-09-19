@@ -10463,3 +10463,5 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?makeDirty@PartitionData@@QAEXXZ,,0x0073A0F0,27,Code/GameEngine/Source/GameLogic/Object/ObjectFields.cpp,matched,BFME1 near-miss donor; b1 0x008F7B30; immediate-only drift (dirty flag +0xDC to +0x118); zero new pins
 ?processCommandList@GameLogic@@QAEXXZ,,0x0023CAA3,47,Code/GameEngine/Source/GameLogic/System/GameLogicProcessCommandList.cpp,matched,BFME1 near-miss donor; b1 0x00383050; immediate-only drift
 ?bfmeGo7820@@YAXPAX0000@Z,,0x001B8280,65,Code/GameEngine/Source/Common/BfmeGo7820.cpp,matched,BFME1 donor verbatim; b1 0x009A76A0 family; table push-imm drift is DIR32 auto-patch; 2 pins bfmeGo76A0/bfmeGo7760 same batch
+?bfmeGoAVIW@@YGXPAVBfmeMsgVIW@@PAX1@Z,,0x0065DB90,66,Code/GameEngine/Source/Common/BfmeConv1379.cpp,matched,BFME1 near-miss donor; b1 0x007F0F40; immediate-only drift (global load is DIR32 auto-patch); callees pre-pinned
+?bfmeTickVM0@BfmeStrVM0@@QAEXXZ,,0x0025DA73,26,Code/GameEngine/Source/Common/BfmeConv1435.cpp,matched,BFME1 near-miss donor; b1 0x0040FE40; immediate-only drift
