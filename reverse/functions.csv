@@ -11409,3 +11409,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?apply@Rva0005D10D6DwordImmSetter@@QAEXXZ,,0x005D10D6,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-9C55C700-C3
 ?apply@Rva0007461FDwordImmSetter@@QAEXXZ,,0x0007461F,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-A865BC00-C3
 ?get@Rva004543BAFildField@@QBENXZ,,0x004543BA,4,Code/GameEngine/Source/Common/Disp8FildFieldGetters.cpp,matched,Disp8 fild int-to-double getter; RET-PREV C3; retail DB-41-18-C3
+?get@Rva006D89D0ByteField@@QBEEXZ,,0x006D89D0,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter CC-island Ghidra-4B standalone; address-derived opaque holder
