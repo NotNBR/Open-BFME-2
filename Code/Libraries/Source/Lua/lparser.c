@@ -227,7 +227,6 @@ static void removelocalvars (LexState *ls, int nvars) {
 }
 
 
-// _block present-unmatched
 static void block (LexState *ls) {
   /* block -> chunk */
   FuncState *fs = ls->fs;
@@ -605,7 +604,6 @@ static void expr (LexState *ls, expdesc *v) {
 }
 
 
-// _exp1 present-unmatched
 static void exp1 (LexState *ls) {
   expdesc v;
   expr(ls, &v);
