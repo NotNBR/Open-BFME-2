@@ -25,3 +25,4 @@
 	}
 
 BFME_LITERAL_NAME_GETTER(Rva006254A0Named, "PartitionManager")
+BFME_LITERAL_NAME_GETTER(Rva00065212Named, "ModuleData")
