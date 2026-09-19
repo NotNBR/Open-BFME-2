@@ -10894,3 +10894,4 @@ _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte
 ?get@Rva0059F340AsciiField@@QBE?AVAsciiString@@XZ,,0x0059F340,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0xFDC via StringBase copy 0x365F0
 ?bfmeGo937B@BfmeThing937B@@QAEXXZ,,0x00132129,18,Code/GameEngine/Source/Common/BfmeConv937.cpp,matched,BFME1 donor b1 0x0090D1C0; virtual slot 0 plus ledger sub-call pin
 ?bfmeGo932E@BfmeThing932E@@QAEXXZ,,0x0034BA64,22,Code/GameEngine/Source/Common/BfmeConv932.cpp,matched,BFME1 byte-identical donor; b1 0x0017DB10
+?Rva004BCB20@@YAXPAVGameWindow@@H@Z,,0x00328543,60,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetUserDataHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x004BCB20
