@@ -10872,3 +10872,4 @@ _settabsi,,0x00747DE0,32,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-i
 ?set@Rva0043C6D7ByteSlot@@QAEXE@Z,,0x0043C6D7,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva0044950EByteSlot@@QAEXE@Z,,0x0044950E,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva00464810ByteSlot@@QAEXE@Z,,0x00464810,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?set@Rva004884AAByteSlot@@QAEXE@Z,,0x004884AA,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
