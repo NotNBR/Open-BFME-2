@@ -11942,3 +11942,4 @@ _luaX_checklimit,,0x007574A0,63,Code/Libraries/Source/Lua/llex.c,matched,BFME1 b
 _luaX_syntaxerror,,0x00756F50,68,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _luaX_error,,0x00757150,172,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _luaX_setinput,,0x00757020,149,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
+_luaL_buffinit,,0x00751800,24,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
