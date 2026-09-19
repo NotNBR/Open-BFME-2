@@ -124,3 +124,16 @@ const char *GetRegistryGameRegPath()
     }
     return g_GameRegPathValue;
 }
+
+// ?GetRegistryInstallerRegPath@@YAPBDXZ, retail 0x0002FA20, 27 bytes.
+// Lazy InstallerRegPath reader: same once-gate, cached pointer at 0x00DA7584.
+// Called from bfmeGetMainWindowTitle in WinMain.cpp.
+const char *GetRegistryInstallerRegPath()
+{
+    if (!g_registryValuesLoaded)
+    {
+        g_registryValuesLoaded = true;
+        LoadRegistryValues();
+    }
+    return g_InstallerRegPathValue;
+}
