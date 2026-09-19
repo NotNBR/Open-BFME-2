@@ -12337,3 +12337,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 ?Rva00668100Get@@YAHXZ,,0x00668100,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDD8314; CC-island with 1 real E8 caller and Ghidra-6; opaque name
 ?Rva00669530Get@@YAHXZ,,0x00669530,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDD83B4; CC-island with 1 real E8 caller and Ghidra-6; opaque name
 ?Rva003EE6F7Get@@YAHXZ,,0x003EE6F7,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC36290; prev leave-ret with 1 real E8 caller; opaque name
+?Rva00433B18Get@@YAHXZ,,0x00433B18,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xE032DC; prev leave-ret with 1 real E8 caller; opaque name

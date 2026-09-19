@@ -269,3 +269,12 @@ int Rva003EE6F7Get(void)
 {
 	return 0x00C36290;
 }
+
+// ?Rva00433B18Get@@YAHXZ @ 0x00433B18 (6B): returns 0x00E032DC.
+// Follows a leave/ret (0x433B16-17) with a push-style function after.
+// 1 direct E8 caller (0x23B65A), no Ghidra entry (dead emission), no
+// branch sources. Opaque address-derived name.
+int Rva00433B18Get(void)
+{
+	return 0x00E032DC;
+}
