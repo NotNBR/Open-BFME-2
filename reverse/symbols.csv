@@ -3166,3 +3166,4 @@ __CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper ca
 _readname,0x007570C0
 ?LoadRegistryValues@@YAXXZ,0x0002F840,registry block loader; called by the ten lazy getters at 0x0002F9C0+
 ?__get_c_string@_STL@@YAPBDABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@1@@Z,0x00024C20
+?rva001171B0Notify@@YAXXZ,0x001171B0,sole tail-notify target of dword option setter at 0x00117BB0 (guard byte + store + jmp); SEH body calls 0x51F520 + 0xA1F110; identity unproven address-derived pin
