@@ -79,3 +79,4 @@ BFME_LITERAL_NAME_GETTER(Rva00251C76Named, "SpecialPowerTimerRefreshSpecialPower
 BFME_LITERAL_NAME_GETTER(Rva00252B84Named, "DrawableModule")
 BFME_LITERAL_NAME_GETTER(Rva00252D24Named, "UpgradeSoundSelectorClientBehavior")
 BFME_LITERAL_NAME_GETTER(Rva0028C9D7Named, "ObjectDefectionHelper")
+BFME_LITERAL_NAME_GETTER(Rva0028CA92Named, "ObjectRecoveryHelper")
