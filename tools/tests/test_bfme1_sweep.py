@@ -703,3 +703,55 @@ def test_drain_skips_a_file_whose_only_body_is_an_icf_guess():
     entry = an_entry(bodies=[{"tier": "T3", "size": 120}])
     assert not bfme1_sweep.drainable(entry, WANTED)
     assert bfme1_sweep.drainable(entry, ("T1", "T2", "T3")), "--allow-icf takes it"
+
+
+# ------------------------------------------------- the BFME1 -> BFME2 map
+
+ANCHORS = [(0x1000, 0x5000), (0x1100, 0x5100), (0x2000, 0x9000), (0x2100, 0x9100)]
+KEYS = [b1 for b1, _ in ANCHORS]
+
+
+def test_the_map_interpolates_inside_a_transferred_region():
+    """0x1000..0x1100 spans 0x100 on both sides, so the region moved whole."""
+    assert bfme1_sweep.predict_bfme2(0x1080, ANCHORS, KEYS) == 0x5080
+
+
+def test_the_map_declines_across_a_region_boundary():
+    """0x1100..0x2000 spans 0xF00 in BFME 1 and 0x3F00 here: objects were dropped.
+
+    Declining is the whole gate. Leave-one-out error across a boundary runs to
+    megabytes, so an answer offered here would be worse than none.
+    """
+    assert bfme1_sweep.predict_bfme2(0x1800, ANCHORS, KEYS) is None
+
+
+def test_the_map_declines_outside_its_anchors():
+    assert bfme1_sweep.predict_bfme2(0x0500, ANCHORS, KEYS) is None
+    assert bfme1_sweep.predict_bfme2(0x9999, ANCHORS, KEYS) is None
+
+
+def ambiguous_payload(candidates):
+    return {"records": [{"bfme1_rva": b1, "bfme2_rva": b2} for b1, b2 in ANCHORS],
+            "ambiguous": [{"name": "?f@@YAXXZ", "source": "Code/GameEngine/Source/Common/X.cpp",
+                           "bfme1_rva": 0x1080, "size": 48, "candidates": candidates}]}
+
+
+def test_the_map_picks_the_candidate_it_predicted(monkeypatch):
+    monkeypatch.setattr(bfme1_sweep, "Claims", lambda *a, **k: _NoClaims())
+    monkeypatch.setattr(bfme1_sweep, "ledger_claims", lambda *a, **k: [])
+    out = bfme1_sweep.resolve_ambiguous(ambiguous_payload([0x5080, 0x7000]))
+    assert [r["bfme2_rva"] for r in out] == [0x5080]
+    assert out[0]["error"] == 0
+
+
+def test_a_tie_is_not_a_resolution(monkeypatch):
+    """Two candidates inside the window is the same question, not an answer."""
+    monkeypatch.setattr(bfme1_sweep, "Claims", lambda *a, **k: _NoClaims())
+    monkeypatch.setattr(bfme1_sweep, "ledger_claims", lambda *a, **k: [])
+    assert bfme1_sweep.resolve_ambiguous(ambiguous_payload([0x5080, 0x5090])) == []
+
+
+class _NoClaims:
+    names = frozenset()
+    def covering(self, rva, size):
+        return None

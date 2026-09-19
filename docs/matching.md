@@ -143,6 +143,24 @@ functions the sweep never placed, and `find_declared_unmatched` refuses a source
 definition the ledger lacks. Wave 1 found all three by landing into them; the tiers agreed with
 31 of 31 of that wave's files.
 
+`bfme1_sweep.py ambiguous` resolves donors by WHERE they should be rather than by more
+bytes. The two images lay the same code out in the same order: order the placed bodies by
+BFME 1 address and 84% sit in ascending runs of five or more (longest 248), with 76% of
+neighbouring pairs spaced within 16 bytes of each other in both images. Between two anchors
+the map is affine. Across a region boundary it is worthless, because BFME 2 dropped and
+reordered whole objects -- leave-one-out error over 4,696 anchors is 16 bytes at the median
+and 1.9 MB at p90, two distributions rather than a tail. The gate separates them and is
+checkable before the answer is used: if the bracketing anchors span the same distance in both
+images, everything between them transferred intact. At a 16-byte tolerance it covers 41% of
+placed bodies and predicts 99% to within 64 bytes, p99 11 bytes.
+
+Measured yield is small and the precision is the point. On the recorded ambiguous pool (1,460
+donors, 65,032B) it resolves 49 donors, 3,901B; on the 737 donors with no usable needle -- the
+only tier nothing else can reach, since there is nothing long enough to search for -- it
+declines 708 times and commits 29, of which 27 byte-match. Use it where searching cannot go,
+not as a way to move bulk. A resolution needs the runner-up OUTSIDE the window too: two
+candidates equally close to the prediction is the question restated.
+
 `bfme1_sweep.py drain` runs `land` over the whole served queue and keeps going past a
 refusal, which is the way to spend the queue without spending attention on it. `land` is
 still the unit of work and owns its own unwind; drain adds the loop and a verdict. Each file

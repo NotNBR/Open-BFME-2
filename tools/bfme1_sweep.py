@@ -353,6 +353,14 @@ def explain(donor, donor_fields, donor_runs, window, donor_rva, target_rva,
 
 NEAR_ALIGN = 0.90       # below this the two bodies are not the same function
 NEAR_MIN_FUNC = 24      # a near miss on a stub is noise whatever it scores
+# A donor that survives in more places than this is a generic stub, not a body
+# waiting for a tiebreak; recording its candidates would cost more than it pays.
+AMBIGUOUS_CAP = 16
+# The gate that separates a usable address prediction from a worthless one, and
+# how far from the prediction a candidate may still sit. Both are measured, not
+# chosen: see predict_bfme2.
+ANCHOR_SLOPE = 16
+ANCHOR_WINDOW = 64
 # Classes worth an agent's time. drift_classify.py records the prior for the
 # rest: register-swap is an "MSVC-regalloc wall; do NOT attempt in C++ (proven
 # on the whales)", and structural is real reconstruction, not a copy and tweak.
@@ -768,6 +776,7 @@ def do_scan(args):
     tally = Counter()
     records = []
     near_records = []
+    ambiguous_records = []
     started = time.monotonic()
     for position, row in enumerate(rows, 1):
         if position % 2000 == 0:
@@ -805,8 +814,8 @@ def do_scan(args):
                 donor_image, target_image)
             if unexplained == 0:
                 survivors.append((target_rva, dir32, rel32))
-                if len(survivors) > 1:
-                    break       # already ambiguous; the rest cannot change that
+                if len(survivors) > AMBIGUOUS_CAP:
+                    break       # a stub, not a body one tiebreak away
         if not survivors:
             tally["no-placement"] += 1
             # A near miss is only worth scoring where the address could start a
@@ -845,6 +854,18 @@ def do_scan(args):
             continue
         if len(survivors) > 1:
             tally["ambiguous"] += 1
+            # Recorded, not dropped. Every one of these placements already
+            # explained every byte; what the donor lacks is not evidence that
+            # the code matches but evidence of WHICH copy it is, and the
+            # address map resolves that from anchors rather than from bytes.
+            if len(survivors) <= AMBIGUOUS_CAP:
+                ambiguous_records.append({
+                    "name": row["name"],
+                    "source": row["source"],
+                    "bfme1_rva": row["rva"],
+                    "size": row["size"],
+                    "candidates": [rva for rva, _, _ in survivors],
+                })
             continue
         target_rva, dir32, rel32 = survivors[0]
         tally["unique"] += 1
@@ -921,6 +942,7 @@ def do_scan(args):
         "tally": dict(tally),
         "records": records,
         "near": near_records,
+        "ambiguous": ambiguous_records,
     }
     MATCH_JSON.write_text(json.dumps(payload, indent=1), encoding="utf-8")
 
@@ -1324,6 +1346,115 @@ def near_candidates(payload, include_held=False, limit=None):
     return served
 
 
+
+# ------------------------------------------------------------- the address map
+
+def anchor_pairs(payload):
+    """Sorted (bfme1_rva, bfme2_rva) for every body the sweep placed uniquely.
+
+    Only unique placements anchor. An ambiguous one is exactly the question
+    being asked here, and a near miss is an unverified identity claim.
+    """
+    seen = {}
+    for record in payload.get("records", ()):
+        seen[record["bfme1_rva"]] = record["bfme2_rva"]
+    return sorted(seen.items())
+
+
+def predict_bfme2(b1, anchors, keys, slope_tolerance=ANCHOR_SLOPE):
+    """Where a BFME 1 address should land in game.dat, or None to decline.
+
+    The two images lay the same code out in the same order. Ordering the placed
+    bodies by BFME 1 address puts 84% of them in ascending runs of five or more
+    -- the longest is 248 -- and 76% of neighbouring pairs are spaced within 16
+    bytes of each other in BOTH images. Between two anchors the map is affine,
+    so interpolating is not an estimate but a reading.
+
+    Across a region boundary it is worthless: BFME 2 dropped and reordered whole
+    objects. Measured leave-one-out over 4,696 anchors, the error is 16 bytes at
+    the median and 1.9 MB at the 90th percentile -- one distribution laid over
+    another, not a long tail.
+
+    The gate tells them apart, and it is checkable before the answer is used: if
+    the bracketing anchors span the same distance in both images, everything
+    between them transferred intact. At a 16-byte tolerance that covers 41% of
+    placed bodies and predicts 99% of them to within 64 bytes, p99 11 bytes.
+    Declining is the point -- a prediction offered everywhere would be wrong
+    half the time.
+    """
+    index = bisect.bisect_left(keys, b1)
+    if index == 0 or index >= len(anchors):
+        return None
+    lo_b1, lo_b2 = anchors[index - 1]
+    hi_b1, hi_b2 = anchors[index]
+    span1, span2 = hi_b1 - lo_b1, hi_b2 - lo_b2
+    if span1 <= 0 or abs(span2 - span1) > slope_tolerance:
+        return None
+    return lo_b2 + round((b1 - lo_b1) * span2 / span1)
+
+
+def resolve_ambiguous(payload, window=ANCHOR_WINDOW, include_claimed=False):
+    """Ambiguous donors the address map picks a single candidate for.
+
+    Every candidate here already explained every byte -- that is what made the
+    donor ambiguous rather than unplaced. What is missing is not evidence that
+    the code matches but evidence of WHICH copy this is, and that is positional,
+    so it comes from the anchors instead of from more bytes.
+
+    A resolution needs the winner inside the window AND the runner-up outside
+    it. Two candidates equally close to the prediction is the same question over
+    again, not an answer to it.
+    """
+    anchors = anchor_pairs(payload)
+    keys = [b1 for b1, _ in anchors]
+    claims = Claims(ledger_claims(BFME2_LEDGER))
+    resolved = []
+    for record in payload.get("ambiguous", ()):
+        if record["name"] in claims.names:
+            continue
+        guess = predict_bfme2(record["bfme1_rva"], anchors, keys)
+        if guess is None:
+            continue
+        free = [c for c in record["candidates"]
+                if include_claimed or claims.covering(c, record["size"]) is None]
+        if not free:
+            continue
+        ranked = sorted(free, key=lambda c: abs(c - guess))
+        if abs(ranked[0] - guess) > window:
+            continue
+        if len(ranked) > 1 and abs(ranked[1] - guess) <= window:
+            continue
+        resolved.append(dict(record, bfme2_rva=ranked[0], predicted=guess,
+                             error=abs(ranked[0] - guess),
+                             candidate_count=len(record["candidates"])))
+    return resolved
+
+
+def do_ambiguous(args):
+    payload = load_matches()
+    pool = payload.get("ambiguous", ())
+    if not pool:
+        raise SystemExit("bfme1_sweep: no ambiguous records — re-run `scan`")
+    resolved = resolve_ambiguous(payload, window=args.window)
+    if args.json:
+        print(json.dumps([{k: v for k, v in r.items() if k != "candidates"}
+                          for r in resolved], indent=1))
+        return 0
+    pool_bytes = sum(r["size"] for r in pool)
+    got = sum(r["size"] for r in resolved)
+    print(f"{len(pool)} ambiguous donor(s), {pool_bytes:,}B recorded")
+    print(f"{len(resolved)} resolved by the address map, {got:,}B "
+          f"({got * 100.0 / max(pool_bytes, 1):.1f}% of the pool)\n")
+    big = [r for r in resolved if r["size"] >= args.min_size]
+    print(f" bytes  err  of  b2 rva      name")
+    for record in sorted(big, key=lambda r: -r["size"])[:args.limit]:
+        print(f"{record['size']:6d} {record['error']:4d} {record['candidate_count']:3d}  "
+              f"0x{record['bfme2_rva']:08X}  {record['name'][:64]}")
+    print(f"\n{len(big)} of them >= {args.min_size}B, "
+          f"{sum(r['size'] for r in big):,}B")
+    return 0
+
+
 def near_packet(entry):
     source = entry["source"]
     donor, window, fields = entry["donor"], entry["window"], entry["fields"]
@@ -1661,6 +1792,14 @@ def main(argv=None):
                        help="also land T3 bodies, whose name is an ICF guess")
     drain.add_argument("--dry-run", action="store_true")
     drain.set_defaults(func=do_drain)
+
+    ambig = sub.add_parser("ambiguous",
+                           help="ambiguous donors the BFME1->BFME2 address map resolves")
+    ambig.add_argument("--window", type=int, default=ANCHOR_WINDOW)
+    ambig.add_argument("--min-size", type=int, default=32)
+    ambig.add_argument("--limit", type=int, default=25)
+    ambig.add_argument("--json", action="store_true")
+    ambig.set_defaults(func=do_ambiguous)
 
     near = sub.add_parser("near", help="donors that ALMOST match, for hand repair")
     near.add_argument("--show", dest="source", metavar="NAME_OR_PATH",
