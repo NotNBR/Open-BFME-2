@@ -11489,3 +11489,4 @@ _luaM_realloc,,0x00750A70,97,Code/Libraries/Source/Lua/lmem.c,matched,BFME1 byte
 _luaM_growaux,,0x00750AE0,97,Code/Libraries/Source/Lua/lmem.c,matched,BFME1 byte-identical donor b1 lmem.c; exact via unclaimed_scan; pin upgrade; vendored=lua-4.0.1
 ?name@Rva000B696BNamed@@QBEPBDXZ,,0x000B696B,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning EventParameter; vtable ref in .rdata; address-derived placeholder name
 ??_GDebug@@UAEPAXI@Z,,0x00039920,33,Code/Libraries/Source/WWVegas/WWDebug/DebugDestructorThunk.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GDebugIOFlat@@UAEPAXI@Z,,0x00040780,33,Code/Libraries/Source/WWVegas/WWDebug/debug_io_flat.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
