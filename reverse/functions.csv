@@ -11929,3 +11929,4 @@ _lmemfind,,0x007496B0,110,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep 
 ?get@Rva0009853CByteField@@QBEEXZ,,0x0009853C,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ?name@Rva000B2214Named@@QBEPBDXZ,,0x000B2214,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DDefaultDraw; vtable ref at 0x7C98B8; address-derived placeholder name
 ?get@Rva003BA5F2DwordField@@QBEHXZ,,0x003BA5F2,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva00143590DwordField@@QBEHXZ,,0x00143590,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
