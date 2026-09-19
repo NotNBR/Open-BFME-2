@@ -11978,3 +11978,4 @@ _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alia
 ?apply@Rva0057851BDwordImmSetter@@QAEXXZ,,0x0057851B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 _luaG_binerror,,0x0074D2B0,35,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 byte-identical donor; b1 ldebug.c luaG_binerror; vendored=lua-4.0.1
 _luaG_ordererror,,0x0074D2E0,73,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 byte-identical donor; b1 ldebug.c luaG_ordererror; vendored=lua-4.0.1
+?name@Rva000CA83BNamed@@QBEPBDXZ,,0x000CA83B,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DRopeDraw; vtable ref at 0x7CBD68; address-derived placeholder name
