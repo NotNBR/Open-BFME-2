@@ -36,3 +36,12 @@ int Rva00342CF6Get(void)
 {
 	return 0x00C12B10;
 }
+
+// ?Rva00342D70Get@@YAHXZ @ 0x00342d70 (6B): returns 0x00C12C10.
+// Follows a ret-8 (prev C2-08-00), carried by 2 .rdata vtable slots
+// (0x812BD0 and 0x8172C0, same family tables), no direct callers,
+// no branch sources. Opaque address-derived name.
+int Rva00342D70Get(void)
+{
+	return 0x00C12C10;
+}
