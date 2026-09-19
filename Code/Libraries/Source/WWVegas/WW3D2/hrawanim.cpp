@@ -77,7 +77,6 @@ void BFME2_Nlerp(Quaternion &result, const Quaternion &p, const Quaternion &q, f
  *                                                                                             *
  * HISTORY:                                                                                    *
  *=============================================================================================*/
-// ??0NodeMotionStruct@@QAE@XZ present-unmatched
 NodeMotionStruct::NodeMotionStruct() : 
 	X(NULL),
 	Y(NULL),
