@@ -10960,3 +10960,4 @@ _forbody,,0x007544E0,165,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?enable@Rva0009D6E8OneSetter@@QAEXXZ,,0x0009D6E8,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
 ?disable@Rva0009D6F5ZeroSetter@@QAEXXZ,,0x0009D6F5,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
 ?enable@Rva00131075OneSetter@@QAEXXZ,,0x00131075,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
+?enable@Rva00238D92OneSetter@@QAEXXZ,,0x00238D92,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
