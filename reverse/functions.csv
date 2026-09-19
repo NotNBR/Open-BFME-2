@@ -11038,3 +11038,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?get@Rva00042280LeaGetter@@QBEPAXXZ,,0x00042280,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?get@Rva002035A9ByteField@@QBEEXZ,,0x002035A9,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?get@Rva002259EFByteField@@QBEEXZ,,0x002259EF,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
+?apply@Rva0007DE9ADwordImmSetter@@QAEXXZ,,0x0007DE9A,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple first after ret-4
