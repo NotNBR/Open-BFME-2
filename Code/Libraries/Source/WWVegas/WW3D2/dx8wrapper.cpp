@@ -469,42 +469,72 @@ bool DX8Wrapper::Validate_Device(void)
 	return (hRes == D3D_OK);
 }
 
+// BFME2 split the texture-stage half of the invalidation out of
+// Invalidate_Cached_Render_States into its own body (retail 0x0011CC60,
+// 215 bytes, called from Invalidate and from 0x00174BA6). The helper runs
+// on DX8Wrapper protected statics, so it is declared on a TU-local
+// derivation purely for access; both the derivation and the address-token
+// method name assert no original spelling. The content is Zero Hour's
+// stage loop plus the render_state.Textures release, matching the
+// converted BFME1 Invalidate this file was ported from. Defined after
+// the Bfme reset views below, whose release view it reuses.
+struct DX8WrapperStageHelper : public DX8Wrapper
+{
+	static void Rva0011CC60InvalidateTextureStages(void);
+};
+
+// Retail sets this byte while releasing the current render-state buffers
+// (store site 0x0051FD3F). The converted BFME1 tree carries it as an
+// address-derived extern; no original spelling is asserted here either.
+static unsigned char g_rva00DB621CFlag;
+
+// Retail Invalidate_Cached_Render_States is at 0x0011FD10 (226B): Zero Hour's
+// body (see the converted BFME1 dx8wrapper.cpp) with the texture-stage half
+// extracted into the helper above, which retail calls.
 // ?Invalidate_Cached_Render_States@DX8Wrapper@@ present-unmatched
 void DX8Wrapper::Invalidate_Cached_Render_States(void)
 {
-	render_state_changed=0;
+	unsigned zero=0;
+	render_state_changed=zero;
+	texture_stage_state_changes=zero;
 
-	int a;
+	unsigned a;
 	for (a=0;a<sizeof(RenderStates)/sizeof(unsigned);++a) {
 		RenderStates[a]=0x12345678;
 	}
-	for (a=0;a<MAX_TEXTURE_STAGES;++a) 
-	{
-		for (int b=0; b<32;b++) 
-		{
-			TextureStageStates[a][b]=0x12345678;
-		}
-		//Need to explicitly set texture to NULL, otherwise app will not be able to
-		//set it to null because of redundant state checker. MW
-		if (_Get_D3D_Device8())
-			_Get_D3D_Device8()->SetTexture(a,NULL);
-		if (Textures[a] != NULL) {
-			Textures[a]->Release();
-		}
-		Textures[a]=NULL;
+	DX8WrapperStageHelper::Rva0011CC60InvalidateTextureStages();
+
+	g_rva00DB621CFlag=1;
+
+	//Need to explicitly set render_state pointers to NULL.  Retail keeps each
+	//clear inside its non-null branch, rather than unconditionally storing zero.
+	if (render_state.index_buffer) {
+		render_state.index_buffer->Release_Engine_Ref();
 	}
-
-	ShaderClass::Invalidate();
-
-	//Need to explicitly set render_state texture pointers to NULL. MW
-	Release_Render_State();
-
-	// (gth) clear the matrix shadows too
-	for (int i=0; i<D3DTS_WORLD+1; i++) {
-		DX8Transforms[i][0].Set(0,0,0,0);
-		DX8Transforms[i][1].Set(0,0,0,0);
-		DX8Transforms[i][2].Set(0,0,0,0);
-		DX8Transforms[i][3].Set(0,0,0,0);
+	for (unsigned i=0;i<MAX_VERTEX_STREAMS;++i) {
+		if (render_state.vertex_buffers[i]) {
+			render_state.vertex_buffers[i]->Release_Engine_Ref();
+		}
+	}
+	for (unsigned i=0;i<MAX_VERTEX_STREAMS;++i) {
+		if (render_state.vertex_buffers[i]) {
+			render_state.vertex_buffers[i]->Release_Ref();
+			render_state.vertex_buffers[i]=NULL;
+		}
+	}
+	if (render_state.index_buffer) {
+		render_state.index_buffer->Release_Ref();
+		render_state.index_buffer=NULL;
+	}
+	if (render_state.material) {
+		render_state.material->Release_Ref();
+		render_state.material=NULL;
+	}
+	for (unsigned i=0;i<MAX_TEXTURE_STAGES;++i) {
+		if (render_state.Textures[i]) {
+			render_state.Textures[i]->Release_Ref();
+			render_state.Textures[i]=NULL;
+		}
 	}
 
 }
@@ -839,6 +869,53 @@ namespace Debug_Statistics { void Begin_Statistics(); }
 void bfmeReleaseQueuedDeviceInterfaces();
 extern "C" const char *__stdcall bfmeDirectXErrorName(long);
 static int bfmeResetAttempts;
+
+// Retail's BFME device view places SetTexture at vtable slot 65 (0x104),
+// while this TU's inherited device interface exposes it three slots later.
+// Keep this ABI correction local to the reconstructed helper (precedent:
+// the converted BFME1 dx8wrapper.cpp and its BFMEInvalidateDevice8).
+struct BFMEInvalidateDevice8;
+struct BFMEInvalidateDevice8Vtbl
+{
+	void *reserved[65];
+	long (__stdcall *SetTexture)(BFMEInvalidateDevice8 *, unsigned, void *);
+};
+struct BFMEInvalidateDevice8
+{
+	BFMEInvalidateDevice8Vtbl *lpVtbl;
+};
+
+// Retail helper at 0x0011CC60 (215B), rowed below under the derived-view name.
+void DX8WrapperStageHelper::Rva0011CC60InvalidateTextureStages(void)
+{
+	unsigned a;
+	for (a=0;a<MAX_TEXTURE_STAGES;++a)
+	{
+		for (int b=0; b<32;b++)
+		{
+			TextureStageStates[a][b]=0x12345678;
+		}
+		//Need to explicitly set texture to NULL, otherwise app will not be able to
+		//set it to null because of redundant state checker. MW
+		if (_Get_D3D_Device8())
+		{
+			BFMEInvalidateDevice8 *device = reinterpret_cast<BFMEInvalidateDevice8 *>(_Get_D3D_Device8());
+			device->lpVtbl->SetTexture(device,a,NULL);
+		}
+		if (Textures[a] != NULL) {
+			Textures[a]->Release();
+		}
+		Textures[a]=NULL;
+		// Retail releases through the out-of-line TextureBaseClass::Release_Ref
+		// (0x0061ED10). This TU's headers only see the inherited inline
+		// RefCountClass body, so the call goes through the TU-local
+		// BfmeResetResource release view, whose member pins to that body.
+		if (render_state.Textures[a]) {
+			((BfmeResetResource *)render_state.Textures[a])->Release_Ref();
+			render_state.Textures[a]=NULL;
+		}
+	}
+}
 
 // ?Reset_Device@DX8Wrapper@@SA_N_N@Z
 bool DX8Wrapper::Reset_Device(bool reload_assets)
