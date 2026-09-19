@@ -10591,3 +10591,5 @@ _setnodevector,,0x007506E0,135,Code/Libraries/Source/Lua/ltable.c,matched,unclai
 ?get@Rva000A8AA2DwordField@@QBEHXZ,,0x000A8AA2,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 ?get@Rva002004A1DwordField@@QBEHXZ,,0x002004A1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 ?get@Rva00091A56DwordField@@QBEHXZ,,0x00091A56,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+_luaH_mainposition,,0x00750400,88,Code/Libraries/Source/Lua/ltable.c,matched,hash dispatcher with RVA jump table; ftol row serves the NUMBER case; emitted by ltable.c object; vendored=lua-4.0.1
+?get@Rva003F3FCEDwordField@@QBEHXZ,,0x003F3FCE,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
