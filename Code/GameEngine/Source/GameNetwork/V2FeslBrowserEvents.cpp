@@ -96,6 +96,7 @@ class Rva007F7980Browser
 {
 public:
 	void onRegionCount( Rva007E8810Message *msg );
+	void onLobbyCount( Rva007E8810Message *msg );
 
 	void *m_vptr;
 	char m_head[ 0x18 ];
@@ -127,6 +128,26 @@ void Rva007F7980Browser::onRegionCount( Rva007E8810Message *msg )
 		return;
 	}
 	m_listener->onRegionCountDone( 0 );
+}
+
+void Rva007F7980Browser::onLobbyCount( Rva007E8810Message *msg )
+{
+	if( msg->hasError() )
+	{
+		int status = msg->getError();
+		m_listener->onLobbyCountDone( status );
+		return;
+	}
+
+	int count = msg->getInt( "NUM-LOBBIES", 0 );
+	if( count != 0 )
+	{
+		m_lobbies.allocate( count );
+		m_lobbyIndex = 0;
+		m_lobbyTxn = msg->m_txn;
+		return;
+	}
+	m_listener->onLobbyCountDone( 0 );
 }
 
 void Rva007F5AC0( Rva007E8810Message *msg, Rva007F7980Browser *browser )
