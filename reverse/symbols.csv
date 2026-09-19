@@ -3034,7 +3034,6 @@ _luaT_init,0x0074FB40
 _luaV_strcomp,0x0074E9D0
 _luaX_checklimit,0x007574A0
 _luaX_error,0x00757150
-_luaX_init,0x00756F10
 _luaX_lex,0x00757C90
 _luaX_setinput,0x00757020
 _luaX_syntaxerror,0x00756F50,_funcname 0x754980 +0x2a E8 decodes here; error-message builder (chunkid 0x50 + verror); llex.c
