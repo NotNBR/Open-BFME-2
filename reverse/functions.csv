@@ -11180,4 +11180,4 @@ _exp1,,0x00754270,33,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 _openwithcontrol,,0x0074B490,312,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1 byte-identical donor; b1 liolib.c openwithcontrol; exact via unclaimed_scan
 ?get@Rva0008BD27FloatField@@QBEMXZ,,0x0008BD27,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter; address-derived opaque holder
 ?get@Rva002C8F13LeaGetter@@QBEPAXXZ,,0x002C8F13,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
-?get@Rva002B237CLeaGetter@@QBEPAXXZ,,0x002B237C,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
+?apply@Rva004CEE78DwordImmSetter@@QAEXXZ,,0x004CEE78,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
