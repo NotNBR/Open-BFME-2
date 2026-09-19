@@ -11404,3 +11404,4 @@ _luaH_getany,,0x00750460,81,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byt
 _luaV_tonumber,,0x0074E320,56,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
 ?get@Rva000CB0FFFildField@@QBENXZ,,0x000CB0FF,4,Code/GameEngine/Source/Common/Disp8FildFieldGetters.cpp,matched,Disp8 fild int-to-double getter; RET-PREV C3; retail DB-41-38-C3
 _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 byte-identical donor b1 lobject.c; exact via unclaimed_scan
+??1?$SimpleVecClass@VVector2@@@@UAE@XZ,,0x001883C0,41,Code/Libraries/Source/WWVegas/WW3D2/MeshLoadContextCtor.cpp,matched,gen-alias;object-symbol=??1?$SimpleVecClass@VVector2@@@@UAE@XZ;C++ alias
