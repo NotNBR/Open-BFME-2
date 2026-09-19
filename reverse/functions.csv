@@ -11555,3 +11555,4 @@ _luaU_undump,,0x00756D10,133,Code/Libraries/Source/Lua/lundump.c,matched,object-
 ?get@Rva0035B28ASubDwordField@@QBEHXZ,,0x0035B28A,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
 ?get@Rva003B8B3DSubDwordField@@QBEHXZ,,0x003B8B3D,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
 ?name@Rva001E70BCNamed@@QBEPBDXZ,,0x001E70BC,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning LocomotorSet; vtable ref in .rdata; address-derived placeholder name
+?get@Rva0040CAC5SubDwordField@@QBEHXZ,,0x0040CAC5,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
