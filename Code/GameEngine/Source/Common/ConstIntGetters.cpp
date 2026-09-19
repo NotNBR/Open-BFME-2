@@ -137,3 +137,12 @@ int Rva00336E72Get(void)
 {
 	return 0x00736E78;
 }
+
+// ?Rva0013C6C0Get@@YAHXZ @ 0x0013C6C0 (6B): returns 14. CC-island,
+// carried at 0x7D31F0 in the same 0x7D31xx family table as Rva0013C650Get
+// (10 slots later). 1 .rdata ref, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva0013C6C0Get(void)
+{
+	return 14;
+}
