@@ -3165,4 +3165,3 @@ _callCclosure,0x0074D860
 _luaC_checkGC,0x00751470
 _traceexec,0x0074E410
 _luaV_tonumber,0x0074E320
-_luaH_getnum,0x007504C0
