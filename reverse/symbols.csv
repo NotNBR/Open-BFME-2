@@ -3122,3 +3122,4 @@ Gen_f265_b7a8aa_0081dad0,0x006887F0
 ?bfmeSend1028@BfmeSink1028@@QAEXHPAH0@Z,0x0066F170
 ??0Rva008B2EF0@@QAE@II@Z,0x006F1310
 ?disconnectPlayer@ConnectionManager@@QAE?AW4PlayerLeaveCode@@H@Z,0x004D13F8
+?bfmeCallDXB@BfmeSubDXB@@QAEXXZ,0x00628C25

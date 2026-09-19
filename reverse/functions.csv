@@ -10850,3 +10850,4 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ??0Rva008B38D0@@QAE@I@Z,,0x006F1E50,27,Code/GameEngine/Source/Common/Rva008B2EF0Constructors.cpp,matched,BFME1 byte-identical donor; b1 0x008B38D0
 ?disconnectLocalPlayer@ConnectionManager@@QAEXXZ,,0x004D15F7,31,Code/GameEngine/Source/GameNetwork/Network_update.cpp,matched,BFME1 byte-identical donor; b1 0x00665E90
 ?removeSmudgeSet@SmudgeManager@@QAEXAAUSmudgeSet@@@Z,,0x002D2806,40,Code/GameEngine/Source/GameClient/System/Smudge.cpp,matched,BFME1 byte-identical donor; b1 0x005D4060
+?bfmeGoDXB@BfmeThingDXB@@QAEXXZ,,0x00628D20,22,Code/GameEngine/Source/Common/BfmeConv793.cpp,matched,BFME1 byte-identical donor; b1 0x009F69D3
