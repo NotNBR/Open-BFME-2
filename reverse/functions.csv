@@ -11688,3 +11688,15 @@ _math_min,,0x00748800,113,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.
 ?get@Rva005CCB30AddDwordField@@QBEHXZ,,0x005CCB30,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
 ?name@Rva002047C9Named@@QBEPBDXZ,,0x002047C9,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning SequentialScript; vtable ref in .rdata; address-derived placeholder name
 _math_max,,0x00748880,113,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.max via gettop loop + check_number + pushnumber; callees pinned
+??_GRva0035D0D1@@UAEPAXI@Z,,0x0035D1F0,28,Code/GameEngine/Source/Common/Rva001DBAC3Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva0035D352@@UAEPAXI@Z,,0x0035D43E,28,Code/GameEngine/Source/Common/Rva001DBAC3Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva00596069@@UAEPAXI@Z,,0x00596079,28,Code/GameEngine/Source/Common/Rva0025BFE3Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva00596389@@UAEPAXI@Z,,0x005963F0,28,Code/GameEngine/Source/Common/Rva0025BFE3Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva003B1FD4@@UAEPAXI@Z,,0x003B2231,28,Code/GameEngine/Source/Common/Rva003B1F65Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva00535776@@UAEPAXI@Z,,0x00537E60,28,Code/GameEngine/Source/Common/Rva003B1F65Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva0045EA3F@@UAEPAXI@Z,,0x0045ED2F,28,Code/GameEngine/Source/Common/Rva0045D39EDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva00461EEB@@UAEPAXI@Z,,0x00461FF2,28,Code/GameEngine/Source/Common/Rva0045D39EDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva00483C35@@UAEPAXI@Z,,0x00483D7F,28,Code/GameEngine/Source/Common/Rva0045D39EDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004AE1AC@@UAEPAXI@Z,,0x004AE211,28,Code/GameEngine/Source/Common/Rva00451F45Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004C6943@@UAEPAXI@Z,,0x004C69DE,28,Code/GameEngine/Source/Common/Rva00451F45Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004C6C5C@@UAEPAXI@Z,,0x004C6CC6,28,Code/GameEngine/Source/Common/Rva00451F45Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
