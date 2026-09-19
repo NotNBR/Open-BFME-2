@@ -10833,3 +10833,5 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?isDisconnectedAfterGameStart@GameSpyInfo@@UBE_NPAH@Z,,0x00386104,19,Code/GameEngine/Source/GameNetwork/GameSpy/PeerDefs.cpp,matched,BFME1 byte-identical donor; b1 0x006371D0
 ??1Debug@@UAE@XZ,,0x00038710,66,Code/Libraries/Source/WWVegas/WWDebug/DebugDestructorThunk.cpp,matched,BFME1 byte-identical donor; b1 0x00889620
 ?bfmeGo1024E@BfmeE1024@@QAEXXZ,,0x0061EE50,36,Code/GameEngine/Source/Common/BfmeConv1024.cpp,matched,BFME1 byte-identical donor; b1 0x009EB8D0
+?bfmeGoDXH@BfmeThingDXH@@QAEXPAX@Z,,0x0070E6C0,30,Code/GameEngine/Source/Common/BfmeConv794.cpp,matched,BFME1 byte-identical donor; b1 0x008D2E00
+??0BfmeThingUNC@@QAE@HPAUBfmeOwnerUNC@@@Z,,0x00674ED0,62,Code/GameEngine/Source/Common/BfmeConv1338.cpp,matched,BFME1 byte-identical donor; b1 0x00808FD0
