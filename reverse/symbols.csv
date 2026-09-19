@@ -3156,7 +3156,6 @@ _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE7
 dup_7e86b0,0x00655770
 __CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper calls straight into it
 _adjuststack,0x007515A0,luaL_prepbuffer 0x751620 +0x27 E8 decodes here; static buffer helper in lauxlib.c
-_luaL_addvalue,0x00751760
 ?readInt@DataChunkInput@@QAEHXZ,0x00306E78
 ?addWaypointLink@TerrainLogic@@IAEXHH@Z,0x0027F009
 ??0SpecialPowerModuleData@@QAE@XZ,0x005488C5,retail REL32 from FireWeaponPowerModuleData at 0x00546AF2; ZH SpecialPowerModuleData base; defined present-unmatched in SpecialPowerModule.cpp
