@@ -56,6 +56,7 @@ class Rva007FBEF0GameRecord
 {
 public:
 	Rva007FBEF0GameRecord( Rva007E8810Message *msg );
+	bool Rva007FBE80( const char *key, char *dest, unsigned int destSize );
 
 	int m_lid;
 	int m_gid;
@@ -70,6 +71,17 @@ Rva007FBEF0GameRecord::Rva007FBEF0GameRecord( Rva007E8810Message *msg )
 	m_msg = msg;
 	m_ugid[ 0 ] = 0;
 	m_msg->getString( "UGID", m_ugid, 0x25 );
+}
+
+bool Rva007FBEF0GameRecord::Rva007FBE80( const char *key, char *dest,
+	unsigned int destSize )
+{
+	char name[ 0x40 ];
+
+	if( key == 0 || destSize <= 0 )
+		return false;
+	sprintf( name, "B-%s", key );
+	return m_msg->getString( name, dest, destSize );
 }
 
 
