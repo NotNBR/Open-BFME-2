@@ -10822,3 +10822,4 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?bfmeAssignVGO@BfmeRefVGO@@QAEAAV1@ABV1@@Z,,0x006CDB10,66,Code/GameEngine/Source/Common/BfmeConv1355.cpp,matched,BFME1 byte-identical donor; b1 0x00892B90
 ?bfmeGoDWE@BfmeThingDWE@@QAEXXZ,,0x00154820,26,Code/GameEngine/Source/Common/BfmeConv791.cpp,matched,BFME1 byte-identical donor; b1 0x0093C700
 ?bfmeKeepFU@BfmeThingFU@@QAEXPAVBfmeItemFU@@@Z,,0x006FBF70,22,Code/GameEngine/Source/Common/BfmeOneHundredNinetyNine.cpp,matched,BFME1 byte-identical donor; b1 0x008C45D0
+?setQuitting@Connection@@QAEXI@Z,,0x0058B9B4,22,Code/GameEngine/Source/GameNetwork/Connection.cpp,matched,BFME1 byte-identical donor; b1 0x00661CA0
