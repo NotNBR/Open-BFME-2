@@ -11989,3 +11989,4 @@ _luaG_ordererror,,0x0074D2E0,73,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1
 ?name@Rva000E6B93Named@@QBEPBDXZ,,0x000E6B93,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DVegetationBufferBase; vtable ref; address-derived placeholder name
 ?name@Rva000E9C0FNamed@@QBEPBDXZ,,0x000E9C0F,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DShrubBuffer; vtable ref; address-derived placeholder name
 ?name@Rva000EDB39Named@@QBEPBDXZ,,0x000EDB39,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DTreeBuffer; vtable ref; address-derived placeholder name
+?name@Rva000EEFE6Named@@QBEPBDXZ,,0x000EEFE6,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DPropBuffer; vtable ref; address-derived placeholder name
