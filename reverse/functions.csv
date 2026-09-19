@@ -12476,3 +12476,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva003677ADGet@@YAHXZ,,0x003677AD,6,Code/GameEngine/Source/Common/ConstIntGetters3.cpp,matched,B8-6 returner ret 0xC17520; prev C9-C2-08-00 with 1 vtable ref and no callers; opaque name
 ?addSmudgeSet@SmudgeManager@@QAEPAUSmudgeSet@@XZ,,0x002D291B,95,Code/GameEngine/Source/GameClient/System/SmudgeAddSmudgeSet.cpp,matched,BFME1 donor; dedicated TU /GX- /O1 trial
 ?Rva0033F4ABGet@@YAHXZ,,0x0033F4AB,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret 0xC1123C; prev C2-08-00 with 1 vtable ref and no callers; opaque name
+?Rva0033F4D9Get@@YAHXZ,,0x0033F4D9,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret C1129C; prev C2-08-00 with 1 vtable ref and no callers; opaque name
