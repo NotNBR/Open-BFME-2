@@ -10678,3 +10678,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeDoOV@@YAPAXPAX000PAE@Z,,0x00027FE0,534,Code/GameEngine/Source/Common/BfmeTwoHundredFiftySeven_DoOV.cpp,matched,find-first-not-in-set 4-unrolled for-loop plus tail switch via helper 0x26C60
 ??0Rva006853A0@@QAE@XZ,,0x00447A42,26,Code/GameEngine/Source/Common/R3ScalarFieldConstructors2.cpp,matched,BFME1 byte-identical donor; b1 0x006853A0
 ??0Rva007BA110@@QAE@XZ,,0x000F0F98,32,Code/GameEngine/Source/Common/R3ScalarFieldConstructors2.cpp,matched,BFME1 byte-identical donor; b1 0x007BA110
+??0Textures_Material_And_Shader_Booking_Struct@@QAE@XZ,,0x00144460,75,Code/Libraries/Source/WWVegas/WW3D2/Textures_Material_And_Shader_Booking_Struct.cpp,matched,BFME1 byte-identical donor; b1 0x00945B80
