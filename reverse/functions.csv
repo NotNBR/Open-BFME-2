@@ -12383,3 +12383,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 ?Rva0013C770Get@@YAHXZ,,0x0013C770,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 17; CC-island with 1 mapper-family vtable ref; opaque name
 ?Rva000A135EGet@@YAHXZ,,0x000A135E,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x48FB69; C2-ret prev with 1 vtable ref paired with 0xA1364; opaque name
 ?Rva0013DA70Get@@YAHXZ,,0x0013DA70,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 4; CC-island with 1 mapper-family vtable ref; opaque name
+??_GRva0088FB30NetIO@@UAEPAXI@Z,,0x0003F810,33,Code/Libraries/Source/WWVegas/WWDebug/DebugIONetPipeDestructorThunk.cpp,matched,Row-only: Net TU already emits it; sole caller of dtor 0x3F4F0 plus operator delete 0x2FD60
