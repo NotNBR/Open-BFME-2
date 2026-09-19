@@ -11656,3 +11656,4 @@ _math_mod,,0x007485A0,65,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.m
 ??_GRva0033FBA6@@UAEPAXI@Z,,0x00343A6A,28,Code/GameEngine/Source/Common/Rva004D759CDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GRva0033FC0A@@UAEPAXI@Z,,0x00343C9E,28,Code/GameEngine/Source/Common/Rva004D759CDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ?get@Rva0048E84BAddDwordField@@QBEHXZ,,0x0048E84B,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?name@Rva00414307Named@@QBEPBDXZ,,0x00414307,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning ScoredKillEvaAnnouncer; vtable ref in .rdata; address-derived placeholder name
