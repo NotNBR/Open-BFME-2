@@ -1,0 +1,43 @@
+// Disp8 byte flag setters: five-byte __thiscall members with one shape:
+//
+//     mov byte ptr [ecx+<DISP>],<IMM8> / ret
+//
+// One byte at a fixed displacement from `this` is set to a hardcoded
+// immediate (0 or 1 in every body found so far) and nothing is read back.
+// This is the small-offset sibling of the disp32 family in
+// DispByteOneSetters.cpp (MSVC 7.1 uses disp8 whenever the offset fits, so
+// every offset here fits in a signed byte). Members before the accessed one
+// are spelled as a lead array because their types are not witnessed here,
+// only their total size. Identity is not recovered: every name is derived
+// from its address.
+// No // cl: line (defaults match the frameless five-byte shape).
+#define BFME_DISP8_BYTE_ONE_SETTER(NAME, DISP) \
+	class NAME \
+	{ \
+	public: \
+		void enable(); \
+		char m_lead[DISP]; \
+		unsigned char m_enabled; \
+	}; \
+	void NAME::enable() \
+	{ \
+		m_enabled = 1; \
+	}
+
+#define BFME_DISP8_BYTE_ZERO_SETTER(NAME, DISP) \
+	class NAME \
+	{ \
+	public: \
+		void disable(); \
+		char m_lead[DISP]; \
+		unsigned char m_enabled; \
+	}; \
+	void NAME::disable() \
+	{ \
+		m_enabled = 0; \
+	}
+
+BFME_DISP8_BYTE_ONE_SETTER(Rva000D4A7COneSetter, 0x4D)
+BFME_DISP8_BYTE_ONE_SETTER(Rva001DBB82OneSetter, 0x69)
+BFME_DISP8_BYTE_ZERO_SETTER(Rva001DBB87ZeroSetter, 0x69)
+BFME_DISP8_BYTE_ZERO_SETTER(Rva00420B2AZeroSetter, 0x08)

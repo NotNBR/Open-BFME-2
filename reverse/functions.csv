@@ -10920,3 +10920,8 @@ _discharge,,0x00752BD0,520,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeGo928F@BfmeThing928F@@QAEXXZ,,0x0010C80A,27,Code/GameEngine/Source/Common/BfmeConv928.cpp,matched,BFME1 byte-identical donor; b1 0x007B4F80
 ?apply@Rva00050CEFDwordImmSetter@@QAEXXZ,,0x00050CEF,8,Code/GameEngine/Source/Common/Disp8DwordImmSetters.cpp,matched,Disp8 dword imm-setter
 ?apply@Rva002E066DDwordImmSetter@@QAEXXZ,,0x002E066D,8,Code/GameEngine/Source/Common/Disp8DwordImmSetters.cpp,matched,Disp8 dword imm-setter
+?enable@Rva000D4A7COneSetter@@QAEXXZ,,0x000D4A7C,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
+?apply@Rva002E0675DwordImmSetter@@QAEXXZ,,0x002E0675,8,Code/GameEngine/Source/Common/Disp8DwordImmSetters.cpp,matched,Disp8 dword imm-setter
+?enable@Rva001DBB82OneSetter@@QAEXXZ,,0x001DBB82,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
+?disable@Rva001DBB87ZeroSetter@@QAEXXZ,,0x001DBB87,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
+?disable@Rva00420B2AZeroSetter@@QAEXXZ,,0x00420B2A,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
