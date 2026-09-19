@@ -168,3 +168,12 @@ int Rva000A165EGet(void)
 {
 	return 0x0048FBDD;
 }
+
+// ?Rva000A1664Get@@YAHXZ @ 0x000A1664 (6B): returns 0x0048FC17.
+// Immediately follows Rva000A165EGet (prev is its C3), carried by 1 .rdata
+// slot in the parallel vtable, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva000A1664Get(void)
+{
+	return 0x0048FC17;
+}
