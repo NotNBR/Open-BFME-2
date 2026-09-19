@@ -11082,3 +11082,4 @@ _string_constant,,0x00753A20,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME
 ?get@Rva003E3BC9ByteField@@QBEEXZ,,0x003E3BC9,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?get@Rva00042287LeaField@@QBEPAXXZ,,0x00042287,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
 _funcname,,0x00754980,141,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_open_func,,0x00754080,87,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan

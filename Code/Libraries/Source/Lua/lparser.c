@@ -388,7 +388,6 @@ static void var_or_func (LexState *ls, expdesc *v) {
 }
 
 
-// _open_func present-unmatched
 static void open_func (LexState *ls, FuncState *fs) {
   Proto *f = luaF_newproto(ls->L);
   fs->prev = ls->fs;  /* linked list of funcstates */
