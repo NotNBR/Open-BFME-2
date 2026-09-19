@@ -290,3 +290,13 @@ int Rva000A43C2Get(void)
 {
 	return 0x0048F877;
 }
+
+// ?Rva000A52A2Get@@YAHXZ @ 0x000A52A2 (6B): returns 0x0048F755.
+// Follows a leave/ret (prev C9-C3), carried by 1 .rdata slot
+// in a vtable family shared with Rva000A52A8Get (identical neighbours,
+// parallel tables 44B apart), no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva000A52A2Get(void)
+{
+	return 0x0048F755;
+}
