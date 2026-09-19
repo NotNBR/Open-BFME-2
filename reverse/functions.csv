@@ -11310,3 +11310,4 @@ _lua_pushnumber,,0x00747570,45,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 by
 ?apply@Rva000724510DwordImmSetter@@QAEXXZ,,0x00724510,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-0C65BC00-C3
 ?apply@Rva0006C5930DwordImmSetter@@QAEXXZ,,0x006C5930,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-ECE7BB00-C3
 ?apply@Rva00066D580DwordImmSetter@@QAEXXZ,,0x0066D580,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; RET-PREV 7B; retail C7-01-383BCE00-C3
+?apply@Rva00065D180DwordImmSetter@@QAEXXZ,,0x0065D180,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B cc-pad; retail C7-01-141ECE00-C3
