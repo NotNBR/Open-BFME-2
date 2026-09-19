@@ -11200,3 +11200,13 @@ _lua_newtag,,0x0074FBC0,113,Code/Libraries/Source/Lua/ltm.c,matched,BFME1 byte-i
 ?apply@Rva000A8EC2DwordImmSetter@@QAEXXZ,,0x000A8EC2,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?collectAll@Rva007589F0@@QAEXXZ,,0x007589F0,56,Code/GameEngine/Source/Common/Rva007589F0Collect.cpp,matched,CGD bucket drain over the 0x2B7B table (head at +0xADEC); called from bfmeGlobalCGD
 ?apply@Rva000A8EEFDwordImmSetter@@QAEXXZ,,0x000A8EEF,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+_TestSize,,0x00756A90,109,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c TestSize; exact via unclaimed_scan; unblocks LoadHeader
+_LoadSignature,,0x00756A00,131,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadSignature; exact via unclaimed_scan; unblocks LoadHeader
+_LoadBlock,,0x00756340,143,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadBlock; exact via unclaimed_scan; unblocks LoadHeader
+_LoadVector,,0x007563D0,216,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadVector; exact via unclaimed_scan; unblocks LoadCode/LoadConstants/LoadFunction
+_LoadCode,,0x00756560,130,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadCode; exact via unclaimed_scan; unblocks LoadFunction
+_LoadString,,0x007564F0,104,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadString; exact via unclaimed_scan; unblocks LoadFunction
+_LoadLocals,,0x007565F0,281,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadLocals; exact via unclaimed_scan; unblocks LoadFunction
+_LoadConstants,,0x00756770,343,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadConstants; exact via unclaimed_scan; unblocks LoadFunction
+_LoadFunction,,0x007568D0,303,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadFunction; exact via unclaimed_scan; unblocks LoadHeader
+_LoadHeader,,0x00756B10,475,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadHeader; exact via unclaimed_scan; lundump file drained

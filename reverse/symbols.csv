@@ -3162,3 +3162,5 @@ _luaX_syntaxerror,0x00756F50,_funcname 0x754980 +0x2a E8 decodes here; error-mes
 _luaF_newproto,0x00751B40,_open_func 0x754080 +0x5 E8 decodes here; Proto allocator (0x44 zero-init + rootproto link at L+0x20); lfunc.c
 _lua_newuserdata,0x00747D70,openwithcontrol 0x74B490 +0x6 E8 decodes here; userdata allocator (sizeof IOCtrl 0x10); lapi.c
 _lua_newtag,0x0074FBC0,openwithcontrol 0x74B490 +0xe/+0x17 E8 decodes here; tag allocator; ltm.c
+_luaZ_read,0x00756E90,LoadBlock 0x756340 +0x66 E8 decodes here; ZIO reader; lzio.c zread
+_luaS_newlstr,0x00750130,LoadString 0x7564F0 +0x5c E8 decodes here; string interner; lstring.c
