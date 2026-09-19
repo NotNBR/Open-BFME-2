@@ -105,3 +105,12 @@ void Rva000B29C9Set(int value)
 {
 	g_Va00DB3BDC = value;
 }
+
+// ?Rva006CD220Get@@YAHXZ @ 0x006CD220 (6B) over 0x00E17724.
+
+extern int g_Va00E17724;
+
+int Rva006CD220Get(void)
+{
+	return g_Va00E17724;
+}
