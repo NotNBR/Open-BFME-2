@@ -71,3 +71,35 @@ int Rva00391614WordIntField::get() const
 {
 	return m_value;
 }
+
+class Rva006E3C40WordIntField
+{
+public:
+	int get() const;
+
+private:
+	char m_pad[0x02];
+	unsigned short m_value; // +0x02
+};
+
+// ?get@Rva006E3C40WordIntField@@QBEHXZ
+int Rva006E3C40WordIntField::get() const
+{
+	return m_value;
+}
+
+class Rva004CEEA1WordIntField
+{
+public:
+	int get() const;
+
+private:
+	char m_pad[0x10];
+	unsigned short m_value; // +0x10
+};
+
+// ?get@Rva004CEEA1WordIntField@@QBEHXZ
+int Rva004CEEA1WordIntField::get() const
+{
+	return m_value;
+}

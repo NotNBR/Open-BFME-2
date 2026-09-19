@@ -10667,3 +10667,5 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeSetPair@Gen_0094AC70@@QAEXPBVBfmeVecHF@@0@Z,,0x0013F620,64,Code/GameEngine/Source/Common/Bfme5EightyEight.cpp,matched,BFME1 byte-identical donor; b1 0x0094AC70
 ?bfmeSlotAt@@YGPAVBfmeRecJD@@H@Z,,0x00689400,66,Code/GameEngine/Source/Common/Bfme5NinetyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x0081C5F0
 ?get@Rva004E063BDwordField@@QBEHXZ,,0x004E063B,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
+?get@Rva006E3C40WordIntField@@QBEHXZ,,0x006E3C40,5,Code/GameEngine/Source/Common/DispWordIntGetters.cpp,matched,Disp8 word-int getter movzx shape
+?get@Rva004CEEA1WordIntField@@QBEHXZ,,0x004CEEA1,5,Code/GameEngine/Source/Common/DispWordIntGetters.cpp,matched,Disp8 word-int getter movzx shape
