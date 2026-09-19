@@ -501,7 +501,6 @@ name,address,notes
 ??1Rva0028418A@@UAE@XZ,0x0028418A,opaque SEH dtor (mov-eax-cookie prologue); tail-called by 4-vptr dtor at 0x62AF7; identity unproven, address-derived name
 ??1Rva002C0C0@@UAE@XZ,0x002C0C0,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0x2C536; identity unproven, address-derived name
 ??1Rva002C5398@@UAE@XZ,0x002C5398,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x8FCA3; identity unproven, address-derived name
-??1Rva002CEC0A@@UAE@XZ,0x002CEC0A,opaque this-adjust dtor (14B: vptr + add ecx,4 + tail-jmp 0x2CC70; deferred lane); called by scalar-deleting-dtor at 0x2CEC18; identity unproven, address-derived name
 ??1Rva002D0588@@UAE@XZ,0x002D0588,opaque SEH dtor (mov-eax-cookie prologue); tail-called by single-inheritance dtor at 0x4CA13; identity unproven, address-derived name
 ??1Rva00360D26Member@@QAE@XZ,0x00360D26,opaque pool-aware member destructor at +0x8/+0xC of TransportContainModuleData; 13B forwarder body to pool op 0x360CB0; called twice by the 0x1DFA48 dtor
 ??1Rva003B00D6@@UAE@XZ,0x003B00D6,opaque SEH dtor (mov-eax-cookie prologue, vptr 0xC1D8F0); tail-called by single-inheritance dtor at 0x3B0152; identity unproven, address-derived name

@@ -12252,3 +12252,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva0013C650Get@@YAHXZ,,0x0013C650,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 const-int returner ret 3; CC-island with 2 vtable refs; ICF-folded const-3 so opaque address-derived name
 ?Rva00250000Get@@YAHXZ,,0x00250000,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 const-int returner ret 0x81; prev leave-ret with 7 distant rdata refs; opaque address-derived name
 ?Rva00656B60Get@@YAHXZ,,0x00656B60,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 const-int returner ret 0xE09F9C; CC-island with 16 E8 callers and Ghidra-6; alleged js is mov-imm false decode; opaque name
+??1Rva002CEC0A@@UAE@XZ,,0x002CEC0A,14,Code/GameEngine/Source/Common/Rva002CEC0ADtor.cpp,matched,opaque dtor tail-calls vector dtor 0x2CC70 on member at plus 4 (pin upgrade)
