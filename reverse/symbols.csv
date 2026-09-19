@@ -3133,3 +3133,7 @@ Gen_f265_b7a8aa_0081dad0,0x006887F0
 _lua_settable,0x00747950
 ?bfmeCalcEFC@@YGMH@Z,0x0039B145
 ?startRenderToTexture@W3DShaderManager@@SAXXZ,0x00075BD8
+?winIsHidden@GameWindow@@QAE_NXZ,0x00313CD9
+_LoadFunction,0x007568D0
+_LoadHeader,0x00756B10
+?bfmeGet@Gen_0096D080@@QBE?AVBfmeHandleCX@@H@Z,0x00188700

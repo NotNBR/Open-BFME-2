@@ -10873,3 +10873,4 @@ _settabsi,,0x00747DE0,32,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-i
 ?set@Rva0044950EByteSlot@@QAEXE@Z,,0x0044950E,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva00464810ByteSlot@@QAEXE@Z,,0x00464810,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?set@Rva004884AAByteSlot@@QAEXE@Z,,0x004884AA,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?Peek_Legacy_Texture@MeshLoadContextClass@@AAE?AVBfmeHandleCX@@H@Z,,0x001893C0,62,Code/Libraries/Source/WWVegas/WW3D2/MeshModelMaterialLoading.cpp,matched,BFME1 byte-identical donor; b1 0x0096DF10
