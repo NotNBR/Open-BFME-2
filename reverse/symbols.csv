@@ -2553,7 +2553,6 @@ _bfmeScanYA,0x00629892
 ?_M_copy_state@ios_base@_STL@@IAEXABV12@@Z,0x0001C300
 ?d_0083f3f0@@YAXXZ,0x0001C300
 ?bfmeReserveVKJ@BfmeStrVKJ@@QAEXIHIHI@Z,0x006D4AA0
-?bfmeRandomPositive@@YAHH@Z,0x006B89E0
 ?bfmeNormUSC@@YAHPAX@Z,0x001C4F80
 ?Rva009ACBA0SetupBounding@@YAPAHPAURva009ACC40State@@H@Z,0x001BD590
 ?d_008d3ae0@@YAXXZ,0x0070F710
@@ -3046,3 +3045,4 @@ _luaX_error,0x00757150
 ?bfmeFindByteInRange@@YAPADPAD0D@Z,0x00026C60
 ?bfmeFormatUPB@@YAXPAXPAD0PBD@Z,0x0065BB60
 ?bfmeFindByteCore@@YAPADPAD0D0@Z,0x00025B80
+??1Rva0070A840@@QAE@XZ,0x0070A840,opaque member dtor called from LadderPreferences dtor at 0x006D6470; identity unproven
