@@ -399,3 +399,12 @@ int Rva003B0E57Get(void)
 {
 	return 0x00C1DB18;
 }
+
+// ?Rva0056B7DEGet@@YAHXZ @ 0x0056B7DE (6B): returns 0x00C6D690.
+// Follows a ret-4 (0x56B7DB-DD) with a B8-imm/call function after.
+// 3 direct E8 callers (0x56B71B/0x56BEAF/0x56BFD2), no Ghidra entry
+// (dead emission), no branch sources. Opaque address-derived name.
+int Rva0056B7DEGet(void)
+{
+	return 0x00C6D690;
+}
