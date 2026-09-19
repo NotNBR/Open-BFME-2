@@ -10492,5 +10492,4 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?Rva007FAE40@@YGXPAVRva007E8810Message@@PBD1111@Z,,0x00667350,145,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FAE40
 ?hideSpecialPowerShortcut@ControlBar@@QAEXXZ,,0x0031AFCC,18,Code/GameEngine/Source/GameClient/GUI/ControlBar/ControlBarFields.cpp,matched,BFME1 donor with BFME2 repairs: parent at +0xD8 not +0xFC; winHide pin 0x313C64
 ?bfmeGoVIU@@YGXPAVBfmeMsgVIT@@PAX11@Z,,0x0065F250,95,Code/GameEngine/Source/Common/BfmeConv1378.cpp,matched,BFME1 donor; fold-twins disambiguated by ret-0x10 arity (only 4-arg candidate); b1 0x007F2760
-?Rva007FCCC0@@YGXPAVRva007E8810Message@@HHHHPBD@Z,,0x006691C0,224,Code/GameEngine/Source/GameNetwork/Y4FeslAttributeRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FCCC0; 11 DIR32 string literal(s) agree
-?Rva007FC8F0@@YGXPAVRva007E8810Message@@PBURva007FC810Attribute@@H@Z,,0x00668DF0,153,Code/GameEngine/Source/GameNetwork/Y4FeslAttributeRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FC8F0; 1 DIR32 string literal(s) agree
+?bfmeGoDVIW@@YGXPAVBfmeMsgVIW@@PAX1H@Z,,0x0065DBE0,83,Code/GameEngine/Source/Common/BfmeConv1379.cpp,matched,BFME1 donor; 8 fold-twins cut by ret-0x10 + Run/Set/Set2/Set3 call run; b1 0x007F1050
