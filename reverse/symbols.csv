@@ -1108,7 +1108,6 @@ name,address,notes
 ?Rva007FFC10TextAddr@@YAIPBD@Z,0x0066C0E0,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006718B0; BFME1 names this callee; body not yet converted
 ?Rva00800040JoinI64@@YAXPB_JIPADID@Z,0x0066C4F0,call site in Rva call (0x662ED0+0x57) pushes int64 array/count/dest/size/sep matching FESL JoinI64 (int64 array join with semicolon); ghidra FUN_00a6c4f0 289B; same helper as BFME1 0x800040
 ?Rva00800170Join@@YAXPAPBDIPADID@Z,0x0066C620,call site in Rva call (0x662ED0+0x78) pushes string array/count/dest/size/sep matching FESL Join (string array join); ghidra FUN_00a6c620 261B; same helper as BFME1 0x800170
-?Rva008014F0ResetHpState@@YGXPAVRva008022A0Owner@@@Z,0x0066D830
 ?Rva00804380CloseSocket@@YAXPAURva008042B0Http@@@Z,0x006703C0,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted
 ?Rva00804440LocalAddr@@YAIXZ,0x00670480,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x00671400; one of two identical twins; this site is byte-true; body not yet converted
 ?Rva008046E0HttpRequest@@YAHPAURva008042B0Http@@PBDH1@Z,0x00670720,address from masked placement of the same-TU body; forward reference pending conversion; body not yet converted

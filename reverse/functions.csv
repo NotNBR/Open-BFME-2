@@ -11020,3 +11020,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?get@Rva000D1A7AByteField@@QBEEXZ,,0x000D1A7A,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?get@Rva001DAF7DByteField@@QBEEXZ,,0x001DAF7D,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?get@Rva00594F07WordField@@QBEGXZ,,0x00594F07,5,Code/GameEngine/Source/Common/Disp8WordFieldGetters.cpp,matched,Disp8 word getter
+?Rva008014F0ResetHpState@@YGXPAVRva008022A0Owner@@@Z,,0x0066D830,14,Code/GameEngine/Source/GameNetwork/Y2FeslBufferAndChain.cpp,matched,BFME1 byte-identical donor; b1 0x008014F0; emitted-but-unclaimed row; exact via unclaimed_scan
