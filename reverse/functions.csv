@@ -10744,3 +10744,14 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeGo924F@@YAXPAVBfmeKeyLC@@G@Z,,0x00433D07,27,Code/GameEngine/Source/Common/BfmeConv924.cpp,matched,BFME1 byte-identical donor; b1 0x00511160
 ??0Rva00352900@@QAE@XZ,,0x003B40DF,27,Code/GameEngine/Source/Common/R3ScalarFieldConstructors1.cpp,matched,BFME1 byte-identical donor; b1 0x00352900; out-of-order stores with relocated address then byte stores
 ??0Rva00489BC0@@QAE@XZ,,0x001DBC61,22,Code/GameEngine/Source/Common/R3ScalarFieldConstructors1.cpp,matched,BFME1 byte-identical donor; b1 0x00489BC0; out-of-order dword zeros
+_block_follow,,0x00754460,71,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099B620
+_check,,0x00753890,135,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099AA50
+_check_condition,,0x00753920,19,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099AAE0
+_lookahead,,0x00753830,17,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099A9F0
+_str_checkname,,0x00753AD0,107,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099AC90
+_new_localvarstr,,0x00753CF0,28,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099AEB0
+_leavebreak,,0x00753FD0,26,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099B190
+_retstat,,0x00754A10,187,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099BBD0
+_check_match,,0x00753960,181,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099AB20
+_constructor_part,,0x00754FC0,335,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C180
+_funcstat,,0x007551D0,117,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C390
