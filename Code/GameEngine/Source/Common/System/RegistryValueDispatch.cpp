@@ -99,3 +99,16 @@ const char *GetRegistrySkuName()
     }
     return g_SkuNameValue;
 }
+
+// ?GetRegistryGameName@@YAPBDXZ, retail 0x0002F9E0, 27 bytes.
+// Lazy GameName reader: same once-gate, cached pointer at 0x00DA757C.
+// Called from bfmeGetMainWindowTitle in WinMain.cpp.
+const char *GetRegistryGameName()
+{
+    if (!g_registryValuesLoaded)
+    {
+        g_registryValuesLoaded = true;
+        LoadRegistryValues();
+    }
+    return g_GameNameValue;
+}
