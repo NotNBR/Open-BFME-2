@@ -79,3 +79,23 @@ void __cdecl Rva0002F720(const char *key, const char *value)
         return;
     }
 }
+
+// Once-flag for the cached registry block below. The ten lazy getters share
+// it with the block loader at 0x0002F840 (pinned, not yet converted): the
+// first getter through the gate loads the block, the rest use the cache.
+bool g_registryValuesLoaded;
+
+void LoadRegistryValues();
+
+// ?GetRegistrySkuName@@YAPBDXZ, retail 0x0002F9C0, 27 bytes.
+// Lazy SkuName reader: loads the registry block on first use, then returns
+// the cached SkuName pointer the dispatcher stored at 0x00DA7578.
+const char *GetRegistrySkuName()
+{
+    if (!g_registryValuesLoaded)
+    {
+        g_registryValuesLoaded = true;
+        LoadRegistryValues();
+    }
+    return g_SkuNameValue;
+}

@@ -3164,3 +3164,4 @@ __CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper ca
 ?recenterTurret@AIUpdateInterface@@QAEXW4WhichTurretType@@@Z,0x0026266C,retail E8 from BattlePlanUpdate::recenterTurret at 0x00497786; one-int-arg thiscall delegating via turret array +0x20C; ZH AIUpdate.h non-virtual role
 ?setTurretEnabled@AIUpdateInterface@@QAEXW4WhichTurretType@@_N@Z,0x00262651,retail E8 from BattlePlanUpdate::enableTurret at 0x00497760; two-arg thiscall delegating via turret array +0x20C; ZH AIUpdate.h non-virtual role
 _readname,0x007570C0
+?LoadRegistryValues@@YAXXZ,0x0002F840,registry block loader; called by the ten lazy getters at 0x0002F9C0+
