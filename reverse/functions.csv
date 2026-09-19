@@ -12170,3 +12170,4 @@ _piAddListingGamesCallback,,0x0069F320,233,Code/GameEngine/Source/GameNetwork/Ga
 _str_lower,,0x00748BA0,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string lower via donor reg-table identity; callees pinned
 _str_upper,,0x00748C40,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string upper via donor reg-table identity; callees pinned
 _str_char,,0x00748DF0,164,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string char via donor reg-table identity; callees pinned
+_match_class,,0x00748F80,282,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua pattern class matcher via donor; leaf of match tree
