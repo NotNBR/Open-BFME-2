@@ -10782,3 +10782,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?lock@File@@UAEXXZ,,0x006024CA,36,Code/GameEngine/Source/Common/System/File.cpp,matched,BFME1 byte-identical donor; b1 0x009CB760
 ?Rva007B7600@@YAXXZ,,0x0009A338,16,Code/GameEngine/Source/Common/R2GuardedGlobalCalls.cpp,matched,BFME1 byte-identical donor; b1 0x007B7600; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ?bfmeGo936B@BfmeThing936B@@QAEXXZ,,0x00143C00,19,Code/GameEngine/Source/Common/BfmeConv936.cpp,matched,BFME1 byte-identical donor; b1 0x00945D00
+?bfmeValue@Gen_0028EF10@@QBEHXZ,,0x004B0E1F,21,Code/GameEngine/Source/Common/Bfme5TinyFifteen.cpp,matched,BFME1 donor with +0x9C offset repair; retail disp32 proves link slot; b1 0x0028EF10
