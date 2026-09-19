@@ -9,6 +9,9 @@
 
 #include <vector>
 
+extern "C" void _ReadWriteBarrier(void);
+#pragma intrinsic(_ReadWriteBarrier)
+
 template <typename T>
 class StringBase
 {
@@ -92,7 +95,6 @@ public:
 	void setDisplayedStats(int index);
 	unsigned int getColor(int index) const;
 	int getStartFrame(int index) const;
-
 private:
 	CreateSubtitleEntry m_createEntry;
 	int m_second;
@@ -111,4 +113,37 @@ void SubtitleManager::addSubtitle(const AsciiString &label, unsigned int color,
 	SubtitleEntry *entry = m_createEntry(&m_secondaryName, m_count, label, color,
 		style, alignment, line, startFrame, endFrame);
 	m_entries.push_back(entry);
+}
+
+// ??0SubtitleManager@@QAE@P6APAVSubtitleEntry@@PAVAsciiString@@HABV2@IHHHHH@ZH1@Z
+// retail 0x00688750 (107B). Placed by masked whole-.text search of the compiled
+// donor body (single hit on unclaimed ground).
+SubtitleManager::SubtitleManager(CreateSubtitleEntry createEntry, int second,
+	const AsciiString &name) :
+	m_createEntry(createEntry),
+	m_second(second),
+	m_name(name),
+	m_secondaryName(),
+	m_count(0),
+	m_entries(),
+	m_enabled(false)
+{
+	m_startFrame = 0x7FFFFFFF;
+	// Keep the sentinel visible before the remaining state is cleared, as retail does.
+	_ReadWriteBarrier();
+	m_state[0] = 0;
+	m_state[1] = 0;
+	m_state[2] = 0;
+	m_state[3] = 0;
+	m_state[4] = 0;
+	m_state[5] = 0;
+	m_state[6] = 0;
+	m_state[7] = 0;
+	m_state[8] = 0;
+	m_state[9] = 0;
+	m_state[10] = 0;
+	m_state[11] = 0;
+	m_state[12] = 0;
+	m_state[13] = 0;
+	m_state[14] = 0;
 }
