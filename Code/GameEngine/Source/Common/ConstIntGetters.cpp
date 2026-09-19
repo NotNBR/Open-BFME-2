@@ -641,3 +641,12 @@ int Rva004EE155Get(void)
 {
 	return 0x00C62A38;
 }
+
+// ?Rva00655114Get@@YAHXZ @ 0x00655114 (6B): returns 1. Follows a
+// pop-ebp/ret (0x65510F-13) with a mov-style function after. Carried
+// at 0x8E0B54, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00655114Get(void)
+{
+	return 1;
+}
