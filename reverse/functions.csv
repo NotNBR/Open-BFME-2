@@ -10866,3 +10866,4 @@ _settabsi,,0x00747DE0,32,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-i
 ?set@Rva002BE7AEByteSlot@@QAEXE@Z,,0x002BE7AE,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
 ?preRender@ScreenMotionBlurFilter@@UAE_NAA_NAAW4CustomScenePassModes@@@Z,,0x000FD4CE,19,Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DShaderManager.cpp,matched,BFME1 donor-verbatim body; retail shape without smudge check
 ?set@Rva002C8F3BByteSlot@@QAEXE@Z,,0x002C8F3B,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
+?set@Rva00367415ByteSlot@@QAEXE@Z,,0x00367415,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
