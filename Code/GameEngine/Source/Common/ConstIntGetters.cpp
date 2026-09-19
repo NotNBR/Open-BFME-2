@@ -69,3 +69,12 @@ int Rva00309E4BGet(void)
 {
 	return 0x00DBD7DC;
 }
+
+// ?Rva00309E65Get@@YAHXZ @ 0x00309E65 (6B): returns 0x00DBD860.
+// Same copier/getter pair shape as 0x309E4B (rep movsd into 0xDBD860,
+// ret at 0x309E64, larger function follows at 0x309E6B). 13 direct E8
+// callers, Ghidra-6, no branch sources. Opaque address-derived name.
+int Rva00309E65Get(void)
+{
+	return 0x00DBD860;
+}
