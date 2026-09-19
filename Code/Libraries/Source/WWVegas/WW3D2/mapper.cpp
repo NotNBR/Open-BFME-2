@@ -38,7 +38,7 @@ ScaleTextureMapperClass::ScaleTextureMapperClass(const ScaleTextureMapperClass &
 {
 }
 
-// ?Apply@ScaleTextureMapperClass@@UAEXH@Z
+// ?Apply@ScaleTextureMapperClass@@UAEXH@Z present-unmatched
 void ScaleTextureMapperClass::Apply(int uv_array_index)
 {
 	// Set up the texture matrix
@@ -528,6 +528,26 @@ GridWSEnvMapperClass::GridWSEnvMapperClass(const INIClass &ini, const char *sect
 	}
 }
 
-// GridWSClassicEnvironmentMapperClass / GridWSEnvironmentMapperClass forwarding ctors are
-// omitted: they are trivial base-class forwarders that the retail build inlined at their
-// NEW_REF sites (not emitted as standalone functions), so there is nothing to byte-match.
+// ??0GridWSClassicEnvironmentMapperClass@@QAE@ABVINIClass@@PBDI@Z
+GridWSClassicEnvironmentMapperClass::GridWSClassicEnvironmentMapperClass(const INIClass &ini, const char *section, unsigned int stage):
+	GridWSEnvMapperClass(ini,section,stage)
+{
+}
+
+// ??0GridWSClassicEnvironmentMapperClass@@QAE@ABVGridWSEnvMapperClass@@@Z
+GridWSClassicEnvironmentMapperClass::GridWSClassicEnvironmentMapperClass(const GridWSEnvMapperClass & src):
+	GridWSEnvMapperClass(src)
+{
+}
+
+// ??0GridWSEnvironmentMapperClass@@QAE@ABVINIClass@@PBDI@Z
+GridWSEnvironmentMapperClass::GridWSEnvironmentMapperClass(const INIClass &ini, const char *section, unsigned int stage):
+	GridWSEnvMapperClass(ini, section, stage)
+{
+}
+
+// ??0GridWSEnvironmentMapperClass@@QAE@ABVGridWSEnvMapperClass@@@Z
+GridWSEnvironmentMapperClass::GridWSEnvironmentMapperClass(const GridWSEnvMapperClass & src):
+	GridWSEnvMapperClass(src)
+{
+}
