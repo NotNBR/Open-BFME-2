@@ -12258,3 +12258,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva00309E4BGet@@YAHXZ,,0x00309E4B,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDBD7DC; follows rep-movsd table copier; 28 E8 callers and Ghidra-6; plain int literal needs no pin; opaque name
 ?Rva00309E65Get@@YAHXZ,,0x00309E65,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDBD860; copier-getter pair like 0x309E4B; 13 E8 callers and Ghidra-6; opaque name
 ?Rva00309E7FGet@@YAHXZ,,0x00309E7F,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDBD918; third copier-getter pair; 11 E8 callers and Ghidra-6; opaque name
+?Rva004CE52EGet@@YAHXZ,,0x004CE52E,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC5FFA0; prev boolize ret with 20 E8 callers and Ghidra-6; opaque name

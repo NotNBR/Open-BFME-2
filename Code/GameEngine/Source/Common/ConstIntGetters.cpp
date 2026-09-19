@@ -87,3 +87,12 @@ int Rva00309E7FGet(void)
 {
 	return 0x00DBD918;
 }
+
+// ?Rva004CE52EGet@@YAHXZ @ 0x004CE52E (6B): returns 0x00C5FFA0.
+// Follows a neg/sbb/neg boolize tail (ret at 0x4CE52D) with a
+// push-style function after. 20 direct E8 callers, Ghidra-6, no branch
+// sources. Opaque address-derived name.
+int Rva004CE52EGet(void)
+{
+	return 0x00C5FFA0;
+}
