@@ -143,6 +143,14 @@ functions the sweep never placed, and `find_declared_unmatched` refuses a source
 definition the ledger lacks. Wave 1 found all three by landing into them; the tiers agreed with
 31 of 31 of that wave's files.
 
+`bfme1_sweep.py drain` runs `land` over the whole served queue and keeps going past a
+refusal, which is the way to spend the queue without spending attention on it. `land` is
+still the unit of work and owns its own unwind; drain adds the loop and a verdict. Each file
+goes through a fresh `land` because every row that lands changes what `body_tier` decides
+about the next one, so a queue planned once up front is stale after the first file. It skips
+what `land` would refuse anyway — held copy-tiers, tier D, a refused policy, an import alias —
+rather than counting files it is about to drop.
+
 `bfme1_sweep.py near` serves the donors that *almost* match: the same function either side
 of a BFME 1 -> BFME 2 change, where the difference is the agent's work. A candidate has to
 clear every one of: at least 90% of the bytes outside the relocation slots BOTH images accept,

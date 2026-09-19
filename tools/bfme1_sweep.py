@@ -1559,6 +1559,67 @@ def do_land(args):
     return 0
 
 
+def drainable(entry, wanted):
+    """Whether `land` would even try this file, without running it.
+
+    Mirrors do_land's early refusals, so the drain loop reports a queue length
+    that means something rather than counting files it is about to skip.
+    """
+    if entry["copy_tier"] in HELD_COPY_TIERS or entry["copy_tier"] == "D":
+        return False
+    if entry["policy"] == "refused" or entry.get("import_alias"):
+        return False
+    return any(body["tier"] in wanted for body in entry["bodies"])
+
+
+def do_drain(args):
+    """Land every donor the gates allow, one file at a time, and keep going.
+
+    `land` is the unit of work and owns its own unwind, so all this adds is the
+    loop and a verdict at the end. A refusal is data: it is counted and the next
+    file is tried, because the queue refills from elsewhere -- rows landing in
+    other lanes, a donor submodule bump, a matcher fix -- and a queue that stops
+    at the first hard file is a queue nobody drains.
+
+    Each file is landed through a fresh do_land, which re-reads the ledger. That
+    matters: every row this loop lands changes what the next body_tier call
+    decides, and a queue planned once up front goes stale after the first file.
+    """
+    wanted = ("T1", "T2", "T3") if args.allow_icf else ("T1", "T2")
+    queue = [entry["source"] for entry in
+             group_files(load_matches(), include_refused=False, include_held=False)
+             if drainable(entry, wanted)]
+    if args.limit:
+        queue = queue[: args.limit]
+    if not queue:
+        print("bfme1_sweep: nothing to drain — the served queue is empty")
+        return 0
+    print(f"{len(queue)} donor file(s) to try\n")
+
+    landed = skipped = failed = 0
+    for position, source in enumerate(queue, 1):
+        print(f"--- [{position}/{len(queue)}] {source}", flush=True)
+        request = argparse.Namespace(
+            source=source, allow_icf=args.allow_icf, include_refused=False,
+            ignore_import_alias=False, dry_run=args.dry_run)
+        try:
+            code = do_land(request)
+        except SystemExit as refusal:
+            print(f"    skipped: {refusal}", flush=True)
+            skipped += 1
+            continue
+        if code:
+            failed += 1
+        else:
+            landed += 1
+    if args.dry_run:
+        print(f"\n--dry-run: {landed} file(s) would be tried, {skipped} skipped before it ran")
+        return 0
+    print(f"\ndrained: {landed} file(s) landed, {failed} refused by the build, "
+          f"{skipped} skipped before it ran")
+    return 0
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="command", required=True)
@@ -1593,6 +1654,13 @@ def main(argv=None):
     show = sub.add_parser("show", help="print one donor file's packet")
     show.add_argument("source")
     show.set_defaults(func=do_show)
+
+    drain = sub.add_parser("drain", help="land every served donor, one after another")
+    drain.add_argument("--limit", type=int, default=0, help="stop after this many files")
+    drain.add_argument("--allow-icf", action="store_true",
+                       help="also land T3 bodies, whose name is an ICF guess")
+    drain.add_argument("--dry-run", action="store_true")
+    drain.set_defaults(func=do_drain)
 
     near = sub.add_parser("near", help="donors that ALMOST match, for hand repair")
     near.add_argument("--show", dest="source", metavar="NAME_OR_PATH",

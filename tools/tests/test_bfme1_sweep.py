@@ -669,3 +669,37 @@ def test_a_real_call_is_still_claimed(tmp_path):
     image = one_section_image(tmp_path, "c.exe", call)
     body = image.text[: len(call)]
     assert bfme1_sweep.volatile_fields(body, image, TEXT_RVA) == {1: "rel32"}
+
+
+# --------------------------------------------------------------- drain queue
+
+def an_entry(**over):
+    """A group_files entry with nothing wrong with it, for one field at a time."""
+    entry = {"source": "Code/GameEngine/Source/Common/X.cpp", "copy_tier": "A",
+             "policy": "ok", "import_alias": None,
+             "bodies": [{"tier": "T1", "size": 120}]}
+    entry.update(over)
+    return entry
+
+
+WANTED = ("T1", "T2")
+
+
+def test_drain_takes_a_plain_served_file():
+    assert bfme1_sweep.drainable(an_entry(), WANTED)
+
+
+@pytest.mark.parametrize("over", [
+    {"copy_tier": "S"}, {"copy_tier": "P"}, {"copy_tier": "L"},
+    {"copy_tier": "D"}, {"policy": "refused"},
+    {"import_alias": "donor declares t2_block_copy but the body reaches memmove"},
+])
+def test_drain_skips_what_land_would_refuse(over):
+    """Every one of these raises SystemExit inside do_land; none should be queued."""
+    assert not bfme1_sweep.drainable(an_entry(**over), WANTED)
+
+
+def test_drain_skips_a_file_whose_only_body_is_an_icf_guess():
+    entry = an_entry(bodies=[{"tier": "T3", "size": 120}])
+    assert not bfme1_sweep.drainable(entry, WANTED)
+    assert bfme1_sweep.drainable(entry, ("T1", "T2", "T3")), "--allow-icf takes it"
