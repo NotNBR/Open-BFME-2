@@ -11472,3 +11472,5 @@ _luaH_getglobal,,0x00750A50,31,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 
 _luaH_getnum,,0x007504C0,70,Code/Libraries/Source/Lua/ltable.c,matched,exact via unclaimed_scan; emitted by ltable.c object; vendored=lua-4.0.1; retracts over-claimed 4B getter tail (intra-function jnp target; return n-val; zero callers)
 ?name@Rva00091AACNamed@@QBEPBDXZ,,0x00091AAC,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning W3DTerrainVisual; vtable ref in .rdata; address-derived placeholder name
 _luaD_lineHook,,0x0074D790,99,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan; pin upgrade; vendored=lua-4.0.1
+?inc@Rva002AA0BFDwordCounter@@QAEXXZ,,0x002AA0BF,7,Code/GameEngine/Source/Common/Disp32DwordFieldIncDec.cpp,matched,disp32 dword inc family pair; opaque holder
+?name@Rva000B1CDCNamed@@QBEPBDXZ,,0x000B1CDC,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning W3DDebrisDraw; vtable ref in .rdata; address-derived placeholder name
