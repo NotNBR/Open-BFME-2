@@ -596,3 +596,12 @@ int Rva0051BF27Get(void)
 {
 	return 0x006D2099;
 }
+
+// ?Rva0051D772Get@@YAHXZ @ 0x0051D772 (6B): returns 0x006D210D.
+// Follows an add-esp/ret (0x51D76F-71) with a frame-style function
+// after. Carried at 0x866FC8, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva0051D772Get(void)
+{
+	return 0x006D210D;
+}
