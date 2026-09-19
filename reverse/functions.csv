@@ -10902,3 +10902,4 @@ _luaK_code2,,0x00752240,976,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte
 _luaK_tostack,,0x00753160,889,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 ?bfmeGo1026F@BfmeF1026@@QAEXHHH@Z,,0x004BD6DA,52,Code/GameEngine/Source/Common/BfmeConv1026.cpp,matched,BFME1 byte-identical donor b1 0x00217500; 0x28AFA9 rowed getControllingPlayer and 0x242C09 pinned destroyObject; 1 pin bfmeHas1026
 ?GadgetListBoxGetNumEntries@@YAHPAVGameWindow@@@Z,,0x0032475A,25,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B77C0
+?_M_deallocate@?$__node_alloc@$00$0A@@_STL@@CAXPAXI@Z,,0x00027B40,85,Code/Libraries/Source/WWVegas/WWLib/node_alloc_M_deallocateThunk.cpp,matched,BFME1 byte-identical donor; b1 0x0082E5F0
