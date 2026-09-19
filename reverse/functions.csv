@@ -10625,3 +10625,6 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?Rva00C26852ClearFlag@@YAIXZ,,0x00776D9D,16,Code/GameEngine/Source/Common/GlobalFlagClearers_04.cpp,matched,BFME1 byte-identical donor; b1 0x00C26852
 ?Rva00C26862ClearFlag@@YAIXZ,,0x00776DAD,16,Code/GameEngine/Source/Common/GlobalFlagClearers_04.cpp,matched,BFME1 byte-identical donor; b1 0x00C26862
 ?Rva00C26872ClearFlag@@YAIXZ,,0x00776DBD,16,Code/GameEngine/Source/Common/GlobalFlagClearers_04.cpp,matched,BFME1 byte-identical donor; b1 0x00C26872
+??0Rva0040C1F0@@QAE@XZ,,0x005B72BE,41,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x0040C1F0
+??0Rva00704980@@QAE@XZ,,0x000B6D26,37,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x00704980
+??0Rva0013A8B0@@QAE@XZ,,0x0050C4C6,34,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x0013A8B0
