@@ -11442,3 +11442,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?name@Rva00078B7DNamed@@QBEPBDXZ,,0x00078B7D,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning W3DHordeModelDraw; vtable ref at 0x7C68F8; address-derived placeholder name
 ?inc@Rva002D76B7DwordCounter@@QAEXXZ,,0x002D76B7,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family; opaque holder per Disp8DwordFieldGetters precedent
 ?inc@Rva0028A807DwordCounter@@QAEXXZ,,0x0028A807,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family triple; opaque holder
+?name@Rva000822F7Named@@QBEPBDXZ,,0x000822F7,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning WaterRenderObjClass; vtable ref at 0x7C7314; address-derived placeholder name
