@@ -11672,3 +11672,11 @@ _math_deg,,0x00748710,38,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.d
 ??_GRva00362EE3@@UAEPAXI@Z,,0x003630E6,28,Code/GameEngine/Source/Common/Rva0049B47CDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ?name@Rva001F37BENamed@@QBEPBDXZ,,0x001F37BE,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning FXParticleInfo; vtable ref in .rdata; address-derived placeholder name
 ??_GRva00484F5D@@UAEPAXI@Z,,0x00484F41,28,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004DF52E@@UAEPAXI@Z,,0x0028C9DD,28,Code/GameEngine/Source/Common/Rva004DF7C2Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004E3D2A@@UAEPAXI@Z,,0x004E3E22,28,Code/GameEngine/Source/Common/Rva004E3CD0Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+?Rva0051E2B7Get@@YAHXZ,,0x0051E2B7,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,A1 global dword getter over 0x00E048DC; prev C3; unclaimed standalone
+??_GRva004BD78F@@UAEPAXI@Z,,0x004BD910,28,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004DF836@@UAEPAXI@Z,,0x0028CA98,28,Code/GameEngine/Source/Common/Rva004DF7C2Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004DF863@@UAEPAXI@Z,,0x0028CB29,28,Code/GameEngine/Source/Common/Rva004DF7C2Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004DF8A9@@UAEPAXI@Z,,0x0028CBE1,28,Code/GameEngine/Source/Common/Rva004DF7C2Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+??_GRva004E3D47@@UAEPAXI@Z,,0x004E3E3E,28,Code/GameEngine/Source/Common/Rva004E3CD0Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
