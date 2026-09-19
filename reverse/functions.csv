@@ -11994,3 +11994,4 @@ _luaG_ordererror,,0x0074D2E0,73,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1
 _read_long_string,,0x00757550,643,Code/Libraries/Source/Lua/llex.c,matched,gen-alias;object-symbol=_read_long_string;C++ alias
 _read_string,,0x007577E0,1185,Code/Libraries/Source/Lua/llex.c,matched,gen-alias;object-symbol=_read_string;C++ alias
 ?name@Rva000CEB69Named@@QBEPBDXZ,,0x000CEB69,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DTreeDraw; vtable ref at 0x7CCD00; address-derived placeholder name
+?name@Rva000CEE01Named@@QBEPBDXZ,,0x000CEE01,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DBuffDraw; vtable ref at 0x7CD180; address-derived placeholder name
