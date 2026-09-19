@@ -11276,3 +11276,4 @@ _luaD_adjusttop,,0x0074D6B0,70,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byt
 ?get@Rva002C8F4FFloatField@@QBEMXZ,,0x002C8F4F,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter; address-derived opaque holder
 ?get@Rva002E6EF8FloatField@@QBEMXZ,,0x002E6EF8,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter; address-derived opaque holder
 ?get@Rva0033A44CFloatField@@QBEMXZ,,0x0033A44C,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter; address-derived opaque holder
+?get@Rva0033F901FloatField@@QBEMXZ,,0x0033F901,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter; address-derived opaque holder
