@@ -74,3 +74,31 @@ BFME_DISP8_DWORD_GETTER(Rva005C4AEDDwordField, 0x38)
 BFME_DISP8_DWORD_GETTER(Rva005C4AF1DwordField, 0x3C)
 BFME_DISP8_DWORD_GETTER(Rva005C4AF5DwordField, 0x40)
 BFME_DISP8_DWORD_GETTER(Rva005C4AF9DwordField, 0x44)
+// Negative-displacement sibling: the disp8 byte sign-extends, so a disp byte
+// above 0x7F reads *before* `this` (e.g. D4 = -44, an embedded member view).
+// Spelled as a negative word index from `this`, which MSVC 7.1 folds to the
+// same `8B 41 XX` disp8 load. Identity is not recovered: names stay
+// address-derived like the forward getters above.
+#define BFME_DISP8_NEG_DWORD_GETTER(NAME, INDEX) \
+	class NAME \
+	{ \
+	public: \
+		int get() const; \
+	}; \
+	int NAME::get() const \
+	{ \
+		return ((const int *)this)[INDEX]; \
+	}
+
+BFME_DISP8_DWORD_GETTER(Rva001DB09DDwordField, 0x10)
+BFME_DISP8_DWORD_GETTER(Rva002A98A7DwordField, 0x4C)
+BFME_DISP8_DWORD_GETTER(Rva002A98ABDwordField, 0x60)
+BFME_DISP8_NEG_DWORD_GETTER(Rva0030BCAEDwordField, -11)
+BFME_DISP8_DWORD_GETTER(Rva0030D377DwordField, 0x20)
+BFME_DISP8_DWORD_GETTER(Rva0030F2C7DwordField, 0x1C)
+BFME_DISP8_NEG_DWORD_GETTER(Rva00330BD7DwordField, -3)
+BFME_DISP8_NEG_DWORD_GETTER(Rva0044467CDwordField, -2)
+BFME_DISP8_DWORD_GETTER(Rva0008BB81DwordField, 0x5C)
+BFME_DISP8_DWORD_GETTER(Rva0049CB8ADwordField, 0x70)
+BFME_DISP8_DWORD_GETTER(Rva005C4AE1DwordField, 0x28)
+BFME_DISP8_DWORD_GETTER(Rva005C4AFDDwordField, 0x48)

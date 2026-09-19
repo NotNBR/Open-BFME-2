@@ -10505,6 +10505,7 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ??0Rva007F4EF0Lobby@@QAE@PAVRva007E8810Message@@@Z,,0x00661920,158,Code/GameEngine/Source/GameNetwork/V2FeslAriesLobby.cpp,matched,BFME1 near-miss donor; b1 0x007F4EF0; immediate-only drift (string literal is DIR32 auto-patch); trimmed single-body TU; callees pre-pinned
 ?Rva007FC810@@YGXPAVRva007E8810Message@@PBDPBURva007FC810Attribute@@HH@Z,,0x00668D10,214,Code/GameEngine/Source/GameNetwork/Y4FeslAttributeRequest.cpp,matched,BFME1 near-miss donor; b1 0x007FC810; immediate-only drift (string literal is DIR32 auto-patch); trimmed single-body TU with // cl: /GS; callees pre-pinned
 ?rva00161150CopyWalk@@YAPAUElem36@@PAU1@00@Z,,0x00161150,45,Code/GameEngine/Source/Common/ElementStrideWalks.cpp,matched,stride 0x24 Elem36 stand-in per ElementStrideWalks donor convention; callee gen001610F0 pinned same batch; identity not recovered
+
 ?rva00689750CopyWalk@@YAPAUElem28@@PAU1@00@Z,,0x00689750,45,Code/GameEngine/Source/Common/ElementStrideWalks.cpp,matched,BFME1 stride-walk donor; Elem28 stride proven 0x1c by retail step; helper pin gen006896F0 same batch (rowed 66B construct body); file convention follows Elem36/Nugget walks
 _luaB_settag,,0x0074B980,53,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs settag slot); BFME1 donor verbatim b1 0x00994820
 _luaB_assert,,0x0074C200,63,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs assert slot); BFME1 donor verbatim b1 0x009950A0; game.dat folds math_* here
@@ -10627,10 +10628,26 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ??0Rva0040C1F0@@QAE@XZ,,0x005B72BE,41,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x0040C1F0
 ??0Rva00704980@@QAE@XZ,,0x000B6D26,37,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x00704980
 ??0Rva0013A8B0@@QAE@XZ,,0x0050C4C6,34,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x0013A8B0
+?get@Rva003F3FE8DwordField@@QBEHXZ,,0x003F3FE8,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva005C4AEDDwordField@@QBEHXZ,,0x005C4AED,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva005C4AF1DwordField@@QBEHXZ,,0x005C4AF1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva005C4AF5DwordField@@QBEHXZ,,0x005C4AF5,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva001DB09DDwordField@@QBEHXZ,,0x001DB09D,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva002A98A7DwordField@@QBEHXZ,,0x002A98A7,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva002A98ABDwordField@@QBEHXZ,,0x002A98AB,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 ?bfmeSetNameAT@@YAXPAUBfmeTableAT@@HPBD@Z,,0x006A4A10,99,Code/GameEngine/Source/Common/BfmeOneHundredSeventyOne.cpp,matched,BFME1 byte-identical donor; b1 0x00863B40
+?get@Rva0030D377DwordField@@QBEHXZ,,0x0030D377,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva0030F2C7DwordField@@QBEHXZ,,0x0030F2C7,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva0008BB81DwordField@@QBEHXZ,,0x0008BB81,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 ??0Gen_0081E480@@QAE@HH@Z,,0x0068A0E0,33,Code/GameEngine/Source/Common/Bfme5ThirtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x0081E480
+?get@Rva0030BCAEDwordField@@QBEHXZ,,0x0030BCAE,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter at negative displacement (D4 = -44); address-derived opaque holder
 ?bfmeColor@@YGHPBVBfmeThingCZ@@H_N@Z,,0x00665520,33,Code/GameEngine/Source/Common/Bfme5ThirtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x007F8EA0
+?get@Rva00330BD7DwordField@@QBEHXZ,,0x00330BD7,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter at negative displacement (F4 = -12); address-derived opaque holder
 ?bfmeAt@@YGPAHPAVBfmeVecCZ@@H@Z,,0x00663DC0,30,Code/GameEngine/Source/Common/Bfme5ThirtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x007F76D0
+?get@Rva0044467CDwordField@@QBEHXZ,,0x0044467C,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter at negative displacement (F8 = -8); address-derived opaque holder
+?get@Rva0049CB8ADwordField@@QBEHXZ,,0x0049CB8A,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva005C4AE1DwordField@@QBEHXZ,,0x005C4AE1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 ?bfmeGoDSK@BfmeThingDSK@@QAE_NXZ,,0x00256A4A,25,Code/GameEngine/Source/Common/BfmeConv773.cpp,matched,BFME1 byte-identical donor; b1 0x001288A0
+?get@Rva005C4AFDDwordField@@QBEHXZ,,0x005C4AFD,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
 ?bfmeGoDSL@BfmeThingDSK@@QAE_NXZ,,0x00256A63,25,Code/GameEngine/Source/Common/BfmeConv773.cpp,matched,BFME1 byte-identical donor; b1 0x001288C0
 ?bfmeGoDSP@BfmeThingDSK@@QAEXXZ,,0x00256A33,23,Code/GameEngine/Source/Common/BfmeConv773.cpp,matched,BFME1 byte-identical donor; b1 0x00128880
