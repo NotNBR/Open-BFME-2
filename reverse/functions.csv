@@ -10678,5 +10678,13 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeDoOV@@YAPAXPAX000PAE@Z,,0x00027FE0,534,Code/GameEngine/Source/Common/BfmeTwoHundredFiftySeven_DoOV.cpp,matched,find-first-not-in-set 4-unrolled for-loop plus tail switch via helper 0x26C60
 ??0Rva006853A0@@QAE@XZ,,0x00447A42,26,Code/GameEngine/Source/Common/R3ScalarFieldConstructors2.cpp,matched,BFME1 byte-identical donor; b1 0x006853A0
 ??0Rva007BA110@@QAE@XZ,,0x000F0F98,32,Code/GameEngine/Source/Common/R3ScalarFieldConstructors2.cpp,matched,BFME1 byte-identical donor; b1 0x007BA110
+?get@Rva00314046LeaField@@QBEPAXXZ,,0x00314046,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
+?get@Rva00305927LeaField@@QBEPAXXZ,,0x00305927,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter at negative displacement; address-derived opaque holder
+?get@Rva0030592BLeaField@@QBEPAXXZ,,0x0030592B,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter at negative displacement; address-derived opaque holder
+?get@Rva003EFDD7LeaField@@QBEPAXXZ,,0x003EFDD7,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
+?get@Rva0049CB82LeaField@@QBEPAXXZ,,0x0049CB82,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
+?get@Rva005C4AD1LeaField@@QBEPAXXZ,,0x005C4AD1,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
+?get@Rva000CB12FByteField@@QBEEXZ,,0x000CB12F,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ??0Textures_Material_And_Shader_Booking_Struct@@QAE@XZ,,0x00144460,75,Code/Libraries/Source/WWVegas/WW3D2/Textures_Material_And_Shader_Booking_Struct.cpp,matched,BFME1 byte-identical donor; b1 0x00945B80
 ?bfmeGoUPB@BfmeThingUPB@@QAEDPAXPAD0@Z,,0x00655B10,57,Code/GameEngine/Source/Common/BfmeConv1339_GoUPB.cpp,matched,BFME1 byte-identical donor; b1 0x007E8A80
+?get@Rva004543C6ByteField@@QBEEXZ,,0x004543C6,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
