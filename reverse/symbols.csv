@@ -515,7 +515,6 @@ name,address,notes
 ??1Rva0044D56A@@UAE@XZ,0x0044D56A,opaque SEH base dtor (vptr 0xC3EF60, AsciiString member at +0x18 via 0x36410, base 0x3B1F65); 2 derived 11B dtors tail-call it; identity unproven
 ??1Rva0044EF5E@@UAE@XZ,0x00451F45,Rva0044EF5E intermediate base dtor: derived module dtors (OCLUpdate 0x4CD3DB, SpawnPoint 0x4CCDB6, SupplyCenterDock 0x4CDC33) re-store vtable plus consts then tail-jump here; vtable and consts match the 0x44EF5E ctor body; same SEH cookie; distinct from the co-pinned opaque Rva00451F45 name for the same address
 ??1Rva00451F45@@UAE@XZ,0x00451F45,opaque SEH base dtor (4 vptrs +0/+0xC/+0x10/+0x20, calls middle 0x24A797 and member helpers); 6 derived 32B dtors tail-call it; identity unproven
-??1Rva00462151@@UAE@XZ,0x00462151,opaque MI dtor (25B: vptrs +0/+0xC/+0x10, tertiary 0xC42F1C, tail-jmp 0x49B47C fold); called by scalar-deleting-dtor at 0x4621FA; identity unproven, address-derived name
 ??1Rva00470A0@@UAE@XZ,0x00470A0,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0x4818E; identity unproven, address-derived name
 ??1Rva00493DEF@@UAE@XZ,0x00493DEF,opaque MI base dtor (SEH, 3 vptrs incl shared 0xBEFCF8 secondary); 20 derived MI dtors tail-call it; identity unproven
 ??1Rva00494A97@@UAE@XZ,0x00494A97,opaque MI dtor (39B: 4+ vptr stores); called by scalar-deleting-dtor at 0x494B9E; identity unproven, address-derived name
