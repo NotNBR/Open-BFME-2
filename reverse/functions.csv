@@ -10690,3 +10690,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?get@Rva004543C6ByteField@@QBEEXZ,,0x004543C6,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ??0Rva008D2B10@@QAE@XZ,,0x0070E2F0,63,Code/GameEngine/Source/Common/S3FieldInitialisers.cpp,matched,BFME1 byte-identical donor; b1 0x008D2B10
 ?bfmeFindByteInRange@@YAPADPAD0D@Z,,0x00026C60,34,Code/GameEngine/Source/Common/BfmeTwoHundredFiftySeven_FindByte.cpp,matched,cdecl forwarder into byte-find core 0x25B80 with terminal dummy out-param
+?bfmeUnhookZU@BfmeThingZU@@QAEXXZ,,0x00625800,61,Code/GameEngine/Source/Common/BfmeOneHundredSixtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x009F2B60
