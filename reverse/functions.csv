@@ -10582,3 +10582,4 @@ _invertjump,,0x00751F80,108,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte
 _codepushbool,,0x00752970,151,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099EF70; 2 DIR32 string literal(s) agree
 ??0MeshLoadContextClass@@AAE@XZ,,0x0018B5F0,405,Code/Libraries/Source/WWVegas/WW3D2/MeshLoadContextCtor.cpp,matched,Dedicated TU replica; +0x10C TextureVector via rowed 0x16ED80 shim and 0xBD4688 vtable per MaterialCollector precedent; 0x118 MeshMatDesc span per matched MeshModelReadTexcoords replica
 ?Set_Coordinate_Range@Render2DClass@@QAEXABVRectClass@@@Z,,0x001188C0,202,Code/Libraries/Source/WWVegas/WW3D2/render2d.cpp,matched,BFME1 Render2DSetCoordinateRangeThunk shape; unsigned screen globals; bias folded into CoordinateOffset with no call
+_findevent,,0x0074FA20,98,Code/Libraries/Source/Lua/ltm.c,matched,TU-local static leaf called by luaI_checkevent; inlined strcmp loop; emitted by ltm.c object; vendored=lua-4.0.1
