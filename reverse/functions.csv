@@ -12166,3 +12166,4 @@ _match,,0x00749450,602,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua pattern m
 _str_find,,0x00749790,479,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string find via donor reg-table identity; match core placed
 _str_gsub,,0x00749AB0,460,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string gsub via donor reg-table identity; match core placed
 ?name@Rva00461EE5Named@@QBEPBDXZ,,0x00461EE5,6,Code/GameEngine/Source/Common/ModuleNameGetters.cpp,matched,literal name getter returning GiantBirdSlowDeathBehavior; body VA has exactly 1 .rdata ref (module vtable closed by 004B3FD0 pair); address-derived placeholder name
+?name@Rva0045F6CDNamed@@QBEPBDXZ,,0x0045F6CD,6,Code/GameEngine/Source/Common/ModuleNameGetters.cpp,matched,literal name getter returning SpawnBehavior; body VA has exactly 1 .rdata ref (module vtable closed by 004B3FD0 pair); address-derived placeholder name
