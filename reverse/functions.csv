@@ -11065,3 +11065,4 @@ _string_constant,,0x00753A20,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME
 ?apply@Rva00574293DwordImmSetter@@QAEXXZ,,0x00574293,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; pair second
 ?get@Rva00300011ByteField@@QBEEXZ,,0x00300011,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?apply@Rva0057A235DwordImmSetter@@QAEXXZ,,0x0057A235,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple first
+?apply@Rva0057A23CDwordImmSetter@@QAEXXZ,,0x0057A23C,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple middle
