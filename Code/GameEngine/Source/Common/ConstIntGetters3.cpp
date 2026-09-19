@@ -157,3 +157,11 @@ int Rva00342DA5Get(void)
 {
 	return 0x00C12C70;
 }
+
+// ?Rva00342DCCGet@@YAHXZ @ 0x00342dcc (6B): returns 0x00C12CD0.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva00342DCCGet(void)
+{
+	return 0x00C12CD0;
+}
