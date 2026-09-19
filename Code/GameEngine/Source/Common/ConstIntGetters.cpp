@@ -354,3 +354,12 @@ int Rva003AC9A1Get(void)
 {
 	return 0x00C1C96C;
 }
+
+// ?Rva0008EFCCGet@@YAHXZ @ 0x0008EFCC (6B): returns 0x00BFC338.
+// Follows a ret (0x8EFCB) with a B8-imm getter after. Carried at 0x7C7C08
+// and 0x7FD590, no direct callers, no branch sources. The value is below
+// the image base so it is a plain integer, not a pointer. Opaque name.
+int Rva0008EFCCGet(void)
+{
+	return 0x00BFC338;
+}
