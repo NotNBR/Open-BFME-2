@@ -37,6 +37,7 @@ class Image
 public:
 	virtual ~Image();
 	unsigned int clearStatus(unsigned int bit);
+	void setImageSize(ICoord2D *size);
 
 private:
 	AsciiString m_name;
@@ -55,4 +56,10 @@ unsigned int Image::clearStatus(unsigned int bit)
 
 	m_status &= ~bit;
 	return prevStatus;
+}
+
+// ?setImageSize@Image@@QAEXPAUICoord2D@@@Z, retail 0x0004D717 (18B).
+void Image::setImageSize(ICoord2D *size)
+{
+	m_imageSize = *size;
 }

@@ -3103,3 +3103,6 @@ Gen_f265_b7a8aa_0081dad0,0x006887F0
 ?bfmeCallDXH@@YAXPAVBfmeSubDXH@@PAX0@Z,0x0070E5D0
 ?bfmeBaseUNC@BfmeThingUNC@@QAEXXZ,0x00674AD0
 ?bfmeNextIdUNC@@YAHXZ,0x0067A340
+??$insert_unique@U?$_Rb_tree_iterator@PAURva001408C0Target@@U?$_Const_traits@PAURva001408C0Target@@@_STL@@@_STL@@@?$_Rb_tree@PAURva001408C0Target@@PAU1@U?$_Identity@PAURva001408C0Target@@@_STL@@U?$less@PAURva001408C0Target@@@3@V?$allocator@PAURva001408C0Target@@@3@@_STL@@QAEXU?$_Rb_tree_iterator@PAURva001408C0Target@@U?$_Const_traits@PAURva001408C0Target@@@_STL@@@1@0@Z,0x000B934D
+?b_0003afd0@@YAXXZ,0x000B934D
+?j_0003afd0@@YAXXZ,0x000B934D
