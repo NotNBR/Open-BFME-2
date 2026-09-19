@@ -42,3 +42,13 @@ bool SaveRenderDeviceRegistry(const char *sub_key)
 	}
 	return false;
 }
+
+// Two-argument registry loader: retail 0x00117070, 24 bytes.
+bool LoadRenderDeviceRegistry(const char *sub_key, bool resize_window)
+{
+	bool success = RegistryDeviceAccess::Registry_Load_Render_Device(sub_key, resize_window);
+	if (success) {
+		return true;
+	}
+	return false;
+}

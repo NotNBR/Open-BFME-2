@@ -12226,3 +12226,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?SaveRenderDeviceRegistrySettings@@YA_NPBDHHHH_NH@Z,,0x00117030,49,Code/Libraries/Source/WWVegas/WW3D2/WW3D_RegistryDeviceWrappers.cpp,matched,BFME2 bool registry saver; retail test/setne; BFME1 b1 0x008FD230 byte-identical
 ??1HRawAnimClass@@UAE@XZ,,0x0018EBC0,126,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,BFME1 near-miss donor; b1 0x0095AF40; base dtor out-of-line per BFME1 hanim.h
 ?SaveRenderDeviceRegistry@@YA_NPBD@Z,,0x00117010,19,Code/Libraries/Source/WWVegas/WW3D2/WW3D_RegistryDeviceWrappers.cpp,matched,BFME2 bool 1-arg registry saver; retail test/setne; same family as 0x117030
+?LoadRenderDeviceRegistry@@YA_NPBD_N@Z,,0x00117070,24,Code/Libraries/Source/WWVegas/WW3D2/WW3D_RegistryDeviceWrappers.cpp,matched,BFME2 bool 2-arg registry loader; retail test/setne; calls DX8 0x125A80
