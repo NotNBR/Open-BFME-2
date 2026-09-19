@@ -1,9 +1,9 @@
 // Open-BFME5 conversions.
 //
 // Trimmed port of Open-BFME-1 Code/GameEngine/Source/Common/BfmeConv1379.cpp
-// (near-miss donor). Only the AVIW/EVIW/DVIW trio served for BFME2 is
-// carried here; the donor's B/C siblings are unserved so they stay out (the
-// gate refuses unrowed definitions in a staged TU).
+// (near-miss donor). The AVIW/DVIW/EVIW trio served for BFME2 is carried
+// here; the donor's B/C siblings are unserved so they stay out (the gate
+// refuses unrowed definitions in a staged TU).
 //
 // WHAT THE BODY IS. A stdcall Fesl transaction-message filler: it snapshots
 // the per-kind global, stamps the message kind dword, then adds its string
@@ -66,19 +66,4 @@ void __stdcall bfmeGoEVIW(BfmeMsgVIW *m, void *a, void *b)
 	m->bfmeSetVIW("TXN", g);
 	m->bfmeSetVIW("password", a);
 	m->bfmeSetVIW("newPassword", b);
-}
-
-// DVIW is the only 4-argument VIW filler (ret 0x10): the three same-family
-// ICF names take three arguments and the Rva007F-message names take a
-// different arity, so the b1 fold leaves this address unambiguously the
-// rating-carrying D. Retail's TXN/blobId/rating string slots and the
-// bfmeSet3VIW call at 0x00655960 (pre-pinned) agree.
-void __stdcall bfmeGoDVIW(BfmeMsgVIW *m, void *a, void *b, int r)
-{
-	void *g = g_bfmeDVIW;
-	m->bfmeRunVIW();
-	m->m_bfme1c = 0x626c6f62;
-	m->bfmeSetVIW("TXN", g);
-	m->bfmeSet2VIW("blobId", a, b);
-	m->bfmeSet3VIW("rating", r);
 }
