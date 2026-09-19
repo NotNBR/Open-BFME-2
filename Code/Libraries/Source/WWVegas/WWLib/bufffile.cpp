@@ -109,6 +109,7 @@ void BufferedFileClass::Close(void)
  * HISTORY:                                                                                    *
  *   10/18/1994 JLB : Created.                                                                 *
  *=============================================================================================*/
+// ?Read@BufferedFileClass@@UAEHPAXH@Z present-unmatched
 int BufferedFileClass::Read(void * buffer, int size)
 {
 	int read = 0;
@@ -189,6 +190,7 @@ int BufferedFileClass::Read(void * buffer, int size)
  * HISTORY:                                                                                    *
  *   10/18/1994 JLB : Created.                                                                 *
  *=============================================================================================*/
+// ?Write@BufferedFileClass@@UAEHPBXH@Z present-unmatched
 int BufferedFileClass::Write(void const * buffer, int size)
 {
 	if ( BufferSize != 0 ) {
@@ -246,7 +248,7 @@ int BufferedFileClass::Seek(int pos, int dir)
 void	BufferedFileClass::Reset_Buffer( void )
 {
 	if ( Buffer != NULL ) {
-		delete [] Buffer;
+		delete Buffer;
 		Buffer = NULL;
 		BufferSize = 0;
 		BufferAvailable = 0;

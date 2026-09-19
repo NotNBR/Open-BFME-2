@@ -11850,3 +11850,7 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?name@Rva0033F3B0Named@@QBEPBDXZ,,0x0033F3B0,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning AIAttackMeleeHordeWaitPathState; vtable ref in .rdata; address-derived placeholder name
 ?set@Rva0008BD36DwordSlot@@QAEXH@Z,,0x0008BD36,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva00485418DwordSlot@@QAEXH@Z,,0x00485418,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?Reset_Buffer@BufferedFileClass@@IAEXXZ,,0x0061AF30,37,Code/Libraries/Source/WWVegas/WWLib/bufffile.cpp,matched,zh-sweep exact-unique placement in unclaimed text; ZH donor verbatim
+??1BufferedFileClass@@UAE@XZ,,0x0061AF60,102,Code/Libraries/Source/WWVegas/WWLib/bufffile.cpp,matched,zh-sweep exact-unique placement in unclaimed text; ZH donor verbatim
+?Close@BufferedFileClass@@UAEXXZ,,0x0061AFD0,42,Code/Libraries/Source/WWVegas/WWLib/bufffile.cpp,matched,zh-sweep exact-unique placement in unclaimed text; ZH donor verbatim
+?Seek@BufferedFileClass@@UAEHHH@Z,,0x0061B000,113,Code/Libraries/Source/WWVegas/WWLib/bufffile.cpp,matched,placed by masked whole-text search of the compiled body; ZH donor verbatim
