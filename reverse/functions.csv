@@ -10429,3 +10429,4 @@ _math_randomseed,,0x00748A30,30,Code/Libraries/Source/Lua/lmathlib.c,matched,BFM
 ?invoke@Rva00958D30@@QAEJVBfmeBstrVGP@@0@Z,,0x00177130,135,Code/GameEngine/Source/GameNetwork/WOLBrowser/WebBrowserComWrappers.cpp,matched,BFME1 near-miss donor b1 0x00958DA0; drift is g_bfmeIidTSA address already pinned
 ?rva008A98B0ReleaseAll@@YAXXZ,,0x006D6DE0,257,Code/GameEngine/Source/Common/Rva008A98B0ReleaseAll.cpp,matched,BFME1 near-miss donor verbatim; b1 0x008A98B0; 24 slots differ only by global array base b1 0x1337AC8 vs b2 0xE177F0 DIR32-masked
 ?Rva00893030@@YAXVRva00893030Ref@@PAX11@Z,,0x006CE080,132,Code/GameEngine/Source/Common/Rva00893030RefDispatch.cpp,matched,BFME1 near-miss donor; b1 0x00893030; immediate-only drift
+?rva00882140PatchAllModules@@YAPAXPBD0PAX@Z,,0x0002FF10,134,Code/GameEngine/Source/Common/Bfme/Rva00882140PatchAllModules.cpp,matched,BFME1 near-miss donor; b1 0x00882140; callback cell to LoadLibraryA import plus CloseHandle rename
