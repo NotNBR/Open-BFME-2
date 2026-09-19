@@ -11463,3 +11463,4 @@ _traceexec,,0x0074E410,121,Code/Libraries/Source/Lua/lvm.c,matched,exact via unc
 ?dec@Rva004ECDA3DwordCounter@@QAEXXZ,,0x004ECDA3,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword dec family pair; opaque holder
 ?Rva0058AEB6Get@@YAHXZ,,0x0058AEB6,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E063A4
 ?Rva0073B660False@@YA_NPAXH@Z,,0x0073B660,3,Code/GameEngine/Source/Common/Rva0073B660False.cpp,matched,cdecl 2-arg byte-false stub; 11 direct callers push 2 dwords and test al; Ghidra-3; address-derived name
+?Rva00658200Get@@YAHXZ,,0x00658200,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E09FA4
