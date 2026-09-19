@@ -12597,3 +12597,4 @@ _add_s,,0x00749970,307,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel
 ?name@Rva000CA113Named@@QBEPBDXZ,,0x000CA113,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DQuadrupedDraw; vtable ref at 0x7CBC48; address-derived placeholder name
 ?name@Rva000EEFE6Named@@QBEPBDXZ,,0x000EEFE6,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DPropBuffer; vtable ref at 0x7CEED4; address-derived placeholder name
 _piAddListingGamesCallback,,0x0069F320,233,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerCallbacks.c,matched,GameSpy piAddListingGamesCallback 233B; assignment-wrapped gamemode call batches 3 cdecl cleanups into retail add esp 0x20; gameListCallback at 0x1784 and gameListParam at 0x1788
+_str_lower,,0x00748BA0,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string lower via donor reg-table identity; callees pinned
