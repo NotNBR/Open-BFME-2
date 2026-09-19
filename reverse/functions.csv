@@ -11962,3 +11962,4 @@ _adjuststack,,0x007515A0,128,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 b
 _type_error,,0x00751880,68,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1; unclaimed_scan exact of TU-emitted body
 _luaX_invalidchar,,0x00756FD0,79,Code/Libraries/Source/Lua/llex.c,matched,gen-alias; object-symbol=_luaX_invalidchar; C++ alias; obj_sweep rel32 wave
 _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alias; object-symbol=_inclinenumber; C++ alias; obj_sweep rel32 wave
+??0LineSegClass@@QAE@ABVVector3@@0@Z,,0x000927F9,57,Code/Libraries/Source/WWVegas/WWMath/LineSegVectorCtor.cpp,matched,ZH packet 92.5pct; dedicated TU like LineSeg_recalculate; frameless via default Oy
