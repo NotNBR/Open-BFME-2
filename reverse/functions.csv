@@ -11225,3 +11225,5 @@ _luaS_newudata,,0x00750230,148,Code/Libraries/Source/Lua/lstring.c,matched,BFME1
 ?apply@Rva0054E796DwordImmSetter@@QAEXXZ,,0x0054E796,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?get@Rva003ABE78LeaGetter@@QBEPAXXZ,,0x003ABE78,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?apply@Rva005676F4DwordImmSetter@@QAEXXZ,,0x005676F4,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?apply@Rva00596686DwordImmSetter@@QAEXXZ,,0x00596686,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?get@Rva00406D51LeaGetter@@QBEPAXXZ,,0x00406D51,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
