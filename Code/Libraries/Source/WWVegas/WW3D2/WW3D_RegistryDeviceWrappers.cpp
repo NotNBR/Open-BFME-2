@@ -8,10 +8,11 @@
 
 class DX8Wrapper
 {
-protected:
-	static bool Registry_Save_Render_Device(const char *sub_key, int device, int width, int height, int depth, bool windowed, int texture_depth);
+public:
 	static bool Registry_Save_Render_Device(const char *sub_key);
 	static bool Registry_Load_Render_Device(const char *sub_key, bool resize_window);
+protected:
+	static bool Registry_Save_Render_Device(const char *sub_key, int device, int width, int height, int depth, bool windowed, int texture_depth);
 };
 
 // Expose the protected DX8 registry helpers to these free wrappers.
@@ -26,6 +27,16 @@ public:
 bool SaveRenderDeviceRegistrySettings(const char *sub_key, int device, int width, int height, int depth, bool windowed, int texture_depth)
 {
 	bool success = RegistryDeviceAccess::Registry_Save_Render_Device(sub_key, device, width, height, depth, windowed, texture_depth);
+	if (success) {
+		return true;
+	}
+	return false;
+}
+
+// Single-argument registry saver: retail 0x00117010, 19 bytes.
+bool SaveRenderDeviceRegistry(const char *sub_key)
+{
+	bool success = RegistryDeviceAccess::Registry_Save_Render_Device(sub_key);
 	if (success) {
 		return true;
 	}
