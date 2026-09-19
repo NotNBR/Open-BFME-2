@@ -570,11 +570,11 @@ int Rva003007A2Get(void)
 	return 0x00700778;
 }
 
-// ?Rva000A272DGet@@YAHXZ @ 0x000A272D (6B): returns 0x0048F9D3.
-// Opens a contiguous triple (2D/33/39, each B8-6 back to back) after a
-// ret. Carried at 1 .rdata slot, no direct callers, no branch sources.
-// Opaque address-derived name.
-int Rva000A272DGet(void)
+// ?Rva00200BBAGet@@YAHXZ @ 0x00200BBA (6B): returns 0x00C080B0.
+// Follows a leave/ret plus a sibling B8-6 (pair, 6 apart) with a
+// frame-style function after. Carried at 0x7E2BA0, no direct callers,
+// no branch sources. Opaque address-derived name.
+int Rva00200BBAGet(void)
 {
-	return 0x0048F9D3;
+	return 0x00C080B0;
 }
