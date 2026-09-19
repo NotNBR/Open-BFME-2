@@ -185,3 +185,11 @@ int Rva00381452Get(void)
 {
 	return 0x00E02310;
 }
+
+// ?Rva003EFE9AGet@@YAHXZ @ 0x003EFE9A (6B): returns 0x00DC34A4.
+// Prev C3 with a movzx-style function after. 4 direct E8 callers,
+// Ghidra-6, no branch sources. Opaque name.
+int Rva003EFE9AGet(void)
+{
+	return 0x00DC34A4;
+}
