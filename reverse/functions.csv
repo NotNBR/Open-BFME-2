@@ -10587,3 +10587,7 @@ _luaI_checkevent,,0x0074FA90,85,Code/Libraries/Source/Lua/ltm.c,matched,TU-local
 _lua_settagmethod,,0x0074FE80,211,Code/Libraries/Source/Lua/ltm.c,matched,unclaimed_scan exact modulo relocs; findevent and checkevent rows plus verror and lua_error pins resolve all calls; emitted by ltm.c object; vendored=lua-4.0.1
 _luaT_init,,0x0074FB40,122,Code/Libraries/Source/Lua/ltm.c,matched,unclaimed_scan exact modulo relocs; single call to luaM_growaux pin; emitted by ltm.c object; vendored=lua-4.0.1
 _setnodevector,,0x007506E0,135,Code/Libraries/Source/Lua/ltable.c,matched,unclaimed_scan exact modulo relocs; lua_error and luaM_realloc pins resolve both calls; emitted by ltable.c object; vendored=lua-4.0.1
+?get@Rva0009AAA4DwordField@@QBEHXZ,,0x0009AAA4,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva000A8AA2DwordField@@QBEHXZ,,0x000A8AA2,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva002004A1DwordField@@QBEHXZ,,0x002004A1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
+?get@Rva00091A56DwordField@@QBEHXZ,,0x00091A56,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter; address-derived opaque holder
