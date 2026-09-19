@@ -11996,3 +11996,4 @@ _read_string,,0x007577E0,1185,Code/Libraries/Source/Lua/llex.c,matched,gen-alias
 ?name@Rva000CEB69Named@@QBEPBDXZ,,0x000CEB69,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DTreeDraw; vtable ref at 0x7CCD00; address-derived placeholder name
 ?name@Rva000CEE01Named@@QBEPBDXZ,,0x000CEE01,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DBuffDraw; vtable ref at 0x7CD180; address-derived placeholder name
 ?name@Rva000CEEE0Named@@QBEPBDXZ,,0x000CEEE0,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DPropDraw; vtable ref at 0x7CD330; address-derived placeholder name
+?name@Rva000CF14FNamed@@QBEPBDXZ,,0x000CF14F,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DFloorDraw; vtable ref at 0x7CD4E8; address-derived placeholder name
