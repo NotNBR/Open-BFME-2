@@ -1,4 +1,4 @@
-// cl: /MD
+// cl: /MD /Ireference/open-bfme-1/Code/Libraries/Source/Lua
 /* Lua 4.0.1 (TeCGraf, PUC-Rio), lua.org lua-4.0.1.tar.gz, flattened from
    src/, src/lib/, src/luac/ and include/.  Statically linked into
    lotrbfme.exe behind GameLogic/ScriptEngine/LuaScriptEngine.cpp.
@@ -660,4 +660,3 @@ LUALIB_API void lua_baselibopen (lua_State *L) {
   lua_setglobal(L, "_VERSION");
   deprecated_funcs(L);
 }
-
