@@ -1,4 +1,4 @@
-// cl: /MD
+// cl: /MD /Ireference/open-bfme-1/Code/Libraries/Source/Lua
 /* Lua 4.0.1 base-library bindings, second part: the six small bodies whose
    BFME1 twins fold under ICF.  Each b2 address below is claimed once; the
    game.dat luaL_reg tables prove every identity (each address is the table
