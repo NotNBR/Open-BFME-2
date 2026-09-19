@@ -3189,3 +3189,4 @@ _bfmeMalloc1150,0x00023790
 ??1Gen00803D10@@UAE@XZ,0x0066F8D0
 _read_number,0x00757200
 ?run@Rva009EDD30Cleanup@@QAEXXZ,0x00620870
+?Add_Tail@?$DLListClass@USmudgeSet@@@@QAEXPAV?$DLNodeClass@USmudgeSet@@@@@Z,0x002D2634
