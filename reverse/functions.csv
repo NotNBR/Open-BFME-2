@@ -10830,3 +10830,4 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?_M_set_node@?$_Deque_iterator_base@VGameResultsRequest@@@_STL@@QAEXPAPAVGameResultsRequest@@@Z,,0x00419D9C,21,Code/GameEngine/Source/GameNetwork/GameSpy/Thread/GameResultsThread.cpp,matched,BFME1 byte-identical donor; b1 0x0063FFE0
 ?bfmeGoDWH@BfmeThingDWH@@QAEXXZ,,0x00050E6E,19,Code/GameEngine/Source/Common/BfmeConv792.cpp,matched,BFME1 byte-identical donor; b1 0x00694BF0
 ?clear@Rva00802BB0Owner@@QAEXXZ,,0x0066ECE0,21,Code/GameEngine/Source/GameNetwork/Y2FeslBrowserSmallMembers.cpp,matched,BFME1 byte-identical donor; b1 0x00802BB0; callee is rowed Rva00802A10 clear
+?isDisconnectedAfterGameStart@GameSpyInfo@@UBE_NPAH@Z,,0x00386104,19,Code/GameEngine/Source/GameNetwork/GameSpy/PeerDefs.cpp,matched,BFME1 byte-identical donor; b1 0x006371D0
