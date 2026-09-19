@@ -11877,3 +11877,4 @@ _luaI_classend,,0x00748F10,105,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_s
 ?set@Rva00477D94DwordSlot@@QAEXH@Z,,0x00477D94,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva002628B6DwordSlot@@QAEXH@Z,,0x002628B6,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva00552C2CDwordSlot@@QAEXH@Z,,0x00552C2C,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,
+??4Rva003B3080@@QAEAAV0@ABV0@@Z,,0x00564B41,57,Code/GameEngine/Source/Common/Rva003B3080Assign.cpp,matched,BFME1 Rva003B3080Assign.cpp donor under /O1 with StringBase<char>::set members; b1 0x003B3080
