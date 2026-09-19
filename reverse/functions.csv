@@ -11346,3 +11346,4 @@ _lua_setglobal,,0x00747920,37,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byt
 _lua_rawcall,,0x00747B20,29,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _luaV_setglobal,,0x0074E800,282,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
 _luaV_settable,,0x0074E650,268,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
+_luaS_createudata,,0x007502D0,184,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c; exact via unclaimed_scan
