@@ -12236,3 +12236,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva00129590Get@@YAHXZ,,0x00129590,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,address-derived global dword getter over 0x00DEE8E4; 1 E8 caller at 0x48481; global unproven
 ?_M_allocate@?$__node_alloc@$00$0A@@_STL@@CAPAXI@Z,,0x00027A90,162,Code/Libraries/Source/WWVegas/WWLib/STL_new_alloc_allocateThunk.cpp,matched,BFME1 byte-identical donor; b1 0x0082E540
 ?allocate@__new_alloc@_STL@@SAPAXI@Z,,0x00027A90,162,Code/Libraries/Source/WWVegas/WWLib/STL_new_alloc_allocateThunk.cpp,matched,BFME1 byte-identical donor; b1 0x0082E540; ICF alias
+?Rva00129660Get@@YAHXZ,,0x00129660,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,address-derived global dword getter over 0x00DEE894; 2 E8 callers at 0x484C9/0x48515; global unproven
