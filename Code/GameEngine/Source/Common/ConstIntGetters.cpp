@@ -169,3 +169,11 @@ int Rva0056DD58Get(void)
 {
 	return 0x00DC2D10;
 }
+
+// ?Rva0056DD5EGet@@YAHXZ @ 0x0056DD5E (6B): returns 0x00DC4B60. Closes
+// the triple (a mov-style function follows). 4 direct E8 callers,
+// Ghidra-6. Opaque name.
+int Rva0056DD5EGet(void)
+{
+	return 0x00DC4B60;
+}
