@@ -11976,3 +11976,4 @@ _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alia
 ?apply@Rva005753E2DwordImmSetter@@QAEXXZ,,0x005753E2,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?apply@Rva00576456DwordImmSetter@@QAEXXZ,,0x00576456,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?apply@Rva0057851BDwordImmSetter@@QAEXXZ,,0x0057851B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+_luaG_binerror,,0x0074D2B0,35,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 byte-identical donor; b1 ldebug.c luaG_binerror; vendored=lua-4.0.1

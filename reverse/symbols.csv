@@ -2993,7 +2993,6 @@ _listen@8,0x00687CDE,PE-verified FF25 import thunk to ws2_32.dll!listen via IAT 
 _listfields,0x00754EA0
 _localtime,0x0062987A,CRT localtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
 _luaC_checkGC,0x00751470
-_luaG_binerror,0x0074D2B0
 _luaG_getline,0x0074CA90
 _luaG_ordererror,0x0074D2E0
 _luaG_typeerror,0x0074D250

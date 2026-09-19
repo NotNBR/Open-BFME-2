@@ -1,4 +1,4 @@
-// cl: /MD
+// cl: /MD /Ireference/open-bfme-1/Code/Libraries/Source/Lua
 /* Lua 4.0.1 (TeCGraf, PUC-Rio), lua.org lua-4.0.1.tar.gz, flattened from
    src/, src/lib/, src/luac/ and include/.  Statically linked into
    lotrbfme.exe behind GameLogic/ScriptEngine/LuaScriptEngine.cpp.
@@ -24,6 +24,7 @@
 ** lparser.h chain into this translation unit.
 */
 
+#include "ldebug.h"
 #include "lobject.h"
 #include "lopcodes.h"
 
@@ -127,4 +128,11 @@ static Instruction luaG_symbexec (const Proto *pt, int lastpc, int stackpos) {
 Instruction LuaGSymbexecAnchor(const Proto *pt, int lastpc, int stackpos)
 {
   return luaG_symbexec(pt, lastpc, stackpos);
+}
+
+
+void luaG_binerror (lua_State *L, StkId p1, int t, const char *op) {
+  if (ttype(p1) == t) p1++;
+  LUA_ASSERT(ttype(p1) != t, "must be an error");
+  luaG_typeerror(L, p1, op);
 }
