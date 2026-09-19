@@ -35,3 +35,17 @@ void BfmeThingDXB::bfmeGoDXB()
 	DeleteCriticalSection(&m_bfmeCs);
 	m_bfmeSub.bfmeCallDXB();
 }
+
+// The donor's bfmeQueryDXE import slot is oleaut32!VariantClear in game.dat;
+// the failure helper resolves through the ledger pin at 0x00654B20.
+extern "C" __declspec(dllimport) int __stdcall VariantClear(void *what);
+extern unsigned char g_bfmeArgDXE[];
+void __stdcall bfmeFailDXE(int code);
+
+// ?bfmeGoDXE@@YAXXZ, retail 0x007B9B40 (22B).
+void bfmeGoDXE()
+{
+	int r = VariantClear(g_bfmeArgDXE);
+	if (r < 0)
+		bfmeFailDXE(r);
+}
