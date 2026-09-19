@@ -10811,3 +10811,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?bfmeSmallFreePM@@YAXPAXI@Z,,0x00027A40,75,Code/GameEngine/Source/Common/BfmeTwoHundredSeventyThree.cpp,matched,BFME1 byte-identical donor; b1 0x0082E4F0
 ??1Rva00803890Owner@@UAE@XZ,,0x0066F8D0,96,Code/GameEngine/Source/GameNetwork/Rva00803890FeslDtor.cpp,matched,BFME1 byte-identical donor; b1 0x00803890
 ?bfmeDtorCDE@BfmeThingCDE@@QAEXXZ,,0x0073A900,170,Code/GameEngine/Source/Common/BfmeThingCDEDestructor.cpp,matched,BFME1 byte-identical donor; b1 0x008F8340
+?Find@EAStringC@@QAEHDH@Z,,0x006D38E0,62,Code/Libraries/Source/EA/Apt/AptString/EAStringCFind.cpp,matched,BFME1 byte-identical donor; b1 0x0089E230
