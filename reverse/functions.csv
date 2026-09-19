@@ -10903,3 +10903,8 @@ _luaK_tostack,,0x00753160,889,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 by
 ?bfmeGo1026F@BfmeF1026@@QAEXHHH@Z,,0x004BD6DA,52,Code/GameEngine/Source/Common/BfmeConv1026.cpp,matched,BFME1 byte-identical donor b1 0x00217500; 0x28AFA9 rowed getControllingPlayer and 0x242C09 pinned destroyObject; 1 pin bfmeHas1026
 ?GadgetListBoxGetNumEntries@@YAHPAVGameWindow@@@Z,,0x0032475A,25,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B77C0
 ?_M_deallocate@?$__node_alloc@$00$0A@@_STL@@CAXPAXI@Z,,0x00027B40,85,Code/Libraries/Source/WWVegas/WWLib/node_alloc_M_deallocateThunk.cpp,matched,BFME1 byte-identical donor; b1 0x0082E5F0
+___GetLocaleName,,0x000215B0,226,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E350
+___ConvertToCP,,0x00021860,150,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E600
+___GetDefaultCP,,0x00021810,74,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E5B0
+__Locale_common_default,,0x00021900,113,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E6A0
+__Locale_ctype_name,,0x00021990,44,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E780

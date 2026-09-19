@@ -3163,3 +3163,5 @@ _LoadHeader,0x00756B10
 _luaK_deltastack,0x00751DE0
 _need_value,0x00752140
 ?bfmeHas1026@BfmeTab1026@@QAEDHH@Z,0x00362437
+___GetLocaleName,0x000215B0
+?refreshPair@Rva00699180Owner@@QAEXHH@Z,0x00051ED6

@@ -1,13 +1,19 @@
 // cl: /O2 /MD
 // STLport 4.5.3 Win32 locale code-page helpers.
 // Trimmed to the five bodies game.dat keeps: the default-locale and
-// ctype-name entry points plus the three static workers they inline or call
+// ctype-name entry points plus the three workers they inline or call
 // (__GetLocaleName, __ConvertToCP, __GetDefaultCP). The donor's Rva* probe
 // wrappers and T3 guess bodies stay out: their names are this sweep's pick
 // among ICF twins, so they get no row and no definition here.
+// The two workers stay static exactly like the donor. Retail passes their
+// first argument in a register (fromCP in eax, lcid in esi), which MSVC only
+// does for static functions with known call sites, so each worker keeps the
+// donor's pair of A/B forwarder callers. The forwarders are static too and
+// would be dropped as unreferenced, taking the workers with them; the
+// address tables below keep them emitted without adding any code.
 // __intGetACP/__intGetOCP are static here (extern in the donor) so the only
-// out-of-line defs are the two rowed entry points; inlining into the callers
-// is unchanged, which is what the byte match checks.
+// out-of-line defs with external linkage are rowed; inlining into the
+// callers is unchanged, which is what the byte match checks.
 
 typedef unsigned long LCID;
 typedef unsigned int bfme_size_t;
@@ -75,6 +81,7 @@ static int __intGetOCP(LCID lcid)
     return atoi(cp);
 }
 
+// ___GetDefaultCP
 static int __GetDefaultCP(LCID lcid)
 {
     int cp = __intGetACP(lcid);
@@ -83,9 +90,20 @@ static int __GetDefaultCP(LCID lcid)
     return cp;
 }
 
-// The donor calls this worker from two Rva* probe wrappers that game.dat
-// does not keep. Two static shims preserve the dual-caller shape that emits
-// the worker out of line; both shims are unreferenced and leave the object.
+// Donor-verbatim A/B caller shapes for __GetDefaultCP. Static, so they need
+// the address table at the bottom to stay emitted.
+static int __UseDefaultCPA(LCID lcid)
+{
+    return __GetDefaultCP(lcid);
+}
+
+static int __UseDefaultCPB(LCID lcid)
+{
+    return __GetDefaultCP(lcid) + 1;
+}
+
+// The donor keeps this worker static and calls it from two Rva* probe
+// wrappers that game.dat does not keep. It stays static (see above).
 static char *__ConvertToCP(int fromCP, int toCP, const char *from,
     bfme_size_t size, bfme_size_t *resultSize)
 {
@@ -109,26 +127,18 @@ static char *__ConvertToCP(int fromCP, int toCP, const char *from,
     return buffer;
 }
 
-static char *__ConvertToCPKeepAliveA(int fromCP, int toCP, const char *from,
+// Donor-verbatim A/B caller shapes for __ConvertToCP (see above).
+static char *__UseConvertToCPA(int fromCP, int toCP, const char *from,
     bfme_size_t size, bfme_size_t *resultSize)
 {
     return __ConvertToCP(fromCP, toCP, from, size, resultSize);
 }
 
-static char *__ConvertToCPKeepAliveB(int fromCP, int toCP, const char *from,
+static char *__UseConvertToCPB(int fromCP, int toCP, const char *from,
     bfme_size_t size, bfme_size_t *resultSize)
 {
-    return __ConvertToCP(fromCP, toCP, from, size, resultSize);
-}
-
-static int __GetDefaultCPKeepAliveA(LCID lcid)
-{
-    return __GetDefaultCP(lcid);
-}
-
-static int __GetDefaultCPKeepAliveB(LCID lcid)
-{
-    return __GetDefaultCP(lcid);
+    char *result = __ConvertToCP(fromCP, toCP, from, size, resultSize);
+    return result ? result : fromCP ? (char *)from : result;
 }
 
 static char *__GetLocaleName(LCID lcid, const char *cp, char *buf)
@@ -163,3 +173,21 @@ char *_Locale_ctype_name(const void *loc, char *buf)
     my_ltoa(ctype->cp, cpBuf);
     return __GetLocaleName(ctype->lcid, cpBuf, buf);
 }
+
+// Keeps the static A/B forwarders (and through them the static workers)
+// emitted. Data only: no code, no effect on any body above.
+typedef int (*DefaultCPForwarder)(LCID lcid);
+typedef char *(*ConvertToCPForwarder)(int fromCP, int toCP, const char *from,
+    bfme_size_t size, bfme_size_t *resultSize);
+
+static const DefaultCPForwarder g_defaultCPForwarders[] =
+{
+    __UseDefaultCPA,
+    __UseDefaultCPB
+};
+
+static const ConvertToCPForwarder g_convertToCPForwarders[] =
+{
+    __UseConvertToCPA,
+    __UseConvertToCPB
+};
