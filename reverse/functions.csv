@@ -11372,3 +11372,4 @@ _lua_error,,0x0074D570,36,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-ide
 ?get@Rva000395B0LeaGetter@@QBEPAXXZ,,0x000395B0,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-D09E0000-C3
 ?get@Rva003F3FE4LeaField@@QBEPAXXZ,,0x003F3FE4,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-6C-C3
 ?get@Rva000395C0LeaGetter@@QBEPAXXZ,,0x000395C0,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-109F0000-C3
+_luaD_call,,0x0074D8D0,410,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
