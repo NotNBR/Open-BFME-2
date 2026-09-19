@@ -3125,3 +3125,4 @@ Gen_f265_b7a8aa_0081dad0,0x006887F0
 ?bfmeCallDXB@BfmeSubDXB@@QAEXXZ,0x00628C25
 ?Render_Obj_Exists_Impl@AssetRegistry@@QAE_NPBD@Z,0x00621170
 ?bfmeThrow937C@@YGXI@Z,0x00654B20
+?bfmeInitUBB@BfmeSubUBB@@QAEXH@Z,0x00313581
