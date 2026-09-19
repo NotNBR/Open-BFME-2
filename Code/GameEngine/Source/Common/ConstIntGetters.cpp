@@ -96,3 +96,12 @@ int Rva004CE52EGet(void)
 {
 	return 0x00C5FFA0;
 }
+
+// ?Rva00507552Get@@YAHXZ @ 0x00507552 (6B): returns 0x00C63FD0.
+// Follows a mov/mov/ret getter (ret at 0x507551) with a frame-style
+// function after. 17 direct E8 callers, Ghidra-6, no branch sources.
+// Opaque address-derived name.
+int Rva00507552Get(void)
+{
+	return 0x00C63FD0;
+}
