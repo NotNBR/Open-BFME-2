@@ -11389,3 +11389,4 @@ _luaD_openstack,,0x0074D700,77,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byt
 ?get@Rva0052BABDLeaField@@QBEPAXXZ,,0x0052BABD,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-04-C3
 ?get@Rva004BF893LeaField@@QBEPAXXZ,,0x004BF893,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 NEG LEA getter back-16; RET-PREV; retail 8D-41-F0-C3
 _luaH_getstr,,0x00750510,59,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan
+_luaF_protook,,0x00751BC0,58,Code/Libraries/Source/Lua/lfunc.c,matched,BFME1 byte-identical donor b1 lfunc.c; exact via unclaimed_scan
