@@ -10756,3 +10756,10 @@ _check_match,,0x00753960,181,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 b
 _constructor_part,,0x00754FC0,335,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C180
 _funcstat,,0x007551D0,117,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C390
 ??0Rva000D1930@@QAE@XZ,,0x0020E42C,29,Code/GameEngine/Source/Common/Rva000D1930Ctor.cpp,matched,BFME1 byte-identical donor; b1 0x000D1930; vtable install then dword zeros
+_recfield,,0x00754D30,146,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099BEF0
+_fornum,,0x00754590,241,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099B750
+_forlist,,0x00754690,238,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099B850
+_forstat,,0x00754780,223,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099B940
+_constructor,,0x00755110,181,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C2D0
+_funcargs,,0x00755250,152,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C410
+_luaY_parser,,0x007561C0,198,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099D380
