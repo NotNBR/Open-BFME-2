@@ -3167,3 +3167,5 @@ ___GetLocaleName,0x000215B0
 ?refreshPair@Rva00699180Owner@@QAEXHH@Z,0x00051ED6
 _luaK_fixjump,0x00751D60,luaK_concat 0x752180 second E8 decodes here; static fixjump in lcode.c
 _luaD_callTM,0x0074DE70,call_binTM 0x74E920 last E8 decodes here; lvm.c calls luaD_callTM
+_luaK_code0,0x00752650,close_func 0x7540E0 first E8 decodes here; source calls luaK_code0 first
+_luaF_protook,0x00751BC0,close_func 0x7540E0 last E8 decodes here; source calls luaF_protook last

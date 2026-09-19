@@ -419,7 +419,6 @@ static void open_func (LexState *ls, FuncState *fs) {
 }
 
 
-// _close_func present-unmatched
 static void close_func (LexState *ls) {
   lua_State *L = ls->L;
   FuncState *fs = ls->fs;
