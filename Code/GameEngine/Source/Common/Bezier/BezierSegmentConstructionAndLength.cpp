@@ -20,10 +20,16 @@ class BezierSegment
 	public:
 		BezierSegment();
 		BezierSegment(Coord3D cp[4]);
+		~BezierSegment();
 
 		Real getApproximateLength(Real withinTolerance) const;
 		void splitSegmentAtT(Real tValue, BezierSegment &outSeg1, BezierSegment &outSeg2) const;
 };
+
+// ??1BezierSegment@@QAE@XZ
+BezierSegment::~BezierSegment()
+{
+}
 
 class Rva000B6D50BezierSegment
 {
