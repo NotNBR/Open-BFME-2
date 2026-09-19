@@ -10486,10 +10486,6 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?addChatLog@Rva007F1F60Feedback@@QAEXPAVRva007E8810Message@@PBURva007F2080ChatLog@@H@Z,,0x0065EBA0,150,Code/GameEngine/Source/GameNetwork/V2FeslFeedbackRequest.cpp,matched,BFME1 donor verbatim sibling of buildRequest; 0x208 stride records via sprintf chatLog.%d.userId/.chat + tail chatLog.[]
 ?Rva007FB550@@YGXPAVRva007E8810Message@@HPBD11_N@Z,,0x00667A60,208,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FB550; 5 DIR32 string literal(s) agree
 ?bfmeGoBFF@BfmeThingBFF@@QAEXXZ,,0x00358933,19,Code/GameEngine/Source/Common/BfmeConv454.cpp,matched,BFME1 byte-identical donor; b1 0x0040FF90; Step pin aliases existing StringBase removeLastChar pin at 0x376E0
-?Rva007FAFB0@@YGXPAVRva007E8810Message@@PBD11_NH@Z,,0x006674C0,194,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FAFB0
-?Rva007FB620@@YGXPAVRva007E8810Message@@PBD11_N@Z,,0x00667B30,176,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FB620
-?Rva007FAEE0@@YGXPAVRva007E8810Message@@PBD11111@Z,,0x006673F0,162,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FAEE0
-?Rva007FAE40@@YGXPAVRva007E8810Message@@PBD1111@Z,,0x00667350,145,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FAE40
 ?hideSpecialPowerShortcut@ControlBar@@QAEXXZ,,0x0031AFCC,18,Code/GameEngine/Source/GameClient/GUI/ControlBar/ControlBarFields.cpp,matched,BFME1 donor with BFME2 repairs: parent at +0xD8 not +0xFC; winHide pin 0x313C64
 ?bfmeGoVIU@@YGXPAVBfmeMsgVIT@@PAX11@Z,,0x0065F250,95,Code/GameEngine/Source/Common/BfmeConv1378.cpp,matched,BFME1 donor; fold-twins disambiguated by ret-0x10 arity (only 4-arg candidate); b1 0x007F2760
 ?bfmeGoDVIW@@YGXPAVBfmeMsgVIW@@PAX1H@Z,,0x0065DBE0,83,Code/GameEngine/Source/Common/BfmeConv1379.cpp,matched,BFME1 donor; 8 fold-twins cut by ret-0x10 + Run/Set/Set2/Set3 call run; b1 0x007F1050
@@ -10516,3 +10512,9 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?Rva007FAEE0@@YGXPAVRva007E8810Message@@PBD11111@Z,,0x006673F0,162,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequestsTwins.cpp,matched,BFME1 byte-identical donor; b1 0x007FAEE0; ICF-folded in BFME1 so the name is this sweep pick among its twins; 8 DIR32 string literal(s) agree
 ?Rva007FAFB0@@YGXPAVRva007E8810Message@@PBD11_NH@Z,,0x006674C0,194,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequestsTwins.cpp,matched,BFME1 byte-identical donor; b1 0x007FAFB0; ICF-folded in BFME1 so the name is this sweep pick among its twins; 5 DIR32 string literal(s) agree
 ?Rva007FB620@@YGXPAVRva007E8810Message@@PBD11_N@Z,,0x00667B30,176,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequestsTwins.cpp,matched,BFME1 byte-identical donor; b1 0x007FB620; ICF-folded in BFME1 so the name is this sweep pick among its twins; 4 DIR32 string literal(s) agree
+_luaB_settag,,0x0074B980,53,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs settag slot); BFME1 donor verbatim b1 0x00994820
+_luaB_assert,,0x0074C200,63,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs assert slot); BFME1 donor verbatim b1 0x009950A0; game.dat folds math_* here
+_luaB_rawset,,0x0074BAB0,49,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (rawset rawsettable rawsetglobal slots share this folded body); donor verbatim b1 0x00994950
+_luaB_rawget,,0x0074BA80,41,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (rawget rawgettable rawgetglobal slots share this folded body); donor verbatim b1 0x00994920
+_luaB_setglobal,,0x0074B8F0,37,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs setglobal slot); donor verbatim b1 0x00994790
+_luaB_getglobal,,0x0074B920,32,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs getglobal slot); donor verbatim b1 0x009947C0

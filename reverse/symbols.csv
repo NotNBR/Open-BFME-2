@@ -3021,3 +3021,8 @@ _lua_error,0x0074D570
 ?gen001610F0@@YAXPAUElem36@@PBU1@@Z,0x001610F0
 
 ?gen006896F0@@YAXPAUElem28@@PBU1@@Z,0x006896F0
+_luaL_checktype,0x00751900
+_luaL_opt_lstr,0x00751A20
+_lua_rawget,0x00747770
+_lua_rawset,0x00747990
+_lua_settag,0x00747B90
