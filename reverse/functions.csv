@@ -11466,3 +11466,4 @@ _traceexec,,0x0074E410,121,Code/Libraries/Source/Lua/lvm.c,matched,exact via unc
 ?Rva00658200Get@@YAHXZ,,0x00658200,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E09FA4
 _message,,0x0074DDC0,105,Code/Libraries/Source/Lua/ldo.c,matched,exact via unclaimed_scan; emitted by ldo.c object; vendored=lua-4.0.1
 _callCclosure,,0x0074D860,102,Code/Libraries/Source/Lua/ldo.c,matched,exact via unclaimed_scan; emitted by ldo.c object; vendored=lua-4.0.1
+?dec@Rva00050D14DwordCounter@@QAEXXZ,,0x00050D14,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword dec family; opaque holder
