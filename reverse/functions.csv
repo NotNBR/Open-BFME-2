@@ -11785,3 +11785,4 @@ _math_rad,,0x00748740,38,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.r
 ?get@Rva005ED28AAddDwordField@@QBEHXZ,,0x005ED28A,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
 _math_frexp,,0x00748770,68,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.frexp via check_number + pushnumber x2; callees pinned
 _math_random,,0x00748900,298,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.random via rand + gettop switch + check_int + pushnumber; callees pinned
+?name@Rva002AE621Named@@QBEPBDXZ,,0x002AE621,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Command; vtable ref in .rdata; address-derived placeholder name
