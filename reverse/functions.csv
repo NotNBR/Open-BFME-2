@@ -11023,3 +11023,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?Rva008014F0ResetHpState@@YGXPAVRva008022A0Owner@@@Z,,0x0066D830,14,Code/GameEngine/Source/GameNetwork/Y2FeslBufferAndChain.cpp,matched,BFME1 byte-identical donor; b1 0x008014F0; emitted-but-unclaimed row; exact via unclaimed_scan
 ?get@Rva001DBA6DByteField@@QBEEXZ,,0x001DBA6D,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?apply@Rva00238D97DwordImmSetter@@QAEXXZ,,0x00238D97,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; mov [ecx] imm32 ret; cluster sibling of 238D8D/238D92 pair
+?get@Rva001DCD01ByteField@@QBEEXZ,,0x001DCD01,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
