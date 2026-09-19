@@ -10995,3 +10995,4 @@ _lua_iolibopen,,0x0074B5D0,28,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,B
 ?disable@Rva0050E7C0ZeroSetter@@QAEXXZ,,0x0050E7C0,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
 ?enable@Rva00531113OneSetter@@QAEXXZ,,0x00531113,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
 ?disable@Rva00531118ZeroSetter@@QAEXXZ,,0x00531118,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
+?get@Rva00094A98FloatField@@QBEMXZ,,0x00094A98,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter; address-derived opaque holder
