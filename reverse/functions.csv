@@ -11283,3 +11283,4 @@ _luaD_adjusttop,,0x0074D6B0,70,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byt
 ?apply@Rva000141C30DwordImmSetter@@QAEXXZ,,0x00141C30,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B cc-pad; retail C7-01-3833BD00-C3
 ?get@Rva004BB968FloatField@@QBEMXZ,,0x004BB968,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter; address-derived opaque holder
 ?get@Rva004BB96FFloatField@@QBEMXZ,,0x004BB96F,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter; address-derived opaque holder
+?get@Rva004CBBC5FloatField@@QBEMXZ,,0x004CBBC5,7,Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp,matched,Disp32 float getter; address-derived opaque holder
