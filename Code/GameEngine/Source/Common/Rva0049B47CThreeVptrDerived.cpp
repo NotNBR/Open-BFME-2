@@ -78,18 +78,21 @@ public:
 	virtual void f2();
 };
 
-class Rva004BD763 : public Rva0049B47C, public MiBase1, public Rva004BD763_B2
+class Rva004BD763 : public PrimaryP, public Rva004BD763_B2
 {
 public:
-	virtual ~Rva004BD763()
-	{
-	}
+	virtual ~Rva004BD763();
 };
 
-// Anchor: forces out-of-line emission of the in-class destructor COMDAT.
-void Rva004BD763_Anchor(Rva004BD763 *p)
+Rva004BD763::~Rva004BD763()
 {
-	p->Rva004BD763::~Rva004BD763();
+}
+
+// Anchor: new/delete devirtualizes to a direct ??_G call (see above).
+void Rva004BD763_Anchor()
+{
+	Rva004BD763 *p = new Rva004BD763;
+	delete p;
 }
 
 class Rva004B96CC_B2

@@ -525,7 +525,6 @@ name,address,notes
 ??1Rva004B8CDE@@UAE@XZ,0x004B8CDE,opaque MI base dtor (3 vptrs tail-jmp 0x49B47C fold); 7 derived MI dtors tail-call it; identity unproven
 ??1Rva004B96CC@@UAE@XZ,0x004B96CC,opaque MI base dtor; 3 derived MI dtors tail-call it; identity unproven
 ??1Rva004BB68E@@UAE@XZ,0x004BB68E,opaque MI base dtor; 4 derived MI dtors tail-call it; identity unproven
-??1Rva004BD763@@UAE@XZ,0x004BD763,opaque MI dtor (25B: vptrs +0/+0xC/+0x10, tertiary 0xC5AC18, tail-jmp 0x49B47C fold); called by scalar-deleting-dtor at 0x4BD844; identity unproven, address-derived name
 ??1Rva004BF951@@UAE@XZ,0x004BF951,opaque MI base dtor (SEH); 7 derived MI dtors tail-call it; identity unproven
 ??1Rva004CE36@@UAE@XZ,0x004CE36,opaque SEH dtor (mov-eax-cookie prologue, start inferred from prologue shape); called by scalar-deleting-dtor at 0x4CF47; identity unproven, address-derived name
 ??1Rva004D759C@@UAE@XZ,0x004D759C,opaque MI base dtor (SEH, vptrs incl shared patterns, list walk); 20 derived MI dtors tail-call it; identity unproven
