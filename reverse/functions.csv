@@ -11573,3 +11573,4 @@ _math_asin,,0x00748460,43,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.
 ??_GRva004C85A4@@UAEPAXI@Z,,0x004C8602,28,Code/GameEngine/Source/Common/Rva00493DEFDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GRva004C86E4@@UAEPAXI@Z,,0x004C8742,28,Code/GameEngine/Source/Common/Rva00493DEFDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 _math_acos,,0x00748490,43,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.acos via check_number + CIacos + pushnumber; callees pinned
+?get@Rva002B236EAddDwordField@@QBEHXZ,,0x002B236E,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
