@@ -11455,3 +11455,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ??1File@@UAE@XZ,,0x006025CE,75,Code/GameEngine/Source/Common/System/File.cpp,matched,BFME1 File::~File verbatim; AsciiString member with forceinline dtor to folded clear@0x36410; CloseHandle import
 ?inc@Rva00552C52DwordCounter@@QAEXXZ,,0x00552C52,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family pair; opaque holder
 ?inc@Rva005D1A79DwordCounter@@QAEXXZ,,0x005D1A79,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family; opaque holder
+?dec@Rva00552C4EDwordCounter@@QAEXXZ,,0x00552C4E,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword dec family pair; opaque holder
