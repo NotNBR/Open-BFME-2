@@ -426,3 +426,16 @@ void Rva0020E205DwordImmSetter::apply()
 {
 	m_value = 0x00BE4318;
 }
+
+class Rva00210CC5DwordImmSetter
+{
+public:
+	void apply();
+
+	unsigned int m_value;
+};
+
+void Rva00210CC5DwordImmSetter::apply()
+{
+	m_value = 0x00BE5114;
+}
