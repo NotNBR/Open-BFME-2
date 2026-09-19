@@ -10432,4 +10432,5 @@ _math_randomseed,,0x00748A30,30,Code/Libraries/Source/Lua/lmathlib.c,matched,BFM
 ?rva00882140PatchAllModules@@YAPAXPBD0PAX@Z,,0x0002FF10,134,Code/GameEngine/Source/Common/Bfme/Rva00882140PatchAllModules.cpp,matched,BFME1 near-miss donor; b1 0x00882140; callback cell to LoadLibraryA import plus CloseHandle rename
 ?go@BfmeOwner803BF0@@QAEXPAVBfmeSrc803BF0@@@Z,,0x0066FC30,157,Code/GameEngine/Source/Common/BfmeConv803BF0.cpp,matched,BFME1 near-miss donor; b1 0x00803BF0; immediate-only drift
 ?invoke@Rva00958D30@@QAEJVBfmeBstrVGP@@PAX@Z,,0x00177240,111,Code/GameEngine/Source/GameNetwork/WOLBrowser/WebBrowserComWrappers.cpp,matched,BFME1 near-miss donor b1 0x00958EB0; immediate-only IID drift pre-pinned; callees pre-resolved
+?bfmeInsertChV38@@YGXHHID@Z,,0x0002A1B0,181,Code/GameEngine/Source/Common/BfmeConv1479.cpp,matched,BFME1 near-miss donor; b1 0x00830B10; call-displacement drift only; pin FillInsV38 @0x297D0 mirrors b1 pin (same 119B assign body)
 ?get@Rva008F7B00@@QAEDH@Z,,0x0073A0C0,28,Code/GameEngine/Source/Common/Rva008F7B00Get.cpp,matched,BFME1 near-miss donor repaired; b1 0x008F7B00; slots bound 16 to 20 and base pad A4 to C4 per retail
