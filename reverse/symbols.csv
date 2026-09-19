@@ -3169,3 +3169,4 @@ _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE7
 dup_7e86b0,0x00655770
 _luaL_argerror,0x00751820
 _lua_tag,0x00747210
+_luaL_findstring,0x00751490

@@ -10986,3 +10986,4 @@ _setfilebyname,,0x0074A240,26,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,B
 ?set@Rva0026FC9ETwoSetter@@QAEXXZ,,0x0026FC9E,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte two-setter
 _io_close,,0x0074A320,227,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1 byte-identical donor; b1 0x009931C0
 ?enable@Rva004D9362OneSetter@@QAEXXZ,,0x004D9362,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
+?apply@Rva0029A74ADwordImmSetter@@QAEXXZ,,0x0029A74A,11,Code/GameEngine/Source/Common/DispDwordImmSetters.cpp,matched,Disp32 dword imm-setter
