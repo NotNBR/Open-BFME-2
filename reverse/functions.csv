@@ -10605,3 +10605,4 @@ _luaH_setint,,0x007509E0,42,Code/Libraries/Source/Lua/ltable.c,matched,unclaimed
 _luaH_setstrnum,,0x00750A10,55,Code/Libraries/Source/Lua/ltable.c,matched,unclaimed_scan exact modulo relocs; single call to luaH_set row; emitted by ltable.c object; vendored=lua-4.0.1
 _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099EC90; 2 DIR32 string literal(s) agree
 _luaK_kstr,,0x00752780,139,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099ED80; 2 DIR32 string literal(s) agree
+_luaK_infix,,0x007536C0,70,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099FCC0
