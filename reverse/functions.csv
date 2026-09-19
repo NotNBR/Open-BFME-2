@@ -11032,3 +11032,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?apply@Rva002B2294DwordImmSetter@@QAEXXZ,,0x002B2294,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; adjacent pair with 2B228D
 ?get@Rva002035A1ByteField@@QBEEXZ,,0x002035A1,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?get@Rva002035A5ByteField@@QBEEXZ,,0x002035A5,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
+?get@Rva001D96F0LeaField@@QBEPAXXZ,,0x001D96F0,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
