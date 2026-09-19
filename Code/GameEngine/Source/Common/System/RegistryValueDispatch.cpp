@@ -197,3 +197,15 @@ const char *GetRegistryG3()
     }
     return g_G3Value;
 }
+
+// ?GetRegistryG4@@YAPBDXZ, retail 0x0002FAE0, 27 bytes.
+// Lazy G4 reader: same once-gate, cached pointer at 0x00DA759C.
+const char *GetRegistryG4()
+{
+    if (!g_registryValuesLoaded)
+    {
+        g_registryValuesLoaded = true;
+        LoadRegistryValues();
+    }
+    return g_G4Value;
+}
