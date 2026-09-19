@@ -63,3 +63,13 @@ int Rva00180581Get(void)
 {
 	return 0x50415254;
 }
+
+// ?Rva00180778Get@@YAHXZ @ 0x00180778 (6B): returns 0x00424F58.
+// Follows a leave/ret (prev C9-C3), carried by 1 .rdata slot (0x7D5044)
+// in the 0x180xxx vtable family (prefix 530FCE/A1EE20/A1EE50, suffix
+// 6A79A1/4B3FD0), no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00180778Get(void)
+{
+	return 0x00424F58;
+}
