@@ -3162,3 +3162,4 @@ _LoadHeader,0x00756B10
 ?bfmeCallJA@BfmeHookJA@@QAEPAUBfmeSlotJA@@XZ,0x001E35DF
 _luaK_deltastack,0x00751DE0
 _need_value,0x00752140
+?bfmeHas1026@BfmeTab1026@@QAEDHH@Z,0x00362437
