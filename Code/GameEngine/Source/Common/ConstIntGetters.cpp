@@ -632,3 +632,12 @@ int Rva00201095Get(void)
 {
 	return 0x00BE2C10;
 }
+
+// ?Rva0039B81DGet@@YAHXZ @ 0x0039B81D (6B): returns 0x00C1AD7C.
+// Follows a mov-word/ret (0x39B817-1C) with a frame-style function
+// after. Carried at 0x81AD74, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva0039B81DGet(void)
+{
+	return 0x00C1AD7C;
+}
