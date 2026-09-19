@@ -1,8 +1,9 @@
 // cl: /EHs-c-
-// EA FESL client SDK ("jabba") -- the 00802380 gamebrowser owner destructor.
-// Trimmed from the Open-BFME-1 Y2FeslBrowserDestructors donor: this TU carries
-// only the 00802380 section. The other three sections (00802EC0, 00802CA0,
-// 00802680) stay in the donor until their BFME2 addresses are served.
+// EA FESL client SDK ("jabba") -- four destructors from the gamebrowser
+// cluster: the 00802380 owner, the 00802EC0 two-buffer owner, the 00802CA0
+// counted-array owner and the 00802680 block owner.
+// Trimmed from the Open-BFME-1 Y2FeslBrowserDestructors donor: this TU now
+// carries all four served sections.
 //
 // WHY THIS FILE CARRIES ITS OWN FLAG.  The base command line spells `-EHsc-`,
 // which cl parses as EHs ON: every destructor here then gets an EH frame
@@ -36,10 +37,52 @@
 // deleting wrapper MSVC emits beside it.  The labels below are copied out of
 // this file's own object symbol table, not written by hand.
 //
+// ??1Rva00802EC0Base@@UAE@XZ absent-from-retail
+// ??_GRva00802EC0Base@@UAEPAXI@Z absent-from-retail
+// ??1Rva00802CA0Base@@UAE@XZ absent-from-retail
+// ??_GRva00802CA0Base@@UAEPAXI@Z absent-from-retail
 // ??1Rva00802380Base@@UAE@XZ absent-from-retail
 // ??_GRva00802380Base@@UAEPAXI@Z absent-from-retail
+// ??1Rva00802680Base@@UAE@XZ absent-from-retail
+// ??_GRva00802680Base@@UAEPAXI@Z absent-from-retail
 
 // ---------------------------------------------------------------- callees
+class Rva00800290Buffer
+{
+public:
+	void reset();                       // 0x00800290
+
+	char *m_ptr;
+	int   m_size;
+};
+
+class Rva00802A10Elem
+{
+public:
+	virtual void step( int flags );
+	char m_pad[ 128 - 4 ];
+};
+
+class Rva00802A10
+{
+public:
+	void clear();                       // 0x00802A10
+
+	Rva00802A10Elem *m_array;
+	int m_count;
+};
+
+class Gen_dtor_007f6d20;
+
+class Rva007F78E0Block
+{
+public:
+	void clear();                       // 0x007F78E0
+
+	Gen_dtor_007f6d20 *m_data;
+	int m_count;
+};
+
 class Rva00800630Owner
 {
 public:
@@ -49,6 +92,61 @@ public:
 	int   m_field4;
 	int   m_field8;
 };
+
+// ------------------------------------------------ 0x00802EC0, two buffers
+class Rva00802EC0Base
+{
+public:
+	virtual ~Rva00802EC0Base() {}
+
+	int m_field4;
+	int m_field8;
+};
+
+class Rva00802EC0Owner : public Rva00802EC0Base
+{
+public:
+	virtual ~Rva00802EC0Owner();
+
+	Rva00800290Buffer m_a;      // +0x0C
+	Rva00800290Buffer m_b;      // +0x14
+};
+
+Rva00802EC0Owner::~Rva00802EC0Owner()
+{
+	m_field4 = 0;
+	m_b.reset();
+	m_a.reset();
+}
+
+// ------------------------ 0x00802CA0 + its wrapper 0x00802D40, two buffers
+//                          and a counted array
+class Rva00802CA0Base
+{
+public:
+	virtual ~Rva00802CA0Base() {}
+
+	int m_field4;
+	int m_field8;
+};
+
+class Rva00802CA0Owner : public Rva00802CA0Base
+{
+public:
+	virtual ~Rva00802CA0Owner();
+
+	Rva00800290Buffer m_a;          // +0x0C
+	Rva00800290Buffer m_b;          // +0x14
+	Rva00802A10       m_entries;    // +0x1C
+};
+
+Rva00802CA0Owner::~Rva00802CA0Owner()
+{
+	m_field4 = 0;
+	m_entries.clear();
+	m_b.reset();
+	m_a.reset();
+}
 
 // ------------------------ 0x00802380 + its wrapper 0x00802510, one embedded
 //                          three-field owner and two trailing dwords
@@ -72,10 +170,46 @@ public:
 	int               m_field28;
 };
 
+// The out-of-line destructor below also emits the ??1 symbol, but retail
+// keeps no separate ??1 body for this class: 0x0066E750 is straight-line
+// dtor logic plus the wrapper tail, so there is no address for a ??1 row.
+// ??1Rva00802380Owner@@UAE@XZ absent-from-retail
 Rva00802380Owner::~Rva00802380Owner()
 {
 	m_field4 = 0;
 	m_field24 = 0;
 	m_field28 = 0;
 	m_owner.clear();
+}
+
+// ------------------------------- 0x00802680, a stride-8 block and two buffers
+class Rva00802680Base
+{
+public:
+	virtual ~Rva00802680Base() {}
+
+	int m_field4;
+	int m_field8;
+	int m_fieldC;
+};
+
+class Rva00802680Owner : public Rva00802680Base
+{
+public:
+	virtual ~Rva00802680Owner();
+
+	char              m_pad010[ 0x10 ];
+	Rva007F78E0Block  m_block;      // +0x20
+	Rva00800290Buffer m_b;          // +0x28
+	Rva00800290Buffer m_c;          // +0x30
+};
+
+Rva00802680Owner::~Rva00802680Owner()
+{
+	m_field4 = 0;
+	m_fieldC = 0;
+	m_field8 = 0;
+	m_c.reset();
+	m_b.reset();
+	m_block.clear();
 }
