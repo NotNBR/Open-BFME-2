@@ -10538,3 +10538,4 @@ _luaB_getglobal,,0x0074B920,32,Code/Libraries/Source/Lua/lbaselibSmall.c,matched
 ??0BfmeBstrVGP@@QAE@ABV0@@Z,,0x00176E70,31,Code/GameEngine/Source/GameNetwork/WOLBrowser/WebBrowserComWrappers.cpp,matched,Placed by masked whole-text search of the compiled TU body; copy ctor over pinned InterlockedIncrement; zero new pins
 ?reset@Radar@@UAEXXZ,,0x002D7DB9,28,Code/GameEngine/Source/Common/System/Radar_reset.cpp,matched,BFME1 near-miss donor b1 0x001077A0 immediate-only drift flag offset +0x9 to +0xD plus MI second-base this-4
 ?go@Rva00803730Host@@QAEXPAVRva00803730Getter@@@Z,,0x0066F770,97,Code/GameEngine/Source/GameNetwork/Rva00803730FeslAttrs.cpp,matched,BFME1 near-miss donor b1 0x00803730 immediate-only string-literal drift
+?apply@Rva00803730Sink@@QAEXPAX_N00@Z,,0x00675B60,410,Code/GameEngine/Source/GameNetwork/Rva00803730FeslAttrs.cpp,matched,BFME1 donor file second body b1 family 0x00803730
