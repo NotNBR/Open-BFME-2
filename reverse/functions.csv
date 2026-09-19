@@ -11967,3 +11967,4 @@ _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alia
 ??0GridWSEnvironmentMapperClass@@QAE@MIIIW4AxisType@GridWSEnvMapperClass@@I@Z,,0x00187470,88,Code/Libraries/Source/WWVegas/WW3D2/mapper.cpp,matched,BFME1 near-miss donor; derived 6-arg with same-TU inlined GridWSEnv base (vptrs 0xBD3198/0xBD57B4/derived 0xBD58B0 = Environment); Axis +0x34
 ?install_alternate_material_desc@MeshModelClass@@IAEXPAVMeshLoadContextClass@@@Z,,0x00188290,134,Code/Libraries/Source/WWVegas/WW3D2/MeshModelInstallAlternate.cpp,matched,ZH packet 95.1pct; dedicated TU with retail-anchored views; pins Is_Empty Init_Alternate
 ?apply@Rva000A8E95DwordImmSetter@@QAEXXZ,,0x000A8E95,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?apply@Rva0010846EDwordImmSetter@@QAEXXZ,,0x0010846E,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
