@@ -12223,3 +12223,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?read_header@HLodDefClass@@AAE_NAAVChunkLoadClass@@@Z,,0x0019ECE0,232,Code/Libraries/Source/WWVegas/WW3D2/hlod_read_header.cpp,matched,BFME1 SOURCE (not bytes): compile-based placement; BFME1 retail body differs so bfme1_sweep cannot reach it; pin __strdup
 ?Set_Device_Resolution@WW3D@@SA_NHHHH_N@Z,,0x00116FC0,39,Code/Libraries/Source/WWVegas/WW3D2/WW3D_Set_Device_Resolution.cpp,matched,BFME2 bool wrapper; retail test/setne; BFME1 b1 0x008FD1C0 byte-identical
 ?Set_Render_Device@WW3D@@SA_NHHHHH_N00@Z,,0x00116F10,54,Code/Libraries/Source/WWVegas/WW3D2/WW3D_Set_Render_Device.cpp,matched,BFME2 bool wrapper; retail test/setne; BFME1 b1 0x008FD120 byte-identical
+?SaveRenderDeviceRegistrySettings@@YA_NPBDHHHH_NH@Z,,0x00117030,49,Code/Libraries/Source/WWVegas/WW3D2/WW3D_RegistryDeviceWrappers.cpp,matched,BFME2 bool registry saver; retail test/setne; BFME1 b1 0x008FD230 byte-identical
