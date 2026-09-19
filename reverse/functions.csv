@@ -12218,3 +12218,5 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva00117BB0SetOption@@YAXH@Z,,0x00117BB0,31,Code/GameEngine/Source/Common/WW3DOptionSetter.cpp,matched,address-derived dword option setter over 0x00DEC40C with guard 0x00DEC3D4 and tail-notify pin; pairs landed getter 0x00117C00
 ?errorFrom@Rva007EB8B0Log@@QAEHHPBD0H@Z,,0x00658930,160,Code/GameEngine/Source/GameNetwork/Rva007EB920Assert.cpp,matched,BFME1 byte-identical donor; b1 0x007EB9C0; 3 DIR32 string literal(s) agree
 ?onLobbyCount@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x006640E0,101,Code/GameEngine/Source/GameNetwork/V2FeslBrowserEvents.cpp,matched,BFME1 byte-identical donor; b1 0x007F7A60; 1 DIR32 string literal(s) agree
+?bfmeNewUNB@@YAPAVBfmeThingUNB@@XZ,,0x00666E30,65,Code/GameEngine/Source/Common/BfmeConv1338.cpp,matched,BFME1 byte-identical donor; b1 0x007FA900
+?bfmeDelUNA@BfmeThingUNA@@QAEPAXE@Z,,0x00666DD0,60,Code/GameEngine/Source/Common/BfmeConv1338.cpp,matched,BFME1 byte-identical donor; b1 0x007FA8A0

@@ -6,6 +6,62 @@
 // owner and int members, takes an id from the global counter, then chains
 // owner->mid->sink and registers through the sink vtable slot.
 
+extern void *g_bfmeVftAUNA[];
+extern void *g_bfmeVftBUNA[];
+
+void bfmeFreeRecUNA(void *p);
+void bfmeFreeUNA(void *p, int n);
+
+class BfmeThingUNA
+{
+public:
+	void *bfmeDelUNA(unsigned char flags);
+	void *m_bfmeVft;
+	int m_bfme04;
+	void *m_bfmeRec;
+};
+
+void *BfmeThingUNA::bfmeDelUNA(unsigned char flags)
+{
+	m_bfmeVft = g_bfmeVftAUNA;
+	bfmeFreeRecUNA(m_bfmeRec);
+	m_bfmeRec = 0;
+	m_bfme04 = 0;
+	m_bfmeVft = g_bfmeVftBUNA;
+	if (flags & 1)
+		bfmeFreeUNA(this, 0x14);
+	return this;
+}
+
+extern void *g_bfmeVftUNB[];
+
+void *bfmeAllocUNB(unsigned n);
+void *bfmeMakeRecUNB(int n);
+
+class BfmeThingUNB
+{
+public:
+	void *m_bfmeVft;
+	int m_bfme04;
+	void *m_bfmeRec;
+	int m_bfme0c;
+	char m_bfme10;
+};
+
+BfmeThingUNB *bfmeNewUNB(void)
+{
+	BfmeThingUNB *p = (BfmeThingUNB *)bfmeAllocUNB(0x14);
+	if (p) {
+		p->m_bfmeVft = g_bfmeVftUNB;
+		p->m_bfmeRec = bfmeMakeRecUNB(0x1000);
+		p->m_bfme04 = 0;
+		p->m_bfme0c = 0;
+		p->m_bfme10 = 0;
+		return p;
+	}
+	return 0;
+}
+
 extern void *g_bfmeVftUNC[];
 
 class BfmeThingUNC;
