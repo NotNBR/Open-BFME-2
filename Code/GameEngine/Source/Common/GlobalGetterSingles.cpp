@@ -177,3 +177,12 @@ int Rva0051E2B7Get(void)
 {
 	return g_Va00E048DC;
 }
+
+// ?Rva00117C00Get@@YAHXZ @ 0x00117C00 (6B) over 0x00DEC40C.
+
+extern int g_Va00DEC40C;
+
+int Rva00117C00Get(void)
+{
+	return g_Va00DEC40C;
+}
