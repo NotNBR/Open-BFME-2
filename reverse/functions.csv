@@ -12344,3 +12344,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 ?Rva007F2E60@@YAPAVRva007F2E60Object@@PAX@Z,,0x0065F940,45,Code/GameEngine/Source/Common/Q3MakeDerivedFamily.cpp,matched,BFME1 byte-identical donor b1 0x007F2E60 ambiguous resolved by address map error 3 Ghidra-45 exact trimmed sibling
 ?Rva001874D0Get@@YAHXZ,,0x001874D0,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 22; CC-island with 2 mapper-table refs and no callers; opaque name
 ?Rva001A13F0Get@@YAHXZ,,0x001A13F0,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 15; CC-island with 2 mapper-table refs and no callers; opaque name
+?Rva007F3410@@YAPAVRva007F3410Object@@PAX@Z,,0x0065FEE0,45,Code/GameEngine/Source/Common/Q3MakeDerivedFamily.cpp,matched,BFME1 byte-identical donor b1 0x007F3410 ambiguous resolved by address map error 6 Ghidra-45 exact trimmed sibling
