@@ -11791,3 +11791,4 @@ _str_len,,0x00748AA0,64,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string l
 ?name@Rva000518B2Named@@QBEPBDXZ,,0x000518B2,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning MilesAudioManager; vtable ref at 0x7C55A4; address-derived placeholder name
 ?name@Rva000638A2Named@@QBEPBDXZ,,0x000638A2,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning W3DRenderObjectSnapshot; vtable ref at 0x7C59FC with 0x4B3FD0 family slot pattern; address-derived placeholder name
 _str_sub,,0x00748AF0,173,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string sub via donor; callees pinned
+_str_rep,,0x00748CE0,114,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string rep via donor; callees pinned
