@@ -12012,3 +12012,4 @@ _luaL_addstring,,0x007516C0,42,Code/Libraries/Source/Lua/lauxlib.c,matched,gen-a
 ?name@Rva00279669Named@@QBEPBDXZ,,0x00279669,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning Drawable; vtable ref; address-derived placeholder name
 ?name@Rva0028417CNamed@@QBEPBDXZ,,0x0028417C,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning TerrainLogic; vtable ref; address-derived placeholder name
 ?name@Rva00214052Named@@QBEPBDXZ,,0x00214052,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning LivingWorldManager; vtable ref; address-derived placeholder name
+_luaG_getline,,0x0074CA90,135,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 byte-identical donor b1 ldebug.c luaG_getline; vendored=lua-4.0.1
