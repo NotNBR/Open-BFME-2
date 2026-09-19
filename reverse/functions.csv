@@ -10663,3 +10663,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?get@Rva0052A28EDwordField@@QBEHXZ,,0x0052A28E,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter; address-derived opaque holder
 ?get@Rva0055A88BDwordField@@QBEHXZ,,0x0055A88B,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter; address-derived opaque holder
 ?bfmeCopyVHE@@YGXPAVBfmeMsgVHE@@0@Z,,0x00675680,71,Code/GameEngine/Source/Common/BfmeConv1361.cpp,matched,BFME1 byte-identical donor; b1 0x00809780; 2 DIR32 string literal(s) agree
+?bfmeIsTag@@YIHHPBD@Z,,0x006AA880,64,Code/GameEngine/Source/Common/Bfme5Ninety.cpp,matched,BFME1 byte-identical donor; b1 0x0086B000
