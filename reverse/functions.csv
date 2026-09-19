@@ -12247,3 +12247,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?bfmeGo1053A@BfmeA1053@@QAEPAV1@XZ,,0x00666BC0,40,Code/GameEngine/Source/Common/BfmeGo1053A.cpp,matched,BFME1 byte-identical donor; b1 0x007FA680
 ??1Rva005F7750@@UAE@XZ,,0x005F7750,14,Code/GameEngine/Source/Common/Rva005F7750Dtor.cpp,matched,opaque dtor explicit clear call on member at plus 4 (Rva000AD6F4Members family pattern)
 ??1Rva005FA393@@UAE@XZ,,0x005FA393,14,Code/GameEngine/Source/Common/Rva005FA393Dtor.cpp,matched,opaque dtor explicit clear call on member at plus 4 (Rva000AD6F4Members family pattern)
+?Rva001820A0Get@@YAHXZ,,0x001820A0,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 const-int returner ret 8; CC-island with 4 mapper-family vtable refs; opaque address-derived name
