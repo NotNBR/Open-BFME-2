@@ -123,3 +123,17 @@ int Rva0000C124CGet(void)
 {
 	return 0x000186A0;
 }
+
+// 0x0000C1246 is already claimed by twin (?name@Rva000C1246Named in
+// W3DDrawNameGetters.cpp, a real string getter). Always grep the ledger
+// in canonical 8-digit form before serving (",0x0*<ADDR>,"); add_match
+// refusal is the backstop, never the plan.
+
+// ?Rva00336E72Get@@YAHXZ @ 0x00336E72 (6B): returns 0x00736E78.
+// Follows a byte-identical dead twin at 0x336E6C (whole-image refs 0;
+// the linker kept both copies, only this one is used). 6 .rdata refs,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva00336E72Get(void)
+{
+	return 0x00736E78;
+}
