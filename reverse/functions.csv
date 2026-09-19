@@ -11566,3 +11566,4 @@ _read_chars,,0x0074A910,145,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,obj
 ?name@Rva001EAE69Named@@QBEPBDXZ,,0x001EAE69,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning LinearCampaignManager; vtable ref in .rdata; address-derived placeholder name
 ?rva00800a40@Rva00800920Owner@@QAEHPAXEH@Z,,0x0066CE20,225,Code/GameEngine/Source/Common/Rva00800A40Owner.cpp,matched,BFME1 donor b1 0x00800A40 small repair: BFME1 string addresses -> BFME2 literals (CE3AFC/CE3A90/BBC410); logic/layout/cl verbatim
 ?name@Rva001FBEB1Named@@QBEPBDXZ,,0x001FBEB1,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning FXParticleSystem; vtable ref in .rdata; address-derived placeholder name
+??_GRva00452D52@@UAEPAXI@Z,,0x00452EC1,28,Code/GameEngine/Source/Common/Rva0024A797Grandchildren.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
