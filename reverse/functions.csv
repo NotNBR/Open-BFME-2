@@ -10453,3 +10453,4 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?Rva007FB550@@YGXPAVRva007E8810Message@@HPBD11_N@Z,,0x00667A60,208,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FB550; 5 DIR32 string literal(s) agree
 ??_GRva006CD6C0SizedDeleting@@UAEPAXI@Z,,0x006CD6C0,33,Code/GameEngine/Source/Common/SizedDeleteDestructors.cpp,matched,BFME1 near-miss donor; b1 0x00891D40; immediate-only drift (push 0x1C for class size 28); dtor pin 0x006CC4C0 same batch
 ?bfmeGo912C@BfmeThing912C@@QAEXXZ,,0x006276B0,34,Code/GameEngine/Source/Common/BfmeConv912.cpp,matched,BFME1 near-miss donor; b1 0x009F4F80; immediate-only drift
+?bfmeAtE15@BfmeObjE15@@QAEPAUBfmeShapeE15@@H@Z,,0x006BD980,60,Code/GameEngine/Source/Common/Rva0087E150At.cpp,matched,BFME1 near-miss donor; b1 0x0087E150; immediate-only drift
