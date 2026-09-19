@@ -12296,3 +12296,4 @@ __RTC_UninitUse,,0x0075AB62,166,vendor/msvc71crt/msvcrt.lib,matched,vendored=msv
 ?Rva007FBE80@Rva007FBEF0GameRecord@@QAE_NPBDPADI@Z,,0x00668380,106,Code/GameEngine/Source/GameNetwork/Y4FeslGameRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007FBE80; address-map resolved ambiguous
 ?Rva007FBF40@Rva007FBEF0GameRecord@@QAE_NPBDPADI@Z,,0x00668440,106,Code/GameEngine/Source/GameNetwork/Y4FeslGameRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007FBF40; address-map resolved ambiguous
 ?Rva007FBFB0@Rva007FBEF0GameRecord@@QAE_NPBDPADI@Z,,0x006684B0,106,Code/GameEngine/Source/GameNetwork/Y4FeslGameRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007FBFB0; address-map resolved ambiguous
+?bfmeChunk1149@@YAPADIPAH@Z,,0x00023D80,427,Code/GameEngine/Source/Common/BfmeConv1149.cpp,matched,BFME1 donor ambiguous by bytes; resolved by the BFME1->BFME2 address map; b1 0x0082B3A0; 2 candidate placements; prediction error 0B
