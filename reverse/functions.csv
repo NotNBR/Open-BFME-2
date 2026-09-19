@@ -10488,3 +10488,4 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?bfmeGoBFF@BfmeThingBFF@@QAEXXZ,,0x00358933,19,Code/GameEngine/Source/Common/BfmeConv454.cpp,matched,BFME1 byte-identical donor; b1 0x0040FF90; Step pin aliases existing StringBase removeLastChar pin at 0x376E0
 ?Rva007FAFB0@@YGXPAVRva007E8810Message@@PBD11_NH@Z,,0x006674C0,194,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FAFB0
 ?Rva007FB620@@YGXPAVRva007E8810Message@@PBD11_N@Z,,0x00667B30,176,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FB620
+?Rva007FAEE0@@YGXPAVRva007E8810Message@@PBD11111@Z,,0x006673F0,162,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FAEE0
