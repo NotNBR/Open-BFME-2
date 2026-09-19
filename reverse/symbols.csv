@@ -3044,3 +3044,4 @@ _luaK_tostack,0x00753160
 _luaM_growaux,0x00750AE0
 _luaX_error,0x00757150
 ?bfmeFindByteInRange@@YAPADPAD0D@Z,0x00026C60
+?bfmeFormatUPB@@YAXPAXPAD0PBD@Z,0x0065BB60
