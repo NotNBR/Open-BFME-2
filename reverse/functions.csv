@@ -10580,3 +10580,4 @@ _Rva0088E100WatchdogThread@4,,0x0003D7E0,139,Code/Libraries/Source/WWVegas/WWDeb
 ?Rva007F2D10@@YGXPAVRva007E8810Message@@PBDH@Z,,0x0065F800,78,Code/GameEngine/Source/GameNetwork/V2FeslTxnRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007F2D10; ICF-folded BFME1 pick; 3 DIR32 string literal(s) agree
 _invertjump,,0x00751F80,108,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099E580
 _codepushbool,,0x00752970,151,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099EF70; 2 DIR32 string literal(s) agree
+??0MeshLoadContextClass@@AAE@XZ,,0x0018B5F0,405,Code/Libraries/Source/WWVegas/WW3D2/MeshLoadContextCtor.cpp,matched,Dedicated TU replica; +0x10C TextureVector via rowed 0x16ED80 shim and 0xBD4688 vtable per MaterialCollector precedent; 0x118 MeshMatDesc span per matched MeshModelReadTexcoords replica
