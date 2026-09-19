@@ -300,3 +300,12 @@ int Rva000A52A2Get(void)
 {
 	return 0x0048F755;
 }
+
+// ?Rva000A52A8Get@@YAHXZ @ 0x000A52A8 (6B): returns 0x0048F78F.
+// Immediately follows Rva000A52A2Get (prev is its C3), carried by 1 .rdata
+// slot in the parallel vtable, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva000A52A8Get(void)
+{
+	return 0x0048F78F;
+}
