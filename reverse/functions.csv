@@ -10784,3 +10784,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?bfmeGo936B@BfmeThing936B@@QAEXXZ,,0x00143C00,19,Code/GameEngine/Source/Common/BfmeConv936.cpp,matched,BFME1 byte-identical donor; b1 0x00945D00
 ?bfmeValue@Gen_0028EF10@@QBEHXZ,,0x004B0E1F,21,Code/GameEngine/Source/Common/Bfme5TinyFifteen.cpp,matched,BFME1 donor with +0x9C offset repair; retail disp32 proves link slot; b1 0x0028EF10
 ?bfmePush@Gen_0015A260@@QAEXH@Z,,0x00548FC0,20,Code/GameEngine/Source/Common/Bfme5SmallTests.cpp,matched,BFME1 byte-identical donor; b1 0x0015A260
+??0BfmeThingURC@@QAE@PAVBfmeSrcURC@@@Z,,0x0065ED00,31,Code/GameEngine/Source/Common/BfmeConv1341.cpp,matched,BFME1 byte-identical donor; b1 0x007F2210
