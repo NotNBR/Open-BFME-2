@@ -11184,3 +11184,4 @@ _openwithcontrol,,0x0074B490,312,Code/Libraries/Source/Lua/liolib_bfme1.c,matche
 ?get@Rva0011C440WordField@@QBEGXZ,,0x0011C440,5,Code/GameEngine/Source/Common/Disp8WordFieldGetters.cpp,matched,Disp8 word getter
 ?get@Rva002CEF87LeaGetter@@QBEPAXXZ,,0x002CEF87,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?apply@Rva004D381BDwordImmSetter@@QAEXXZ,,0x004D381B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?get@Rva00017B80LeaField@@QBEPAXXZ,,0x00017B80,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
