@@ -10486,3 +10486,4 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?addChatLog@Rva007F1F60Feedback@@QAEXPAVRva007E8810Message@@PBURva007F2080ChatLog@@H@Z,,0x0065EBA0,150,Code/GameEngine/Source/GameNetwork/V2FeslFeedbackRequest.cpp,matched,BFME1 donor verbatim sibling of buildRequest; 0x208 stride records via sprintf chatLog.%d.userId/.chat + tail chatLog.[]
 ?Rva007FB550@@YGXPAVRva007E8810Message@@HPBD11_N@Z,,0x00667A60,208,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FB550; 5 DIR32 string literal(s) agree
 ?bfmeGoBFF@BfmeThingBFF@@QAEXXZ,,0x00358933,19,Code/GameEngine/Source/Common/BfmeConv454.cpp,matched,BFME1 byte-identical donor; b1 0x0040FF90; Step pin aliases existing StringBase removeLastChar pin at 0x376E0
+?Rva007FAFB0@@YGXPAVRva007E8810Message@@PBD11_NH@Z,,0x006674C0,194,Code/GameEngine/Source/GameNetwork/Y4FeslBuddyRequests3.cpp,matched,BFME1 byte-identical donor b1 0x007FAFB0
