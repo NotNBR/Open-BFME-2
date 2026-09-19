@@ -3082,3 +3082,6 @@ _removelocalvars,0x00753CB0
 _str_checkname,0x00753AD0
 _subexpr,0x007558A0
 ?bfmeCtorECMa@BfmeThingECMa@@QAEPAV1@XZ,0x00672340
+?bfmeAskEME@BfmeObjEME@@QAE_NPAX@Z,0x0061FF70
+?bfmeGetEME@BfmeObjEME@@QAEPAXPAX@Z,0x006212E0
+?bfmeMarkXS@BfmeThingXS@@QBEEH@Z,0x0061FF70

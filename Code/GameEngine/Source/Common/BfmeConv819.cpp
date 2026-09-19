@@ -22,8 +22,32 @@ void __stdcall bfmeGoEMC(BfmeObjEMC *o, void *b, void *c)
 	o->bfmeCallEMC(g_bfmeXEMC, b, c);
 }
 
-bool bfmeGoEMEa(void *a);
-void *bfmeGoEMEb(void *a);
+class BfmeObjEME
+{
+public:
+	bool bfmeAskEME(void *item);
+	void *bfmeGetEME(void *item);
+};
+
+extern BfmeObjEME *g_bfmeObjEME;
+
+// ?bfmeGoEMEa@@YA_NPAX@Z, retail 0x0061F170 (24B).
+bool bfmeGoEMEa(void *item)
+{
+	BfmeObjEME *registry = g_bfmeObjEME;
+	if (!registry)
+		return false;
+	return registry->bfmeAskEME(item);
+}
+
+// ?bfmeGoEMEb@@YAPAXPAX@Z, retail 0x0061F600 (24B).
+void *bfmeGoEMEb(void *item)
+{
+	BfmeObjEME *registry = g_bfmeObjEME;
+	if (!registry)
+		return 0;
+	return registry->bfmeGetEME(item);
+}
 void __stdcall bfmeGoEMGa(void *a);
 void __stdcall bfmeGoEMGb(void *a);
 
