@@ -3164,4 +3164,5 @@ _message,0x0074DDC0
 _callCclosure,0x0074D860
 _luaC_checkGC,0x00751470
 _traceexec,0x0074E410
-_luaV_tonumber,0x0074E320
+_luaO_str2d,0x0074E160
+_luaH_getnum,0x007504C0
