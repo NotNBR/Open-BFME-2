@@ -11796,3 +11796,4 @@ _str_rep,,0x00748CE0,114,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string 
 ?name@Rva000B19BDNamed@@QBEPBDXZ,,0x000B19BD,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning DrawModule; vtable ref at 0x7C9698 with 0x4B3FD0 family slot pattern; address-derived placeholder name
 ?name@Rva00226309Named@@QBEPBDXZ,,0x00226309,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning SaveMapPreview; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva002296E6Named@@QBEPBDXZ,,0x002296E6,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning GameSlot; 3 vtable refs in .rdata; address-derived placeholder name
+?name@Rva00229902Named@@QBEPBDXZ,,0x00229902,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning LobbyGameInfo; vtable ref in .rdata; address-derived placeholder name
