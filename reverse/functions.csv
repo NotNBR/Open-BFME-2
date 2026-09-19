@@ -11380,3 +11380,4 @@ _luaH_get,,0x00750550,77,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-i
 _luaD_openstack,,0x0074D700,77,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
 ?get@Rva00661C40LeaGetter@@QBEPAXXZ,,0x00661C40,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-94000000-C3
 ?get@Rva00405972LeaField@@QBEPAXXZ,,0x00405972,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-74-C3
+?get@Rva00661C50LeaGetter@@QBEPAXXZ,,0x00661C50,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-90000000-C3
