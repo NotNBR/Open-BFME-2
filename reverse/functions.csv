@@ -11170,3 +11170,4 @@ _open_func,,0x00754080,87,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte
 ?apply@Rva004BDA05DwordImmSetter@@QAEXXZ,,0x004BDA05,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?get@Rva002C5808LeaGetter@@QBEPAXXZ,,0x002C5808,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?get@Rva002C8E8ALeaGetter@@QBEPAXXZ,,0x002C8E8A,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
+_luaK_code0,,0x00752650,23,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
