@@ -2997,3 +2997,9 @@ _Module32Next@8,0x00687D8C
 ?clearAllEvents@Radar@@IAEXXZ,0x002D7D57
 ??0Rva0036CA00Str@@QAE@ABV0@@Z,0x000A8C7C
 _isprint,0x0075AC08,CRT isprint import thunk FF25 via IAT 0x00BBA6FC; retail REL32 target of Rva007F91D0 at 0x00665770
+_lua_gettop,0x00746F30
+_lua_getglobal,0x007476C0
+_lua_pushvalue,0x00747050
+_lua_rawcall,0x00747B20
+_lua_error,0x0074D570
+?bfmeLogMsg574@@YAXPBD@Z,0x00333B36
