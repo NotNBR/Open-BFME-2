@@ -1,0 +1,104 @@
+// cl: /O2 /Ob1 /DNDEBUG /DWIN32 /MD /EHsc
+// The 0x009F2A20 and 0x009F2A40 forwarders name this result maker.  The
+// 0x009F39F0 constructor, 0x009F3C00 append method, and 0x009F2A70 predicate
+// identify its result payload and linked-node filtering behavior.
+//
+// The payload is viewed raw here (the vector view lives in the append TU):
+// retail destroys the item buffer with a plain free, not an stlport dtor.
+
+extern "C" void __cdecl free(void *block);
+
+class BfmeThingEQ
+{
+public:
+	unsigned char bfmeAskEQ(void *what);
+};
+
+class BfmeResultNodeItem
+{
+public:
+	virtual void bfmeSpare000(void) = 0;
+	virtual void bfmeSpare001(void) = 0;
+	virtual void bfmeSpare002(void) = 0;
+	virtual void *bfmeGetResultThing(void) = 0;
+};
+
+struct BfmeResultNode
+{
+	void *m_bfmeUnused;
+	BfmeResultNodeItem *m_bfmeItem;
+	void *m_bfmeUnused2;
+	BfmeResultNode *m_bfmeNext;
+};
+
+struct Rva009F39F0Payload
+{
+	void *m_start;
+	void *m_finish;
+	void *m_end;
+	void *m_cursor;
+	int m_refCount;
+};
+
+struct Rva009F39F0Result
+{
+	Rva009F39F0Payload *m_value;
+
+	Rva009F39F0Result();
+	void append(int first, int second);
+};
+
+typedef Rva009F39F0Payload BfmeResultPayload;
+
+struct BfmeResultA : private Rva009F39F0Result
+{
+	BfmeResultA()
+		: Rva009F39F0Result()
+	{
+	}
+	__forceinline BfmeResultA(const BfmeResultA &that)
+		: Rva009F39F0Result(*(const Rva009F39F0Result *)&that)
+	{
+		m_value = that.m_value;
+		++m_value->m_refCount;
+	}
+
+	__forceinline ~BfmeResultA()
+	{
+		--m_value->m_refCount;
+		if (m_value->m_refCount == 0)
+		{
+			BfmeResultPayload *payload = m_value;
+			if (payload->m_start != 0)
+				free(payload->m_start);
+			::operator delete(payload);
+		}
+	}
+};
+
+class BfmeResultSourceA
+{
+	unsigned char m_bfmePadding[0x114];
+	BfmeResultNode *m_bfmeHead;
+
+public:
+	BfmeResultA bfmeMakeResultA(int value);
+};
+
+BfmeResultA BfmeResultSourceA::bfmeMakeResultA(int value)
+{
+	BfmeResultA result;
+	BfmeResultNode *node = m_bfmeHead;
+
+	while (node != 0)
+	{
+		void *thing = node->m_bfmeItem->bfmeGetResultThing();
+
+		if (thing != 0 && (value == 0 || ((BfmeThingEQ *)value)->bfmeAskEQ(thing) != 0))
+			((Rva009F39F0Result *)&result)->append((int)thing, 0);
+
+		node = node->m_bfmeNext;
+	}
+
+	return result;
+}
