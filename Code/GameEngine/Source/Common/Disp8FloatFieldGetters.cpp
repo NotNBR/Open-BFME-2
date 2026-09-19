@@ -10,6 +10,9 @@
 // reference/open-bfme-1/Code/GameEngine/Source/Common/DispFloatFieldGetters.cpp).
 // Identity is not recovered: every name is derived from its address.
 // No // cl: line (defaults match the frameless 4-byte shape).
+// Negative-displacement sibling: the disp8 byte sign-extends, so a disp byte
+// above 0x7F reads *before* `this` (e.g. 98 = -104). Spelled as a negative
+// float index from `this`, which MSVC 7.1 folds to the same disp8 fld.
 #define BFME_DISP8_FLOAT_GETTER(NAME, DISP) \
 	class NAME \
 	{ \
@@ -21,6 +24,17 @@
 	float NAME::get() const \
 	{ \
 		return m_value; \
+	}
+
+#define BFME_DISP8_NEG_FLOAT_GETTER(NAME, INDEX) \
+	class NAME \
+	{ \
+	public: \
+		float get() const; \
+	}; \
+	float NAME::get() const \
+	{ \
+		return ((const float *)this)[INDEX]; \
 	}
 
 BFME_DISP8_FLOAT_GETTER(Rva0015DF10FloatField, 0x1C)
@@ -35,3 +49,6 @@ BFME_DISP8_FLOAT_GETTER(Rva006BD45DFloatField, 0x08)
 BFME_DISP8_FLOAT_GETTER(Rva006C03E0FloatField, 0x0C)
 BFME_DISP8_FLOAT_GETTER(Rva00723490FloatField, 0x08)
 BFME_DISP8_FLOAT_GETTER(Rva0073A1C0FloatField, 0x20)
+BFME_DISP8_FLOAT_GETTER(Rva0008BB38FloatField, 0x40)
+BFME_DISP8_NEG_FLOAT_GETTER(Rva0030592FFloatField, -26)
+BFME_DISP8_FLOAT_GETTER(Rva004987FEFloatField, 0x38)
