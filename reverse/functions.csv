@@ -10456,3 +10456,4 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?bfmeAtE15@BfmeObjE15@@QAEPAUBfmeShapeE15@@H@Z,,0x006BD980,60,Code/GameEngine/Source/Common/Rva0087E150At.cpp,matched,BFME1 near-miss donor; b1 0x0087E150; immediate-only drift
 ?resolveHostAddress@@YGHPBD@Z,,0x006C9F40,73,Code/GameEngine/Source/Common/SmallGaps/resolveHostAddress.cpp,matched,BFME1 near-miss donor; b1 0x00885430; immediate-only drift
 ??0Gen001811E0@@QAE@PAX@Z,,0x001811E0,73,Code/GameEngine/Source/Common/P8ZeroingCtors.cpp,matched,BFME1 near-miss donor Gen0090BE20; scope-table retarget; init pin 0x001810D0 same batch
+??0Rva00947170SkinContainer@@QAE@_N0@Z,,0x001455B0,84,Code/GameEngine/Source/Common/SmallGaps/Rva00947170SkinContainerCtor.cpp,matched,BFME1 near-miss donor; b1 0x00947170; immediate-only drift
