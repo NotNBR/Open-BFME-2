@@ -11572,3 +11572,4 @@ _math_asin,,0x00748460,43,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.
 ?name@Rva002086B7Named@@QBEPBDXZ,,0x002086B7,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning ScriptEngine; vtable ref in .rdata; address-derived placeholder name
 ??_GRva004C85A4@@UAEPAXI@Z,,0x004C8602,28,Code/GameEngine/Source/Common/Rva00493DEFDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GRva004C86E4@@UAEPAXI@Z,,0x004C8742,28,Code/GameEngine/Source/Common/Rva00493DEFDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+_math_acos,,0x00748490,43,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.acos via check_number + CIacos + pushnumber; callees pinned
