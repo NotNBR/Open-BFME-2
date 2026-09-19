@@ -11355,3 +11355,4 @@ _luaD_callTM,,0x0074DE70,55,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-i
 _lua_error,,0x0074D570,36,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
 ?get@Rva003674F6LeaField@@QBEPAXXZ,,0x003674F6,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-54-C3
 ?apply@Rva000550576DwordImmSetter@@QAEXXZ,,0x00550576,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-C0ABC600-C3
+?apply@Rva00054F91BDwordImmSetter@@QAEXXZ,,0x0054F91B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-10ABC600-C3
