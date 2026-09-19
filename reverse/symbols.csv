@@ -3097,3 +3097,4 @@ _subexpr,0x007558A0
 ?_M_insert_overflow@?$vector@PAVSubtitleEntry@@V?$allocator@PAVSubtitleEntry@@@_STL@@@_STL@@IAEXPAPAVSubtitleEntry@@ABQAV3@ABU__true_type@2@I_N@Z,0x006887F0
 Gen_f265_b7a8aa_0081dad0,0x006887F0
 ?bfmeIncVGO@@YAIPAI@Z,0x006CFDE0
+?bfmeEraseVMU@BfmeListVMU@@QAEXPAPAVBfmeNodeVMU@@@Z,0x006D1C90
