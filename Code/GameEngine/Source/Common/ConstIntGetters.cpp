@@ -569,3 +569,12 @@ int Rva003007A2Get(void)
 {
 	return 0x00700778;
 }
+
+// ?Rva000A272DGet@@YAHXZ @ 0x000A272D (6B): returns 0x0048F9D3.
+// Opens a contiguous triple (2D/33/39, each B8-6 back to back) after a
+// ret. Carried at 1 .rdata slot, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva000A272DGet(void)
+{
+	return 0x0048F9D3;
+}
