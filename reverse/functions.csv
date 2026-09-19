@@ -11196,3 +11196,5 @@ _lua_newtag,,0x0074FBC0,113,Code/Libraries/Source/Lua/ltm.c,matched,BFME1 byte-i
 ?apply@Rva004E14E1DwordImmSetter@@QAEXXZ,,0x004E14E1,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?get@Rva0031A9DCLeaGetter@@QBEPAXXZ,,0x0031A9DC,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?get@Rva00332AFFLeaGetter@@QBEPAXXZ,,0x00332AFF,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
+?collectAll@Rva00758B20@@QAEXXZ,,0x00758B20,56,Code/GameEngine/Source/Common/Rva00758B20Collect.cpp,matched,CGD bucket drain; this is the +0xAE10 region (head lands on +0xC05C freelist slot); called from bfmeGlobalCGD
+?apply@Rva000A8EC2DwordImmSetter@@QAEXXZ,,0x000A8EC2,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
