@@ -11261,3 +11261,5 @@ _luaS_newudata,,0x00750230,148,Code/Libraries/Source/Lua/lstring.c,matched,BFME1
 ?get@Rva0049CB5BFloatField@@QBEMXZ,,0x0049CB5B,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter
 ?get@Rva004F5F8AFloatField@@QBEMXZ,,0x004F5F8A,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter
 ?get@Rva0057C505LeaGetter@@QBEPAXXZ,,0x0057C505,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; address-derived opaque holder
+?get@Rva005B0200LeaGetter@@QBEPAXXZ,,0x005B0200,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; address-derived opaque holder
+?get@Rva00542BDEFloatField@@QBEMXZ,,0x00542BDE,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter
