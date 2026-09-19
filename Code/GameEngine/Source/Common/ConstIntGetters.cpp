@@ -614,3 +614,12 @@ int Rva0056D749Get(void)
 {
 	return 0x00810223;
 }
+
+// ?Rva005C9880Get@@YAHXZ @ 0x005C9880 (6B): returns 0x009C9886.
+// Follows a pop/ret (0x5C987E-7F) with a B8-imm/call function after
+// (0x5C9886). Carried at 0x874B8C, no direct callers, no branch
+// sources. Opaque address-derived name.
+int Rva005C9880Get(void)
+{
+	return 0x009C9886;
+}
