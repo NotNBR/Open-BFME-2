@@ -278,3 +278,12 @@ int Rva00433B18Get(void)
 {
 	return 0x00E032DC;
 }
+
+// ?Rva0056A983Get@@YAHXZ @ 0x0056A983 (6B): returns 0x00C6CFD0.
+// Follows a leave/ret (0x56A981-82) with a cmp/jcc-style function after.
+// 1 direct E8 caller (0x3EE5CE), no Ghidra entry (dead emission), no
+// branch sources. Opaque address-derived name.
+int Rva0056A983Get(void)
+{
+	return 0x00C6CFD0;
+}
