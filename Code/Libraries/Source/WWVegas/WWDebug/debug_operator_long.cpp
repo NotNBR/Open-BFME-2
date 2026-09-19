@@ -51,3 +51,13 @@ Debug &Debug::operator<<(__int64 val)
 	Debug::AddOutput(m_prefix, strlen(m_prefix));
 	return (*this) << _i64toa(val, help, m_radix);
 }
+
+// Debug::operator<<(unsigned __int64), retail at 0x0003B570. Same shape as
+// the signed twin above; the CRT worker is _ui64toa (IAT 0x00BBA590 vs the
+// signed 0x00BBA594) and the layout is this TU's adapted one.
+Debug &Debug::operator<<(unsigned __int64 val)
+{
+	char help[64 + 1];
+	Debug::AddOutput(m_prefix, strlen(m_prefix));
+	return (*this) << _ui64toa(val, help, m_radix);
+}
