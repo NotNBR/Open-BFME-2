@@ -11670,3 +11670,5 @@ _math_deg,,0x00748710,38,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.d
 ??_GRva00254C4B@@UAEPAXI@Z,,0x00254C2F,28,Code/GameEngine/Source/Common/Rva0049B47CDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GRva00341E22@@UAEPAXI@Z,,0x00342F41,28,Code/GameEngine/Source/Common/Rva0049B47CDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GRva00362EE3@@UAEPAXI@Z,,0x003630E6,28,Code/GameEngine/Source/Common/Rva0049B47CDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+?name@Rva001F37BENamed@@QBEPBDXZ,,0x001F37BE,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning FXParticleInfo; vtable ref in .rdata; address-derived placeholder name
+??_GRva00484F5D@@UAEPAXI@Z,,0x00484F41,28,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
