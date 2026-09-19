@@ -11802,3 +11802,4 @@ _str_rep,,0x00748CE0,114,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string 
 ?name@Rva0024A791Named@@QBEPBDXZ,,0x0024A791,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning BehaviorModule; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva0024E353Named@@QBEPBDXZ,,0x0024E353,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning GateProxyBehavior; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva00250A93Named@@QBEPBDXZ,,0x00250A93,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning SpawnedModelConditionCreate; vtable ref in .rdata; address-derived placeholder name
+?name@Rva00251C76Named@@QBEPBDXZ,,0x00251C76,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning SpecialPowerTimerRefreshSpecialPower; vtable ref in .rdata; address-derived placeholder name
