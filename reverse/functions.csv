@@ -10809,3 +10809,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?GadgetComboBoxGetLength@@YAHPAVGameWindow@@@Z,,0x003229B1,20,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetComboBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B3D40; ICF-folded in BFME1 so the name is this sweeps pick among its twins
 ?GadgetCheckLikeButtonIsChecked@@YA_NPAVGameWindow@@@Z,,0x00327C9B,30,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetPushButton.cpp,matched,BFME1 byte-identical donor; b1 0x004BBDB0
 ?bfmeSmallFreePM@@YAXPAXI@Z,,0x00027A40,75,Code/GameEngine/Source/Common/BfmeTwoHundredSeventyThree.cpp,matched,BFME1 byte-identical donor; b1 0x0082E4F0
+??1Rva00803890Owner@@UAE@XZ,,0x0066F8D0,96,Code/GameEngine/Source/GameNetwork/Rva00803890FeslDtor.cpp,matched,BFME1 byte-identical donor; b1 0x00803890
