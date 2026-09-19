@@ -10749,3 +10749,4 @@ _funcstat,,0x007551D0,117,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte
 ?bfmeGo929B@BfmeThing929B@@QAEXPAX0@Z,,0x0065CE70,29,Code/GameEngine/Source/Common/BfmeConv929.cpp,matched,BFME1 byte-identical donor; b1 0x007EFF80
 ?bfmeFind@Gen_007F7110@@QBEPAVBfmeSlotDV@@PAX@Z,,0x00663800,36,Code/GameEngine/Source/Common/Bfme5FiftyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x007F7110
 ?bfmeFind@Gen_007F7180@@QBEPAVBfmeSlotEH@@PAX@Z,,0x00663870,36,Code/GameEngine/Source/Common/Bfme5SixtyOne.cpp,matched,BFME1 byte-identical donor; b1 0x007F7180
+?bfmeIsBasic@@YGHH@Z,,0x00040830,35,Code/GameEngine/Source/Common/Bfme5FiftyOne.cpp,matched,BFME1 byte-identical donor; b1 0x00890EE0
