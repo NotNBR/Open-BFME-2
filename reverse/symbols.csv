@@ -3174,3 +3174,5 @@ _luaL_checkstack,0x007518D0
 _luaL_opt_number,0x00751AD0
 _luaL_prepbuffer,0x00751620
 _luaL_pushresult,0x007516F0
+?readInt@DataChunkInput@@QAEHXZ,0x00306E78
+?addWaypointLink@TerrainLogic@@IAEXHH@Z,0x0027F009
