@@ -154,3 +154,11 @@ int Rva001820B0Get(void)
 {
 	return 9;
 }
+
+// ?Rva0056DD52Get@@YAHXZ @ 0x0056DD52 (6B): returns 0x00DC2884. Opens a
+// contiguous triple (52/58/5E, each B8-6 back to back) after an indirect
+// call + leave/ret. 2 direct E8 callers, Ghidra-6. Opaque name.
+int Rva0056DD52Get(void)
+{
+	return 0x00DC2884;
+}
