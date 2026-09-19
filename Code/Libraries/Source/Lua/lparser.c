@@ -549,7 +549,6 @@ static void singlevar (LexState *ls, TString *n, expdesc *var) {
 }
 
 
-// _funcname present-unmatched
 static int funcname (LexState *ls, expdesc *v) {
   /* funcname -> NAME [':' NAME | '.' NAME] */
   int needself = 0;
