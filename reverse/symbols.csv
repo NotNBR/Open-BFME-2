@@ -517,7 +517,6 @@ name,address,notes
 ??1Rva00451F45@@UAE@XZ,0x00451F45,opaque SEH base dtor (4 vptrs +0/+0xC/+0x10/+0x20, calls middle 0x24A797 and member helpers); 6 derived 32B dtors tail-call it; identity unproven
 ??1Rva00462151@@UAE@XZ,0x00462151,opaque MI dtor (25B: vptrs +0/+0xC/+0x10, tertiary 0xC42F1C, tail-jmp 0x49B47C fold); called by scalar-deleting-dtor at 0x4621FA; identity unproven, address-derived name
 ??1Rva00470A0@@UAE@XZ,0x00470A0,opaque SEH dtor (mov-eax-cookie prologue); called by scalar-deleting-dtor at 0x4818E; identity unproven, address-derived name
-??1Rva00484EF4@@UAE@XZ,0x00484EF4,opaque MI dtor (25B: vptrs +0/+0xC/+0x10, tertiary 0xC4A50C, tail-jmp 0x49B47C fold); called by scalar-deleting-dtor at 0x589038; identity unproven, address-derived name
 ??1Rva00493DEF@@UAE@XZ,0x00493DEF,opaque MI base dtor (SEH, 3 vptrs incl shared 0xBEFCF8 secondary); 20 derived MI dtors tail-call it; identity unproven
 ??1Rva00494A97@@UAE@XZ,0x00494A97,opaque MI dtor (39B: 4+ vptr stores); called by scalar-deleting-dtor at 0x494B9E; identity unproven, address-derived name
 ??1Rva0049B47C@@UAE@XZ,0x0049B47C,opaque fold-point dtor (25 dtors fold here incl FX infos plus Snapshot plus ObjectModule); 5 derived dtors tail-call it; identity unproven

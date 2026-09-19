@@ -1,18 +1,24 @@
 // cl: /O1 /MD /GX
 //
 // Opaque three-vptr destructors tail-calling Rva0049B47C::~Rva0049B47C at
-// 0x0049B47C (pinned opaque fold-point dtor; identity unproven). Unlike the
-// sibling single-inheritance TU, these bodies store a tertiary vptr at +0x10
-// and retail orders that store FIRST (+0x10, +0, +0xC); the opaque model
-// below emits (+0, +0xC, +0x10), so the dtors stay unclaimed (see the 0.8
-// partial bank). The scalar deleting destructor needs no vptr stores and is
-// claimed from the emitted COMDAT. Owner identities are unproven (opaque Rva
-// names). One ledger row per destructor, landed one commit at a time.
+// 0x0049B47C (pinned opaque fold-point dtor; identity unproven). These bodies
+// store a tertiary vptr at +0x10 and retail orders that store FIRST (+0x10,
+// +0, +0xC). That order falls out of a shared PrimaryP intermediate
+// (Rva0049B47C padded to 0xC plus the shared MiBase1 at +0xC) with a user
+// empty destructor: each middle derives from PrimaryP plus its own B2 at
+// +0x10, shares PrimaryP's +0/+0xC vptrs (patched once for the whole family)
+// and keeps a per-middle B2-part vtable, then tail-calls the pinned base.
+// Rva0049B47C is declared throw() (truthful: the 7B fold body cannot throw;
+// mangling unchanged) so the middles stay SEH-free like retail. This
+// supersedes the 0.8 partial bank (which used the direct model emitting
+// (+0, +0xC, +0x10)). The scalar deleting destructor needs no vptr stores and
+// is claimed from the emitted COMDAT. Owner identities are unproven (opaque
+// Rva names). One ledger row per destructor, landed one commit at a time.
 
 class Rva0049B47C
 {
 public:
-	virtual ~Rva0049B47C();
+	virtual ~Rva0049B47C() throw();
 
 private:
 	char m_pad04[8];
@@ -24,24 +30,46 @@ public:
 	virtual void f1();
 };
 
+// Shared intermediate: Rva0049B47C (padded to 0xC) plus the shared MiBase1 at
+// +0xC. The user empty destructor is load-bearing: it makes each middle share
+// PrimaryP's +0/+0xC vptrs (instead of storing its own first), producing
+// retail's (+0x10, +0, +0xC) order, and inlines to nothing so the middle still
+// tail-calls the pinned fold base.
+class PrimaryP : public Rva0049B47C, public MiBase1
+{
+public:
+	~PrimaryP() {}
+};
+
 class Rva00484EF4_B2
 {
 public:
 	virtual void f2();
 };
 
-class Rva00484EF4 : public Rva0049B47C, public MiBase1, public Rva00484EF4_B2
+class Rva00484EF4 : public PrimaryP, public Rva00484EF4_B2
 {
 public:
-	virtual ~Rva00484EF4()
-	{
-	}
+	virtual ~Rva00484EF4();
 };
 
-// Anchor: forces out-of-line emission of the in-class destructor COMDAT.
-void Rva00484EF4_Anchor(Rva00484EF4 *p)
+Rva00484EF4::~Rva00484EF4()
 {
-	p->Rva00484EF4::~Rva00484EF4();
+}
+
+// Anchor: forces emission of the scalar deleting destructor COMDAT (an
+// out-of-class destructor no longer emits ??_G on its own, and `delete` on a
+// pointer would only virtual-call it). Deleting a freshly-newed object lets
+// the compiler devirtualize to a direct ??_G call, which emits the COMDAT;
+// ??_G calls the dtor above plus the pinned operator delete. The anchor
+// itself is unclaimed scratch. Operator new/delete resolve to their pins.
+void *operator new(unsigned int size);
+void operator delete(void *p);
+
+void Rva00484EF4_Anchor()
+{
+	Rva00484EF4 *p = new Rva00484EF4;
+	delete p;
 }
 
 class Rva004BD763_B2
