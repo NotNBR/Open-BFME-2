@@ -3181,3 +3181,4 @@ _bfme_MallocAlloc0OomMalloc_82B820,0x00024200,STLport __malloc_alloc<0>::_S_oom_
 ??1RvaVec002B80CE@@QAE@XZ,0x002B80CE,opaque vector-member dtor (SEH range-destroy via _Destroy 0x2B70B3 then operator delete); serves Rva004E32F2 member at plus 0x0C; element type unproven
 _bfmeMalloc1149,0x00023790
 _bfmeMalloc1150,0x00023790
+?Rva009A7F60@@YAXPAHPAGHHHHPBH@Z,0x001B89C0
