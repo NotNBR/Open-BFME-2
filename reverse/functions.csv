@@ -11341,3 +11341,4 @@ _lua_tostring,,0x007473B0,71,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte
 _lua_tag,,0x00747210,55,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _lua_settable,,0x00747950,54,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _lua_touserdata,,0x00747490,52,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
+_lua_settop,,0x00746F40,44,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
