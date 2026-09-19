@@ -11903,3 +11903,4 @@ _push_captures,,0x00749720,110,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_s
 _luaI_addquoted,,0x00749C80,325,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_luaI_addquoted; Lua lstrlib static compiles to retail span
 _lmemfind,,0x007496B0,110,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep dir32 alias; object-symbol=_lmemfind; Lua lstrlib static compiles to retail span
 ?get@Rva004DE9C3DwordField@@QBEHXZ,,0x004DE9C3,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva00512678DwordField@@QBEHXZ,,0x00512678,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
