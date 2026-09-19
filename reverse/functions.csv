@@ -12397,3 +12397,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 ?Rva00186790Get@@YAHXZ,,0x00186790,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 18; CC-island with 1 mapper-family vtable ref; opaque name
 ?Rva001869A0Get@@YAHXZ,,0x001869A0,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 20; CC-island with 1 mapper-family vtable ref; opaque name
+?Rva000A219DGet@@YAHXZ,,0x000A219D,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x48FABB; follows 0xA2197 with 1 parallel vtable ref; opaque name
