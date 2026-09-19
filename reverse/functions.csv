@@ -12042,3 +12042,4 @@ _lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 by
 ?get@Rva00674A70LeaGetter@@QBEPAXXZ,,0x00674A70,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-8C000000-C3
 ?name@Rva002B30A8Named@@QBEPBDXZ,,0x002B30A8,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning DelayedAudioEventModule; vtable ref; address-derived placeholder name
 ?name@Rva002B30D3Named@@QBEPBDXZ,,0x002B30D3,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning DelayedCameraEventModule; vtable ref; address-derived placeholder name
+?name@Rva002B596CNamed@@QBEPBDXZ,,0x002B596C,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning DelayedWorldTextEventModule; vtable ref; address-derived placeholder name
