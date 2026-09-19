@@ -9,3 +9,8 @@ void Rva008993E0Owner::setBit8(int value)
 {
 	m_bit8 = value != 0;
 }
+// ?getBit8@Rva008993E0Owner@@QAEHXZ
+int Rva008993E0Owner::getBit8()
+{
+	return m_bit8;
+}
