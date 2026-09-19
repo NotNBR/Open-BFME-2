@@ -11960,3 +11960,4 @@ _luaL_check_lstr,,0x007519A0,123,Code/Libraries/Source/Lua/lauxlib.c,matched,BFM
 _luaL_addvalue,,0x00751760,159,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _adjuststack,,0x007515A0,128,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1; unclaimed_scan exact of TU-emitted body
 _type_error,,0x00751880,68,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1; unclaimed_scan exact of TU-emitted body
+_luaX_invalidchar,,0x00756FD0,79,Code/Libraries/Source/Lua/llex.c,matched,gen-alias; object-symbol=_luaX_invalidchar; C++ alias; obj_sweep rel32 wave
