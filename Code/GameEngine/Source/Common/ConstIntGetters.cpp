@@ -453,3 +453,12 @@ int Rva0013DA70Get(void)
 {
 	return 4;
 }
+
+// ?Rva00166C10Get@@YAHXZ @ 0x00166C10 (6B): returns 6. Follows a C2-04-00
+// ret with CC padding, 8xCC after, carried at 0x7D3FB4 in the 0x7D3Fxx
+// mapper family tables, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00166C10Get(void)
+{
+	return 6;
+}
