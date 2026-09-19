@@ -26,3 +26,13 @@ int Rva002BE8CEGet(void)
 {
 	return 0x00BFE4D4;
 }
+
+// ?Rva0009FDF5Get@@YAHXZ @ 0x0009FDF5 (6B): returns 0x0048F925.
+// Follows a cmov-style ret (prev C3), carried by 1 .rdata slot (0x7C8CB0)
+// in a vtable family shared with Rva0009FDFBGet (identical neighbours,
+// parallel tables 44B apart), no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva0009FDF5Get(void)
+{
+	return 0x0048F925;
+}
