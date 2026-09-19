@@ -11500,3 +11500,4 @@ _lua_stackspace,,0x00746F20,13,Code/Libraries/Source/Lua/lapi.c,matched,object-s
 _lua_remove,,0x00746F70,93,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_remove; emitted by lapi.c object; vendored=lua-4.0.1
 _lua_insert,,0x00746FD0,113,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_insert; emitted by lapi.c object; vendored=lua-4.0.1
 _lua_isstring,,0x007471D0,60,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_isstring; emitted by lapi.c object; vendored=lua-4.0.1
+_lua_topointer,,0x007474D0,56,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_topointer; emitted by lapi.c object; vendored=lua-4.0.1
