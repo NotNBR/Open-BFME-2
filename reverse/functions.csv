@@ -11498,3 +11498,4 @@ _math_pow,,0x00748620,65,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.p
 ?get@Rva0045D397MaskedDwordField@@QBEHXZ,,0x0045D397,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
 _lua_stackspace,,0x00746F20,13,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_stackspace; emitted by lapi.c object; vendored=lua-4.0.1
 _lua_remove,,0x00746F70,93,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_remove; emitted by lapi.c object; vendored=lua-4.0.1
+_lua_insert,,0x00746FD0,113,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_insert; emitted by lapi.c object; vendored=lua-4.0.1
