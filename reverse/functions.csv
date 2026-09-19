@@ -11490,3 +11490,4 @@ _luaM_growaux,,0x00750AE0,97,Code/Libraries/Source/Lua/lmem.c,matched,BFME1 byte
 ?name@Rva000B696BNamed@@QBEPBDXZ,,0x000B696B,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning EventParameter; vtable ref in .rdata; address-derived placeholder name
 ??_GDebug@@UAEPAXI@Z,,0x00039920,33,Code/Libraries/Source/WWVegas/WWDebug/DebugDestructorThunk.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GDebugIOFlat@@UAEPAXI@Z,,0x00040780,33,Code/Libraries/Source/WWVegas/WWDebug/debug_io_flat.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+?get@Rva001E35B6MaskedDwordField@@QBEHXZ,,0x001E35B6,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
