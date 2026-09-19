@@ -10937,3 +10937,4 @@ _codelineinfo,,0x007521D0,105,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 by
 _listfields,,0x00754EA0,281,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_concat,,0x00752180,72,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan; fixjump pin 0x751D60
 _luaK_deltastack,,0x00751DE0,65,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_need_value,,0x00752140,61,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
