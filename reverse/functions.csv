@@ -11406,3 +11406,5 @@ _luaV_tonumber,,0x0074E320,56,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte
 _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 byte-identical donor b1 lobject.c; exact via unclaimed_scan
 ??1?$SimpleVecClass@VVector2@@@@UAE@XZ,,0x001883C0,41,Code/Libraries/Source/WWVegas/WW3D2/MeshLoadContextCtor.cpp,matched,gen-alias;object-symbol=??1?$SimpleVecClass@VVector2@@@@UAE@XZ;C++ alias
 ??_G?$SimpleVecClass@VVector2@@@@UAEPAXI@Z,,0x00188540,61,Code/Libraries/Source/WWVegas/WW3D2/MeshLoadContextCtor.cpp,matched,gen-alias;object-symbol=??_G?$SimpleVecClass@VVector2@@@@UAEPAXI@Z;C++ alias
+?apply@Rva0005D10D6DwordImmSetter@@QAEXXZ,,0x005D10D6,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-9C55C700-C3
+?apply@Rva0007461FDwordImmSetter@@QAEXXZ,,0x0007461F,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-A865BC00-C3
