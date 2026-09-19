@@ -11884,3 +11884,4 @@ _matchbalance,,0x007491A0,104,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sw
 ?get@Rva000B2906DwordField@@QBEHXZ,,0x000B2906,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva002C8F48DwordField@@QBEHXZ,,0x002C8F48,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?Put_PKey@INIClass@@QAE_NABVPKey@@@Z,,0x00618FB0,90,Code/Libraries/Source/WWVegas/WWLib/ini_PutPKey.cpp,matched,ZH ini.cpp verbatim; Encode rows plus same-file Put_UUBlock row resolve
+?removeUnitFromPathfindMap@Pathfinder@@QAEXPAVObject@@@Z,,0x006D5CB0,27,Code/GameEngine/Source/GameLogic/AI/PathfinderRemoveUnit.cpp,matched,ZH AIPathfind.cpp verbatim; removePos removeGoal pins
