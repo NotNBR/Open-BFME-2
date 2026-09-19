@@ -11511,3 +11511,4 @@ _luaF_getlocalname,,0x00751CD0,71,Code/Libraries/Source/Lua/lfunc.c,matched,obje
 ?get@Rva000B6371SubDwordField@@QBEHXZ,,0x000B6371,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
 _zffilbuf,,0x00756E10,69,Code/Libraries/Source/Lua/lzio.c,matched,object-symbol=_zffilbuf; emitted by lzio.c object; vendored=lua-4.0.1
 _luaA_pushobject,,0x00746EE0,56,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_luaA_pushobject; emitted by lapi.c object; vendored=lua-4.0.1
+_lua_isnumber,,0x00747130,87,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_isnumber; emitted by lapi.c object; vendored=lua-4.0.1
