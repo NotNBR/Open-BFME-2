@@ -3132,3 +3132,4 @@ Gen_f265_b7a8aa_0081dad0,0x006887F0
 ?_M_insert_overflow@?$vector@VMoney@@V?$allocator@VMoney@@@_STL@@@_STL@@IAEXPAVMoney@@ABV3@ABU__false_type@2@I_N@Z,0x006BF5E0
 _lua_settable,0x00747950
 ?bfmeCalcEFC@@YGMH@Z,0x0039B145
+?startRenderToTexture@W3DShaderManager@@SAXXZ,0x00075BD8
