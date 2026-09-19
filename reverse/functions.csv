@@ -11363,3 +11363,4 @@ _lua_error,,0x0074D570,36,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-ide
 ?apply@Rva0004E84A4DwordImmSetter@@QAEXXZ,,0x004E84A4,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-206FBC00-C3
 ?apply@Rva00049C38ADwordImmSetter@@QAEXXZ,,0x0049C38A,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-E026BC00-C3
 ?apply@Rva0004318D8DwordImmSetter@@QAEXXZ,,0x004318D8,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-70C9C300-C3
+?apply@Rva000429191DwordImmSetter@@QAEXXZ,,0x00429191,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-74BABD00-C3
