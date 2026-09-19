@@ -17,3 +17,11 @@ int Rva001820A0Get(void)
 {
 	return 8;
 }
+
+// ?Rva00182D20Get@@YAHXZ @ 0x00182D20 (6B): returns 12. CC-island,
+// 5 vtable refs in the same 0x7D3Fxx-0x7D56xx mapper family (each carrying
+// it 13 slots after Rva001820A0Get), no direct callers, no branch sources.
+int Rva00182D20Get(void)
+{
+	return 12;
+}
