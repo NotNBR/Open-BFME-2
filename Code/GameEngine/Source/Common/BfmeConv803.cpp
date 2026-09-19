@@ -1,0 +1,60 @@
+// Two null-guarded field readers off bfmeGetEBN (trimmed from an eight-body
+// donor; the other six are declared-only here).
+
+class BfmeObjEBJ
+{
+public:
+	void bfmeCallEBJ(void *b, const char *s);
+};
+
+class BfmeObjEBK
+{
+public:
+	void bfmeOneEBK(void *x, int n);
+	void bfmeTwoEBK(void *x, void *b);
+};
+
+class BfmeObjEBL
+{
+public:
+	void bfmeCallEBL(void *a, void *b);
+};
+
+char bfmeCmpEBMa(void *a, void *b);
+char bfmeCmpEBMb(void *a, void *b);
+
+struct BfmeSubEBN
+{
+	unsigned char m_bfmeHead[0x20];
+	char m_bfmeC;
+	unsigned char m_bfmePad[3];
+	void *m_bfmeP;
+};
+
+class BfmeObjEBN
+{
+public:
+	BfmeSubEBN *bfmeGetEBN();
+};
+
+// ?bfmeGoEBNa@@YAPAXPAVBfmeObjEBN@@@Z
+void *bfmeGoEBNa(BfmeObjEBN *o)
+{
+	if (!o)
+		return 0;
+	BfmeSubEBN *s = o->bfmeGetEBN();
+	if (!s)
+		return 0;
+	return s->m_bfmeP;
+}
+
+// ?bfmeGoEBNb@@YADPAVBfmeObjEBN@@@Z
+char bfmeGoEBNb(BfmeObjEBN *o)
+{
+	if (!o)
+		return 0;
+	BfmeSubEBN *s = o->bfmeGetEBN();
+	if (!s)
+		return 0;
+	return s->m_bfmeC;
+}
