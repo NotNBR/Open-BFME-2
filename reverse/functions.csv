@@ -10990,3 +10990,4 @@ _io_close,,0x0074A320,227,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1
 ?enable@Rva004F5FA7OneSetter@@QAEXXZ,,0x004F5FA7,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
 _setloc,,0x0074B0F0,104,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1 byte-identical donor; b1 0x00993F90
 ?enable@Rva0050E7BBOneSetter@@QAEXXZ,,0x0050E7BB,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
+_lua_iolibopen,,0x0074B5D0,28,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1 byte-identical donor; b1 0x00994470
