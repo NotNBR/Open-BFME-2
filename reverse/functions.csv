@@ -11892,3 +11892,5 @@ _match_capture,,0x007493F0,81,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sw
 ?get@Rva002C8EDDDwordField@@QBEHXZ,,0x002C8EDD,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva00367395DwordField@@QBEHXZ,,0x00367395,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 _push_captures,,0x00749720,110,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_push_captures; Lua lstrlib static compiles to retail span
+?Get_PKey@INIClass@@QBE?AVPKey@@_N@Z,,0x00619010,236,Code/Libraries/Source/WWVegas/WWLib/ini_PutPKey.cpp,matched,ZH ini.cpp verbatim; Decode Get_UUBlock XMP rows resolve
+??0PKey@@QAE@XZ,,0x00615EC0,46,Code/Libraries/Source/WWVegas/WWLib/ini_PutPKey.cpp,matched,PKey default ctor inline COMDAT via Get_PKey; BFME1 pk.h verbatim
