@@ -10706,4 +10706,6 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeRandomPositive@@YAHH@Z,,0x006B89E0,65,Code/GameEngine/Source/Common/Bfme5NinetyTwoRandom.cpp,matched,BFME1 byte-identical donor; b1 0x00879140; caller-proven by fillRandom008747F0 (Rva008747F0RandomFill.cpp)
 ?squash@Rva0084E030Buffer@@QAEXXZ,,0x00021290,52,Code/GameEngine/Source/Common/U2CStringScans.cpp,matched,BFME1 byte-identical donor; b1 0x0084E030
 ?bfmeGo925D@BfmeThing925D@@QAEXPAX@Z,,0x00323657,29,Code/GameEngine/Source/Common/BfmeConv925.cpp,matched,BFME1 byte-identical donor; b1 0x004B5B90
+?bfmeMake@Gen_00161290@@QAE?AUBfmeIterator@@XZ,,0x004EF622,19,Code/GameEngine/Source/Common/S3IteratorMakers.cpp,matched,BFME1 byte-identical donor; b1 0x00161290
 ?bfmeGo925A@@YAPAXPAVBfmeKeyLC@@@Z,,0x002C0315,23,Code/GameEngine/Source/Common/BfmeConv925.cpp,matched,BFME1 byte-identical donor; b1 0x0047A780
+?bfmeMake@Gen_001612B0@@QAE?AUBfmeIterator@@XZ,,0x004F07D3,19,Code/GameEngine/Source/Common/S3IteratorMakers.cpp,matched,BFME1 byte-identical donor; b1 0x001612B0
