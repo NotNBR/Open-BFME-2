@@ -11841,3 +11841,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?set@Rva0007E18DDwordSlot@@QAEXH@Z,,0x0007E18D,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?name@Rva00329EE3Named@@QBEPBDXZ,,0x00329EE3,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning BuildListInfo; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva0032ED53Named@@QBEPBDXZ,,0x0032ED53,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning SidesList; vtable ref in .rdata; address-derived placeholder name
+?name@Rva00337AA2Named@@QBEPBDXZ,,0x00337AA2,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning LuaScriptEngine; vtable ref in .rdata; address-derived placeholder name
