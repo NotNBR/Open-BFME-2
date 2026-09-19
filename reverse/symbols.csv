@@ -3017,7 +3017,6 @@ _luaK_testgo,0x00752FC0
 _luaL_argerror,0x00751820
 _luaL_check_lstr,0x007519A0
 _luaL_check_number,0x00751A80
-_luaL_checkany,0x00751970
 _luaL_checktype,0x00751900
 _luaL_findstring,0x00751490
 _luaL_openlib,0x007514F0
