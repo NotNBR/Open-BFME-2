@@ -12595,3 +12595,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?name@Rva000C1246Named@@QBEPBDXZ,,0x000C1246,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DScriptedModelDraw; vtable ref at 0x7CA098; address-derived placeholder name
 _add_s,,0x00749970,307,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_add_s; Lua lstrlib static compiles to retail span
 ?name@Rva000C9C11Named@@QBEPBDXZ,,0x000C9C11,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DLaserDraw; vtable ref at 0x7CB9E8; address-derived placeholder name
+?name@Rva000CA113Named@@QBEPBDXZ,,0x000CA113,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DQuadrupedDraw; vtable ref at 0x7CBC48; address-derived placeholder name
