@@ -462,3 +462,12 @@ int Rva00166C10Get(void)
 {
 	return 6;
 }
+
+// ?Rva00175750Get@@YAHXZ @ 0x00175750 (6B): returns 26. CC-island
+// (8xCC before and after), carried at 0x7D495C in the 0x7D49xx mapper
+// family tables, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00175750Get(void)
+{
+	return 26;
+}
