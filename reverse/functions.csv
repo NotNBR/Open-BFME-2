@@ -11368,3 +11368,4 @@ _lua_error,,0x0074D570,36,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-ide
 ?get@Rva000395A0LeaGetter@@QBEPAXXZ,,0x000395A0,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-909E0000-C3
 ?get@Rva0036CBE7LeaField@@QBEPAXXZ,,0x0036CBE7,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-18-C3
 ?get@Rva003EE704LeaField@@QBEPAXXZ,,0x003EE704,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-44-C3
+?apply@Rva000419B8DDwordImmSetter@@QAEXXZ,,0x00419B8D,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-ECE7BB00-C3
