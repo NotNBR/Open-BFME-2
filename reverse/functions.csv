@@ -11508,3 +11508,4 @@ _luaF_getlocalname,,0x00751CD0,71,Code/Libraries/Source/Lua/lfunc.c,matched,obje
 ?name@Rva001042C1Named@@QBEPBDXZ,,0x001042C1,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Palantir; vtable ref in .rdata; address-derived placeholder name
 ?get@Rva0007E96ASubDwordField@@QBEHXZ,,0x0007E96A,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
 ??_GRva00253E19@@UAEPAXI@Z,,0x00253DFD,28,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+?get@Rva000B6371SubDwordField@@QBEHXZ,,0x000B6371,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
