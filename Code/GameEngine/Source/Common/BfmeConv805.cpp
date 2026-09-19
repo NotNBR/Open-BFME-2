@@ -1,8 +1,8 @@
-// Two tiny accessors through held sub-objects.
+// Two tiny accessors through held sub-objects, plus the ECMa factory.
 //
 // BFME1 byte-identical donor (reference/open-bfme-1
-// Code/GameEngine/Source/Common/BfmeConv805.cpp); trimmed to the two T1
-// bodies the sweep places. The donor's ECJ/ECMa defs are omitted.
+// Code/GameEngine/Source/Common/BfmeConv805.cpp); trimmed to the three
+// bodies the sweep places. The donor's ECJ defs are omitted.
 
 struct BfmeHeldECKa
 {
@@ -42,4 +42,20 @@ void *BfmeThingECKb::bfmeGoECKb()
 {
 	m_bfmeP->bfmeDoECKb();
 	return m_bfmeP->m_bfmeX;
+}
+
+class BfmeThingECMa
+{
+public:
+	BfmeThingECMa *bfmeCtorECMa();
+};
+
+void *__cdecl bfmeAllocECMa(unsigned int n);
+
+BfmeThingECMa *bfmeGoECMa()
+{
+	void *p = bfmeAllocECMa(0x48);
+	if (p)
+		return ((BfmeThingECMa *)p)->bfmeCtorECMa();
+	return 0;
 }
