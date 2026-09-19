@@ -252,3 +252,11 @@ int Rva00668100Get(void)
 {
 	return 0x00DD8314;
 }
+
+// ?Rva00669530Get@@YAHXZ @ 0x00669530 (6B): returns 0x00DD83B4.
+// CC-island (10xCC after) following a call/leave/ret tail. 1 direct E8
+// caller (0x657B48), Ghidra-6, no branch sources. Opaque name.
+int Rva00669530Get(void)
+{
+	return 0x00DD83B4;
+}
