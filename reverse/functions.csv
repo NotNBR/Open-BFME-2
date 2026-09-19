@@ -10878,3 +10878,4 @@ _settabsi,,0x00747DE0,32,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-i
 ?init@TextOnFrameTransition@@UAEXPAVGameWindow@@@Z,,0x0035FA90,23,Code/GameEngine/Source/GameClient/GUI/TextOnFrameTransitionInit.cpp,matched,BFME1 byte-identical donor; b1 0x005A02B0
 ?bfmeGo939D@@YGHD@Z,,0x003E53B1,23,Code/GameEngine/Source/Common/BfmeConv939_Go939D.cpp,matched,BFME1 byte-identical donor; b1 0x00324340
 _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor; b1 0x0099DED0
+?set@Rva0048C500ByteSlot@@QAEXE@Z,,0x0048C500,13,Code/GameEngine/Source/Common/DispByteFieldSetters.cpp,matched,Disp32 byte setter
