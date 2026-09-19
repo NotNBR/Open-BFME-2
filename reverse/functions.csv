@@ -11448,3 +11448,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?inc@Rva0028A80FDwordCounter@@QAEXXZ,,0x0028A80F,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family triple; opaque holder
 ?name@Rva0008EFD2Named@@QBEPBDXZ,,0x0008EFD2,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning InGameUI; vtable refs at 0x7C7A80 and 0x7FD408; address-derived placeholder name
 ?inc@Rva0020357EDwordCounter@@QAEXXZ,,0x0020357E,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family; opaque holder
+?inc@Rva00428DB8DwordCounter@@QAEXXZ,,0x00428DB8,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family; opaque holder
