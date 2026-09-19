@@ -11839,3 +11839,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?name@Rva00318B7DNamed@@QBEPBDXZ,,0x00318B7D,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning ArmyMoveCommand; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva00319E76Named@@QBEPBDXZ,,0x00319E76,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning LivingWorldArmy; vtable ref in .rdata; address-derived placeholder name
 ?set@Rva0007E18DDwordSlot@@QAEXH@Z,,0x0007E18D,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?name@Rva00329EE3Named@@QBEPBDXZ,,0x00329EE3,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning BuildListInfo; vtable ref in .rdata; address-derived placeholder name
