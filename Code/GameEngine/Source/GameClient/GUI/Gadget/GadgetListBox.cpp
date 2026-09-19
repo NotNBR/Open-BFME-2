@@ -12,6 +12,7 @@ class GameWindow
 {
 public:
 	void *winGetUserData(void);
+	GameWindow *winGetChild(void);
 };
 
 class GameWindowManager
@@ -103,4 +104,16 @@ Int GadgetListBoxGetColumnWidth(GameWindow *listbox, Int column)
 		return 0;
 
 	return (*(Int **)((char *)listboxData + 0x14))[column];
+}
+
+// ?GadgetSliderGetEnabledSelectedThumbBorderColor@@YAHPAVGameWindow@@@Z, retail 0x00323D86 (23B).
+// Ported from ZH GadgetSlider.h inline (BFME1 0x004B6910): the thumb child via
+// winGetChild, its enabled-selected border color at +0x58, else 0x00FFFFFF.
+Int GadgetSliderGetEnabledSelectedThumbBorderColor(GameWindow *slider)
+{
+	GameWindow *thumb = slider->winGetChild();
+	if (thumb)
+		return *(Int *)((char *)thumb + 0x58);
+
+	return 0x00FFFFFF;
 }
