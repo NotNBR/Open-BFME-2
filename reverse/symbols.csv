@@ -3091,3 +3091,6 @@ _subexpr,0x007558A0
 ?bump@Rva009EB940Receiver@@QAEXXZ,0x0061EEC0
 ?winGetInstanceData@GameWindow@@QAEPAVWinInstanceData@@XZ,0x00314046
 ?_M_acquire_lock@NodeAllocMutex@_STL@@QAEXXZ,0x00007820
+?bfmeFlushXO@BfmeHostXO@@QAEXXZ,0x00739F50
+?d_008f7990@BfmeThingCDE@@QAEXXZ,0x00739F50
+?d_008f7ec0@BfmeThingCDE@@QAEXXZ,0x0073A460
