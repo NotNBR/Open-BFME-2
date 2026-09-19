@@ -12404,3 +12404,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva006C7590Get@@YAHXZ,,0x006C7590,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xCE7CBC; CC-island with 1 vtable ref; opaque name
 ?Rva003007A2Get@@YAHXZ,,0x003007A2,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0x700778; leave-ret-prev with Ghidra-6 and 1 vtable ref; opaque name
 ?Read_Subobject@AggregateDefClass@@MAE_NAAVChunkLoadClass@@@Z,,0x001A34D0,139,Code/Libraries/Source/WWVegas/WW3D2/AggregateDefReadSubobject.cpp,matched,BFME1 byte-identical donor; b1 0x009804C0
+?Rva000A2727Get@@YAHXZ,,0x000A2727,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x48F999; C2-ret prev with 1 vtable ref head of triple; opaque name
