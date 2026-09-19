@@ -137,7 +137,6 @@ static void check_match (LexState *ls, int what, int who, int where) {
 }
 
 
-// _string_constant present-unmatched
 static int string_constant (FuncState *fs, TString *s) {
   Proto *f = fs->f;
   int c = s->u.s.constindex;
@@ -521,7 +520,6 @@ static void constructor_part (LexState *ls, Constdesc *cd) {
 }
 
 
-// _search_local present-unmatched
 static int search_local (LexState *ls, TString *n, expdesc *var) {
   FuncState *fs;
   int level = 0;

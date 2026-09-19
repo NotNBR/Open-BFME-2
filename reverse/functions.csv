@@ -11052,3 +11052,4 @@ _luaK_fixjump,,0x00751D60,88,Code/Libraries/Source/Lua/lcode.c,matched,vendored 
 ??1Rva004BB68E@@UAE@XZ,,0x004BB68E,25,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,Opaque MI middle 25B order +0x10/+0/+0xC tail-jumping the 0x49B47C fold; shared PrimaryP plus own B2; upgrades opaque base pin
 ??1Rva00462151@@UAE@XZ,,0x00462151,25,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,Opaque MI middle 25B order +0x10/+0/+0xC tail-jumping the 0x49B47C fold; shared PrimaryP plus own B2; upgrades opaque pin
 _search_local,,0x00753D10,98,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_string_constant,,0x00753A20,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
