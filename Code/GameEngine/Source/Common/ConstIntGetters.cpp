@@ -260,3 +260,12 @@ int Rva00669530Get(void)
 {
 	return 0x00DD83B4;
 }
+
+// ?Rva003EE6F7Get@@YAHXZ @ 0x003EE6F7 (6B): returns 0x00C36290.
+// Follows a leave/ret (0x3EE6F5-56) with a mov-style function after.
+// 1 direct E8 caller (0x20E1B8), no Ghidra entry (dead emission), no
+// branch sources. Opaque address-derived name.
+int Rva003EE6F7Get(void)
+{
+	return 0x00C36290;
+}
