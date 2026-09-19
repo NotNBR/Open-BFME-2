@@ -3160,3 +3160,5 @@ _LoadHeader,0x00756B10
 ?winSetUserData@GameWindow@@QAEXPAX@Z,0x002B2210
 ?bfmeFind1034F@BfmeTab1034@@QAEPAVBfmeN1034@@H@Z,0x0070B380
 ?bfmeVal1034@BfmeN1034@@QAEHXZ,0x006DD360
+??0Rva000B6D8B@@QAE@XZ,0x000B6D8B,opaque helper-member ctor called on MinefieldBehavior+0x24 (SEH body: vtable 0xBC9CF0 plus ehvec 3x24B); boundary proven by pops plus ret ahead; identity unproven
+?bfmeCallJA@BfmeHookJA@@QAEPAUBfmeSlotJA@@XZ,0x001E35DF
