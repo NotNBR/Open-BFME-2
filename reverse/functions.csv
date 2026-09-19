@@ -11882,3 +11882,4 @@ _luaI_classend,,0x00748F10,105,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_s
 _matchbalance,,0x007491A0,104,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_matchbalance; Lua lstrlib static compiles to retail span
 ?get@Rva00332B35DwordField@@QBEHXZ,,0x00332B35,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva000B2906DwordField@@QBEHXZ,,0x000B2906,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva002C8F48DwordField@@QBEHXZ,,0x002C8F48,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
