@@ -3174,3 +3174,5 @@ __strdup,0x006C4C70
 _bfme_MallocAlloc0OomMalloc_82B820,0x00024200,STLport __malloc_alloc<0>::_S_oom_malloc callee of allocate at 0x00025090
 ?_S_refill@?$__node_alloc@$00$0A@@_STL@@CAPAXI@Z,0x000253E0
 ?_S_refill@__new_alloc@_STL@@CAPAU_Obj@12@I@Z,0x000253E0
+?bfmeSmallRefillPR@@YAPAXI@Z,0x00025330
+?_S_refill@?$__node_alloc@$0A@$0A@@_STL@@CAPAXI@Z,0x00025330
