@@ -73,3 +73,15 @@ void GadgetComboBoxSetMaxDisplay(GameWindow *comboBox, Int maxDisplay)
 	ComboBoxData *comboData = (ComboBoxData *)comboBox->winGetUserData();
 	comboData->maxDisplay = maxDisplay;
 }
+
+// ?GadgetComboBoxGetLength@@YAHPAVGameWindow@@@Z, retail 0x003229B1 (20B).
+// Entry count lives at +0x20 (BFME ComboBoxData places the child windows at
+// +0x24/+0x28/+0x2C); load by offset so the body matches retail.
+Int GadgetComboBoxGetLength(GameWindow *comboBox)
+{
+	ComboBoxData *comboData = (ComboBoxData *)comboBox->winGetUserData();
+	if (comboData)
+		return *(Int *)((char *)comboData + 0x20);
+
+	return 0;
+}
