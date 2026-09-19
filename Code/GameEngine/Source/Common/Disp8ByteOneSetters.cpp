@@ -37,6 +37,19 @@
 		m_enabled = 0; \
 	}
 
+#define BFME_DISP8_BYTE_TWO_SETTER(NAME, DISP) \
+	class NAME \
+	{ \
+	public: \
+		void set(); \
+		char m_lead[DISP]; \
+		unsigned char m_value; \
+	}; \
+	void NAME::set() \
+	{ \
+		m_value = 2; \
+	}
+
 BFME_DISP8_BYTE_ONE_SETTER(Rva000D4A7COneSetter, 0x4D)
 BFME_DISP8_BYTE_ONE_SETTER(Rva001DBB82OneSetter, 0x69)
 BFME_DISP8_BYTE_ZERO_SETTER(Rva001DBB87ZeroSetter, 0x69)
@@ -64,3 +77,4 @@ BFME_DISP8_BYTE_ONE_SETTER(Rva004A18C0OneSetter, 0x24)
 BFME_DISP8_BYTE_ONE_SETTER(Rva00050CDCOneSetter, 0x4C)
 BFME_DISP8_BYTE_ONE_SETTER(Rva00050CFCOneSetter, 0x53)
 BFME_DISP8_BYTE_ZERO_SETTER(Rva00050D01ZeroSetter, 0x53)
+BFME_DISP8_BYTE_TWO_SETTER(Rva0026FC9ETwoSetter, 0x38)
