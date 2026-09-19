@@ -10770,3 +10770,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?bfmeDropXX@BfmeLinkXX@@QAEXXZ,,0x00758490,25,Code/GameEngine/Source/Common/BfmeOneHundredFortyEight.cpp,matched,BFME1 byte-identical donor; b1 0x009A2320
 ??0BfmeThingDC@@QAE@PAUBfmeItemDC@@@Z,,0x00116600,25,Code/GameEngine/Source/Common/BfmeOneHundredEightySix.cpp,matched,BFME1 byte-identical donor; b1 0x008FC590
 ?bfmeIsFree@Gen_000EE620@@QBE_NH@Z,,0x0023DB70,25,Code/GameEngine/Source/Common/Bfme5TinyThirteen.cpp,matched,BFME1 byte-identical donor; b1 0x000EE620
+??1Rva004DF324@@UAE@XZ,,0x004DF324,35,Code/GameEngine/Source/Common/Rva004DF324Dtor.cpp,matched,opaque MI dtor; vptr plus consts plus pool-member call via 0x268902 pin; tail-jmp 0x4DF7C2 base pin
