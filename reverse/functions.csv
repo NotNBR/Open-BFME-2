@@ -10670,3 +10670,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?get@Rva006E3C40WordIntField@@QBEHXZ,,0x006E3C40,5,Code/GameEngine/Source/Common/DispWordIntGetters.cpp,matched,Disp8 word-int getter movzx shape
 ?get@Rva004CEEA1WordIntField@@QBEHXZ,,0x004CEEA1,5,Code/GameEngine/Source/Common/DispWordIntGetters.cpp,matched,Disp8 word-int getter movzx shape
 ?LogoffFromServer@Cftp@@QAEJXZ,,0x006CAA70,183,Code/GameEngine/Source/GameNetwork/CftpLogoffFromServer.cpp,matched,BFME1 near-miss donor; b1 0x00885F60; immediate-only drift (data global -> OutputDebugStringA pair); ZeroStuff public per matched QAE row
+?bfmeGoUPC@@YAXPAUBfmeStateUPC@@H@Z,,0x007478E0,59,Code/GameEngine/Source/Common/BfmeConv1339.cpp,matched,BFME1 byte-identical donor; b1 0x00990780
