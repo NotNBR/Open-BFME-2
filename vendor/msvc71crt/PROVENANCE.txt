@@ -1,0 +1,50 @@
+msvcrt.lib — Microsoft's /MD C runtime import+static library, as linked into game.dat
+=====================================================================================
+
+msvcrt.lib
+  sha256  e888617fbd2e153645b92122deab1c6ec437905431243c43aa7310164c0e7779
+  size    431,200 bytes
+  from    Visual C++ 7.1 (Visual Studio .NET 2003), Vc7/lib/msvcrt.lib
+
+A byte-identical copy of the file already committed under build/toolchains/
+vs2003/ in the Open-BFME-1 submodule, which is the compiler this repo builds
+every function with. It is copied here for the same two reasons comsupp.lib is:
+ledger rows name a path without spaces, and progress.py routes them to the
+vendored identity lane — this is Microsoft's compiled code, not the game's.
+
+Why this library and not libcmt.lib
+-----------------------------------
+game.dat is a /MD build, so the bulk of the CRT lives in msvcr71.dll and never
+appears in .text at all. msvcrt.lib is the half that does: an import library for
+the DLL entry points PLUS the objects the linker always copies in regardless —
+the 64-bit arithmetic helpers, the runtime-check (/RTC) support and the PDB
+lookup it needs.
+
+libcmt.lib and libc.lib are the static-CRT variants. Their members place too,
+because most of these objects are compiled from the same sources, but they are
+not what this binary links and they cost 2.9 MB and 2.6 MB. One body placed
+from libcmt alone (__byteswap_ulong, 35 bytes at 0x006038EF); not worth
+committing a 2.9 MB library for, and it is left unclaimed.
+
+Region
+------
+RVA 0x00629580-0x0075B4C6, in two clusters: the arithmetic helpers around
+0x00629xxx and the /RTC and PDB-lookup support around 0x0075Axxx. Seventeen
+rows across nine archive members. Each names the member its bytes come from and
+./build.sh extracts that member and byte-compares it against retail like any
+other row.
+
+How the addresses were decided
+------------------------------
+Each member's COMDATs were carved, every relocation site masked, and .text
+searched for what was left. A row is claimed only where that placement is
+UNIQUE in the whole of .text, and only where Ghidra independently calls the
+same address a function of exactly that size. Ten further placements are held
+back: seven have a Ghidra function at the address whose size disagrees, three
+have no Ghidra entry and no int3 run in front of them.
+
+Licence
+-------
+The file is committed as a build input for byte-verification only: it is read
+to prove that retail bytes match Microsoft's shipped code, and none of it is
+compiled into or redistributed as part of any binary this repo produces.
