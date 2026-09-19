@@ -12017,3 +12017,4 @@ _luaG_getline,,0x0074CA90,135,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 b
 ?name@Rva00063415Named@@QBEPBDXZ,,0x00063415,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DGhostObject; vtable ref; address-derived placeholder name
 ?name@Rva001FD2AENamed@@QBEPBDXZ,,0x001FD2AE,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning Money; vtable ref; address-derived placeholder name
 ?name@Rva002104B0Named@@QBEPBDXZ,,0x002104B0,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning LivingWorldRegionManager; vtable ref; address-derived placeholder name
+?name@Rva0022C4D9Named@@QBEPBDXZ,,0x0022C4D9,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning SkirmishGameInfo; vtable ref; address-derived placeholder name
