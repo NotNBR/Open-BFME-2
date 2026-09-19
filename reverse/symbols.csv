@@ -3033,7 +3033,6 @@ _luaS_newudata,0x00750230,lua_newuserdata 0x747D70 +0x17 E8 decodes here; udata 
 _luaT_init,0x0074FB40
 _luaV_strcomp,0x0074E9D0
 _luaX_lex,0x00757C90
-_luaX_setinput,0x00757020
 _luaZ_read,0x00756E90,LoadBlock 0x756340 +0x66 E8 decodes here; ZIO reader; lzio.c zread
 _lua_getglobal,0x007476C0
 _lua_gettop,0x00746F30
