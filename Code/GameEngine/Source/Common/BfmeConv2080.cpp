@@ -60,7 +60,6 @@ void bfmeGoBZB(BfmeHolderBZB *h);
 void bfmeStepJW(void *q);
 void Rva009A8880Release(void *q);
 void releaseCodecState(CodecState **q);
-void freeCodecMemory(void *memory);
 
 int bfmeFreeCodecJW(CodecState **p)
 {
@@ -173,48 +172,47 @@ struct BfmeStepState
 	void *m_700;
 };
 
-// ?bfmeStepJW@@YAXPAX@Z present-unmatched
 void bfmeStepJW(void *q)
 {
 	BfmeStepState *state = (BfmeStepState *)q;
 
 	if (state->m_00 != 0)
-		freeCodecMemory(state->m_00);
+		bfmeFreeOneJT(state->m_00);
 	state->m_00 = 0;
 	state->m_04 = 0;
 
 	if (state->m_14c != 0)
-		freeCodecMemory(state->m_14c);
+		bfmeFreeOneJT(state->m_14c);
 	state->m_14c = 0;
 	state->m_148 = 0;
 
 	if (state->m_118 != 0)
-		freeCodecMemory(state->m_118);
+		bfmeFreeOneJT(state->m_118);
 	state->m_118 = 0;
 	state->m_10c = 0;
 
 	if (state->m_11c != 0)
-		freeCodecMemory(state->m_11c);
+		bfmeFreeOneJT(state->m_11c);
 	state->m_11c = 0;
 	state->m_110 = 0;
 
 	if (state->m_120 != 0)
-		freeCodecMemory(state->m_120);
+		bfmeFreeOneJT(state->m_120);
 	state->m_120 = 0;
 	state->m_114 = 0;
 
 	if (state->m_6f8 != 0)
-		freeCodecMemory(state->m_6f8);
+		bfmeFreeOneJT(state->m_6f8);
 	state->m_6f8 = 0;
 	state->m_6ec = 0;
 
 	if (state->m_700 != 0)
-		freeCodecMemory(state->m_700);
+		bfmeFreeOneJT(state->m_700);
 	state->m_700 = 0;
 	state->m_6f4 = 0;
 
 	if (state->m_6fc != 0)
-		freeCodecMemory(state->m_6fc);
+		bfmeFreeOneJT(state->m_6fc);
 	state->m_6fc = 0;
 	state->m_6f0 = 0;
 }

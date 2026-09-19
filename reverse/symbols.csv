@@ -2997,6 +2997,9 @@ _Module32Next@8,0x00687D8C
 ?clearAllEvents@Radar@@IAEXXZ,0x002D7D57
 ??0Rva0036CA00Str@@QAE@ABV0@@Z,0x000A8C7C
 _isprint,0x0075AC08,CRT isprint import thunk FF25 via IAT 0x00BBA6FC; retail REL32 target of Rva007F91D0 at 0x00665770
+?bfmeParseAsciiYW@@YAXPAX00PBX@Z,0x0002F11E
+?realloc@@YAPAXPAXI@Z,0x006297EA,MSVCR71 realloc import thunk (jmp [0x00BBA65C] per PE IAT read); retail target of CSimpleArray Add call at 0x628DFF; C++-linkage spelling per ?free@@ precedent (extern-C _realloc stays on the 0x3E4B0 wrapper)
+?bfmeTailDTK@BfmeThingDTK@@QAEXXZ,0x004F46A9
 _lua_gettop,0x00746F30
 _lua_getglobal,0x007476C0
 _lua_pushvalue,0x00747050
@@ -3011,8 +3014,6 @@ _lua_error,0x0074D570
 ?bfmeGo7760@@YAXPAHPAXHHHH1@Z,0x001B81C0
 ?bfmeGoVM0@BfmeStrVM0@@QAEXH@Z,0x0025D904
 ??1Gen_dtor_00625040@@QAE@XZ,0x00625040
-?bfmeParseAsciiYW@@YAXPAX00PBX@Z,0x0002F11E
-?bfmeTailDTK@BfmeThingDTK@@QAEXXZ,0x004F46A9
 ?bfmeCopyOneCDF@BfmePartCDF@@QAEXPAU1@@Z,0x0021C21B
 ?bfmeCopyTwoCDF@BfmePartCDF@@QAEXPAU1@@Z,0x0026F4F4
 ?bfmeDoBGB@BfmeSubBGB@@QAEXHH@Z,0x002984D4

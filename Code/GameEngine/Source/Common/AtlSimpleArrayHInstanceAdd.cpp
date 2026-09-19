@@ -14,7 +14,10 @@ typedef unsigned long DWORD;
 #define TRUE 1
 #define NULL 0
 
-extern "C" void *__cdecl realloc(void *memory, unsigned int size);
+// C++ linkage so this TU's realloc call resolves to the pinned MSVCR71
+// import thunk; the extern "C" spelling is claimed repo-wide by the static
+// DebugReAllocMemory wrapper row (see ?free@@ C++-linkage precedent).
+void *__cdecl realloc(void *memory, unsigned int size);
 extern "C" void *__cdecl memmove(void *destination, const void *source,
 	unsigned int bytes);
 extern "C" __declspec(dllimport) void __stdcall RaiseException(
