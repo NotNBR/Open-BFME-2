@@ -10439,3 +10439,4 @@ _math_randomseed,,0x00748A30,30,Code/Libraries/Source/Lua/lmathlib.c,matched,BFM
 ?bfmeGoDSU@BfmeThingDSU@@QAEXPAX0@Z,,0x0047042E,25,Code/GameEngine/Source/Common/BfmeConv776.cpp,matched,BFME1 near-miss donor b1 0x00240660; table at +0x17c not +0x120; stlport map call pre-rowed
 ?rva00119B50CopyWalk@@YAPAUNugget@ModuleInfo@@PAU12@00@Z,,0x00119B50,45,Code/GameEngine/Source/Common/ElementStrideWalks.cpp,matched,ModuleInfo::Nugget copy walk; stride 0x74=sizeof(Nugget); callee _STL::_Construct @0x119B30 pre-matched; layout mirrors CopyCtor TU (re-land)
 ??1Gen_008812D0@@QAE@XZ,,0x006C0D70,39,Code/GameEngine/Source/Common/Bfme5SeventySix.cpp,matched,BFME1 near-miss donor b1 0x008813E0; cell size 12 push drift; delete[] pre-rowed
+?bfmeInstallCpuDispatchTable@@YAXXZ,,0x001C1750,881,Code/GameEngine/Source/Common/BfmeCodecCpuDispatch.cpp,matched,BFME1 byte-identical donor verbatim (file from 253ac5e2 batch); explain_mismatch exact 881B
