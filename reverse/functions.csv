@@ -11451,3 +11451,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?inc@Rva00428DB8DwordCounter@@QAEXXZ,,0x00428DB8,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family; opaque holder
 ?inc@Rva004D55B8DwordCounter@@QAEXXZ,,0x004D55B8,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family; opaque holder
 ?inc@Rva004ECD9FDwordCounter@@QAEXXZ,,0x004ECD9F,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family pair; opaque holder
+?inc@Rva0053F8E5DwordCounter@@QAEXXZ,,0x0053F8E5,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword inc family; opaque holder
