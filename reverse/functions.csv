@@ -10912,3 +10912,4 @@ __Locale_ctype_name,,0x00021990,44,Code/Libraries/Source/WWVegas/WWLib/stlport_L
 ?GadgetListBoxGetNumColumns@@YAHPAVGameWindow@@@Z,,0x003248B1,25,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B79B0
 ?GadgetListBoxGetColumnWidth@@YAHPAVGameWindow@@H@Z,,0x003248CA,43,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B79D0
 ?refreshAll@Rva00699180Owner@@QAEXXZ,,0x0005202C,28,Code/GameEngine/Source/Common/Rva00699180Volume_Refresh.cpp,matched,BFME1 donor reconstructed; b1 0x00699400
+_discharge,,0x00752BD0,520,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
