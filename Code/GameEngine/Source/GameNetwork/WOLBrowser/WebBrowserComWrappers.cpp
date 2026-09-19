@@ -141,6 +141,16 @@ public:
 		return result;
 	}
 
+	__declspec(noinline) long invoke(BfmeBstrVGP arg, void *value)
+	{
+		BfmeThingVGP *data = arg.m_data;
+		void *text = data ? data->m_bfme00 : 0;
+		long result = vtable->slot44(this, text, value);
+		if (result < 0)
+			_com_issue_errorex(result, (IUnknown *)this, g_bfmeIidTSA);
+		return result;
+	}
+
 	Vtable *vtable;
 };
 
@@ -156,6 +166,14 @@ __declspec(noinline) long forceRva00958D30(Rva00958D30 *self,
 	BfmeBstrVGP arg)
 {
 	return self->invoke(arg);
+}
+
+// forceRva00958EB0 absent-from-retail: emission host for the string-plus-pointer
+// overload (slot +0x44).
+__declspec(noinline) long forceRva00958EB0(Rva00958D30 *self,
+	BfmeBstrVGP arg, void *value)
+{
+	return self->invoke(arg, value);
 }
 
 // ?forceRva00958C80@@YAJPAVRva00958C80@@VBfmeBstrVGP@@1JJJJJJJPAX@Z absent-from-retail
