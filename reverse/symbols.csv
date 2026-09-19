@@ -3178,3 +3178,5 @@ _bfme_MallocAlloc0OomMalloc_82B820,0x00024200,STLport __malloc_alloc<0>::_S_oom_
 ?_S_refill@?$__node_alloc@$0A@$0A@@_STL@@CAPAXI@Z,0x00025330
 ?bfmeAllocBlock@@YAPAXI@Z,0x001B63C0
 ?bfmeAlloc1053@@YAPAXH@Z,0x006724D0
+?clear@Rva005F7736@@QAEXXZ,0x005F7736,opaque guarded-delete helper (nulls ptr at +0 then element dtor 0x5F75C9 plus operator delete); tail-called with +4 adjust from 14B vptr body 0x5F7750; exact method unproven
+?clear@Rva005FA146@@QAEXXZ,0x005FA146,opaque guarded-delete helper (nulls ptr at +0 then element dtor 0x5F9877 plus operator delete); tail-called with +4 adjust from 14B vptr body 0x5FA393; exact method unproven

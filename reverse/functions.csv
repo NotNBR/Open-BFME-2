@@ -12245,3 +12245,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva007F3F40@@YGXPAVRva007E8810Message@@_J@Z,,0x00660A10,66,Code/GameEngine/Source/GameNetwork/V2FeslTxnRequests.cpp,matched,BFME1 donor ambiguous by bytes; resolved by the BFME1->BFME2 address map; b1 0x007F3F40; 2 candidate placements; prediction error 0B
 ?bfmeCallocBlock@@YAPAXII@Z,,0x001B6460,49,Code/GameEngine/Source/Common/BfmeCallocBlock.cpp,matched,BFME1 byte-identical donor; b1 0x009A59D0
 ?bfmeGo1053A@BfmeA1053@@QAEPAV1@XZ,,0x00666BC0,40,Code/GameEngine/Source/Common/BfmeGo1053A.cpp,matched,BFME1 byte-identical donor; b1 0x007FA680
+??1Rva005F7750@@UAE@XZ,,0x005F7750,14,Code/GameEngine/Source/Common/Rva005F7750Dtor.cpp,matched,opaque dtor explicit clear call on member at plus 4 (Rva000AD6F4Members family pattern)
