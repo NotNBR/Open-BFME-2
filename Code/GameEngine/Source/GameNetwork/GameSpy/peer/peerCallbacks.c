@@ -118,6 +118,16 @@ typedef enum
 
 typedef struct _SBServer *SBServer;
 
+typedef struct SBServerList
+{
+	char opaque[0x174C - 0xBA4];
+} SBServerList;
+
+const char * SBServerGetStringValueA(SBServer server, const char * key,
+	const char * def);
+int SBServerListCount(SBServerList * list);
+void piClearServerCallbacks(PEER peer, SBServer server);
+
 typedef enum
 {
 	CHATFalse,
@@ -213,7 +223,16 @@ typedef struct piConnection
 	void * nickErrorCallback;	/* +0x4c */
 	char reserved0b[0x390 - 0x4c - 4];
 	PEERBool inRoom[NumRooms];
-	char reserved1[0x17a4 - 0x390 - 3 * 4];
+	char reservedListHead[0xBA4 - 0x390 - 3 * 4];
+	SBServerList gameList;	// +0xBA4, opaque span, passed by address
+	int listProgressBase1;	// +0x174C
+	char reservedProgress[0x1758 - 0x1750];
+	int listProgressBase2;	// +0x1758
+	char reservedListTail[0x1784 - 0x175C];
+	void * gameListCallback;	// +0x1784
+	void * gameListParam;	// +0x1788
+	int initialGameList;	// +0x178C
+	char reserved1tail[0x17A4 - 0x1790];
 	PEERCallbacks callbacks;
 	DArray callbackList;
 	int callbackListLen;
@@ -3161,6 +3180,54 @@ void piAddListGroupRoomsCallback(PEER peer, PEERBool success, int groupID, SBSer
 
 	piAddCallback(peer, success, callback, param, PI_LIST_GROUP_ROOMS_CALLBACK,
 		&params, sizeof(params), ID);
+}
+
+void piAddListingGamesCallback(PEER peer, int success, SBServer server,
+	int message)
+{
+	piListingGamesParams params;
+	piConnection * connection = (piConnection *)peer;
+	const char * hostname;
+	const char * gameMode;
+	int openStaging;
+	int progress;
+
+	if(message == 2)
+		piClearServerCallbacks(peer, server);
+	if(server != NULL)
+	{
+		hostname = SBServerGetStringValueA(server, "hostname", "(No Name)");
+		/* The gameMode store is never read: wrapping the call as an
+		   assignment is what batches all three cdecl cleanups below into
+		   retail's single `add esp,0x20`. Spelled as a bare nested call
+		   the compiler emits three separate cleanups instead. */
+		openStaging = !_strcmpi((gameMode = SBServerGetStringValueA(server,
+			"gamemode", "")), "openstaging");
+	}
+	else
+	{
+		hostname = NULL;
+		openStaging = 0;
+	}
+	if(connection->initialGameList)
+	{
+		int count = SBServerListCount(&connection->gameList);
+		if(count != 0)
+			progress = (count - connection->listProgressBase1 -
+				connection->listProgressBase2) * 100 / count;
+		else
+			progress = 0;
+	}
+	else
+		progress = 100;
+	params.name = (char *)hostname;
+	params.server = server;
+	params.staging = openStaging;
+	params.msg = message;
+	params.progress = progress;
+	piAddCallback(peer, success, connection->gameListCallback,
+		connection->gameListParam, PI_LISTING_GAMES_CALLBACK, &params,
+		sizeof(params), -1);
 }
 
 void piAddNickErrorCallback(PEER peer, int type, const char * nick,
