@@ -11526,3 +11526,4 @@ _luaB_error,,0x0074B8D0,31,Code/Libraries/Source/Lua/lbaselib.c,matched,object-s
 _luaS_freeall,,0x0074FFB0,55,Code/Libraries/Source/Lua/lstring.c,matched,object-symbol=_luaS_freeall; emitted by lstring.c object; vendored=lua-4.0.1
 _read_number,,0x0074A6C0,64,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,object-symbol=_read_number; emitted by liolib_bfme1.c object; vendored=lua-4.0.1
 _lua_next,,0x00747C10,148,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_next; emitted by lapi.c object; vendored=lua-4.0.1
+_lua_getn,,0x00747CB0,133,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_getn; emitted by lapi.c object; vendored=lua-4.0.1
