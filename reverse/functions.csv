@@ -10436,3 +10436,4 @@ _math_randomseed,,0x00748A30,30,Code/Libraries/Source/Lua/lmathlib.c,matched,BFM
 ?get@Rva008F7B00@@QAEDH@Z,,0x0073A0C0,28,Code/GameEngine/Source/Common/Rva008F7B00Get.cpp,matched,BFME1 near-miss donor repaired; b1 0x008F7B00; slots bound 16 to 20 and base pad A4 to C4 per retail
 ?bfmeForwardResultA@BfmeResultForwardA@@QAE?AUBfmeResultA@@XZ,,0x006256D0,32,Code/GameEngine/Source/Common/BfmeResultForwardA.cpp,matched,BFME1 near-miss donor repaired; b1 0x009F2A20; source member C to 10 per retail; callee bfmeMakeResultA pinned at 0x628980 per BFME1 identity
 ?bfmeGo1020M@BfmeM1020@@QAEXH@Z,,0x0051E3A3,32,Code/GameEngine/Source/Common/BfmeConv1020.cpp,matched,BFME1 near-miss donor trimmed; b1 0x005701D0; state +0x258->+0x27C; Reg virtual slot49 (donor direct)
+?bfmeGoDSU@BfmeThingDSU@@QAEXPAX0@Z,,0x0047042E,25,Code/GameEngine/Source/Common/BfmeConv776.cpp,matched,BFME1 near-miss donor b1 0x00240660; table at +0x17c not +0x120; stlport map call pre-rowed
