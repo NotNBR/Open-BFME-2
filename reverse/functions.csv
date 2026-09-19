@@ -10832,3 +10832,4 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?clear@Rva00802BB0Owner@@QAEXXZ,,0x0066ECE0,21,Code/GameEngine/Source/GameNetwork/Y2FeslBrowserSmallMembers.cpp,matched,BFME1 byte-identical donor; b1 0x00802BB0; callee is rowed Rva00802A10 clear
 ?isDisconnectedAfterGameStart@GameSpyInfo@@UBE_NPAH@Z,,0x00386104,19,Code/GameEngine/Source/GameNetwork/GameSpy/PeerDefs.cpp,matched,BFME1 byte-identical donor; b1 0x006371D0
 ??1Debug@@UAE@XZ,,0x00038710,66,Code/Libraries/Source/WWVegas/WWDebug/DebugDestructorThunk.cpp,matched,BFME1 byte-identical donor; b1 0x00889620
+?bfmeGo1024E@BfmeE1024@@QAEXXZ,,0x0061EE50,36,Code/GameEngine/Source/Common/BfmeConv1024.cpp,matched,BFME1 byte-identical donor; b1 0x009EB8D0
