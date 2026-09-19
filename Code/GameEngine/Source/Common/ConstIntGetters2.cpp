@@ -92,3 +92,12 @@ int Rva00180E60Get(void)
 {
 	return 0x00BBE8D4;
 }
+
+// ?Rva00180E70Get@@YAHXZ @ 0x00180E70 (6B): returns 0x4E554C4C.
+// CC-island (16xCC before and after), carried by 1 .rdata slot (0x7D50C4)
+// in the 0x180xxx vtable family, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00180E70Get(void)
+{
+	return 0x4E554C4C;
+}
