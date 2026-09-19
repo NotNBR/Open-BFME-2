@@ -346,3 +346,13 @@ int Rva004B29B8Get(void)
 {
 	return 0x00BF4E80;
 }
+
+// ?Rva004C07ABGet@@YAHXZ @ 0x004C07AB (6B): returns 0x00BF4894.
+// Follows a pop/ret-8 (prev C2-08-00), immediately followed by the claimed
+// ??1Rva004C07B1 dtor at +6 (perfect boundaries both sides), carried by
+// 1 .rdata slot, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva004C07ABGet(void)
+{
+	return 0x00BF4894;
+}
