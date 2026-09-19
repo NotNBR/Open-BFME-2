@@ -33,6 +33,7 @@ class MixFileCreator
 public:
 	struct FileInfoStruct
 	{
+		FileInfoStruct(const FileInfoStruct &src);
 		FileInfoStruct &operator=(const FileInfoStruct &src);
 
 		unsigned long CRC;			// +0x00 CRC code for embedded file
@@ -41,6 +42,15 @@ public:
 		AsciiString Filename;		// +0x0C entry name
 	};
 };
+
+// ??0FileInfoStruct@MixFileCreator@@QAE@ABU01@@Z
+MixFileCreator::FileInfoStruct::FileInfoStruct(const FileInfoStruct &src) :
+	CRC(src.CRC),
+	Offset(src.Offset),
+	Size(src.Size),
+	Filename(src.Filename)
+{
+}
 
 // ??4FileInfoStruct@MixFileCreator@@QAEAAU01@ABU01@@Z
 MixFileCreator::FileInfoStruct &MixFileCreator::FileInfoStruct::operator=(const FileInfoStruct &src)
