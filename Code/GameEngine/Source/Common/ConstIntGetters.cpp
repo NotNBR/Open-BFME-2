@@ -287,3 +287,12 @@ int Rva0056A983Get(void)
 {
 	return 0x00C6CFD0;
 }
+
+// ?Rva004A6563Get@@YAHXZ @ 0x004A6563 (6B): returns 0x3FFFFFFF.
+// Follows a ret (0x4A6562) with a B8-imm/call function after. Carried by
+// 5 .rdata slots, no direct callers, no branch sources. The value is a
+// plain small integer, not an address. Opaque address-derived name.
+int Rva004A6563Get(void)
+{
+	return 0x3FFFFFFF;
+}
