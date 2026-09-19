@@ -10839,3 +10839,5 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?setImageSize@Image@@QAEXPAUICoord2D@@@Z,,0x0004D717,18,Code/GameEngine/Source/GameClient/System/Image.cpp,matched,BFME1 byte-identical donor; b1 0x005D1BD0
 ?bfmeOneSUA@BfmeThingSUA@@QAEXD@Z,,0x00028BF0,27,Code/GameEngine/Source/Common/BfmeConv1301.cpp,matched,BFME1 byte-identical donor; b1 0x0082F700
 ?bfmeTwoSUA@BfmeThingSUA@@QAEXD@Z,,0x0002A090,27,Code/GameEngine/Source/Common/BfmeConv1301.cpp,matched,BFME1 donor; fwd target is rowed bfmeAssignV16
+?bfmeGo1025F@@YADPAUBfmeR1025@@@Z,,0x0061F3E0,45,Code/GameEngine/Source/Common/BfmeConv1025.cpp,matched,BFME1 byte-identical donor; b1 0x009EBE90
+?bfmeGoTMB@BfmeThingTMB@@QAEXXZ,,0x00666C50,40,Code/GameEngine/Source/Common/BfmeConv1318.cpp,matched,BFME1 byte-identical donor; b1 0x007FA720
