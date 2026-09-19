@@ -3160,7 +3160,6 @@ _lua_newtag,0x0074FBC0,openwithcontrol 0x74B490 +0xe/+0x17 E8 decodes here; tag 
 _luaZ_read,0x00756E90,LoadBlock 0x756340 +0x66 E8 decodes here; ZIO reader; lzio.c zread
 _luaS_newlstr,0x00750130,LoadString 0x7564F0 +0x5c E8 decodes here; string interner; lstring.c
 _luaS_newudata,0x00750230,lua_newuserdata 0x747D70 +0x17 E8 decodes here; udata allocator; lstring.c
-_luaH_get,0x00750550
 _luaT_realtag,0x0074FC60
 _luaH_getstr,0x00750510
 _luaG_typeerror,0x0074D250
@@ -3173,3 +3172,5 @@ _luaV_gettable,0x0074E560
 _luaV_tonumber,0x0074E320
 _luaV_strconc,0x0074EB30
 _luaH_next,0x007505A0
+_luaH_getany,0x00750460
+_luaH_getnum,0x007504C0
