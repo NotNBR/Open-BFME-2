@@ -12274,3 +12274,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva003EFE9AGet@@YAHXZ,,0x003EFE9A,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDC34A4; prev C3 with 4 E8 callers and Ghidra-6; opaque name
 ?Rva0056B767Get@@YAHXZ,,0x0056B767,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC6BB18; prev leave-ret with 3 E8 callers; opaque name
 ?Rva000A8F58Get@@YAHXZ,,0x000A8F58,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDB4CF0; pair head with jmp-thunk target plus 1 E8 caller and Ghidra-6; opaque name
+?Rva000A8F5EGet@@YAHXZ,,0x000A8F5E,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDB4CF8; pair tail with jmp-thunk target plus 2 E8 callers and Ghidra-6; opaque name

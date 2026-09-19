@@ -210,3 +210,11 @@ int Rva000A8F58Get(void)
 {
 	return 0x00DB4CF0;
 }
+
+// ?Rva000A8F5EGet@@YAHXZ @ 0x000A8F5E (6B): returns 0x00DB4CF8. Closes
+// the pair. Tail-jumped from thunk 0x62977, 2 direct E8 callers,
+// Ghidra-6. Opaque name.
+int Rva000A8F5EGet(void)
+{
+	return 0x00DB4CF8;
+}
