@@ -3162,7 +3162,6 @@ dup_7e86b0,0x00655770
 __CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper calls straight into it
 _luaL_addlstring,0x00751660
 _luaL_addvalue,0x00751760
-_luaL_checkstack,0x007518D0
 _luaL_opt_number,0x00751AD0
 _luaL_prepbuffer,0x00751620
 _luaL_pushresult,0x007516F0
