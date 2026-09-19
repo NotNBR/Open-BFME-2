@@ -11333,3 +11333,4 @@ _lua_pushusertag,,0x00747650,102,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 
 _lua_pushstring,,0x007475E0,92,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _lua_rawset,,0x00747990,87,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _lua_rawseti,,0x007479F0,86,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
+_lua_getglobal,,0x007476C0,83,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
