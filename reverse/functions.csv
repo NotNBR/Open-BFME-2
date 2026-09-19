@@ -12040,3 +12040,4 @@ _lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 by
 ?get@Rva0066E480LeaGetter@@QBEPAXXZ,,0x0066E480,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-B8020000-C3
 ?get@Rva0066E9B0LeaGetter@@QBEPAXXZ,,0x0066E9B0,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-98000000-C3
 ?get@Rva00674A70LeaGetter@@QBEPAXXZ,,0x00674A70,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-8C000000-C3
+?name@Rva002B30A8Named@@QBEPBDXZ,,0x002B30A8,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning DelayedAudioEventModule; vtable ref; address-derived placeholder name
