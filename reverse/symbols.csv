@@ -951,6 +951,7 @@ name,address,notes
 ?Is_Bone_Captured@HTreeClass@@QBE_NH@Z,0x00162030,address read from the REL32 displacement at a placed body
 ?Is_Stopped@ParticleEmitterClass@@QAE_NXZ,0x001A1BE0,Donor Active == false independently compiles to all12 bytes; byte flag at emitter+110; RET at5A1BEB
 ?Is_Valid_Display_Format@BfmeEnumerationCaps@@QAE_NHHW4_D3DFORMAT@@@Z,0x0012B330,Recovered view of verified 36-byte DX8Caps dimension filter; format argument is unused and retail enumeration passes the D3D format directly
+?isKindOfMulti@Thing@@QBE_NABV?$BitFlags@$0HE@@@0@Z,0x0030AD7D,allow@PartitionFilterRejectByKindOf 0x26115D +0xC E8 decodes here; KindOf multi-bit test; Thing.cpp
 ?LZHLDestroyDecompressor@@YAXPAX@Z,0x0068ED80
 ?Load@INIClass@@QAEHAAVFileClass@@@Z,0x00619120,address read from the REL32 displacement at a placed body; stlport 4.5.3
 ?Load@INIClass@@QAEHAAVStraw@@@Z,0x00617B10,address read from the retail REL32 in INIClass::Load(FileClass&) at 0x00619120
