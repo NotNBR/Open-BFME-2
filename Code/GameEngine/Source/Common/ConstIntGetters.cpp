@@ -605,3 +605,12 @@ int Rva0051D772Get(void)
 {
 	return 0x006D210D;
 }
+
+// ?Rva0056D749Get@@YAHXZ @ 0x0056D749 (6B): returns 0x00810223.
+// Follows a leave/ret (0x56D746-48) with a frame-style function after.
+// Carried at 0x86DAE0, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva0056D749Get(void)
+{
+	return 0x00810223;
+}
