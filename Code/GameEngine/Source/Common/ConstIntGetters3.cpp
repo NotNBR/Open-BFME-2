@@ -85,3 +85,11 @@ int Rva00342A4AGet(void)
 {
 	return 0x00C12778;
 }
+
+// ?Rva00342A90Get@@YAHXZ @ 0x00342a90 (6B): returns 0x00C127E0.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva00342A90Get(void)
+{
+	return 0x00C127E0;
+}
