@@ -11989,7 +11989,6 @@ _luaG_ordererror,,0x0074D2E0,73,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1
 ?name@Rva000E6B93Named@@QBEPBDXZ,,0x000E6B93,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DVegetationBufferBase; vtable ref; address-derived placeholder name
 ?name@Rva000E9C0FNamed@@QBEPBDXZ,,0x000E9C0F,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DShrubBuffer; vtable ref; address-derived placeholder name
 ?name@Rva000EDB39Named@@QBEPBDXZ,,0x000EDB39,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DTreeBuffer; vtable ref; address-derived placeholder name
-?name@Rva000EEFE6Named@@QBEPBDXZ,,0x000EEFE6,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DPropBuffer; vtable ref; address-derived placeholder name
 ?dup_00757200@@YAXXZ,,0x00757200,669,Code/Libraries/Source/Lua/llex.c,matched,gen-alias;object-symbol=_read_number;C++ alias
 _read_long_string,,0x00757550,643,Code/Libraries/Source/Lua/llex.c,matched,gen-alias;object-symbol=_read_long_string;C++ alias
 _read_string,,0x007577E0,1185,Code/Libraries/Source/Lua/llex.c,matched,gen-alias;object-symbol=_read_string;C++ alias
@@ -12596,15 +12595,5 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 _add_s,,0x00749970,307,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_add_s; Lua lstrlib static compiles to retail span
 ?name@Rva000C9C11Named@@QBEPBDXZ,,0x000C9C11,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DLaserDraw; vtable ref at 0x7CB9E8; address-derived placeholder name
 ?name@Rva000CA113Named@@QBEPBDXZ,,0x000CA113,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DQuadrupedDraw; vtable ref at 0x7CBC48; address-derived placeholder name
-?name@Rva000CA83BNamed@@QBEPBDXZ,,0x000CA83B,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DRopeDraw; vtable ref at 0x7CBD68; address-derived placeholder name
-?name@Rva000CAEC0Named@@QBEPBDXZ,,0x000CAEC0,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DSupplyDraw; vtable ref at 0x7CBFC8; address-derived placeholder name
-?name@Rva000CB5BDNamed@@QBEPBDXZ,,0x000CB5BD,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DTruckDraw; vtable ref at 0x7CC658; address-derived placeholder name
-?name@Rva000CEA33Named@@QBEPBDXZ,,0x000CEA33,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DTankDraw; vtable ref at 0x7CCBF0; address-derived placeholder name
-?name@Rva000D0810Named@@QBEPBDXZ,,0x000D0810,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DSailModelDraw; vtable ref at 0x7CDC68; address-derived placeholder name
-?name@Rva000E5A25Named@@QBEPBDXZ,,0x000E5A25,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DFloorBuffer; vtable ref at 0x7CE9E8; address-derived placeholder name
-?name@Rva000E6B93Named@@QBEPBDXZ,,0x000E6B93,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DVegetationBufferBase; vtable ref at 0x7CEABC; address-derived placeholder name
-?name@Rva000E9C0FNamed@@QBEPBDXZ,,0x000E9C0F,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DShrubBuffer; vtable ref at 0x7CECC0; address-derived placeholder name
-?name@Rva000EDB39Named@@QBEPBDXZ,,0x000EDB39,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DTreeBuffer; vtable ref at 0x7CEEAC; address-derived placeholder name
 ?name@Rva000EEFE6Named@@QBEPBDXZ,,0x000EEFE6,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DPropBuffer; vtable ref at 0x7CEED4; address-derived placeholder name
-?name@Rva00279669Named@@QBEPBDXZ,,0x00279669,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning Drawable; vtable ref at 0x7FB0AC; address-derived placeholder name
 _piAddListingGamesCallback,,0x0069F320,233,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerCallbacks.c,matched,GameSpy piAddListingGamesCallback 233B; assignment-wrapped gamemode call batches 3 cdecl cleanups into retail add esp 0x20; gameListCallback at 0x1784 and gameListParam at 0x1788
