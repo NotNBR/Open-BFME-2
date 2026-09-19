@@ -11858,3 +11858,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 _str_byte,,0x00748D60,136,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_str_byte; Lua lstrlib static compiles to retail span
 ?set@Rva0038895EDwordSlot@@QAEXH@Z,,0x0038895E,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?enable@Rva0038896BByteOneSetter@@QAEXXZ,,0x0038896B,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte one-setter
+?get@Rva0038894ADwordField@@QBEHXZ,,0x0038894A,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
