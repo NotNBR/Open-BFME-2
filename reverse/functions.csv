@@ -11048,3 +11048,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 _luaK_fixjump,,0x00751D60,88,Code/Libraries/Source/Lua/lcode.c,matched,vendored Lua code-generator; exact via unclaimed_scan; pin upgrade
 ??1Rva00484EF4@@UAE@XZ,,0x00484EF4,25,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,Opaque MI middle 25B order +0x10/+0/+0xC tail-jumping the 0x49B47C fold; shared PrimaryP plus own B2; upgrades opaque pin
 ??1Rva004BD763@@UAE@XZ,,0x004BD763,25,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,Opaque MI middle 25B order +0x10/+0/+0xC tail-jumping the 0x49B47C fold; shared PrimaryP plus own B2; upgrades opaque pin
+??1Rva004B96CC@@UAE@XZ,,0x004B96CC,25,Code/GameEngine/Source/Common/Rva0049B47CThreeVptrDerived.cpp,matched,Opaque MI middle 25B order +0x10/+0/+0xC tail-jumping the 0x49B47C fold; shared PrimaryP plus own B2; upgrades opaque base pin
