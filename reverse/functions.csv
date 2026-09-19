@@ -11826,3 +11826,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?name@Rva0028CA92Named@@QBEPBDXZ,,0x0028CA92,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning ObjectRecoveryHelper; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva0026E982Named@@QBEPBDXZ,,0x0026E982,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning AIUpdateInterface; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva0026EDF9Named@@QBEPBDXZ,,0x0026EDF9,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning Upgrade; vtable ref in .rdata; address-derived placeholder name
+?name@Rva00305B30Named@@QBEPBDXZ,,0x00305B30,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning GhostObject; vtable ref in .rdata; address-derived placeholder name
