@@ -5,8 +5,8 @@
 // assumed.
 //
 // BFME1 byte-identical donor (reference/open-bfme-1
-// Code/GameEngine/Source/Common/T2CtypeTableFacets.cpp); trimmed to the five
-// T1 bodies the sweep places. The donor's seven sibling defs (under 16B or
+// Code/GameEngine/Source/Common/T2CtypeTableFacets.cpp); trimmed to the seven
+// bodies the sweep places. The donor's remaining sibling defs (under 16B or
 // ambiguous) are omitted: only declared here, never defined, so the
 // find_declared_unmatched gate stays green. The donor declares t2_block_copy
 // but retail reaches memmove, so the declaration is renamed to the real
@@ -87,6 +87,17 @@ const T2WChar *T2WideCtype::narrowRange(const T2WChar *low, const T2WChar *high,
 		int v = ((int)(char)c == (int)c) ? (int)c : (int)dflt;
 		*to = (char)v;
 		++to;
+	}
+	return high;
+}
+
+const T2WChar *T2WideCtype::toUpperRange(T2WChar *low, T2WChar *high) const
+{
+	while (low < high)
+	{
+		T2WChar c = *low;
+		*low = (c < 0x100) ? (T2WChar)(unsigned char)t2_upper_table[c] : c;
+		++low;
 	}
 	return high;
 }
