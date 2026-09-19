@@ -11925,3 +11925,4 @@ _lmemfind,,0x007496B0,110,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep 
 ?get@Rva00232E8FByteField@@QBEEXZ,,0x00232E8F,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ?get@Rva003FE57DByteField@@QBEEXZ,,0x003FE57D,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ?get@Rva0045310DByteField@@QBEEXZ,,0x0045310D,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva004A0DF8ByteField@@QBEEXZ,,0x004A0DF8,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
