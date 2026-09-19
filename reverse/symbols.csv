@@ -3160,3 +3160,5 @@ _luaL_findstring,0x00751490
 _openwithcontrol,0x0074B490
 _luaX_syntaxerror,0x00756F50,_funcname 0x754980 +0x2a E8 decodes here; error-message builder (chunkid 0x50 + verror); llex.c
 _luaF_newproto,0x00751B40,_open_func 0x754080 +0x5 E8 decodes here; Proto allocator (0x44 zero-init + rootproto link at L+0x20); lfunc.c
+_lua_newuserdata,0x00747D70,openwithcontrol 0x74B490 +0x6 E8 decodes here; userdata allocator (sizeof IOCtrl 0x10); lapi.c
+_lua_newtag,0x0074FBC0,openwithcontrol 0x74B490 +0xe/+0x17 E8 decodes here; tag allocator; ltm.c
