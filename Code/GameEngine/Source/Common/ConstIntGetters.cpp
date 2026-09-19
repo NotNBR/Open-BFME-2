@@ -417,3 +417,12 @@ int Rva000EF29AGet(void)
 {
 	return 0x00544558;
 }
+
+// ?Rva00342868Get@@YAHXZ @ 0x00342868 (6B): returns 0x00C12520.
+// Follows a ret-4 (0x342865-67) with a push/call-style function after.
+// Carried by 4 .rdata slots, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00342868Get(void)
+{
+	return 0x00C12520;
+}

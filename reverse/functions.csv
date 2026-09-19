@@ -12359,3 +12359,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 ?Rva003B0E57Get@@YAHXZ,,0x003B0E57,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC1DB18; prev ret-4 with 1 real E8 caller and Ghidra-6; opaque name
 ?Rva0056B7DEGet@@YAHXZ,,0x0056B7DE,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC6D690; prev ret-4 with 3 real E8 callers; opaque name
 ?Rva000EF29AGet@@YAHXZ,,0x000EF29A,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0x544558; prev ret-16 with 6 refs and no callers; opaque name
+?Rva00342868Get@@YAHXZ,,0x00342868,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC12520; prev ret-4 with 4 refs and no callers; opaque name
