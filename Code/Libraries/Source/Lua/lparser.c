@@ -82,10 +82,6 @@ static int search_local (LexState *ls, TString *n, expdesc *var);
 static int string_constant (FuncState *fs, TString *s);
 
 
-/* `next' is ICF-ambiguous in BFME1 (name is this sweep's guess), so it is
-   emitted here without claiming the name; the marker keeps the
-   find_declared_unmatched gate honest. */
-// _next present-unmatched
 static void next (LexState *ls) {
   ls->lastline = ls->linenumber;
   if (ls->lookahead.token != TK_EOS) {  /* is there a look-ahead token? */
@@ -244,6 +240,48 @@ static void block (LexState *ls) {
   chunk(ls);
   luaK_adjuststack(fs, fs->nactloc - nactloc);  /* remove local variables */
   removelocalvars(ls, fs->nactloc - nactloc);
+}
+
+
+// _cond present-unmatched
+static void cond (LexState *ls, expdesc *v) {
+  /* cond -> exp */
+  expr(ls, v);  /* read condition */
+  luaK_goiftrue(ls->fs, v, 0);
+}
+
+
+static void whilestat (LexState *ls, int line) {
+  /* whilestat -> WHILE cond DO block END */
+  FuncState *fs = ls->fs;
+  int while_init = luaK_getlabel(fs);
+  expdesc v;
+  Breaklabel bl;
+  enterbreak(fs, &bl);
+  next(ls);
+  cond(ls, &v);
+  check(ls, TK_DO);
+  block(ls);
+  luaK_patchlist(fs, luaK_jump(fs), while_init);
+  luaK_patchlist(fs, v.u.l.f, luaK_getlabel(fs));
+  check_match(ls, TK_END, TK_WHILE, line);
+  leavebreak(fs, &bl);
+}
+
+
+static void repeatstat (LexState *ls, int line) {
+  /* repeatstat -> REPEAT block UNTIL cond */
+  FuncState *fs = ls->fs;
+  int repeat_init = luaK_getlabel(fs);
+  expdesc v;
+  Breaklabel bl;
+  enterbreak(fs, &bl);
+  next(ls);
+  block(ls);
+  check_match(ls, TK_UNTIL, TK_REPEAT, line);
+  cond(ls, &v);
+  luaK_patchlist(fs, v.u.l.f, repeat_init);
+  leavebreak(fs, &bl);
 }
 
 
@@ -621,6 +659,21 @@ static void retstat (LexState *ls) {
 }
 
 
+static void breakstat (LexState *ls) {
+  /* stat -> BREAK [NAME] */
+  FuncState *fs = ls->fs;
+  int currentlevel = fs->stacklevel;
+  Breaklabel *bl = fs->bl;
+  if (!bl)
+    luaK_error(ls, "no loop to break");
+  next(ls);  /* skip BREAK */
+  luaK_adjuststack(fs, currentlevel - bl->stacklevel);
+  luaK_concat(fs, &bl->breaklist, luaK_jump(fs));
+  /* correct stack for compiler and symbolic execution */
+  luaK_adjuststack(fs, bl->stacklevel - currentlevel);
+}
+
+
 static void fornum (LexState *ls, TString *varname) {
   /* fornum -> NAME = exp1,exp1[,exp1] forbody */
   FuncState *fs = ls->fs;
@@ -751,7 +804,7 @@ Proto *luaY_parser (lua_State *L, ZIO *z) {
 
 
 /* Anchor, absent from retail: keeps the static workers out-of-line so the
-   verifier can see them. Only the 18 rowed bodies are claimed. */
+   verifier can see them. Only the rowed bodies are claimed. */
 void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd) {
   lookahead(ls);
   check(ls, 0);
@@ -764,10 +817,13 @@ void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd
   block_follow(0);
   funcstat(ls, 0);
   retstat(ls);
+  breakstat(ls);
   recfield(ls);
   fornum(ls, 0);
   forlist(ls, 0);
   forstat(ls, 0);
+  whilestat(ls, 0);
+  repeatstat(ls, 0);
   constructor(ls);
   funcargs(ls, 0);
   luaY_parser(0, 0);
