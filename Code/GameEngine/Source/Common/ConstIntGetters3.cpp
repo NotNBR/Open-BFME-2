@@ -1,0 +1,20 @@
+// C2-ret-prev B8-imm32 const-int returners, 0x342xxx cluster (twin-free TU).
+//
+// Same 6-byte shape as ConstIntGetters.cpp (mov eax,<IMM32> / ret) but for
+// bodies following a ret-imm (prev byte[addr-3]==C2) instead of CC-islands.
+// Kept in a separate TU so this lane does not contend with the hot
+// ConstIntGetters/ConstIntGetters2 appends on origin/master. Rows are opaque
+// address-derived names: each body is a ret-prev leaf carried by .rdata
+// vtable slots with no direct callers and no branch sources, so no class
+// identity is witnessed. The imm falls in the .rdata VA window so it is kept
+// as a plain int literal (no DIR32 for literals).
+// No // cl: line (defaults match the frameless 6-byte shape).
+
+// ?Rva00342972Get@@YAHXZ @ 0x00342972 (6B): returns 0x00C12658.
+// Follows a ret-16 (prev C2-10-00: mov eax,esi/pop esi/ret), carried by
+// 2 .rdata vtable slots (0x812618 and 0x812680, same family tables),
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva00342972Get(void)
+{
+	return 0x00C12658;
+}
