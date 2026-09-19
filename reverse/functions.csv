@@ -11374,3 +11374,4 @@ _lua_error,,0x0074D570,36,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-ide
 ?get@Rva000395C0LeaGetter@@QBEPAXXZ,,0x000395C0,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-109F0000-C3
 _luaD_call,,0x0074D8D0,410,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
 _luaV_execute,,0x0074EDE0,3124,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
+_luaF_newproto,,0x00751B40,89,Code/Libraries/Source/Lua/lfunc.c,matched,BFME1 byte-identical donor b1 lfunc.c; exact via unclaimed_scan
