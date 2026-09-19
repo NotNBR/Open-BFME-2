@@ -12370,3 +12370,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 ?Rva0009FDFBGet@@YAHXZ,,0x0009FDFB,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x48F95F; follows 0x9FDF5 with 1 parallel vtable ref; opaque name
 ??_GRva0088FAA0DebugIOInterface@@MAEPAXI@Z,,0x0003F340,31,Code/Libraries/Source/WWVegas/WWDebug/Rva0088FAA0DebugIOInterfaceDestructor.cpp,matched,Rva0088FAA0DebugIO base scalar deleter; trivial-dtor store plus operator delete 0x2FD60; frameless /Oy shape; vftable slot 0 at 0xBC0990
 ??1DebugIOOds@@UAE@XZ,,0x0003F460,55,Code/Libraries/Source/WWVegas/WWDebug/DebugIOOdsCtor.cpp,matched,Implicit dtor via delete anchor; BFME1 Rva0088FAA0 err-0 map; 55B SEH single base-vtable store verbatim
+?Rva0018026EGet@@YAHXZ,,0x0018026E,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x4D455348; C9C3-prev with 1 vtable ref paired with 0x180581; opaque name

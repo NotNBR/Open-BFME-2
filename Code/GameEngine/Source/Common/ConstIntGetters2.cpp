@@ -45,3 +45,12 @@ int Rva0009FDFBGet(void)
 {
 	return 0x0048F95F;
 }
+
+// ?Rva0018026EGet@@YAHXZ @ 0x0018026E (6B): returns 0x4D455348.
+// Follows a leave/ret (prev C9-C3), carried by 1 .rdata slot (0x7D4FC4)
+// in a vtable family shared with Rva00180581Get (identical neighbours),
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva0018026EGet(void)
+{
+	return 0x4D455348;
+}
