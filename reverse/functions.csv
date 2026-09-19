@@ -10497,3 +10497,4 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ?Rva007FC8F0@@YGXPAVRva007E8810Message@@PBURva007FC810Attribute@@H@Z,,0x00668DF0,153,Code/GameEngine/Source/GameNetwork/Y4FeslAttributeRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007FC8F0; 1 DIR32 string literal(s) agree
 ?parseGeometryActive@GeometryInfo@@SAXPAVINI@@PAX1PBX@Z,,0x006BD590,61,Code/GameEngine/Source/Common/System/GeometryParseActiveAndOffset.cpp,matched,BFME1 donor; 6 fold-twins cut by parseBool callee 0x2E850 + end-4 m_enabled; b1 0x0087DE10
 ?t2_table_slot@@YAPAXPAUT2TableOwner@@H@Z,,0x000210B0,16,Code/GameEngine/Source/Common/T2IndexedArrayAccessors.cpp,matched,BFME1 donor; indexed-load shape kills STL-distance twins; b1 0x0084DE30
+?Dot_Product@Vector2@@SAMABV1@0@Z,,0x000D449F,21,Code/GameEngineDevice/Source/W3DDevice/GameClient/W3DRoadBuffer.cpp,matched,x87 dot shape kills Perp twin; named form matches TU usage
