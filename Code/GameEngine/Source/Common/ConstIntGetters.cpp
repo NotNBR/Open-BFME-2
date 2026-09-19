@@ -328,3 +328,11 @@ int Rva002856F7Get(void)
 {
 	return 0x00DFEA50;
 }
+
+// ?Rva002856FDGet@@YAHXZ @ 0x002856FD (6B): returns 0x00DFE794. Closes
+// the pair (a movzx-style function follows). Carried at 0x7FB710 and
+// 0x7FB714, no direct callers, no branch sources. Opaque name.
+int Rva002856FDGet(void)
+{
+	return 0x00DFE794;
+}
