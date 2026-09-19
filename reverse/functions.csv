@@ -11386,3 +11386,4 @@ _luaD_openstack,,0x0074D700,77,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byt
 ?get@Rva004647CDLeaField@@QBEPAXXZ,,0x004647CD,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 NEG LEA getter back-32; RET-PREV; retail 8D-41-E0-C3
 ?get@Rva0053B8E5LeaField@@QBEPAXXZ,,0x0053B8E5,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-48-C3
 ?get@Rva0053998CLeaField@@QBEPAXXZ,,0x0053998C,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-38-C3
+?get@Rva0052BABDLeaField@@QBEPAXXZ,,0x0052BABD,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-04-C3
