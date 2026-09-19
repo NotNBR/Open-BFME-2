@@ -11975,3 +11975,4 @@ _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alia
 ?apply@Rva00203611DwordImmSetter@@QAEXXZ,,0x00203611,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?apply@Rva005753E2DwordImmSetter@@QAEXXZ,,0x005753E2,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?apply@Rva00576456DwordImmSetter@@QAEXXZ,,0x00576456,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?apply@Rva0057851BDwordImmSetter@@QAEXXZ,,0x0057851B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
