@@ -11787,3 +11787,4 @@ _math_frexp,,0x00748770,68,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math
 _math_random,,0x00748900,298,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.random via rand + gettop switch + check_int + pushnumber; callees pinned
 ?name@Rva002AE621Named@@QBEPBDXZ,,0x002AE621,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Command; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva00050C2BNamed@@QBEPBDXZ,,0x00050C2B,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning GeometryInfo; vtable ref at 0x7C4E9C with 0x4B3FD0 family slot pattern; address-derived placeholder name
+_str_len,,0x00748AA0,64,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string len via donor; callees pinned
