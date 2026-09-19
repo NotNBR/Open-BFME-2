@@ -114,3 +114,12 @@ int Rva00510D87Get(void)
 {
 	return 0x006D1E55;
 }
+
+// ?Rva0000C124CGet@@YAHXZ @ 0x0000C124C (6B): returns 0x000186A0.
+// Follows sibling B8-6 0xC1246 (ret 0xBC5C20, itself leave/ret-prev) with
+// a B8-imm/call function after. 6 .rdata refs, no direct callers, no
+// branch sources. Opaque address-derived name.
+int Rva0000C124CGet(void)
+{
+	return 0x000186A0;
+}

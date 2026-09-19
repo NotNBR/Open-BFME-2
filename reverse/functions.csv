@@ -12261,3 +12261,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva004CE52EGet@@YAHXZ,,0x004CE52E,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC5FFA0; prev boolize ret with 20 E8 callers and Ghidra-6; opaque name
 ?Rva00507552Get@@YAHXZ,,0x00507552,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC63FD0; prev mov-mov ret with 17 E8 callers and Ghidra-6; opaque name
 ?Rva00510D87Get@@YAHXZ,,0x00510D87,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0x6D1E55; prev SEH leave-ret with 7 rdata refs; opaque name
+?Rva0000C124CGet@@YAHXZ,,0x000C124C,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0x186A0; follows sibling B8-6 with 6 rdata refs; opaque name
