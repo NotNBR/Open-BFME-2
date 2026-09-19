@@ -623,3 +623,12 @@ int Rva005C9880Get(void)
 {
 	return 0x009C9886;
 }
+
+// ?Rva00201095Get@@YAHXZ @ 0x00201095 (6B): returns 0x00BE2C10.
+// Follows a tail-jmp/ret (0x20108F-94) with a frame-style function
+// after. Carried at 0x7E306C, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00201095Get(void)
+{
+	return 0x00BE2C10;
+}
