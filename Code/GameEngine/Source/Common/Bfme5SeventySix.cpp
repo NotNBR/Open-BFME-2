@@ -50,16 +50,45 @@ struct Region3D
 	Coord3D hi;
 };
 
+class BfmeCellFC
+{
+public:
+	BfmeCellFC();
+	~BfmeCellFC();
+
+	unsigned char m_bfmeKind;				// +0x00
+	unsigned char m_bfmeGap[3];				// +0x01
+	int m_bfmeValue;					// +0x04
+	// Retail ??1Gen_008812D0 passes element size 12 to the vector
+	// destructor helper, so BFME2 cells carry one more word than BFME1's
+	// 8-byte cells. No landed body reads it yet; purpose unestablished.
+	int m_bfmeExtra;					// +0x08
+};
+
+typedef void (__cdecl *BfmeCellVisitorFC)(int x, int y,
+	unsigned char kind);
+
+// MSVC 7.1 folds `delete []` onto the scalar ??3@YAXPAX@Z unless the array
+// form is declared where it can see it; retail calls ??_V@YAXPAX@Z here
+// (rowed, mem_ops.cpp).
+void operator delete[]( void *block );
+
 class Gen_008812D0
 {
 public:
 	void bfmeReset();
 	void bfmeSetRegion(const Region3D *region, Real cellSize);
 	void bfmeConfigure(Region3D region, Real cellSize);
+	~Gen_008812D0();
 
 private:
 	Region3D m_bfmeRegion;					// +0x00
 	Real m_bfmeCellSize;					// +0x18
+	float m_bfmeCellSizeInv;				// +0x1C
+	int m_bfmeWidth;					// +0x20
+	int m_bfmeHeight;					// +0x24
+	BfmeCellFC *m_bfmeCells;				// +0x28
+	BfmeCellVisitorFC m_bfmeVisitor;			// +0x2C
 };
 
 class BfmeTaintManager
@@ -94,4 +123,13 @@ void Gen_008812D0::bfmeSetRegion(const Region3D *region, Real cellSize)
 	{
 		bfmeConfigure(*region, cellSize);
 	}
+}
+
+// ??1Gen_008812D0@@QAE@XZ at retail 0x006C0D70 (39B). Near-miss drift is a
+// single literal: push 0x0C (BFME1 pushes 0x08) -- the array-delete helper
+// takes the element size, so BFME2 cells are 12 bytes (see BfmeCellFC).
+// B1 0x008813E0 -> B2 0x006C0D70, immediate-only drift.
+Gen_008812D0::~Gen_008812D0()
+{
+	delete[] m_bfmeCells;
 }
