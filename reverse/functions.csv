@@ -10794,3 +10794,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ??0Rva007E3A20@@QAE@XZ,,0x000906FB,16,Code/GameEngine/Source/Common/S1ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x007E3A20
 ?isLessThan@Rva00063E50Node@@QBEHPBV1@@Z,,0x00503D15,17,Code/GameEngine/Source/Common/T3SmallLeafBodies.cpp,matched,BFME1 byte-identical donor; b1 0x00063E50
 ??0ResizerWindow@@QAE@XZ,,0x001DB6FD,31,Code/GameEngine/Source/GameClient/GUI/ControlBar/ControlBarResizer.cpp,matched,BFME1 byte-identical donor; b1 0x004AAED0
+?parseGeometryRotationAnchorOffset@@YAXPAVINI@@PAX1PBX@Z,,0x006BD360,16,Code/GameEngine/Source/Common/SmallIniParseCallbacks.cpp,matched,BFME1 byte-identical donor; b1 0x0087DAE0
