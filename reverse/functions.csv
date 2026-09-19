@@ -11476,3 +11476,4 @@ _luaD_lineHook,,0x0074D790,99,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte
 ?name@Rva000B1CDCNamed@@QBEPBDXZ,,0x000B1CDC,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning W3DDebrisDraw; vtable ref in .rdata; address-derived placeholder name
 ?dec@Rva002AA0C6DwordCounter@@QAEXXZ,,0x002AA0C6,7,Code/GameEngine/Source/Common/Disp32DwordFieldIncDec.cpp,matched,disp32 dword dec family pair; opaque holder
 ?inc@Rva00050CE1DwordCounter@@QAEXXZ,,0x00050CE1,7,Code/GameEngine/Source/Common/Disp32DwordFieldIncDec.cpp,matched,disp32 dword inc family pair; opaque holder
+?dec@Rva00050CE8DwordCounter@@QAEXXZ,,0x00050CE8,7,Code/GameEngine/Source/Common/Disp32DwordFieldIncDec.cpp,matched,disp32 dword dec family pair; opaque holder
