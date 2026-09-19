@@ -12305,3 +12305,4 @@ __RTC_UninitUse,,0x0075AB62,166,vendor/msvc71crt/msvcrt.lib,matched,vendored=msv
 ?rva009C7490BinkSse@@YAXPBEPAEHPBX2@Z,,0x001D7D90,83,Code/GameEngine/Source/Common/Rva009C7490BinkSse.cpp,matched,BFME1 donor ambiguous by bytes; resolved by the BFME1->BFME2 address map; b1 0x009C7490; 2 candidate placements; prediction error 0B
 ?toUpperRange@T2WideCtype@@QBEPBGPAG0@Z,,0x00016D60,50,Code/GameEngine/Source/Common/T2CtypeTableFacets.cpp,matched,BFME1 byte-identical donor; b1 0x008409E0; address-map resolved ambiguous
 ?toLowerRange@T2WideCtype@@QBEPBGPAG0@Z,,0x00016DC0,50,Code/GameEngine/Source/Common/T2CtypeTableFacets.cpp,matched,BFME1 byte-identical donor; b1 0x00840A40; address-map resolved ambiguous
+?rva009C69D0BinkMmx@@YAXPBXPAXH00@Z,,0x001D72D0,83,Code/GameEngine/Source/Common/Rva009C69D0BinkMmx.cpp,matched,BFME1 donor ambiguous by bytes; resolved by the BFME1->BFME2 address map; b1 0x009C69D0; 2 candidate placements; prediction error 0B
