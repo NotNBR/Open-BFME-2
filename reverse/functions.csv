@@ -10566,3 +10566,6 @@ _Rva0088E100WatchdogThread@4,,0x0003D7E0,139,Code/Libraries/Source/WWVegas/WWDeb
 ??1Rva009A45A0CollisionData@@QAE@XZ,,0x00758500,133,Code/GameEngine/Source/Common/System/Rva009A2390CollisionDataDestructor.cpp,matched,BFME1 byte-identical donor; b1 0x009A2390
 ??0Rva007FBEF0GameRecord@@QAE@PAVRva007E8810Message@@@Z,,0x006683F0,72,Code/GameEngine/Source/GameNetwork/Y4FeslGameRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007FBEF0; 3 DIR32 string literal(s) agree
 ??0Rva007FBC30GameKey@@QAE@PAVRva007E8810Message@@@Z,,0x00668130,48,Code/GameEngine/Source/GameNetwork/Y4FeslGameRecords.cpp,matched,BFME1 byte-identical donor; b1 0x007FBC30; ICF-folded in BFME1 so the name is this sweep pick among its twins; 2 DIR32 string literal(s) agree
+?rva0082BAF0Count@@YAHPAH@Z,,0x000244D0,45,Code/GameEngine/Source/Common/Rva0082BC30Empty.cpp,matched,BFME1 byte-identical donor; b1 0x0082BAF0
+?assignFrom@Rva0082BFD0Slot@@QAEPAV1@PBH@Z,,0x00024AB0,34,Code/GameEngine/Source/Common/Rva0082BC30Empty.cpp,matched,BFME1 byte-identical donor; b1 0x0082BFD0
+?rva0082B120Set@@YAHH@Z,,0x00023A90,28,Code/GameEngine/Source/Common/Rva0082BC30Empty.cpp,matched,BFME1 byte-identical donor; b1 0x0082B120
