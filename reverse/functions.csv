@@ -10694,3 +10694,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeGoEHAa@@YAPAXPAVBfmeObjEHA@@@Z,,0x00327CFE,29,Code/GameEngine/Source/Common/BfmeConv812.cpp,matched,BFME1 byte-identical donor; b1 0x004BBE50
 ?bfmeGoEHAb@@YAPAXPAVBfmeObjEHA@@@Z,,0x00327D39,29,Code/GameEngine/Source/Common/BfmeConv812.cpp,matched,BFME1 byte-identical donor; b1 0x004BBEB0
 ?bfmeFindByteCore@@YAPADPAD0D0@Z,,0x00025B80,349,Code/GameEngine/Source/Common/BfmeTwoHundredFiftySeven_FindByteCore.cpp,matched,direct-operand twin of bfmeDoOV; char equality via inline bool helper; dead fourth param
+?bfmeFind@Gen_00808E90@@QBEPAVBfmeThingHA@@PBV2@@Z,,0x00674DB0,57,Code/GameEngine/Source/Common/Bfme5EightySeven.cpp,matched,BFME1 byte-identical donor; b1 0x00808E90
