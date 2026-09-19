@@ -12592,3 +12592,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva00477098Get@@YAHXZ,,0x00477098,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf5994; prev C2-08-00 with 1 vtable ref and no callers; opaque name
 ?Rva0047A0E0Get@@YAHXZ,,0x0047A0E0,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf597c; prev C2-08-00 with 1 vtable ref and no callers; opaque name
 ?Rva0047B518Get@@YAHXZ,,0x0047B518,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf5a0c; prev C2-08-00 with 1 vtable ref and no callers; opaque name
+?name@Rva000C1246Named@@QBEPBDXZ,,0x000C1246,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DScriptedModelDraw; vtable ref at 0x7CA098; address-derived placeholder name
