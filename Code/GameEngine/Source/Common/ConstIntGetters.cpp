@@ -363,3 +363,12 @@ int Rva0008EFCCGet(void)
 {
 	return 0x00BFC338;
 }
+
+// ?Rva004CE29DGet@@YAHXZ @ 0x004CE29D (6B): returns 0x00C5FEA0.
+// Follows a ret-4 (0x4CE29A-9C) with a mov/mov/ret getter after. 41
+// direct E8 callers (anchor-verified), Ghidra-6, no branch sources.
+// The value sits 0x100 below landed Rva004CE52EGet's table. Opaque name.
+int Rva004CE29DGet(void)
+{
+	return 0x00C5FEA0;
+}
