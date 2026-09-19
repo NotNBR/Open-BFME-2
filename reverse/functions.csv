@@ -11435,3 +11435,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?name@Rva0004FA11Named@@QBEPBDXZ,,0x0004FA11,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Radar; vtable refs at 0x7C4E3C and 0x803644; address-derived placeholder name
 ?open@File@@UAE_NPBDH@Z,,0x00602543,87,Code/GameEngine/Source/Common/System/File.cpp,matched,BFME1 File.cpp open logic (one-arg setName drift); slot1; access flags unchanged
 ?name@Rva00063531Named@@QBEPBDXZ,,0x00063531,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning W3DGhostObjectManager; vtable ref at 0x7C59C0; address-derived placeholder name
+?name@Rva000647CENamed@@QBEPBDXZ,,0x000647CE,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning W3DBuffLogic; vtable ref at 0x7C5A64; address-derived placeholder name
