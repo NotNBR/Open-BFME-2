@@ -2988,8 +2988,6 @@ _isprint,0x0075AC08,CRT isprint import thunk FF25 via IAT 0x00BBA6FC; retail REL
 _listen@8,0x00687CDE,PE-verified FF25 import thunk to ws2_32.dll!listen via IAT 0x00BBA92C; independently read from retail import directory
 _listfields,0x00754EA0
 _localtime,0x0062987A,CRT localtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
-_luaD_callTM,0x0074DE70,call_binTM 0x74E920 last E8 decodes here; lvm.c calls luaD_callTM
-_luaD_init,0x0074D4B0
 _luaG_binerror,0x0074D2B0
 _luaG_ordererror,0x0074D2E0
 _luaH_new,0x00750770
@@ -3170,3 +3168,4 @@ _luaT_realtag,0x0074FC60
 _luaH_getstr,0x00750510
 _luaG_typeerror,0x0074D250
 _message,0x0074DDC0
+_luaD_openstack,0x0074D700
