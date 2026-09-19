@@ -36,3 +36,12 @@ int Rva0009FDF5Get(void)
 {
 	return 0x0048F925;
 }
+
+// ?Rva0009FDFBGet@@YAHXZ @ 0x0009FDFB (6B): returns 0x0048F95F.
+// Immediately follows Rva0009FDF5Get (prev is its C3), carried by 1 .rdata
+// slot (0x7C8CDC) in the parallel vtable, no direct callers, no branch
+// sources. Opaque address-derived name.
+int Rva0009FDFBGet(void)
+{
+	return 0x0048F95F;
+}
