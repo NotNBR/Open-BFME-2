@@ -2992,3 +2992,8 @@ _Module32Next@8,0x00687D8C
 ?bfmeMakeResultA@BfmeResultSourceA@@QAE?AUBfmeResultA@@H@Z,0x00628980
 ?m@T_009f4fb0@@QAEXXZ,0x006276E0,BFME1-mirror gen-shim call target for member-pointer call in Rva009F5970StateCtor; row at same address carries full StateInit name
 ?m@T_009f59d0@@QAEXXZ,0x00627E40,BFME1-mirror gen-shim call target for member-pointer call in Rva009F5970StateCtor; second call beside proven first-call row 0x6276E0
+?bfmeAskEQ@BfmeThingEQ@@QAEEPAX@Z,0x00625720
+?deleteListResources@Radar@@IAEXXZ,0x002D75E5
+?clearAllEvents@Radar@@IAEXXZ,0x002D7D57
+??0Rva0036CA00Str@@QAE@ABV0@@Z,0x000A8C7C
+_isprint,0x0075AC08,CRT isprint import thunk FF25 via IAT 0x00BBA6FC; retail REL32 target of Rva007F91D0 at 0x00665770
