@@ -10755,3 +10755,4 @@ _retstat,,0x00754A10,187,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 _check_match,,0x00753960,181,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099AB20
 _constructor_part,,0x00754FC0,335,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C180
 _funcstat,,0x007551D0,117,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1_0x0099C390
+??0Rva000D1930@@QAE@XZ,,0x0020E42C,29,Code/GameEngine/Source/Common/Rva000D1930Ctor.cpp,matched,BFME1 byte-identical donor; b1 0x000D1930; vtable install then dword zeros
