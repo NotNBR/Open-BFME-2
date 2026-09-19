@@ -483,6 +483,11 @@ struct DX8WrapperStageHelper : public DX8Wrapper
 	static void Rva0011CC60InvalidateTextureStages(void);
 };
 
+// Release view for the out-of-line TextureBaseClass::Release_Ref
+// (0x0061ED10); declared early for Invalidate_Cached_Render_States below.
+// Full family comment sits with the Bfme reset views further down.
+struct BfmeResetResource { void Release_Ref(); };
+
 // Retail sets this byte while releasing the current render-state buffers
 // (store site 0x0051FD3F). The converted BFME1 tree carries it as an
 // address-derived extern; no original spelling is asserted here either.
@@ -491,7 +496,6 @@ static unsigned char g_rva00DB621CFlag;
 // Retail Invalidate_Cached_Render_States is at 0x0011FD10 (226B): Zero Hour's
 // body (see the converted BFME1 dx8wrapper.cpp) with the texture-stage half
 // extracted into the helper above, which retail calls.
-// ?Invalidate_Cached_Render_States@DX8Wrapper@@ present-unmatched
 void DX8Wrapper::Invalidate_Cached_Render_States(void)
 {
 	unsigned zero=0;
@@ -532,7 +536,7 @@ void DX8Wrapper::Invalidate_Cached_Render_States(void)
 	}
 	for (unsigned i=0;i<MAX_TEXTURE_STAGES;++i) {
 		if (render_state.Textures[i]) {
-			render_state.Textures[i]->Release_Ref();
+			((BfmeResetResource *)render_state.Textures[i])->Release_Ref();
 			render_state.Textures[i]=NULL;
 		}
 	}
@@ -833,7 +837,7 @@ extern BfmeResetDebug *BfmeResetDebugInstance;
 // No layout of the old TextureClass payload is asserted here. The emitted
 // nullable destructors agree with all nine retail unwind actions.
 // Callee and complete EH evidence: docs/reconstruction/dx8wrapper-reset.md.
-struct BfmeResetResource { void Release_Ref(); };
+// (struct BfmeResetResource itself is declared near the top for Invalidate.)
 struct BfmeResetAnyRef {
 	BfmeResetResource *pointer;
 	BfmeResetAnyRef();
