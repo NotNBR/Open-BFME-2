@@ -11458,3 +11458,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?dec@Rva00552C4EDwordCounter@@QAEXXZ,,0x00552C4E,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword dec family pair; opaque holder
 ?Rva006C53B0Get@@YAHXZ,,0x006C53B0,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E0C1F4
 ?name@Rva001DD02BNamed@@QBEPBDXZ,,0x001DD02B,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Eva; vtable ref at 0x7DC5B0 with slot1 0x4B3FD0 and close 0x5B5384; address-derived placeholder name
+?name@Rva002AA3AFNamed@@QBEPBDXZ,,0x002AA3AF,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Energy; vtable at 0x7FDC48 with slot0 0x8A10FD slot1 0x4B3FD0; address-derived placeholder name
