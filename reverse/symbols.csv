@@ -3151,7 +3151,6 @@ _strtoul,0x006291C0,address read from the REL32 displacement in DirtySock Y2Rva0
 _subexpr,0x007558A0
 _time,0x00629A42,CRT time import thunk; retail REL32 target of Rva007FEF60 at 0x66B430; PE imports slot 0xBBA508 is msvcr71.dll!time
 _traceexec,0x0074E410
-_type_error,0x00751880,luaL_check_number 0x751A80 +0x3E E8 decodes here; static arg-type helper in lauxlib.c
 _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE780 at 0x66AC50
 dup_7e86b0,0x00655770
 __CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper calls straight into it
