@@ -82,3 +82,13 @@ int Rva00180AA0Get(void)
 {
 	return 0x41474752;
 }
+
+// ?Rva00180E60Get@@YAHXZ @ 0x00180E60 (6B): returns 0x00BBE8D4.
+// CC-island (16xCC before and after), carried by 1 .rdata slot (0x7D5090)
+// in the 0x180xxx vtable family, no direct callers, no branch sources.
+// The imm falls in the .rdata VA window so it is kept as a plain int
+// literal (no DIR32 for literals). Opaque address-derived name.
+int Rva00180E60Get(void)
+{
+	return 0x00BBE8D4;
+}
