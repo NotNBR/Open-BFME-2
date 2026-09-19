@@ -170,10 +170,6 @@ public:
 	int               m_field28;
 };
 
-// The out-of-line destructor below also emits the ??1 symbol, but retail
-// keeps no separate ??1 body for this class: 0x0066E750 is straight-line
-// dtor logic plus the wrapper tail, so there is no address for a ??1 row.
-// ??1Rva00802380Owner@@UAE@XZ absent-from-retail
 Rva00802380Owner::~Rva00802380Owner()
 {
 	m_field4 = 0;
