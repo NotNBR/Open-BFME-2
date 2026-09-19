@@ -10981,3 +10981,4 @@ _forbody,,0x007544E0,165,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 _adjustlocalvars,,0x00753C70,52,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; pin upgrade (forbody caller); exact via unclaimed_scan
 ?enable@Rva00050CFCOneSetter@@QAEXXZ,,0x00050CFC,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
 ?disable@Rva00050D01ZeroSetter@@QAEXXZ,,0x00050D01,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
+?apply@Rva0029A755DwordImmSetter@@QAEXXZ,,0x0029A755,11,Code/GameEngine/Source/Common/DispDwordImmSetters.cpp,matched,Disp32 dword imm-setter
