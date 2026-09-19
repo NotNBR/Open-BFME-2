@@ -158,3 +158,13 @@ int Rva000A1364Get(void)
 {
 	return 0x0048FBA3;
 }
+
+// ?Rva000A165EGet@@YAHXZ @ 0x000A165E (6B): returns 0x0048FBDD.
+// Follows a pop/ret-4 (prev C2-04-00), carried by 1 .rdata slot
+// in a vtable family shared with Rva000A1664Get (identical neighbours,
+// parallel tables 44B apart), no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva000A165EGet(void)
+{
+	return 0x0048FBDD;
+}
