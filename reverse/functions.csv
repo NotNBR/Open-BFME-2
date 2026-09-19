@@ -11400,3 +11400,4 @@ _luaH_next,,0x007505A0,115,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte
 _luaH_getany,,0x00750460,81,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan
 ?apply@Rva0005D6FDEDwordImmSetter@@QAEXXZ,,0x005D6FDE,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-385CC700-C3
 ?apply@Rva0005D387BDwordImmSetter@@QAEXXZ,,0x005D387B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-0859C700-C3
+?apply@Rva0005D2EA1DwordImmSetter@@QAEXXZ,,0x005D2EA1,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-782BBE00-C3
