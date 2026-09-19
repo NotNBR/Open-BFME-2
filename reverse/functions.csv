@@ -11515,3 +11515,4 @@ _lua_isnumber,,0x00747130,87,Code/Libraries/Source/Lua/lapi.c,matched,object-sym
 _lua_lessthan,,0x007472B0,97,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_lessthan; emitted by lapi.c object; vendored=lua-4.0.1
 _lua_tonumber,,0x00747320,71,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_tonumber; emitted by lapi.c object; vendored=lua-4.0.1
 _lua_strlen,,0x00747400,71,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_strlen; emitted by lapi.c object; vendored=lua-4.0.1
+_lua_pushlstring,,0x007475A0,62,Code/Libraries/Source/Lua/lapi.c,matched,object-symbol=_lua_pushlstring; emitted by lapi.c object; vendored=lua-4.0.1
