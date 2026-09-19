@@ -11399,3 +11399,4 @@ _luaV_gettable,,0x0074E560,236,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byt
 _luaH_next,,0x007505A0,115,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan
 _luaH_getany,,0x00750460,81,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan
 ?apply@Rva0005D6FDEDwordImmSetter@@QAEXXZ,,0x005D6FDE,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-385CC700-C3
+?apply@Rva0005D387BDwordImmSetter@@QAEXXZ,,0x005D387B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-0859C700-C3
