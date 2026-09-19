@@ -10543,3 +10543,4 @@ _luaB_settag,,0x0074B980,53,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 b
 _luaB_rawset,,0x0074BAB0,49,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00994950; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 _luaB_rawget,,0x0074BA80,41,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00994920; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 _luaB_setglobal,,0x0074B8F0,37,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00994790; ICF-folded in BFME1 so the name is this sweep's pick among its twins
+_luaB_getglobal,,0x0074B920,32,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x009947C0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
