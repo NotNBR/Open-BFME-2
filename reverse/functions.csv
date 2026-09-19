@@ -11007,3 +11007,4 @@ _code_string,,0x00753A70,88,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 by
 _checkname,,0x00753B40,90,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
 _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; emitted-but-unclaimed row; exact via unclaimed_scan
 ?Get_Description@ShaderClass@@QBEABVStringClass@@AAV2@@Z,,0x00138280,1032,Code/Libraries/Source/WWVegas/WW3D2/shader.cpp,matched,BFME1 donor plus BFME2 GRADIENT_MODULATE_OR_2X 7th primary-gradient case
+?get@Rva00050D10ByteField@@QBEEXZ,,0x00050D10,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
