@@ -11214,3 +11214,5 @@ _luaZ_read,,0x00756E90,118,Code/Libraries/Source/Lua/lzio.c,matched,BFME1 byte-i
 _hash_s,,0x0074FFF0,49,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c hash_s; exact; unblocks luaS_newlstr
 _luaS_resize,,0x00750030,182,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c luaS_resize; exact; unblocks luaS_newlstr
 _luaS_newlstr,,0x00750130,245,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c luaS_newlstr; exact; unblocks LoadString/LoadLocals/LoadConstants callers
+_lua_newuserdata,,0x00747D70,75,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c lua_newuserdata; exact; resolves openwithcontrol call
+_luaS_newudata,,0x00750230,148,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c luaS_newudata; exact; resolves lua_newuserdata call
