@@ -11431,3 +11431,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?close@File@@UAEXXZ,,0x0060259A,52,Code/GameEngine/Source/Common/System/File.cpp,matched,BFME1 File.cpp port (one-arg setName drift); /O1 for bl-zero form; ::delete-this via slot0 + ??3
 ?name@Rva000420D6Named@@QBEPBDXZ,,0x000420D6,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning ModuleFactory; vtable refs at 0x7C2638 and 0x7F3FE4; address-derived placeholder name
 ?name@Rva0004C457Named@@QBEPBDXZ,,0x0004C457,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning GameClient; vtable refs at 0x7C472C and 0x7ED848; address-derived placeholder name
+?name@Rva0004CE28Named@@QBEPBDXZ,,0x0004CE28,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning FXParticleSystemManager; vtable refs at 0x7C4C64 and 0x7E18C0; address-derived placeholder name
