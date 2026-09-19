@@ -356,3 +356,11 @@ int Rva004C07ABGet(void)
 {
 	return 0x00BF4894;
 }
+
+// ?Rva0033F3E9Get@@YAHXZ @ 0x0033F3E9 (6B): returns 0x00C1104C.
+// Follows a ret-12 (prev C2-0C-00), carried by 1 .rdata slot, no direct
+// callers, no branch sources. Opaque address-derived name.
+int Rva0033F3E9Get(void)
+{
+	return 0x00C1104C;
+}
