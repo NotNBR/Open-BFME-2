@@ -471,3 +471,12 @@ int Rva00175750Get(void)
 {
 	return 26;
 }
+
+// ?Rva001758B0Get@@YAHXZ @ 0x001758B0 (6B): returns 27. Follows a C2-04-00
+// ret with CC padding, 8xCC after, carried at 0x7D4B6C in the 0x7D4Bxx
+// mapper family tables, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva001758B0Get(void)
+{
+	return 27;
+}
