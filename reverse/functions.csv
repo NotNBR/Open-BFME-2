@@ -12270,3 +12270,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva0056DD52Get@@YAHXZ,,0x0056DD52,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDC2884; opens contiguous triple; 2 E8 callers and Ghidra-6; opaque name
 ?Rva0056DD58Get@@YAHXZ,,0x0056DD58,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDC2D10; triple middle; 4 E8 callers and Ghidra-6; opaque name
 ?Rva0056DD5EGet@@YAHXZ,,0x0056DD5E,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDC4B60; triple tail; 4 E8 callers and Ghidra-6; opaque name
+?Rva00381452Get@@YAHXZ,,0x00381452,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xE02310; prev C3 with 4 E8 callers; opaque name

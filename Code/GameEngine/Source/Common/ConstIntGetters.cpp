@@ -177,3 +177,11 @@ int Rva0056DD5EGet(void)
 {
 	return 0x00DC4B60;
 }
+
+// ?Rva00381452Get@@YAHXZ @ 0x00381452 (6B): returns 0x00E02310.
+// Prev C3 with a frame-style function after. 4 direct E8 callers, no
+// Ghidra entry (dead emission), no branch sources. Opaque name.
+int Rva00381452Get(void)
+{
+	return 0x00E02310;
+}
