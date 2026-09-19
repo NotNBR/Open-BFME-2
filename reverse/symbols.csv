@@ -3168,3 +3168,4 @@ _luaS_newudata,0x00750230,lua_newuserdata 0x747D70 +0x17 E8 decodes here; udata 
 _luaD_call,0x0074D8D0,lua_rawcall 0x747B20 +0x19 tail-jmp; ldo.c
 _luaS_createudata,0x007502D0
 _luaV_getglobal,0x0074E760
+_luaH_get,0x00750550
