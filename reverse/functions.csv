@@ -11939,3 +11939,4 @@ _luaX_init,,0x00756F10,53,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-id
 ?get@Rva0034B150ByteField@@QBEEXZ,,0x0034B150,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 _luaX_token2str,,0x00756FA0,44,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _luaX_checklimit,,0x007574A0,63,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
+_luaX_syntaxerror,,0x00756F50,68,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
