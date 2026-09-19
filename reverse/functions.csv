@@ -10889,3 +10889,4 @@ _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte
 ?get@Rva0056D653AsciiField@@QBE?AVAsciiString@@XZ,,0x0056D653,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x258 via StringBase copy 0x365F0
 ?bfmeGo932C@BfmeThing932C@@QAEHXZ,,0x0034B154,19,Code/GameEngine/Source/Common/BfmeConv932.cpp,matched,BFME1 byte-identical donor; b1 0x00171380
 ?get@Rva00581777AsciiField@@QBE?AVAsciiString@@XZ,,0x00581777,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x1C8 via StringBase copy 0x365F0
+?get@Rva0059F322AsciiField@@QBE?AVAsciiString@@XZ,,0x0059F322,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0xFFC via StringBase copy 0x365F0
