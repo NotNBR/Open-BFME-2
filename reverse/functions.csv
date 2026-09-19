@@ -11156,3 +11156,4 @@ _open_func,,0x00754080,87,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte
 ?bfmeDropXX@BfmeLinkXX@@QAEXXZ,,0x00758490,33,Code/GameEngine/Source/Common/BfmeOneHundredFortyEight.cpp,matched,BFME1 byte-identical donor; b1 0x009A2320; resized 25 to 33 (row had truncated the m_bfmeOn nulling store and ret)
 ?get@Rva002A981ALeaGetter@@QBEPAXXZ,,0x002A981A,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?apply@Rva00388845DwordImmSetter@@QAEXXZ,,0x00388845,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?apply@Rva003916A4DwordImmSetter@@QAEXXZ,,0x003916A4,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
