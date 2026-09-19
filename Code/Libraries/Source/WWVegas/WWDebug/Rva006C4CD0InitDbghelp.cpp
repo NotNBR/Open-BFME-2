@@ -93,6 +93,37 @@ void Rva006C4CD0Helper::uninitDbghelp(void)
 	FreeLibrary(m_hLib);
 }
 
+// ?rva006C4E30@@YAXXZ
+// retail 0x006C4E30, 27 bytes. Same TU: one-shot guard around initDbghelp;
+// the first call through tail-jumps into initDbghelp on the TU-global
+// helper object. Guard and object are adjacent in retail's image, so they
+// are declared adjacently here.
+static int g_rva006C4E30Guard = 0;
+static Rva006C4CD0Helper g_rva006C4CD0Object;
+void rva006C4E30(void)
+{
+	if (++g_rva006C4E30Guard == 1) {
+		g_rva006C4CD0Object.initDbghelp();
+	}
+}
+
+// ?rva006C4E50@@YAXXZ
+// retail 0x006C4E50, 61 bytes. Same TU: guarded teardown twin of rva006C4E30;
+// when the last user leaves it runs the SymCleanup slot, then frees the
+// library. Mirrors uninitDbghelp's call shapes on the TU-global object.
+void rva006C4E50(void)
+{
+	if (--g_rva006C4E30Guard != 0) {
+		return;
+	}
+	if (g_rva006C4CD0Object.m_hLib == NULL) {
+		return;
+	}
+	if (g_rva006C4CD0Object.m_flag && g_rva006C4CD0Object.m_symCleanup != NULL) {
+		((int (__stdcall *)(void *))g_rva006C4CD0Object.m_symCleanup)(GetCurrentProcess());
+	}
+	FreeLibrary(g_rva006C4CD0Object.m_hLib);
+}
 // ?getSymbolName@Rva006C4CD0Helper@@QAE_NKPADK@Z
 // retail 0x006C4D80, 167 bytes. Same TU: resolve an address to its symbol
 // name through the slot at +0x1C, copying at most maxlen bytes into buf.
