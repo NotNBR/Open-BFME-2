@@ -1,20 +1,24 @@
 // cl: /O1 /DNDEBUG /DWIN32 /D_WINDOWS /MD /EHsc
 // Trimmed from Open-BFME-1
 // (Code/GameEngine/Source/Common/System/File.cpp): only the placed
-// ?lock@File and ?close@File bodies are defined here. Slots stay
-// declared-only (destructor for the slot-0 delete-this dispatch, rest for
-// layout) and the donor's other members stay out, so the unmatched-definition
-// gate passes. Layout follows the donor: AsciiString is pointer-sized (+0x04),
-// access +0x08, single-byte open/deleteOnClose flags, mutex handle +0x10;
-// lock is vtable slot 15, unlock slot 16, close slot 2. /O1: retail keeps its
-// zero in ebx (cmp/mov bl + push ebx); default flags use immediates and drop
-// a callee-saved save. The two imports are read straight out of retail:
-// KERNEL32 CreateMutexA + WaitForSingleObject.
+// ?lock@File, ?close@File, ?open@File and ??1File bodies are defined here.
+// Slots stay declared-only (destructor for the slot-0 delete-this dispatch,
+// rest for layout) and the donor's other members stay out, so the
+// unmatched-definition gate passes. Layout follows the donor: AsciiString is
+// pointer-sized (+0x04), access +0x08, single-byte open/deleteOnClose flags,
+// mutex handle +0x10; close is slot 2, open slot 1, lock slot 15, unlock
+// slot 16. The member is a TU-local AsciiString whose inline set() reaches
+// StringBase::set and whose forceinline dtor reaches the folded clear, so the
+// open/close set calls and the destructor teardown stay direct. /O1: retail
+// keeps its zero in ebx (cmp/mov bl + push ebx); default flags use immediates
+// and drop a callee-saved save. Imports read straight out of retail: KERNEL32
+// CreateMutexA + WaitForSingleObject + CloseHandle.
 
 typedef void *FileHandle;
 
 extern "C" __declspec(dllimport) FileHandle __stdcall CreateMutexA(void *attrs, int owned, const char *name);
 extern "C" __declspec(dllimport) unsigned long __stdcall WaitForSingleObject(FileHandle handle, unsigned long timeout);
+extern "C" __declspec(dllimport) int __stdcall CloseHandle(void *handle);
 
 static const unsigned long FILE_INFINITE = 0xFFFFFFFF;
 
@@ -25,6 +29,16 @@ public:
 	void set(const T *str);
 private:
 	void *m_data;
+};
+
+class AsciiString
+{
+public:
+	void set(const char *str) { m_base.set(str); }
+	void clear();
+	__forceinline ~AsciiString() { clear(); }
+private:
+	StringBase<char> m_base;
 };
 
 class File
@@ -55,7 +69,7 @@ protected:
 	}
 
 private:
-	StringBase<char> m_nameStr;
+	AsciiString m_nameStr;
 	int m_access;
 	unsigned char m_isOpen;
 	unsigned char m_deleteOnClose;
@@ -119,4 +133,18 @@ bool File::open(const char *filename, int access)
 	m_access = access;
 	m_isOpen = 1;
 	return true;
+}
+
+// ??1File@@UAE@XZ
+// BFME1 File::~File verbatim: clears delete-on-close (so a self-deleting File
+// does not re-enter delete while being destroyed), closes, then releases the
+// mutex. The trailing AsciiString teardown (0x36410 via the forceinline member
+// dtor) is implicit.
+File::~File()
+{
+	m_deleteOnClose = 0;
+	close();
+	if (m_mutex) {
+		CloseHandle(m_mutex);
+	}
 }
