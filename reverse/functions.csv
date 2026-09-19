@@ -12132,3 +12132,4 @@ __Locale_strcmp,,0x00021C40,272,Code/Libraries/Source/WWVegas/WWLib/stlport_Loca
 ?name@Rva0048331CNamed@@QBEPBDXZ,,0x0048331C,6,Code/GameEngine/Source/Common/ModuleNameGetters.cpp,matched,literal name getter returning RebuildHoleBehavior; body VA has exactly 1 .rdata ref (module vtable closed by 004B3FD0 pair); address-derived placeholder name
 ?name@Rva0034B172Named@@QBEPBDXZ,,0x0034B172,6,Code/GameEngine/Source/Common/SubsystemNameGetters4.cpp,matched,literal name getter returning AIAttackState; vtable ref in .rdata; address-derived placeholder name (fourth getter unit)
 __Locale_wctomb,,0x00020D50,92,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleWctomb.c,matched,BFME1 byte-identical donor; b1 0x0084DA90
+___TranslateToSystem,,0x00022320,57,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleTranslateToSystem.c,matched,BFME1 byte-identical donor; b1 0x0084F190
