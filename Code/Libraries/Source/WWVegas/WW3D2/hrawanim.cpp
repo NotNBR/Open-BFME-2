@@ -172,7 +172,6 @@ HRawAnimClass::HRawAnimClass(void) :
  * HISTORY:                                                                                    * 
  *   08/11/1997 GH  : Created.                                                                 * 
  *=============================================================================================*/
-// ??1HRawAnimClass@@UAE@XZ present-unmatched
 HRawAnimClass::~HRawAnimClass(void)
 {
 	Free();

@@ -73,7 +73,11 @@ public:
 
 	HAnimClass(void)	:
 		EmbeddedSoundBoneIndex (EMBEDDED_SOUND_BONE_INDEX_NOT_SET)	{ }
-	virtual ~HAnimClass(void)		{ }
+	// Out of line, not an inline empty body: retail's ~HAnimClass at
+	// 0x00196150 is a real 21-byte function restoring the HashableClass vptr
+	// at +8 and the RefCountClass vptr at +0, and ~HRawAnimClass calls it
+	// (0x0018EC29). Same revision as BFME1's Code hanim.h.
+	virtual ~HAnimClass(void);
 
 	virtual const char *		Get_Name(void) const = 0;
 	virtual const char *		Get_HName(void) const = 0;
