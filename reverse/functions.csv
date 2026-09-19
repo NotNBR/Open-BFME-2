@@ -10827,3 +10827,5 @@ _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-iden
 ?clear@Rva00801830Owner@@QAEXXZ,,0x0066DB30,21,Code/GameEngine/Source/GameNetwork/Y2FeslBrowserSmallMembers.cpp,matched,BFME1 byte-identical donor; b1 0x00801830
 ?bfmeDrop@BfmeTracker4310@@QAEXPAVBfmeObj4310@@@Z,,0x006D2580,52,Code/GameEngine/Source/Common/BfmeRva008C4310Release.cpp,matched,BFME1 byte-identical donor; b1 0x00896FF0
 ?resetPlayerTimeout@DisconnectManager@@IAEXH@Z,,0x004D3A06,21,Code/GameEngine/Source/GameNetwork/DisconnectManager.cpp,matched,BFME1 byte-identical donor; b1 0x0066B400
+?_M_set_node@?$_Deque_iterator_base@VGameResultsRequest@@@_STL@@QAEXPAPAVGameResultsRequest@@@Z,,0x00419D9C,21,Code/GameEngine/Source/GameNetwork/GameSpy/Thread/GameResultsThread.cpp,matched,BFME1 byte-identical donor; b1 0x0063FFE0
+?bfmeGoDWH@BfmeThingDWH@@QAEXXZ,,0x00050E6E,19,Code/GameEngine/Source/Common/BfmeConv792.cpp,matched,BFME1 byte-identical donor; b1 0x00694BF0
