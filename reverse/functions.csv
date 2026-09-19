@@ -10895,3 +10895,4 @@ _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte
 ?bfmeGo937B@BfmeThing937B@@QAEXXZ,,0x00132129,18,Code/GameEngine/Source/Common/BfmeConv937.cpp,matched,BFME1 donor b1 0x0090D1C0; virtual slot 0 plus ledger sub-call pin
 ?bfmeGo932E@BfmeThing932E@@QAEXXZ,,0x0034BA64,22,Code/GameEngine/Source/Common/BfmeConv932.cpp,matched,BFME1 byte-identical donor; b1 0x0017DB10
 ?Rva004BCB20@@YAXPAVGameWindow@@H@Z,,0x00328543,60,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetUserDataHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x004BCB20
+_settabss,,0x00747DC0,30,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-identical donor; b1 0x00990C60; ICF twin is the same source
