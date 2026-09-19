@@ -10803,3 +10803,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?clearStatus@Image@@QAEII@Z,,0x002D8E72,17,Code/GameEngine/Source/GameClient/System/Image.cpp,matched,BFME1 byte-identical donor; b1 0x005D1C30
 ?get@Rva004C1160@@QAEHXZ,,0x004059BE,17,Code/GameEngine/Source/Common/R2GuardedFieldGetters.cpp,matched,BFME1 byte-identical donor; b1 0x004C1160
 ?setLeaveFrame@BFMENetInformPlayerLeaveFrameCommandMsg@@QAEXI@Z,,0x004D59FF,17,Code/GameEngine/Source/GameNetwork/NetCommandMsg_ctors.cpp,matched,BFME1 byte-identical donor; b1 0x006741A0
+?bfmeGoURB@BfmeThingURB@@QAEHXZ,,0x00130FCE,28,Code/GameEngine/Source/Common/BfmeConv1341.cpp,matched,BFME1 byte-identical donor; b1 0x008FEB40
