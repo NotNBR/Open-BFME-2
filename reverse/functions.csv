@@ -11345,3 +11345,4 @@ _lua_settop,,0x00746F40,44,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-i
 _lua_setglobal,,0x00747920,37,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _lua_rawcall,,0x00747B20,29,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _luaV_setglobal,,0x0074E800,282,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
+_luaV_settable,,0x0074E650,268,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan

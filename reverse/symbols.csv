@@ -3170,5 +3170,5 @@ _luaS_createudata,0x007502D0
 _luaV_getglobal,0x0074E760
 _luaH_get,0x00750550
 _luaT_realtag,0x0074FC60
-_luaV_settable,0x0074E650
 _luaH_getstr,0x00750510
+_luaG_typeerror,0x0074D250
