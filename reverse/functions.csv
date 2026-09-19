@@ -11465,3 +11465,4 @@ _traceexec,,0x0074E410,121,Code/Libraries/Source/Lua/lvm.c,matched,exact via unc
 ?Rva0073B660False@@YA_NPAXH@Z,,0x0073B660,3,Code/GameEngine/Source/Common/Rva0073B660False.cpp,matched,cdecl 2-arg byte-false stub; 11 direct callers push 2 dwords and test al; Ghidra-3; address-derived name
 ?Rva00658200Get@@YAHXZ,,0x00658200,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E09FA4
 _message,,0x0074DDC0,105,Code/Libraries/Source/Lua/ldo.c,matched,exact via unclaimed_scan; emitted by ldo.c object; vendored=lua-4.0.1
+_callCclosure,,0x0074D860,102,Code/Libraries/Source/Lua/ldo.c,matched,exact via unclaimed_scan; emitted by ldo.c object; vendored=lua-4.0.1
