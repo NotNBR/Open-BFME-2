@@ -54,3 +54,18 @@ Int GadgetListBoxGetNumEntries(GameWindow *listbox)
 
 	return 0;
 }
+
+// ?GadgetListBoxSetAudioFeedback@@YAXPAVGameWindow@@_N@Z, retail 0x0032487B (25B).
+// Ported from Open-BFME-1 Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp
+// (BFME1 0x004B7960). The click-feedback flag is the Bool at +0x0E.
+void GadgetListBoxSetAudioFeedback(GameWindow *listbox, Bool enable)
+{
+	if (!listbox)
+		return;
+
+	void *listboxData = listbox->winGetUserData();
+	if (!listboxData)
+		return;
+
+	*(Bool *)((char *)listboxData + 0x0E) = enable;
+}
