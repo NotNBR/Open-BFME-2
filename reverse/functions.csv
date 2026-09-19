@@ -12376,3 +12376,4 @@ _ServerBrowserListQueryErrorA,,0x0069D000,16,Code/GameEngine/Source/GameNetwork/
 ?Rva00180AA0Get@@YAHXZ,,0x00180AA0,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x41474752; C9C3-prev with 1 vtable ref in 0x180xxx family; opaque name
 ?Rva00180E60Get@@YAHXZ,,0x00180E60,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0xBBE8D4; CC-island with 1 vtable ref in 0x180xxx family; opaque name
 ?Rva00180E70Get@@YAHXZ,,0x00180E70,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x4E554C4C; CC-island with 1 vtable ref in 0x180xxx family; opaque name
+?Rva000A08F1Get@@YAHXZ,,0x000A08F1,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x48F6E1; C2-ret prev with 1 vtable ref paired with 0xA08F7; opaque name
