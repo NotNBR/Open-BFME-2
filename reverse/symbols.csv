@@ -3006,3 +3006,4 @@ _lua_error,0x0074D570
 ??1Rva006CD6C0SizedDeleting@@UAE@XZ,0x006CC4C0
 ?bfmeDo912C@BfmeThing912C@@QAEXPAUBfmeNode912C@@@Z,0x006274B0
 ?bfmeInit@Gen001811E0@@AAEPAV1@PAX@Z,0x001810D0
+?logicMessageDispatcher@GameLogic@@QAEXPAVGameMessage@@PAX@Z,0x00377613
