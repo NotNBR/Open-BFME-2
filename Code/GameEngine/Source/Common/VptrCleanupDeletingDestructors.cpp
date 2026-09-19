@@ -1,0 +1,47 @@
+// Six thirty-six-byte __thiscall scalar deleting destructors with one shape:
+//
+//     push esi / mov esi,ecx / mov [esi],<offset vftable> / call <rel32> /
+//     test byte ptr [esp+4],1 / je +9 / push esi / call operator delete /
+//     add esp,4 / mov eax,esi / pop esi / ret 4
+//
+// BFME1 byte-identical donor (reference/open-bfme-1
+// Code/GameEngine/Source/Common/VptrCleanupDeletingDestructors.cpp), trimmed
+// to the six bodies the address map resolves. The donor carries twelve; the
+// other six do not place uniquely in game.dat. Each callee is spelled as a
+// member of a small class the object is cast to; what the bytes show is a
+// __thiscall function reached with `this` in ecx. In this image the shared
+// callee is the rowed ??1BfmeDirtyBase at 0x00658650 and the odd one out is
+// the rowed ??1Rva00666BA0 at 0x00666BA0; both are pinned under the donor's
+// address-derived run() names. The delete call reaches the rowed game
+// scalar operator delete at 0x0002FD60. Identity beyond the address is not
+// recovered: every NAME derives from its retail address.
+
+class Rva007EB6C0Cleanup
+{
+public:
+	void run();
+};
+
+class Rva007FA650Cleanup
+{
+public:
+	void run();
+};
+
+#define BFME_VPTR_CLEANUP_DELETING_DTOR( NAME, CLEANUP )                      \
+	class NAME                                                                \
+	{                                                                         \
+	public:                                                                   \
+		virtual ~NAME();                                                      \
+	};                                                                        \
+	NAME::~NAME()                                                             \
+	{                                                                         \
+		( (CLEANUP *)this )->run();                                           \
+	}
+
+BFME_VPTR_CLEANUP_DELETING_DTOR( Rva007F2F50CleanupDeleting, Rva007EB6C0Cleanup )
+BFME_VPTR_CLEANUP_DELETING_DTOR( Rva007F37F0CleanupDeleting, Rva007EB6C0Cleanup )
+BFME_VPTR_CLEANUP_DELETING_DTOR( Rva007F41E0CleanupDeleting, Rva007EB6C0Cleanup )
+BFME_VPTR_CLEANUP_DELETING_DTOR( Rva007F4900CleanupDeleting, Rva007FA650Cleanup )
+BFME_VPTR_CLEANUP_DELETING_DTOR( Rva007FADF0CleanupDeleting, Rva007EB6C0Cleanup )
+BFME_VPTR_CLEANUP_DELETING_DTOR( Rva007FC120CleanupDeleting, Rva007EB6C0Cleanup )
