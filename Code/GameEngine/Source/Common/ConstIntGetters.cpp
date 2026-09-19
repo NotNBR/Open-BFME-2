@@ -587,3 +587,12 @@ int Rva00517F2BGet(void)
 {
 	return 0x006D2025;
 }
+
+// ?Rva0051BF27Get@@YAHXZ @ 0x0051BF27 (6B): returns 0x006D2099.
+// Follows a pop/ret (0x51BF25-26) with a lea-style function after.
+// Carried at 0x866C74, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva0051BF27Get(void)
+{
+	return 0x006D2099;
+}

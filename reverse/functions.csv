@@ -12423,3 +12423,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva0039B81DGet@@YAHXZ,,0x0039B81D,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0xC1AD7C; C3-prev with 1 vtable ref in 4B3FD0 family; opaque name
 ?Rva00517F2BGet@@YAHXZ,,0x00517F2B,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0x6D2025; leave-ret-prev with B8-call-after and 1 vtable ref; opaque name
 ?Rva004B29B8Get@@YAHXZ,,0x004B29B8,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0xBF4E80; C2-08-00 prev with claimed dtor at +6 and 1 vtable ref; opaque name
+?Rva0051BF27Get@@YAHXZ,,0x0051BF27,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0x6D2099; pop-ret-prev with lea-after and 1 vtable ref; opaque name
