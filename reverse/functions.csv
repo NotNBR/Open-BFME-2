@@ -11958,3 +11958,4 @@ _luaL_checktype,,0x00751900,99,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1
 _luaL_pushresult,,0x007516F0,100,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _luaL_check_lstr,,0x007519A0,123,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _luaL_addvalue,,0x00751760,159,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
+_adjuststack,,0x007515A0,128,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1; unclaimed_scan exact of TU-emitted body
