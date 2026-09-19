@@ -372,3 +372,12 @@ int Rva004CE29DGet(void)
 {
 	return 0x00C5FEA0;
 }
+
+// ?Rva00226140Get@@YAHXZ @ 0x00226140 (6B): returns 0x00DC2274.
+// Follows a ret-8 (0x22613D-3F) with a frame-style function after.
+// 4 direct E8 callers (0x2264D9/0x2265AE/0x226684/0x226759, all nearby),
+// Ghidra-6, no branch sources. Opaque address-derived name.
+int Rva00226140Get(void)
+{
+	return 0x00DC2274;
+}
