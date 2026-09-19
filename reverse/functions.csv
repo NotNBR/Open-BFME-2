@@ -11420,3 +11420,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?apply@Rva000579656DwordImmSetter@@QAEXXZ,,0x00579656,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-9CBCBF00-C3
 ?apply@Rva00057571CDwordImmSetter@@QAEXXZ,,0x0057571C,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-0CE6C600-C3
 ?apply@Rva000574265DwordImmSetter@@QAEXXZ,,0x00574265,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B; retail C7-01-44E3C600-C3
+?get@Rva0066D7D0LeaField@@QBEPAXXZ,,0x0066D7D0,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; Ghidra-standalone cc-isolated; retail 8D-41-30-C3
