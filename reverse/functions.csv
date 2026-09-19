@@ -12061,3 +12061,4 @@ _readname,,0x007570C0,141,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-id
 ?name@Rva0052BA04Named@@QBEPBDXZ,,0x0052BA04,6,Code/GameEngine/Source/Common/ModuleNameGetters.cpp,matched,literal name getter returning LWPlayerDef; body VA has exactly 1 .rdata ref (module vtable closed by 004B3FD0 pair); address-derived placeholder name
 ?GetRegistrySkuName@@YAPBDXZ,,0x0002F9C0,27,Code/GameEngine/Source/Common/System/RegistryValueDispatch.cpp,matched,
 ?GetRegistryGameName@@YAPBDXZ,,0x0002F9E0,27,Code/GameEngine/Source/Common/System/RegistryValueDispatch.cpp,matched,
+?GetRegistryGameRegPath@@YAPBDXZ,,0x0002FA00,27,Code/GameEngine/Source/Common/System/RegistryValueDispatch.cpp,matched,

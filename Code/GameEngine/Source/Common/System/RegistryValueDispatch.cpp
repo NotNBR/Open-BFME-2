@@ -112,3 +112,15 @@ const char *GetRegistryGameName()
     }
     return g_GameNameValue;
 }
+
+// ?GetRegistryGameRegPath@@YAPBDXZ, retail 0x0002FA00, 27 bytes.
+// Lazy GameRegPath reader: same once-gate, cached pointer at 0x00DA7580.
+const char *GetRegistryGameRegPath()
+{
+    if (!g_registryValuesLoaded)
+    {
+        g_registryValuesLoaded = true;
+        LoadRegistryValues();
+    }
+    return g_GameRegPathValue;
+}
