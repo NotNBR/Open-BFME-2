@@ -9015,7 +9015,6 @@ _Rva008118C0,,0x0067D7C0,5,Code/Libraries/Source/DirtySock/Y5SmallHelpers.c,matc
 ?getNameAndDescription@ScienceStore@@QBE_NW4ScienceType@@AAVUnicodeString@@1@Z,,0x001FF449,52,Code/GameEngine/Source/Common/RTS/ScienceStoreNameDescription.cpp,matched,BFME1 Science.cpp verbatim shape with UnicodeString inline set forwarders
 ?captureGroup@Rva003B40B6Holder@@QAEPAXPAX@Z,,0x003B40B6,21,Code/GameEngine/Source/GameLogic/ScriptEngine/Rva003B40B6Capture.cpp,matched,Capture-group thunk over the 0x3B3F09 indexed walker; plus-0x2C table side
 ?rva006C4E30@@YAXXZ,,0x006C4E30,27,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque guarded dbghelp init; first caller tail-jumps initDbghelp on the global object
-?rva006C4E50@@YAXXZ,,0x006C4E50,61,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,Opaque guarded dbghelp uninit; last caller inlines uninitDbghelp SymCleanup plus FreeLibrary
 ?check@Rva003B483DHolder@@QBE_NPBX@Z,,0x003B483D,29,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptGroupLeafCheck.cpp,matched,Opaque leaf predicate in the ScriptGroup writer cluster; called by the 0x3B485A skip check; 20B entries with signed currency at +0x0E; table at holder+0x18
 ?skipGroup@Rva003B485AHolder@@QAEHPAX@Z,,0x003B485A,43,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptGroupSkipCheck.cpp,matched,Skip predicate gating WriteGroupDataChunk; leaf check plus +0x18 table flag byte at entry +0x0C; int-wide skip state; 20B entries
 ?WriteGroupDataChunk@@YAXAAVDataChunkOutput@@PAVScriptList@@PAVScriptGroup@@@Z,,0x003B6975,166,Code/GameEngine/Source/GameLogic/ScriptEngine/ScriptGroupWriteGroup.cpp,matched,Free group writer; v3 ScriptGroup chunk with skip predicate plus capture plus name table plus subgroup recursion plus script writer
@@ -11821,3 +11820,5 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?set@Rva0028A5E8DwordSlot@@QAEXH@Z,,0x0028A5E8,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva002DAC27DwordSlot@@QAEXH@Z,,0x002DAC27,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva003140E4DwordSlot@@QAEXH@Z,,0x003140E4,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?rva006C4E50@@YAXXZ,,0x006C4E50,61,Code/Libraries/Source/WWVegas/WWDebug/Rva006C4CD0InitDbghelp.cpp,matched,
+?Rva0011CC60InvalidateTextureStages@DX8Wrapper@@SAXXZ,,0x0011CC60,215,Code/Libraries/Source/WWVegas/WW3D2/dx8wrapper.cpp,matched,
