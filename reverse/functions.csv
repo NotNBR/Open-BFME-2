@@ -11382,7 +11382,6 @@ _luaD_openstack,,0x0074D700,77,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byt
 ?get@Rva00405972LeaField@@QBEPAXXZ,,0x00405972,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-74-C3
 ?get@Rva00661C50LeaGetter@@QBEPAXXZ,,0x00661C50,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-90000000-C3
 ?get@Rva00661C60LeaGetter@@QBEPAXXZ,,0x00661C60,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-90010000-C3
-?get@Rva00750502LeaField@@QBEPAXXZ,,0x00750502,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-10-C3
 ?get@Rva004647CDLeaField@@QBEPAXXZ,,0x004647CD,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 NEG LEA getter back-32; RET-PREV; retail 8D-41-E0-C3
 ?get@Rva0053B8E5LeaField@@QBEPAXXZ,,0x0053B8E5,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-48-C3
 ?get@Rva0053998CLeaField@@QBEPAXXZ,,0x0053998C,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; RET-PREV; retail 8D-41-38-C3
@@ -11470,3 +11469,4 @@ _callCclosure,,0x0074D860,102,Code/Libraries/Source/Lua/ldo.c,matched,exact via 
 ?Rva0043C969Get@@YAHXZ,,0x0043C969,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E03314
 ?Rva00062AC4Get@@YAHXZ,,0x00062AC4,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DFEC54
 _luaH_getglobal,,0x00750A50,31,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan; pin upgrade; vendored=lua-4.0.1
+_luaH_getnum,,0x007504C0,70,Code/Libraries/Source/Lua/ltable.c,matched,exact via unclaimed_scan; emitted by ltable.c object; vendored=lua-4.0.1; retracts over-claimed 4B getter tail (intra-function jnp target; return n-val; zero callers)
