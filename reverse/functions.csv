@@ -12065,3 +12065,4 @@ _readname,,0x007570C0,141,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-id
 ?GetRegistryInstallerRegPath@@YAPBDXZ,,0x0002FA20,27,Code/GameEngine/Source/Common/System/RegistryValueDispatch.cpp,matched,
 ?GetRegistryOnlineServer@@YAPBDXZ,,0x0002FA40,27,Code/GameEngine/Source/Common/System/RegistryValueDispatch.cpp,matched,
 ?GetRegistryUserDataLeafName@@YAPBDXZ,,0x0002FA60,27,Code/GameEngine/Source/Common/System/RegistryValueDispatch.cpp,matched,
+?GetRegistryG1@@YAPBDXZ,,0x0002FA80,27,Code/GameEngine/Source/Common/System/RegistryValueDispatch.cpp,matched,
