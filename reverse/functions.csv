@@ -11294,3 +11294,4 @@ _luaD_adjusttop,,0x0074D6B0,70,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byt
 ?apply@Rva0005CF86BDwordImmSetter@@QAEXXZ,,0x005CF86B,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B ret-prev; retail C7-01-9052C700-C3
 _luaS_init,,0x0074FF60,80,Code/Libraries/Source/Lua/lstring.c,matched,BFME1 byte-identical donor b1 lstring.c; exact via unclaimed_scan
 ?get@Rva00657650LeaGetter@@QBEPAXXZ,,0x00657650,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; address-derived opaque holder
+?apply@Rva0005D23FEDwordImmSetter@@QAEXXZ,,0x005D23FE,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; Ghidra-standalone 7B ret-prev; retail C7-01-DC78C000-C3
