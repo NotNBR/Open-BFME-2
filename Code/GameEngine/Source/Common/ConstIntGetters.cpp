@@ -560,3 +560,12 @@ int Rva006C7590Get(void)
 {
 	return 0x00CE7CBC;
 }
+
+// ?Rva003007A2Get@@YAHXZ @ 0x003007A2 (6B): returns 0x00700778.
+// Follows a leave/ret (0x30079F-A1) with a frame-style function after
+// (0x3007A8: push ebp). Ghidra-6, carried at 1 .rdata slot, no direct
+// callers, no branch sources. Opaque address-derived name.
+int Rva003007A2Get(void)
+{
+	return 0x00700778;
+}
