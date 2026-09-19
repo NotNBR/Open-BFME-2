@@ -593,7 +593,6 @@ static void body (LexState *ls, int needself, int line) {
 }
 
 
-// _explist1 present-unmatched
 static int explist1 (LexState *ls) {
   /* explist1 -> expr { ',' expr } */
   int n = 1;  /* at least one expression */
