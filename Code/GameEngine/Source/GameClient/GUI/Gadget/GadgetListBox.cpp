@@ -4,7 +4,15 @@
 // Dedicated TU so GameWindowManager.cpp bodies cannot see this wrapper.
 // Null-checks the listbox then GLM_DEL_ALL (0x4013) through vtable +0xE8.
 
-class GameWindow;
+typedef int Int;
+typedef bool Bool;
+typedef short Short;
+
+class GameWindow
+{
+public:
+	void *winGetUserData(void);
+};
 
 class GameWindowManager
 {
@@ -29,4 +37,20 @@ void GadgetListBoxReset(GameWindow *listbox)
 	if (listbox == 0)
 		return;
 	TheWindowManager->winSendSystemMsg(listbox, 0x4013, 0, 0);
+}
+
+// ?GadgetListBoxGetNumEntries@@YAHPAVGameWindow@@@Z, retail 0x0032475A (25B).
+// Ported from Open-BFME-1 Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp
+// (BFME1 0x004B77C0). The entry count is the Short endPos at +0x2C; keep the
+// donor's test-true shape (jz over the load) for the retail branch layout.
+Int GadgetListBoxGetNumEntries(GameWindow *listbox)
+{
+	if (!listbox)
+		return 0;
+
+	void *listboxData = listbox->winGetUserData();
+	if (listboxData)
+		return *(Short *)((char *)listboxData + 0x2C);
+
+	return 0;
 }
