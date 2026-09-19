@@ -34,6 +34,22 @@ public:
 	int m_count;
 };
 
+class Rva00802A10Elem
+{
+public:
+	virtual void step( int flags );
+	char m_pad[ 128 - 4 ];
+};
+
+class Rva00802A10
+{
+public:
+	void clear();
+
+	Rva00802A10Elem *m_array;
+	int m_count;
+};
+
 // ------------------------------------------------------------------ rows
 class Rva00802290Owner
 {
@@ -87,4 +103,17 @@ class Rva00802BB0Owner
 {
 public:
 	void clear();               // 0x00802BB0
+
+	char        m_pad000[ 0x1C ];
+	Rva00802A10 m_entries;      // +0x1C
+	int         m_field24;
+	int         m_field28;
 };
+
+// ?clear@Rva00802BB0Owner@@QAEXXZ
+void Rva00802BB0Owner::clear()
+{
+	m_entries.clear();
+	m_field24 = 0;
+	m_field28 = 0;
+}
