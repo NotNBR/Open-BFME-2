@@ -12026,3 +12026,5 @@ _luaG_typeerror,,0x0074D250,66,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 
 ?name@Rva002A92E4Named@@QBEPBDXZ,,0x002A92E4,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning SkirmishAIManager; vtable ref; address-derived placeholder name
 ?name@Rva002AC360Named@@QBEPBDXZ,,0x002AC360,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning LightPointSystem; vtable ref; address-derived placeholder name
 ?name@Rva002AD0C0Named@@QBEPBDXZ,,0x002AD0C0,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning PlayerRelationMap; vtable ref; address-derived placeholder name
+_aux_stackedfunction,,0x0074C9F0,60,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 ldebug.c static; standalone body also inlined into getobjname; custom-reg callee serves getstack; vendored=lua-4.0.1
+_lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 byte-identical donor b1 ldebug.c lua_getstack; custom-reg call to aux row; vendored=lua-4.0.1

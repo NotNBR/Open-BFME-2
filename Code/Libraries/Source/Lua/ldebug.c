@@ -209,8 +209,17 @@ static const char *getobjname (lua_State *L, StkId obj, const char **name) {
 }
 
 
-void luaG_typeerror (lua_State *L, StkId o, const char *op) {
-  const char *name;
+int lua_getstack (lua_State *L, int level, lua_Debug *ar) {
+  StkId f = aux_stackedfunction(L, level, L->top);
+  if (f == NULL) return 0;  /* there is no such level */
+  else {
+    ar->_func = f;
+    return 1;
+  }
+}
+
+
+void luaG_typeerror (lua_State *L, StkId o, const char *op) {  const char *name;
   const char *kind = getobjname(L, o, &name);
   const char *t = luaO_typename(o);
   if (kind)
