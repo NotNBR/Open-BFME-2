@@ -19,3 +19,17 @@ int BfmeThing932C::bfmeGo932C()
 		return s->bfmeQuery932C();
 	return 0;
 }
+
+class BfmeThing932E
+{
+public:
+	void bfmeGo932E();
+	int bfmeTest932E();
+	void bfmeTail932E();
+};
+
+void BfmeThing932E::bfmeGo932E()
+{
+	if (!bfmeTest932E())
+		bfmeTail932E();
+}
