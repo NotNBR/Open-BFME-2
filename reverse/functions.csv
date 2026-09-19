@@ -10954,3 +10954,5 @@ _forbody,,0x007544E0,165,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?go@Rva000C9EF0@@QAEXXZ,,0x004EF5BE,16,Code/GameEngine/Source/Common/R1GuardedReleaseHelpers.cpp,matched,BFME1 byte-identical donor shape; b1 0x000C9EF0; ICF-folded twin Rva00161140 stays unclaimed
 ?get@Rva00555AC1NarrowField@@QBE?AV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@XZ,,0x00555AC1,30,Code/GameEngine/Source/Common/System/StlportStringRvoGetter555AC1.cpp,matched,RVO Stlport narrow-string getter member +0x84 via 0x9170 row; 1 caller at 0x558013
 ?enable@Rva00050D06OneSetter@@QAEXXZ,,0x00050D06,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
+?disable@Rva00050D0BZeroSetter@@QAEXXZ,,0x00050D0B,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
+?enable@Rva000664EFOneSetter@@QAEXXZ,,0x000664EF,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte one-setter
