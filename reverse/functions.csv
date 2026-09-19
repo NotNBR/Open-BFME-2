@@ -10652,3 +10652,5 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeGoDSP@BfmeThingDSK@@QAEXXZ,,0x00256A33,23,Code/GameEngine/Source/Common/BfmeConv773.cpp,matched,BFME1 byte-identical donor; b1 0x00128880
 ?bfmeUnlink@Gen_008F7AC0@@QAEXXZ,,0x0073A0A0,29,Code/GameEngine/Source/Common/Bfme5ThirtyFour.cpp,matched,BFME1 byte-identical donor; b1 0x008F7AC0
 ?bfmeGet@Gen_00895650@@QBE?AVBfmeHolderDB@@XZ,,0x006D0770,27,Code/GameEngine/Source/Common/Bfme5ThirtyFour.cpp,matched,BFME1 byte-identical donor; b1 0x00895650
+?bfmeGoECKa@BfmeThingECKa@@QAEPAXXZ,,0x00657AC0,22,Code/GameEngine/Source/Common/BfmeConv805.cpp,matched,BFME1 byte-identical donor; b1 0x007EAB20
+?bfmeGoECKb@BfmeThingECKb@@QAEPAXXZ,,0x00657B90,22,Code/GameEngine/Source/Common/BfmeConv805.cpp,matched,BFME1 byte-identical donor; b1 0x007EABF0
