@@ -11863,3 +11863,4 @@ _str_byte,,0x00748D60,136,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep 
 _check_capture,,0x00748EA0,42,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_check_capture; Lua lstrlib static compiles to retail span
 ?get@Rva002B23BCDwordField@@QBEHXZ,,0x002B23BC,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva002B23D0DwordField@@QBEHXZ,,0x002B23D0,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva002B23E4DwordField@@QBEHXZ,,0x002B23E4,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
