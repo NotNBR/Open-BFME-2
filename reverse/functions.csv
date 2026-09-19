@@ -10628,3 +10628,6 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ??0Rva00704980@@QAE@XZ,,0x000B6D26,37,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x00704980
 ??0Rva0013A8B0@@QAE@XZ,,0x0050C4C6,34,Code/GameEngine/Source/Common/R3ScalarFieldConstructors3.cpp,matched,BFME1 byte-identical donor; b1 0x0013A8B0
 ?bfmeSetNameAT@@YAXPAUBfmeTableAT@@HPBD@Z,,0x006A4A10,99,Code/GameEngine/Source/Common/BfmeOneHundredSeventyOne.cpp,matched,BFME1 byte-identical donor; b1 0x00863B40
+??0Gen_0081E480@@QAE@HH@Z,,0x0068A0E0,33,Code/GameEngine/Source/Common/Bfme5ThirtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x0081E480
+?bfmeColor@@YGHPBVBfmeThingCZ@@H_N@Z,,0x00665520,33,Code/GameEngine/Source/Common/Bfme5ThirtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x007F8EA0
+?bfmeAt@@YGPAHPAVBfmeVecCZ@@H@Z,,0x00663DC0,30,Code/GameEngine/Source/Common/Bfme5ThirtyTwo.cpp,matched,BFME1 byte-identical donor; b1 0x007F76D0
