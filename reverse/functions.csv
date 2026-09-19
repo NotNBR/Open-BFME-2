@@ -12266,3 +12266,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva0013C6C0Get@@YAHXZ,,0x0013C6C0,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 14; CC-island in same family table as 0x13C650; 1 rdata ref; opaque name
 ??_GRva005F7750@@UAEPAXI@Z,,0x005F835A,28,Code/GameEngine/Source/Common/Rva005F7750Dtor.cpp,matched,home-TU emission beside rowed dtor 0x5F7750; resolves E8 to the row
 ?getTag@Rva0014CDB5FourCC@@QBEHXZ,,0x0014CDB5,6,Code/GameEngine/Source/Common/FourCCGetters.cpp,matched,FOURCC int getter returning MINA 0x414E494D; vtable ref in .rdata; address-derived placeholder name
+?Rva001820B0Get@@YAHXZ,,0x001820B0,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 9; CC-island neighbor of 0x1820A0 with 2 rdata refs; opaque name

@@ -146,3 +146,11 @@ int Rva0013C6C0Get(void)
 {
 	return 14;
 }
+
+// ?Rva001820B0Get@@YAHXZ @ 0x001820B0 (6B): returns 9. CC-island
+// neighbor 16 bytes after Rva001820A0Get (same mapper TU region), 2
+// .rdata refs, no direct callers. Opaque address-derived name.
+int Rva001820B0Get(void)
+{
+	return 9;
+}
