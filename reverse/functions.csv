@@ -11304,3 +11304,4 @@ _luaV_Cclosure,,0x0074E520,28,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte
 _lua_pushcclosure,,0x00747640,5,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c jmp thunk; exact via unclaimed_scan
 _lua_typename,,0x007470D0,23,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
 _lua_pushnil,,0x00747510,36,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
+_lua_pushnumber,,0x00747570,45,Code/Libraries/Source/Lua/lapi.c,matched,BFME1 byte-identical donor b1 lapi.c; exact via unclaimed_scan
