@@ -11483,3 +11483,4 @@ _luaD_lineHook,,0x0074D790,99,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte
 ?dec@Rva0029A340DwordCounter@@QAEXXZ,,0x0029A340,7,Code/GameEngine/Source/Common/Disp32DwordFieldIncDec.cpp,matched,disp32 dword dec family pair; opaque holder
 ?inc@Rva0008528DDwordCounter@@QAEXXZ,,0x0008528D,7,Code/GameEngine/Source/Common/Disp32DwordFieldIncDec.cpp,matched,disp32 dword inc family; opaque holder
 ?dec@Rva00042212DwordCounter@@QAEXXZ,,0x00042212,7,Code/GameEngine/Source/Common/Disp32DwordFieldIncDec.cpp,matched,disp32 dword dec family; opaque holder
+_HUFF_size@4,,0x0068EA40,56,Code/Libraries/Source/Compression/EAC/huffdecode.cpp,matched,stock EAC codec source; size query emitted verbatim
