@@ -111,3 +111,12 @@ int Rva000A08F1Get(void)
 {
 	return 0x0048F6E1;
 }
+
+// ?Rva000A08F7Get@@YAHXZ @ 0x000A08F7 (6B): returns 0x0048F71B.
+// Immediately follows Rva000A08F1Get (prev is its C3), carried by 1 .rdata
+// slot (0x7C8CF4) in the parallel vtable, no direct callers, no branch
+// sources. Opaque address-derived name.
+int Rva000A08F7Get(void)
+{
+	return 0x0048F71B;
+}
