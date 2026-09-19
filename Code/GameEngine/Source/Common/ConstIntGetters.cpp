@@ -47,3 +47,13 @@ int Rva00250000Get(void)
 {
 	return 0x81;
 }
+
+// ?Rva00656B60Get@@YAHXZ @ 0x00656B60 (6B): returns 0x00E09F9C.
+// CC-island after a double-ret (xor-eax/ret then ret), 16 direct E8
+// callers, Ghidra-6. The lone byte-scan branch hit (js at 0x656B4E) is a
+// false decode: capstone shows 0x656B4C is mov [eax],0xCE1078 and the 78
+// is its immediate byte. Opaque address-derived name.
+int Rva00656B60Get(void)
+{
+	return 0x00E09F9C;
+}
