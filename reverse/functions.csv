@@ -11551,3 +11551,4 @@ _luaU_undump,,0x00756D10,133,Code/Libraries/Source/Lua/lundump.c,matched,object-
 ??_GRva0045B134@@UAEPAXI@Z,,0x0045B27B,28,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ?get@Rva00219823SubDwordField@@QBEHXZ,,0x00219823,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
 ??_GRva0047F92D@@UAEPAXI@Z,,0x0047FA39,28,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+?get@Rva0033167BSubDwordField@@QBEHXZ,,0x0033167B,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
