@@ -11486,3 +11486,4 @@ _luaD_lineHook,,0x0074D790,99,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte
 _HUFF_size@4,,0x0068EA40,56,Code/Libraries/Source/Compression/EAC/huffdecode.cpp,matched,stock EAC codec source; size query emitted verbatim
 _luaM_realloc,,0x00750A70,97,Code/Libraries/Source/Lua/lmem.c,matched,BFME1 byte-identical donor b1 lmem.c; exact first-try; pin upgrade; vendored=lua-4.0.1
 ??_GBfmeHolderBY@@QAEPAXI@Z,,0x001716C0,30,Code/GameEngine/Source/Common/BfmeHolderDtorBY.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+_luaM_growaux,,0x00750AE0,97,Code/Libraries/Source/Lua/lmem.c,matched,BFME1 byte-identical donor b1 lmem.c; exact via unclaimed_scan; pin upgrade; vendored=lua-4.0.1
