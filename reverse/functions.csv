@@ -10780,3 +10780,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?winSetInputFunc@GameWindow@@QAEHP6A?AW4WindowMsgHandledType@@PAV1@III@Z@Z,,0x00314147,19,Code/GameEngine/Source/GameClient/GUI/GameWindow.cpp,matched,BFME1 byte-identical donor; b1 0x00478E70
 ?bfmeSwap@Gen_00339020@@QAEXPAV1@@Z,,0x00203E93,21,Code/GameEngine/Source/Common/Bfme5TinySix2.cpp,matched,BFME1 byte-identical donor; b1 0x00339020
 ?lock@File@@UAEXXZ,,0x006024CA,36,Code/GameEngine/Source/Common/System/File.cpp,matched,BFME1 byte-identical donor; b1 0x009CB760
+?Rva007B7600@@YAXXZ,,0x0009A338,16,Code/GameEngine/Source/Common/R2GuardedGlobalCalls.cpp,matched,BFME1 byte-identical donor; b1 0x007B7600; ICF-folded in BFME1 so the name is this sweep's pick among its twins
