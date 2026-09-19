@@ -12044,3 +12044,4 @@ _lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 by
 ?name@Rva002B30D3Named@@QBEPBDXZ,,0x002B30D3,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning DelayedCameraEventModule; vtable ref; address-derived placeholder name
 ?name@Rva002B596CNamed@@QBEPBDXZ,,0x002B596C,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning DelayedWorldTextEventModule; vtable ref; address-derived placeholder name
 ?name@Rva002B9641Named@@QBEPBDXZ,,0x002B9641,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning LivingWorldLogic; vtable ref; address-derived placeholder name
+?name@Rva002BAE89Named@@QBEPBDXZ,,0x002BAE89,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning DelayedSplineCameraEventModule; vtable ref; address-derived placeholder name
