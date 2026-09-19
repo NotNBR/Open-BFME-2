@@ -11210,3 +11210,4 @@ _LoadLocals,,0x007565F0,281,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 by
 _LoadConstants,,0x00756770,343,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadConstants; exact via unclaimed_scan; unblocks LoadFunction
 _LoadFunction,,0x007568D0,303,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadFunction; exact via unclaimed_scan; unblocks LoadHeader
 _LoadHeader,,0x00756B10,475,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte-identical donor b1 lundump.c LoadHeader; exact via unclaimed_scan; lundump file drained
+_luaZ_read,,0x00756E90,118,Code/Libraries/Source/Lua/lzio.c,matched,BFME1 byte-identical donor b1 lzio.c zread; exact; resolves LoadBlock call
