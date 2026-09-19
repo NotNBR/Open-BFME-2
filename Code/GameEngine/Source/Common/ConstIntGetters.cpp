@@ -37,3 +37,13 @@ int Rva0013C650Get(void)
 {
 	return 3;
 }
+
+// ?Rva00250000Get@@YAHXZ @ 0x00250000 (6B): returns 0x81. Follows a
+// leave/ret (prev C3) with a larger B8-imm function immediately after,
+// 7 .rdata refs across distant tables, no direct callers, no branch
+// sources. Opaque address-derived name; the value is a plain integer
+// (below any image base), not an address.
+int Rva00250000Get(void)
+{
+	return 0x81;
+}
