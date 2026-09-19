@@ -3169,3 +3169,4 @@ _readname,0x007570C0
 ?rva001171B0Notify@@YAXXZ,0x001171B0,sole tail-notify target of dword option setter at 0x00117BB0 (guard byte + store + jmp); SEH body calls 0x51F520 + 0xA1F110; identity unproven address-derived pin
 ?bfmeMakeRecUNB@@YAPAXH@Z,0x006724D0
 ?bfmeFreeRecUNA@@YAXPAX@Z,0x006725B0
+__strdup,0x006C4C70

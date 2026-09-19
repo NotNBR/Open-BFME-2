@@ -12220,3 +12220,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?onLobbyCount@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x006640E0,101,Code/GameEngine/Source/GameNetwork/V2FeslBrowserEvents.cpp,matched,BFME1 byte-identical donor; b1 0x007F7A60; 1 DIR32 string literal(s) agree
 ?bfmeNewUNB@@YAPAVBfmeThingUNB@@XZ,,0x00666E30,65,Code/GameEngine/Source/Common/BfmeConv1338.cpp,matched,BFME1 byte-identical donor; b1 0x007FA900
 ?bfmeDelUNA@BfmeThingUNA@@QAEPAXE@Z,,0x00666DD0,60,Code/GameEngine/Source/Common/BfmeConv1338.cpp,matched,BFME1 byte-identical donor; b1 0x007FA8A0
+?read_header@HLodDefClass@@AAE_NAAVChunkLoadClass@@@Z,,0x0019ECE0,232,Code/Libraries/Source/WWVegas/WW3D2/hlod_read_header.cpp,matched,BFME1 SOURCE (not bytes): compile-based placement; BFME1 retail body differs so bfme1_sweep cannot reach it; pin __strdup
