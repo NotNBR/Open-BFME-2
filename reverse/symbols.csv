@@ -3026,3 +3026,4 @@ _luaL_opt_lstr,0x00751A20
 _lua_rawget,0x00747770
 _lua_rawset,0x00747990
 _lua_settag,0x00747B90
+?g_009DEEF0Static@@3PAEA,0x009DEEF0,static empty wide-string source pushed at 0x00017B06; 32 zero bytes in .data; address-derived opaque data pin
