@@ -11784,3 +11784,4 @@ _math_rad,,0x00748740,38,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.r
 ??_GRva006892F0@@UAEPAXI@Z,,0x00689300,28,Code/GameEngine/Source/Common/GameEngineDeletingBaseDerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ?get@Rva005ED28AAddDwordField@@QBEHXZ,,0x005ED28A,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
 _math_frexp,,0x00748770,68,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.frexp via check_number + pushnumber x2; callees pinned
+_math_random,,0x00748900,298,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.random via rand + gettop switch + check_int + pushnumber; callees pinned
