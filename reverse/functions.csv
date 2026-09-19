@@ -10792,3 +10792,4 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?bfmeGoEMC@@YGXPAVBfmeObjEMC@@PAX1@Z,,0x00665470,29,Code/GameEngine/Source/Common/BfmeConv819.cpp,matched,BFME1 byte-identical donor; b1 0x007F8DF0
 ?bfmeForward@Gen_008F7B50@@QAEXPAX@Z,,0x0073A110,17,Code/GameEngine/Source/Common/S3GuardedVirtualArgs.cpp,matched,BFME1 byte-identical donor; b1 0x008F7B50
 ??0Rva007E3A20@@QAE@XZ,,0x000906FB,16,Code/GameEngine/Source/Common/S1ZeroingConstructors.cpp,matched,BFME1 byte-identical donor; b1 0x007E3A20
+?isLessThan@Rva00063E50Node@@QBEHPBV1@@Z,,0x00503D15,17,Code/GameEngine/Source/Common/T3SmallLeafBodies.cpp,matched,BFME1 byte-identical donor; b1 0x00063E50
