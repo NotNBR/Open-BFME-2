@@ -11810,3 +11810,5 @@ _str_rep,,0x00748CE0,114,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string 
 ?name@Rva002533CDNamed@@QBEPBDXZ,,0x002533CD,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning UpdateModule; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva00268CD6Named@@QBEPBDXZ,,0x00268CD6,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning Squad; vtable ref in .rdata; address-derived placeholder name
 ?set@Rva00078941DwordSlot@@QAEXH@Z,,0x00078941,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+_read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-alias;object-symbol=_read_word;C++ alias
+?set@Rva00105DB3DwordSlot@@QAEXH@Z,,0x00105DB3,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
