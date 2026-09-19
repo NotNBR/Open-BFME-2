@@ -802,7 +802,7 @@ name,address,notes
 ?bfmeConv998@BfmeC998@@QAEHH@Z,0x0016AAE0
 ?bfmeCopyBZD@@YAXPADPBDI@Z,0x0062983E
 ?bfmeCopyCEB@@YAXPADPBDI@Z,0x0062983E
-?bfmeDoOV@@YAXPAX000PAE@Z,0x00027FE0
+?bfmeDoOV@@YAPAXPAX000PAE@Z,0x00027FE0
 ?bfmeDoPA@@YAXPAX000PAE1E@Z,0x00026FF0
 ?bfmeDoPW@@YAXPAD000@Z,0x00024FC0
 ?bfmeDrawSortingPrimitive@@YAXIIIII@Z,0x0011D710,Recovered five-unsigned sorting-draw role; complete 539-byte dynamic-buffer conversion and draw body independently decoded with two 65535 count guards and RAII cleanup
@@ -3043,3 +3043,4 @@ _luaK_testgo,0x00752FC0
 _luaK_tostack,0x00753160
 _luaM_growaux,0x00750AE0
 _luaX_error,0x00757150
+?bfmeFindByteInRange@@YAPADPAD0D@Z,0x00026C60
