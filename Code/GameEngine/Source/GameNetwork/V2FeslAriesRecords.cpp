@@ -198,3 +198,18 @@ Rva007F5120Queue::Rva007F5120Queue( Rva007E8810Message *msg )
 	m_qlen = msg->getInt( "QLEN", 0 );
 }
 
+// ---------------------------------------------------------------- two-field
+class Rva007F41B0Reason
+{
+public:
+	Rva007F41B0Reason( Rva007E8810Message *msg );
+	Rva007E8810Message *m_msg;
+	int m_reason;
+};
+
+Rva007F41B0Reason::Rva007F41B0Reason( Rva007E8810Message *msg )
+{
+	m_msg = msg;
+	m_reason = m_msg->getInt( "reason", 0 );
+}
+
