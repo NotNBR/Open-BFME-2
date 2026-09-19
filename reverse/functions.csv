@@ -11568,3 +11568,4 @@ _read_chars,,0x0074A910,145,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,obj
 ?name@Rva001FBEB1Named@@QBEPBDXZ,,0x001FBEB1,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning FXParticleSystem; vtable ref in .rdata; address-derived placeholder name
 ??_GRva00452D52@@UAEPAXI@Z,,0x00452EC1,28,Code/GameEngine/Source/Common/Rva0024A797Grandchildren.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ?get@Rva000B28C8AddDwordField@@QBEHXZ,,0x000B28C8,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+_math_asin,,0x00748460,43,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.asin via check_number + CIasin + pushnumber; callees pinned
