@@ -114,3 +114,12 @@ int Rva006CD220Get(void)
 {
 	return g_Va00E17724;
 }
+
+// ?Rva006C53B0Get@@YAHXZ @ 0x006C53B0 (6B) over 0x00E0C1F4.
+
+extern int g_Va00E0C1F4;
+
+int Rva006C53B0Get(void)
+{
+	return g_Va00E0C1F4;
+}
