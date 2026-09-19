@@ -10817,3 +10817,4 @@ _whilestat,,0x00755AA0,301,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 _repeatstat,,0x00755BD0,265,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1 0x0099CD90; ICF-folded in BFME1 so the name is this sweeps pick among its twins
 _breakstat,,0x00754AD0,156,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1 0x0099BC90; ICF-folded in BFME1 so the name is this sweeps pick among its twins; 1 DIR32 string literal(s) agree
 _next,,0x007537E0,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; b1 0x0099A9A0; ICF-folded in BFME1 so the name is this sweeps pick among its twins
+?bfmeGo1036E@BfmeE1036@@QAEXXZ,,0x00664FC0,37,Code/GameEngine/Source/Common/BfmeConv1036.cpp,matched,BFME1 donor with callee repair; release helper is rowed ProtoMangleDestroy
