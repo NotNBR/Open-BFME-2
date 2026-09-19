@@ -11680,3 +11680,4 @@ _math_deg,,0x00748710,38,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.d
 ??_GRva004DF863@@UAEPAXI@Z,,0x0028CB29,28,Code/GameEngine/Source/Common/Rva004DF7C2Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GRva004DF8A9@@UAEPAXI@Z,,0x0028CBE1,28,Code/GameEngine/Source/Common/Rva004DF7C2Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ??_GRva004E3D47@@UAEPAXI@Z,,0x004E3E3E,28,Code/GameEngine/Source/Common/Rva004E3CD0Derived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
+?get@Rva00574AACAddDwordField@@QBEHXZ,,0x00574AAC,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
