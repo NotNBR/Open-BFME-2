@@ -10926,3 +10926,4 @@ _discharge,,0x00752BD0,520,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?disable@Rva001DBB87ZeroSetter@@QAEXXZ,,0x001DBB87,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
 ?disable@Rva00420B2AZeroSetter@@QAEXXZ,,0x00420B2A,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter
 ?apply@Rva00395583DwordImmSetter@@QAEXXZ,,0x00395583,8,Code/GameEngine/Source/Common/Disp8DwordImmSetters.cpp,matched,Disp8 dword imm-setter
+?apply@Rva00419502DwordImmSetter@@QAEXXZ,,0x00419502,8,Code/GameEngine/Source/Common/Disp8DwordImmSetters.cpp,matched,Disp8 dword imm-setter
