@@ -11947,3 +11947,4 @@ _luaL_checkany,,0x00751970,43,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 
 _luaL_checkstack,,0x007518D0,43,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _luaL_opt_number,,0x00751AD0,45,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
 _luaL_prepbuffer,,0x00751620,53,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
+_luaL_verror,,0x00751530,55,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byte-identical donor; vendored=lua-4.0.1
