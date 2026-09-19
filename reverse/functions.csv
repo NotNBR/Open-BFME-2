@@ -11397,3 +11397,4 @@ _luaV_gettable,,0x0074E560,236,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byt
 ?get@Rva00657630LeaField@@QBEPAXXZ,,0x00657630,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; Ghidra-standalone 4B CC-isolated; retail 8D-41-50-C3
 ?get@Rva00657640LeaField@@QBEPAXXZ,,0x00657640,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; Ghidra-standalone 4B CC-isolated; retail 8D-41-70-C3
 _luaH_next,,0x007505A0,115,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan
+_luaH_getany,,0x00750460,81,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan
