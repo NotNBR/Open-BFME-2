@@ -11861,3 +11861,4 @@ _str_byte,,0x00748D60,136,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep 
 ?get@Rva0038894ADwordField@@QBEHXZ,,0x0038894A,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ??0?$LatchRestore@_N@@QAE@AA_NAB_N@Z,,0x000519FC,31,Code/GameEngine/Source/Common/System/SaveGame/LatchRestoreCtor.cpp,matched,BFME1 byte-identical donor GameState.cpp; b1 0x0010D330
 _check_capture,,0x00748EA0,42,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_check_capture; Lua lstrlib static compiles to retail span
+?get@Rva002B23BCDwordField@@QBEHXZ,,0x002B23BC,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
