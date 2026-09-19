@@ -10984,3 +10984,4 @@ _adjustlocalvars,,0x00753C70,52,Code/Libraries/Source/Lua/lparser.c,matched,BFME
 ?apply@Rva0029A755DwordImmSetter@@QAEXXZ,,0x0029A755,11,Code/GameEngine/Source/Common/DispDwordImmSetters.cpp,matched,Disp32 dword imm-setter
 _setfilebyname,,0x0074A240,26,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1 byte-identical donor; b1 0x009930E0
 ?set@Rva0026FC9ETwoSetter@@QAEXXZ,,0x0026FC9E,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte two-setter
+_io_close,,0x0074A320,227,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,BFME1 byte-identical donor; b1 0x009931C0
