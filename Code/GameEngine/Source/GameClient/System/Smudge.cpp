@@ -1,11 +1,11 @@
 // cl: /DNDEBUG /MD /EHsc
 // Trimmed from Open-BFME-1
 // (Code/GameEngine/Source/GameClient/System/Smudge.cpp): only the placed
-// SmudgeManager::removeSmudgeSet body is defined here. Sibling bodies stay
-// declared-only so the unmatched-definition gate passes. List machinery is
-// the donor's WW3D2/dllist.h with an empty W3DMPO (BFME1 trimmed-TU
-// convention); Smudge/SmudgeSet/SmudgeManager mirror reference/shims/
-// smudgenopool (no pooling in BFME).
+// SmudgeManager::removeSmudgeSet and SmudgeSet::SmudgeSet bodies are defined
+// here. Sibling bodies stay declared-only so the unmatched-definition gate
+// passes. List machinery is the donor's WW3D2/dllist.h with an empty W3DMPO
+// (BFME1 trimmed-TU convention); Smudge/SmudgeSet/SmudgeManager mirror
+// reference/shims/smudgenopool (no pooling in BFME).
 
 typedef int Int;
 typedef int Bool;
@@ -121,6 +121,17 @@ private:
 	DLListClass<Smudge> m_usedSmudgeList;
 	Int m_usedSmudgeCount;
 };
+
+// ??0SmudgeSet@@QAE@XZ
+//
+// The donor's body is only m_usedSmudgeCount=0; the vptr pair plus the zero
+// run are the implicit DLNode base and DLList member init. Identity is
+// caller-proven: SmudgeManager::addSmudgeSet news a 0x20-byte SmudgeSet at
+// 0x002D2956 (free-list node arithmetic recovers the object at head-4).
+SmudgeSet::SmudgeSet(void)
+{
+	m_usedSmudgeCount = 0;
+}
 
 class SmudgeManager
 {
