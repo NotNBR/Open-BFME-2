@@ -101,3 +101,14 @@ const T2WChar *T2WideCtype::toUpperRange(T2WChar *low, T2WChar *high) const
 	}
 	return high;
 }
+
+const T2WChar *T2WideCtype::toLowerRange(T2WChar *low, T2WChar *high) const
+{
+	while (low < high)
+	{
+		T2WChar c = *low;
+		*low = (c < 0x100) ? (T2WChar)(unsigned char)t2_lower_table[c] : c;
+		++low;
+	}
+	return high;
+}
