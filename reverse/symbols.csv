@@ -3158,3 +3158,5 @@ _LoadHeader,0x00756B10
 ?winSetStatus@GameWindow@@QAEII@Z,0x00313CE3
 ?winSetStatus@GameWindow@@QAEXI@Z,0x00313CE3
 ?winSetUserData@GameWindow@@QAEXPAX@Z,0x002B2210
+?bfmeFind1034F@BfmeTab1034@@QAEPAVBfmeN1034@@H@Z,0x0070B380
+?bfmeVal1034@BfmeN1034@@QAEHXZ,0x006DD360

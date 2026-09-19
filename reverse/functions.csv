@@ -10896,3 +10896,4 @@ _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte
 ?bfmeGo932E@BfmeThing932E@@QAEXXZ,,0x0034BA64,22,Code/GameEngine/Source/Common/BfmeConv932.cpp,matched,BFME1 byte-identical donor; b1 0x0017DB10
 ?Rva004BCB20@@YAXPAVGameWindow@@H@Z,,0x00328543,60,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetUserDataHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x004BCB20
 _settabss,,0x00747DC0,30,Code/Libraries/Source/Lua/ldblib.c,matched,BFME1 byte-identical donor; b1 0x00990C60; ICF twin is the same source
+?bfmeGo1034F@BfmeF1034@@QAEHH@Z,,0x0070F010,33,Code/GameEngine/Source/Common/BfmeConv1034.cpp,matched,BFME1 byte-identical donor; b1 0x008D3280
