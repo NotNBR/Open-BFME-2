@@ -11859,3 +11859,4 @@ _str_byte,,0x00748D60,136,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep 
 ?set@Rva0038895EDwordSlot@@QAEXH@Z,,0x0038895E,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?enable@Rva0038896BByteOneSetter@@QAEXXZ,,0x0038896B,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte one-setter
 ?get@Rva0038894ADwordField@@QBEHXZ,,0x0038894A,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+??0?$LatchRestore@_N@@QAE@AA_NAB_N@Z,,0x000519FC,31,Code/GameEngine/Source/Common/System/SaveGame/LatchRestoreCtor.cpp,matched,BFME1 byte-identical donor GameState.cpp; b1 0x0010D330
