@@ -69,3 +69,19 @@ void GadgetListBoxSetAudioFeedback(GameWindow *listbox, Bool enable)
 
 	*(Bool *)((char *)listboxData + 0x0E) = enable;
 }
+
+// ?GadgetListBoxGetNumColumns@@YAHPAVGameWindow@@@Z, retail 0x003248B1 (25B).
+// Ported from Open-BFME-1 Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp
+// (BFME1 0x004B79B0). The column count is the Short at +0x02; keep the
+// donor's test-false shape (jnz past the zero return) for the retail layout.
+Int GadgetListBoxGetNumColumns(GameWindow *listbox)
+{
+	if (!listbox)
+		return 0;
+
+	void *listboxData = listbox->winGetUserData();
+	if (!listboxData)
+		return 0;
+
+	return *(Short *)((char *)listboxData + 0x02);
+}

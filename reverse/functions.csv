@@ -10909,3 +10909,4 @@ ___GetDefaultCP,,0x00021810,74,Code/Libraries/Source/WWVegas/WWLib/stlport_Local
 __Locale_common_default,,0x00021900,113,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E6A0
 __Locale_ctype_name,,0x00021990,44,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E780
 ?GadgetListBoxSetAudioFeedback@@YAXPAVGameWindow@@_N@Z,,0x0032487B,25,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B7960
+?GadgetListBoxGetNumColumns@@YAHPAVGameWindow@@@Z,,0x003248B1,25,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME1 byte-identical donor; b1 0x004B79B0
