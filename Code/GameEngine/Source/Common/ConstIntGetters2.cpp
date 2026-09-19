@@ -15,3 +15,14 @@ int Rva00742550Get(void)
 {
 	return 0x1C;
 }
+
+// ?Rva002BE8CEGet@@YAHXZ @ 0x002BE8CE (6B): returns 0x00BFE4D4.
+// Follows a leave/ret-4 (prev C2-04-00), carried by 2 .rdata vtable slots
+// (0x7C89D0 in the 0x49xxxx family, 0x7FE510 beside the 0x4B3FD0 slot),
+// no direct callers, no branch sources. The imm falls in the .rdata VA
+// window so it is kept as a plain int literal (no DIR32 for literals).
+// Opaque address-derived name.
+int Rva002BE8CEGet(void)
+{
+	return 0x00BFE4D4;
+}
