@@ -18,3 +18,4 @@
 	}
 
 BFME_LITERAL_NAME_GETTER(Rva00271892Named, "TintEnvelope")
+BFME_LITERAL_NAME_GETTER(Rva002B6476Named, "RegionAwardDispute")
