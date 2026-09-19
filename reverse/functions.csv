@@ -10775,3 +10775,6 @@ _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1
 ?release@Rva008B3990@@QAEXXZ,,0x006F1F30,25,Code/GameEngine/Source/Common/R2GuardedOwnedRelease.cpp,matched,BFME1 byte-identical donor; b1 0x008B3990
 ?run@Rva007E8AC0@@QAEXXZ,,0x00655B50,21,Code/GameEngine/Source/Common/R2GuardedGlobalCalls.cpp,matched,BFME1 byte-identical donor; b1 0x007E8AC0
 ?bfmeGoECMa@@YAPAVBfmeThingECMa@@XZ,,0x006724B0,24,Code/GameEngine/Source/Common/BfmeConv805.cpp,matched,BFME1 byte-identical donor; b1 0x00806480
+?winSetSize@GameWindow@@QAEHHH@Z,,0x00313B87,63,Code/GameEngine/Source/GameClient/GUI/GameWindow.cpp,matched,BFME1 byte-identical donor; b1 0x00478250
+?winClearStatus@GameWindow@@QAEII@Z,,0x00313CF2,17,Code/GameEngine/Source/GameClient/GUI/GameWindow.cpp,matched,BFME1 byte-identical donor; b1 0x00478440
+?winSetInputFunc@GameWindow@@QAEHP6A?AW4WindowMsgHandledType@@PAV1@III@Z@Z,,0x00314147,19,Code/GameEngine/Source/GameClient/GUI/GameWindow.cpp,matched,BFME1 byte-identical donor; b1 0x00478E70
