@@ -11144,3 +11144,5 @@ _open_func,,0x00754080,87,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte
 ?get@Rva0028A93DLeaGetter@@QBEPAXXZ,,0x0028A93D,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?get@Rva0008BD0FFloatField@@QBEMXZ,,0x0008BD0F,4,Code/GameEngine/Source/Common/Disp8FloatFieldGetters.cpp,matched,Disp8 float getter; address-derived opaque holder
 ?apply@Rva0030D353DwordImmSetter@@QAEXXZ,,0x0030D353,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
+?get@Rva0028A9D3LeaGetter@@QBEPAXXZ,,0x0028A9D3,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
+?get@Rva005C4139ByteField@@QBEEXZ,,0x005C4139,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
