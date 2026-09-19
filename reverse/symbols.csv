@@ -3032,7 +3032,6 @@ _luaS_newlstr,0x00750130,LoadString 0x7564F0 +0x5c E8 decodes here; string inter
 _luaS_newudata,0x00750230,lua_newuserdata 0x747D70 +0x17 E8 decodes here; udata allocator; lstring.c
 _luaT_init,0x0074FB40
 _luaV_strcomp,0x0074E9D0
-_luaX_checklimit,0x007574A0
 _luaX_error,0x00757150
 _luaX_lex,0x00757C90
 _luaX_setinput,0x00757020
