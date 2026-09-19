@@ -11469,3 +11469,4 @@ _callCclosure,,0x0074D860,102,Code/Libraries/Source/Lua/ldo.c,matched,exact via 
 ?dec@Rva00050D14DwordCounter@@QAEXXZ,,0x00050D14,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword dec family; opaque holder
 ?Rva0043C969Get@@YAHXZ,,0x0043C969,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E03314
 ?Rva00062AC4Get@@YAHXZ,,0x00062AC4,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00DFEC54
+_luaH_getglobal,,0x00750A50,31,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan; pin upgrade; vendored=lua-4.0.1

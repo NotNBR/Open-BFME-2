@@ -3169,4 +3169,3 @@ _luaH_getnum,0x007504C0
 ?m@Gen_00800540@@QAEPAXXZ,0x0065D7F0
 _luaG_getline,0x0074CA90
 _luaD_lineHook,0x0074D790
-_luaH_getglobal,0x00750A50
