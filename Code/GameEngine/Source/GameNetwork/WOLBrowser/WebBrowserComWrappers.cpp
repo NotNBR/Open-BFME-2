@@ -11,6 +11,9 @@
 // overloads join without moving these slots.
 // The near tool's single drift (push 0xBD4E3C) is the g_bfmeIidTSA address,
 // pinned below; BFME1 pins the same IID (there ?g_bfmeIidTSA@@3UBfmeGuidTSA).
+// ?invoke@Rva00958E30@@QAEJV_bstr_t@@@Z at retail 0x001771C0 (120B) is the
+// fifth body below: the _bstr_t single-string overload on vtable slot +0x34,
+// the only one that reads a result back through the out parameter.
 // Callee pins (both retail-decoded, donor-attested names):
 // ?bfmeGoVGP@BfmeThingVGP@@QAEHXZ @0x176E90 (both dtor paths call it);
 // _com_issue_errorex resolves already.
@@ -43,6 +46,22 @@ public:
 	BfmeBstrVGP(const BfmeBstrVGP &other) throw() : m_data(other.m_data)
 	{ if (m_data) InterlockedIncrement((long volatile *)&m_data->m_bfme08); }
 	~BfmeBstrVGP() throw()
+	{
+		if (m_data)
+			m_data->bfmeGoVGP();
+	}
+};
+
+// The one wrapper whose parameter the ledger pins as _bstr_t rather than
+// BfmeBstrVGP -- same Data_t layout, but the copy is shallow (no retain);
+// that spelling is part of the mangled name so it cannot be merged above.
+class _bstr_t
+{
+public:
+	BfmeThingVGP *m_data;
+	_bstr_t(const char *value);
+	_bstr_t(const _bstr_t &other) throw() : m_data(other.m_data) {}
+	~_bstr_t() throw()
 	{
 		if (m_data)
 			m_data->bfmeGoVGP();
@@ -183,4 +202,48 @@ __declspec(noinline) long forceRva00958C80(Rva00958C80 *self,
 {
 	return self->invoke(first, second, hwnd, x, y, w, h, options,
 		gamedispatch);
+}
+
+// ?invoke@Rva00958E30@@QAEJV_bstr_t@@@Z at retail 0x001771C0 (120B). The only
+// one of the five that reads a result back: the slot writes through the out
+// parameter. Same IID drift as its siblings, already pinned.
+class Rva00958E30
+{
+public:
+	struct Vtable
+	{
+		void *slot00;
+		void *slot04;
+		void *slot08;
+		void *slot0C;
+		void *slot10;
+		void *slot14;
+		void *slot18;
+		void *slot1C;
+		void *slot20;
+		void *slot24;
+		void *slot28;
+		void *slot2C;
+		void *slot30;
+		long (__stdcall *slot34)(Rva00958E30 *, void *, void *);
+	};
+
+	__declspec(noinline) long invoke(_bstr_t arg)
+	{
+		long value = 0;
+		BfmeThingVGP *data = arg.m_data;
+		void *text = data ? data->m_bfme00 : 0;
+		long result = vtable->slot34(this, text, &value);
+		if (result < 0)
+			_com_issue_errorex(result, (IUnknown *)this, g_bfmeIidTSA);
+		return value;
+	}
+
+	Vtable *vtable;
+};
+
+// forceRva00958E30 absent-from-retail: emission host for the _bstr_t wrapper.
+__declspec(noinline) long forceRva00958E30(Rva00958E30 *self, _bstr_t arg)
+{
+	return self->invoke(arg);
 }

@@ -10569,3 +10569,4 @@ _Rva0088E100WatchdogThread@4,,0x0003D7E0,139,Code/Libraries/Source/WWVegas/WWDeb
 ?rva0082BAF0Count@@YAHPAH@Z,,0x000244D0,45,Code/GameEngine/Source/Common/Rva0082BC30Empty.cpp,matched,BFME1 byte-identical donor; b1 0x0082BAF0
 ?assignFrom@Rva0082BFD0Slot@@QAEPAV1@PBH@Z,,0x00024AB0,34,Code/GameEngine/Source/Common/Rva0082BC30Empty.cpp,matched,BFME1 byte-identical donor; b1 0x0082BFD0
 ?rva0082B120Set@@YAHH@Z,,0x00023A90,28,Code/GameEngine/Source/Common/Rva0082BC30Empty.cpp,matched,BFME1 byte-identical donor; b1 0x0082B120
+?invoke@Rva00958E30@@QAEJV_bstr_t@@@Z,,0x001771C0,120,Code/GameEngine/Source/GameNetwork/WOLBrowser/WebBrowserComWrappers.cpp,matched,BFME1 near-miss donor b1 0x00958E30; immediate-only IID drift pre-pinned; callees pre-resolved
