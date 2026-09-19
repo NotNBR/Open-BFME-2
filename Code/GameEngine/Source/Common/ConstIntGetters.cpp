@@ -480,3 +480,12 @@ int Rva001758B0Get(void)
 {
 	return 27;
 }
+
+// ?Rva00182A20Get@@YAHXZ @ 0x00182A20 (6B): returns 11. CC-island
+// (8xCC before and after), carried at 0x7D5660 in the 0x7D56xx mapper
+// family tables, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00182A20Get(void)
+{
+	return 11;
+}
