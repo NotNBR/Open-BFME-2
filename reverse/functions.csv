@@ -11055,3 +11055,4 @@ _search_local,,0x00753D10,98,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 b
 _string_constant,,0x00753A20,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 ??1Rva0024A797@@UAE@XZ,,0x0024A797,25,Code/GameEngine/Source/Common/Rva0024A797DeletingDtor.cpp,matched,Opaque MI middle 25B order +0x10/+0/+0xC tail-jumping the 0x49B47C fold; per-TU PrimaryP plus own B2; upgrades opaque base pin
 ??1Rva004B8CDE@@UAE@XZ,,0x004B8CDE,25,Code/GameEngine/Source/Common/Rva004B8CDEDeletingDtor.cpp,matched,Opaque MI middle 25B order +0x10/+0/+0xC tail-jumping the 0x49B47C fold; per-TU PrimaryP plus own B2; upgrades opaque base pin
+?apply@Rva004EDFFFDwordImmSetter@@QAEXXZ,,0x004EDFFF,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple middle
