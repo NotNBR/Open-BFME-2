@@ -11192,3 +11192,4 @@ _block,,0x007544B0,46,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-ide
 ?apply@Rva004E1416DwordImmSetter@@QAEXXZ,,0x004E1416,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?get@Rva0031A9CELeaGetter@@QBEPAXXZ,,0x0031A9CE,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 _lua_newtag,,0x0074FBC0,113,Code/Libraries/Source/Lua/ltm.c,matched,BFME1 byte-identical donor b1 ltm.c lua_newtag; exact via unclaimed_scan; ghidra 103B extent truncated true 113B
+?get@Rva0031A9D5LeaGetter@@QBEPAXXZ,,0x0031A9D5,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
