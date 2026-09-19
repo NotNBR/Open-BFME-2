@@ -11818,3 +11818,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?set@Rva0027C2AEDwordSlot@@QAEXH@Z,,0x0027C2AE,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva0027C306DwordSlot@@QAEXH@Z,,0x0027C306,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
 ?set@Rva00285652DwordSlot@@QAEXH@Z,,0x00285652,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?set@Rva0028A5E8DwordSlot@@QAEXH@Z,,0x0028A5E8,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
