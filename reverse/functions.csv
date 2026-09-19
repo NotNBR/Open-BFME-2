@@ -11176,3 +11176,4 @@ _number_constant,,0x00751E30,123,Code/Libraries/Source/Lua/lcode.c,matched,BFME1
 _luaK_prefix,,0x007534E0,479,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaO_chunkid,,0x0074E210,267,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaO_openspace,,0x0074E120,58,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_exp1,,0x00754270,33,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
