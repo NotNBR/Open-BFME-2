@@ -10886,3 +10886,4 @@ _LoadChunk,,0x00756CF0,23,Code/Libraries/Source/Lua/lundump.c,matched,BFME1 byte
 ?get@Rva004FDD6DAsciiField@@QBE?AVAsciiString@@XZ,,0x004FDD6D,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x1DC via StringBase copy 0x365F0
 ??0SmudgeSet@@QAE@XZ,,0x002D2859,36,Code/GameEngine/Source/GameClient/System/Smudge.cpp,matched,BFME1 donor b1 0x005D4160; caller-proven by addSmudgeSet new at 0x002D2956
 ?go@Rva008A2C60@@QAEXXZ,,0x006E5FD0,21,Code/GameEngine/Source/Common/R1GuardedReleaseHelpers.cpp,matched,BFME1 byte-identical donor; b1 0x008A2C60
+?get@Rva0056D653AsciiField@@QBE?AVAsciiString@@XZ,,0x0056D653,30,Code/GameEngine/Source/Common/System/AsciiStringRvoGetters.cpp,matched,RVO AsciiString out-getter; member +0x258 via StringBase copy 0x365F0
