@@ -10505,7 +10505,6 @@ _luaB_print,,0x0074B700,155,Code/Libraries/Source/Lua/luaB_print.cpp,matched,BFM
 ??0Rva007F4EF0Lobby@@QAE@PAVRva007E8810Message@@@Z,,0x00661920,158,Code/GameEngine/Source/GameNetwork/V2FeslAriesLobby.cpp,matched,BFME1 near-miss donor; b1 0x007F4EF0; immediate-only drift (string literal is DIR32 auto-patch); trimmed single-body TU; callees pre-pinned
 ?Rva007FC810@@YGXPAVRva007E8810Message@@PBDPBURva007FC810Attribute@@HH@Z,,0x00668D10,214,Code/GameEngine/Source/GameNetwork/Y4FeslAttributeRequest.cpp,matched,BFME1 near-miss donor; b1 0x007FC810; immediate-only drift (string literal is DIR32 auto-patch); trimmed single-body TU with // cl: /GS; callees pre-pinned
 ?rva00161150CopyWalk@@YAPAUElem36@@PAU1@00@Z,,0x00161150,45,Code/GameEngine/Source/Common/ElementStrideWalks.cpp,matched,stride 0x24 Elem36 stand-in per ElementStrideWalks donor convention; callee gen001610F0 pinned same batch; identity not recovered
-
 ?rva00689750CopyWalk@@YAPAUElem28@@PAU1@00@Z,,0x00689750,45,Code/GameEngine/Source/Common/ElementStrideWalks.cpp,matched,BFME1 stride-walk donor; Elem28 stride proven 0x1c by retail step; helper pin gen006896F0 same batch (rowed 66B construct body); file convention follows Elem36/Nugget walks
 _luaB_settag,,0x0074B980,53,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs settag slot); BFME1 donor verbatim b1 0x00994820
 _luaB_assert,,0x0074C200,63,Code/Libraries/Source/Lua/lbaselibSmall.c,matched,reg-table proven (base_funcs assert slot); BFME1 donor verbatim b1 0x009950A0; game.dat folds math_* here
@@ -10677,3 +10676,5 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?LogoffFromServer@Cftp@@QAEJXZ,,0x006CAA70,183,Code/GameEngine/Source/GameNetwork/CftpLogoffFromServer.cpp,matched,BFME1 near-miss donor; b1 0x00885F60; immediate-only drift (data global -> OutputDebugStringA pair); ZeroStuff public per matched QAE row
 ?bfmeGoUPC@@YAXPAUBfmeStateUPC@@H@Z,,0x007478E0,59,Code/GameEngine/Source/Common/BfmeConv1339.cpp,matched,BFME1 byte-identical donor; b1 0x00990780
 ?bfmeDoOV@@YAPAXPAX000PAE@Z,,0x00027FE0,534,Code/GameEngine/Source/Common/BfmeTwoHundredFiftySeven_DoOV.cpp,matched,find-first-not-in-set 4-unrolled for-loop plus tail switch via helper 0x26C60
+??0Rva006853A0@@QAE@XZ,,0x00447A42,26,Code/GameEngine/Source/Common/R3ScalarFieldConstructors2.cpp,matched,BFME1 byte-identical donor; b1 0x006853A0
+??0Rva007BA110@@QAE@XZ,,0x000F0F98,32,Code/GameEngine/Source/Common/R3ScalarFieldConstructors2.cpp,matched,BFME1 byte-identical donor; b1 0x007BA110
