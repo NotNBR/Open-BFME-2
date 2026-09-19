@@ -390,3 +390,12 @@ int Rva00434091Get(void)
 {
 	return 0x00DC5170;
 }
+
+// ?Rva003B0E57Get@@YAHXZ @ 0x003B0E57 (6B): returns 0x00C1DB18.
+// Follows a ret-4 (0x3B0E54-56) with a mov/mov/ret getter after.
+// 1 direct E8 caller (0x1FE73D), Ghidra-6, no branch sources.
+// Opaque address-derived name.
+int Rva003B0E57Get(void)
+{
+	return 0x00C1DB18;
+}
