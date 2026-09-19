@@ -12169,3 +12169,4 @@ _add_s,,0x00749970,307,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel
 _piAddListingGamesCallback,,0x0069F320,233,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerCallbacks.c,matched,GameSpy piAddListingGamesCallback 233B; assignment-wrapped gamemode call batches 3 cdecl cleanups into retail add esp 0x20; gameListCallback at 0x1784 and gameListParam at 0x1788
 _str_lower,,0x00748BA0,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string lower via donor reg-table identity; callees pinned
 _str_upper,,0x00748C40,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string upper via donor reg-table identity; callees pinned
+_str_char,,0x00748DF0,164,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string char via donor reg-table identity; callees pinned
