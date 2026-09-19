@@ -12032,3 +12032,4 @@ _lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 by
 ??0FileInfoStruct@MixFileCreator@@QAE@ABU01@@Z,,0x00217624,41,Code/Libraries/Source/WWVegas/WWLib/MixFileCreatorFileInfoStructAssign.cpp,matched,twin of 0x2174DF op=; same 16B record; name copy-constructed via StringBase fold 0x365F0
 ?get@Rva00661C80LeaGetter@@QBEPAXXZ,,0x00661C80,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-E0010000-C3
 ?get@Rva0066CAA0LeaGetter@@QBEPAXXZ,,0x0066CAA0,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-8C020000-C3
+?get@Rva0066D440LeaGetter@@QBEPAXXZ,,0x0066D440,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-30010000-C3
