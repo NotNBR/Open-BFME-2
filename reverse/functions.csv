@@ -10917,3 +10917,4 @@ _discharge,,0x00752BD0,520,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ??0RepeatChar@Debug@@QAE@DH@Z,,0x00038310,18,Code/Libraries/Source/WWVegas/WWDebug/debug_debug.cpp,matched,BFME1 byte-identical donor; b1 0x00889270
 ?buildFieldParse@UpgradeModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004CEE09,17,Code/GameEngine/Source/GameLogic/Object/Upgrade/UpgradeModuleDataBuildFieldParse.cpp,matched,BFME1 byte-identical donor; b1 0x00122DC0
 ?getCommandOption@BattlePlanUpdate@@UBE?AW4CommandOption@@XZ,,0x0049771E,33,Code/GameEngine/Source/GameLogic/Object/Update/BattlePlanUpdate_getCommandOption.cpp,matched,BFME1 byte-identical donor; b1 0x00285550
+?bfmeGo928F@BfmeThing928F@@QAEXXZ,,0x0010C80A,27,Code/GameEngine/Source/Common/BfmeConv928.cpp,matched,BFME1 byte-identical donor; b1 0x007B4F80
