@@ -10932,3 +10932,4 @@ _luaK_adjuststack,,0x00752A10,441,Code/Libraries/Source/Lua/lcode.c,matched,BFME
 _luaK_storevar,,0x00752E10,421,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_patchlistaux,,0x00751FF0,332,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_setcallreturns,,0x00751EF0,137,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_codelineinfo,,0x007521D0,105,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
