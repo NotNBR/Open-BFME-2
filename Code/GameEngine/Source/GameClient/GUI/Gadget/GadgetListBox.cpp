@@ -85,3 +85,22 @@ Int GadgetListBoxGetNumColumns(GameWindow *listbox)
 
 	return *(Short *)((char *)listboxData + 0x02);
 }
+
+// ?GadgetListBoxGetColumnWidth@@YAHPAVGameWindow@@H@Z, retail 0x003248CA (43B).
+// Ported from Open-BFME-1 Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp
+// (BFME1 0x004B79D0). The widths array hangs at +0x14; the donor's
+// columns-then-negative bound order is the retail cmp/jle + test/jl shape.
+Int GadgetListBoxGetColumnWidth(GameWindow *listbox, Int column)
+{
+	if (!listbox)
+		return 0;
+
+	void *listboxData = listbox->winGetUserData();
+	if (!listboxData)
+		return 0;
+
+	if (*(Short *)((char *)listboxData + 0x02) <= column || column < 0)
+		return 0;
+
+	return (*(Int **)((char *)listboxData + 0x14))[column];
+}
