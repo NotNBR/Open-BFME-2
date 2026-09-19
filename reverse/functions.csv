@@ -11855,3 +11855,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?Close@BufferedFileClass@@UAEXXZ,,0x0061AFD0,42,Code/Libraries/Source/WWVegas/WWLib/bufffile.cpp,matched,zh-sweep exact-unique placement in unclaimed text; ZH donor verbatim
 ?Seek@BufferedFileClass@@UAEHHH@Z,,0x0061B000,113,Code/Libraries/Source/WWVegas/WWLib/bufffile.cpp,matched,placed by masked whole-text search of the compiled body; ZH donor verbatim
 ?parseWaypointData@TerrainLogic@@IAE_NAAVDataChunkInput@@PAUDataChunkInfo@@PAX@Z,,0x0027FFF3,60,Code/GameEngine/Source/GameLogic/Map/TerrainLogic_parseWaypointData.cpp,matched,ZH TerrainLogic donor verbatim; NDEBUG drops end-of-chunk assert
+_str_byte,,0x00748D60,136,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_str_byte; Lua lstrlib static compiles to retail span
