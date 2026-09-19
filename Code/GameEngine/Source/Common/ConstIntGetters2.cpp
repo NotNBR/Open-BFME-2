@@ -206,3 +206,12 @@ int Rva000A2727Get(void)
 {
 	return 0x0048F999;
 }
+
+// ?Rva000A272DGet@@YAHXZ @ 0x000A272D (6B): returns 0x0048F9D3.
+// Immediately follows Rva000A2727Get (prev is its C3), carried by 1 .rdata
+// slot in the parallel vtable, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva000A272DGet(void)
+{
+	return 0x0048F9D3;
+}
