@@ -11663,3 +11663,4 @@ _math_exp,,0x007486D0,54,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.e
 _math_deg,,0x00748710,38,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.deg via check_number + pushnumber; callees pinned
 ??_GRva005D9DC1@@UAEPAXI@Z,,0x005D9DE6,28,Code/GameEngine/Source/Common/Rva005EEDAADerived.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
 ?name@Rva004E1794Named@@QBEPBDXZ,,0x004E1794,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning SpawnBuilding; vtable ref in .rdata; address-derived placeholder name
+??_GRva005EE30C@@UAEPAXI@Z,,0x005EE394,28,Code/GameEngine/Source/Common/Rva005EE30CChain.cpp,matched,scalar deleting-dtor thunk emitted via TU vtable; byte-exact
