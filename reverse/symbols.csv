@@ -3003,4 +3003,5 @@ _lua_pushvalue,0x00747050
 _lua_rawcall,0x00747B20
 _lua_error,0x0074D570
 ?bfmeLogMsg574@@YAXPBD@Z,0x00333B36
+??1Rva006CD6C0SizedDeleting@@UAE@XZ,0x006CC4C0
 ?bfmeDo912C@BfmeThing912C@@QAEXPAUBfmeNode912C@@@Z,0x006274B0
