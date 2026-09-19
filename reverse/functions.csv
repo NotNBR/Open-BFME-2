@@ -12178,3 +12178,4 @@ _max_expand,,0x00749210,149,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua patt
 _min_expand,,0x007492B0,136,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua pattern min expand via donor; match core cluster
 _match,,0x00749450,602,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua pattern match core via donor with jump table; match core cluster
 _str_find,,0x00749790,479,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string find via donor reg-table identity; match core placed
+_str_gsub,,0x00749AB0,460,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string gsub via donor reg-table identity; match core placed
