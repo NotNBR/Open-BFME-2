@@ -11582,4 +11582,4 @@ _math_floor,,0x00748570,41,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math
 ?get@Rva0033F94DAddDwordField@@QBEHXZ,,0x0033F94D,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
 ?name@Rva00286F81Named@@QBEPBDXZ,,0x00286F81,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning FireLogicSystem; vtable ref in .rdata; address-derived placeholder name
 _math_mod,,0x007485A0,65,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.mod via check_number x2 + CIfmod + pushnumber; callees pinned
-?name@Rva002AE621Named@@QBEPBDXZ,,0x002AE621,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Command; vtable ref in .rdata; address-derived placeholder name
+?name@Rva0037DC84Named@@QBEPBDXZ,,0x0037DC84,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning CarryoverUnit; vtable ref in .rdata; address-derived placeholder name
