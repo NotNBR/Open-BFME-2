@@ -12037,3 +12037,4 @@ _lua_getstack,,0x0074CA30,33,Code/Libraries/Source/Lua/ldebug.c,matched,BFME1 by
 ?get@Rva0066D500LeaGetter@@QBEPAXXZ,,0x0066D500,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-A8020000-C3
 ?get@Rva0066D510LeaGetter@@QBEPAXXZ,,0x0066D510,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-B0020000-C3
 ?get@Rva0066E470LeaGetter@@QBEPAXXZ,,0x0066E470,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-B4000000-C3
+?get@Rva0066E480LeaGetter@@QBEPAXXZ,,0x0066E480,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter; cc-pad-isolated 7B; retail 8D-81-B8020000-C3
