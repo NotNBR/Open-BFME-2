@@ -11832,3 +11832,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?name@Rva00306A48Named@@QBEPBDXZ,,0x00306A48,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning Module; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva0028CB23Named@@QBEPBDXZ,,0x0028CB23,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning ObjectRepulsorHelper; vtable ref in .rdata; address-derived placeholder name
 ?Invalidate_Cached_Render_States@DX8Wrapper@@SAXXZ,,0x0011FD10,226,Code/Libraries/Source/WWVegas/WW3D2/dx8wrapper.cpp,matched,
+?name@Rva00306B13Named@@QBEPBDXZ,,0x00306B13,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning ObjectModule; vtable ref in .rdata; address-derived placeholder name
