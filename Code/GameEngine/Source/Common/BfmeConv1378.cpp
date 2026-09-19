@@ -1,8 +1,9 @@
 // BFME1 byte-identical donor: reference/open-bfme-1/Code/GameEngine/Source/Common/BfmeConv1378.cpp
 // Trimmed to the bodies that reproduce game.dat bytes. bfmeGoVIT has no matching
-// body here, and bfmeGoVIU's bytes are ICF-folded in lotrbfme.exe across five
-// candidate names (sweep T3), so claiming one would be a guess; both stay out
-// and every defined function has a ledger row.
+// body here. bfmeGoVIU's bytes ARE claimed: the five lotrbfme.exe fold-twins
+// collapse to one pick by call-arity -- retail 0x65F250 ends `ret 0x10`
+// (4 args: msg + 3 void*), which fits only ?bfmeGoVIU@@YGXPAVBfmeMsgVIT@@PAX11@Z;
+// the bfmeSetupPair twins take (record*, int) and Rva007F2B70 takes 7 args.
 
 class BfmeMsgVIT
 {
@@ -14,6 +15,18 @@ public:
 };
 
 extern void *g_bfmeVIV;
+extern void *g_bfmeVIU;
+
+void __stdcall bfmeGoVIU(BfmeMsgVIT *m, void *sessionId, void *key, void *value)
+{
+	void *g = g_bfmeVIU;
+	m->bfmeRunVIT();
+	m->m_bfme1c = 0x72616e6b;
+	m->bfmeSetVIT("TXN", g);
+	m->bfmeSetVIT("sessionId", sessionId);
+	m->bfmeSetVIT("key", key);
+	m->bfmeSetVIT("value", value);
+}
 
 void __stdcall bfmeGoVIV(BfmeMsgVIT *m, char *code, char *game, char *platform, char *name, char *password, char *email)
 {
