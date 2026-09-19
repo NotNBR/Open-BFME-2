@@ -11012,3 +11012,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?get@Rva0053111DByteField@@QBEEXZ,,0x0053111D,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?get@Rva00041D5EByteField@@QBEEXZ,,0x00041D5E,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?disable@Rva00238D8DZeroSetter@@QAEXXZ,,0x00238D8D,5,Code/GameEngine/Source/Common/Disp8ByteOneSetters.cpp,matched,Disp8 byte zero-setter; pair of claimed 238D92 one-setter at same disp 0x6C
+?get@Rva00050CA9ByteField@@QBEEXZ,,0x00050CA9,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
