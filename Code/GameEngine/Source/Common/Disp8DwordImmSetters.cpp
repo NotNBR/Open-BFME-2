@@ -51,3 +51,17 @@ void Rva002E0675DwordImmSetter::apply()
 {
 	m_value = 2;
 }
+
+class Rva00395583DwordImmSetter
+{
+public:
+	void apply();
+
+	char m_lead[0x34];
+	unsigned int m_value;
+};
+
+void Rva00395583DwordImmSetter::apply()
+{
+	m_value = 4;
+}
