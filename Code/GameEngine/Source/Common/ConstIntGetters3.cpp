@@ -301,3 +301,11 @@ int Rva0036766FGet(void)
 {
 	return 0x00C174BC;
 }
+
+// ?Rva003677ADGet@@YAHXZ @ 0x003677ad (6B): returns 0x00C17520.
+// Follows a leave/ret-8 (prev C9-C2-08-00), carried by 1 .rdata slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva003677ADGet(void)
+{
+	return 0x00C17520;
+}
