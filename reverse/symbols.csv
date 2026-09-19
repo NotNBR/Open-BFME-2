@@ -3019,7 +3019,6 @@ _luaS_newlstr,0x00750130,LoadString 0x7564F0 +0x5c E8 decodes here; string inter
 _luaS_newudata,0x00750230,lua_newuserdata 0x747D70 +0x17 E8 decodes here; udata allocator; lstring.c
 _luaT_init,0x0074FB40
 _luaV_strcomp,0x0074E9D0
-_luaX_lex,0x00757C90
 _luaZ_read,0x00756E90,LoadBlock 0x756340 +0x66 E8 decodes here; ZIO reader; lzio.c zread
 _lua_getglobal,0x007476C0
 _lua_gettop,0x00746F30
@@ -3188,3 +3187,4 @@ _bfmeMalloc1150,0x00023790
 ?bfmeSendVIS@BfmeThingVIS@@QAEXPAVBfmeMsgVIR@@PBUBfmeOwnerVIR@@PBQBDHHH@Z,0x0065F540
 ?run@Rva007EB6C0Cleanup@@QAEXXZ,0x00658650,shared cleanup of the VptrCleanup ??_G bodies; rowed ??1BfmeDirtyBase lives here
 ??1Gen00803D10@@UAE@XZ,0x0066F8D0
+_read_number,0x00757200
