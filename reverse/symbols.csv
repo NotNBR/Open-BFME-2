@@ -3028,7 +3028,6 @@ _luaX_init,0x00756F10
 _luaX_lex,0x00757C90
 _luaX_setinput,0x00757020
 _luaX_token2str,0x00756FA0
-_lua_error,0x0074D570
 _lua_getglobal,0x007476C0
 _lua_gettop,0x00746F30
 _lua_pushcclosure,0x00747640

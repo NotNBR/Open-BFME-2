@@ -11352,3 +11352,4 @@ _luaD_init,,0x0074D4B0,62,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-ide
 _luaD_checkstack,,0x0074D650,88,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
 _luaD_breakrun,,0x0074DE30,59,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
 _luaD_callTM,,0x0074DE70,55,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
+_lua_error,,0x0074D570,36,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
