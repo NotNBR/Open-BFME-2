@@ -12005,3 +12005,4 @@ _read_string,,0x007577E0,1185,Code/Libraries/Source/Lua/llex.c,matched,gen-alias
 _luaL_addstring,,0x007516C0,42,Code/Libraries/Source/Lua/lauxlib.c,matched,gen-alias;object-symbol=_luaL_addstring;C++ alias
 ?isTurretInNaturalPosition@BattlePlanUpdate@@IAE_NXZ,,0x0049778D,40,Code/GameEngine/Source/GameLogic/Object/Update/BattlePlanUpdate_isTurretInNaturalPosition.cpp,matched,ZH BattlePlanUpdate.cpp port; AI at Object+0x258; TURRET_INVALID -1; AIUpdateInterface pins 0x26275E 0x26269C
 ?recenterTurret@BattlePlanUpdate@@IAEXXZ,,0x00497769,36,Code/GameEngine/Source/GameLogic/Object/Update/BattlePlanUpdate_recenterTurret.cpp,matched,ZH BattlePlanUpdate.cpp port; AIUpdateInterface pin 0x26266C; getWhich pin reused
+?enableTurret@BattlePlanUpdate@@IAEX_N@Z,,0x0049773F,42,Code/GameEngine/Source/GameLogic/Object/Update/BattlePlanUpdate_enableTurret.cpp,matched,ZH BattlePlanUpdate.cpp port; AIUpdateInterface pin 0x262651; getWhich pin reused
