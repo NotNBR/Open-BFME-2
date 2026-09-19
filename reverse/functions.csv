@@ -11377,3 +11377,4 @@ _luaV_execute,,0x0074EDE0,3124,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byt
 _luaF_newproto,,0x00751B40,89,Code/Libraries/Source/Lua/lfunc.c,matched,BFME1 byte-identical donor b1 lfunc.c; exact via unclaimed_scan
 _luaD_callHook,,0x0074D800,88,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
 _luaH_get,,0x00750550,77,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byte-identical donor b1 ltable.c; exact via unclaimed_scan
+_luaD_openstack,,0x0074D700,77,Code/Libraries/Source/Lua/ldo.c,matched,BFME1 byte-identical donor b1 ldo.c; exact via unclaimed_scan
