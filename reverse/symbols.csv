@@ -3043,3 +3043,4 @@ _luaK_testgo,0x00752FC0
 _luaK_tostack,0x00753160
 _luaM_growaux,0x00750AE0
 _luaX_error,0x00757150
+_rehash,0x00750830,TU-local static rehash called by luaH_set tail; address from retail E8 at 0x7509BC site+5+disp; row to follow
