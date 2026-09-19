@@ -10752,3 +10752,4 @@ _funcstat,,0x007551D0,117,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte
 ?bfmeIsBasic@@YGHH@Z,,0x00040830,35,Code/GameEngine/Source/Common/Bfme5FiftyOne.cpp,matched,BFME1 byte-identical donor; b1 0x00890EE0
 ?bfmeSwap@Gen_00350E60@@QAEXPAV1@@Z,,0x003B33FA,29,Code/GameEngine/Source/Common/Bfme5TinyTwentySix.cpp,matched,BFME1 byte-identical donor; b1 0x00350E60
 ?bfmeGoELF@BfmeThingELF@@QAEXPAX@Z,,0x00658710,24,Code/GameEngine/Source/Common/BfmeConv816.cpp,matched,BFME1 byte-identical donor; b1 0x007EB780
+?bfmeGo924F@@YAXPAVBfmeKeyLC@@G@Z,,0x00433D07,27,Code/GameEngine/Source/Common/BfmeConv924.cpp,matched,BFME1 byte-identical donor; b1 0x00511160
