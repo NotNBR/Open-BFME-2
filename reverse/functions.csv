@@ -11182,3 +11182,4 @@ _openwithcontrol,,0x0074B490,312,Code/Libraries/Source/Lua/liolib_bfme1.c,matche
 ?get@Rva002C8F13LeaGetter@@QBEPAXXZ,,0x002C8F13,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
 ?apply@Rva004CEE78DwordImmSetter@@QAEXXZ,,0x004CEE78,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter
 ?get@Rva0011C440WordField@@QBEGXZ,,0x0011C440,5,Code/GameEngine/Source/Common/Disp8WordFieldGetters.cpp,matched,Disp8 word getter
+?get@Rva002CEF87LeaGetter@@QBEPAXXZ,,0x002CEF87,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
