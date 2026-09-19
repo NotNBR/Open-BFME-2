@@ -552,3 +552,11 @@ int Rva006C7580Get(void)
 {
 	return 0x00CE7D14;
 }
+
+// ?Rva006C7590Get@@YAHXZ @ 0x006C7590 (6B): returns 0x00CE7CBC.
+// CC-island (8xCC before and after), carried at 1 .rdata slot, no
+// direct callers, no branch sources. Opaque address-derived name.
+int Rva006C7590Get(void)
+{
+	return 0x00CE7CBC;
+}

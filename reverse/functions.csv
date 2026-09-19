@@ -12401,3 +12401,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva00187400Get@@YAHXZ,,0x00187400,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 21; CC-island with 1 mapper-family vtable ref; opaque name
 ?Rva0019F020Get@@YAHXZ,,0x0019F020,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 25; CC-island with 1 mapper-family vtable ref; opaque name
 ?Rva006C7580Get@@YAHXZ,,0x006C7580,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xCE7D14; ret-12 plus CC-island with 1 vtable ref; opaque name
+?Rva006C7590Get@@YAHXZ,,0x006C7590,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xCE7CBC; CC-island with 1 vtable ref; opaque name
