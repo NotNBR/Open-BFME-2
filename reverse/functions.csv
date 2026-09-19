@@ -12239,3 +12239,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva00129660Get@@YAHXZ,,0x00129660,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,address-derived global dword getter over 0x00DEE894; 2 E8 callers at 0x484C9/0x48515; global unproven
 ?bfmeSmallAllocPR@@YAPAXI@Z,,0x000279A0,152,Code/GameEngine/Source/Common/BfmeSmallAllocPR.cpp,matched,BFME1 byte-identical donor; b1 0x0082E450
 ?allocate@?$__malloc_alloc@$0A@@_STL@@SAPAXI@Z,,0x00025090,48,Code/Libraries/Source/WWVegas/WWLib/STLMallocAlloc0Allocate.cpp,matched,BFME1 byte-identical donor; b1 0x0082C580;object-symbol=_bfme_MallocAlloc0Allocate_82C580
+?Rva00129680Get@@YAHXZ,,0x00129680,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,address-derived global dword getter over 0x00DEE8A0; 1 E8 caller at 0x4849D; global unproven
