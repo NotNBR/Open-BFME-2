@@ -218,3 +218,11 @@ int Rva000A8F5EGet(void)
 {
 	return 0x00DB4CF8;
 }
+
+// ?Rva00404715Get@@YAHXZ @ 0x00404715 (6B): returns 0x00C38658.
+// Prev leave/ret with a push-style function after. 2 direct E8 callers,
+// no Ghidra entry (dead emission), no branch sources. Opaque name.
+int Rva00404715Get(void)
+{
+	return 0x00C38658;
+}
