@@ -11079,3 +11079,4 @@ _string_constant,,0x00753A20,76,Code/Libraries/Source/Lua/lparser.c,matched,BFME
 ?apply@Rva005E3947DwordImmSetter@@QAEXXZ,,0x005E3947,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; pair first
 ?apply@Rva005E394EDwordImmSetter@@QAEXXZ,,0x005E394E,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; pair second
 ?apply@Rva000657ACDwordImmSetter@@QAEXXZ,,0x000657AC,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; null store
+?get@Rva003E3BC9ByteField@@QBEEXZ,,0x003E3BC9,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
