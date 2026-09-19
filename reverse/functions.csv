@@ -10578,3 +10578,5 @@ _Rva0088E100WatchdogThread@4,,0x0003D7E0,139,Code/Libraries/Source/WWVegas/WWDeb
 ?Rva007F3AF0@@YGXPAVRva007E8810Message@@_J1@Z,,0x006605C0,88,Code/GameEngine/Source/GameNetwork/V2FeslTxnRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007F3AF0; ICF-folded BFME1 pick; 3 DIR32 string literal(s) agree
 ?Rva007F3F90@@YGXPAVRva007E8810Message@@_JH@Z,,0x00660A60,87,Code/GameEngine/Source/GameNetwork/V2FeslTxnRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007F3F90; ICF-folded BFME1 pick; 3 DIR32 string literal(s) agree
 ?Rva007F2D10@@YGXPAVRva007E8810Message@@PBDH@Z,,0x0065F800,78,Code/GameEngine/Source/GameNetwork/V2FeslTxnRequests.cpp,matched,BFME1 byte-identical donor; b1 0x007F2D10; ICF-folded BFME1 pick; 3 DIR32 string literal(s) agree
+_invertjump,,0x00751F80,108,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099E580
+_codepushbool,,0x00752970,151,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; b1 0x0099EF70; 2 DIR32 string literal(s) agree
