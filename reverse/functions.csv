@@ -11686,3 +11686,5 @@ _math_deg,,0x00748710,38,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.d
 ?get@Rva0059E81FAddDwordField@@QBEHXZ,,0x0059E81F,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
 _math_min,,0x00748800,113,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.min via gettop loop + check_number + pushnumber; callees pinned
 ?get@Rva005CCB30AddDwordField@@QBEHXZ,,0x005CCB30,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?name@Rva002047C9Named@@QBEPBDXZ,,0x002047C9,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning SequentialScript; vtable ref in .rdata; address-derived placeholder name
+_math_max,,0x00748880,113,Code/Libraries/Source/Lua/lmathlib.c,matched,Lua math.max via gettop loop + check_number + pushnumber; callees pinned
