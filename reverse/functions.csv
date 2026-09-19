@@ -11847,3 +11847,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?name@Rva0033F31ANamed@@QBEPBDXZ,,0x0033F31A,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning AIBusyState; 2 vtable refs in .rdata; address-derived placeholder name
 ?name@Rva0033F35ENamed@@QBEPBDXZ,,0x0033F35E,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning AIBackAwayAndCowerState; vtable ref in .rdata; address-derived placeholder name
 ?name@Rva0033F385Named@@QBEPBDXZ,,0x0033F385,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning AIAttackMeleeHordeWaitState; vtable ref in .rdata; address-derived placeholder name
+?name@Rva0033F3B0Named@@QBEPBDXZ,,0x0033F3B0,6,Code/GameEngine/Source/Common/SubsystemNameGetters2.cpp,matched,literal name getter returning AIAttackMeleeHordeWaitPathState; vtable ref in .rdata; address-derived placeholder name
