@@ -24,6 +24,8 @@ public:
 };
 
 extern void *g_bfmeAVIW;
+extern void *g_bfmeBVIW;
+extern void *g_bfmeCVIW;
 extern void *g_bfmeDVIW;
 extern void *g_bfmeEVIW;
 
@@ -66,4 +68,22 @@ void __stdcall bfmeGoEVIW(BfmeMsgVIW *m, void *a, void *b)
 	m->bfmeSetVIW("TXN", g);
 	m->bfmeSetVIW("password", a);
 	m->bfmeSetVIW("newPassword", b);
+}
+
+void __stdcall bfmeGoBVIW(BfmeMsgVIW *m, void *a, void *b)
+{
+	void *g = g_bfmeBVIW;
+	m->bfmeRunVIW();
+	m->m_bfme1c = 0x626c6f62;
+	m->bfmeSetVIW("TXN", g);
+	m->bfmeSet2VIW("blobId", a, b);
+}
+
+void __stdcall bfmeGoCVIW(BfmeMsgVIW *m, void *a, void *b)
+{
+	void *g = g_bfmeCVIW;
+	m->bfmeRunVIW();
+	m->m_bfme1c = 0x626c6f62;
+	m->bfmeSetVIW("TXN", g);
+	m->bfmeSet2VIW("blobId", a, b);
 }
