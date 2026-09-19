@@ -21,10 +21,18 @@ struct PushButtonData
 	void *userData;
 };
 
+class WinInstanceData
+{
+public:
+	unsigned char m_pad[8];
+	unsigned int m_state;
+};
+
 class GameWindow
 {
 public:
 	void *winGetUserData();
+	WinInstanceData *winGetInstanceData();
 };
 
 #ifndef NULL
@@ -42,4 +50,18 @@ void *GadgetButtonGetData(GameWindow *button)
 		return NULL;
 
 	return buttonData->userData;
+}
+
+// ?GadgetCheckLikeButtonIsChecked@@YA_NPAVGameWindow@@@Z, retail 0x00327C9B (30B).
+// Selected state is bit 2 of WinInstanceData::m_state (+0x08).
+Bool GadgetCheckLikeButtonIsChecked(GameWindow *button)
+{
+	if (button == NULL)
+		return 0;
+
+	WinInstanceData *instData = button->winGetInstanceData();
+	if (instData == NULL)
+		return 0;
+
+	return (instData->m_state >> 2) & 1;
 }

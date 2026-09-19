@@ -3089,3 +3089,4 @@ _subexpr,0x007558A0
 ?d_00843990@@YAXXZ,0x000166C0
 ?bfmeBumpURB@BfmeThingURB@@QAEXXZ,0x0061EEC0
 ?bump@Rva009EB940Receiver@@QAEXXZ,0x0061EEC0
+?winGetInstanceData@GameWindow@@QAEPAVWinInstanceData@@XZ,0x00314046
