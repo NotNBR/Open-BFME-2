@@ -10950,3 +10950,4 @@ _luaO_power2,,0x0074E0A0,23,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 _close_func,,0x007540E0,207,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan; code0 pin 0x752650 + protook pin 0x751BC0
 _recfields,,0x00754DD0,201,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _explist1,,0x007541B0,177,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_forbody,,0x007544E0,165,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan; adjustlocalvars pin 0x753C70

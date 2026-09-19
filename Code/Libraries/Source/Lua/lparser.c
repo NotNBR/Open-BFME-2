@@ -285,7 +285,6 @@ static void repeatstat (LexState *ls, int line) {
 }
 
 
-// _forbody present-unmatched
 static void forbody (LexState *ls, int nvar, OpCode prepfor, OpCode loopfor) {
   /* forbody -> DO block END */
   FuncState *fs = ls->fs;
