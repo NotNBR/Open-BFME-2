@@ -31,7 +31,7 @@ class File
 {
 public:
 	virtual ~File();
-	virtual void slot01();
+	virtual bool open(const char *filename, int access);
 	virtual void close();
 	virtual void slot03();
 	virtual void slot04();
@@ -88,4 +88,35 @@ void File::close()
 			::delete this;
 		}
 	}
+}
+
+// ?open@File@@UAE_NPBDH@Z
+// BFME1 File::open logic (their setName is the two-arg + strlen form; ours is
+// the one-arg form like close, so no length push). Access-flag numbering is
+// unchanged from Zero Hour (READ 1, WRITE 2, APPEND 4, TRUNCATE 0x10,
+// TEXT 0x20, BINARY 0x40, STREAMING 0x100).
+bool File::open(const char *filename, int access)
+{
+	if (m_isOpen) {
+		return false;
+	}
+	setName(filename);
+	if ((access & (0x100 | 0x02)) == (0x100 | 0x02)) {
+		return false;
+	}
+	if ((access & (0x20 | 0x40)) == (0x20 | 0x40)) {
+		return false;
+	}
+	if ((access & (0x01 | 0x02)) == 0) {
+		access |= 0x01;
+	}
+	if (!(access & (0x01 | 0x04))) {
+		access |= 0x10;
+	}
+	if ((access & (0x20 | 0x40)) == 0) {
+		access |= 0x40;
+	}
+	m_access = access;
+	m_isOpen = 1;
+	return true;
 }
