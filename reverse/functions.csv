@@ -12253,3 +12253,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?Rva00250000Get@@YAHXZ,,0x00250000,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 const-int returner ret 0x81; prev leave-ret with 7 distant rdata refs; opaque address-derived name
 ?Rva00656B60Get@@YAHXZ,,0x00656B60,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 const-int returner ret 0xE09F9C; CC-island with 16 E8 callers and Ghidra-6; alleged js is mov-imm false decode; opaque name
 ??1Rva002CEC0A@@UAE@XZ,,0x002CEC0A,14,Code/GameEngine/Source/Common/Rva002CEC0ADtor.cpp,matched,opaque dtor tail-calls vector dtor 0x2CC70 on member at plus 4 (pin upgrade)
+?bfmeAllocBlock@@YAPAXI@Z,,0x001B63C0,62,Code/GameEngine/Source/Common/BfmeAllocBlock.cpp,matched,BFME1 donor pattern; b1 0x009A5920; fallback via vectorSmallAllocate pin
