@@ -11041,3 +11041,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?apply@Rva0007DE9ADwordImmSetter@@QAEXXZ,,0x0007DE9A,7,Code/GameEngine/Source/Common/Disp0DwordImmSetters.cpp,matched,Disp0 dword imm-setter; triple first after ret-4
 ?get@Rva001D96F4LeaField@@QBEPAXXZ,,0x001D96F4,4,Code/GameEngine/Source/Common/Disp8LeaFieldGetters.cpp,matched,Disp8 LEA getter; address-derived opaque holder
 ?get@Rva00042299LeaGetter@@QBEPAXXZ,,0x00042299,7,Code/GameEngine/Source/Common/DispDwordLeaFieldGetters.cpp,matched,Disp32 LEA getter
+?get@Rva0023C418ByteField@@QBEEXZ,,0x0023C418,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
