@@ -10585,3 +10585,4 @@ _codepushbool,,0x00752970,151,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 by
 _findevent,,0x0074FA20,98,Code/Libraries/Source/Lua/ltm.c,matched,TU-local static leaf called by luaI_checkevent; inlined strcmp loop; emitted by ltm.c object; vendored=lua-4.0.1
 _luaI_checkevent,,0x0074FA90,85,Code/Libraries/Source/Lua/ltm.c,matched,TU-local static called by settagmethod; findevent row unblocks its first call; verror pin serves other three; emitted by ltm.c object; vendored=lua-4.0.1
 _lua_settagmethod,,0x0074FE80,211,Code/Libraries/Source/Lua/ltm.c,matched,unclaimed_scan exact modulo relocs; findevent and checkevent rows plus verror and lua_error pins resolve all calls; emitted by ltm.c object; vendored=lua-4.0.1
+_luaT_init,,0x0074FB40,122,Code/Libraries/Source/Lua/ltm.c,matched,unclaimed_scan exact modulo relocs; single call to luaM_growaux pin; emitted by ltm.c object; vendored=lua-4.0.1
