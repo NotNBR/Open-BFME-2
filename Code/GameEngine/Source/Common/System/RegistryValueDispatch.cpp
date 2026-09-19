@@ -149,3 +149,15 @@ const char *GetRegistryOnlineServer()
     }
     return g_OnlineServerValue;
 }
+
+// ?GetRegistryUserDataLeafName@@YAPBDXZ, retail 0x0002FA60, 27 bytes.
+// Lazy UserDataLeafName reader: same once-gate, cached pointer at 0x00DA758C.
+const char *GetRegistryUserDataLeafName()
+{
+    if (!g_registryValuesLoaded)
+    {
+        g_registryValuesLoaded = true;
+        LoadRegistryValues();
+    }
+    return g_UserDataLeafNameValue;
+}
