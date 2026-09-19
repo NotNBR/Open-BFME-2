@@ -12232,3 +12232,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ??0AggregateDefClass@@QAE@XZ,,0x001A3ED0,105,Code/Libraries/Source/WWVegas/WW3D2/agg_def.cpp,matched,BFME1 donor m_Version init restored; b1 0x009815E0
 ?computeStatus@Weapon@@QBE?AW4WeaponStatus@@PA_N@Z,,0x002CC422,187,Code/GameEngine/Source/Common/WeaponGetStatus.cpp,matched,
 ??_GRva004D7B93@@UAEPAXI@Z,,0x004D8507,28,Code/GameEngine/Source/Common/OpaqueScalarDeletingDtors.cpp,matched,emitted scalar deleting dtor; dtor call via opaque pin at 0x4D7B93 (5B tail-jmp to 0x49B47C fold); flag plus pinned operator delete
+?Rva0011F1B0Get@@YAHXZ,,0x0011F1B0,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,address-derived global dword getter over 0x00DED5C0; 1 E8 caller at 0x44DD2; global unproven
