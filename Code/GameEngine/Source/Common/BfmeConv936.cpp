@@ -28,4 +28,15 @@ class BfmeThing936G
 {
 public:
 	BfmeThing936G *bfmeGo936G(void);
+	void bfmeInit936G(void);
 };
+
+extern void *g_bfme936GlobG;
+
+// ?bfmeGo936G@BfmeThing936G@@QAEPAV1@XZ, retail 0x00016AA0 (21B).
+BfmeThing936G *BfmeThing936G::bfmeGo936G(void)
+{
+	if (!g_bfme936GlobG)
+		bfmeInit936G();
+	return this;
+}
