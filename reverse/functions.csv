@@ -10553,3 +10553,6 @@ _luaB_getglobal,,0x0074B920,32,Code/Libraries/Source/Lua/lbaselibSmall.c,matched
 ?Rva007F5B40@@YAXPAVRva007E8810Message@@PAVRva007F7980Browser@@@Z,,0x006622E0,54,Code/GameEngine/Source/GameNetwork/V2FeslBrowserEvents.cpp,matched,BFME1 byte-identical donor; b1 0x007F5B40
 ?onRegionCount@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00664000,101,Code/GameEngine/Source/GameNetwork/V2FeslBrowserEvents.cpp,matched,BFME1 byte-identical donor; b1 0x007F7980; 1 DIR32 string literal(s) agree
 ?assertFailed@Rva007EB8B0Log@@QAEHPBD0H@Z,,0x00658890,148,Code/GameEngine/Source/GameNetwork/Rva007EB920Assert.cpp,matched,BFME1 byte-identical donor; b1 0x007EB920; 3 DIR32 string literal(s) agree
+?Rva007F3C50@@YGXPAVRva007E8810Message@@_JPBD2HH1PBURva007F3C50Attribute@@IPBQBDI@Z,,0x00660720,503,Code/GameEngine/Source/GameNetwork/Rva007F3C50ClubUpdate.cpp,matched,BFME1 byte-identical donor; b1 0x007F3C50; 12 DIR32 string literal(s) agree
+?Rva009AB7F0Reset@@YAXPAURva009AB7F0Context@@@Z,,0x001BC230,338,Code/GameEngine/Source/Common/Rva009AB7F0Reset.cpp,matched,BFME1 byte-identical donor; b1 0x009AB7F0
+?set@Rva0020DD50FieldSetter@@QAEXH@Z,,0x00331651,17,Code/GameEngine/Source/Common/Rva0020DD50FieldSetter.cpp,matched,BFME1 byte-identical donor; b1 0x0020DD50
