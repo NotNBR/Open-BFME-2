@@ -3046,3 +3046,18 @@ _luaX_error,0x00757150
 ?bfmeFormatUPB@@YAXPAXPAD0PBD@Z,0x0065BB60
 ?bfmeFindByteCore@@YAPADPAD0D0@Z,0x00025B80
 ??1Rva0070A840@@QAE@XZ,0x0070A840,opaque member dtor called from LadderPreferences dtor at 0x006D6470; identity unproven
+_error_expected,0x00753850
+_explist1,0x007541B0
+_recfields,0x00754DD0
+_listfields,0x00754EA0
+_body,0x00754C70
+_funcname,0x00754980
+_new_localvar,0x00753BF0
+_luaK_error,0x00751D20
+_luaK_code1,0x00752670
+_luaK_getlabel,0x00752740
+_luaK_patchlist,0x00752610
+_luaK_storevar,0x00752E10
+_luaX_lex,0x00757C90
+_luaX_token2str,0x00756FA0
+_luaS_newfixed,0x007503C0

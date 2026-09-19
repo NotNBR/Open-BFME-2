@@ -55,16 +55,26 @@ typedef struct Breaklabel {
 
 
 
-/* Callee declarations: pinned to retail addresses in reverse/symbols.csv
-   (BFME1 byte-identity sweep). Declared here without `static' so the
-   references resolve to the pinned addresses at link. */
-void body (LexState *ls, int needself, int line);
-void error_expected (LexState *ls, int token);
-int explist1 (LexState *ls);
-int funcname (LexState *ls, expdesc *v);
-int listfields (LexState *ls);
-void new_localvar (LexState *ls, TString *name, int n);
-int recfields (LexState *ls);
+/* Callee declarations: cross-TU refs resolve via landed rows, sweep pins in
+   reverse/symbols.csv, or remain unresolved in the object (the build never
+   links; it byte-compares per-symbol with relocations masked). Same-TU
+   statics that retail's bodies call are DEFINED below instead: MSVC uses
+   TU-private conventions for statics, so an extern declaration would emit a
+   standard call site where retail has a private one. */
+BinOpr subexpr (LexState *ls, expdesc *v, int limit);
+void open_func (LexState *ls, FuncState *fs);
+void adjustlocalvars (LexState *ls, int nvars);
+void parlist (LexState *ls);
+void chunk (LexState *ls);
+void close_func (LexState *ls);
+void pushclosure (LexState *ls, FuncState *func);
+
+
+/* Forward declaration: `checkname' (below) calls back into it. */
+static TString *str_checkname (LexState *ls);
+/* Forward declarations: `recfield'/'recfields'/'listfields' call into these. */
+static void exp1 (LexState *ls);
+static void expr (LexState *ls, expdesc *v);
 
 
 /* `next' is ICF-ambiguous in BFME1 (name is this sweep's guess), so it is
@@ -85,6 +95,14 @@ static void next (LexState *ls) {
 static void lookahead (LexState *ls) {
   LUA_ASSERT(ls->lookahead.token == TK_EOS, "two look-aheads");
   ls->lookahead.token = luaX_lex(ls, &ls->lookahead.seminfo);
+}
+
+
+static void error_expected (LexState *ls, int token) {
+  char buff[100], t[TOKEN_LEN];
+  luaX_token2str(token, t);
+  sprintf(buff, "`%.20s' expected", t);
+  luaK_error(ls, buff);
 }
 
 
@@ -118,12 +136,51 @@ static void check_match (LexState *ls, int what, int who, int where) {
 }
 
 
-static TString *str_checkname (LexState *ls) {
-  TString *ts;
+// _string_constant present-unmatched
+static int string_constant (FuncState *fs, TString *s) {
+  Proto *f = fs->f;
+  int c = s->u.s.constindex;
+  if (c >= f->nkstr || f->kstr[c] != s) {
+    luaM_growvector(fs->L, f->kstr, f->nkstr, 1, TString *,
+                    "constant table overflow", MAXARG_U);
+    c = f->nkstr++;
+    f->kstr[c] = s;
+    s->u.s.constindex = c;  /* hint for next time */
+  }
+  return c;
+}
+
+
+// _checkname present-unmatched
+static int checkname (LexState *ls) {
+  return string_constant(ls->fs, str_checkname(ls));
+}
+
+
+static TString *str_checkname (LexState *ls) {  TString *ts;
   check_condition(ls, (ls->t.token == TK_NAME), "<name> expected");
   ts = ls->t.seminfo.ts;
   next(ls);
   return ts;
+}
+
+
+// _luaI_registerlocalvar present-unmatched
+static int luaI_registerlocalvar (LexState *ls, TString *varname) {
+  Proto *f = ls->fs->f;
+  luaM_growvector(ls->L, f->locvars, f->nlocvars, 1, LocVar, "", MAX_INT);
+  f->locvars[f->nlocvars].varname = varname;
+  return f->nlocvars++;
+}
+
+
+/* `error_expected' and `new_localvar' are defined for retail's inline
+   context but unrowed here; the markers keep the unmatched-def gate honest. */
+// _error_expected present-unmatched
+static void new_localvar (LexState *ls, TString *name, int n) {
+  FuncState *fs = ls->fs;
+  luaX_checklimit(ls, fs->nactloc+n+1, MAXLOCALS, "local variables");
+  fs->actloc[fs->nactloc+n] = luaI_registerlocalvar(ls, name);
 }
 
 
@@ -136,6 +193,69 @@ static void leavebreak (FuncState *fs, Breaklabel *bl) {
   fs->bl = bl->previous;
   LUA_ASSERT(bl->stacklevel == fs->stacklevel, "wrong levels");
   luaK_patchlist(fs, bl->breaklist, luaK_getlabel(fs));
+}
+
+
+// _recfield present-unmatched
+static void recfield (LexState *ls) {
+  /* recfield -> (NAME | '['exp1']') = exp1 */
+  switch (ls->t.token) {
+    case TK_NAME: {
+      luaK_kstr(ls, checkname(ls));
+      break;
+    }
+    case '[': {
+      next(ls);
+      exp1(ls);
+      check(ls, ']');
+      break;
+    }
+    default: luaK_error(ls, "<name> or `[' expected");
+  }
+  check(ls, '=');
+  exp1(ls);
+}
+
+
+// _recfields present-unmatched
+static int recfields (LexState *ls) {
+  /* recfields -> recfield { ',' recfield } [','] */
+  FuncState *fs = ls->fs;
+  int n = 1;  /* at least one element */
+  recfield(ls);
+  while (ls->t.token == ',') {
+    next(ls);
+    if (ls->t.token == ';' || ls->t.token == '}')
+      break;
+    recfield(ls);
+    n++;
+    if (n%RFIELDS_PER_FLUSH == 0)
+      luaK_code1(fs, OP_SETMAP, RFIELDS_PER_FLUSH);
+  }
+  luaK_code1(fs, OP_SETMAP, n%RFIELDS_PER_FLUSH);
+  return n;
+}
+
+
+// _listfields present-unmatched
+static int listfields (LexState *ls) {
+  /* listfields -> exp1 { ',' exp1 } [','] */
+  FuncState *fs = ls->fs;
+  int n = 1;  /* at least one element */
+  exp1(ls);
+  while (ls->t.token == ',') {
+    next(ls);
+    if (ls->t.token == ';' || ls->t.token == '}')
+      break;
+    exp1(ls);
+    n++;
+    luaX_checklimit(ls, n/LFIELDS_PER_FLUSH, MAXARG_A,
+               "`item groups' in a list initializer");
+    if (n%LFIELDS_PER_FLUSH == 0)
+      luaK_code2(fs, OP_SETLIST, n/LFIELDS_PER_FLUSH - 1, LFIELDS_PER_FLUSH);
+  }
+  luaK_code2(fs, OP_SETLIST, n/LFIELDS_PER_FLUSH, n%LFIELDS_PER_FLUSH);
+  return n;
 }
 
 
@@ -164,6 +284,103 @@ static void constructor_part (LexState *ls, Constdesc *cd) {
       break;
     }
   }
+}
+
+
+// _search_local present-unmatched
+static int search_local (LexState *ls, TString *n, expdesc *var) {
+  FuncState *fs;
+  int level = 0;
+  for (fs=ls->fs; fs; fs=fs->prev) {
+    int i;
+    for (i=fs->nactloc-1; i >= 0; i--) {
+      if (n == fs->f->locvars[fs->actloc[i]].varname) {
+        var->k = VLOCAL;
+        var->u.index = i;
+        return level;
+      }
+    }
+    level++;  /* `var' not found; check outer level */
+  }
+  var->k = VGLOBAL;  /* not found in any level; must be global */
+  return -1;
+}
+
+
+// _singlevar present-unmatched
+static void singlevar (LexState *ls, TString *n, expdesc *var) {
+  int level = search_local(ls, n, var);
+  if (level >= 1)  /* neither local (0) nor global (-1)? */
+    luaX_syntaxerror(ls, "cannot access a variable in outer scope", n->str);
+  else if (level == -1)  /* global? */
+    var->u.index = string_constant(ls->fs, n);
+}
+
+
+// _funcname present-unmatched
+static int funcname (LexState *ls, expdesc *v) {
+  /* funcname -> NAME [':' NAME | '.' NAME] */
+  int needself = 0;
+  singlevar(ls, str_checkname(ls), v);
+  if (ls->t.token == ':' || ls->t.token == '.') {
+    needself = (ls->t.token == ':');
+    next(ls);
+    luaK_tostack(ls, v, 1);
+    luaK_kstr(ls, checkname(ls));
+    v->k = VINDEXED;
+  }
+  return needself;
+}
+
+
+// _body present-unmatched
+static void body (LexState *ls, int needself, int line) {
+  /* body ->  '(' parlist ')' chunk END */
+  FuncState new_fs;
+  open_func(ls, &new_fs);
+  new_fs.f->lineDefined = line;
+  check(ls, '(');
+  if (needself) {
+    new_localvarstr(ls, "self", 0);
+    adjustlocalvars(ls, 1);
+  }
+  parlist(ls);
+  check(ls, ')');
+  chunk(ls);
+  check_match(ls, TK_END, TK_FUNCTION, line);
+  close_func(ls);
+  pushclosure(ls, &new_fs);
+}
+
+
+// _explist1 present-unmatched
+static int explist1 (LexState *ls) {
+  /* explist1 -> expr { ',' expr } */
+  int n = 1;  /* at least one expression */
+  expdesc v;
+  expr(ls, &v);
+  while (ls->t.token == ',') {
+    luaK_tostack(ls, &v, 1);  /* gets only 1 value from previous expression */
+    next(ls);  /* skip comma */
+    expr(ls, &v);
+    n++;
+  }
+  luaK_tostack(ls, &v, 0);  /* keep open number of values of last expression */
+  return n;
+}
+
+
+// _expr present-unmatched
+static void expr (LexState *ls, expdesc *v) {
+  subexpr(ls, v, -1);
+}
+
+
+// _exp1 present-unmatched
+static void exp1 (LexState *ls) {
+  expdesc v;
+  expr(ls, &v);
+  luaK_tostack(ls, &v, 1);
 }
 
 
@@ -196,4 +413,22 @@ static void retstat (LexState *ls) {
     explist1(ls);  /* optional return values */
   luaK_code1(fs, OP_RETURN, ls->fs->nactloc);
   fs->stacklevel = fs->nactloc;  /* removes all temp values */
+}
+
+
+/* Anchor, absent from retail: keeps the static workers out-of-line so the
+   verifier can see them. Only the 11 rowed bodies are claimed. */
+void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd) {
+  lookahead(ls);
+  check(ls, 0);
+  check_condition(ls, 0, 0);
+  check_match(ls, 0, 0, 0);
+  str_checkname(ls);
+  new_localvarstr(ls, 0, 0);
+  leavebreak(fs, bl);
+  constructor_part(ls, cd);
+  block_follow(0);
+  funcstat(ls, 0);
+  retstat(ls);
+  next(ls);
 }
