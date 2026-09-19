@@ -318,3 +318,12 @@ int Rva002376C6Get(void)
 {
 	return 0x00BE8520;
 }
+
+// ?Rva00285745Get@@YAHXZ @ 0x00285745 (6B): returns 0x00BFB6C8.
+// Follows a pop/ret (prev 5E-C3), carried by 1 .rdata slot (0x7FB6F8)
+// in the 0x4B3FD0 vtable family, no direct callers, no branch sources.
+// Opaque address-derived name.
+int Rva00285745Get(void)
+{
+	return 0x00BFB6C8;
+}
