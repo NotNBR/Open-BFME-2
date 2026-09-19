@@ -11461,3 +11461,4 @@ _luaO_str2d,,0x0074E160,112,Code/Libraries/Source/Lua/lobject.c,matched,BFME1 by
 ?name@Rva002AA3AFNamed@@QBEPBDXZ,,0x002AA3AF,6,Code/GameEngine/Source/Common/SubsystemNameGetters.cpp,matched,literal name getter returning Energy; vtable at 0x7FDC48 with slot0 0x8A10FD slot1 0x4B3FD0; address-derived placeholder name
 _traceexec,,0x0074E410,121,Code/Libraries/Source/Lua/lvm.c,matched,exact via unclaimed_scan; emitted by lvm.c object; vendored=lua-4.0.1
 ?dec@Rva004ECDA3DwordCounter@@QAEXXZ,,0x004ECDA3,4,Code/GameEngine/Source/Common/Disp8DwordFieldIncDec.cpp,matched,disp8 dword dec family pair; opaque holder
+?Rva0058AEB6Get@@YAHXZ,,0x0058AEB6,6,Code/GameEngine/Source/Common/GlobalGetterSingles.cpp,matched,Global dword getter reading 0x00E063A4
