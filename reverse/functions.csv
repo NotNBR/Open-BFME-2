@@ -10549,3 +10549,6 @@ _luaB_getglobal,,0x0074B920,32,Code/Libraries/Source/Lua/lbaselibSmall.c,matched
 ?addPadded@Rva00800290Buffer@@QAEXH@Z,,0x0066C7E0,22,Code/GameEngine/Source/GameNetwork/Y2FeslBufferAndChain.cpp,matched,BFME1 byte-identical donor; b1 0x00800350
 ?clear@Rva008003C0Owner@@QAEXXZ,,0x0066CA50,42,Code/GameEngine/Source/GameNetwork/Y2FeslBufferAndChain.cpp,matched,BFME1 byte-identical donor; b1 0x008003C0; ICF-folded in BFME1 so the name is this sweep pick among its twins
 ?reset@Rva00800290Buffer@@QAEXXZ,,0x0066C730,35,Code/GameEngine/Source/GameNetwork/Y2FeslBufferAndChain.cpp,matched,BFME1 byte-identical donor; b1 0x00800290; ICF-folded in BFME1 so the name is this sweep pick among its twins
+?Rva007F5AC0@@YAXPAVRva007E8810Message@@PAVRva007F7980Browser@@@Z,,0x00662260,54,Code/GameEngine/Source/GameNetwork/V2FeslBrowserEvents.cpp,matched,BFME1 byte-identical donor; b1 0x007F5AC0
+?Rva007F5B40@@YAXPAVRva007E8810Message@@PAVRva007F7980Browser@@@Z,,0x006622E0,54,Code/GameEngine/Source/GameNetwork/V2FeslBrowserEvents.cpp,matched,BFME1 byte-identical donor; b1 0x007F5B40
+?onRegionCount@Rva007F7980Browser@@QAEXPAVRva007E8810Message@@@Z,,0x00664000,101,Code/GameEngine/Source/GameNetwork/V2FeslBrowserEvents.cpp,matched,BFME1 byte-identical donor; b1 0x007F7980; 1 DIR32 string literal(s) agree
