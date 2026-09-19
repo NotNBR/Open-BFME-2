@@ -10951,3 +10951,4 @@ _close_func,,0x007540E0,207,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 by
 _recfields,,0x00754DD0,201,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _explist1,,0x007541B0,177,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _forbody,,0x007544E0,165,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan; adjustlocalvars pin 0x753C70
+?go@Rva000C9EF0@@QAEXXZ,,0x004EF5BE,16,Code/GameEngine/Source/Common/R1GuardedReleaseHelpers.cpp,matched,BFME1 byte-identical donor shape; b1 0x000C9EF0; ICF-folded twin Rva00161140 stays unclaimed
