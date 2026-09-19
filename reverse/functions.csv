@@ -12229,3 +12229,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ?LoadRenderDeviceRegistry@@YA_NPBD_N@Z,,0x00117070,24,Code/Libraries/Source/WWVegas/WW3D2/WW3D_RegistryDeviceWrappers.cpp,matched,BFME2 bool 2-arg registry loader; retail test/setne; calls DX8 0x125A80
 ?Save_W3D@AggregateDefClass@@UAE_NAAVChunkSaveClass@@@Z,,0x001A35A0,80,Code/Libraries/Source/WWVegas/WW3D2/AggregateDefSaveW3D.cpp,matched,BFME2 bool Save_W3D; true size 80 ending at ret; BFME1 b1 0x00980590 byte-identical
 ??_GHRawAnimClass@@UAEPAXI@Z,,0x0018EC40,30,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,scalar deleting dtor over rowed dtor; compiler-generated exact
+??0AggregateDefClass@@QAE@XZ,,0x001A3ED0,105,Code/Libraries/Source/WWVegas/WW3D2/agg_def.cpp,matched,BFME1 donor m_Version init restored; b1 0x009815E0
