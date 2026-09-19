@@ -162,3 +162,10 @@ int Rva0056DD52Get(void)
 {
 	return 0x00DC2884;
 }
+
+// ?Rva0056DD58Get@@YAHXZ @ 0x0056DD58 (6B): returns 0x00DC2D10. Middle
+// of the triple. 4 direct E8 callers, Ghidra-6. Opaque name.
+int Rva0056DD58Get(void)
+{
+	return 0x00DC2D10;
+}
