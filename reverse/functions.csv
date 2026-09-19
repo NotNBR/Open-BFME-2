@@ -10767,3 +10767,4 @@ _luaY_parser,,0x007561C0,198,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 b
 ?get@Rva0009D6EDByteField@@QBEEXZ,,0x0009D6ED,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ?get@Rva0009D6F1ByteField@@QBEEXZ,,0x0009D6F1,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 _lua_strlibopen,,0x0074A0B0,21,Code/Libraries/Source/Lua/lstrlib.c,matched,BFME1 byte-identical donor; b1 0x00992F50
+??0BfmeThingDC@@QAE@PAUBfmeItemDC@@@Z,,0x00116600,25,Code/GameEngine/Source/Common/BfmeOneHundredEightySix.cpp,matched,BFME1 byte-identical donor; b1 0x008FC590
