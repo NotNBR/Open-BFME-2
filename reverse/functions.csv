@@ -11561,3 +11561,4 @@ _luaU_undump,,0x00756D10,133,Code/Libraries/Source/Lua/lundump.c,matched,object-
 _luaB_next,,0x0074BCB0,61,Code/Libraries/Source/Lua/lbaselib.c,matched,object-symbol=_luaB_next; emitted by lbaselib.c object; vendored=lua-4.0.1
 _luaB_foreachi,,0x0074C0C0,161,Code/Libraries/Source/Lua/lbaselib.c,matched,object-symbol=_luaB_foreachi; emitted by lbaselib.c object; vendored=lua-4.0.1
 _luaB_foreach,,0x0074C170,132,Code/Libraries/Source/Lua/lbaselib.c,matched,object-symbol=_luaB_foreach; emitted by lbaselib.c object; vendored=lua-4.0.1
+_read_file,,0x0074A870,151,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,object-symbol=_read_file; emitted by liolib_bfme1.c object; vendored=lua-4.0.1
