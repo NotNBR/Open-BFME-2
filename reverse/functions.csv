@@ -10688,3 +10688,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ??0Textures_Material_And_Shader_Booking_Struct@@QAE@XZ,,0x00144460,75,Code/Libraries/Source/WWVegas/WW3D2/Textures_Material_And_Shader_Booking_Struct.cpp,matched,BFME1 byte-identical donor; b1 0x00945B80
 ?bfmeGoUPB@BfmeThingUPB@@QAEDPAXPAD0@Z,,0x00655B10,57,Code/GameEngine/Source/Common/BfmeConv1339_GoUPB.cpp,matched,BFME1 byte-identical donor; b1 0x007E8A80
 ?get@Rva004543C6ByteField@@QBEEXZ,,0x004543C6,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+??0Rva008D2B10@@QAE@XZ,,0x0070E2F0,63,Code/GameEngine/Source/Common/S3FieldInitialisers.cpp,matched,BFME1 byte-identical donor; b1 0x008D2B10
