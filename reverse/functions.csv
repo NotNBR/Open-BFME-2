@@ -11857,3 +11857,4 @@ _read_word,,0x0074A700,184,Code/Libraries/Source/Lua/liolib_bfme1.c,matched,gen-
 ?parseWaypointData@TerrainLogic@@IAE_NAAVDataChunkInput@@PAUDataChunkInfo@@PAX@Z,,0x0027FFF3,60,Code/GameEngine/Source/GameLogic/Map/TerrainLogic_parseWaypointData.cpp,matched,ZH TerrainLogic donor verbatim; NDEBUG drops end-of-chunk assert
 _str_byte,,0x00748D60,136,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_str_byte; Lua lstrlib static compiles to retail span
 ?set@Rva0038895EDwordSlot@@QAEXH@Z,,0x0038895E,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,Disp32 dword setter
+?enable@Rva0038896BByteOneSetter@@QAEXXZ,,0x0038896B,8,Code/GameEngine/Source/Common/DispByteOneSetters.cpp,matched,Disp32 byte one-setter
