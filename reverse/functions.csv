@@ -11879,3 +11879,5 @@ _luaI_classend,,0x00748F10,105,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_s
 ?set@Rva00552C2CDwordSlot@@QAEXH@Z,,0x00552C2C,13,Code/GameEngine/Source/Common/DispDwordFieldSetters.cpp,matched,
 ??4Rva003B3080@@QAEAAV0@ABV0@@Z,,0x00564B41,57,Code/GameEngine/Source/Common/Rva003B3080Assign.cpp,matched,BFME1 Rva003B3080Assign.cpp donor under /O1 with StringBase<char>::set members; b1 0x003B3080
 ?get@Rva0027C2BBDwordField@@QBEHXZ,,0x0027C2BB,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+_matchbalance,,0x007491A0,104,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_matchbalance; Lua lstrlib static compiles to retail span
+?get@Rva00332B35DwordField@@QBEHXZ,,0x00332B35,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
