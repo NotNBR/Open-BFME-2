@@ -12412,3 +12412,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ??0ProcessAnimateWindowSlideFromBottomTimed@@QAE@XZ,,0x005C4FEF,16,Code/GameEngine/Source/GameClient/GUI/ProcessAnimateWindow.cpp,matched,BFME1 byte-identical donor; b1 0x004953F0
 ?Rva00200BBAGet@@YAHXZ,,0x00200BBA,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xC080B0; leave-ret plus sibling-pair with 1 vtable ref; opaque name
 ?Rva000A3367Get@@YAHXZ,,0x000A3367,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x48F8B1; C2-ret prev with 1 vtable ref paired with 0xA336D; opaque name
+?Rva000A336DGet@@YAHXZ,,0x000A336D,6,Code/GameEngine/Source/Common/ConstIntGetters2.cpp,matched,B8-6 returner ret 0x48F8EB; follows 0xA3367 with 1 parallel vtable ref; opaque name
