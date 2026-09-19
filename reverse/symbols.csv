@@ -318,6 +318,7 @@ name,address,notes
 ??0Rva006DCD20@@QAE@PAVThing@@PBVModuleData@@@Z,0x006DCD20,opaque base of ClientUpdateModule 0x6CBCB0 (38B: vtable 0xCEAED0 folded with ClientUpdateModule own, base 0x6DBBC0, bit-flags +4); NOT DrawableModule (different vtable family from Module block 0xC07E.., donor shape belongs to landed 0x306B19); identity unproven
 ??0Rva007E86B0Base@@QAE@XZ,0x00655770
 ??0Rva007E8810Message@@QAE@XZ,0x006558C0,ICF-fold twin of rowed ??0Rva007E8810 (row 9808, same 60B): BFME1 folds both at 0x007E8810 (row 5402 + pin 3544); BFME2 onAccept calls 0x006558C0 as the message ctor (retail +0x5b)
+??0Rva007F01B0@@QAE@XZ,0x0065D050
 ??0Rva007F4130Endpoints@@QAE@PAVRva007E8810Message@@@Z,0x00660BF0
 ??0Rva007F4E50Region@@QAE@PAVRva007E8810Message@@@Z,0x00661890
 ??0Rva007F4EF0Lobby@@QAE@PAVRva007E8810Message@@@Z,0x00661920
@@ -2394,6 +2395,7 @@ name,address,notes
 ?m@Gen_007f9590@@QAEXH@Z,0x00665600
 ?m@Gen_00800280@@QAEPAXXZ,0x00672310
 ?m@Gen_00800340@@QAEPAXXZ,0x0065D7F0
+?m@Gen_00800540@@QAEPAXXZ,0x0065D7F0
 ?m@Gen_0082ad50@@QAEXXZ,0x00013260
 ?m@Gen_00832090@@QAEXXZ,0x000072E0
 ?m@Gen_0088a670@@QAEXXZ,0x0069E440
@@ -2903,6 +2905,7 @@ _bfme_debugAllocInnerAllocate_82AD80,0x00023790
 _bfme_debugAllocInnerDeallocate_82AD90,0x000237B0
 _bind@12,0x0065567C,PE-verified FF25 import thunk to wsock32.dll!bind via IAT 0x00BBA990; independently read from retail import directory
 _body,0x00754C70
+_callCclosure,0x0074D860
 _call_binTM,0x0074E920
 _chatGetUserID,0x006A15F0,address read from the REL32 displacement at placed _peerGetUserID 0x00698A40
 _chatLeaveChannel,0x006A18B0,
@@ -2988,12 +2991,17 @@ _isprint,0x0075AC08,CRT isprint import thunk FF25 via IAT 0x00BBA6FC; retail REL
 _listen@8,0x00687CDE,PE-verified FF25 import thunk to ws2_32.dll!listen via IAT 0x00BBA92C; independently read from retail import directory
 _listfields,0x00754EA0
 _localtime,0x0062987A,CRT localtime import thunk; retail REL32 target of Rva007FEF80 at 0x66B450
+_luaC_checkGC,0x00751470
 _luaG_binerror,0x0074D2B0
+_luaG_getline,0x0074CA90
 _luaG_ordererror,0x0074D2E0
+_luaG_typeerror,0x0074D250
+_luaH_getnum,0x007504C0
 _luaH_new,0x00750770
 _luaH_setint,0x007509E0
 _luaH_setstrnum,0x00750A10
 _luaK_adjuststack,0x00752A10
+_luaK_code0,0x00752650,close_func 0x7540E0 first E8 decodes here; source calls luaK_code0 first
 _luaK_code1,0x00752670
 _luaK_concat,0x00752180
 _luaK_deltastack,0x00751DE0
@@ -3006,10 +3014,12 @@ _luaK_patchlistaux,0x00751FF0
 _luaK_setcallreturns,0x00751EF0
 _luaK_storevar,0x00752E10
 _luaK_testgo,0x00752FC0
+_luaL_argerror,0x00751820
 _luaL_check_lstr,0x007519A0
 _luaL_check_number,0x00751A80
 _luaL_checkany,0x00751970
 _luaL_checktype,0x00751900
+_luaL_findstring,0x00751490
 _luaL_openlib,0x007514F0
 _luaL_opt_lstr,0x00751A20
 _luaL_verror,0x00751530
@@ -3018,6 +3028,8 @@ _luaO_verror,0x0074E1D0
 _luaS_init,0x0074FF60
 _luaS_new,0x00750390
 _luaS_newfixed,0x007503C0
+_luaS_newlstr,0x00750130,LoadString 0x7564F0 +0x5c E8 decodes here; string interner; lstring.c
+_luaS_newudata,0x00750230,lua_newuserdata 0x747D70 +0x17 E8 decodes here; udata allocator; lstring.c
 _luaT_init,0x0074FB40
 _luaV_strcomp,0x0074E9D0
 _luaX_checklimit,0x007574A0
@@ -3025,9 +3037,13 @@ _luaX_error,0x00757150
 _luaX_init,0x00756F10
 _luaX_lex,0x00757C90
 _luaX_setinput,0x00757020
+_luaX_syntaxerror,0x00756F50,_funcname 0x754980 +0x2a E8 decodes here; error-message builder (chunkid 0x50 + verror); llex.c
 _luaX_token2str,0x00756FA0
+_luaZ_read,0x00756E90,LoadBlock 0x756340 +0x66 E8 decodes here; ZIO reader; lzio.c zread
 _lua_getglobal,0x007476C0
 _lua_gettop,0x00746F30
+_lua_newtag,0x0074FBC0,openwithcontrol 0x74B490 +0xe/+0x17 E8 decodes here; tag allocator; ltm.c
+_lua_newuserdata,0x00747D70,openwithcontrol 0x74B490 +0x6 E8 decodes here; userdata allocator (sizeof IOCtrl 0x10); lapi.c
 _lua_pushcclosure,0x00747640
 _lua_pushnil,0x00747510
 _lua_pushnumber,0x00747570
@@ -3044,6 +3060,7 @@ _lua_settable,0x00747950
 _lua_settag,0x00747B90
 _lua_settagmethod,0x0074FE80
 _lua_settop,0x00746F40
+_lua_tag,0x00747210
 _lua_tostring,0x007473B0
 _lua_touserdata,0x00747490
 _lua_type,0x007470A0
@@ -3052,11 +3069,13 @@ _memcmp,0x0062929E,address read from the REL32 displacement in DirtySock Y4TextT
 _memcpy,0x006291A8,CRT memcpy import thunk; retail target of the BI_BITFIELDS copy in ATL CImage::CreateEx
 _memmove,0x00629506,address read from the REL32 displacements in DirtySock Y4TextToValue Rva007EC780 at 0x006596B0; static CRT callee; body not yet converted
 _memset,0x006291AE,CRT memset import thunk; Ghidra labels the retail call target at 0x6291AE
+_message,0x0074DDC0
 _msleep,0x0060A830,GameSpy callee already byte-verified in Code/GameEngine/Source/GameNetwork/GameSpy/nonport.c at commit 982a47813b69; direct call from _gpiProcessSearch
 _need_value,0x00752140
 _next,0x007537E0
 _ntohl@4,0x0065565E,address read from the REL32 displacement at placed _piStagingRoomHash 0x006A79E0
 _open_func,0x00754080
+_openwithcontrol,0x0074B490
 _peerCreateStagingRoomWithSocketA,0x0069A190,
 _peerShutdown,0x00699A10,
 _piAddListingGamesCallback,0x0069F320,
@@ -3143,26 +3162,8 @@ _strncpy,0x0062983E,address read from the REL32 displacement in DirtySock Y2Rva0
 _strstr,0x00629850,address read from the REL32 displacement in DirtySock Y4CommTable Rva00811E20 at 0x0067DD20; static CRT callee; body not yet converted
 _strtoul,0x006291C0,address read from the REL32 displacement in DirtySock Y2Rva00807900Module at 0x00673A30; static CRT callee; body not yet converted
 _subexpr,0x007558A0
-_luaK_code0,0x00752650,close_func 0x7540E0 first E8 decodes here; source calls luaK_code0 first
 _time,0x00629A42,CRT time import thunk; retail REL32 target of Rva007FEF60 at 0x66B430; PE imports slot 0xBBA508 is msvcr71.dll!time
+_traceexec,0x0074E410
 _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE780 at 0x66AC50
 dup_7e86b0,0x00655770
-_luaL_argerror,0x00751820
-_lua_tag,0x00747210
-_luaL_findstring,0x00751490
-_openwithcontrol,0x0074B490
-_luaX_syntaxerror,0x00756F50,_funcname 0x754980 +0x2a E8 decodes here; error-message builder (chunkid 0x50 + verror); llex.c
-_lua_newuserdata,0x00747D70,openwithcontrol 0x74B490 +0x6 E8 decodes here; userdata allocator (sizeof IOCtrl 0x10); lapi.c
-_lua_newtag,0x0074FBC0,openwithcontrol 0x74B490 +0xe/+0x17 E8 decodes here; tag allocator; ltm.c
-_luaZ_read,0x00756E90,LoadBlock 0x756340 +0x66 E8 decodes here; ZIO reader; lzio.c zread
-_luaS_newlstr,0x00750130,LoadString 0x7564F0 +0x5c E8 decodes here; string interner; lstring.c
-_luaS_newudata,0x00750230,lua_newuserdata 0x747D70 +0x17 E8 decodes here; udata allocator; lstring.c
-_luaG_typeerror,0x0074D250
-_message,0x0074DDC0
-_callCclosure,0x0074D860
-_luaC_checkGC,0x00751470
-_traceexec,0x0074E410
-_luaH_getnum,0x007504C0
-??0Rva007F01B0@@QAE@XZ,0x0065D050
-?m@Gen_00800540@@QAEPAXXZ,0x0065D7F0
-_luaG_getline,0x0074CA90
+__CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper calls straight into it
