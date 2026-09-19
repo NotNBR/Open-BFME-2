@@ -11870,3 +11870,4 @@ _luaI_classend,,0x00748F10,105,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_s
 ?get@Rva00367473DwordField@@QBEHXZ,,0x00367473,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva00314105DwordField@@QBEHXZ,,0x00314105,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
 ?get@Rva00238D74DwordField@@QBEHXZ,,0x00238D74,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva0036CBD9DwordField@@QBEHXZ,,0x0036CBD9,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
