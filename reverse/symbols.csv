@@ -3171,3 +3171,6 @@ _readname,0x007570C0
 ?bfmeFreeRecUNA@@YAXPAX@Z,0x006725B0
 __strdup,0x006C4C70
 ??1Rva004D7B93@@UAE@XZ,0x004D7B93,opaque dtor for scalar-deleting-dtor at 0x4D8507 (5B tail-jmp to pinned 0x49B47C fold); identity unproven address-derived pin
+_bfme_MallocAlloc0OomMalloc_82B820,0x00024200,STLport __malloc_alloc<0>::_S_oom_malloc callee of allocate at 0x00025090
+?_S_refill@?$__node_alloc@$00$0A@@_STL@@CAPAXI@Z,0x000253E0
+?_S_refill@__new_alloc@_STL@@CAPAU_Obj@12@I@Z,0x000253E0
