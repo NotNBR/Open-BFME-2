@@ -11009,3 +11009,4 @@ _new_localvar,,0x00753BF0,116,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 
 ?Get_Description@ShaderClass@@QBEABVStringClass@@AAV2@@Z,,0x00138280,1032,Code/Libraries/Source/WWVegas/WW3D2/shader.cpp,matched,BFME1 donor plus BFME2 GRADIENT_MODULATE_OR_2X 7th primary-gradient case
 ?get@Rva00050D10ByteField@@QBEEXZ,,0x00050D10,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
 ?get@Rva00531E0FWordField@@QBEGXZ,,0x00531E0F,5,Code/GameEngine/Source/Common/Disp8WordFieldGetters.cpp,matched,Disp8 word getter
+?get@Rva0053111DByteField@@QBEEXZ,,0x0053111D,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter
