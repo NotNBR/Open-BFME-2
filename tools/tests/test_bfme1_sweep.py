@@ -629,3 +629,43 @@ def test_classify_near_reports_reloc_value_when_masking_leaves_no_difference(tmp
     kind, _ = bfme1_sweep.classify_near(left, right, {1: "dir32"}, tmp_path / "d")
     assert kind == "reloc-value"
     assert kind not in bfme1_sweep.NEAR_SERVED
+
+
+# --------------------------------------------- E8 bytes that are not opcodes
+
+# `mov DWORD PTR [eax],0x0040E8B8` -- a vftable store, which is how retail
+# starts a constructor. Byte 3 of it reads E8, and the four bytes after that
+# read as a displacement going nowhere. This is the shape that cost the sweep
+# ??0__Named_exception (0x0082C180): the bogus rel32 claim blocked the DIR32
+# window at the immediate, every later field shifted, and a body that is
+# byte-identical to game.dat's scored 96.1% and was filed as a near miss.
+VFTABLE_STORE = b"\xC7\x00\xB8\xE8\x40\x00" + b"\x90" * 10
+
+
+def one_section_image(tmp_path, name, text):
+    target = tmp_path / name
+    target.write_bytes(make_pe(text.ljust(0x100, b"\x90")))
+    return bfme1_sweep.Image(target)
+
+
+def test_an_E8_inside_an_immediate_steals_the_dir32_without_an_rva(tmp_path):
+    """Guards the fixture: without the target test the old claim still stands."""
+    image = one_section_image(tmp_path, "a.exe", VFTABLE_STORE)
+    body = image.text[: len(VFTABLE_STORE)]
+    assert bfme1_sweep.volatile_fields(body, image) == {4: "rel32"}
+
+
+def test_a_displacement_leaving_text_does_not_open_a_rel32(tmp_path):
+    """Given the RVA, the walk reads the immediate as the relocation it is."""
+    image = one_section_image(tmp_path, "b.exe", VFTABLE_STORE)
+    body = image.text[: len(VFTABLE_STORE)]
+    fields = bfme1_sweep.volatile_fields(body, image, TEXT_RVA)
+    assert fields == {2: "dir32"}, "the vftable pointer is the field, not byte 4"
+
+
+def test_a_real_call_is_still_claimed(tmp_path):
+    """The test refuses displacements, not calls: one reaching .text stands."""
+    call = b"\xE8" + struct.pack("<i", 0x10) + b"\x90" * 11
+    image = one_section_image(tmp_path, "c.exe", call)
+    body = image.text[: len(call)]
+    assert bfme1_sweep.volatile_fields(body, image, TEXT_RVA) == {1: "rel32"}

@@ -173,6 +173,16 @@ same kind of slot at the same offset. `scan` prints a control figure — the num
 placements that reproduce a boundary this repo matched independently — and refuses the run
 if it falls. Treat that number, not the candidate count, as the health check.
 
+The walk reads bytes, not instructions, so it has to be told that an `E8`/`E9` inside DATA is
+not an opcode: the immediate of a vftable store, an entry in a switch jump table, a character
+in a string. The target is the test — a call that leaves `.text` was never a call — and the
+walk now refuses a rel32 whose displacement does not land there. Costlier than it sounds to
+get wrong: the bogus claim also blocks the DIR32 window that really holds the relocation, and
+every later field shifts with it, so a byte-identical body reads as a near miss.
+`??0__Named_exception` (0x0082C180) is the worked example — `mov DWORD PTR [eax],0x0112e8b8`
+stole its own slot and the body scored 96.1%. Fixing it moved CONTROL 4112 -> 4212 and 105
+near misses into exact placements, +5498 bytes on free ground.
+
 For exact function sizes, the full function inventory, and the bulk-port pipeline, see
 `tools/ghidra/README.md`.
 

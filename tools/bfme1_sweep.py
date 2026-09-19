@@ -160,13 +160,35 @@ class Image:
         return text
 
 
-def volatile_fields(body, image):
+def rel32_lands_in_text(body, field, rva, image):
+    """Whether a candidate call/jmp displacement reaches this image's .text.
+
+    An E8/E9 byte inside DATA is not an opcode: the immediate of
+    `mov DWORD PTR [eax],0x0112e8b8`, an entry in a switch jump table, a
+    character in a string. Claiming a rel32 there costs more than the bogus
+    field itself -- it blocks the DIR32 window that really holds the
+    relocation, and every later claim shifts with it, so a byte-identical body
+    reads as a near miss. The target is the test: a call that leaves .text was
+    never a call.
+
+    Without an RVA the test cannot run and the claim stands, which is the
+    behaviour every caller had before.
+    """
+    if rva is None:
+        return True
+    target = (rva + field + 4 + struct.unpack_from("<i", body, field)[0]) & 0xFFFFFFFF
+    return image.in_text(target)
+
+
+def volatile_fields(body, image, rva=None):
     """The relocation slots in a body, as {offset: kind}, by one forward walk.
 
     The REL32 pass runs first and steps over each field it claims, so a
     displacement byte that happens to read as E8 cannot open a second field
-    inside the first. The DIR32 pass then fills the gaps: any four-byte window
-    not already spoken for whose value is an address in this image.
+    inside the first, and -- given `rva` -- a displacement that lands outside
+    .text does not open one at all. The DIR32 pass then fills the gaps: any
+    four-byte window not already spoken for whose value is an address in this
+    image.
 
     One walk, one set of field boundaries -- `volatile_mask` and `explain` both
     read this rather than each deciding for itself where a field starts. That
@@ -180,12 +202,14 @@ def volatile_fields(body, image):
     index = 0
     while index < size:
         byte = body[index]
-        if byte in (0xE8, 0xE9) and index + 5 <= size:
+        if (byte in (0xE8, 0xE9) and index + 5 <= size
+                and rel32_lands_in_text(body, index + 1, rva, image)):
             fields[index + 1] = "rel32"
             claimed[index + 1 : index + 5] = b"\1" * 4
             index += 5
             continue
-        if byte == 0x0F and index + 6 <= size and 0x80 <= body[index + 1] <= 0x8F:
+        if (byte == 0x0F and index + 6 <= size and 0x80 <= body[index + 1] <= 0x8F
+                and rel32_lands_in_text(body, index + 2, rva, image)):
             fields[index + 2] = "rel32"
             claimed[index + 2 : index + 6] = b"\1" * 4
             index += 6
@@ -208,9 +232,9 @@ def mask_from(fields, size):
     return bytes(mask)
 
 
-def volatile_mask(body, image):
+def volatile_mask(body, image, rva=None):
     """Byte positions two different images cannot be expected to agree on."""
-    return mask_from(volatile_fields(body, image), len(body))
+    return mask_from(volatile_fields(body, image, rva), len(body))
 
 
 def clear_runs(mask):
@@ -755,7 +779,7 @@ def do_scan(args):
         if donor is None or len(donor) != row["size"]:
             tally["unreadable"] += 1
             continue
-        donor_fields = volatile_fields(donor, donor_image)
+        donor_fields = volatile_fields(donor, donor_image, row["rva"])
         runs = clear_runs(mask_from(donor_fields, row["size"]))
         # Every byte outside a relocation field, as slices to memcmp per window,
         # longest first so the most discriminating comparison fails first.
@@ -1284,8 +1308,9 @@ def near_candidates(payload, include_held=False, limit=None):
         window = target_image.text[start : start + record["size"]]
         if len(window) != record["size"]:
             continue
-        fields = agreed_fields(donor, volatile_fields(donor, donor_image), window,
-                               record["bfme1_rva"], record["bfme2_rva"],
+        fields = agreed_fields(donor,
+                               volatile_fields(donor, donor_image, record["bfme1_rva"]),
+                               window, record["bfme1_rva"], record["bfme2_rva"],
                                donor_image, target_image)
         kind, hint = classify_near(donor, window, fields, scratch)
         if kind not in NEAR_SERVED:
@@ -1545,7 +1570,7 @@ def main(argv=None):
     # The floor sits a few percent under it so ordinary ledger churn does not
     # trip it, and RAISE it when a re-measure comes in higher -- a floor that
     # never moves stops being a check.
-    scan.add_argument("--control-floor", type=int, default=2900,
+    scan.add_argument("--control-floor", type=int, default=4100,
                       help="fail if fewer placements reproduce a boundary this repo already matched")
     scan.set_defaults(func=do_scan)
 
