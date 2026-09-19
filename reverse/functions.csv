@@ -10719,3 +10719,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?bfmeIsThree@Gen_007F57E0@@QBEHXZ,,0x00661F90,22,Code/GameEngine/Source/Common/Bfme5TinySix3.cpp,matched,BFME1 byte-identical donor; b1 0x007F57E0
 ?keyAtA@Gen_000cd680@@QBEHH@Z,,0x0023DB5F,17,Code/GameEngine/Source/Common/Gen_000cd680.cpp,matched,BFME1 byte-identical donor; b1 0x000CD690
 ?pointerAtA@Gen_000cd680@@QBEPAPAXH@Z,,0x002A7F5B,17,Code/GameEngine/Source/Common/Gen_000cd680.cpp,matched,BFME1 byte-identical donor; b1 0x000CD6B0
+?bfmeIndexOf@Gen_008A06C0@@QBEHPAX@Z,,0x006E3460,39,Code/GameEngine/Source/Common/Bfme5FiftyThree.cpp,matched,BFME1 byte-identical donor; b1 0x008A06C0
