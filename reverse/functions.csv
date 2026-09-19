@@ -11392,3 +11392,4 @@ _luaH_getstr,,0x00750510,59,Code/Libraries/Source/Lua/ltable.c,matched,BFME1 byt
 _luaF_protook,,0x00751BC0,58,Code/Libraries/Source/Lua/lfunc.c,matched,BFME1 byte-identical donor b1 lfunc.c; exact via unclaimed_scan
 _luaT_realtag,,0x0074FC60,34,Code/Libraries/Source/Lua/ltm.c,matched,BFME1 byte-identical donor b1 ltm.c; exact via unclaimed_scan
 _luaV_strconc,,0x0074EB30,407,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
+_luaV_gettable,,0x0074E560,236,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor b1 lvm.c; exact via unclaimed_scan
