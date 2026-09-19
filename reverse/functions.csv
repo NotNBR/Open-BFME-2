@@ -10539,3 +10539,4 @@ _luaB_getglobal,,0x0074B920,32,Code/Libraries/Source/Lua/lbaselibSmall.c,matched
 ?set@Rva0075AF60PairAssign@@QAEXABUPairRva0075AF60PairAssign@@@Z,,0x000B239F,24,Code/GameEngine/Source/Common/SmallLeafBodies3.cpp,matched,BFME1 byte-identical donor; b1 0x0075AF60; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 ??0NodeMotionStruct@@QAE@XZ,,0x0018D1E0,31,Code/Libraries/Source/WWVegas/WW3D2/hrawanim.cpp,matched,BFME1 byte-identical donor; b1 0x009594A0; ICF-folded in BFME1 so the name is this sweep's pick among its twins
 _luaB_assert,,0x0074C200,63,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x009950A0; ICF-folded in BFME1 so the name is this sweep's pick among its twins; 1 DIR32 string literal(s) agree
+_luaB_settag,,0x0074B980,53,Code/Libraries/Source/Lua/lbaselib.c,matched,BFME1 byte-identical donor; b1 0x00994820; ICF-folded in BFME1 so the name is this sweep's pick among its twins
