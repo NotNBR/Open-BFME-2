@@ -426,3 +426,12 @@ int Rva00342868Get(void)
 {
 	return 0x00C12520;
 }
+
+// ?Rva000907A1Get@@YAHXZ @ 0x000907A1 (6B): returns 0x00CE4818.
+// Follows a ret-12 (0x9079E-A0) with a push-style function after.
+// Carried at 0x7C7F0C and 0x8E497C, no direct callers, no branch
+// sources. Opaque address-derived name.
+int Rva000907A1Get(void)
+{
+	return 0x00CE4818;
+}
