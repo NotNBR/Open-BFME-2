@@ -10727,3 +10727,4 @@ _luaK_jump,,0x00752690,166,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-
 ?str@Rva007BBDD0Str@@QAEPBDXZ,,0x000F1ED3,17,Code/GameEngine/Source/Common/Rva007BBDB0Str.cpp,matched,BFME1 byte-identical donor; b1 0x007BBDD0
 ?bfmeTakeEC@BfmeThingEC@@QAEHPAH@Z,,0x006021A4,38,Code/GameEngine/Source/Common/BfmeOneHundredNinety.cpp,matched,BFME1 byte-identical donor; b1 0x009CB1F0
 ?bfmeGo1037H@BfmeH1037@@QAEXXZ,,0x00656BC0,34,Code/GameEngine/Source/Common/BfmeConv1037.cpp,matched,BFME1 donor with WaitForSingleObject import repair; 1 DIR32 string agrees; b1 0x007E9BD0
+?bfmeGo1015L@BfmeL1015@@QAEXXZ,,0x00674830,50,Code/GameEngine/Source/Common/BfmeConv1015.cpp,matched,BFME1 byte-identical donor; b1 0x00808800
