@@ -10943,3 +10943,4 @@ _luaK_getlabel,,0x00752740,51,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 by
 _luaK_goiftrue,,0x007530C0,37,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_code1,,0x00752670,26,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
 _luaK_error,,0x00751D20,23,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan
+_call_binTM,,0x0074E920,115,Code/Libraries/Source/Lua/lvm.c,matched,BFME1 byte-identical donor; exact via unclaimed_scan; luaD_callTM pin 0x74DE70
