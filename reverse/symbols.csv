@@ -3159,3 +3159,5 @@ __CIfmod,0x00629A36,MSVCR71 import thunk (jmp [0x00BBA510]); the Fmod wrapper ca
 ??0SpecialPowerModuleData@@QAE@XZ,0x005488C5,retail REL32 from FireWeaponPowerModuleData at 0x00546AF2; ZH SpecialPowerModuleData base; defined present-unmatched in SpecialPowerModule.cpp
 ?removePos@Pathfinder@@QAEXPAVObject@@@Z,0x006D59F0
 ?removeGoal@Pathfinder@@QAEXPAVObject@@@Z,0x006D5B50
+?onEnter@AIInternalMoveToState@@UAE?AW4StateReturnType@@XZ,0x0034C146,retail E9 from AIPickUpCrateState::update at 0x0034DEEB (delay-expiry path); ZH AIStates.cpp base-onEnter role; 47 xrefs in AI-state cluster
+?update@AIInternalMoveToState@@UAE?AW4StateReturnType@@XZ,0x00347460,retail E9 from AIPickUpCrateState::update at 0x0034DEF3 (movement path); ZH AIStates.cpp base-update role; 41 xrefs in AI-state cluster

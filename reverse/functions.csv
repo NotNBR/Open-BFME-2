@@ -11963,3 +11963,4 @@ _type_error,,0x00751880,68,Code/Libraries/Source/Lua/lauxlib.c,matched,BFME1 byt
 _luaX_invalidchar,,0x00756FD0,79,Code/Libraries/Source/Lua/llex.c,matched,gen-alias; object-symbol=_luaX_invalidchar; C++ alias; obj_sweep rel32 wave
 _inclinenumber,,0x007574E0,108,Code/Libraries/Source/Lua/llex.c,matched,gen-alias; object-symbol=_inclinenumber; C++ alias; obj_sweep rel32 wave
 ??0LineSegClass@@QAE@ABVVector3@@0@Z,,0x000927F9,57,Code/Libraries/Source/WWVegas/WWMath/LineSegVectorCtor.cpp,matched,ZH packet 92.5pct; dedicated TU like LineSeg_recalculate; frameless via default Oy
+?update@AIPickUpCrateState@@UAE?AW4StateReturnType@@XZ,,0x0034DEDE,26,Code/GameEngine/Source/GameLogic/AI/AIPickUpCrateStateUpdate.cpp,matched,BFME1 AIStates.cpp donor (BFME1 matched same 26B at 0x00178E10); ZH AIPickUpCrateState::update verbatim; callees base onEnter@0x34C146 + base update@0x347460 pinned
