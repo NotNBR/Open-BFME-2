@@ -3019,7 +3019,6 @@ _luaL_check_lstr,0x007519A0
 _luaL_check_number,0x00751A80
 _luaL_checktype,0x00751900
 _luaL_findstring,0x00751490
-_luaL_openlib,0x007514F0
 _luaL_opt_lstr,0x00751A20
 _luaO_power2,0x0074E0A0
 _luaO_verror,0x0074E1D0
