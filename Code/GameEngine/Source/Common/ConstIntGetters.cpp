@@ -57,3 +57,15 @@ int Rva00656B60Get(void)
 {
 	return 0x00E09F9C;
 }
+
+// ?Rva00309E4BGet@@YAHXZ @ 0x00309E4B (6B): returns 0x00DBD7DC.
+// Follows the rep-movsd table copier at 0x309E30 (9 dwords
+// 0xDBD7B8->0xDBD7DC, ret at 0x309E4A) and returns the filled table's
+// address; a larger push-style function starts at 0x309E51. 28 direct E8
+// callers, Ghidra-6, no branch sources. The value is carried as a plain
+// integer literal (no relocation slot exists here), so no pin is needed.
+// Opaque address-derived name.
+int Rva00309E4BGet(void)
+{
+	return 0x00DBD7DC;
+}

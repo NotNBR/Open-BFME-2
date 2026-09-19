@@ -12255,3 +12255,4 @@ _getbinopr,,0x007542C0,111,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byt
 ??1Rva002CEC0A@@UAE@XZ,,0x002CEC0A,14,Code/GameEngine/Source/Common/Rva002CEC0ADtor.cpp,matched,opaque dtor tail-calls vector dtor 0x2CC70 on member at plus 4 (pin upgrade)
 ?bfmeAllocBlock@@YAPAXI@Z,,0x001B63C0,62,Code/GameEngine/Source/Common/BfmeAllocBlock.cpp,matched,BFME1 donor pattern; b1 0x009A5920; fallback via vectorSmallAllocate pin
 ??1Rva004E32F2@@UAE@XZ,,0x004E32F2,14,Code/GameEngine/Source/Common/Rva004E32F2Dtor.cpp,matched,opaque dtor tail-calls vector dtor 0x2B80CE on member at plus 0x0C (pin upgrade)
+?Rva00309E4BGet@@YAHXZ,,0x00309E4B,6,Code/GameEngine/Source/Common/ConstIntGetters.cpp,matched,B8-6 returner ret 0xDBD7DC; follows rep-movsd table copier; 28 E8 callers and Ghidra-6; plain int literal needs no pin; opaque name
