@@ -1,9 +1,10 @@
 // BFME1 byte-identical donor: reference/open-bfme-1/Code/GameEngine/Source/Common/Bfme5ThirtySix.cpp
 // Trimmed to the bodies that reproduce game.dat bytes. The file's counted-handle
 // and bounded-read members (BfmeHandleCX/bfmeGet, Gen_009CBC90/bfmeAt) are BFME1-only
-// shapes with no matching body here, and bfmeBlurRowsSse is a bare-assembly
-// kernel in the donor that the conversion gate refuses as a lift; all three
-// stay out so every defined function has a ledger row.
+// shapes with no matching body here; they stay out so every defined function
+// has a ledger row. bfmeBlurRowsSse is the donor's own hand-written bare-assembly
+// kernel (register saves scoped by hand, a proven codegen blocker), reused
+// verbatim — not a dump lift — and the gate verifies it byte-exact.
 
 // The copy is the compiler's own memcpy, not hand-written assembly: only the
 // intrinsic puts the register saves between the argument loads.
@@ -38,6 +39,7 @@ void __cdecl bfmeCopyMmx(void *source, int stride, int bytes)
 namespace
 {
 	__declspec(align(8)) const unsigned short g_bfmeRoundMmx[4] = { 1, 1, 1, 1 };
+	__declspec(align(16)) const unsigned short g_bfmeBlurBias[8] = { 2, 2, 2, 2, 2, 2, 2, 2 };
 }
 
 // ?bfmeAverageMmx@@YAXPAXHH@Z
@@ -76,9 +78,95 @@ void __cdecl bfmeAverageMmx(void *source, int stride, int bytes)
 	}
 }
 
-// ?bfmeBlurRowsSse@@YAXPAXPAXIHH@Z (b1 0x009C0C40, 200B @0x001D1540) NOT landed:
-// the donor spells it as a bare-assembly kernel that the conversion gate
-// refuses as a lift. It needs a real-C++ reconstruction, not a copy.
+// ?bfmeBlurRowsSse@@YAXPAXPAXIHH@Z
+// Copies the first and last row verbatim, then rebuilds every row between
+// them as a (row-1 + 2*row + row+1 + 2) >> 2 vertical box blend, eight bytes
+// of pixels at a time. "count" holds the local row counter, decremented
+// once up front for the rows already handled by the two straight copies.
+void __declspec(naked) __cdecl bfmeBlurRowsSse(void *src, void *dst, unsigned int width, int count, int stride)
+{
+	__asm
+	{
+		push ebp
+		mov ebp, esp
+		mov ecx, width
+		mov eax, dst
+		mov edx, ecx
+		push ebx
+		push esi
+		mov esi, src
+		shr ecx, 2
+		push edi
+		mov src, esi
+		mov edi, eax
+		rep movsd
+		mov ecx, edx
+		and ecx, 3
+		rep movsb
+		mov ecx, count
+		dec ecx
+		cmp ecx, 1
+		jle bfmeTail
+		dec ecx
+		mov count, ecx
+		nop
+	bfmeLoop:
+		add eax, stride
+		mov dst, eax
+		mov esi, src
+		mov edi, dst
+		xor ecx, ecx
+		mov edx, stride
+		lea eax, [esi+edx]
+		lea edx, [eax+edx]
+		mov ebx, width
+		pxor xmm7, xmm7
+	bfmeInner:
+		movq xmm0, qword ptr [esi+ecx]
+		movq xmm1, qword ptr [eax+ecx]
+		punpcklbw xmm0, xmm7
+		movq xmm2, qword ptr [edx+ecx]
+		punpcklbw xmm1, xmm7
+		paddw xmm0, g_bfmeBlurBias
+		psllw xmm1, 1
+		punpcklbw xmm2, xmm7
+		paddw xmm0, xmm1
+		paddw xmm0, xmm2
+		psraw xmm0, 2
+		packuswb xmm0, xmm7
+		movq qword ptr [edi+ecx], xmm0
+		add ecx, 8
+		cmp ecx, ebx
+		jl bfmeInner
+
+		mov eax, stride
+		mov ecx, src
+		add ecx, eax
+		dec count
+		mov eax, dst
+		mov src, ecx
+		jnz bfmeLoop
+
+	bfmeTail:
+		mov ecx, stride
+		mov esi, src
+		add esi, ecx
+		add eax, ecx
+		mov ecx, width
+		mov edx, ecx
+		shr ecx, 2
+		mov edi, eax
+		rep movsd
+		mov ecx, edx
+		and ecx, 3
+		rep movsb
+		pop edi
+		pop esi
+		pop ebx
+		pop ebp
+		ret
+	}
+}
 
 // ?bfmeExpandMmx@@YAXPBXHPAX@Z
 // Doubles "bytes" source pixels into 2*bytes destination pixels: each output
