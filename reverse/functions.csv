@@ -13076,3 +13076,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GRva00166DE0@@UAEPAXI@Z,,0x00167640,30,Code/Libraries/Source/WWVegas/WW3D2/RenderObjClassDerivedDtors.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??0Rva000C3380@@QAE@ABV0@@Z,,0x00689380,69,Code/GameEngine/Source/Common/Rva000C3380Copy.cpp,matched,BFME1 donor reconstruction; string members via AsciiString op-assign pin 0x366F0
 ?SendNewPort@Cftp@@QAEHXZ,,0x006CA250,480,Code/Libraries/Source/WWVegas/WWDownload/CftpSendNewPort.cpp,matched,BFME1 donor file-unit with BFME2 string and SendCommand cast repairs
+?RemoveAll@Rva009F68C6PointerArray@@QAEXXZ,,0x00628C25,29,Code/GameEngine/Source/Common/Rva009F68C6PointerArray.cpp,matched,BFME1 byte-identical donor; b1 0x009F68C6
