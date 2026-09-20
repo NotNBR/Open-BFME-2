@@ -50,3 +50,11 @@ struct BfmeVectorRecord000C0BEC {
 };
 BfmeVectorRecord000C0BEC::BfmeVectorRecord000C0BEC(const BfmeVectorRecord000C0BEC &o) : text(o.text), names(o.names), word10(o.word10) {}
 template void _STL::_Construct<BfmeVectorRecord000C0BEC,BfmeVectorRecord000C0BEC>(BfmeVectorRecord000C0BEC*,const BfmeVectorRecord000C0BEC&);
+
+// Complete retail record copy at 0x002154F3.
+struct BfmeVectorRecord002154F3 {
+    AsciiString text; _STL::vector<AsciiString> names;
+    BfmeVectorRecord002154F3(const BfmeVectorRecord002154F3 &o);
+};
+BfmeVectorRecord002154F3::BfmeVectorRecord002154F3(const BfmeVectorRecord002154F3 &o) : text(o.text), names(o.names) {}
+template void _STL::_Construct<BfmeVectorRecord002154F3,BfmeVectorRecord002154F3>(BfmeVectorRecord002154F3*,const BfmeVectorRecord002154F3&);
