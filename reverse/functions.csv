@@ -12959,3 +12959,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva00143300Get@@YAHXZ,,0x00143300,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?Rva00187F30Get@@YAHXZ,,0x00187F30,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?Rva001B6390Get@@YAHXZ,,0x001B6390,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
+?Rva00610F10Get@@YAHXZ,,0x00610F10,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
