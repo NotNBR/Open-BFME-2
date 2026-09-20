@@ -16,6 +16,7 @@ struct GeometryShape {
 class GeometryInfo {
 public:
     static void parseGeometryMajorRadius(INI *, void *, void *, const void *);
+    static void parseGeometryMinorRadius(INI *, void *, void *, const void *);
     void calcBoundingStuff();
     char head[0x2C];
     std::vector<GeometryShape> shapes;
@@ -24,5 +25,13 @@ void GeometryInfo::parseGeometryMajorRadius(INI *ini, void *, void *store, const
     GeometryInfo *geometry=(GeometryInfo *)store;
     if(geometry->shapes.size()!=0)
         geometry->shapes.back().majorRadius=ini->scanReal(ini->getNextToken(0));
+    geometry->calcBoundingStuff();
+}
+
+// BFME1 GeometryParseMinorRadius.cpp; PC field C0EC10 -> ABEAB0.
+void GeometryInfo::parseGeometryMinorRadius(INI *ini, void *, void *store, const void *) {
+    GeometryInfo *geometry=(GeometryInfo *)store;
+    if(geometry->shapes.size()!=0)
+        geometry->shapes.back().minorRadius=ini->scanReal(ini->getNextToken(0));
     geometry->calcBoundingStuff();
 }
