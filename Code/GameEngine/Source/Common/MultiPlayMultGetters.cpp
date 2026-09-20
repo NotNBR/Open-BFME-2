@@ -35,3 +35,10 @@ Real MultiPlayMults::getMoneyMult(Int slot) const
     return 1.0f;
 }
 
+Real MultiPlayMults::getUnitXPMult(Int slot) const
+{
+    Int index = slot - 1;
+    if (index >= 0 && index < 20)
+        return m_unitXP[index];
+    return 1.0f;
+}
