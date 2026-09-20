@@ -13438,3 +13438,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?getApparentPlayerTemplate@GameSlot@@QBEHXZ,,0x003FF813,37,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent template with BFME1 GameInfo.cpp shape and orig fallback for hidden random
 ?getApparentColor@GameSlot@@QBEHXZ,,0x003FF838,56,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent color with BFME1 GameInfo.cpp shape and observer color path
 ?getApparentStartPos@GameSlot@@QBEHXZ,,0x003FF870,37,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent start position with BFME1 GameInfo.cpp shape and orig fallback for hidden random
+?Rva0042638BGet@@YA_NXZ,,0x0042638B,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
