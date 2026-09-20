@@ -43,6 +43,73 @@ template <class T> const T &min(const T &a, const T &b)
 	}
 }
 
+typedef void *LZHL_CHANDLE;
+
+LZHL_CHANDLE LZHLCreateCompressor();
+unsigned int LZHLCompress(LZHL_CHANDLE, void *, void *, unsigned int);
+void LZHLDestroyCompressor(LZHL_CHANDLE);
+unsigned int LZHLCompressorCalcMaxBuf(unsigned);
+
+#define BLOCKSIZE 500000
+
+Bool CompressFile(char *infile, char *outfile)
+{
+	unsigned int rawSize = 0;
+	unsigned int compressedSize = 0, compressed = 0, i = 0;
+	FILE *inFilePtr = 0;
+	FILE *outFilePtr = 0;
+	char *inBlock = 0;
+	char *outBlock = 0;
+	LZHL_CHANDLE compressor;
+	unsigned int blocklen;
+
+	if ((infile == 0) || (outfile == 0))
+		return false;
+
+	inFilePtr = fopen(infile, "rb");
+	if (inFilePtr)
+	{
+		fseek(inFilePtr, 0, 2);
+		rawSize = ftell(inFilePtr);
+		fseek(inFilePtr, 0, 0);
+
+		inBlock = (char *)malloc(rawSize);
+		outBlock = (char *)malloc(LZHLCompressorCalcMaxBuf(rawSize));
+
+		if ((inBlock == 0) || (outBlock == 0))
+			return false;
+
+		fread(inBlock, 1, rawSize, inFilePtr);
+		fclose(inFilePtr);
+
+		compressor = LZHLCreateCompressor();
+		for (i = 0; i < rawSize; i += BLOCKSIZE)
+		{
+			blocklen = min((unsigned int)BLOCKSIZE, rawSize - i);
+			compressed = LZHLCompress(compressor, outBlock + compressedSize, inBlock + i, blocklen);
+			compressedSize += compressed;
+		}
+
+		LZHLDestroyCompressor(compressor);
+
+		outFilePtr = fopen(outfile, "wb");
+		if (outFilePtr)
+		{
+			fwrite(&rawSize, sizeof(unsigned int), 1, outFilePtr);
+			fwrite(outBlock, compressedSize, 1, outFilePtr);
+			fclose(outFilePtr);
+		}
+		else
+			return false;
+
+		free(inBlock);
+		free(outBlock);
+		return true;
+	}
+
+	return false;
+}
+
 Bool DecompressFile(char *infile, char *outfile)
 {
 	UnsignedInt rawSize = 0, compressedSize = 0;
