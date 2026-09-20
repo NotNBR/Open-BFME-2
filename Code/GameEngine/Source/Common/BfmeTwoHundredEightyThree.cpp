@@ -2,7 +2,7 @@
 
 int bfmeMakeOX(void *one);
 
-void bfmeDoPW(char *first, char *last, char *otherFirst, char *otherLast);
+int bfmeDoPW(char *first, char *last, char *otherFirst, char *otherLast);
 
 struct BfmeThingPW
 {
@@ -17,4 +17,54 @@ void BfmeThingPW::bfmeGoPW(char *at)
 	unsigned char spare[0x10];
 
 	bfmeDoPW(m_bfmeAt, m_bfmeEnd, at, at + bfmeMakeOX(at));
+}
+
+namespace _STL {
+
+template<class _CharT> struct char_traits;
+
+template<> struct char_traits<char>
+{
+	static int compare(const char *first, const char *otherFirst, unsigned int count);
+};
+
+}
+
+// Lexicographical range compare used by the PW table: memcmp over the shared
+// prefix, then -1/0/+1 on the lengths. Retail keeps the shorter length behind
+// a pointer pair (first/other) so /Od holds it in two stacked slots.
+int bfmeDoPW(char *first, char *last, char *otherFirst, char *otherLast)
+{
+	int firstLength;
+	int lenOther;
+	int prefix;
+	int *secondPtr;
+	int *lengthPtr;
+	int result;
+	int order;
+
+	firstLength = last - first;
+	lenOther = otherLast - otherFirst;
+
+	if (lenOther < firstLength)
+		lengthPtr = &lenOther;
+	else
+		lengthPtr = &firstLength;
+
+	secondPtr = lengthPtr;
+
+	prefix = _STL::char_traits<char>::compare(first, otherFirst, *secondPtr);
+
+	if (prefix != 0)
+		result = prefix;
+	else
+	{
+		if (firstLength < lenOther)
+			order = -1;
+		else
+			order = (firstLength > lenOther);
+		result = order;
+	}
+
+	return result;
 }
