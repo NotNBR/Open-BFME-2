@@ -14081,3 +14081,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Get_Bits_Per_Pixel@@YIIW4WW3DFormat@@@Z,,0x00131A9D,88,Code/Libraries/Source/WWVegas/WW3D2/ww3dformat_bits.cpp,matched,BFME1 ww3dformat_bits donor verbatim; fastcall enum D3DFORMAT numbering with DXT FOURCCs; /O1 builds retail switch tree
 __Locale_toupper,,0x000219E0,291,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCtypeCase.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E850
 __Locale_tolower,,0x00021B10,291,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCtypeCase.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E980
+?_M_initialize@?$vector@_NV?$allocator@_N@_STL@@@_STL@@IAEXI@Z,,0x003890D5,66,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_bool_copy.cpp,matched,vendored=stlport-4.5.3;bit-vector init via 0x69F75 and 0x69F22; explicit-instantiation TU
