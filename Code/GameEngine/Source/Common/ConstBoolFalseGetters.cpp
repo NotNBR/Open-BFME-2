@@ -80,3 +80,11 @@ bool Rva0026EF31Get(void)
 {
 	return false;
 }
+
+// ?Rva0028B13EGet@@YA_NXZ @ 0x0028b13e (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva0028B13EGet(void)
+{
+	return false;
+}
