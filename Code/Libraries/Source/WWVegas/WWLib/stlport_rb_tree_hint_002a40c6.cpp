@@ -17,5 +17,23 @@ bool operator<(const AsciiString &, const AsciiString &);
 struct TreeHintPayload002A1D9D { char m_body[4]; };
 typedef _STL::pair<const AsciiString, TreeHintPayload002A1D9D> TreeHintPair002A1D9D;
 typedef _STL::_Rb_tree<AsciiString, TreeHintPair002A1D9D, _STL::_Select1st<TreeHintPair002A1D9D>, _STL::less<AsciiString>, _STL::allocator<TreeHintPair002A1D9D> > TreeHint002A1D9D;
-template TreeHint002A1D9D::iterator TreeHint002A1D9D::insert_unique(TreeHint002A1D9D::iterator, const TreeHintPair002A1D9D &);
+// BFME replaces STLport allocation with a static byte allocator (RVA 0x307F0).
+namespace _STL {
+template <> class allocator<char> {
+public:
+    static char *allocate(unsigned int bytes, const void *hint);
+};
+}
 
+// Retail 0x002A1516 allocates the node, then constructs its value.
+// Unlike stock STLport, this retail body has no allocation-cleanup catch path.
+// ?_M_create_node@?$_Rb_tree@VAsciiString@@U?$pair@$$CBVAsciiString@@UTreeHintPayload002A1D9D@@@_STL@@U?$_Select1st@U?$pair@$$CBVAsciiString@@UTreeHintPayload002A1D9D@@@_STL@@@3@U?$less@VAsciiString@@@3@V?$allocator@U?$pair@$$CBVAsciiString@@UTreeHintPayload002A1D9D@@@_STL@@@3@@_STL@@IAEPAU?$_Rb_tree_node@U?$pair@$$CBVAsciiString@@UTreeHintPayload002A1D9D@@@_STL@@@2@ABU?$pair@$$CBVAsciiString@@UTreeHintPayload002A1D9D@@@2@@Z
+template <>
+TreeHint002A1D9D::_Link_type TreeHint002A1D9D::_M_create_node(const TreeHintPair002A1D9D &value)
+{
+    _Link_type node = (_Link_type)_STL::allocator<char>::allocate(sizeof(_STL::_Rb_tree_node<TreeHintPair002A1D9D>), 0);
+    _STL::_Construct(&node->_M_value_field, value);
+    return node;
+}
+
+template TreeHint002A1D9D::iterator TreeHint002A1D9D::insert_unique(TreeHint002A1D9D::iterator, const TreeHintPair002A1D9D &);
