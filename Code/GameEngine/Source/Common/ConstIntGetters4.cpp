@@ -543,3 +543,11 @@ int Rva003ADEB9Get(void)
 {
 	return 0x00C1D204;
 }
+
+// ?Rva003ADFACGet@@YAHXZ @ 0x003adfac (6B): returns 0x00C1D274.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva003ADFACGet(void)
+{
+	return 0x00C1D274;
+}
