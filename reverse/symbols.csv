@@ -3251,3 +3251,4 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ??1Node@?$SList@VTagBlockIndex@@@@QAE@XZ,0x006204D0,this-adjust thunk (add ecx 8 + jmp StringBase dtor 0x36410); called as the member dtor from Remove_All 0x620870 and from the ??_G at 0x6204E0
 ?bfmeNoteVJI@BfmeSubVJI@@QAEXPBD@Z,0x00674B40,BFME1 BfmeConv1386 donor call site; same body as rowed bfmeGoBLF
 ?bfmeFreeVDB@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1350 donor call site; same body as rowed scalar delete
+?bfmeDelVGP@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1356 donor call site; same body as rowed scalar delete
