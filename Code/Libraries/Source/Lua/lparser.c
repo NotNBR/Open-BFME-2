@@ -65,7 +65,7 @@ BinOpr subexpr (LexState *ls, expdesc *v, int limit);
 void open_func (LexState *ls, FuncState *fs);
 void adjustlocalvars (LexState *ls, int nvars);
 static void parlist (LexState *ls);
-void chunk (LexState *ls);
+static void chunk (LexState *ls);
 void close_func (LexState *ls);
 static void pushclosure (LexState *ls, FuncState *func);
 
@@ -934,6 +934,22 @@ static int stat (LexState *ls) {
       luaK_error(ls, "<statement> expected");
       return 0;  /* to avoid warnings */
     }
+  }
+}
+
+
+/* }====================================================================== */
+
+
+// _chunk BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void chunk (LexState *ls) {
+  /* chunk -> { stat [';'] } */
+  int islast = 0;
+  while (!islast && !block_follow(ls->t.token)) {
+    islast = stat(ls);
+    optional(ls, ';');
+    LUA_ASSERT(ls->fs->stacklevel == ls->fs->nactloc,
+               "stack size != # local vars");
   }
 }
 
