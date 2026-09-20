@@ -13454,3 +13454,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?getSlotIndex@@YAHPBVGameSlot@@@Z,,0x003FF796,33,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot helper outlined in retail; places via same-TU EDI design
 ?isOccupied@GameSlot@@QBE_NXZ,,0x003FF0FB,44,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameSlot occupied predicate with player AI observer states and occupancy byte
 ?getNumPlayers@GameInfo@@QBEHXZ,,0x003FF218,37,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameInfo player counter with BFME1 GameInfo.cpp shape
+?getNumNonObserverPlayers@GameInfo@@QBEHXZ,,0x003FF23D,42,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameInfo non observer player counter with BFME1 GameInfo.cpp shape
