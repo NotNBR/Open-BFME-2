@@ -271,3 +271,11 @@ int Rva0017FB8EGet(void)
 {
 	return 0x48494552;
 }
+
+// ?Rva0017FFC4Get@@YAHXZ @ 0x0017ffc4 (6B): returns 0x484C4F44.
+// Follows a ret-12 (prev C2-0C-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva0017FFC4Get(void)
+{
+	return 0x484C4F44;
+}
