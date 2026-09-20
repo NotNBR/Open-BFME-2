@@ -24,3 +24,12 @@
 #include <vector>
 
 template class _STL::vector<void*,_STL::allocator<void*> >;
+
+// 2026-09-20 re-test (spark) confirms the above: TU
+// stlport_vector_voidptr_alloc.cpp (/Od /Ob1) emits 187/187 instructions in
+// identical order with the same 4 callees (all rowed, no new pins); the only
+// drift is homes (frame 0x80 vs 0x7c, upper-half ebp offsets +4) plus jump
+// encodings. Also tried /Ob0 (372B 7-call), /Ob2, /O1 (215B frameless),
+// /O2, /EHsc, /GR, /G6, with and without _STLP_NO_EXCEPTIONS: none moves the
+// frame. The extra home sits between the -0x24 and -0x28 groups (fill-loop
+// cursor region). Untried: /EHa, /ZI, implicit-instantiation TU.

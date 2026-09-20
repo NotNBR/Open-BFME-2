@@ -13056,3 +13056,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeRFindChV42@@YGHDI@Z,,0x000278A0,241,Code/GameEngine/Source/Common/BfmeConv1484.cpp,matched,BFME1 byte-identical donor
 ?bfmeRFindChV40@@YGHDI@Z,,0x000275C0,235,Code/GameEngine/Source/Common/BfmeConv1481.cpp,matched,BFME1 byte-identical donor
 ?onTxn@Rva007FA2C0@@QAE_NPAVRva007E8810Message@@@Z,,0x00665C30,233,Code/GameEngine/Source/GameNetwork/Rva007F96C0Txn.cpp,matched,BFME1 byte-identical donor
+??_GTransportContainModuleData@@UAEPAXI@Z,,0x001DFA84,28,Code/GameEngine/Source/GameLogic/Object/Contain/TransportContainModuleDataDtor.cpp,matched,scalar deleting dtor; TU already emits pop-ecx shape; sole caller pattern via landed dtor
