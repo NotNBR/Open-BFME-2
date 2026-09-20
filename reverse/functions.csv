@@ -14060,3 +14060,20 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva004D5776MovzxWordField@@QBEIXZ,,0x004D5776,5,Code/GameEngine/Source/Common/Disp8MovzxFieldGetters.cpp,matched,Disp8 movzx word getter; address-derived opaque holder
 ?get@Rva0012606CMovzxByteField@@QBEIXZ,,0x0012606C,5,Code/GameEngine/Source/Common/Disp8MovzxFieldGetters.cpp,matched,Disp8 movzx byte getter; address-derived opaque holder
 ?get@Rva001E3478MovzxByteField@@QBEIXZ,,0x001E3478,5,Code/GameEngine/Source/Common/Disp8MovzxFieldGetters.cpp,matched,Disp8 movzx byte getter; address-derived opaque holder
+?get@Rva000424F8ByteField@@QBEEXZ,,0x000424F8,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva00049F80ByteField@@QBEEXZ,,0x00049F80,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0006DFEAByteField@@QBEEXZ,,0x0006DFEA,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0008525EByteField@@QBEEXZ,,0x0008525E,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0008BCE0ByteField@@QBEEXZ,,0x0008BCE0,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0008BCF4ByteField@@QBEEXZ,,0x0008BCF4,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0008BD08ByteField@@QBEEXZ,,0x0008BD08,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0008BD20ByteField@@QBEEXZ,,0x0008BD20,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0008EE97ByteField@@QBEEXZ,,0x0008EE97,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva000A47A7ByteField@@QBEEXZ,,0x000A47A7,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva000B291AByteField@@QBEEXZ,,0x000B291A,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva000DFCAFByteField@@QBEEXZ,,0x000DFCAF,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0010857BByteField@@QBEEXZ,,0x0010857B,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva0010858FByteField@@QBEEXZ,,0x0010858F,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva001E3412ByteField@@QBEEXZ,,0x001E3412,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva001EADF0ByteField@@QBEEXZ,,0x001EADF0,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
+?get@Rva001EAE1AByteField@@QBEEXZ,,0x001EAE1A,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
