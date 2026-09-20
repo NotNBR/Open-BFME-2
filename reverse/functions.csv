@@ -13411,3 +13411,5 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva00040F61Get@@YA_NXZ,,0x00040F61,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?unAccept@GameSlot@@QAEXXZ,,0x003FF895,11,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp unAccept with inlined isHuman
 ?setMapAvailability@GameSlot@@QAEX_N@Z,,0x003FF8A0,16,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp setMapAvailability with inlined isHuman
+?Rva00040FE2Get@@YA_NXZ,,0x00040FE2,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Get_Shininess@VertexMaterialClass@@QBEMXZ,,0x0013CD20,7,Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp,matched,MaterialOld Power float getter; twin shape at 0x4D7C73 already rowed elsewhere; CC-padded isolated 7B
