@@ -13344,3 +13344,4 @@ _luaK_posfix,,0x00753710,208,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byt
 _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched,BFME1 donor Lua 4.0.1 luaB_tostring.c; true extent ret-to-pad; jump table plus sprintf import
 ?get@Rva002C7229FloatChaseField@@QBEMXZ,,0x002C7229,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
 ?get@Rva0033F981FloatChaseField@@QBEMXZ,,0x0033F981,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva0033F9BBFloatChaseField@@QBEMXZ,,0x0033F9BB,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
