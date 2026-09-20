@@ -160,3 +160,20 @@ struct BfmeStringRecord002049D6 {
 BfmeStringRecord002049D6::BfmeStringRecord002049D6(const BfmeStringRecord002049D6 &o) : pair(o.pair), third(o.third) {}
 template void _STL::_Construct<BfmeStringRecord002049D6,BfmeStringRecord002049D6>(BfmeStringRecord002049D6*,const BfmeStringRecord002049D6&);
 
+
+struct Rva00468520Obj { int m_00; int m_04; };
+class Rva00468520 {
+    Rva00468520Obj *m_00; int m_04;
+public:
+    __declspec(nothrow) Rva00468520 *set(const Rva00468520 *src);
+    ~Rva00468520();
+    __declspec(nothrow) __forceinline Rva00468520(const Rva00468520 &other) { set(&other); }
+};
+struct BfmeStringRecord00222E08 {
+    AsciiString text;
+    Rva00468520 ref;
+    BfmeStringRecord00222E08(const BfmeStringRecord00222E08 &o);
+};
+BfmeStringRecord00222E08::BfmeStringRecord00222E08(const BfmeStringRecord00222E08 &o) : text(o.text), ref(o.ref) {}
+template void _STL::_Construct<BfmeStringRecord00222E08,BfmeStringRecord00222E08>(BfmeStringRecord00222E08*,const BfmeStringRecord00222E08&);
+
