@@ -13098,3 +13098,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeGoVJI@BfmeThingVJI@@QAEXPAVBfmeMsgVJI@@@Z,,0x0066FAE0,182,Code/GameEngine/Source/Common/BfmeConv1386.cpp,matched,BFME1 donor noteVJI aliased to rowed bfmeGoBLF body
 ??0MaterialInfoClass@@QAE@XZ,,0x001708D0,132,Code/Libraries/Source/WWVegas/WW3D2/MaterialInfoClassCtor.cpp,matched,BFME1 donor reconstruction; vtable immediates repaired to BFME2 values
 ?bfmeCopyVIA@@YAPAUBfmeElemVIA@@PAU1@00@Z,,0x00689450,125,Code/GameEngine/Source/Common/BfmeConv1371.cpp,matched,BFME1 donor members copy via AsciiString op assign pin
+?read_material_pass@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x0018B400,175,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadMaterialPass.cpp,matched,BFME1 meshmdlio port as bool reader with per-case ok-local al-passthrough returns and retail case order with 0x3F opaque case third
