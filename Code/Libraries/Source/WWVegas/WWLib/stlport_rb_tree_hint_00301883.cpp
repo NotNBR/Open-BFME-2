@@ -45,3 +45,4 @@ template MapInsert00301883::iterator MapInsert00301883::insert(MapInsert00301883
 // and clearing both child links; copy301F9B belongs to the same typed chain.
 template TreeHint003012F0::_Link_type TreeHint003012F0::_M_clone_node(TreeHint003012F0::_Link_type);
 template TreeHint003012F0::_Link_type TreeHint003012F0::_M_copy(TreeHint003012F0::_Link_type, TreeHint003012F0::_Link_type);
+template TreeHint003012F0::_Rb_tree(const TreeHint003012F0 &);
