@@ -13069,3 +13069,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GRva004607E1@@UAEPAXI@Z,,0x0025335A,28,Code/GameEngine/Source/Common/Rva0049B47CDerived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??_GRva0044D285@@UAEPAXI@Z,,0x0044D290,28,Code/GameEngine/Source/Common/Rva0044D56ADerived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??_GRva0054F508@@UAEPAXI@Z,,0x0054F513,28,Code/GameEngine/Source/Common/Rva0044D56ADerived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
+??_GRva0048D742@@UAEPAXI@Z,,0x0048D7F7,28,Code/GameEngine/Source/Common/Rva0024A797Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
