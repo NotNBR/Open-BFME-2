@@ -3313,3 +3313,4 @@ __strupr,0x0075B4F0
 ?bfmeBigFreePM@@YAXPAX@Z,0x000237A0
 ?spin@LockClass@FastCriticalSectionClass@@CIXPAX@Z,0x006C5EF0,WWLib string-domain spin (void spelling); lock-bts loop with WaitForSingleObject yield on the startup event; called from the LockClass copy-ctor at 0x006C5F40 and the 0x006C61xx string bodies; distinct from the pool-domain unsigned-spelling pin at 0x0006577F
 _code_params,0x00753F20,address read from the REL32 call at 0x00754C64 in the _parlist body; Lua 4.0.1 lparser.c static
+_adjust_mult_assign,0x00753EC0,address read from the REL32 call at 0x0075495C in the _localstat body; Lua 4.0.1 lparser.c static

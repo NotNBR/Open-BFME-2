@@ -227,6 +227,42 @@ static void removelocalvars (LexState *ls, int nvars) {
 }
 
 
+// _adjust_mult_assign present-unmatched
+static void adjust_mult_assign (LexState *ls, int nvars, int nexps) {
+  FuncState *fs = ls->fs;
+  int diff = nexps - nvars;
+  if (nexps > 0 && luaK_lastisopen(fs)) { /* list ends in a function call */
+    diff--;  /* do not count function call itself */
+    if (diff <= 0) {  /* more variables than values? */
+      luaK_setcallreturns(fs, -diff);  /* function call provide extra values */
+      diff = 0;  /* no more difference */
+    }
+    else  /* more values than variables */
+      luaK_setcallreturns(fs, 0);  /* call should provide no value */
+  }
+  /* push or pop eventual difference between list lengths */
+  luaK_adjuststack(fs, diff);
+}
+
+
+// _localstat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void localstat (LexState *ls) {
+  /* stat -> LOCAL NAME {',' NAME} ['=' explist1] */
+  int nvars = 0;
+  int nexps;
+  do {
+    next(ls);  /* skip LOCAL or ',' */
+    new_localvar(ls, str_checkname(ls), nvars++);
+  } while (ls->t.token == ',');
+  if (optional(ls, '='))
+    nexps = explist1(ls);
+  else
+    nexps = 0;
+  adjust_mult_assign(ls, nvars, nexps);
+  adjustlocalvars(ls, nvars);
+}
+
+
 static void block (LexState *ls) {
   /* block -> chunk */
   FuncState *fs = ls->fs;
@@ -867,4 +903,6 @@ void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd
   funcargs(ls, 0);
   luaY_parser(0, 0);
   next(ls);
+  localstat(ls);
+  adjust_mult_assign(ls, 0, 0);
 }
