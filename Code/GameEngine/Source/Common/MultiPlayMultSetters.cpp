@@ -49,3 +49,11 @@ void MultiPlayMults::setUnitSpeedMult(Int slot, Real value)
     if (index >= 0 && index < 20)
         m_unitSpeed[index] = value;
 }
+
+// PC RVA 0x235953, 30 bytes; named MultiPlayBuildingSpeedMult callback identity.
+void MultiPlayMults::setBuildingSpeedMult(Int slot, Real value)
+{
+    Int index = slot - 1;
+    if (index >= 0 && index < 20)
+        m_buildingSpeed[index] = value;
+}
