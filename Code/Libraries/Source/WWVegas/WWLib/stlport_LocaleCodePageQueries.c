@@ -256,3 +256,19 @@ char *Rva0084EED0(LocaleCodePageObject_0084EED0 *object)
         return buffer;
     }
 }
+
+// Rva0084EF00 (retail 0x00022090, 48B): locale digit-substitution getter.
+// Same file-unit as Rva0084EED0 above: donor-verbatim wrapper around the
+// rowed ___ConvertFromACP (0x00021740) with hardcoded .data buffer,
+// GetLocaleInfoA type 0x29 and 9-byte size. Returns the converted buffer
+// directly (no Rva0084DE40Tail tail call), hence 48B not 61B.
+char *Rva0084EF00(LocaleCodePageObject_0084EED0 *object)
+{
+    LCID locale = object->locale;
+    GetLocaleInfoA(locale, 0x29, (char *)0x00DDF3BC, 9);
+    {
+        char *buffer = (char *)0x00DDF3BC;
+        __ConvertFromACP(buffer, 9, object->codePage);
+        return buffer;
+    }
+}

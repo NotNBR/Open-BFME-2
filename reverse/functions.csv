@@ -14115,3 +14115,4 @@ _Rva0084ECE0,,0x00021E70,61,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 _Rva0084EED0,,0x00022060,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,BFME1 byte-identical donor; b1 0x0084EED0
 ??0Rva003ADF61@@QAE@ABV0@@Z,,0x003ADF61,75,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 10-int copy-ctor; straight dword run plus-0x04 to plus-0x28; four E8 callers in 0x003AE1xx tails; B2 address names the body
 ??0Rva004F5FD8@@QAE@ABV0@@Z,,0x004F5FD8,75,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 10-int copy-ctor twin of 0x003ADF61 shape with distinct vtable; two E8 callers; B2 address names the body
+_Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,BFME1 byte-identical donor; b1 0x0084EF00
