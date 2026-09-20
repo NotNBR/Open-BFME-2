@@ -3192,3 +3192,4 @@ _read_number,0x00757200
 ?Remove@?$DLNodeClass@USmudge@@@@QAEXXZ,0x002D26BE
 ?Add_Head@?$DLListClass@USmudge@@@@QAEXPAV?$DLNodeClass@USmudge@@@@@Z,0x002D25E2
 ?Remove_Head@?$DLListClass@USmudge@@@@QAEXXZ,0x002D2613
+?Remove_Head@?$DLListClass@USmudgeSet@@@@QAEXXZ,0x002D2665
