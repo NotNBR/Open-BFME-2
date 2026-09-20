@@ -96,3 +96,5 @@ BfmeSubobject0022CE19::BfmeSubobject0022CE19(const BfmeSubobject0022CE19 &o)
       range38(o.range38), object44(o.object44) {}
 
 BfmeSubobject0022CE19::~BfmeSubobject0022CE19() {}
+
+BfmeSubobject00229875::~BfmeSubobject00229875() {}
