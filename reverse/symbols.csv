@@ -3193,3 +3193,4 @@ _read_number,0x00757200
 ?Add_Head@?$DLListClass@USmudge@@@@QAEXPAV?$DLNodeClass@USmudge@@@@@Z,0x002D25E2
 ?Remove_Head@?$DLListClass@USmudge@@@@QAEXXZ,0x002D2613
 ?Remove_Head@?$DLListClass@USmudgeSet@@@@QAEXXZ,0x002D2665
+??0Rva00253510@@QAE@XZ,0x00253510,opaque SEH intermediate base ctor; 12 ctor-position callers (0x2538EC/0x2539C5/0x253A7B/0x253B7B/0x254E9E/0x2550F0/0x257301/0x45D17D/0x485D9B/0x485F45/0x486722/0x4C2311); serves opaque derived 0x253B78
