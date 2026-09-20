@@ -1,5 +1,6 @@
 name,address,notes
 ??$?MDV?$char_traits@D@_STL@@V?$allocator@D@1@@_STL@@YA_NABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@0@0@Z,0x00388F39,BFME2 mapped-value tree 0x38d58c; directly verified comparator/iterator or insert-node-construct-copy chain; type and ownership limits documented in source.
+??4AggregateDefClass@@QAEABV0@ABV0@@Z,0x001A3D10,Identity audited across full264B: free and strdup name58; virtual Free_Subobject_List slot34; copy info20/36B and misc44/20B; version4 and deep64B subobject copies; returns this; not RenderObj Initialize1A32A0
 ??$_Construct@U?$pair@$$CBGVAsciiString@@@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBGVAsciiString@@@0@ABU10@@Z,0x006204B0
 ??$_Construct@U?$pair@$$CBHH@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBHH@0@ABU10@@Z,0x0060C9D9,ICF twin of 0x6204B0; map int-int _M_create_node REL32
 ??$_Construct@U?$pair@$$CBHH@_STL@@U12@@_STL@@YAXPAU?$pair@$$CBHH@0@ABU10@@Z,0x006204B0,address read from the retail REL32 in hashtable::_M_insert at 0x00620F60
