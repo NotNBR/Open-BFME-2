@@ -13456,3 +13456,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?getNumPlayers@GameInfo@@QBEHXZ,,0x003FF218,37,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameInfo player counter with BFME1 GameInfo.cpp shape
 ?getNumNonObserverPlayers@GameInfo@@QBEHXZ,,0x003FF23D,42,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameInfo non observer player counter with BFME1 GameInfo.cpp shape
 ?isAI@GameSlot@@QBE_NXZ,,0x003FF127,30,Code/GameEngine/Source/GameNetwork/GameSlotIsAI.cpp,matched,GameSlot AI predicate with BFME1 GameInfo.cpp shape over four AI slot states
+?resetAccepted@GameInfo@@QAEXXZ,,0x003FF9B4,46,Code/GameEngine/Source/GameNetwork/GameInfoGetSlot.cpp,matched,BFME1 GameInfo.cpp resetAccepted; slot0 direct array load reproduces retail lea-test-mov plus dl-reused setAccept; slots 1-7 via rowed getSlot plus human-gated unAccept
