@@ -13213,3 +13213,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ??1VideoPlayer@@UAE@XZ,,0x00689350,35,Code/GameEngine/Source/GameClient/VideoPlayerDestructorThunk.cpp,matched,BFME1 readable donor body; b1 0x0088A410; base dtor present-unmatched
 ??0LockClass@FastCriticalSectionClass@@QAE@AAV1@@Z,,0x006C5F40,20,Code/Libraries/Source/WWVegas/WWLib/FastCriticalSectionLockCtor.cpp,matched,out-of-line lock guard ctor; AAV1 names the outer section class; calls the string-domain spin
 ?bfmeGoECF@@YAXXZ,,0x007B7270,16,Code/GameEngine/Source/Common/BfmeConv804.cpp,matched,BFME1 byte-identical donor BfmeConv804.cpp; b1 0x00C72050; guarded stdcall ripple; ECI sibling deferred
+?bfmeGoECI@@YA_NXZ,,0x004441B0,21,Code/GameEngine/Source/Common/BfmeConv804.cpp,matched,BFME1 donor with vtable repair to retail slot 54; b1 0x00516C00; guarded ask shape
