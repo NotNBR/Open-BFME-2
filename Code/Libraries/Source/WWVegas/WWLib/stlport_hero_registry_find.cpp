@@ -8,3 +8,4 @@
 #include <algorithm>
 class CreateAHeroData;
 template CreateAHeroData** _STL::__find(CreateAHeroData**,CreateAHeroData**,CreateAHeroData* const&,const _STL::random_access_iterator_tag&);
+template CreateAHeroData** _STL::find(CreateAHeroData**,CreateAHeroData**,CreateAHeroData* const&);
