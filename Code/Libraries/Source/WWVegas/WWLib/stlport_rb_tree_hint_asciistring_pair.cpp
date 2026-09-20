@@ -10,4 +10,23 @@ bool operator<(const AsciiString &, const AsciiString &);
 // established AsciiString copy 0x000365F0 at offsets 0 and 4, with exception cleanup.
 typedef _STL::pair<const AsciiString, AsciiString> StringPair;
 typedef _STL::_Rb_tree<AsciiString, StringPair, _STL::_Select1st<StringPair>, _STL::less<AsciiString>, _STL::allocator<StringPair> > StringPairTree;
+// BFME replaces STLport allocation with a static byte allocator (RVA 0x307F0).
+namespace _STL {
+template <> class allocator<char> {
+public:
+    static char *allocate(unsigned int bytes, const void *hint);
+};
+}
+
+// Retail 0x00202B4A allocates the node, then constructs its value.
+// Unlike stock STLport, this retail body has no allocation-cleanup catch path.
+// ?_M_create_node@?$_Rb_tree@VAsciiString@@U?$pair@$$CBVAsciiString@@V1@@_STL@@U?$_Select1st@U?$pair@$$CBVAsciiString@@V1@@_STL@@@3@U?$less@VAsciiString@@@3@V?$allocator@U?$pair@$$CBVAsciiString@@V1@@_STL@@@3@@_STL@@IAEPAU?$_Rb_tree_node@U?$pair@$$CBVAsciiString@@V1@@_STL@@@2@ABU?$pair@$$CBVAsciiString@@V1@@2@@Z
+template <>
+StringPairTree::_Link_type StringPairTree::_M_create_node(const StringPair &value)
+{
+    _Link_type node = (_Link_type)_STL::allocator<char>::allocate(sizeof(_STL::_Rb_tree_node<StringPair>), 0);
+    _STL::_Construct(&node->_M_value_field, value);
+    return node;
+}
+
 template StringPairTree::iterator StringPairTree::insert_unique(StringPairTree::iterator, const StringPair &);
