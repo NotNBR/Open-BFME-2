@@ -14020,3 +14020,21 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva00568645WordField@@QBEGXZ,,0x00568645,5,Code/GameEngine/Source/Common/Disp8WordFieldGetters.cpp,matched,Disp8 word getter
 ?get@Rva001816E0DwordField@@QBEHXZ,,0x001816E0,3,Code/GameEngine/Source/Common/Disp0DwordFieldGetters.cpp,matched,Disp0 dword getter
 ?get@Rva00373F29DwordField@@QBEHXZ,,0x00373F29,3,Code/GameEngine/Source/Common/Disp0DwordFieldGetters.cpp,matched,Disp0 dword getter
+?Rva00083B7BGet@@YAHXZ,,0x00083B7B,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00DEC3CC
+?Rva00094B87Get@@YAHXZ,,0x00094B87,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00DB47EC
+?Rva0014D241Get@@YAHXZ,,0x0014D241,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00DEDA14
+?Rva0021913AGet@@YAHXZ,,0x0021913A,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00DFE348
+?Rva0023C54CGet@@YAHXZ,,0x0023C54C,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E032E0
+?Rva00248D60Get@@YAHXZ,,0x00248D60,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E0333C
+?Rva00248D66Get@@YAHXZ,,0x00248D66,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E03354
+?Rva0027C220Get@@YAHXZ,,0x0027C220,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00DBB708
+?Rva0029A26FGet@@YAHXZ,,0x0029A26F,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E04450
+?Rva0031AA00Get@@YAHXZ,,0x0031AA00,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E04478
+?Rva00320607Get@@YAHXZ,,0x00320607,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E032C8
+?Rva00328A65Get@@YAHXZ,,0x00328A65,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00DBD0F0
+?Rva00376D17Get@@YAHXZ,,0x00376D17,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E04910
+?Rva00376D1DGet@@YAHXZ,,0x00376D1D,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E04908
+?Rva00376D23Get@@YAHXZ,,0x00376D23,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E05FAC
+?Rva0038071EGet@@YAHXZ,,0x0038071E,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E032FC
+?Rva00380724Get@@YAHXZ,,0x00380724,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E046B8
+?Rva0040596CGet@@YAHXZ,,0x0040596C,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E048D0
