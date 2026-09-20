@@ -3252,3 +3252,4 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ?bfmeNoteVJI@BfmeSubVJI@@QAEXPBD@Z,0x00674B40,BFME1 BfmeConv1386 donor call site; same body as rowed bfmeGoBLF
 ?bfmeFreeVDB@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1350 donor call site; same body as rowed scalar delete
 ?bfmeDelVGP@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1356 donor call site; same body as rowed scalar delete
+?bfmeUnhookYQ@Gen009F5040Node@@QAEXXZ,0x00625800,BFME1 BfmeConv2102 donor call site; same body as rowed bfmeUnhookZU

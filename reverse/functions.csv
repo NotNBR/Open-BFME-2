@@ -13103,3 +13103,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GNode@?$SList@VTagBlockIndex@@@@QAEPAXI@Z,,0x006204E0,30,Code/GameEngine/Source/Common/SListTagBlockIndexRemoveAllThunk.cpp,matched,scalar deleting dtor emitted by Remove_All TU; dtor is the pinned 0x6204D0 thunk
 ?bfmeGoVGP@BfmeThingVGP@@QAEHXZ,,0x00176E90,70,Code/GameEngine/Source/Common/BfmeConv1356.cpp,matched,BFME1 donor imports are direct C imports
 ?bfmeFindV39@@YGHPADII@Z,,0x00029850,206,Code/GameEngine/Source/Common/BfmeConv1480.cpp,matched,BFME1 byte-identical donor; GoPA rowed
+?bfmeDropYQ@Gen009F5040@@QAEXPAVBfmeThingYQ@@@Z,,0x006278A0,65,Code/GameEngine/Source/Common/BfmeConv2102.cpp,matched,BFME1 donor unhook helper is rowed bfmeUnhookZU
