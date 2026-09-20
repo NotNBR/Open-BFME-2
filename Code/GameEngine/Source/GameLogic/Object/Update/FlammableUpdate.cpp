@@ -44,6 +44,20 @@
 #include "GameLogic/Module/FlammableUpdate.h"
 #include "GameLogic/Module/FireSpreadUpdate.h"
 
+// BFME2 reads the GameLogic frame at +0x40, four past the reference header's
+// +0x3C (DeletionUpdate_calcSleepDelay precedent). TU-local view so the shared
+// header stays untouched; every getFrame site below wants the retail offset.
+class FlammableGameLogic
+{
+public:
+	UnsignedInt getFrame() const { return m_frame; }
+
+private:
+	unsigned char m_pad[ 0x40 ];
+	UnsignedInt m_frame;
+};
+#define TheGameLogic (*(FlammableGameLogic **)0x00DFE78C)
+
 //-------------------------------------------------------------------------------------------------
 // byte-exact reconstruction: Code/GameEngine/Source/GameLogic/AI/FlammableUpdateModuleDataCtorThunk.cpp
 // ??0FlammableUpdateModuleData@@QAE@XZ present-unmatched
@@ -178,6 +192,7 @@ UpdateSleepTime FlammableUpdate::calcSleepTime()
 
 //-------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------
+// ?tryToIgnite@FlammableUpdate@@QAEXXZ present-unmatched
 void FlammableUpdate::tryToIgnite()
 {
 	if( m_status == FS_NORMAL )
@@ -250,6 +265,7 @@ public:
 	virtual void _pad18(void) = 0;
 	virtual void removeAudioEvent( void *handle ) = 0;
 };
+// ?stopBurningSound@FlammableUpdate@@IAEXXZ present-unmatched
 void FlammableUpdate::stopBurningSound()
 {
 	struct AudioHandleField {
