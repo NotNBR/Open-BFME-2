@@ -39,3 +39,7 @@ typedef _STL::set<AsciiString,_STL::less<AsciiString>,_STL::allocator<AsciiStrin
 template SetExtra::iterator SetExtra::insert(SetExtra::iterator, const AsciiString &);
 
 template StringSetTree::_Rb_tree(const StringSetTree &);
+
+// Faction-set cleanup: player callback22D920 -> tree dtor589BE -> clear57B4B.
+// Erase56CC3 destroys each string at node+16 through the proven dtor48BA39.
+template void StringSetTree::_M_erase(StringSetTree::_Link_type);
