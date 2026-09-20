@@ -13255,3 +13255,4 @@ _subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?get@Rva006BD4C0SubDwordField@@QBEHXZ,,0x006BD4C0,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
 ?get@Rva00709BD0AddDwordField@@QBEHXZ,,0x00709BD0,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
 ?get@Rva00709D10AddDwordField@@QBEHXZ,,0x00709D10,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?notifyAddress@LanTheaterEmulator@@QAEXPAURva00809500Entry@@@Z,,0x006768B0,202,Code/GameEngine/Source/GameNetwork/Y4FeslFavGameAddress_notify.cpp,matched,BFME1 donor Y4FeslFavGameAddress.cpp; two data addresses repaired for BFME2 0x00C71658 and 0x00CE3F98
