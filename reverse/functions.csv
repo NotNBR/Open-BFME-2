@@ -13333,3 +13333,4 @@ _marktagmethods,,0x00750C20,110,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 by
 ?get@Rva005FD4F0ByteChaseField@@QBEEXZ,,0x005FD4F0,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
 ?get@Rva005FF1EAByteChaseField@@QBEEXZ,,0x005FF1EA,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
 ?get@Rva005FF1F1ByteChaseField@@QBEEXZ,,0x005FF1F1,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva0007E066FloatChaseField@@QBEMXZ,,0x0007E066,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
