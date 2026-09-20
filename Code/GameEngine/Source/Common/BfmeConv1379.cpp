@@ -19,6 +19,7 @@ public:
 	void bfmeSetVIW(const char *k, void *v);
 	void bfmeSet2VIW(const char *k, void *a, void *b);
 	void bfmeSet3VIW(const char *k, int v);
+	void bfmeSet4VIW(const char *k, void *v);
 	char m_bfmePad[0x1c];
 	int m_bfme1c;
 };
@@ -54,20 +55,20 @@ void __stdcall bfmeGoDVIW(BfmeMsgVIW *m, void *a, void *b, int rating)
 	m->bfmeSet3VIW("rating", rating);
 }
 
-// Retail stamps 0x61636374 and sets password/newPassword through the same
-// bfmeSetVIW at 0x00655AA0 the TXN call uses: BFME2 routes all three through
-// the one pinned setter, so the donor's distinct bfmeSet4VIW name (a second
-// address in BFME1, pinned at 0x00655A10 for other bodies) is not referenced
-// here. String contents are DIR32 slots; the retail words are kept for
-// readability.
+// Retail 0x6569E0 stamps 0x61636374 and calls Run/Set/Set4/Set4 at
+// 0x655B50/0x655AA0/0x655A10 with the donor's own eaMailFlag and
+// thirdPartyMailFlag words: the donor compiles unchanged. The earlier
+// EVIW@0x656800 claim is corrected by this repoint -- that body pushes
+// TXN/password/newPassword and calls one setter thrice, which is the VIT
+// donor's shape, not this one (see BfmeConv1378.cpp).
 void __stdcall bfmeGoEVIW(BfmeMsgVIW *m, void *a, void *b)
 {
 	void *g = g_bfmeEVIW;
 	m->bfmeRunVIW();
 	m->m_bfme1c = 0x61636374;
 	m->bfmeSetVIW("TXN", g);
-	m->bfmeSetVIW("password", a);
-	m->bfmeSetVIW("newPassword", b);
+	m->bfmeSet4VIW("eaMailFlag", a);
+	m->bfmeSet4VIW("thirdPartyMailFlag", b);
 }
 
 void __stdcall bfmeGoBVIW(BfmeMsgVIW *m, void *a, void *b)
