@@ -3293,3 +3293,4 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ?bfmeFwdThreeSUA@BfmeThingSUA@@QAEXDH@Z,0x000275C0
 ?bfmeDoOR@@YAXPAX0EPAE@Z,0x00025F00
 ?Rva0032378@@YIHPAU_ListboxData@@@Z,0x00323F78,tail-call worker of GadgetListBoxGetTopVisibleEntry; BFME2 top-entry scan with ecx arg; true name unknown so address-derived fastcall
+??4Rva0036CA00Str@@QAEAAV0@ABV0@@Z,0x000366F0,folds with AsciiString op= at this address; read 2x from REL32 at placed ??4Rva000DF920 0x2A7EAA; BFME1 pins same name at 0x00887C90
