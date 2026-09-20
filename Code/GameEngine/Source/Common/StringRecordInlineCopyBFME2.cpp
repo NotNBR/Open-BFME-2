@@ -32,3 +32,11 @@ struct BfmeStringRecord00054F57 {
 };
 BfmeStringRecord00054F57::BfmeStringRecord00054F57(const BfmeStringRecord00054F57 &o) : ansi(o.ansi), wide(o.wide) {}
 template void _STL::_Construct<BfmeStringRecord00054F57,BfmeStringRecord00054F57>(BfmeStringRecord00054F57*,const BfmeStringRecord00054F57&);
+
+// Complete retail record copy at0x00204A30.
+struct BfmeStringRecord00204A30 {
+    unsigned int word0; AsciiString text0; unsigned int word1; AsciiString text1; unsigned int word2;
+    BfmeStringRecord00204A30(const BfmeStringRecord00204A30 &o);
+};
+BfmeStringRecord00204A30::BfmeStringRecord00204A30(const BfmeStringRecord00204A30 &o) : word0(o.word0), text0(o.text0), word1(o.word1), text1(o.text1), word2(o.word2) {}
+template void _STL::_Construct<BfmeStringRecord00204A30,BfmeStringRecord00204A30>(BfmeStringRecord00204A30*,const BfmeStringRecord00204A30&);
