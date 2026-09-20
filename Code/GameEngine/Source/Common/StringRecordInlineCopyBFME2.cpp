@@ -80,3 +80,11 @@ struct BfmeStringRecord005D511F {
 };
 BfmeStringRecord005D511F::BfmeStringRecord005D511F(const BfmeStringRecord005D511F &o) : text0(o.text0), word0(o.word0), word1(o.word1), text1(o.text1), word2(o.word2) {}
 template void _STL::_Construct<BfmeStringRecord005D511F,BfmeStringRecord005D511F>(BfmeStringRecord005D511F*,const BfmeStringRecord005D511F&);
+
+// Retail 0x00111ACF copies strings at +0 and +0x18, a word at +4,
+// then the four-float subobject at +8 through its observed x87 loop.
+struct BfmeStringRecord00111ACF {
+    AsciiString first; unsigned int word4; struct FloatStorage { float values[4]; } middle; AsciiString second;
+    BfmeStringRecord00111ACF(const BfmeStringRecord00111ACF &o) : first(o.first), word4(o.word4), second(o.second) { for (int i=0;i<4;++i) middle.values[i]=o.middle.values[i]; }
+};
+template void _STL::_Construct<BfmeStringRecord00111ACF, BfmeStringRecord00111ACF>(BfmeStringRecord00111ACF *, const BfmeStringRecord00111ACF &);
