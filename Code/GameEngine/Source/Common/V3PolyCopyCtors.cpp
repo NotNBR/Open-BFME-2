@@ -343,3 +343,28 @@ Rva005DBCD1::Rva005DBCD1(const Rva005DBCD1 &other)
 	m_field04 = other.m_field04;
 	m_field06 = other.m_field06;
 }
+
+// --------------------- vptr + two ints + three words (retail 0x0039B893)
+// B2 body-address name: dwords at +0x04/+0x08 then words at +0x0C/+0x0E/+0x10
+// with 66-prefix moves. Six retail E8 callers.
+class Rva0039B893
+{
+public:
+	Rva0039B893(const Rva0039B893 &other);
+	virtual ~Rva0039B893();
+
+	Int m_field04;
+	Int m_field08;
+	Short m_field0C;
+	Short m_field0E;
+	Short m_field10;
+};
+
+Rva0039B893::Rva0039B893(const Rva0039B893 &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field0C = other.m_field0C;
+	m_field0E = other.m_field0E;
+	m_field10 = other.m_field10;
+}

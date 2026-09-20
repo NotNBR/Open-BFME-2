@@ -14119,3 +14119,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ??0Rva0020E449@@QAE@ABV0@@Z,,0x0020E449,51,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 6-int copy-ctor; straight dword run plus-0x04 to plus-0x18; callers 0x0020F399 and 0x004FF2B4; B2 address names the body
 ??0Rva004EE1A9@@QAE@ABV0@@Z,,0x004EE1A9,39,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 3-word copy-ctor; word members at plus-0x04 plus-0x06 plus-0x08 with 66-prefix moves; five E8 callers; B2 address names the body
 ??0Rva005DBCD1@@QAE@ABV0@@Z,,0x005DBCD1,31,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 2-word copy-ctor; word members at plus-0x04 plus-0x06; five E8 callers; B2 address names the body
+??0Rva0039B893@@QAE@ABV0@@Z,,0x0039B893,51,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 2-int-plus-3-word copy-ctor; words at plus-0x0C plus-0x0E plus-0x10; six E8 callers; B2 address names the body
