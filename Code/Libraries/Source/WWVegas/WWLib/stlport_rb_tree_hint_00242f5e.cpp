@@ -24,3 +24,6 @@ template MapInsert00242f5e::iterator MapInsert00242f5e::insert(MapInsert00242f5e
 // Lookup 0x24197A calls the proven key comparator 0x240CE0.
 // The retail subscript at 0x246FF6 uses it on the same tree as insert0x242F5E.
 template Tree242F5E::_Link_type Tree242F5E::_M_lower_bound(const TreeKey00242F5E &) const;
+// _M_find at 0x241BD2 compares the same typed key twice; caller0x246FB0
+// retrieves the mapped dword at node+0x18, matching this proven 28-byte node.
+template Tree242F5E::iterator Tree242F5E::find(const TreeKey00242F5E &);
