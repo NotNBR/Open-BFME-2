@@ -240,3 +240,38 @@ Rva003ADF61::Rva003ADF61(const Rva003ADF61 &other)
 	m_field24 = other.m_field24;
 	m_field28 = other.m_field28;
 }
+
+// ------------------------------------------ vptr + ten ints (retail 0x004F5FD8)
+// B2 body-address name: same ten-dword run as 0x003ADF61 with a different
+// vtable so a different class. Two retail E8 callers.
+class Rva004F5FD8
+{
+public:
+	Rva004F5FD8(const Rva004F5FD8 &other);
+	virtual ~Rva004F5FD8();
+
+	Int m_field04;
+	Int m_field08;
+	Int m_field0C;
+	Int m_field10;
+	Int m_field14;
+	Int m_field18;
+	Int m_field1C;
+	Int m_field20;
+	Int m_field24;
+	Int m_field28;
+};
+
+Rva004F5FD8::Rva004F5FD8(const Rva004F5FD8 &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field0C = other.m_field0C;
+	m_field10 = other.m_field10;
+	m_field14 = other.m_field14;
+	m_field18 = other.m_field18;
+	m_field1C = other.m_field1C;
+	m_field20 = other.m_field20;
+	m_field24 = other.m_field24;
+	m_field28 = other.m_field28;
+}
