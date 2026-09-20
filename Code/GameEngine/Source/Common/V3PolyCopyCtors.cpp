@@ -433,3 +433,72 @@ Rva00168040::Rva00168040(const Rva00168040 &other)
 {
 	m_field0C = other.m_field0C;
 }
+
+// ----------------- vptr + twenty-three ints + three bytes (retail 0x0028C62B)
+// B2 body-address name: seven dwords +0x04..+0x1C then bytes +0x20/+0x21 then
+// ten dwords +0x24..+0x48 then byte +0x4C then six dwords +0x50..+0x64.
+// Sits directly before 0x0028C6D6 and the retail caller 0x0028F6A4 builds
+// both subobjects in one tail.
+class Rva0028C62B
+{
+public:
+	Rva0028C62B(const Rva0028C62B &other);
+	virtual ~Rva0028C62B();
+
+	Int m_field04;
+	Int m_field08;
+	Int m_field0C;
+	Int m_field10;
+	Int m_field14;
+	Int m_field18;
+	Int m_field1C;
+	char m_field20;
+	char m_field21;
+	Int m_field24;
+	Int m_field28;
+	Int m_field2C;
+	Int m_field30;
+	Int m_field34;
+	Int m_field38;
+	Int m_field3C;
+	Int m_field40;
+	Int m_field44;
+	Int m_field48;
+	char m_field4C;
+	Int m_field50;
+	Int m_field54;
+	Int m_field58;
+	Int m_field5C;
+	Int m_field60;
+	Int m_field64;
+};
+
+Rva0028C62B::Rva0028C62B(const Rva0028C62B &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field0C = other.m_field0C;
+	m_field10 = other.m_field10;
+	m_field14 = other.m_field14;
+	m_field18 = other.m_field18;
+	m_field1C = other.m_field1C;
+	m_field20 = other.m_field20;
+	m_field21 = other.m_field21;
+	m_field24 = other.m_field24;
+	m_field28 = other.m_field28;
+	m_field2C = other.m_field2C;
+	m_field30 = other.m_field30;
+	m_field34 = other.m_field34;
+	m_field38 = other.m_field38;
+	m_field3C = other.m_field3C;
+	m_field40 = other.m_field40;
+	m_field44 = other.m_field44;
+	m_field48 = other.m_field48;
+	m_field4C = other.m_field4C;
+	m_field50 = other.m_field50;
+	m_field54 = other.m_field54;
+	m_field58 = other.m_field58;
+	m_field5C = other.m_field5C;
+	m_field60 = other.m_field60;
+	m_field64 = other.m_field64;
+}
