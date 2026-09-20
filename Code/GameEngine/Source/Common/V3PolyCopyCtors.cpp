@@ -572,3 +572,20 @@ Rva005DAA36::Rva005DAA36(void *held)
 {
 	m_field04 = held;
 }
+
+// ------------------------- vptr + held pointer (retail 0x005E67FE)
+// B2 body-address name: same holder shape with a different vtable so a
+// different class. Four retail E8 callers.
+class Rva005E67FE
+{
+public:
+	Rva005E67FE(void *held);
+	virtual ~Rva005E67FE();
+
+	void *m_field04;
+};
+
+Rva005E67FE::Rva005E67FE(void *held)
+{
+	m_field04 = held;
+}
