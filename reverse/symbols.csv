@@ -3232,3 +3232,5 @@ _Rva007FFC10,0x0066C0E0
 ?erase@BfmeVec60@@QAEXPAUBfmeElem60@@0@Z,0x006BF590,address read from REL32 at placed resize 0x6BFCB0; ghidra 77B boundary
 ?release@BfmeTail60@@QAEXXZ,0x00036410,folds with StringBase/AsciiString teardown at this address; read from REL32 at placed resize 0x6BFCB0
 ?insert@BfmeVec60@@QAEXPAUBfmeElem60@@IABU2@@Z,0x006BF800,address read from REL32 at placed resize 0x6BFCB0; ghidra 332B boundary
+?ConvertStringToBSTR@_com_util@@YGPAGPBD@Z,0x00654850,ghidra names this address ConvertStringToBSTR (328B); read from REL32 at placed _bstr_t ctor 0x176CD0
+?_com_issue_error@@YGXJ@Z,0x00654B20,ghidra names this address _com_issue_error (16B); read from REL32 at placed _bstr_t ctor 0x176CD0
