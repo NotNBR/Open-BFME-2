@@ -76,4 +76,35 @@ void parseMultiPlayUnitXPMult( INI *ini, void *, void *store, const void * )
 	}
 }
 
+void parseMultiPlayBuildingXPMult( INI *ini, void *, void *store, const void * )
+{
+	MultiPlayMults *mults = (MultiPlayMults *)store;
+	const char *token = ini->getNextTokenOrNull( ini->getSepsColon() );
+	while ( token )
+	{
+		const char *valueToken = ini->getNextToken( ini->getSepsColon() );
+		if ( valueToken )
+		{
+			Real value = ini->scanReal( valueToken );
+			if ( !_strcmpi( token, "MP1" ) )
+				mults->setBuildingXPMult( 1, value );
+			else if ( !_strcmpi( token, "MP2" ) )
+				mults->setBuildingXPMult( 2, value );
+			else if ( !_strcmpi( token, "MP3" ) )
+				mults->setBuildingXPMult( 3, value );
+			else if ( !_strcmpi( token, "MP4" ) )
+				mults->setBuildingXPMult( 4, value );
+			else if ( !_strcmpi( token, "MP5" ) )
+				mults->setBuildingXPMult( 5, value );
+			else if ( !_strcmpi( token, "MP6" ) )
+				mults->setBuildingXPMult( 6, value );
+			else if ( !_strcmpi( token, "MP7" ) )
+				mults->setBuildingXPMult( 7, value );
+			else if ( !_strcmpi( token, "MP8" ) )
+				mults->setBuildingXPMult( 8, value );
+
+			token = ini->getNextTokenOrNull( ini->getSepsColon() );
+		}
+	}
+}
 
