@@ -401,3 +401,35 @@ Rva0015E640::Rva0015E640(const Rva0015E640 &other)
 {
 	m_field0C = other.m_field0C;
 }
+
+// ---- vptr + two ints base plus derived vptr and third int (retail 0x00168040)
+// B2 body-address name: same inlined-base shape as 0x0015E640 with vtables
+// 0xBD41AC/0xBD41B8. One retail E8 caller at 0x00168571.
+class Rva00168040Base
+{
+public:
+	Rva00168040Base(const Rva00168040Base &other)
+	{
+		m_field04 = other.m_field04;
+		m_field08 = other.m_field08;
+	}
+	virtual ~Rva00168040Base();
+
+	Int m_field04;
+	Int m_field08;
+};
+
+class Rva00168040 : public Rva00168040Base
+{
+public:
+	Rva00168040(const Rva00168040 &other);
+	virtual ~Rva00168040();
+
+	Int m_field0C;
+};
+
+Rva00168040::Rva00168040(const Rva00168040 &other)
+	: Rva00168040Base(other)
+{
+	m_field0C = other.m_field0C;
+}

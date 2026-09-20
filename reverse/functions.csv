@@ -14121,3 +14121,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ??0Rva005DBCD1@@QAE@ABV0@@Z,,0x005DBCD1,31,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 2-word copy-ctor; word members at plus-0x04 plus-0x06; five E8 callers; B2 address names the body
 ??0Rva0039B893@@QAE@ABV0@@Z,,0x0039B893,51,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 2-int-plus-3-word copy-ctor; words at plus-0x0C plus-0x0E plus-0x10; six E8 callers; B2 address names the body
 ??0Rva0015E640@@QAE@ABV0@@Z,,0x0015E640,39,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly derived copy-ctor with inlined base copy; base vptr plus derived vptr plus three ints; caller 0x0016855F; B2 address names the body
+??0Rva00168040@@QAE@ABV0@@Z,,0x00168040,39,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly derived copy-ctor twin of 0x0015E640 shape with distinct vtable pair; caller 0x00168571; B2 address names the body
