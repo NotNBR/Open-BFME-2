@@ -34,6 +34,23 @@ public:
 	float m_damageCoefficient[38]; // DAMAGE_NUM_TYPES, ZH count
 };
 
+class AsciiString
+{
+public:
+	~AsciiString();
+
+private:
+	char *m_text;
+};
+
+class NameKeyGenerator
+{
+public:
+	NameKeyType nameToKey(const AsciiString &name);
+};
+
+extern NameKeyGenerator *TheNameKeyGenerator;
+
 class SubsystemInterface
 {
 public:
@@ -61,6 +78,7 @@ public:
 	void init() { }
 	void reset() { }
 	void update() { }
+	const ArmorTemplate *findArmorTemplate(AsciiString name) const;
 
 private:
 	ArmorTemplateMap m_armorTemplates; // +0x0C
@@ -74,4 +92,18 @@ ArmorStore::ArmorStore()
 ArmorStore::~ArmorStore()
 {
 	m_armorTemplates.clear();
+}
+
+const ArmorTemplate *ArmorStore::findArmorTemplate(AsciiString name) const
+{
+	NameKeyType namekey = TheNameKeyGenerator->nameToKey(name);
+	ArmorTemplateMap::const_iterator it = m_armorTemplates.find(namekey);
+	if (it == m_armorTemplates.end())
+	{
+		return NULL;
+	}
+	else
+	{
+		return &(*it).second;
+	}
 }

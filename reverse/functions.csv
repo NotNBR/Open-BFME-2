@@ -14157,3 +14157,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ??0ArmorStore@@QAE@XZ,,0x00360BB8,70,Code/GameEngine/Source/GameLogic/Object/ArmorStoreCtor.cpp,matched,SubsystemInterface 0xC base plus member hash_map; base and map pins at 0x1B4E63 and 0x360B99; clear resolves to rowed 0x1DBCDC alias
 ?getControllingPlayer@Team@@QBEPAVPlayer@@XZ,,0x0039D7CF,12,Code/GameEngine/Source/Common/RTS/TeamGetControllingPlayer.cpp,matched,Team proto plus 0x30 owner plus 0x08; Object controlling tail target
 ??1ArmorStore@@UAE@XZ,,0x003ED1FC,77,Code/GameEngine/Source/GameLogic/Object/ArmorStoreCtor.cpp,matched,Virtual dtor: in-dtor vtable plus clear plus member and base dtors; member dtor pin at 0x3ED1BE
+?findArmorTemplate@ArmorStore@@QBEPBVArmorTemplate@@VAsciiString@@@Z,,0x00360966,88,Code/GameEngine/Source/GameLogic/Object/ArmorStoreCtor.cpp,matched,NameKey lookup plus map find; _M_find alias pin at 0x2888D4
