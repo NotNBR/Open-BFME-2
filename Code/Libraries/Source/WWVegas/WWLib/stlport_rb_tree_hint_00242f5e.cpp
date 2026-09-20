@@ -17,3 +17,6 @@ namespace _STL { template <> class allocator<char> { public: static char *alloca
 template <> Tree242F5E::_Link_type Tree242F5E::_M_create_node(const IntAsciiPair &value) { _Link_type node=(_Link_type)_STL::allocator<char>::allocate(sizeof(_STL::_Rb_tree_node<IntAsciiPair>),0); _STL::_Construct(&node->_M_value_field,value); return node; }
 template Tree242F5E::iterator Tree242F5E::insert_unique(Tree242F5E::iterator, const IntAsciiPair &);
 
+// The map wrapper directly calls this tree's verified hinted insertion.
+typedef _STL::map<TreeKey00242F5E,TreeOpaqueMapped242F5E,_STL::less<TreeKey00242F5E >,_STL::allocator<IntAsciiPair> > MapInsert00242f5e;
+template MapInsert00242f5e::iterator MapInsert00242f5e::insert(MapInsert00242f5e::iterator, const IntAsciiPair &);
