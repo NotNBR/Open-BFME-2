@@ -13434,3 +13434,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva00405B5DGet@@YA_NXZ,,0x00405B5D,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?Rva0041B8B2Get@@YA_NXZ,,0x0041B8B2,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?Rva0041FE60Get@@YA_NXZ,,0x0041FE60,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?isSlotLocalAlly@@YA_NPBVGameSlot@@@Z,,0x003FF7B7,92,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent family ally helper with BFME1 GameInfo.cpp shape and getSlotIndex inlined and slot in EDI

@@ -169,11 +169,6 @@ public:
     void setMapAvailability(Bool hasMap);
 
 private:
-    // Banked pin ?isSlotLocalAlly@GameSlot@@SA_NXZ @0x003FF7B7: retail
-    // passes the slot in EDI with a bare call, so the declaration takes no
-    // source-level argument; the body is reconstructed separately.
-    static Bool isSlotLocalAlly();
-
     // +0x00 vtable (virtual reset above).
     Int m_state;                    // +0x04
     Bool m_isAccepted;              // +0x08
@@ -228,11 +223,107 @@ const GameSlot *GameInfo::getConstSlot(Int slotNum) const
     return m_slot[slotNum];
 }
 
+// The ally helper and the four apparent members must live in this TU
+// together with getConstSlot above: same-TU visibility into getConstSlot
+// (which preserves EDX) is what keeps the index loop in registers and
+// picks the EDI slot convention with bare calls. Calling through the
+// argless pin instead homes `this` to ESI and never matches.
+static Int getSlotIndex(const GameSlot *slot)
+{
+    for (Int i = 0; i < MAX_SLOTS; ++i)
+    {
+        if (TheGameInfo->getConstSlot(i) == slot)
+            return i;
+    }
+    return -1;
+}
 
-// ?getApparentPlayerTemplate@GameSlot@@QBEHXZ present-unmatched
-// ?getApparentColor@GameSlot@@QBEHXZ present-unmatched
-// ?getApparentStartPos@GameSlot@@QBEHXZ present-unmatched
-// ?getApparentPlayerTemplateDisplayName@GameSlot@@QBE?AVUnicodeString@@XZ present-unmatched
+// ?isSlotLocalAlly@@YA_NPBVGameSlot@@@Z
+static Bool isSlotLocalAlly(const GameSlot *slot)
+{
+    Int slotIndex = getSlotIndex(slot);
+    Int localIndex = TheGameInfo->getLocalSlotNum();
+    const GameSlot *localSlot = TheGameInfo->getConstSlot(localIndex);
+
+    // if either doesn't exist, not an ally
+    if (slotIndex < 0 || localIndex < 0)
+        return false;
+
+    // if slot is us, ally
+    if (slotIndex == localIndex)
+        return true;
+
+    // if slot is same team as us, ally
+    if (slot->getTeamNumber() == localSlot->getTeamNumber() && slot->getTeamNumber() >= 0)
+        return true;
+
+    // if we're an observer, we see all
+    if (localSlot->getOriginalPlayerTemplate() == PLAYERTEMPLATE_OBSERVER)
+        return true;
+
+    // nope
+    return false;
+}
+
+
+// ?getApparentPlayerTemplate@GameSlot@@QBEHXZ
+Int GameSlot::getApparentPlayerTemplate() const
+{
+    if (TheMultiplayerSettings && TheMultiplayerSettings->showRandomPlayerTemplate() &&
+        !isSlotLocalAlly(this))
+    {
+        return m_origPlayerTemplate;
+    }
+    return m_playerTemplate;
+}
+
+// ?getApparentColor@GameSlot@@QBEHXZ
+Int GameSlot::getApparentColor() const
+{
+    if (TheMultiplayerSettings && m_origPlayerTemplate == PLAYERTEMPLATE_OBSERVER)
+        return TheMultiplayerSettings->getColor(PLAYERTEMPLATE_OBSERVER)->getColor();
+
+    if (TheMultiplayerSettings && TheMultiplayerSettings->showRandomColor() &&
+        !isSlotLocalAlly(this))
+    {
+        return m_origColor;
+    }
+    return m_color;
+}
+
+// ?getApparentStartPos@GameSlot@@QBEHXZ
+Int GameSlot::getApparentStartPos() const
+{
+    if (TheMultiplayerSettings && TheMultiplayerSettings->showRandomStartPos() &&
+        !isSlotLocalAlly(this))
+    {
+        return m_origStartPos;
+    }
+    return m_startPos;
+}
+
+// ?getApparentPlayerTemplateDisplayName@GameSlot@@QBE?AVUnicodeString@@XZ
+// OPEN: everything matches except a dead zero dword at [ebp-4] (ebx zeroed
+// early and reused for the null test and the fetch exists pushes). A plain
+// null local constant-propagates away, so the true zero-local source is
+// still unknown. Stays in this TU unrowed.
+UnicodeString GameSlot::getApparentPlayerTemplateDisplayName() const
+{
+    if (TheMultiplayerSettings && TheMultiplayerSettings->showRandomPlayerTemplate() &&
+        m_origPlayerTemplate == PLAYERTEMPLATE_RANDOM && !isSlotLocalAlly(this))
+    {
+        return TheGameText->fetch("GUI:Random");
+    }
+    else if (m_origPlayerTemplate == PLAYERTEMPLATE_OBSERVER)
+    {
+        return TheGameText->fetch("GUI:Observer");
+    }
+    if (m_playerTemplate < 0)
+    {
+        return TheGameText->fetch("GUI:Random");
+    }
+    return ThePlayerTemplateStore->getNthPlayerTemplate(m_playerTemplate)->getDisplayName();
+}
 
 // ?unAccept@GameSlot@@QAEXXZ
 void GameSlot::unAccept()
