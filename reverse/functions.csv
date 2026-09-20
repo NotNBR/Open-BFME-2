@@ -12659,3 +12659,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ??_GRva005D8AE4@@UAEPAXI@Z,,0x005D8AEF,28,Code/GameEngine/Source/Common/Rva005EE30CDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x5D8AE4 plus operator delete 0x2FD60; /O1 pop-ecx shape
 ??_GRva005D8C25@@UAEPAXI@Z,,0x005D8C30,28,Code/GameEngine/Source/Common/Rva005EE30CDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x5D8C25 plus operator delete 0x2FD60; /O1 pop-ecx shape
 ??_GRva005D8EE8@@UAEPAXI@Z,,0x005D8EF3,28,Code/GameEngine/Source/Common/Rva005EE30CDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x5D8EE8 plus operator delete 0x2FD60; /O1 pop-ecx shape
+??_GRva005D91AB@@UAEPAXI@Z,,0x005D91B6,28,Code/GameEngine/Source/Common/Rva005EE30CDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x5D91AB plus operator delete 0x2FD60; /O1 pop-ecx shape
