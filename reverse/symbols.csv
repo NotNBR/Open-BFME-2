@@ -3334,3 +3334,5 @@ _protomark,0x00750B50,address read from the self-recursion REL32 at 0x00750BA9 a
 ?assign@Rva00332217Vec@@QAEXABV1@@Z,0x00332217,opaque 12-byte-element vector assign called by Rva002E9E70 copy-ctor at 0x3372EC; true element type and name unknown so address-derived
 ?rva00832100Release@_STL@@YAXXZ,0x000070E0
 ?isSlotLocalAlly@GameSlot@@CA_NXZ,0x003FF7B7
+??0?$_List_base@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@QAE@ABV?$allocator@VUnicodeString@@@1@@Z,0x004EC36C,identical-code twin of the _List_base ctor already rowed at this address under the int instantiation; our TU emits the same 41B; read from the retail REL32 in the wide fill ctor at 0x0043C072
+?insert@?$list@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@QAEXU?$_List_iterator@VUnicodeString@@U?$_Nonconst_traits@VUnicodeString@@@_STL@@@2@IABVUnicodeString@@@Z,0x0043BFA4,wide 3-arg fill insert called from the retail REL32 in the wide fill ctor at 0x0043C072; 22B body delegates to the worker at 0x0043BEF3

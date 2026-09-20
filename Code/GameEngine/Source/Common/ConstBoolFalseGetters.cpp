@@ -216,3 +216,11 @@ bool Rva0045314BGet(void)
 {
 	return false;
 }
+
+// ?Rva004A6AB2Get@@YA_NXZ @ 0x004a6ab2 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva004A6AB2Get(void)
+{
+	return false;
+}
