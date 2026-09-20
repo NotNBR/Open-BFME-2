@@ -366,3 +366,11 @@ int Rva00030514Get(void)
 {
 	return 0;
 }
+
+// ?Rva000310EBGet@@YAHXZ @ 0x000310eb (3B): returns 0.
+// Follows a ret (prev C3), padded (CC) before next function, no .rdata
+// vtable slot, no direct callers, no branch sources. Opaque name.
+int Rva000310EBGet(void)
+{
+	return 0;
+}
