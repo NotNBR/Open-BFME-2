@@ -142,13 +142,3 @@ public:
 Rva0044954D::~Rva0044954D()
 {
 }
-
-class Rva006892F0 : public GameEngineDeletingBase
-{
-public:
-	virtual ~Rva006892F0();
-};
-
-Rva006892F0::~Rva006892F0()
-{
-}
