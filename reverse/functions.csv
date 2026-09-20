@@ -14095,3 +14095,5 @@ __Locale_tolower,,0x00021B10,291,Code/Libraries/Source/WWVegas/WWLib/stlport_Loc
 ?GadgetCheckBoxIsChecked@@YA_NPAVGameWindow@@@Z,,0x00327B33,19,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetCheckBoxIsChecked.cpp,matched,
 ?BfmeGadgetListBoxSetAudioFeedback@@YAXPAVGameWindow@@_N@Z,,0x0032497D,21,Code/GameEngine/Source/GameClient/GUI/Gadget/BfmeGadgetListBoxSetAudioFeedback.cpp,matched,
 ?bfmeGoENK@@YAXPAVBfmeObjENK@@D@Z,,0x00324992,21,Code/GameEngine/Source/Common/BfmeConv880GoENK.cpp,matched,
+?Rva00897FD0@@YAPBUR4Word@@PBDI@Z,,0x006DBA00,273,Code/GameEngine/Source/Common/R4PerfectHashWithOverflow.cpp,matched,
+?Rva008B60B0@@YAPBUR4Word@@PBDI@Z,,0x006F3F60,273,Code/GameEngine/Source/Common/R4PerfectHashWithOverflow.cpp,matched,
