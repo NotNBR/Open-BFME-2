@@ -88,7 +88,17 @@
 
 #include "rendobj.h"	// the bfmerendobj shim has to win the include guard
 #include "meshgeometry.h"
+// Retail allocates the replacement culling tree with the global scalar
+// operator new (0x2FDA0), not the pooled AABTreeClass::operator new the
+// shared header's W3DMPO_GLUE would emit, so drop the glue for this include
+// only (same technique as BFME1's meshmatdesc.cpp; layout-safe, the macro
+// adds no data members or vtable slots).
+#include "always.h"
+#pragma push_macro("W3DMPO_GLUE")
+#undef W3DMPO_GLUE
+#define W3DMPO_GLUE(ARGCLASS)
 #include "aabtree.h"
+#pragma pop_macro("W3DMPO_GLUE")
 #include "chunkio.h"
 #include "aabox.h"
 #include "obbox.h"
@@ -2066,26 +2076,54 @@ WW3DErrorType MeshGeometryClass::read_aabtree(ChunkLoadClass &cload)
 	return (WW3D_ERROR_OK);
 }
 
-// ?MeshGeometryClass::Scale present-unmatched
+// Retail carries an out-of-line copy of Vector3::Scale at 0x6E0FE. This TU
+// used to emit it for the BoundBoxMin/Max/Center inlines; now that Scale
+// spells those lanes out directly, hold the address so the copy still emits
+// (same pattern as mesh_generate_culling_tree.cpp's kGenerateCullingTree).
+void (Vector3::* kVector3ScaleCopy)(const Vector3 &) = &Vector3::Scale;
+
+// ?Scale@MeshGeometryClass@@QAEXABVVector3@@@Z
 void MeshGeometryClass::Scale(const Vector3 &sc)
 {
 	WWASSERT(Vertex);
 	Vector3 * vert = Vertex->Get_Array();
-	
+
+	// Retail loads sc.X ahead of the vertex word for the X lane but takes the
+	// vertex word first for Y/Z; plain spellings all schedule the same way,
+	// so pin the order with volatile accesses (same technique as BFME1).
 	for (int i=0;i<VertexCount; i++) {
-		vert[i].X *= sc.X;
-		vert[i].Y *= sc.Y;
-		vert[i].Z *= sc.Z;
+		vert[i].X = reinterpret_cast<const volatile float *>(&sc.X)[0] * vert[i].X;
+		*reinterpret_cast<volatile float *>(&vert[i].Y) *= sc.Y;
+		*reinterpret_cast<volatile float *>(&vert[i].Z) *= sc.Z;
 	}
-		
-	BoundBoxMin.Scale(sc);
-	BoundBoxMax.Scale(sc);
-	BoundSphereCenter.Scale(sc);
-	
+
+	// BFME2 drift from Zero Hour: a second per-vertex array rides along.
+	if (VertexNorm != NULL) {
+		Vector3 * vert_norm = VertexNorm->Get_Array();
+		for (int i=0;i<VertexCount; i++) {
+			vert_norm[i].X = reinterpret_cast<const volatile float *>(&sc.X)[0] * vert_norm[i].X;
+			*reinterpret_cast<volatile float *>(&vert_norm[i].Y) *= sc.Y;
+			*reinterpret_cast<volatile float *>(&vert_norm[i].Z) *= sc.Z;
+		}
+	}
+
+	// Retail takes the BoundBoxMin.X lane sc-first but every other bound lane
+	// vertex-first; the order is schedule-fragile, so pin it the same way.
+	BoundBoxMin.X = reinterpret_cast<const volatile float *>(&sc.X)[0] * BoundBoxMin.X;
+	*reinterpret_cast<volatile float *>(&BoundBoxMin.Y) *= sc.Y;
+	*reinterpret_cast<volatile float *>(&BoundBoxMin.Z) *= sc.Z;
+	*reinterpret_cast<volatile float *>(&BoundBoxMax.X) *= sc.X;
+	*reinterpret_cast<volatile float *>(&BoundBoxMax.Y) *= sc.Y;
+	*reinterpret_cast<volatile float *>(&BoundBoxMax.Z) *= sc.Z;
+	*reinterpret_cast<volatile float *>(&BoundSphereCenter.X) *= sc.X;
+	*reinterpret_cast<volatile float *>(&BoundSphereCenter.Y) *= sc.Y;
+	*reinterpret_cast<volatile float *>(&BoundSphereCenter.Z) *= sc.Z;
+
 	float max;
 	max = (sc.X > sc.Y)	? sc.X	: sc.Y;
 	max = (max > sc.Z)	? max		: sc.Z;
-	BoundSphereRadius *= max;
+	*reinterpret_cast<volatile float *>(&BoundSphereRadius) =
+		max * *reinterpret_cast<volatile float *>(&BoundSphereRadius);
 
 	// If scaling uniformly normals are OK:
 	if (sc.X != sc.Y || sc.Y != sc.Z) {
