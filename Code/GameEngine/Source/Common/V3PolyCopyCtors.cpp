@@ -324,3 +324,22 @@ Rva004EE1A9::Rva004EE1A9(const Rva004EE1A9 &other)
 	m_field06 = other.m_field06;
 	m_field08 = other.m_field08;
 }
+
+// -------------------------- vptr + two words (retail 0x005DBCD1)
+// B2 body-address name: two word members at +0x04/+0x06 with 66-prefix
+// moves. Five retail E8 callers.
+class Rva005DBCD1
+{
+public:
+	Rva005DBCD1(const Rva005DBCD1 &other);
+	virtual ~Rva005DBCD1();
+
+	Short m_field04;
+	Short m_field06;
+};
+
+Rva005DBCD1::Rva005DBCD1(const Rva005DBCD1 &other)
+{
+	m_field04 = other.m_field04;
+	m_field06 = other.m_field06;
+}
