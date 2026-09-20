@@ -157,6 +157,7 @@ public:
     virtual void reset();
 
     Bool isHuman() const { return m_state == SLOT_PLAYER; }
+    Bool isAI() const;
     Int getTeamNumber() const { return m_teamNumber; }
     Int getOriginalPlayerTemplate() const { return m_origPlayerTemplate; }
 
@@ -206,6 +207,8 @@ public:
     virtual Int getLocalSlotNum() const = 0;
 
     const GameSlot *getConstSlot(Int slotNum) const;
+
+    Bool isSkirmish();
 
 private:
     // vfptr (+0x00) then pads so the slot array lands at +0x18.
@@ -337,5 +340,31 @@ void GameSlot::setMapAvailability(Bool hasMap)
     {
         m_hasMap = hasMap;
     }
+}
+
+// ?isSkirmish@GameInfo@@QAE_NXZ
+Bool GameInfo::isSkirmish()
+{
+    Bool sawAI = false;
+
+    for (Int i = 0; i < MAX_SLOTS; ++i)
+    {
+        if (i == getLocalSlotNum())
+            continue;
+
+        if (getConstSlot(i)->isHuman())
+            return false;
+
+        if (getConstSlot(i)->isAI())
+        {
+            // BFME2 diverges from the ZH donor here: an allied AI no longer
+            // aborts the scan, it is simply skipped and only a non-allied AI
+            // marks the game as skirmish.
+            if (isSlotLocalAlly(getConstSlot(i)))
+                continue;
+            sawAI = true;
+        }
+    }
+    return sawAI;
 }
 
