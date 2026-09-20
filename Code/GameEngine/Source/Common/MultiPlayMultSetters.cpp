@@ -34,3 +34,10 @@ void MultiPlayMults::setUnitXPMult(Int slot, Real value)
         m_unitXP[index] = value;
 }
 
+// PC RVA 0x235917, 30 bytes; named MultiPlayBuildingXPMult callback supplies the identity.
+void MultiPlayMults::setBuildingXPMult(Int slot, Real value)
+{
+    Int index = slot - 1;
+    if (index >= 0 && index < 20)
+        m_buildingXP[index] = value;
+}
