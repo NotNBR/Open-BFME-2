@@ -7,3 +7,9 @@ int parseWatchdog(char *args[],int num) {
     BFME2WatchdogEnabled=true;
     return 1;
 }
+
+// -noWatchdog at81FBB0 identifies3B94F1 (11B), clearing the same global.
+int parseNoWatchdog(char *args[],int num) {
+    BFME2WatchdogEnabled=false;
+    return 1;
+}
