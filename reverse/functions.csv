@@ -13443,3 +13443,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva0013B150DwordField@@QBEHXZ,,0x0013B150,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
 ?Rva0045314BGet@@YA_NXZ,,0x0045314B,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?get@Rva002A79A1DwordField@@QBEHXZ,,0x002A79A1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
+?get@Rva00367508DwordField@@QBEHXZ,,0x00367508,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
