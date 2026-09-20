@@ -161,3 +161,25 @@ Rva0028C6D6::Rva0028C6D6(const Rva0028C6D6 &other)
 	m_field08 = other.m_field08;
 	m_field0C = other.m_field0C;
 }
+
+// ------------------------- vptr + three ints (retail 0x00318B5C)
+// B2 body-address name: same head as the 33-byte pair but the +0x0C member
+// is a dword (8B49/8948) not a byte. Retail caller 0x00318D6F guards on
+// null then tail-calls into this body.
+class Rva00318B5C
+{
+public:
+	Rva00318B5C(const Rva00318B5C &other);
+	virtual ~Rva00318B5C();
+
+	Int m_field04;
+	Int m_field08;
+	Int m_field0C;
+};
+
+Rva00318B5C::Rva00318B5C(const Rva00318B5C &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field0C = other.m_field0C;
+}
