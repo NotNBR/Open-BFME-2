@@ -13230,3 +13230,4 @@ _adjust_mult_assign,,0x00753EC0,82,Code/Libraries/Source/Lua/lparser.c,matched,B
 _indexupvalue,,0x00753DC0,125,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _pushupvalue
 _pushupvalue,,0x00753E40,121,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _var_or_func
 _var_or_func_tail,,0x007552F0,714,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; switch jump table follows the body; pinned callee of _var_or_func
+_var_or_func,,0x007555C0,136,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; optional and singlevar inline; pinned from the _namestat retail call

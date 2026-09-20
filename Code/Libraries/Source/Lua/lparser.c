@@ -475,6 +475,7 @@ static void var_or_func_tail (LexState *ls, expdesc *v) {
 }
 
 
+// _var_or_func BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void var_or_func (LexState *ls, expdesc *v) {
   /* var_or_func -> ['%'] NAME var_or_func_tail */
   if (optional(ls, '%')) {  /* upvalue? */
