@@ -76,7 +76,6 @@ struct BfmeSaveElement002295D7 : Snapshot {
     CreateAHeroData hero64;
     unsigned char flag1A4;
     AsciiString text1A8;
-    virtual ~BfmeSaveElement002295D7();
 };
 struct BfmeSaveBlock4 { unsigned int values[4]; };
 struct BfmeSaveBlock10 { unsigned int values[10]; };
