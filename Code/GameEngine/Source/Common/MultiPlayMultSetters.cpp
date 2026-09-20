@@ -41,3 +41,11 @@ void MultiPlayMults::setBuildingXPMult(Int slot, Real value)
     if (index >= 0 && index < 20)
         m_buildingXP[index] = value;
 }
+
+// PC RVA 0x235935, 30 bytes; reached by named MultiPlayUnitSpeedMult callback.
+void MultiPlayMults::setUnitSpeedMult(Int slot, Real value)
+{
+    Int index = slot - 1;
+    if (index >= 0 && index < 20)
+        m_unitSpeed[index] = value;
+}
