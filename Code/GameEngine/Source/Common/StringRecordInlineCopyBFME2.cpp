@@ -151,3 +151,12 @@ struct BfmeStringRecord00448113 {
 };
 BfmeStringRecord00448113::BfmeStringRecord00448113(const BfmeStringRecord00448113 &o) : text0(o.text0), text1(o.text1) {}
 template void _STL::_Construct<BfmeStringRecord00448113,BfmeStringRecord00448113>(BfmeStringRecord00448113*,const BfmeStringRecord00448113&);
+
+struct BfmeStringRecord002049D6 {
+    _STL::pair<AsciiString,AsciiString> pair;
+    AsciiString third;
+    BfmeStringRecord002049D6(const BfmeStringRecord002049D6 &o);
+};
+BfmeStringRecord002049D6::BfmeStringRecord002049D6(const BfmeStringRecord002049D6 &o) : pair(o.pair), third(o.third) {}
+template void _STL::_Construct<BfmeStringRecord002049D6,BfmeStringRecord002049D6>(BfmeStringRecord002049D6*,const BfmeStringRecord002049D6&);
+
