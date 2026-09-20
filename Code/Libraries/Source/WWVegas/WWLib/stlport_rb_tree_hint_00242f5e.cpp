@@ -32,3 +32,7 @@ template Tree242F5E::_Link_type Tree242F5E::_M_lower_bound(const TreeKey00242F5E
 template Tree242F5E::iterator Tree242F5E::find(const TreeKey00242F5E &);
 
 template TreeOpaqueMapped242F5E &MapInsert00242f5e::operator[](const TreeKey00242F5E &);
+
+// Retail0x23FBC0 constructs the proven key then copies the separate mapped
+// argument to value+8; its ret8 distinguishes this from the pair copy ctor.
+template IntAsciiPair::pair(const TreeKey00242F5E &, const TreeOpaqueMapped242F5E &);
