@@ -139,3 +139,35 @@ void parseMultiPlayUnitSpeedMult( INI *ini, void *, void *store, const void * )
 		}
 	}
 }
+
+void parseMultiPlayBuildingSpeedMult( INI *ini, void *, void *store, const void * )
+{
+	MultiPlayMults *mults = (MultiPlayMults *)store;
+	const char *token = ini->getNextTokenOrNull( ini->getSepsColon() );
+	while ( token )
+	{
+		const char *valueToken = ini->getNextToken( ini->getSepsColon() );
+		if ( valueToken )
+		{
+			Real value = ini->scanReal( valueToken );
+			if ( !_strcmpi( token, "MP1" ) )
+				mults->setBuildingSpeedMult( 1, value );
+			else if ( !_strcmpi( token, "MP2" ) )
+				mults->setBuildingSpeedMult( 2, value );
+			else if ( !_strcmpi( token, "MP3" ) )
+				mults->setBuildingSpeedMult( 3, value );
+			else if ( !_strcmpi( token, "MP4" ) )
+				mults->setBuildingSpeedMult( 4, value );
+			else if ( !_strcmpi( token, "MP5" ) )
+				mults->setBuildingSpeedMult( 5, value );
+			else if ( !_strcmpi( token, "MP6" ) )
+				mults->setBuildingSpeedMult( 6, value );
+			else if ( !_strcmpi( token, "MP7" ) )
+				mults->setBuildingSpeedMult( 7, value );
+			else if ( !_strcmpi( token, "MP8" ) )
+				mults->setBuildingSpeedMult( 8, value );
+
+			token = ini->getNextTokenOrNull( ini->getSepsColon() );
+		}
+	}
+}
