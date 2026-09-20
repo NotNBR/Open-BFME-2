@@ -1,7 +1,9 @@
-// cl: /DNDEBUG /MD /EHsc /O2 /Ob2
+// cl: /DNDEBUG /MD /EHsc /O2 /Ob2 /G7
 // BFME SurfaceClass is the one-pointer COM owner established by the matched
 // surface-level accessor and its caller TextureHandleApply.cpp. The query
-// and pixel-size helper retain address-qualified BFME identities.
+// and pixel-size helper retain address-qualified BFME identities. /G7 is
+// what selects the cmp-mem null check (83 39 00) over mov+test in the byte
+// size query; without it the head diverges by three bytes.
 class SurfaceClass
 {
 public:
