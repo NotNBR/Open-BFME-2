@@ -13133,3 +13133,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??0Gen_005e9a20@@QAE@ABV0@@Z,,0x0042183F,55,Code/GameEngine/Source/GameClient/Gen_005e9a20.cpp,matched,BFME1 donor; non-polymorphic TU view copies vfptr word as data
 ?bfmeGoCIB@BfmeThingCIB@@QAEXPAX0@Z,,0x00655960,44,Code/GameEngine/Source/Common/BfmeConv606.cpp,matched,BFME1 byte-identical donor; b1 0x007E88D0; ambiguous tiebreak via callee bfmeCallCIB at 0x6594F0 vs CIC at 0x659D90
 ??0StatsCollector@@QAE@XZ,,0x004376FA,91,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,BFME1 StatsCollector donor; O1 attempt
+??0BfmeFontCharsBuffer@@QAE@H@Z,,0x001541E0,65,Code/Libraries/Source/WWVegas/WW3D2/FontCharsClassBfmeBufferCtor.cpp,matched,BFME2 12B glyph buffer ctor; BufferMax/Position plus sized zeroed uint16 array; allocated by Update_Current_Buffer new site
