@@ -3340,3 +3340,4 @@ _var_or_func,0x007555C0,address read from the REL32 call at 0x00755E9E in the _n
 _var_or_func_tail,0x007552F0,address read from the REL32 calls at 0x00755EE 0x0075624 and 0x0075640 in the _var_or_func body; Lua 4.0.1 lparser.c static
 _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE780 at 0x66AC50
 dup_7e86b0,0x00655770
+?bfmeCmpRE@BfmeOtherRE@@QAEDHH@Z,0x00655F90,address read from the retail REL32 in bfmeGoRE at 0x006560F0; BFME1 pin twin at 0x007E8F20
