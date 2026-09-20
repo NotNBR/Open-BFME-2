@@ -3438,3 +3438,4 @@ __strupr,0x0075B4F0
 ?get_allocator@?$_Bvector_base@V?$allocator@_N@_STL@@@_STL@@QBE?AV?$allocator@_N@2@XZ,0x21983a,Complete7-byte stateless Bvector allocator getter independently byte-verified
 ?_M_initialize@?$vector@_NV?$allocator@_N@_STL@@@_STL@@IAEXI@Z,0x3890d5,Decoded complete66-byte bit-vector initialization; allocate rounded bit storage and set begin/end iterators via69F75 and69F22
 ??$copy@U?$_Bit_iter@_NPB_N@_STL@@U?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@2@@_STL@@YA?AU?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@0@U?$_Bit_iter@_NPB_N@0@0U10@@Z,0x3893cd,Decoded complete50-byte public bit-iterator copy wrapper; by-reference dispatch tag forwards to38925D with correct hidden-return ABI
+?RegisterCreateAHeroAtRva0021D517@@YAXPAVCreateAHeroData@@@Z,0x0021D517,Complete49-byte registry operation decoded; searches4-byte CreateAHeroData pointers atVA DFE358 and appends when absent; cdecl one-pointer ABI
