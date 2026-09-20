@@ -177,3 +177,18 @@ struct BfmeStringRecord00222E08 {
 BfmeStringRecord00222E08::BfmeStringRecord00222E08(const BfmeStringRecord00222E08 &o) : text(o.text), ref(o.ref) {}
 template void _STL::_Construct<BfmeStringRecord00222E08,BfmeStringRecord00222E08>(BfmeStringRecord00222E08*,const BfmeStringRecord00222E08&);
 
+
+class Rva0036CA00Str { void *m_item; public: __declspec(nothrow) Rva0036CA00Str(const Rva0036CA00Str &); ~Rva0036CA00Str(); };
+class Rva002390CB {
+    void *m_00; Rva0036CA00Str m_04;
+public:
+    __declspec(nothrow) Rva002390CB(const Rva002390CB &);
+    ~Rva002390CB();
+};
+struct BfmeStringRecord002CF550 {
+    AsciiString text;
+    Rva002390CB ref;
+    BfmeStringRecord002CF550(const BfmeStringRecord002CF550 &o);
+};
+BfmeStringRecord002CF550::BfmeStringRecord002CF550(const BfmeStringRecord002CF550 &o) : text(o.text), ref(o.ref) {}
+template void _STL::_Construct<BfmeStringRecord002CF550,BfmeStringRecord002CF550>(BfmeStringRecord002CF550*,const BfmeStringRecord002CF550&);
