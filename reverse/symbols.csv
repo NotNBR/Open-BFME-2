@@ -3265,3 +3265,4 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ?Set_Single_Rva0015A800@MeshMatDescClass@@QAEXPAXH@Z,0x0015A800,Byte-twin of Set_Single_Material for the +0xB8 family; address read from retail REL32 at 0x00188B54 in read_Rva00188AF0; 55B single install
 ?Set_Rva0015D300@MeshMatDescClass@@QAEXHPAXH@Z,0x0015D300,Byte-twin of Set_Material for the +0xB8 family; address read from retail REL32 at 0x00188B98 in read_Rva00188AF0; 89B indexed install
 ?bfmeAskBUE@BfmeOuterBUE@@QAE_NXZ,0x004C0D4F
+?bfmeAskBVF@BfmeOuterBVF@@QAE_NXZ,0x004C0D4F
