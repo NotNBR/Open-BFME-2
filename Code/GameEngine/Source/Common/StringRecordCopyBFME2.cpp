@@ -128,3 +128,11 @@ struct BfmeStringRecord004071F7 {
     BfmeStringRecord004071F7(const BfmeStringRecord004071F7 &o) : text(o.text), word0(o.word0), word1(o.word1) {}
 };
 template void _STL::_Construct<BfmeStringRecord004071F7,BfmeStringRecord004071F7>(BfmeStringRecord004071F7*,const BfmeStringRecord004071F7&);
+
+// Retail copy 0x004D05B8: observed scalar fields and string member.
+// Original application type and scalar meanings are unknown.
+struct BfmeStringRecord004D05B8 {
+    unsigned short short0; AsciiString text;
+    BfmeStringRecord004D05B8(const BfmeStringRecord004D05B8 &o) : short0(o.short0), text(o.text) {}
+};
+template void _STL::_Construct<BfmeStringRecord004D05B8,BfmeStringRecord004D05B8>(BfmeStringRecord004D05B8*,const BfmeStringRecord004D05B8&);
