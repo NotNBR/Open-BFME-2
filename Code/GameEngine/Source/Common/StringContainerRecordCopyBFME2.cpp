@@ -107,3 +107,5 @@ public:
     ~Rva0036CA00Str();
 };
 struct BfmeRecord001ECAF9{AsciiString a0,a4,a8,aC;Rva0036CA00Str s10;unsigned int w14;_STL::vector<AsciiString> v18;BfmeRecord001ECAF9(const BfmeRecord001ECAF9&o):a0(o.a0),a4(o.a4),a8(o.a8),aC(o.aC),s10(o.s10),w14(o.w14),v18(o.v18){}};template void _STL::_Construct<BfmeRecord001ECAF9,BfmeRecord001ECAF9>(BfmeRecord001ECAF9*,const BfmeRecord001ECAF9&);
+
+struct BfmeRecord001DD3BC{AsciiString a0;Rva0036CA00Str a4;BfmeRecord001DD3BC(const BfmeRecord001DD3BC&o):a0(o.a0),a4(o.a4){}};template void _STL::_Construct<BfmeRecord001DD3BC,BfmeRecord001DD3BC>(BfmeRecord001DD3BC*,const BfmeRecord001DD3BC&);
