@@ -12686,3 +12686,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ??_GRva00486B56@@UAEPAXI@Z,,0x00486BE4,28,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x486B56 plus operator delete 0x2FD60; /O1 pop-ecx shape
 ??_GRva00486C76@@UAEPAXI@Z,,0x00486CDA,28,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x486C76 plus operator delete 0x2FD60; /O1 pop-ecx shape
 ??_GRva004C227A@@UAEPAXI@Z,,0x004C234E,28,Code/GameEngine/Source/GameLogic/Object/Die/DieModuleDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x4C227A plus operator delete 0x2FD60; /O1 pop-ecx shape
+?Rva004AC680Get@@YAHXZ,,0x004AC680,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf5530; prev C2-08-00 with 1 vtable ref and no callers; opaque name
