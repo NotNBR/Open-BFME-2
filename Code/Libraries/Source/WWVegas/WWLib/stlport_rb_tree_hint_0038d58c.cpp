@@ -30,3 +30,5 @@ template <> Tree0038D58C::_Link_type Tree0038D58C::_M_create_node(const TreePair
 // The map wrapper directly calls this tree's verified hinted insertion.
 typedef _STL::map<_STL::basic_string<char>,TreePayload0038D58C,_STL::less<_STL::basic_string<char> >,_STL::allocator<TreePair0038D58C> > MapInsert0038d58c;
 template MapInsert0038d58c::iterator MapInsert0038d58c::insert(MapInsert0038d58c::iterator, const TreePair0038D58C &);
+
+template Tree0038D58C::_Link_type Tree0038D58C::_M_lower_bound(const _STL::basic_string<char> &) const;
