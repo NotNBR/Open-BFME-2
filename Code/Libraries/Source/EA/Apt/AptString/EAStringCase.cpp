@@ -37,7 +37,7 @@ class EAStringC
 
 public:
 	EAStringC &MakeLower();
-	EAStringC &MakeUpper(); // defined in the follow-up commit
+	EAStringC &MakeUpper();
 };
 
 EAStringC &EAStringC::MakeLower()
@@ -45,5 +45,13 @@ EAStringC &EAStringC::MakeLower()
 	const unsigned int size = m_pData->m_uSize;
 	ChangeBuffer(size, 0, size, CB_PUSH_ZERO, size);
 	_strlwr(GetInternalBuffer());
+	return *this;
+}
+
+EAStringC &EAStringC::MakeUpper()
+{
+	const unsigned int size = m_pData->m_uSize;
+	ChangeBuffer(size, 0, size, CB_PUSH_ZERO, size);
+	_strupr(GetInternalBuffer());
 	return *this;
 }
