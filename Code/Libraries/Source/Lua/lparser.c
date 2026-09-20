@@ -259,7 +259,7 @@ static void test_then_block (LexState *ls, expdesc *v) {
 }
 
 
-// _ifstat present-unmatched
+// _ifstat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void ifstat (LexState *ls, int line) {
   /* ifstat -> IF cond THEN block {ELSEIF cond THEN block} [ELSE block] END */
   FuncState *fs = ls->fs;

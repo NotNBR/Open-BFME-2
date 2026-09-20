@@ -13233,3 +13233,4 @@ _var_or_func_tail,,0x007552F0,714,Code/Libraries/Source/Lua/lparser.c,matched,BF
 _var_or_func,,0x007555C0,136,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; optional and singlevar inline; pinned from the _namestat retail call
 _test_then_block,,0x00755CE0,154,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; cond expr next and block inline
 _assignment,,0x007559C0,192,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned from the _namestat retail call
+_ifstat,,0x00755D80,267,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; block inlines with chunk call; pinned from the _stat retail call
