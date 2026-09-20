@@ -13032,3 +13032,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?Rva009A5C40Initialize@@YAHPAURva009A5C40Context@@@Z,,0x001B66B0,292,Code/GameEngine/Source/Common/Rva009A5C40Initialize.cpp,matched,BFME1 byte-identical donor
 ?bfmeReplaceRangeV44@@YGXPAD000H@Z,,0x0002A730,285,Code/GameEngine/Source/Common/BfmeConv1486.cpp,matched,BFME1 byte-identical donor
 ?bfmeSend1028@BfmeSink1028@@QAEXHPAH0@Z,,0x0066F170,332,Code/GameEngine/Source/GameNetwork/Y2FeslGameBrowserPingerAdd.cpp,matched,BFME1 byte-identical donor
+?Rva009B6A30LoadTables@@YAXPAE@Z,,0x001C7330,373,Code/GameEngine/Source/Common/Rva009B6A30LoadTables.cpp,matched,BFME1 byte-identical donor; new pin Rva009B6740BuildTable 0x1C7040

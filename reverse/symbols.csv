@@ -3209,3 +3209,4 @@ _read_number,0x00757200
 ?copyFrom@BfmeTailF4@@QAEXPAU1@@Z,0x000365F0,address read from the REL32 displacement at placed bfmeCopyF4 0x6BEEC0; tail copy folds with StringBase/AsciiString copy-ctor
 ?copyFrom@BfmeTail50@@QAEXPBU1@@Z,0x000365F0,address read from the REL32 displacement at placed BfmeVec50 push_back 0x6BF990; tail copy folds with StringBase copy-ctor
 ?overflow@BfmeVec50@@QAEXPAUBfmeElem50@@ABU2@ABUBfmeFalse50@@I_N@Z,0x006BF6F0,address read from the REL32 displacement at placed push_back 0x6BF990; 5-arg slow-path call shape matches BFME1 overflow; ghidra 267B boundary
+?Rva009B6740BuildTable@@YAXPAE@Z,0x001C7040
