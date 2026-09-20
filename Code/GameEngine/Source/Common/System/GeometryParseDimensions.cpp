@@ -17,6 +17,7 @@ class GeometryInfo {
 public:
     static void parseGeometryMajorRadius(INI *, void *, void *, const void *);
     static void parseGeometryMinorRadius(INI *, void *, void *, const void *);
+    static void parseGeometryHeight(INI *, void *, void *, const void *);
     void calcBoundingStuff();
     char head[0x2C];
     std::vector<GeometryShape> shapes;
@@ -34,4 +35,15 @@ void GeometryInfo::parseGeometryMinorRadius(INI *ini, void *, void *store, const
     if(geometry->shapes.size()!=0)
         geometry->shapes.back().minorRadius=ini->scanReal(ini->getNextToken(0));
     geometry->calcBoundingStuff();
+}
+
+// Already recovered 6BE450; donor facade for GeometryInfo height-cache refresh.
+class BfmeObjEB;
+void bfmeApplyEB(BfmeObjEB *);
+void GeometryInfo::parseGeometryHeight(INI *ini, void *, void *store, const void *) {
+    GeometryInfo *geometry=(GeometryInfo *)store;
+    if(geometry->shapes.size()!=0)
+        geometry->shapes.back().height=ini->scanReal(ini->getNextToken(0));
+    geometry->calcBoundingStuff();
+    bfmeApplyEB((BfmeObjEB *)geometry);
 }
