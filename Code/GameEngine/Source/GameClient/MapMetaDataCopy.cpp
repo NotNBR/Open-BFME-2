@@ -21,13 +21,13 @@ struct Coord3D { float x,y,z; };
 struct Region3D { Coord3D lo,hi; Region3D(const Region3D &); };
 typedef _STL::list<Coord3D> Coord3DList;
 namespace _STL { template<> list<Coord3D>::list(const list<Coord3D> &); }
-class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; public: WaypointMap(const WaypointMap &); ~WaypointMap(); };
+class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; public: WaypointMap(const WaypointMap &); };
 // The copy chain301EF6->301A3E->3012B0->2C552 proves a string-only20B node:
 // these faction names form a set, not a map with an unobserved mapped value.
 struct PlayerPosition { unsigned char human,computer,loadAIScripts; int forceTeam; _STL::set<AsciiString> factions; ~PlayerPosition(); };
 // Implicit copy emits the real EH array-copy helper: eight20B records.
 // Callback302CE2 copies three flags/team/map; callback22D920 destroys map+8.
-struct MapPlayers { PlayerPosition items[8]; ~MapPlayers(); };
+struct MapPlayers { PlayerPosition items[8]; };
 class MapMetaData {
     UnicodeString displayName,description; Region3D extent; int numPlayers;
     unsigned char isMultiplayer,isScenarioMP,isOfficial;
@@ -35,7 +35,7 @@ class MapMetaData {
     WaypointMap waypoints; Coord3DList supplyPositions,techPositions;
     AsciiString fileName; MapPlayers players; unsigned int wordF4;
     UnicodeString cachedDisplayName,cachedDescription;
-public: MapMetaData(const MapMetaData &);
+public: MapMetaData(const MapMetaData &); ~MapMetaData();
 };
 MapMetaData::MapMetaData(const MapMetaData &o)
     : displayName(o.displayName), description(o.description), extent(o.extent), numPlayers(o.numPlayers),
@@ -56,3 +56,7 @@ typedef _STL::_Rb_tree<AsciiString,AsciiString,_STL::_Identity<AsciiString>,_STL
 template FactionSetTree::~_Rb_tree();
 
 PlayerPosition::~PlayerPosition() {}
+
+// Reference member destruction; retail22DBC6 is the complete156B body.
+// POD coordinate-list cleanup is shared with the already-held integer list.
+MapMetaData::~MapMetaData() {}
