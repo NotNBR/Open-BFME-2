@@ -13225,5 +13225,5 @@ _adjust_mult_assign,,0x00753EC0,82,Code/Libraries/Source/Lua/lparser.c,matched,B
 ??1DebugIOCon@@UAE@XZ,,0x00040860,85,Code/Libraries/Source/debug/DebugIOConDestructorThunk.cpp,matched,BFME1 readable donor; b1 0x00890210; Con-adjacency plus Net/Cmd rowed elsewhere
 ?DEREncode@?$Int@$0EA@@@QBEHPAE@Z,,0x00615C90,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,BFME1 byte-identical donor; b1 0x009E9CF0; ambiguous 2-cand tiebreak pair
 ?DERDecode@?$Int@$0EA@@@QAEXPBE@Z,,0x0061DCF0,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,BFME1 byte-identical donor; b1 0x009E9E50; ambiguous 2-cand tiebreak pair with DEREncode@615C90
-?DEREncode@?$Int@$0EA@@@QBEHPAE@Z,,0x00615C90,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,int.h inline forwarder to XMP_DER_Encode at 0x0061C580; cross-resolved with DERDecode
 ?bfmeGoPF@BfmeThingPF@@QAEXPBUBfmeRangePF@@PAX@Z,,0x00028C10,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySix.cpp,matched,BFME1 byte-identical donor; b1 0x0082E910; ambiguous 6-cand tiebreak via DoPF->0x276B0
+?bfmeGoPG@BfmeThingPG@@QAEXPBUBfmeRangePG@@PAX@Z,,0x00028C90,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySeven.cpp,matched,BFME1 byte-identical donor; b1 0x0082E950; ambiguous 6-cand tiebreak via DoPG->0x27740

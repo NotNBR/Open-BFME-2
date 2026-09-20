@@ -3315,3 +3315,4 @@ __strupr,0x0075B4F0
 _code_params,0x00753F20,address read from the REL32 call at 0x00754C64 in the _parlist body; Lua 4.0.1 lparser.c static
 _adjust_mult_assign,0x00753EC0,address read from the REL32 call at 0x0075495C in the _localstat body; Lua 4.0.1 lparser.c static
 ?bfmeDoPF@BfmeThingPF@@QAEXPADPAXH@Z,0x000276B0
+?bfmeDoPG@BfmeThingPG@@QAEXPADPAXH@Z,0x00027740
