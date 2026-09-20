@@ -54,3 +54,5 @@ WaypointMap::WaypointMap(const WaypointMap &o)
 // Retail faction-tree destruction uses the BFME null-checked header free.
 typedef _STL::_Rb_tree<AsciiString,AsciiString,_STL::_Identity<AsciiString>,_STL::less<AsciiString>,_STL::allocator<AsciiString> > FactionSetTree;
 template FactionSetTree::~_Rb_tree();
+
+PlayerPosition::~PlayerPosition() {}
