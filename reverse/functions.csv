@@ -12504,3 +12504,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ??0SmudgeManager@@QAE@XZ,,0x002D25BA,40,Code/GameEngine/Source/GameClient/System/SmudgeManagerCtor.cpp,matched,BFME1 donor verbatim; pin-to-row upgrade; /O1 flips zero-reg to edx; vptrs DIR32
 ?Rva00367839Get@@YAHXZ,,0x00367839,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret C1758C; prev C2-04-00 with 1 vtable ref and no callers; opaque name
 ?Rva00346CF5Get@@YAHXZ,,0x00346CF5,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret C136E8; prev C2-04-00 with 1 vtable ref and no callers; opaque name
+?Rva00362E16Get@@YAHXZ,,0x00362E16,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret C17098; prev C2-04-00 with 1 vtable ref and no callers; opaque name
