@@ -3276,3 +3276,6 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ?bfmeTry1033@BfmeSub1033@@QAEHPAVBfmeF1033@@@Z,0x000069D6
 ?bfmeFail1033@BfmeSub1033@@QAEXXZ,0x00036410
 ?bfmeCallDQD@BfmeOtherDQD@@QAEXPAX@Z,0x00009170
+??0AdaptiveDeltaMotionChannelClass@@QAE@XZ,0x00195F60,address read from retail REL32 at 0x0018F261 in read_channel-AdaptiveDelta 0x0018F230; ctor zeroes 0x1C members then fsin filter-table init per BFME1 motchan donor
+?Load_W3D@AdaptiveDeltaMotionChannelClass@@QAE_NAAVChunkLoadClass@@@Z,0x00195FF0,address read from retail REL32 at 0x0018F27F in read_channel-AdaptiveDelta 0x0018F230; second call slot parallel to TimeCoded Load_W3D at 0x00195D00
+??0SpecialPowerModuleData@@QAE@ABV0@@Z,0x005488E9,base copy ctor for the 0x18 SpecialPowerModuleData intermediate; address read from retail REL32 at 0x00546B11 in FireWeaponPowerModuleData copy 0x00546B08; same vftable 0xC6A520 as base ctor 0x005488C5 placed immediately before

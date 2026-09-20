@@ -17,6 +17,7 @@ class SpecialPowerModuleData
 {
 public:
 	SpecialPowerModuleData();
+	SpecialPowerModuleData(const SpecialPowerModuleData &other);
 	virtual ~SpecialPowerModuleData();
 
 protected:
@@ -32,6 +33,7 @@ class FireWeaponPowerModuleData : public SpecialPowerModuleData
 {
 public:
 	FireWeaponPowerModuleData();
+	FireWeaponPowerModuleData(const FireWeaponPowerModuleData &other);
 	virtual ~FireWeaponPowerModuleData();
 
 private:
@@ -41,6 +43,15 @@ private:
 FireWeaponPowerModuleData::FireWeaponPowerModuleData()
 {
 	m_maxShotsToFire = 1;
+}
+
+// Retail 0x00546B08, immediately after the plain ctor: the base copy runs
+// first (pinned at 0x005488E9, same 0xC6A520 vftable as the base ctor placed
+// just before it), then the derived vftable and m_maxShotsToFire copy.
+FireWeaponPowerModuleData::FireWeaponPowerModuleData(const FireWeaponPowerModuleData &other)
+	: SpecialPowerModuleData(other)
+	, m_maxShotsToFire(other.m_maxShotsToFire)
+{
 }
 
 // ??1FireWeaponPowerModuleData@@UAE@XZ present-unmatched
