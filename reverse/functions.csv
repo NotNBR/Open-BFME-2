@@ -13013,3 +13013,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva009AF570FilterVert@@YAXPAXPAEHPBH@Z,,0x001BFF60,290,Code/GameEngine/Source/Common/Rva009AF570FilterVert.cpp,matched,BFME1 byte-identical donor; table globals masked
 ?bfmeGo7760@@YAXPAHPAXHHHH1@Z,,0x001B81C0,189,Code/GameEngine/Source/Common/BfmeGo7760.cpp,matched,BFME1 byte-identical donor; call-free body
 __Locale_mbtowc,,0x00020C50,252,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleMbtowc.c,matched,BFME1 byte-identical donor; locale tables masked
+?begin@Rva007E9FC0Owner@@QAEXHPAX@Z,,0x00656F70,221,Code/GameEngine/Source/GameNetwork/Rva007E9FC0Begin.cpp,matched,BFME1 donor with one embedded address repaired to BFME2 0xA57BB0
