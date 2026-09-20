@@ -1,4 +1,4 @@
-// cl: /O1
+// cl: /O1 /EHsc
 
 // ?xfer@SkirmishGameInfo@@UAEXPAVXfer@@@Z
 // Retail 0x003FFA3C (272B): persists the skirmish setup through the Xfer
@@ -98,6 +98,28 @@ class UnicodeString;
 class PooledString;
 struct XferUnknown11;
 
+// Minimal string handle: one pointer field, so by-value temporaries take one
+// stack slot. Only the shape matters here; construction and teardown happen
+// in the string-unit bodies these declarations pin.
+class AsciiString
+{
+public:
+	~AsciiString();
+	AsciiString &operator=(const AsciiString &other);
+
+private:
+	void *m_data;
+};
+
+class GameState
+{
+public:
+	AsciiString realMapPathToPortableMapPath(const AsciiString &path) const;
+	AsciiString portableMapPathToRealMapPath(const AsciiString &path) const;
+};
+
+extern GameState *TheGameState;
+
 class Snapshot
 {
 public:
@@ -163,6 +185,8 @@ public:
 
 	virtual Xfer &XferEnum(const char *name, void *data, unsigned int size);
 
+	void xferAsciiString(AsciiString *value) { *this == *value; }
+
 protected:
 	virtual void XferData(unsigned int type, void *data, unsigned int size) = 0;
 };
@@ -189,7 +213,7 @@ public:
 	virtual void xfer(Xfer *xfer);
 };
 
-void __cdecl Rva000306327Xfer(Xfer *xfer, void *block);
+void __cdecl xferMapName(Xfer *xfer, AsciiString *mapNameData);
 
 #define MAX_SLOTS 8
 
@@ -244,7 +268,7 @@ void SkirmishGameInfo::xfer(Xfer *xfer)
 		slot++;
 	} while (slot < MAX_SLOTS);
 
-	Rva000306327Xfer(xfer, &m_bfme40);
+	xferMapName(xfer, (AsciiString *)&m_bfme40);
 
 	*xfer == m_bfme44;
 	*xfer == m_bfme48;
@@ -263,4 +287,25 @@ void SkirmishGameInfo::xfer(Xfer *xfer)
 	} while (--count);
 
 	*xfer == m_bfme88;
+}
+
+// ?xferMapName@@YAXPAVXfer@@PAVAsciiString@@@Z (name to confirm against the
+// emitted symbol before rowing)
+// Retail 0x00306327 (130B): the save-game map path helper. On store, the
+// portable path is made real-side into a temporary and transferred; on load,
+// the transferred name is converted back over the caller's string. Follows
+// the Open-BFME-1 XferMapName.cpp contract: the IsStoring predicate picks
+// the direction and TheGameState owns both conversions.
+void __cdecl xferMapName(Xfer *xfer, AsciiString *mapNameData)
+{
+	if (xfer->IsStoring())
+	{
+		AsciiString tmp = TheGameState->realMapPathToPortableMapPath(*mapNameData);
+		xfer->xferAsciiString(&tmp);
+	}
+	else
+	{
+		xfer->xferAsciiString(mapNameData);
+		*mapNameData = TheGameState->portableMapPathToRealMapPath(*mapNameData);
+	}
 }

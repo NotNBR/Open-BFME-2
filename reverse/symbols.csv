@@ -465,7 +465,7 @@ name,address,notes
 ??1AdaptiveDeltaMotionChannelClass@@QAE@XZ,0x001960E0,identical-code fold with TimeCodedMotionChannelClass::Free already matched here; address read from four retail REL32 sites in ~NodeCompressedMotionStruct at 0x0018F6A0
 ??1AnimSet@GenericObjectCreationNugget@@QAE@XZ,0x001F0495,address read from the REL32 displacement at a placed body
 ??1AppendLockClass@VertexBufferClass@@QAE@XZ,0x00139530,ICF-folded with WriteLock dtor at the same address; retail Copy bodies call it for append-lock cleanup
-??1AsciiString@@QAE@XZ,0x006CEAD0
+??1AsciiString@@QAE@XZ,0x00036410,AsciiString teardown shared with the folded StringBase dtors here; corrected from 0x006CEAD0 whose body is a pool chain drain not a string dtor; REL32 from placed xferMapName epilogue
 ??1AsciiStringMember@@QAE@XZ,0x00036410,AsciiString member dtor ICF-folded at 0x36410; REL32 from Bucket scalar dtor
 ??1AudioEventRTS@@UAE@XZ,0x004EC395,address read from the REL32 displacement at a placed body
 ??1BFME2ScopedRenderEvent@@QAE@XZ,0x00117DA0,Descriptive scope dtor:5-byte tail to EndEvent11F3C0 optional callbackDEDBE0; same EH action at766200
@@ -3505,3 +3505,5 @@ dup_7e86b0,0x00655770
 ?StackWalk@DebugStackwalk@@SAHAAUSignature@1@PAU_CONTEXT@@_N@Z,0x0003C110,CrashDone 3-arg stack walker; direct E8 from 0x0003A8A0+0x22F with (sig zero flag); static member reading per call shape
 ??6@YAAAVDebug@@AAV0@ABUSignature@DebugStackwalk@@@Z,0x0003BF60,CrashDone free operator-left-shift for Signature; direct E8 from 0x0003A8A0+0x33B with (this sig); matches debug_stack.cpp free overload shape
 _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from the retail REL32 in Rva0084ECA0 at 0x00021E68 and Rva0084ECE0 at 0x00021EA8; donor name from BFME1 LocaleCodePageQueries
+?realMapPathToPortableMapPath@GameState@@QBE?AVAsciiString@@ABV2@@Z,0x002DC833,GameState save-path converter per BFME1 XferMapName donor; address read from the REL32 call site in placed xferMapName at 0x00306327
+?portableMapPathToRealMapPath@GameState@@QBE?AVAsciiString@@ABV2@@Z,0x002DC9F7,GameState save-path converter per BFME1 XferMapName donor; address read from the REL32 call site in placed xferMapName at 0x00306327
