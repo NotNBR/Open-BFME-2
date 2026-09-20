@@ -42,3 +42,11 @@ Real MultiPlayMults::getUnitXPMult(Int slot) const
         return m_unitXP[index];
     return 1.0f;
 }
+
+Real MultiPlayMults::getBuildingXPMult(Int slot) const
+{
+    Int index = slot - 1;
+    if (index >= 0 && index < 20)
+        return m_buildingXP[index];
+    return 1.0f;
+}
