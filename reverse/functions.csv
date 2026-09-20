@@ -13985,3 +13985,18 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ??$_Construct@VProductionPrerequisite@@V1@@_STL@@YAXPAVProductionPrerequisite@@ABV1@@Z,,0x002D0C17,45,Code/GameEngine/Source/Common/Thing/ProductionPrerequisiteVectorPushBack.cpp,matched,prereq _Construct 45B exact via explicit-instantiation TU; retail REL32 in push_back at 0x0033EA10; copy ctor pin 0x002D08DA resolves
 ??0ProductionPrerequisite@@QAE@ABV0@@Z,,0x002D08DA,77,Code/GameEngine/Source/Common/Thing/ProductionPrerequisiteCopyCtor.cpp,matched,prereq copy ctor 77B exact via explicit member-init TU; member vectors at +0x00/+0x0C/+0x18 per retail callees; called from vector _Construct at 0x002D0C33
 ??0?$vector@W4ScienceType@@V?$allocator@W4ScienceType@@@_STL@@@_STL@@QAE@ABV01@@Z,,0x0054878E,68,Code/GameEngine/Source/Common/Thing/ProductionPrerequisiteCopyCtor.cpp,matched,vector<ScienceType> copy 68B exact; +0x0C member of ProductionPrerequisite per copy ctor at 0x002D08DA; sar-2 count of 4-byte elements
+?get@Rva000421F2ByteField@@QBEEXZ,,0x000421F2,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva00050CD8ByteField@@QBEEXZ,,0x00050CD8,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva0008541CByteField@@QBEEXZ,,0x0008541C,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva00149590ByteField@@QBEEXZ,,0x00149590,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva00179030ByteField@@QBEEXZ,,0x00179030,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva00179050ByteField@@QBEEXZ,,0x00179050,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva00196140ByteField@@QBEEXZ,,0x00196140,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva0019B0E0ByteField@@QBEEXZ,,0x0019B0E0,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva0028A5F5ByteField@@QBEEXZ,,0x0028A5F5,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva002B245BByteField@@QBEEXZ,,0x002B245B,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva003297EBByteField@@QBEEXZ,,0x003297EB,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva003B8ACBByteField@@QBEEXZ,,0x003B8ACB,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva004543DFByteField@@QBEEXZ,,0x004543DF,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva0049002DByteField@@QBEEXZ,,0x0049002D,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+?get@Rva004EA03AByteField@@QBEEXZ,,0x004EA03A,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
