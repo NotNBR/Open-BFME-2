@@ -64,3 +64,21 @@ Rva003AE07D::Rva003AE07D(const Rva003AE07D &other)
 {
 	m_field04 = other.m_field04;
 }
+
+// ----------------------------------- vptr + two ints (retail 0x003AE11B)
+// B2 body-address name: no B1 class has exactly this shape.
+class Rva003AE11B
+{
+public:
+	Rva003AE11B(const Rva003AE11B &other);
+	virtual ~Rva003AE11B();
+
+	Int m_field04;
+	Int m_field08;
+};
+
+Rva003AE11B::Rva003AE11B(const Rva003AE11B &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+}
