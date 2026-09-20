@@ -12978,3 +12978,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ??0MeshModelClass@@QAE@XZ,,0x001727E0,335,Code/Libraries/Source/WWVegas/WW3D2/MeshModelClassDefaultCtor.cpp,matched,BFME1 meshmdl.cpp default ctor port; same 0xC4 tail and instance list as the copy ctor TU; base default matched 0x168F30 matdesc default pin 0x15B480 matinfo default pin 0x1708D0; trailing int3 excluded
 ?Rva00610F40Get@@YAHXZ,,0x00610F40,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?Rva00610F50Get@@YAHXZ,,0x00610F50,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
+?Rva00610F60Get@@YAHXZ,,0x00610F60,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
