@@ -64,7 +64,7 @@ typedef struct Breaklabel {
 BinOpr subexpr (LexState *ls, expdesc *v, int limit);
 void open_func (LexState *ls, FuncState *fs);
 void adjustlocalvars (LexState *ls, int nvars);
-void parlist (LexState *ls);
+static void parlist (LexState *ls);
 void chunk (LexState *ls);
 void close_func (LexState *ls);
 void pushclosure (LexState *ls, FuncState *func);
@@ -579,6 +579,39 @@ static void body (LexState *ls, int needself, int line) {
   check_match(ls, TK_END, TK_FUNCTION, line);
   close_func(ls);
   pushclosure(ls, &new_fs);
+}
+
+
+// _code_params present-unmatched
+static void code_params (LexState *ls, int nparams, int dots) {
+  FuncState *fs = ls->fs;
+  adjustlocalvars(ls, nparams);
+  luaX_checklimit(ls, fs->nactloc, MAXPARAMS, "parameters");
+  fs->f->numparams = fs->nactloc;  /* `self' could be there already */
+  fs->f->is_vararg = dots;
+  if (dots) {
+    new_localvarstr(ls, "arg", 0);
+    adjustlocalvars(ls, 1);
+  }
+  luaK_deltastack(fs, fs->nactloc);  /* count parameters in the stack */
+}
+
+
+// _parlist BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void parlist (LexState *ls) {
+  /* parlist -> [ param { ',' param } ] */
+  int nparams = 0;
+  int dots = 0;
+  if (ls->t.token != ')') {  /* is `parlist' not empty? */
+    do {
+      switch (ls->t.token) {
+        case TK_DOTS: next(ls); dots = 1; break;
+        case TK_NAME: new_localvar(ls, str_checkname(ls), nparams++); break;
+        default: luaK_error(ls, "<name> or `...' expected");
+      }
+    } while (!dots && optional(ls, ','));
+  }
+  code_params(ls, nparams, dots);
 }
 
 
