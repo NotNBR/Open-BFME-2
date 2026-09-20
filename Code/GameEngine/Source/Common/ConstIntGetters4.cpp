@@ -2031,3 +2031,11 @@ int Rva005232CAGet(void)
 {
 	return 0x006d21bb;
 }
+
+// ?Rva00523D54Get@@YAHXZ @ 0x00523d54 (6B): returns 0x006d21fb.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva00523D54Get(void)
+{
+	return 0x006d21fb;
+}
