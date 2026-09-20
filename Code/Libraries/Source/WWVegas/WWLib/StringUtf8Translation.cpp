@@ -6,10 +6,12 @@
 // cl: /O2 /DNDEBUG /MD
 typedef unsigned short Wide;
 int BFME2Utf8ToWide(const char*,int,Wide*,int);
+int BFME2WideToUtf8(const Wide*,int,char*,int);
 template<class T> class CharSource;
 class UnicodeString;
 template<class T> class StringBase {
     friend class UnicodeString;
+    friend class AsciiString;
     struct Header { int refs; unsigned short length,capacity; T data[1]; };
     Header *data;
     void ensureUniqueBufferOfSize(int,bool,const CharSource<T>*,const CharSource<T>*);
@@ -23,6 +25,21 @@ void UnicodeString::translate(const char* text) {
         int length=BFME2Utf8ToWide(text,-1,0,0);
         ensureUniqueBufferOfSize(length-1,false,0,0);
         int written=BFME2Utf8ToWide(text,-1,data->data,length);
+        if(written) {
+            data->length=written-1;
+            return;
+        }
+    }
+    releaseBuffer();
+}
+class AsciiString:public StringBase<char> {
+public: void translate(const Wide*);
+};
+void AsciiString::translate(const Wide* text) {
+    if(text && *text) {
+        int length=BFME2WideToUtf8(text,-1,0,0);
+        ensureUniqueBufferOfSize(length-1,false,0,0);
+        int written=BFME2WideToUtf8(text,-1,data->data,length);
         if(written) {
             data->length=written-1;
             return;
