@@ -63,3 +63,18 @@ struct BfmeContainerRecord00462D62 {
 };
 BfmeContainerRecord00462D62::BfmeContainerRecord00462D62(const BfmeContainerRecord00462D62 &o) : storage(o.storage), text(o.text) {}
 template void _STL::_Construct<BfmeContainerRecord00462D62,BfmeContainerRecord00462D62>(BfmeContainerRecord00462D62*,const BfmeContainerRecord00462D62&);
+
+// Retail helper 0x002CF0F0 copies exactly 4 bytes and cannot throw.
+class BfmeFixedStorage002CF0F0 {
+    char m_bytes[4];
+public:
+    __declspec(nothrow) BfmeFixedStorage002CF0F0(const BfmeFixedStorage002CF0F0 &);
+};
+
+// Complete memberwise constructor at 0x002CF46E.
+struct BfmeContainerRecord002CF46E {
+    BfmeFixedStorage002CF0F0 storage; AsciiString text; unsigned int word8;
+    BfmeContainerRecord002CF46E(const BfmeContainerRecord002CF46E &o);
+};
+BfmeContainerRecord002CF46E::BfmeContainerRecord002CF46E(const BfmeContainerRecord002CF46E &o) : storage(o.storage), text(o.text), word8(o.word8) {}
+template void _STL::_Construct<BfmeContainerRecord002CF46E,BfmeContainerRecord002CF46E>(BfmeContainerRecord002CF46E*,const BfmeContainerRecord002CF46E&);
