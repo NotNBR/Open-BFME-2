@@ -57,6 +57,7 @@ class ArmorStore : public SubsystemInterface
 {
 public:
 	ArmorStore();
+	virtual ~ArmorStore();
 	void init() { }
 	void reset() { }
 	void update() { }
@@ -66,6 +67,11 @@ private:
 };
 
 ArmorStore::ArmorStore()
+{
+	m_armorTemplates.clear();
+}
+
+ArmorStore::~ArmorStore()
 {
 	m_armorTemplates.clear();
 }
