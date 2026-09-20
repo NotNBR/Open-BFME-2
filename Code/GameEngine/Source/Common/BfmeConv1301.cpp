@@ -17,6 +17,7 @@ public:
 	void bfmeThreeSUA(char a, int b);
 	void bfmeFourSUA(int a, int b);
 	void bfmeFwdOneSUA(char a, int b);
+	void bfmeFwdThreeSUA(char a, int b);
 };
 
 class BfmeStrV16
@@ -35,4 +36,10 @@ void BfmeThingSUA::bfmeOneSUA(char a)
 void BfmeThingSUA::bfmeTwoSUA(char a)
 {
 	((BfmeStrV16 *)this)->bfmeAssignV16(1, a);
+}
+
+// ?bfmeThreeSUA@BfmeThingSUA@@QAEXDH@Z
+void BfmeThingSUA::bfmeThreeSUA(char a, int b)
+{
+	bfmeFwdThreeSUA(a, b);
 }
