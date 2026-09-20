@@ -50,11 +50,28 @@ struct BfmeVector0022C55B {
 // Complete copy at 0x229875 is 141 bytes: vptr 0xBE7460; eight 0x1AC-byte
 // elements at +4; blocks at +0xD64/+0xD74; byte +0xD9C; dword +0xDA0.
 // Its destructor is the direct +0x44 member cleanup at 0x2DC62C.
-struct BfmeSubobject00229875 : Snapshot {
-    unsigned char storage[0xDA0];
-    BfmeSubobject00229875(const BfmeSubobject00229875 &);
-    virtual ~BfmeSubobject00229875();
+// The callbacks are absolute VAs 0x6295D7/0x6294FD, hence RVAs
+// 0x2295D7 (271-byte copy) and 0x2294FD (90-byte destructor).
+// Both independently prove the Snapshot base and 0x1AC element extent.
+struct BfmeSaveElement002295D7 : Snapshot {
+    unsigned char fields[0x1A8];
+    BfmeSaveElement002295D7(const BfmeSaveElement002295D7 &);
+    virtual ~BfmeSaveElement002295D7();
 };
+struct BfmeSaveBlock4 { unsigned int values[4]; };
+struct BfmeSaveBlock10 { unsigned int values[10]; };
+struct BfmeSubobject00229875 : Snapshot {
+    virtual ~BfmeSubobject00229875();
+    virtual void crc(Xfer *);
+    virtual const char *typeName() const;
+    virtual void xfer(Xfer *);
+    BfmeSaveElement002295D7 elements[8];
+    BfmeSaveBlock4 blockD64;
+    BfmeSaveBlock10 blockD74;
+    unsigned char flagD9C;
+    unsigned int wordDA0;
+};
+typedef char BfmeSaveElementSizeCheck[sizeof(BfmeSaveElement002295D7)==0x1AC ? 1 : -1];
 struct BfmeSubobject0022CE19 : Snapshot {
     virtual ~BfmeSubobject0022CE19();
     virtual void crc(Xfer *);
