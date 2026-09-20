@@ -1719,3 +1719,11 @@ int Rva004C86DEGet(void)
 {
 	return 0x00bf4544;
 }
+
+// ?Rva004C87EEGet@@YAHXZ @ 0x004c87ee (6B): returns 0x00bf4528.
+// Follows a ret-8 (prev C2-08-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva004C87EEGet(void)
+{
+	return 0x00bf4528;
+}
