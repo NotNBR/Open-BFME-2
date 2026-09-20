@@ -12613,3 +12613,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva0048515DGet@@YAHXZ,,0x0048515D,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf57d4; prev C2-08-00 with 1 vtable ref and no callers; opaque name
 ?Rva00488515Get@@YAHXZ,,0x00488515,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret c4b424; prev C2-08-00 with 1 vtable ref and no callers; opaque name
 ??_GRva004B611C@@UAEPAXI@Z,,0x004B61F7,28,Code/GameEngine/Source/GameLogic/Object/Behavior/FireWeaponWhenDeadBehaviorDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x4B611C plus operator delete 0x2FD60; /O1 pop-ecx shape
+??_GRva004B6259@@UAEPAXI@Z,,0x004B633B,28,Code/GameEngine/Source/GameLogic/Object/Behavior/FireWeaponWhenDeadBehaviorDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x4B6259 plus operator delete 0x2FD60; /O1 pop-ecx shape
