@@ -42,3 +42,8 @@ MapMetaData::MapMetaData(const MapMetaData &o)
       fileName(o.fileName), players(o.players), wordF4(o.wordF4),
       cachedDisplayName(o.cachedDisplayName), cachedDescription(o.cachedDescription) {}
 typedef char SizeCheck[sizeof(MapMetaData)==0x100?1:-1];
+
+// The tree at3025A5 is already byte-verified under its earlier opaque-payload
+// model; the metadata reference and its coordinate copy chain prove this alias.
+WaypointMap::WaypointMap(const WaypointMap &o)
+    : _STL::map<AsciiString,Coord3D>(o), numStartSpots(o.numStartSpots) {}
