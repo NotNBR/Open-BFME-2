@@ -9,6 +9,7 @@
 // identical under both.
 
 typedef int Int;
+typedef short Short;
 
 class Rva005EA0D0
 {
@@ -301,4 +302,25 @@ Rva0020E449::Rva0020E449(const Rva0020E449 &other)
 	m_field10 = other.m_field10;
 	m_field14 = other.m_field14;
 	m_field18 = other.m_field18;
+}
+
+// ------------------------- vptr + three words (retail 0x004EE1A9)
+// B2 body-address name: three word members at +0x04/+0x06/+0x08 with
+// 66-prefixed loads and stores. Five retail E8 callers.
+class Rva004EE1A9
+{
+public:
+	Rva004EE1A9(const Rva004EE1A9 &other);
+	virtual ~Rva004EE1A9();
+
+	Short m_field04;
+	Short m_field06;
+	Short m_field08;
+};
+
+Rva004EE1A9::Rva004EE1A9(const Rva004EE1A9 &other)
+{
+	m_field04 = other.m_field04;
+	m_field06 = other.m_field06;
+	m_field08 = other.m_field08;
 }
