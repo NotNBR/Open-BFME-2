@@ -12,12 +12,25 @@
 
 typedef bool Bool;
 
+enum ObjectID
+{
+	INVALID_ID = 0
+};
+
 class Object
 {
 public:
 	char m_pad[0x438];
 	unsigned char m_deadFlags;
 };
+
+class GameLogic
+{
+public:
+	Object *findObjectByID(ObjectID id);
+};
+
+extern GameLogic *TheGameLogic;
 
 struct Coord3D
 {
@@ -42,7 +55,7 @@ struct TurretData
 struct TurretStateMachine
 {
 	char m_pad[0x20 - 4];
-	int m_goalObjectID;
+	ObjectID m_goalObjectID;
 	Coord3D m_goalPosition;
 
 	Object *getGoalObject();
@@ -103,4 +116,11 @@ TurretTargetType TurretAI::friend_getTurretTarget(Object *&obj, Coord3D &pos) co
 	}
 
 	return m_target;
+}
+
+// ?getGoalObject@TurretStateMachine@@QAEPAVObject@@XZ
+// retail 0x004D7726, 15 bytes. TheGameLogic ID lookup of the goal ID at +0x20.
+Object *TurretStateMachine::getGoalObject()
+{
+	return TheGameLogic->findObjectByID(m_goalObjectID);
 }
