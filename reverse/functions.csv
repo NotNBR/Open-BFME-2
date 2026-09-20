@@ -13187,3 +13187,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ?MakeUpper@EAStringC@@QAEAAV1@XZ,,0x006D5970,39,Code/Libraries/Source/EA/Apt/AptString/EAStringCase.cpp,matched,BFME1 EAStringCase donor; b1 mirror resolved by strupr-thunk call vs strlwr mirror at 0x6D5940
 ?bfmeLoadTable@@YAXPAE@Z,,0x001B7050,24,Code/GameEngine/Source/Common/Bfme5TinyNine.cpp,matched,BFME1 donor table copy; b1 twin ctor refuted by cdecl stack-arg ABI
 ?bfmeDelTYA@BfmeThingTYA@@QAEPAXE@Z,,0x0066E3D0,83,Code/GameEngine/Source/Common/BfmeConv1327.cpp,matched,BFME1 byte-identical donor; b1 0x00802110; TYA deleter with vftable swaps
+?destroy@Rva007EB310Owner@@QAEPAXI@Z,,0x006582B0,100,Code/GameEngine/Source/Common/Rva007EB310Destroy.cpp,matched,BFME1 byte-identical donor; b1 0x007EB310; singleton teardown wrapper
