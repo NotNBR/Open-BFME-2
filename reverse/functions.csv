@@ -12700,3 +12700,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva004B91A5Get@@YAHXZ,,0x004B91A5,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf4a28; prev C2-08-00 with 1 vtable ref and no callers; opaque name
 ?Rva004B9281Get@@YAHXZ,,0x004B9281,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf4a94; prev C2-08-00 with 1 vtable ref and no callers; opaque name
 ?Rva004B936FGet@@YAHXZ,,0x004B936F,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf4a54; prev C2-08-00 with 1 vtable ref and no callers; opaque name
+?Rva004B9452Get@@YAHXZ,,0x004B9452,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf4a10; prev C2-08-00 with 1 vtable ref and no callers; opaque name
