@@ -13016,3 +13016,4 @@ __Locale_mbtowc,,0x00020C50,252,Code/Libraries/Source/WWVegas/WWLib/stlport_Loca
 ?begin@Rva007E9FC0Owner@@QAEXHPAX@Z,,0x00656F70,221,Code/GameEngine/Source/GameNetwork/Rva007E9FC0Begin.cpp,matched,BFME1 donor with one embedded address repaired to BFME2 0xA57BB0
 _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeConv9C2620.cpp,matched,BFME1 byte-identical donor
 ?bfmeGoVJU@BfmeThingVJU@@QAEXXZ,,0x00663AB0,640,Code/GameEngine/Source/GameNetwork/BfmeGameBrowserVJU.cpp,matched,BFME1 byte-identical donor
+?push_back@BfmeVec50@@QAEXPBUBfmeElem50@@@Z,,0x006BF990,81,Code/GameEngine/Source/Common/Rva0087FF50Push.cpp,matched,BFME1 byte-identical donor; copyFrom and overflow pins added
