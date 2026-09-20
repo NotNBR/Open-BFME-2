@@ -1,6 +1,4 @@
-// ??0StatsCollector@@QAE@XZ
-// partial score=0.98 date=2026-09-20
-// cl: /DNDEBUG /MD /EHsc
+// cl: /O1 /DNDEBUG /MD /EHsc
 
 // ??0StatsCollector@@QAE@XZ, retail 0x004376FA (91 bytes).
 // BFME1 StatsCollector.cpp donor, trimmed to the constructor; the remaining
@@ -8,6 +6,8 @@
 // Retail-measured BFME2 repairs:
 // - GameLogic::m_frame is at +0x40 here (Zero Hour donor has +0x3C).
 // - TheGameLogic bakes to its absolute (no ledger pin for the global).
+// - /O1: the size-optimized allocator reuses ecx for the frame value where
+//   /O2 spends edx.
 
 typedef int Int;
 typedef unsigned int UnsignedInt;
