@@ -13141,3 +13141,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?read_Rva00188AF0@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x00188AF0,190,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadRva00188AF0.cpp,matched,BFME2-new 0x3F reader; vmat_ids template with +0xB8/+0x108 checks and +0xF8 entries over PolyCount; opaque single/index pins 0x15A800/0x15D300
 ?bfmeFwdVMG@BfmeStrVMG@@QAEXHHHH@Z,,0x00029F20,48,Code/GameEngine/Source/Common/BfmeConv1429.cpp,matched,BFME1 byte-identical donor; b1 0x0045EED0; callee bfmeImplVMG already pinned at 0x284D0
 ?bfmeFwdVMI@BfmeStrVMI@@QAEXHHHHH@Z,,0x0002B3E0,52,Code/GameEngine/Source/Common/BfmeConv1431.cpp,matched,BFME1 byte-identical donor; callee bfmeImplVMI already pinned at 0x2AE50
+?bfmeFwdVMO@BfmeStrVMO@@QAEXHHHH@Z,,0x0002B460,57,Code/GameEngine/Source/Common/BfmeConv1436.cpp,matched,BFME1 donor verbatim incl reference __asm call spelling; callee bfmeImplVMO pinned at 0x2AE50
