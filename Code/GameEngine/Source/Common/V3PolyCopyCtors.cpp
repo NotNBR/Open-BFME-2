@@ -1,10 +1,12 @@
-// cl: /DNDEBUG /MD /EHsc
+// cl: /O1 /DNDEBUG /MD /EHsc
 // Retail RVA 0x003AE20D, 93 bytes.
 // Rva005EA0D0 copy constructor: vptr plus thirteen scalar dwords (0x38).
 // Ported from Open-BFME-1 V3PolyCopyCtors.cpp, which documents the family:
 // the class identity is not recovered, so the B1 body-address name carries
 // over; the vptr dword is a DIR32 site the gate takes from the target.
-// The TU defines only this body.
+// /O1, not the base /O2: the one-int sibling below needs the size-optimizer
+// scratch choice (mov ecx,[ecx+4], not edx), and the thirteen-int body is
+// identical under both.
 
 typedef int Int;
 
@@ -44,4 +46,21 @@ Rva005EA0D0::Rva005EA0D0(const Rva005EA0D0 &other)
 	m_field2C = other.m_field2C;
 	m_field30 = other.m_field30;
 	m_field34 = other.m_field34;
+}
+
+// ------------------------------------ vptr + one int (retail 0x003AE07D)
+// B2 body-address name: B1 holds two identical one-int classes, so no B1
+// name is justified for this body.
+class Rva003AE07D
+{
+public:
+	Rva003AE07D(const Rva003AE07D &other);
+	virtual ~Rva003AE07D();
+
+	Int m_field04;
+};
+
+Rva003AE07D::Rva003AE07D(const Rva003AE07D &other)
+{
+	m_field04 = other.m_field04;
 }
