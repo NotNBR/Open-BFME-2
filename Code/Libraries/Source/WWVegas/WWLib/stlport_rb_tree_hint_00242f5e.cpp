@@ -20,3 +20,7 @@ template Tree242F5E::iterator Tree242F5E::insert_unique(Tree242F5E::iterator, co
 // The map wrapper directly calls this tree's verified hinted insertion.
 typedef _STL::map<TreeKey00242F5E,TreeOpaqueMapped242F5E,_STL::less<TreeKey00242F5E >,_STL::allocator<IntAsciiPair> > MapInsert00242f5e;
 template MapInsert00242f5e::iterator MapInsert00242f5e::insert(MapInsert00242f5e::iterator, const IntAsciiPair &);
+
+// Lookup 0x24197A calls the proven key comparator 0x240CE0.
+// The retail subscript at 0x246FF6 uses it on the same tree as insert0x242F5E.
+template Tree242F5E::_Link_type Tree242F5E::_M_lower_bound(const TreeKey00242F5E &) const;
