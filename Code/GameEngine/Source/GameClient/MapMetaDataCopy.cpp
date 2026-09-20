@@ -20,7 +20,7 @@ class AsciiString : private StringBase<char> { public: __forceinline AsciiString
 struct Coord3D { float x,y,z; };
 struct Region3D { Coord3D lo,hi; Region3D(const Region3D &); };
 typedef _STL::list<Coord3D> Coord3DList;
-namespace _STL { template<> list<Coord3D>::list(const list<Coord3D> &); }
+// Instantiate the reference coordinate-list copy and its typed helpers.
 class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; public: WaypointMap(const WaypointMap &); };
 // The copy chain301EF6->301A3E->3012B0->2C552 proves a string-only20B node:
 // these faction names form a set, not a map with an unobserved mapped value.
