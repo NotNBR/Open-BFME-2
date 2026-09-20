@@ -3241,3 +3241,5 @@ _Rva007FFC10,0x0066C0E0
 ?getEnergy@Player@@QAEPAVEnergy@@XZ,0x00657650,lea-getter alias read from REL32 at placed run 0x660EF0; target rowed under Rva006576xx name
 ?get@Rva007EA6A0FieldAddress@@QAEPADXZ,0x00657640,lea-getter alias read from REL32 at placed run 0x660EF0; target rowed under Rva006576xx name
 ?get@Rva007EA690FieldAddress@@QAEPADXZ,0x00657630,lea-getter alias read from REL32 at placed run 0x660EF0; target rowed under Rva006576xx name
+?trim@AsciiString@@QAEXXZ,0x00037CF0,ghidra names this 147B body trim and StringBase carries the same spelling; read twice from REL32 at placed getVideo 0x689B10
+??1?$StringBase@D@@QAE@XZ,0x00036410,public-spelling StringBase teardown for implicit derived dtors; read from REL32 at placed getVideo 0x689B10

@@ -13062,3 +13062,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?reset@Rva0013A820@@QAEXXZ,,0x0050C45A,108,Code/GameEngine/Source/Common/Rva0013A820Reset.cpp,matched,BFME1 byte-identical donor; clear pin added
 ??_GRva000647D4@@UAEPAXI@Z,,0x00064809,28,Code/GameEngine/Source/GameLogic/Object/LocomotorDerivedDtors.cpp,matched,scalar deleting dtor; TU emits pop-ecx shape; calls rowed dtor plus pinned delete
 ?run@Rva007F4440Runner@@UAEXHHH@Z,,0x00660EF0,215,Code/GameEngine/Source/GameNetwork/Rva007F4440FeslClient.cpp,matched,BFME1 donor with repaired constant; 4 lea-getter alias pins added
+?getVideo@VideoPlayer@@UAEPBUVideo@@VAsciiString@@@Z,,0x00689B10,338,Code/GameEngine/Source/GameClient/VideoPlayerGetVideo.cpp,matched,BFME1 donor trimmed to getVideo; implicit AsciiString members emit StringBase base calls; trim and dtor pins added
