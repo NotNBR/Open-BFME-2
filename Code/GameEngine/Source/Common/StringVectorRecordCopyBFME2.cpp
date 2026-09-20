@@ -58,3 +58,16 @@ struct BfmeVectorRecord002154F3 {
 };
 BfmeVectorRecord002154F3::BfmeVectorRecord002154F3(const BfmeVectorRecord002154F3 &o) : text(o.text), names(o.names) {}
 template void _STL::_Construct<BfmeVectorRecord002154F3,BfmeVectorRecord002154F3>(BfmeVectorRecord002154F3*,const BfmeVectorRecord002154F3&);
+
+// Retail0x2AF478: a string and two owning vectors with verified element copies.
+struct BfmeVectorRecord002AF478 {
+    AsciiString text; unsigned int word04;
+    _STL::vector<unsigned int> values08;
+    _STL::vector<AsciiString> names14;
+    unsigned int word20;
+    BfmeVectorRecord002AF478(const BfmeVectorRecord002AF478 &o);
+};
+BfmeVectorRecord002AF478::BfmeVectorRecord002AF478(const BfmeVectorRecord002AF478 &o)
+    : text(o.text), word04(o.word04), values08(o.values08),
+      names14(o.names14), word20(o.word20) {}
+template void _STL::_Construct<BfmeVectorRecord002AF478,BfmeVectorRecord002AF478>(BfmeVectorRecord002AF478*,const BfmeVectorRecord002AF478&);
