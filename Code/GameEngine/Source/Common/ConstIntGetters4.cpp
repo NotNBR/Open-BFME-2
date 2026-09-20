@@ -1911,3 +1911,11 @@ int Rva004D7E5BGet(void)
 {
 	return 0x00c60a08;
 }
+
+// ?Rva004E133CGet@@YAHXZ @ 0x004e133c (6B): returns 0x00c61860.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva004E133CGet(void)
+{
+	return 0x00c61860;
+}
