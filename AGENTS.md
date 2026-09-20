@@ -33,7 +33,7 @@ An explicit request or assigned lane overrides the queue:
 A tier reporting zero candidates is exhausted, not broken. Regenerate with
 `tools/drift_classify.py`, `tools/anchor_unclaimed.py`, `./build.sh`.
 
-Finish or revert each body before the next.
+Finish or revert each body or homogeneous trivial batch before the next.
 
 ## Prefer coverage-first reference sweeps
 
@@ -71,9 +71,36 @@ solo, 46.5% with ten or more siblings landed together, because the layout,
 offsets and callee pins from the first body are what the next one needs. A
 shared header edit costs a full gate: edit every dependent body, pay once.
 
-## Convert, verify, commit, push — per body
+## Batch homogeneous trivial recoveries
 
-1. Make the smallest source and ledger change for one function.
+Atomic does not mean one function per commit.
+
+When several bodies use the same established recovery pattern and form
+one coherent, reviewable change, recover, ledger, verify, and commit them
+as one batch. Examples include tiny getters/setters, thunks, wrappers,
+and reference transfers differing only by verified RVA or offset.
+
+Similar instruction shapes alone do not establish identity, types,
+calling convention, or layout. Verify each member against its own
+evidence; do not extrapolate correctness from a representative sample.
+
+Prefer `Recover 31 disp8 ptr-chase getters` over 31 separate 7-byte
+commits when all members satisfy these conditions. Keep batches small
+enough to review and diagnose; prefer roughly 5–20 entries per commit
+as a guideline, not a quota or hard limit.
+
+Keep substantive reconstruction or work requiring distinct identity,
+compiler, ABI/layout, or reconstruction reasoning in separate atomic
+commits.
+
+Verify the entire batch before committing. If a member fails, determine
+whether the failure undermines the shared pattern. Continue with the
+remaining members only if their evidence and verification still hold;
+otherwise reassess the batch.
+
+## Convert, verify, commit, push — per body or homogeneous trivial batch
+
+1. Make the smallest source and ledger change for one function or a homogeneous trivial batch under the rule above.
 2. `./build.sh <file-or-symbol>`. If a command returns a process or session ID,
    poll it; never launch a duplicate build.
 3. Stage explicit paths only: `git add <specific-paths>`, never `git add .`.
@@ -82,7 +109,7 @@ shared header edit costs a full gate: edit every dependent body, pay once.
 5. `git pull --rebase origin master`, `git push`, then pull --rebase again. On
    rejection: rebase, recheck the ledger, retry, final pull (Subject to the batching and retry limits in #6).
 
-6. This step governs when to run #5 and limits its retries. Normally, publish after 1 verified commit. Keep substantive changes in separate atomic, verified commits; batching changes push frequency only.
+6. This step governs when to run #5 and limits its retries. Normally, publish after 1 verified commit. Keep substantive changes in separate atomic, verified commits; the publication batching below changes push frequency only.
 
 On a non-fast-forward push rejection caused by `origin/master` advancing, rebase, recheck the ledger, complete any required verification, and retry once.
 
