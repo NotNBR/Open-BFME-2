@@ -13173,3 +13173,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeGoOR@@YAXPAX0E@Z,,0x00026F40,34,Code/GameEngine/Source/Common/BfmeTwoHundredFiftyThree.cpp,matched,BFME1 donor; b1 0x0082DF70; callee tiebreak over 0x00026C60 (rowed FindByteInRange) via 0x25F00 (DoOR pinned to FindChV28 twin) vs 0x25B80; mirrors b1 DoOR pin at FindChV28 address
 ?bfmeGoEBKb@@YGXPAVBfmeObjEBK@@PAX@Z,,0x006694C0,24,Code/GameEngine/Source/Common/BfmeConv803.cpp,matched,BFME1 donor; b1 0x007FCFC0; free-slot tiebreak over 0x00668070 (rowed BKG) via distinct global; TwoEBK pinned at 0x00655960 shared with CIB/DoBKG twin; mirrors b1 CIB/DoBKG twin at 0x007E88D0
 _Rva009BD750Vp6FilterWide,,0x001CE050,2596,Code/GameEngine/Source/Common/BfmeConv9BD750.cpp,matched,BFME1 byte-identical donor; b1 0x009BD750
+_Rva009BE180Vp6FilterWideV2,,0x001CEA80,2608,Code/GameEngine/Source/Common/BfmeConv9BE180.cpp,matched,BFME1 byte-identical donor; b1 0x009BE180
