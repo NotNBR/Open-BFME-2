@@ -111,3 +111,11 @@ int Rva00420965Get(void)
 {
 	return 0x00c3bc20;
 }
+
+// ?Rva004CFAE5Get@@YAHXZ @ 0x004cfae5 (6B): returns 0x00010000.
+// Follows a ret-4 (prev C2-04-00), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+int Rva004CFAE5Get(void)
+{
+	return 0x00010000;
+}
