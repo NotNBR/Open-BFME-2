@@ -582,7 +582,7 @@ static void body (LexState *ls, int needself, int line) {
 }
 
 
-// _code_params present-unmatched
+// _code_params BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void code_params (LexState *ls, int nparams, int dots) {
   FuncState *fs = ls->fs;
   adjustlocalvars(ls, nparams);

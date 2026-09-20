@@ -13215,3 +13215,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ?bfmeGoECF@@YAXXZ,,0x007B7270,16,Code/GameEngine/Source/Common/BfmeConv804.cpp,matched,BFME1 byte-identical donor BfmeConv804.cpp; b1 0x00C72050; guarded stdcall ripple; ECI sibling deferred
 ?bfmeGoECI@@YA_NXZ,,0x004441B0,21,Code/GameEngine/Source/Common/BfmeConv804.cpp,matched,BFME1 donor with vtable repair to retail slot 54; b1 0x00516C00; guarded ask shape
 _parlist,,0x00754B70,254,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; next and optional inline; 6 retail calls all resolve
+_code_params,,0x00753F20,131,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned from the _parlist retail call site
