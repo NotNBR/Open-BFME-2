@@ -13114,3 +13114,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GGenericList@@UAEPAXI@Z,,0x00616440,30,Code/Libraries/Source/WWVegas/WWLib/ini.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??_GBufferedFileClass@@UAEPAXI@Z,,0x0061B080,30,Code/Libraries/Source/WWVegas/WWLib/bufffile.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??_GW3DRenderObjectSnapshot@@UAEPAXI@Z,,0x0061F3C0,30,Code/GameEngineDevice/Source/W3DDevice/GameLogic/W3DRenderObjectSnapshotDestructor.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
+??_GOpen2Store880FC0@@UAEPAXI@Z,,0x006255B0,30,Code/GameEngine/Source/GameClient/Open2Twins006.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
