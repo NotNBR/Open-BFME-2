@@ -67,6 +67,18 @@ void BfmeSubEBD::bfmeEraseSubtree(BfmeNodeEBD *node)
 	}
 }
 
+// Reference _Rb_tree::clear, now linked to the verified recursive eraser.
+void BfmeSubEBD::bfmeCallEBD()
+{
+	if (m_nodeCount != 0) {
+		bfmeEraseSubtree(m_header->parent);
+		m_header->left = m_header;
+		m_header->parent = 0;
+		m_header->right = m_header;
+		m_nodeCount = 0;
+	}
+}
+
 struct BfmeThingEBD
 {
 	void bfmeGoEBD();
