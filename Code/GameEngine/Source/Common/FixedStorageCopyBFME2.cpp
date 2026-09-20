@@ -11,3 +11,10 @@ public:
     __declspec(nothrow) BfmeFixedStorage0004543D(const BfmeFixedStorage0004543D &);
 };
 BfmeFixedStorage0004543D::BfmeFixedStorage0004543D(const BfmeFixedStorage0004543D &other) { memcpy(this, &other, sizeof(*this)); }
+
+class BfmeFixedStorage002CF0F0 {
+    char m_bytes[4];
+public:
+    __declspec(nothrow) BfmeFixedStorage002CF0F0(const BfmeFixedStorage002CF0F0 &);
+};
+BfmeFixedStorage002CF0F0::BfmeFixedStorage002CF0F0(const BfmeFixedStorage002CF0F0 &other) { memcpy(this, &other, sizeof(*this)); }
