@@ -138,3 +138,40 @@ Int GadgetListBoxGetTopVisibleEntry(GameWindow *window)
 
 	return Rva0032378(listData);
 }
+
+// BFME2 top-entry scan, retail 0x00323F78 (36B). Same algorithm as the BFME1
+// static getListboxTopEntry, but retail passes the list in ecx, walks rows
+// with a 0x10 stride, and keeps only one saved register.
+struct RvaTopRow
+{
+	Int listHeight;
+	char pad[0x0C];
+};
+
+struct RvaTopLayout
+{
+	char pad0[0x18];
+	RvaTopRow *rows;
+	char pad1[0x10];
+	Short endPos;
+	char pad2[0x16];
+	Short displayPos;
+};
+
+int __fastcall Rva0032378(ListboxData *list)
+{
+	Int entry;
+	const RvaTopLayout *layout = (const RvaTopLayout *)list;
+
+	// determine which entry is at the top of the display area
+	for (entry = 0; ; entry++)
+	{
+		if (layout->rows[entry].listHeight > layout->displayPos)
+			return entry;
+
+		if (entry >= layout->endPos)
+			return 0;
+	}
+
+	return 0;
+}
