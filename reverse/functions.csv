@@ -13446,3 +13446,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva00367508DwordField@@QBEHXZ,,0x00367508,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
 ?Rva004A6AB2Get@@YA_NXZ,,0x004A6AB2,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ??0?$list@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@QAE@I@Z,,0x0043C072,94,Code/Libraries/Source/WWVegas/WWLib/stlport_list_unicodestring_insert.cpp,matched,wide fill ctor; wide releaseBuffer teardown names element type; base/insert via twin pins; true extent 94B
+?get@Rva004F04F1DwordField@@QBEHXZ,,0x004F04F1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
