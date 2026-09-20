@@ -14106,3 +14106,4 @@ __Locale_tolower,,0x00021B10,291,Code/Libraries/Source/WWVegas/WWLib/stlport_Loc
 ?saveOffOriginalInfo@GameSlot@@QAEXXZ,,0x003FF0D4,19,Code/GameEngine/Source/GameNetwork/GameSlotHumanSaveoff.cpp,matched,BFME1 GameInfo.cpp saveOffOriginalInfo minus DEBUG_LOG; orig triple copy
 _Rva0084ECA0,,0x00021E30,61,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084ECA0
 _Rva0084ECE0,,0x00021E70,61,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084ECE0
+??0Rva004AB7EB@@QAE@ABV0@@Z,,0x004AB7EB,21,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 1-int copy-ctor twin of 0x003AE07D shape with distinct vtable; caller 0x004ABB0A re-installs same vptr; B2 address names the body

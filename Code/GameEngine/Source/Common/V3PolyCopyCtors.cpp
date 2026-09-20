@@ -103,3 +103,21 @@ Rva003AE315::Rva003AE315(const Rva003AE315 &other)
 	m_field08 = other.m_field08;
 	m_field0C = other.m_field0C;
 }
+
+// ------------------------- vptr + one int (retail 0x004AB7EB)
+// B2 body-address name: same 21-byte shape as 0x003AE07D with a different
+// vtable so a different class. Retail caller 0x004ABB0A re-installs this
+// same vptr right after the call.
+class Rva004AB7EB
+{
+public:
+	Rva004AB7EB(const Rva004AB7EB &other);
+	virtual ~Rva004AB7EB();
+
+	Int m_field04;
+};
+
+Rva004AB7EB::Rva004AB7EB(const Rva004AB7EB &other)
+{
+	m_field04 = other.m_field04;
+}
