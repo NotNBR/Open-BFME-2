@@ -13242,3 +13242,4 @@ _pushclosure,,0x00753FF0,142,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 b
 _body,,0x00754C70,182,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; new_localvarstr inlines; static pushclosure call
 _chunk,,0x00756110,167,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; loop over stat with optional separators
 _subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; ICF-folded in BFME1 so the name is this sweeps pick among its twins; getunopr inlines
+?get@Rva005F17A3AddDwordField@@QBEHXZ,,0x005F17A3,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
