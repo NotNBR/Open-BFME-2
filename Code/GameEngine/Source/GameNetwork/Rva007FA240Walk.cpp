@@ -121,3 +121,31 @@ void Rva007FA2C0::dispatch(void *a, void *b)
 		Rva007F93E0(a, b, m_1C);
 }
 
+void Rva007FA2C0::helper(void *slot, int line) throw()
+{
+	char buf[0x34];
+	Rva007FA170Slot *s = (Rva007FA170Slot *)slot;
+	if (s)
+	{
+		if (s->m_08)
+		{
+			Rva007EB810Get()->log(0, "--- timeout of Block request\n");
+			s->m_08->setError(line);
+			s->m_04 = 2;
+			return;
+		}
+		if (s->m_0C)
+		{
+			Rva007EB810Get()->log(0, "--- timeout of Nonblock request\n");
+			Rva007E8810Message *msg = (Rva007E8810Message *)buf;
+			msg->Rva007E8810Message::Rva007E8810Message();
+			msg->setError(line);
+			s->m_0C(msg, s->m_10);
+			clearSlot(s);
+			msg->Rva007E8810Message::~Rva007E8810Message();
+			return;
+		}
+		Rva007EB810Get()->log(0, "--- ignored timeout\n");
+	}
+}
+
