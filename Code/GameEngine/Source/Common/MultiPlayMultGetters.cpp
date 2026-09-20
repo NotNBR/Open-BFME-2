@@ -50,3 +50,11 @@ Real MultiPlayMults::getBuildingXPMult(Int slot) const
         return m_buildingXP[index];
     return 1.0f;
 }
+
+Real MultiPlayMults::getUnitSpeedMult(Int slot) const
+{
+    Int index = slot - 1;
+    if (index >= 0 && index < 20)
+        return m_unitSpeed[index];
+    return 1.0f;
+}
