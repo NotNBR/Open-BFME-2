@@ -3824,3 +3824,4 @@ __strupr,0x0075B4F0
 ??1?$pair@$$CBVAsciiString@@UTreeHintPayload001F8ACB@@@_STL@@QAE@XZ,0x0048BA39,Complete5B implicit pair destructor releases its AsciiString key; scalar payload has no destructor; verified map50 erase1F8276 passes node+16
 ??1?$pair@$$CBHV?$vector@IV?$allocator@I@_STL@@@_STL@@@_STL@@QAE@XZ,0x000796BC,Complete15B pair destructor frees vector storage at pair+4; same retail ICF body held by LocomotorSetType vector-pointer pair; map74 copy and erase prove this specialization
 ??1Rva00CE1E14Base@@UAE@XZ,0x0065D180,Complete7B base destructor installs vtableCE1E14; derived mutex destructor656C10 tail-calls it and existing deleting destructor656C30 calls it; ctor65D170 installs same base table
+??0Rva00CE1E14Base@@QAE@XZ,0x0065D170,Complete9B base constructor returns this and installs vtableCE1E14; mutex ctor656B70 calls it before installing derived vtableCE12FC and CreateMutexA

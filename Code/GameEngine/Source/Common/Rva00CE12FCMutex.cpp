@@ -29,6 +29,11 @@ private:
     void *m_handle;
 };
 
+Rva00CE12FCMutex::Rva00CE12FCMutex()
+    : m_handle(CreateMutexA(0, 0, 0))
+{
+}
+
 Rva00CE12FCMutex::~Rva00CE12FCMutex()
 {
     if (m_handle != 0)
