@@ -793,7 +793,7 @@ static void breakstat (LexState *ls) {
 }
 
 
-// _namestat present-unmatched
+// _namestat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void namestat (LexState *ls) {
   /* stat -> func | ['%'] NAME assignment */
   FuncState *fs = ls->fs;
