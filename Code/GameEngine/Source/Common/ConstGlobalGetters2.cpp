@@ -162,3 +162,12 @@ int Rva00610F10Get(void)
 {
 	return G00E08C48;
 }
+
+// ?Rva00610F20Get@@YAHXZ @ 0x00610F20 (6B): returns global at 0xE08CF0.
+// Follows int3 (prev CC), followed by CC padding, no .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+extern int G00E08CF0;
+int Rva00610F20Get(void)
+{
+	return G00E08CF0;
+}
