@@ -502,3 +502,22 @@ Rva0028C62B::Rva0028C62B(const Rva0028C62B &other)
 	m_field60 = other.m_field60;
 	m_field64 = other.m_field64;
 }
+
+// ------------------------- vptr + held pointer (retail 0x005CB22A)
+// B2 body-address name: the +0x04 member takes the argument pointer itself
+// (89 48 04 with no dereference) so this keeps rather than copies. The held
+// type is not recovered so it is void. Retail caller 0x00572C5F installs a
+// derived vptr right after the call. Six retail E8 callers.
+class Rva005CB22A
+{
+public:
+	Rva005CB22A(void *held);
+	virtual ~Rva005CB22A();
+
+	void *m_field04;
+};
+
+Rva005CB22A::Rva005CB22A(void *held)
+{
+	m_field04 = held;
+}
