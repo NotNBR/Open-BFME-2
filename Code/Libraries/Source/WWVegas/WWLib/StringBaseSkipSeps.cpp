@@ -3,42 +3,54 @@
 // File-static skipSeps / skipNonSeps for StringBase::nextToken.
 // Retail calls them with the string in EAX and the separator set in EDI:
 // MSVC 7.1's private convention for a static whose every call site it can
-// see. The nextToken-shaped caller below is what establishes that
-// convention; it is not claimed.
+// see. The real nextToken below is the second such caller (it used to be a
+// shape-only host method); both keep the convention. Declarations for the
+// StringBase members come from string_base.h (getBufferForRead rides the
+// 0x00036640 pin; set and releaseBuffer are ledger-matched).
+
+#include <string.h>
+
+#include "string_base.h"
 
 static char *skipSeps(char *p, const char *seps);
 static char *skipNonSeps(char *p, const char *seps);
 
-class StringBaseSkipHost
-{
-public:
-	struct Header
-	{
-		int ref_count;
-		unsigned short length;
-		unsigned short capacity;
-		char data[1];
-	};
-
-	Header *m_data;
-
-	bool nextToken(StringBaseSkipHost *tok, const char *seps);
-};
-
-bool StringBaseSkipHost::nextToken(StringBaseSkipHost *tok, const char *seps)
+// Retail 0x00036D90 (186 bytes): StringBase<char>::nextToken, destructive
+// tokenize. The out string receives the next token, this string keeps the
+// remainder, both are released when no token is found. Transferred from the
+// BFME1 reconstruction (reference/open-bfme-1/.../string/StringBase.cpp),
+// which survives there only as a naked lift; the C++ here is new.
+//
+// Shape, all retail-measured: the three validity checks joined by || share
+// the far bare-false epilogue (three near je's; separate ifs lay the block
+// out locally instead), the callee-saved pushes sink below the checks, the
+// separators default to "space LF CR TAB", the token copies through
+// out->getBufferForRead plus the memcpy intrinsic's rep movsd/movsb pair
+// with a trailing NUL, and the remainder length reloads m_data twice - the
+// sub-then-lea needs the fresh eax load, reusing the first one colors it
+// edx instead.
+template <>
+bool StringBase<char>::nextToken(StringBase<char> *out, const char *seps)
 {
 	Header *data = m_data;
-	if (data == 0)
-		return false;
-	if (data->length == 0)
-		return false;
-	if (tok == this)
+	if (data == 0 || data->length == 0 || out == this)
 		return false;
 	if (seps == 0)
 		seps = " \n\r\t";
 	char *start = skipSeps(data->data, seps);
 	char *end = skipNonSeps(start, seps);
-	return end > start;
+	if (end > start) {
+		int len = (int)(end - start);
+		char *dest = out->getBufferForRead(len);
+		memcpy(dest, start, len);
+		dest[len] = 0;
+		int total = m_data ? m_data->length : 0;
+		set(end, (int)((char *)m_data - end) + total + 8);
+		return true;
+	}
+	releaseBuffer();
+	out->releaseBuffer();
+	return false;
 }
 
 // retail 0x00887720 (54 bytes): same shape as skipNonSeps -- the first

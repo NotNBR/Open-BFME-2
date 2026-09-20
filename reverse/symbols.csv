@@ -3202,3 +3202,5 @@ _read_number,0x00757200
 ?get_bone_links@MeshGeometryClass@@IAEPAG_N@Z,0x0016A0C0,Load_W3D call-site callee
 ?testSetAndClear@?$BitFlags@$0FG@@@QBE_NABV1@0@Z,0x0026157E,BitFlags exempt-required tester called by DieMuxData isDieApplicable
 ?bfmeReset@Gen009D6E10@@QAEXPAVBfmePeer@@@Z,0x0060B8C6
+?getBufferForRead@?$StringBase@D@@QAEPADH@Z,0x00036640,BFME2 nextToken calls it as out->getBufferForRead(len) thiscall returning the token buffer; BFME1 nextToken calls BFME1 getBufferForRead at the same structural site
+?Get_Description@SurfaceClass@@QAEXAAUSurfaceDescription@1@@Z,0x00116620,BFME2 SurfaceByteSize calls it (&desc) thiscall at the same structural site where BFME1 Byte_Size calls its matched Get_Description 0x8FC5C0; fills SurfaceDescription from the COM surface
