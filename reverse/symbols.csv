@@ -3237,3 +3237,7 @@ _Rva007FFC10,0x0066C0E0
 ?bfmeFwdVMV@@YA?AUBfmeItVMV@@U1@0D@Z,0x00026F70
 ?bfmeFwdVMU@@YA?AUBfmeItVMU@@U1@0D@Z,0x00026E00
 ?clear@Rva0036CA00Str@@QAEXXZ,0x00036410,folds with StringBase/AsciiString teardown at this address; read 10x from REL32 at placed reset 0x50C45A
+?get@Rva007EA660FieldAddress@@QAEPADXZ,0x00657600,lea-getter alias read from REL32 at placed run 0x660EF0; target rowed under Rva006576xx name
+?getEnergy@Player@@QAEPAVEnergy@@XZ,0x00657650,lea-getter alias read from REL32 at placed run 0x660EF0; target rowed under Rva006576xx name
+?get@Rva007EA6A0FieldAddress@@QAEPADXZ,0x00657640,lea-getter alias read from REL32 at placed run 0x660EF0; target rowed under Rva006576xx name
+?get@Rva007EA690FieldAddress@@QAEPADXZ,0x00657630,lea-getter alias read from REL32 at placed run 0x660EF0; target rowed under Rva006576xx name
