@@ -13258,3 +13258,4 @@ _subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?notifyAddress@LanTheaterEmulator@@QAEXPAURva00809500Entry@@@Z,,0x006768B0,202,Code/GameEngine/Source/GameNetwork/Y4FeslFavGameAddress_notify.cpp,matched,BFME1 donor Y4FeslFavGameAddress.cpp; two data addresses repaired for BFME2 0x00C71658 and 0x00CE3F98
 ?get@Rva000425C4PtrChaseField@@QBEHXZ,,0x000425C4,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
 ?get@RvaB49A1PtrChaseField@@QBEHXZ,,0x000B49A1,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva262193PtrChaseField@@QBEHXZ,,0x00262193,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
