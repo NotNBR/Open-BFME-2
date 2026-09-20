@@ -20,3 +20,4 @@ public:
 };
 struct BfmeHeroElement005C39DE { AsciiString text; unsigned word4, word8; BfmeHeroElement005C39DE(); BfmeHeroElement005C39DE &operator=(const BfmeHeroElement005C39DE &); };
 BfmeHeroElement005C39DE::BfmeHeroElement005C39DE() : text(), word4(0), word8(0) {}
+BfmeHeroElement005C39DE &BfmeHeroElement005C39DE::operator=(const BfmeHeroElement005C39DE &o) { if (this != &o) { text=o.text; word4=o.word4; word8=o.word8; } return *this; }
