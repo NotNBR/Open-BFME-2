@@ -33,3 +33,6 @@ public:
 void MeshMatDescClass::Set_Single_Texture(const RefCountPtr<TextureClass>& texture,int pass,int stage) {
     Textures[pass][stage]=texture;
 }
+void MeshMatDescClass::Set_Texture(int index,const RefCountPtr<TextureClass>& texture,int pass,int stage) {
+    Get_Texture_Array(pass,stage,true)->Get_Array()[index]=texture;
+}
