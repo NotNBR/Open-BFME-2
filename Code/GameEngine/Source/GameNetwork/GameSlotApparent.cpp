@@ -303,10 +303,6 @@ Int GameSlot::getApparentStartPos() const
 }
 
 // ?getApparentPlayerTemplateDisplayName@GameSlot@@QBE?AVUnicodeString@@XZ
-// OPEN: everything matches except a dead zero dword at [ebp-4] (ebx zeroed
-// early and reused for the null test and the fetch exists pushes). A plain
-// null local constant-propagates away, so the true zero-local source is
-// still unknown. Stays in this TU unrowed.
 UnicodeString GameSlot::getApparentPlayerTemplateDisplayName() const
 {
     if (TheMultiplayerSettings && TheMultiplayerSettings->showRandomPlayerTemplate() &&
