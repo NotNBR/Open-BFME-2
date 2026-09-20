@@ -22,3 +22,11 @@ int Rva001ED62EGet(void)
 {
 	return 0x00c036e8;
 }
+
+// ?Rva002009FBGet@@YAHXZ @ 0x002009fb (6B): returns 0x00c1ee54.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+int Rva002009FBGet(void)
+{
+	return 0x00c1ee54;
+}
