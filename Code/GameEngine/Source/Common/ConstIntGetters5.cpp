@@ -119,3 +119,11 @@ int Rva004CFAE5Get(void)
 {
 	return 0x00010000;
 }
+
+// ?Rva004FF2EEGet@@YAHXZ @ 0x004ff2ee (6B): returns 0x00e04544.
+// Follows a ret-4 (prev C2-04-00), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+int Rva004FF2EEGet(void)
+{
+	return 0x00e04544;
+}
