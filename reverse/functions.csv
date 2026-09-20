@@ -12534,3 +12534,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?reset@SmudgeManager@@UAEXXZ,,0x002D27CC,57,Code/GameEngine/Source/GameClient/System/SmudgeManagerReset.cpp,matched,BFME1 donor verbatim; used +0x08/head +0x0C; Remove_Head pin + reset row + Add_Tail pin
 ?Rva003ABBF5Get@@YAHXZ,,0x003ABBF5,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret C1C4F4; prev C2-08-00 with 2 vtable ref and no callers; opaque name
 ?Rva003ABC9FGet@@YAHXZ,,0x003ABC9F,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret C1C51C; prev C2-08-00 with 2 vtable ref and no callers; opaque name
+?Rva003ABDB2Get@@YAHXZ,,0x003ABDB2,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret C1C5EC; prev C2-08-00 with 2 vtable ref and no callers; opaque name
