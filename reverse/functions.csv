@@ -13440,3 +13440,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?getApparentStartPos@GameSlot@@QBEHXZ,,0x003FF870,37,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent start position with BFME1 GameInfo.cpp shape and orig fallback for hidden random
 ?Rva0042638BGet@@YA_NXZ,,0x0042638B,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?Rva0044E60AGet@@YA_NXZ,,0x0044E60A,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?get@Rva0013B150DwordField@@QBEHXZ,,0x0013B150,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
