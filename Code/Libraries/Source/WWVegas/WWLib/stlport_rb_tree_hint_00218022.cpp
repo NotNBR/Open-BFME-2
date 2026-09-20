@@ -45,3 +45,6 @@ typedef _STL::map<AsciiString,TreeHintRef00217D4C,_STL::less<AsciiString>,_STL::
 template MapInsert00218022::iterator MapInsert00218022::insert(MapInsert00218022::iterator, const TreeHintPair00217D4C &);
 
 template TreeHint00217D4C::_Link_type TreeHint00217D4C::_M_lower_bound(const AsciiString &) const;
+
+// This two-argument pair constructor is reached by the same map temporary.
+template TreeHintPair00217D4C::pair(const AsciiString &, const TreeHintRef00217D4C &);
