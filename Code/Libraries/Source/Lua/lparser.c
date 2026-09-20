@@ -80,6 +80,10 @@ static void funcargs (LexState *ls, int slf);
 static void singlevar (LexState *ls, TString *n, expdesc *var);
 static int search_local (LexState *ls, TString *n, expdesc *var);
 static int string_constant (FuncState *fs, TString *s);
+static void block (LexState *ls);
+static void cond (LexState *ls, expdesc *v);
+static void var_or_func (LexState *ls, expdesc *v);
+static void forstat (LexState *ls, int line);
 
 
 static void next (LexState *ls) {
@@ -245,6 +249,68 @@ static void adjust_mult_assign (LexState *ls, int nvars, int nexps) {
 }
 
 
+// _test_then_block present-unmatched
+static void test_then_block (LexState *ls, expdesc *v) {
+  /* test_then_block -> [IF | ELSEIF] cond THEN block */
+  next(ls);  /* skip IF or ELSEIF */
+  cond(ls, v);
+  check(ls, TK_THEN);
+  block(ls);  /* `then' part */
+}
+
+
+// _ifstat present-unmatched
+static void ifstat (LexState *ls, int line) {
+  /* ifstat -> IF cond THEN block {ELSEIF cond THEN block} [ELSE block] END */
+  FuncState *fs = ls->fs;
+  expdesc v;
+  int escapelist = NO_JUMP;
+  test_then_block(ls, &v);  /* IF cond THEN block */
+  while (ls->t.token == TK_ELSEIF) {
+    luaK_concat(fs, &escapelist, luaK_jump(fs));
+    luaK_patchlist(fs, v.u.l.f, luaK_getlabel(fs));
+    test_then_block(ls, &v);  /* ELSEIF cond THEN block */
+  }
+  if (ls->t.token == TK_ELSE) {
+    luaK_concat(fs, &escapelist, luaK_jump(fs));
+    luaK_patchlist(fs, v.u.l.f, luaK_getlabel(fs));
+    next(ls);  /* skip ELSE */
+    block(ls);  /* `else' part */
+  }
+  else
+    luaK_concat(fs, &escapelist, v.u.l.f);
+  luaK_patchlist(fs, escapelist, luaK_getlabel(fs));
+  check_match(ls, TK_END, TK_IF, line);
+}
+
+
+// _assignment present-unmatched
+static int assignment (LexState *ls, expdesc *v, int nvars) {
+  int left = 0;  /* number of values left in the stack after assignment */
+  luaX_checklimit(ls, nvars, MAXVARSLH, "variables in a multiple assignment");
+  if (ls->t.token == ',') {  /* assignment -> ',' NAME assignment */
+    expdesc nv;
+    next(ls);
+    var_or_func(ls, &nv);
+    check_condition(ls, (nv.k != VEXP), "syntax error");
+    left = assignment(ls, &nv, nvars+1);
+  }
+  else {  /* assignment -> '=' explist1 */
+    int nexps;
+    check(ls, '=');
+    nexps = explist1(ls);
+    adjust_mult_assign(ls, nvars, nexps);
+  }
+  if (v->k != VINDEXED)
+    luaK_storevar(ls, v);
+  else {  /* there may be garbage between table-index and value */
+    luaK_code2(ls->fs, OP_SETTABLE, left+nvars+2, 1);
+    left += 2;
+  }
+  return left;
+}
+
+
 // _localstat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void localstat (LexState *ls) {
   /* stat -> LOCAL NAME {',' NAME} ['=' explist1] */
@@ -334,7 +400,7 @@ static void code_string (LexState *ls, TString *s) {
 }
 
 
-// _indexupvalue present-unmatched
+// _indexupvalue BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static int indexupvalue (LexState *ls, expdesc *v) {
   FuncState *fs = ls->fs;
   int i;
@@ -727,6 +793,77 @@ static void breakstat (LexState *ls) {
 }
 
 
+// _namestat present-unmatched
+static void namestat (LexState *ls) {
+  /* stat -> func | ['%'] NAME assignment */
+  FuncState *fs = ls->fs;
+  expdesc v;
+  var_or_func(ls, &v);
+  if (v.k == VEXP) {  /* stat -> func */
+    check_condition(ls, luaK_lastisopen(fs), "syntax error");  /* an upvalue? */
+    luaK_setcallreturns(fs, 0);  /* call statement uses no results */
+  }
+  else {  /* stat -> ['%'] NAME assignment */
+    int left = assignment(ls, &v, 1);
+    luaK_adjuststack(fs, left);  /* remove eventual garbage left on stack */
+  }
+}
+
+
+// _stat present-unmatched
+static int stat (LexState *ls) {
+  int line = ls->linenumber;  /* may be needed for error messages */
+  switch (ls->t.token) {
+    case TK_IF: {  /* stat -> ifstat */
+      ifstat(ls, line);
+      return 0;
+    }
+    case TK_WHILE: {  /* stat -> whilestat */
+      whilestat(ls, line);
+      return 0;
+    }
+    case TK_DO: {  /* stat -> DO block END */
+      next(ls);  /* skip DO */
+      block(ls);
+      check_match(ls, TK_END, TK_DO, line);
+      return 0;
+    }
+    case TK_FOR: {  /* stat -> forstat */
+      forstat(ls, line);
+      return 0;
+    }
+    case TK_REPEAT: {  /* stat -> repeatstat */
+      repeatstat(ls, line);
+      return 0;
+    }
+    case TK_FUNCTION: {  /* stat -> funcstat */
+      funcstat(ls, line);
+      return 0;
+    }
+    case TK_LOCAL: {  /* stat -> localstat */
+      localstat(ls);
+      return 0;
+    }
+    case TK_NAME: case '%': {  /* stat -> namestat */
+      namestat(ls);
+      return 0;
+    }
+    case TK_RETURN: {  /* stat -> retstat */
+      retstat(ls);
+      return 1;  /* must be last statement */
+    }
+    case TK_BREAK: {  /* stat -> breakstat */
+      breakstat(ls);
+      return 1;  /* must be last statement */
+    }
+    default: {
+      luaK_error(ls, "<statement> expected");
+      return 0;  /* to avoid warnings */
+    }
+  }
+}
+
+
 static void fornum (LexState *ls, TString *varname) {
   /* fornum -> NAME = exp1,exp1[,exp1] forbody */
   FuncState *fs = ls->fs;
@@ -905,4 +1042,5 @@ void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd
   next(ls);
   localstat(ls);
   adjust_mult_assign(ls, 0, 0);
+  stat(ls);
 }

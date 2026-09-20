@@ -3316,3 +3316,11 @@ _code_params,0x00753F20,address read from the REL32 call at 0x00754C64 in the _p
 _adjust_mult_assign,0x00753EC0,address read from the REL32 call at 0x0075495C in the _localstat body; Lua 4.0.1 lparser.c static
 ?bfmeDoPF@BfmeThingPF@@QAEXPADPAXH@Z,0x000276B0
 ?bfmeDoPG@BfmeThingPG@@QAEXPADPAXH@Z,0x00027740
+_ifstat,0x00755D80,address read from the REL32 call at 0x00755F29 in the _stat body; Lua 4.0.1 lparser.c static
+_namestat,0x00755E90,address read from the REL32 call at 0x00755FA7 in the _stat body; Lua 4.0.1 lparser.c static
+_test_then_block,0x00755CE0,address read from the REL32 calls at 0x00755D99 and 0x00755DDD in the _ifstat body; Lua 4.0.1 lparser.c static
+_assignment,0x007559C0,address read from the REL32 call at 0x00755EDE in the _namestat body; Lua 4.0.1 lparser.c static
+_pushupvalue,0x00753E40,address read from the REL32 call at 0x00755D6 in the _var_or_func body; Lua 4.0.1 lparser.c static
+_var_or_func_tail,0x007552F0,address read from the REL32 calls at 0x00755EE 0x0075624 and 0x0075640 in the _var_or_func body; Lua 4.0.1 lparser.c static
+_var_or_func,0x007555C0,address read from the REL32 call at 0x00755E9E in the _namestat body; Lua 4.0.1 lparser.c static
+_indexupvalue,0x00753DC0,address read from the REL32 call at 0x00753EA2 in the _pushupvalue body; Lua 4.0.1 lparser.c static

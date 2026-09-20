@@ -13227,3 +13227,4 @@ _adjust_mult_assign,,0x00753EC0,82,Code/Libraries/Source/Lua/lparser.c,matched,B
 ?DERDecode@?$Int@$0EA@@@QAEXPBE@Z,,0x0061DCF0,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,BFME1 byte-identical donor; b1 0x009E9E50; ambiguous 2-cand tiebreak pair with DEREncode@615C90
 ?bfmeGoPF@BfmeThingPF@@QAEXPBUBfmeRangePF@@PAX@Z,,0x00028C10,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySix.cpp,matched,BFME1 byte-identical donor; b1 0x0082E910; ambiguous 6-cand tiebreak via DoPF->0x276B0
 ?bfmeGoPG@BfmeThingPG@@QAEXPBUBfmeRangePG@@PAX@Z,,0x00028C90,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySeven.cpp,matched,BFME1 byte-identical donor; b1 0x0082E950; ambiguous 6-cand tiebreak via DoPG->0x27740
+_indexupvalue,,0x00753DC0,125,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _pushupvalue
