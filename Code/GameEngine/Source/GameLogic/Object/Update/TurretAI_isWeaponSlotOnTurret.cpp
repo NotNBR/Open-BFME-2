@@ -1,4 +1,4 @@
-// cl: /O1 /DNDEBUG /MD
+// cl: /O1 /arch:SSE /DNDEBUG /MD
 //
 // ?isWeaponSlotOnTurret@TurretAI@@QBE_NW4WeaponSlotType@@@Z,
 // retail 0x004D81D7, 21 bytes. Dedicated TU.
@@ -39,7 +39,10 @@ struct TurretStateMachine
 
 struct TurretData
 {
-	char m_pad[0x4C];
+	char m_pad[8];
+	float m_naturalAngle;
+	float m_naturalPitch;
+	char m_pad2[0x4C - 0x10];
 	unsigned m_slotMask;
 };
 
@@ -60,7 +63,9 @@ class TurretAI
 	TurretData *m_data;
 	char m_gap[8];
 	TurretStateMachine *m_stateMachine;
-	char m_gap2[0x1C];
+	float m_angle;
+	float m_pitch;
+	char m_gap2[0x34 - 0x20];
 	unsigned m_sleepUntil;
 	char m_gap3[4];
 	Bool m_enabled;
@@ -69,6 +74,7 @@ public:
 	Bool isWeaponSlotOnTurret(WeaponSlotType wslot) const;
 	void recenterTurret();
 	void setTurretEnabled(Bool enabled);
+	Bool isTurretInNaturalPosition() const;
 };
 
 // ?isWeaponSlotOnTurret@TurretAI@@QBE_NW4WeaponSlotType@@@Z
@@ -96,4 +102,18 @@ void TurretAI::setTurretEnabled(Bool enabled)
 		m_sleepUntil = TheGameLogic->getFrame();
 	}
 	m_enabled = enabled;
+}
+
+// ?isTurretInNaturalPosition@TurretAI@@QBE_NXZ, retail 0x004D82A3, 39 bytes.
+// BFME2 dropped ZH's under-construction early-out; the body is a pure
+// SSE float comparison of the data natural angle/pitch (+8/+0xC) against
+// the live angle/pitch (+0x18/+0x1C). The &&-returns-true spelling emits
+// retail's jp-false block order via the ucomiss parity trick.
+Bool TurretAI::isTurretInNaturalPosition() const
+{
+	if (m_data->m_naturalAngle == m_angle && m_data->m_naturalPitch == m_pitch)
+	{
+		return true;
+	}
+	return false;
 }
