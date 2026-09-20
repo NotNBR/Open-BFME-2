@@ -3206,3 +3206,4 @@ _read_number,0x00757200
 ?Get_Description@SurfaceClass@@QAEXAAUSurfaceDescription@1@@Z,0x00116620,BFME2 SurfaceByteSize calls it (&desc) thiscall at the same structural site where BFME1 Byte_Size calls its matched Get_Description 0x8FC5C0; fills SurfaceDescription from the COM surface
 ??1DX8PolygonRendererList@@UAE@XZ,0x00144690,DX8PolygonRendererList dtor: state-1 unwind target of the MeshModelClass copy ctor at 0x00172940; vtable 0xBD34E0 slot 0 reaches the 0x00144850 deleting dtor which calls this body (same bytes as the opaque 0x00144690 row)
 ?copyFrom@BfmeTailF5@@QAEXPBU1@@Z,0x000365F0,address read from the REL32 displacement at placed bfmeFillF5 0x6BEF10; tail copy folds with StringBase/AsciiString copy-ctor
+?copyFrom@BfmeTailF4@@QAEXPAU1@@Z,0x000365F0,address read from the REL32 displacement at placed bfmeCopyF4 0x6BEEC0; tail copy folds with StringBase/AsciiString copy-ctor

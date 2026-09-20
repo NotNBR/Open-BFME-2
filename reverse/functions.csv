@@ -12993,3 +12993,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?insertNode@Rva009A3290Owner@@QAEPAXPBX@Z,,0x00758FC0,106,Code/GameEngine/Source/Common/Rva009A3290HashInsert.cpp,matched,BFME1 byte-identical donor; operator new via ledger; memcpy intrinsic
 ?Rva009A6EC0Release@@YAXPAPAX@Z,,0x001B7930,94,Code/GameEngine/Source/Common/Rva009A6EC0Release.cpp,matched,BFME1 byte-identical donor; triple bfmeTwoBZB call resolves via existing 0x1B6410 pin
 ?bfmeFillF5@@YAPAUBfmeElemF5@@PAU1@IPBU1@@Z,,0x006BEF10,65,Code/GameEngine/Source/Common/Rva0087F520Fill.cpp,matched,BFME1 byte-identical donor; tail copyFrom resolves to StringBase-ctor 0x365F0 via new pin
+?bfmeCopyF4@@YAPAUBfmeElemF4@@PAU1@00@Z,,0x006BEEC0,67,Code/GameEngine/Source/Common/Rva0087F4D0Copy.cpp,matched,BFME1 byte-identical donor; tail copyFrom resolves to StringBase-ctor 0x365F0 via new pin
