@@ -14113,3 +14113,4 @@ _Rva0084ECE0,,0x00021E70,61,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ??0Rva00318B5C@@QAE@ABV0@@Z,,0x00318B5C,33,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 3-int copy-ctor; dword member at plus-0x0C unlike the byte twin 0x003AE315; caller 0x00318D6F null-guards then tail-calls; B2 address names the body
 ??0Rva003ADE98@@QAE@ABV0@@Z,,0x003ADE98,33,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly int-plus-two-bytes copy-ctor; byte members at plus-0x08 and plus-0x09; caller 0x003ADE78 installs neighbor vptrs after; B2 address names the body
 _Rva0084EED0,,0x00022060,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,BFME1 byte-identical donor; b1 0x0084EED0
+??0Rva003ADF61@@QAE@ABV0@@Z,,0x003ADF61,75,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly 10-int copy-ctor; straight dword run plus-0x04 to plus-0x28; four E8 callers in 0x003AE1xx tails; B2 address names the body

@@ -205,3 +205,38 @@ Rva003ADE98::Rva003ADE98(const Rva003ADE98 &other)
 	m_field08 = other.m_field08;
 	m_field09 = other.m_field09;
 }
+
+// ------------------------------------------ vptr + ten ints (retail 0x003ADF61)
+// B2 body-address name: straight ten-dword run +0x04..+0x28. Four retail
+// E8 callers all sit in 0x003AE1xx copy tails.
+class Rva003ADF61
+{
+public:
+	Rva003ADF61(const Rva003ADF61 &other);
+	virtual ~Rva003ADF61();
+
+	Int m_field04;
+	Int m_field08;
+	Int m_field0C;
+	Int m_field10;
+	Int m_field14;
+	Int m_field18;
+	Int m_field1C;
+	Int m_field20;
+	Int m_field24;
+	Int m_field28;
+};
+
+Rva003ADF61::Rva003ADF61(const Rva003ADF61 &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field0C = other.m_field0C;
+	m_field10 = other.m_field10;
+	m_field14 = other.m_field14;
+	m_field18 = other.m_field18;
+	m_field1C = other.m_field1C;
+	m_field20 = other.m_field20;
+	m_field24 = other.m_field24;
+	m_field28 = other.m_field28;
+}
