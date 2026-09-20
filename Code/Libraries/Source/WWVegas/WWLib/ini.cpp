@@ -149,6 +149,17 @@ inline void __cdecl operator delete[](void * p) { ::operator delete(p); }
 #undef strdup
 extern "C" char * __cdecl strdup(const char *);
 
+// Retail frees Get_Int_Bitfield's strdup buffer with a DIRECT five-byte call to
+// 0x00030830, the C++-linkage free the memory-pool build provides there (same
+// body as the extern "C" _free) -- not through the CRT import the headers
+// declare. Declaring the _STL spelling TU-locally keeps it distinct from
+// ::free, so only the qualified call below reaches the pin (cf.
+// stlport_ios_base_dtor.cpp, which carries both forms in one body).
+namespace _STL
+{
+void __cdecl free(void *block);
+}
+
 #if defined(__WATCOMC__)
 // Disable the "temporary object used to initialize a non-constant reference" warning.
 #pragma warning 665 9
@@ -1782,7 +1793,6 @@ int INIClass::Get_List_Index(char const * section, char const * entry, int const
 	}
 	return defvalue;
 }
-// ?Get_Int_Bitfield@INIClass@@ present-unmatched
 int INIClass::Get_Int_Bitfield(char const * section, char const * entry, int defvalue, char *list[])
 {
 	// if we can't find the entry or the entry is null just return the default value
@@ -1811,7 +1821,7 @@ int INIClass::Get_Int_Bitfield(char const * section, char const * entry, int def
 		// to assert since we have an unidentified value
 		if (list[lp] == NULL) assert(lp < 1000);
 	}
-	free(str);
+	_STL::free(str);
 	return retval;
 }
 
