@@ -13354,3 +13354,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva004D7C57FloatChaseField@@QBEMXZ,,0x004D7C57,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
 ?get@Rva004D7C65FloatChaseField@@QBEMXZ,,0x004D7C65,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
 ?get@Rva004D7C6CFloatChaseField@@QBEMXZ,,0x004D7C6C,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C73FloatChaseField@@QBEMXZ,,0x004D7C73,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
