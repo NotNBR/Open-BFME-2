@@ -13410,3 +13410,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?_S_uninitialize@ios_base@_STL@@KAXXZ,,0x00015440,894,Code/Libraries/Source/WWVegas/WWLib/stlport_ios_base_uninitialize.cpp,matched,BFME1 X4Iostream.cpp donor; rva00832100Release pinned to the rowed _Loc_init dtor at 0x70E0 whose 27B body is identical
 ?Rva00040F61Get@@YA_NXZ,,0x00040F61,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?unAccept@GameSlot@@QAEXXZ,,0x003FF895,11,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp unAccept with inlined isHuman
+?setMapAvailability@GameSlot@@QAEX_N@Z,,0x003FF8A0,16,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp setMapAvailability with inlined isHuman

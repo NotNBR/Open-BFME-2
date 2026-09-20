@@ -243,5 +243,12 @@ void GameSlot::unAccept()
     }
 }
 
-// ?setMapAvailability@GameSlot@@QAEX_N@Z present-unmatched
+// ?setMapAvailability@GameSlot@@QAEX_N@Z
+void GameSlot::setMapAvailability(Bool hasMap)
+{
+    if (isHuman())
+    {
+        m_hasMap = hasMap;
+    }
+}
 
