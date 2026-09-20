@@ -13080,3 +13080,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?helper@Rva007FA2C0@@QAEXPAXH@Z,,0x006666C0,195,Code/GameEngine/Source/GameNetwork/Rva007FA240Walk.cpp,matched,BFME1 donor append all callees pinned
 ?bfmeUseTCA@BfmeSinkTCA@@QAEXPAX@Z,,0x006756D0,450,Code/GameEngine/Source/GameNetwork/Rva008097D0LanTheaterRemove.cpp,matched,BFME1 byte-identical donor body already in TU
 ??1Gen_004902A0@@UAE@XZ,,0x00355C77,23,Code/GameEngine/Source/Common/Bfme5TinyTen.cpp,matched,BFME1 donor trimmed to dtor; b1 0x004902A0; list head at 0xE01E1C
+?read_prelit_material@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x0018B4F0,245,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadPrelitMaterial.cpp,matched,BFME1 meshmdlio port as bool reader family with inline 16B MatInfo Read plus CurMatDesc PassCount store and 3 switch-case pins same commit
