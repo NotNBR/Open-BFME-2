@@ -368,3 +368,36 @@ Rva0039B893::Rva0039B893(const Rva0039B893 &other)
 	m_field0E = other.m_field0E;
 	m_field10 = other.m_field10;
 }
+
+// ---- vptr + two ints base plus derived vptr and third int (retail 0x0015E640)
+// B2 body-address name: the base copy inlines (vptr 0xBC6F44 with +0x04/+0x08)
+// then the derived part installs vptr 0xBC6F50 and copies +0x0C. The outlined
+// base is retail 0x0015E0D0. One retail E8 caller at 0x0016855F.
+class Rva0015E640Base
+{
+public:
+	Rva0015E640Base(const Rva0015E640Base &other)
+	{
+		m_field04 = other.m_field04;
+		m_field08 = other.m_field08;
+	}
+	virtual ~Rva0015E640Base();
+
+	Int m_field04;
+	Int m_field08;
+};
+
+class Rva0015E640 : public Rva0015E640Base
+{
+public:
+	Rva0015E640(const Rva0015E640 &other);
+	virtual ~Rva0015E640();
+
+	Int m_field0C;
+};
+
+Rva0015E640::Rva0015E640(const Rva0015E640 &other)
+	: Rva0015E640Base(other)
+{
+	m_field0C = other.m_field0C;
+}
