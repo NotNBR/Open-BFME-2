@@ -13059,3 +13059,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GTransportContainModuleData@@UAEPAXI@Z,,0x001DFA84,28,Code/GameEngine/Source/GameLogic/Object/Contain/TransportContainModuleDataDtor.cpp,matched,scalar deleting dtor; TU already emits pop-ecx shape; sole caller pattern via landed dtor
 ?fetchContent@Rva007F04B0BlobService@@QAE_NPADI@Z,,0x0065D2D0,205,Code/GameEngine/Source/GameNetwork/Rva007F04B0BlobContent.cpp,matched,BFME1 byte-identical donor; callees resolve via ledger
 ?handlePendingActiveReply@Rva007F5D10GameBrowser@@QAEXPAVRva007E8810Message@@@Z,,0x006624B0,223,Code/GameEngine/Source/GameNetwork/Rva007F5D10GameBrowser.cpp,matched,BFME1 byte-identical donor; callees resolve via ledger
+?reset@Rva0013A820@@QAEXXZ,,0x0050C45A,108,Code/GameEngine/Source/Common/Rva0013A820Reset.cpp,matched,BFME1 byte-identical donor; clear pin added
