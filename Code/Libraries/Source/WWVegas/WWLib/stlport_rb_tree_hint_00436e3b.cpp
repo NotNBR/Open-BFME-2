@@ -10,14 +10,39 @@
 #include <map>
 class AsciiString { public: AsciiString(const AsciiString &); ~AsciiString(); private: void *m_data; };
 bool operator<(const AsciiString &, const AsciiString &);
-// Distinct 0xDF4-byte mapped object. The original application type is unknown.
-// Pair copying passes destination+4 and source+4 to its copy constructor.
-// Preserve its out-of-line copy and destruction; do not assume trivial ownership.
+// The mapped copy at 0x22D106 proves a UnicodeString, a 0xDE8-byte
+// subobject, and two final words. Its original application type is unknown.
+template <typename T> class StringBase {
+    friend class UnicodeString;
+    StringBase(const StringBase &);
+    void releaseBuffer();
+    __forceinline ~StringBase() { releaseBuffer(); }
+    void *m_data;
+};
+class UnicodeString : private StringBase<unsigned short> {
+public:
+    __forceinline UnicodeString(const UnicodeString &other) : StringBase<unsigned short>(other) {}
+    __forceinline ~UnicodeString() {}
+};
+// Full 216-byte retail constructor 0x22CE19 installs vptr 0xBE7560,
+// copies string/scalar members and nested subobjects. Keep its ownership
+// operations out of line; its application class and virtual slots are unknown.
+struct BfmeSubobject0022CE19 {
+    void *m_vtable;
+    unsigned char m_opaque[0xDE4];
+    BfmeSubobject0022CE19(const BfmeSubobject0022CE19 &);
+    ~BfmeSubobject0022CE19();
+};
 struct TreeHintOpaque0043671B {
-    unsigned char m_body[0xDF4];
+    UnicodeString m_text;
+    BfmeSubobject0022CE19 m_subobject;
+    unsigned int m_wordDEC, m_wordDF0;
     TreeHintOpaque0043671B(const TreeHintOpaque0043671B &);
     ~TreeHintOpaque0043671B();
 };
+TreeHintOpaque0043671B::TreeHintOpaque0043671B(const TreeHintOpaque0043671B &other)
+    : m_text(other.m_text), m_subobject(other.m_subobject),
+      m_wordDEC(other.m_wordDEC), m_wordDF0(other.m_wordDF0) {}
 
 typedef _STL::pair<const AsciiString, TreeHintOpaque0043671B> TreeHintPair0043671B;
 typedef _STL::_Rb_tree<AsciiString, TreeHintPair0043671B, _STL::_Select1st<TreeHintPair0043671B>, _STL::less<AsciiString>, _STL::allocator<TreeHintPair0043671B> > TreeHint0043671B;
@@ -41,3 +66,5 @@ template TreeHint0043671B::iterator TreeHint0043671B::insert_unique(TreeHint0043
 // The map wrapper directly calls this tree's verified hinted insertion.
 typedef _STL::map<AsciiString,TreeHintOpaque0043671B,_STL::less<AsciiString >,_STL::allocator<TreeHintPair0043671B> > MapInsert00436e3b;
 template MapInsert00436e3b::iterator MapInsert00436e3b::insert(MapInsert00436e3b::iterator, const TreeHintPair0043671B &);
+
+template void _STL::_Construct<TreeHintOpaque0043671B,TreeHintOpaque0043671B>(TreeHintOpaque0043671B*, const TreeHintOpaque0043671B&);
