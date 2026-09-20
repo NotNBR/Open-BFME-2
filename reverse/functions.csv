@@ -13005,3 +13005,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?bfmeRSearchV33@@YAPAPADPAPADPAD111@Z,,0x00026340,758,Code/GameEngine/Source/Common/BfmeConv1473.cpp,matched,BFME1 byte-identical donor; b1 0x0082E130
 ?bfmeRFindNotChV32@@YAPAPADPAPADPAD1D@Z,,0x000260A0,596,Code/GameEngine/Source/Common/BfmeConv1472.cpp,matched,BFME1 byte-identical donor
 ?bfmeRFindChV31@@YAPAPADPAPADPAD1D@Z,,0x00025CE0,540,Code/GameEngine/Source/Common/BfmeConv1471.cpp,matched,BFME1 byte-identical donor
+?bfmeFindChV28@@YAPADPAD0D@Z,,0x00025F00,408,Code/GameEngine/Source/Common/BfmeConv1468.cpp,matched,BFME1 byte-identical donor
