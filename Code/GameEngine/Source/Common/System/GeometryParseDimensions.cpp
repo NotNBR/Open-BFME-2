@@ -7,6 +7,7 @@
 class INI {
 public:
     const char *getNextToken(const char *);
+    bool scanBool(const char *);
     float scanReal(const char *);
 };
 struct GeometryShape {
@@ -18,8 +19,9 @@ public:
     static void parseGeometryMajorRadius(INI *, void *, void *, const void *);
     static void parseGeometryMinorRadius(INI *, void *, void *, const void *);
     static void parseGeometryHeight(INI *, void *, void *, const void *);
+    static void parseGeometryIsSmall(INI *, void *, void *, const void *);
     void calcBoundingStuff();
-    char head[0x2C];
+    char unmodelled00[4]; bool isSmall; char unmodelled05[0x27];
     std::vector<GeometryShape> shapes;
 };
 void GeometryInfo::parseGeometryMajorRadius(INI *ini, void *, void *store, const void *) {
@@ -46,4 +48,11 @@ void GeometryInfo::parseGeometryHeight(INI *ini, void *, void *store, const void
         geometry->shapes.back().height=ini->scanReal(ini->getNextToken(0));
     geometry->calcBoundingStuff();
     bfmeApplyEB((BfmeObjEB *)geometry);
+}
+
+// GeneralsMD Geometry.cpp and BFME1 GeometryIsSmall_Thunk.cpp; PC C0EC30.
+void GeometryInfo::parseGeometryIsSmall(INI *ini, void *, void *store, const void *) {
+    GeometryInfo *geometry=(GeometryInfo *)store;
+    geometry->isSmall=ini->scanBool(ini->getNextToken(0));
+    geometry->calcBoundingStuff();
 }
