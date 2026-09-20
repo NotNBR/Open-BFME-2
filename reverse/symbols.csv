@@ -3254,3 +3254,4 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ?bfmeDelVGP@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1356 donor call site; same body as rowed scalar delete
 ?bfmeUnhookYQ@Gen009F5040Node@@QAEXXZ,0x00625800,BFME1 BfmeConv2102 donor call site; same body as rowed bfmeUnhookZU
 ?Load_W3D@VertexMaterialClass@@QAE_NAAVChunkLoadClass@@@Z,0x0013E8B0,retail REL32 from read_vertex_materials at 0x0018AD9B with vmat receiver and bool result checked against 1
+?bfmeCheckABI@BfmeThingCDE@@QAE_NXZ,0x00739FE0,address read from REL32 at placed bfmeReleaseABI 0x73B350; ghidra 188B boundary
