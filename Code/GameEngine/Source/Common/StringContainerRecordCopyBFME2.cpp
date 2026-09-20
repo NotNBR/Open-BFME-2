@@ -40,3 +40,11 @@ struct BfmeContainerRecord00048139 {
 };
 BfmeContainerRecord00048139::BfmeContainerRecord00048139(const BfmeContainerRecord00048139 &o) : text0(o.text0), text1(o.text1), head(o.head), word54(o.word54), word58(o.word58) {}
 template void _STL::_Construct<BfmeContainerRecord00048139,BfmeContainerRecord00048139>(BfmeContainerRecord00048139*,const BfmeContainerRecord00048139&);
+
+// Complete retail record copy at 0x003A451B.
+struct BfmeContainerRecord003A451B {
+    AsciiString text; unsigned int word4; WeaponTemplateSetHead head0, head1;
+    BfmeContainerRecord003A451B(const BfmeContainerRecord003A451B &o);
+};
+BfmeContainerRecord003A451B::BfmeContainerRecord003A451B(const BfmeContainerRecord003A451B &o) : text(o.text), word4(o.word4), head0(o.head0), head1(o.head1) {}
+template void _STL::_Construct<BfmeContainerRecord003A451B,BfmeContainerRecord003A451B>(BfmeContainerRecord003A451B*,const BfmeContainerRecord003A451B&);
