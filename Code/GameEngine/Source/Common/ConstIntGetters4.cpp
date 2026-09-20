@@ -783,3 +783,11 @@ int Rva4599DFGet(void)
 {
 	return 0x00bf5bf4;
 }
+
+// ?Rva45CEEEGet@@YAHXZ @ 0x45ceee (6B): returns 0x00c41ea8.
+// Follows a ret-8 (prev C2-08-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva45CEEEGet(void)
+{
+	return 0x00c41ea8;
+}
