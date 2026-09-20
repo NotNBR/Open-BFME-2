@@ -13380,3 +13380,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva000E009DDwordField@@QBEHXZ,,0x000E009D,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
 ?get@Rva000EFD36DwordField@@QBEHXZ,,0x000EFD36,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
 ?get@Rva001E42EBDwordField@@QBEHXZ,,0x001E42EB,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0020E323DwordField@@QBEHXZ,,0x0020E323,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
