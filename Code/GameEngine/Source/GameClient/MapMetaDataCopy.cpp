@@ -22,7 +22,9 @@ typedef _STL::list<Coord3D> Coord3DList;
 namespace _STL { template<> list<Coord3D>::list(const list<Coord3D> &); }
 class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; public: WaypointMap(const WaypointMap &); ~WaypointMap(); };
 struct PlayerPosition { unsigned char human,computer,loadAIScripts; int forceTeam; _STL::map<AsciiString,int> factions; PlayerPosition(const PlayerPosition &); ~PlayerPosition(); };
-struct MapPlayers { PlayerPosition items[8]; MapPlayers(const MapPlayers &); ~MapPlayers(); };
+// Implicit copy emits the real EH array-copy helper: eight20B records.
+// Callback302CE2 copies three flags/team/map; callback22D920 destroys map+8.
+struct MapPlayers { PlayerPosition items[8]; ~MapPlayers(); };
 class MapMetaData {
     UnicodeString displayName,description; Region3D extent; int numPlayers;
     unsigned char isMultiplayer,isScenarioMP,isOfficial;
