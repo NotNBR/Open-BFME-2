@@ -82,3 +82,24 @@ Rva003AE11B::Rva003AE11B(const Rva003AE11B &other)
 	m_field04 = other.m_field04;
 	m_field08 = other.m_field08;
 }
+
+// ------------------------- vptr + two ints + a byte (retail 0x003AE315)
+// B2 body-address name: B1's Rva005EA240 has this shape but is a different
+// class (different vtable), so the B2 address names the body.
+class Rva003AE315
+{
+public:
+	Rva003AE315(const Rva003AE315 &other);
+	virtual ~Rva003AE315();
+
+	Int m_field04;
+	Int m_field08;
+	char m_field0C;
+};
+
+Rva003AE315::Rva003AE315(const Rva003AE315 &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field0C = other.m_field0C;
+}
