@@ -12601,3 +12601,4 @@ _piAddListingGamesCallback,,0x0069F320,233,Code/GameEngine/Source/GameNetwork/Ga
 _str_lower,,0x00748BA0,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string lower via donor reg-table identity; callees pinned
 _str_upper,,0x00748C40,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string upper via donor reg-table identity; callees pinned
 ??_GRva004B362D@@UAEPAXI@Z,,0x004B374D,28,Code/GameEngine/Source/GameLogic/Object/Behavior/FireWeaponWhenDeadBehaviorDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x4B362D plus operator delete 0x2FD60; /O1 pop-ecx shape
+??_GRva004B39FC@@UAEPAXI@Z,,0x004B3AE3,28,Code/GameEngine/Source/GameLogic/Object/Behavior/FireWeaponWhenDeadBehaviorDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x4B39FC plus operator delete 0x2FD60; /O1 pop-ecx shape
