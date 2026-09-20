@@ -2247,3 +2247,11 @@ int Rva005C47EAGet(void)
 {
 	return 0x00c74734;
 }
+
+// ?Rva005DAFFEGet@@YAHXZ @ 0x005daffe (6B): returns 0x00c76684.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva005DAFFEGet(void)
+{
+	return 0x00c76684;
+}
