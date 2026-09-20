@@ -40,6 +40,7 @@ public:
 	virtual void reset();
 	bool isOccupied() const;
 	bool isAI() const;
+	bool isObserver() const;
 	bool isOpen() const { return m_state == SLOT_OPEN; }
 	Int getPlayerTemplate() const { return m_playerTemplate; }
 
@@ -75,6 +76,14 @@ bool GameSlot::isAI() const
 {
 	return m_state == SLOT_EASY_AI || m_state == SLOT_MED_AI
 		|| m_state == SLOT_BRUTAL_AI || m_state == SLOT_AI_5;
+}
+
+// ?isObserver@GameSlot@@QBE_NXZ
+// No BFME1 donor: the observer template (-2) read as a predicate. Fifteen
+// direct callers, mostly lobby UI.
+bool GameSlot::isObserver() const
+{
+	return m_playerTemplate == PLAYERTEMPLATE_OBSERVER;
 }
 
 // ?getNumPlayers@GameInfo@@QBEHXZ
