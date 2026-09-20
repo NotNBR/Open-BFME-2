@@ -13097,3 +13097,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GRva005D99BD@@UAEPAXI@Z,,0x005D99C8,28,Code/GameEngine/Source/Common/Rva005D9DC1Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ?bfmeGoVJI@BfmeThingVJI@@QAEXPAVBfmeMsgVJI@@@Z,,0x0066FAE0,182,Code/GameEngine/Source/Common/BfmeConv1386.cpp,matched,BFME1 donor noteVJI aliased to rowed bfmeGoBLF body
 ??0MaterialInfoClass@@QAE@XZ,,0x001708D0,132,Code/Libraries/Source/WWVegas/WW3D2/MaterialInfoClassCtor.cpp,matched,BFME1 donor reconstruction; vtable immediates repaired to BFME2 values
+?bfmeCopyVIA@@YAPAUBfmeElemVIA@@PAU1@00@Z,,0x00689450,125,Code/GameEngine/Source/Common/BfmeConv1371.cpp,matched,BFME1 donor members copy via AsciiString op assign pin
