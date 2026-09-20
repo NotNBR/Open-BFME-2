@@ -14015,3 +14015,8 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva006BD4F0ByteField@@QBEEXZ,,0x006BD4F0,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ?get@Rva006CFDB0ByteField@@QBEEXZ,,0x006CFDB0,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ??0?$vector@UPrereqUnitRec@@V?$allocator@UPrereqUnitRec@@@_STL@@@_STL@@QAE@ABV01@@Z,,0x002CFE45,96,Code/GameEngine/Source/Common/Thing/ProductionPrerequisiteRecVectorCopy.cpp,matched,vector<PrereqUnitRec> copy 96B exact via explicit-instantiation TU without NO_EXCEPTIONS; idiv-0x0C count of 12-byte elements; +0x00 member of ProductionPrerequisite per copy ctor at 0x002D08DA
+?get@Rva00108430DwordField@@QBEHXZ,,0x00108430,7,Code/GameEngine/Source/Common/DispDwordFieldGetters.cpp,matched,Disp32 dword getter
+?get@Rva004CEE9CWordField@@QBEGXZ,,0x004CEE9C,5,Code/GameEngine/Source/Common/Disp8WordFieldGetters.cpp,matched,Disp8 word getter
+?get@Rva00568645WordField@@QBEGXZ,,0x00568645,5,Code/GameEngine/Source/Common/Disp8WordFieldGetters.cpp,matched,Disp8 word getter
+?get@Rva001816E0DwordField@@QBEHXZ,,0x001816E0,3,Code/GameEngine/Source/Common/Disp0DwordFieldGetters.cpp,matched,Disp0 dword getter
+?get@Rva00373F29DwordField@@QBEHXZ,,0x00373F29,3,Code/GameEngine/Source/Common/Disp0DwordFieldGetters.cpp,matched,Disp0 dword getter
