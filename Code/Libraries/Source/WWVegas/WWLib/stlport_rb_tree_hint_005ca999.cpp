@@ -37,3 +37,7 @@ TreeHint005CA7ED::_Link_type TreeHint005CA7ED::_M_create_node(const TreeHintPair
     return node;
 }
 template TreeHint005CA7ED::iterator TreeHint005CA7ED::insert_unique(TreeHint005CA7ED::iterator, const TreeHintPair005CA7ED &);
+
+// The map wrapper directly calls this tree's verified hinted insertion.
+typedef _STL::map<AsciiString,TreeHintOpaque005CA7ED,_STL::less<AsciiString >,_STL::allocator<TreeHintPair005CA7ED> > MapInsert005ca999;
+template MapInsert005ca999::iterator MapInsert005ca999::insert(MapInsert005ca999::iterator, const TreeHintPair005CA7ED &);
