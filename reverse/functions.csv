@@ -13228,3 +13228,4 @@ _adjust_mult_assign,,0x00753EC0,82,Code/Libraries/Source/Lua/lparser.c,matched,B
 ?bfmeGoPF@BfmeThingPF@@QAEXPBUBfmeRangePF@@PAX@Z,,0x00028C10,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySix.cpp,matched,BFME1 byte-identical donor; b1 0x0082E910; ambiguous 6-cand tiebreak via DoPF->0x276B0
 ?bfmeGoPG@BfmeThingPG@@QAEXPBUBfmeRangePG@@PAX@Z,,0x00028C90,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySeven.cpp,matched,BFME1 byte-identical donor; b1 0x0082E950; ambiguous 6-cand tiebreak via DoPG->0x27740
 _indexupvalue,,0x00753DC0,125,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _pushupvalue
+_pushupvalue,,0x00753E40,121,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _var_or_func

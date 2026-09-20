@@ -415,7 +415,7 @@ static int indexupvalue (LexState *ls, expdesc *v) {
 }
 
 
-// _pushupvalue present-unmatched
+// _pushupvalue BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void pushupvalue (LexState *ls, TString *n) {
   FuncState *fs = ls->fs;
   expdesc v;
