@@ -26,3 +26,13 @@ int parseScriptDebug2(char *args[],int) {
     }
     return 1;
 }
+
+int parseScriptDebugLite(char *args[],int) {
+    if(TheWritableGlobalData) {
+        TheWritableGlobalData->m_scriptDebug=true;
+        TheWritableGlobalData->m_winCursors=true;
+        BFME2UseDebugWindowLite=true;
+        BFME2ScriptDebugLiteMode=true;
+    }
+    return 1;
+}
