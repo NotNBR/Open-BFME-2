@@ -53,9 +53,29 @@ struct BfmeVector0022C55B {
 // The callbacks are absolute VAs 0x6295D7/0x6294FD, hence RVAs
 // 0x2295D7 (271-byte copy) and 0x2294FD (90-byte destructor).
 // Both independently prove the Snapshot base and 0x1AC element extent.
+// Vtable0xC38D88 slot2 returns "CreateAHeroData" at RVA0x409353.
+// Complete339-byte copy and206-byte destructor confirm the Snapshot base,
+// owning members and0x140-byte extent. Preserve declarations while their
+// own field reconstruction remains separate from this element copy.
+class CreateAHeroData : public Snapshot {
+    unsigned char fields[0x13C];
+public:
+    CreateAHeroData(const CreateAHeroData &);
+    virtual ~CreateAHeroData();
+};
 struct BfmeSaveElement002295D7 : Snapshot {
-    unsigned char fields[0x1A8];
-    BfmeSaveElement002295D7(const BfmeSaveElement002295D7 &);
+    unsigned int word04;
+    unsigned char flag08, flag09, flag0A;
+    unsigned int word0C, word10, word14, word18, word1C, word20, word24, word28, word2C;
+    UnicodeString text30;
+    AsciiString text34;
+    unsigned int word38, word3C, word40, word44;
+    unsigned char flag48;
+    unsigned int word4C, word50, word54, word58, word5C;
+    unsigned char flag60;
+    CreateAHeroData hero64;
+    unsigned char flag1A4;
+    AsciiString text1A8;
     virtual ~BfmeSaveElement002295D7();
 };
 struct BfmeSaveBlock4 { unsigned int values[4]; };

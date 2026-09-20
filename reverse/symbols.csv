@@ -3418,3 +3418,5 @@ __strupr,0x0075B4F0
 ??0BfmeSaveElement002295D7@@QAE@ABU0@@Z,0x002295D7,Complete271-byte Snapshot-derived element copy;vptrBE7420 final member1A8; actual EH array callback
 ??1BfmeSaveElement002295D7@@UAE@XZ,0x002294FD,Complete90-byte element cleanup;members1A8 64 34 30 then Snapshot vptr; actual EH array callback
 ??__C@YGXPAX0IHP6EX00@ZP6EX0@Z@Z,0x006299C4,Decoded MSVC EH array-copy iterator;destination source stride count copy and destructor callbacks;ret18 ABI
+??0CreateAHeroData@@QAE@ABV0@@Z,0x00409D4D,Complete339-byte copy;vtableC38D88 getter409353 names CreateAHeroData;Snapshot base and140-byte owning layout independently decoded
+??1CreateAHeroData@@UAE@XZ,0x00409285,Complete206-byte destructor;vtableC38D88 identifies CreateAHeroData;typed member cleanup andSnapshot restoration independently decoded
