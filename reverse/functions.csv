@@ -12995,3 +12995,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?bfmeFillF5@@YAPAUBfmeElemF5@@PAU1@IPBU1@@Z,,0x006BEF10,65,Code/GameEngine/Source/Common/Rva0087F520Fill.cpp,matched,BFME1 byte-identical donor; tail copyFrom resolves to StringBase-ctor 0x365F0 via new pin
 ?bfmeCopyF4@@YAPAUBfmeElemF4@@PAU1@00@Z,,0x006BEEC0,67,Code/GameEngine/Source/Common/Rva0087F4D0Copy.cpp,matched,BFME1 byte-identical donor; tail copyFrom resolves to StringBase-ctor 0x365F0 via new pin
 ?Rva007F00B0@@YAXPAX0@Z,,0x0065CF90,98,Code/GameEngine/Source/Common/Rva007F00B0AllocatorInit.cpp,matched,BFME1 donor with game-specific constants repaired to BFME2 retail values (A5CEC0/CE1DFC/A5CED0)
+?_Stl_create_filebuf@_STL@@YAPAV?$basic_filebuf@DV?$char_traits@D@_STL@@@1@PAU_iobuf@@H@Z,,0x00015300,145,Code/Libraries/Source/WWVegas/WWLib/stlport_create_filebuf.cpp,matched,BFME1 byte-identical donor; filebuf ctor/_M_open/new resolve via ledger
