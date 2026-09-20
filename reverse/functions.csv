@@ -13273,3 +13273,4 @@ _subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?get@Rva00000468A1CPtrChaseField@@QBEHXZ,,0x00468A1C,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
 _protomark,,0x00750B50,147,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; self-recursive over kproto
 _marktagmethods,,0x00750C20,110,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markclosure inlines
+?get@Rva00000468A23PtrChaseField@@QBEHXZ,,0x00468A23,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
