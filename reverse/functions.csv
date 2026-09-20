@@ -13458,3 +13458,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?isAI@GameSlot@@QBE_NXZ,,0x003FF127,30,Code/GameEngine/Source/GameNetwork/GameSlotIsAI.cpp,matched,GameSlot AI predicate with BFME1 GameInfo.cpp shape over four AI slot states
 ?resetAccepted@GameInfo@@QAEXXZ,,0x003FF9B4,46,Code/GameEngine/Source/GameNetwork/GameInfoGetSlot.cpp,matched,BFME1 GameInfo.cpp resetAccepted; slot0 direct array load reproduces retail lea-test-mov plus dl-reused setAccept; slots 1-7 via rowed getSlot plus human-gated unAccept
 ?bfmeGoRE@BfmeThingRE@@QAEDPAVBfmeOtherRE@@@Z,,0x006560F0,36,Code/GameEngine/Source/Common/BfmeConv908.cpp,matched,BFME1 byte-identical donor; b1 0x007E9090; callee bfmeCmpRE pinned at 0x00655F90
+?getNumPlayers@GameInfo@@QBEHXZ,,0x003FF218,37,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME1 GameNetwork/GameInfo.cpp donor shape; same-TU isOccupied def carries the EDX/EDI/ESI convention
