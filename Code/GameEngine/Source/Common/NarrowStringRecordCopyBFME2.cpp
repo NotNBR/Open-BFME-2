@@ -45,3 +45,11 @@ struct BfmeNarrowRecord00427F75 {
 };
 BfmeNarrowRecord00427F75::BfmeNarrowRecord00427F75(const BfmeNarrowRecord00427F75 &o) : text0(o.text0), text1(o.text1) {}
 template void _STL::_Construct<BfmeNarrowRecord00427F75,BfmeNarrowRecord00427F75>(BfmeNarrowRecord00427F75*,const BfmeNarrowRecord00427F75&);
+
+// Complete retail record copy at 0x0054FEF1.
+struct BfmeNarrowRecord0054FEF1 {
+    _STL::basic_string<char> text; unsigned int word0, word1;
+    BfmeNarrowRecord0054FEF1(const BfmeNarrowRecord0054FEF1 &o);
+};
+BfmeNarrowRecord0054FEF1::BfmeNarrowRecord0054FEF1(const BfmeNarrowRecord0054FEF1 &o) : text(o.text), word0(o.word0), word1(o.word1) {}
+template void _STL::_Construct<BfmeNarrowRecord0054FEF1,BfmeNarrowRecord0054FEF1>(BfmeNarrowRecord0054FEF1*,const BfmeNarrowRecord0054FEF1&);
