@@ -43,16 +43,32 @@ struct TurretData
 	unsigned m_slotMask;
 };
 
+class GameLogic
+{
+	char m_pad[0x40];
+	unsigned m_frame;
+
+public:
+	unsigned getFrame() const { return m_frame; }
+};
+
+extern GameLogic *TheGameLogic;
+
 class TurretAI
 {
 	char m_pad[8];
 	TurretData *m_data;
 	char m_gap[8];
 	TurretStateMachine *m_stateMachine;
+	char m_gap2[0x1C];
+	unsigned m_sleepUntil;
+	char m_gap3[4];
+	Bool m_enabled;
 
 public:
 	Bool isWeaponSlotOnTurret(WeaponSlotType wslot) const;
 	void recenterTurret();
+	void setTurretEnabled(Bool enabled);
 };
 
 // ?isWeaponSlotOnTurret@TurretAI@@QBE_NW4WeaponSlotType@@@Z
@@ -67,4 +83,17 @@ Bool TurretAI::isWeaponSlotOnTurret(WeaponSlotType wslot) const
 void TurretAI::recenterTurret()
 {
 	m_stateMachine->setState(TURRETAI_RECENTER);
+}
+
+// ?setTurretEnabled@TurretAI@@QAEX_N@Z, retail 0x004D82D6, 32 bytes.
+// Verbatim ZH logic: on the disabled-to-enabled transition, wake up by
+// stamping m_sleepUntil (+0x34) with TheGameLogic->getFrame() (inlined
+// [edx+0x40] read); m_enabled lives at +0x3C.
+void TurretAI::setTurretEnabled(Bool enabled)
+{
+	if (enabled && !m_enabled)
+	{
+		m_sleepUntil = TheGameLogic->getFrame();
+	}
+	m_enabled = enabled;
 }
