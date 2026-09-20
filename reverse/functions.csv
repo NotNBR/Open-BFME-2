@@ -13470,3 +13470,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?XferSlotState@@YAXPAVXfer@@PAW4SlotState@@@Z,,0x003FF0B4,24,Code/GameEngine/Source/Common/System/XferEnumHelpers.cpp,matched,
 ?XferLivingWorldPlayerID@@YAXPAVXfer@@PAH@Z,,0x002034C4,24,Code/GameEngine/Source/Common/System/XferEnumHelpers.cpp,matched,
 ?Disable_Backface_Culling@MeshMatDescClass@@IAEXXZ,,0x00188670,67,Code/Libraries/Source/WWVegas/WW3D2/MeshMatDescDisableBackfaceCulling.cpp,matched,BFME2 cull bit 20 with retail 0x118 layout; TU-local ShaderFlags and ShareBuffer mirror; BFME1 inline spelling
+?xfer@GameSlot@@UAEXPAVXfer@@@Z,,0x003FF616,384,Code/GameEngine/Source/Common/System/XferEnumHelpers.cpp,matched,
