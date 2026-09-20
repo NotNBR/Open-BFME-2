@@ -180,10 +180,9 @@ INIEntry::~INIEntry(void)
 	Value = NULL;
 }
 
-// ??1INISection@@ present-unmatched
 INISection::~INISection(void)
 {
-	free(Section);
+	_STL::free(Section);
 	Section = 0;
 	EntryList.Delete();
 }
