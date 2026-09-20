@@ -183,3 +183,25 @@ Rva00318B5C::Rva00318B5C(const Rva00318B5C &other)
 	m_field08 = other.m_field08;
 	m_field0C = other.m_field0C;
 }
+
+// -------------------- vptr + one int + two bytes (retail 0x003ADE98)
+// B2 body-address name: +0x08 and +0x09 are byte members (8A51/8850 and
+// 8A49/8848). Retail caller 0x003ADE78 installs adjacent-vtable parts
+// after the call so this is the subobject copy.
+class Rva003ADE98
+{
+public:
+	Rva003ADE98(const Rva003ADE98 &other);
+	virtual ~Rva003ADE98();
+
+	Int m_field04;
+	char m_field08;
+	char m_field09;
+};
+
+Rva003ADE98::Rva003ADE98(const Rva003ADE98 &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field09 = other.m_field09;
+}
