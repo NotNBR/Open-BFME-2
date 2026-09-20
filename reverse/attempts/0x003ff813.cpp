@@ -1,5 +1,5 @@
-// ?getApparentPlayerTemplateDisplayName@GameSlot@@QBE?AVUnicodeString@@XZ
-// partial score=0.93 date=2026-09-20
+// ?getApparentPlayerTemplate@GameSlot@@QBEHXZ
+// partial score=0.9 date=2026-09-20
 // cl: /O1 /G7 /DNDEBUG /MD /EHsc
 
 // GameSlot apparent-* family plus the two slot predicates it shares a page

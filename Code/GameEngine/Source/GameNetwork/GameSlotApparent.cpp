@@ -157,6 +157,8 @@ public:
     virtual void reset();
 
     Bool isHuman() const { return m_state == SLOT_PLAYER; }
+    Int getTeamNumber() const { return m_teamNumber; }
+    Int getOriginalPlayerTemplate() const { return m_origPlayerTemplate; }
 
     Int getApparentPlayerTemplate() const;
     Int getApparentColor() const;
@@ -167,7 +169,10 @@ public:
     void setMapAvailability(Bool hasMap);
 
 private:
-    static Bool isSlotLocalAlly(const GameSlot *slot);
+    // Banked pin ?isSlotLocalAlly@GameSlot@@SA_NXZ @0x003FF7B7: retail
+    // passes the slot in EDI with a bare call, so the declaration takes no
+    // source-level argument; the body is reconstructed separately.
+    static Bool isSlotLocalAlly();
 
     // +0x00 vtable (virtual reset above).
     Int m_state;                    // +0x04
@@ -223,10 +228,20 @@ const GameSlot *GameInfo::getConstSlot(Int slotNum) const
     return m_slot[slotNum];
 }
 
-// ?isSlotLocalAlly@GameSlot@@SA_NPBVGameSlot@@@Z present-unmatched
+
 // ?getApparentPlayerTemplate@GameSlot@@QBEHXZ present-unmatched
 // ?getApparentColor@GameSlot@@QBEHXZ present-unmatched
 // ?getApparentStartPos@GameSlot@@QBEHXZ present-unmatched
 // ?getApparentPlayerTemplateDisplayName@GameSlot@@QBE?AVUnicodeString@@XZ present-unmatched
-// ?unAccept@GameSlot@@QAEXXZ present-unmatched
+
+// ?unAccept@GameSlot@@QAEXXZ
+void GameSlot::unAccept()
+{
+    if (isHuman())
+    {
+        m_isAccepted = false;
+    }
+}
+
 // ?setMapAvailability@GameSlot@@QAEX_N@Z present-unmatched
+

@@ -2307,7 +2307,6 @@ name,address,notes
 ?isPlayerConnected@BFMEConnectionManager@@QAE_NH@Z,0x004CF083,BFME2 local-or-open-connection predicate used by active-player state checks
 ?isPlayerSlotActive@BFMEConnectionManager@@QAEHH@Z,0x004CF0CD,BFME2 active-player-state predicate used by the packet-router stall scan; BFME1 structural analogue
 ?isSelectionLocked@BfmeSelectionState@@QBE_NXZ,0x0004253A,BFME2 selection-state guard testing bytes +0xB4/+0xB5; caller 0x29CEBB selectMatchingAcrossScreen returns 0 when true
-?isSlotLocalAlly@GameSlot@@SA_NXZ,0x003FF7B7,outlined ally helper shared by the GameSlot apparent-* family (slot arrives in EDI, not ECX: every caller homes this to EDI for its own post-call reads and emits a bare call - see Template 0x3FF813/Color 0x3FF838/StartPos 0x3FF870/DisplayName 0x3FFBB4); body mirrors BFME1 GameInfo.cpp:131 static isSlotLocalAlly (slot-index loop via getConstSlot + local + team + observer -2); declared argless-static to reproduce the bare call;
 ?isTurretEnabled@AIUpdateInterface@@QBE_NW4WhichTurretType@@@Z,0x00262683,address read from the retail REL32 at 0x00290C97 in Object::isAbleToAttack; 25B null-check plus direct flag read matching AIUpdateInterface::isTurretEnabled with inlined TurretAI::isTurretEnabled
 ?isValid@ObjectFilter@@QBE_NXZ,0x00360CED,ammo-descriptor validity over the ScienceInfo vector; BFME1 Weapon_getRemainingAmmo.cpp uses the same ObjectFilter isValid call shape
 ?isWeaponSlotOnTurret@TurretAI@@QBE_NW4WeaponSlotType@@@Z,0x004D81D7,address read from the retail REL32 at 0x002627A1 in AIUpdateInterface::getWhichTurretForWeaponSlot; single-bit mask test matching TurretAI::isWeaponSlotOnTurret
@@ -3334,3 +3333,4 @@ _marklock,0x00751290,address read from the REL32 call at 0x0075131E in the _mark
 _protomark,0x00750B50,address read from the self-recursion REL32 at 0x00750BA9 and the _markobject calls; Lua 4.0.1 lgc.c static
 ?assign@Rva00332217Vec@@QAEXABV1@@Z,0x00332217,opaque 12-byte-element vector assign called by Rva002E9E70 copy-ctor at 0x3372EC; true element type and name unknown so address-derived
 ?rva00832100Release@_STL@@YAXXZ,0x000070E0
+?isSlotLocalAlly@GameSlot@@CA_NXZ,0x003FF7B7
