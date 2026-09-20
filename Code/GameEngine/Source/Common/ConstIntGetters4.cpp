@@ -1807,3 +1807,11 @@ int Rva004CCDB0Get(void)
 {
 	return 0x00bf4b08;
 }
+
+// ?Rva004CD11BGet@@YAHXZ @ 0x004cd11b (6B): returns 0x00bf4ae4.
+// Follows a ret-8 (prev C2-08-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva004CD11BGet(void)
+{
+	return 0x00bf4ae4;
+}
