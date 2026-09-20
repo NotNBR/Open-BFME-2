@@ -13025,3 +13025,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?rva009C6620BinkMmx@@YAXPBXPAXHHHH0@Z,,0x001D6F20,198,Code/GameEngine/Source/Common/Rva009C6620BinkMmx.cpp,matched,BFME1 byte-identical donor; MMX tables masked
 ?write@Rva007F1220BlobWriter@@QAEXPAVRva007E8810Message@@PBURva007F1220Owner@@HPAX2PBURva007F1220Record@@@Z,,0x0065DDA0,466,Code/GameEngine/Source/GameNetwork/Rva007F1220BlobWriter.cpp,matched,BFME1 donor with txn-global slot repaired to BFME2 retail 0x00E09FEC
 ?route@Rva0080A110Owner@@QAEXPAURva0080A110Message@@@Z,,0x00676010,362,Code/GameEngine/Source/GameNetwork/Rva0080A110Route.cpp,matched,BFME1 byte-identical donor
+?handle@Gen0080AB50@@QAEHI@Z,,0x00676A50,374,Code/GameEngine/Source/GameNetwork/Rva0080AB50Handle.cpp,matched,BFME1 byte-identical donor
