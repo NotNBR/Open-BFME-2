@@ -13029,3 +13029,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?Rva009B3650FilterVert@@YAXPAXPAEHPBH@Z,,0x001C3F50,180,Code/GameEngine/Source/Common/BfmeLoopFilterVert.cpp,matched,BFME1 byte-identical donor; clamp tables masked
 ?Rva009A9660@@YAXPAEHI@Z,,0x001BA0A0,179,Code/GameEngine/Source/Common/BfmeInterpRows6.cpp,matched,BFME1 byte-identical donor; call-free body
 ?Rva007F2FA0@@YGXPAVRva007E8810Message@@PBURva007F2FA0Owner@@PBDPBURva007F2FA0Value@@IH@Z,,0x0065FA80,323,Code/GameEngine/Source/GameNetwork/Rva007F2FA0RecordRequest.cpp,matched,BFME1 byte-identical donor
+?Rva009A5C40Initialize@@YAHPAURva009A5C40Context@@@Z,,0x001B66B0,292,Code/GameEngine/Source/Common/Rva009A5C40Initialize.cpp,matched,BFME1 byte-identical donor
