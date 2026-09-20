@@ -13189,3 +13189,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ?bfmeDelTYA@BfmeThingTYA@@QAEPAXE@Z,,0x0066E3D0,83,Code/GameEngine/Source/Common/BfmeConv1327.cpp,matched,BFME1 byte-identical donor; b1 0x00802110; TYA deleter with vftable swaps
 ?destroy@Rva007EB310Owner@@QAEPAXI@Z,,0x006582B0,100,Code/GameEngine/Source/Common/Rva007EB310Destroy.cpp,matched,BFME1 byte-identical donor; b1 0x007EB310; singleton teardown wrapper
 ??_GLZHLCompressor@@QAEPAXI@Z,,0x0068ECC0,30,Code/Libraries/Source/Compression/LZHCompress/CompLibSource/LZHLApi.cpp,matched,scalar deleting dtor emitted by TU delete; calls compressor dtor 0x00691080
+?bfmeRandom@@YAHH@Z,,0x006B89A0,59,Code/GameEngine/Source/Common/Bfme5NinetyOne.cpp,matched,BFME1 byte-identical donor Bfme5NinetyOne.cpp; b1 0x00878800
