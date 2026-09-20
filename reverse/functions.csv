@@ -13128,3 +13128,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?calcSleepTime@FlammableUpdate@@IAE?AW4UpdateSleepTime@@XZ,,0x0048C517,71,Code/GameEngine/Source/GameLogic/Object/Update/FlammableUpdate.cpp,matched,row-only: ZH TU body matches retail with TU-local +0x40 GameLogic view; BFME1 donor confirms identity
 ?Resize@?$SimpleVecClass@URva0096E1B0Elem@@@@UAE_NH@Z,,0x001883F0,201,Code/Libraries/Source/WWVegas/WW3D2/SimpleVecResize0096E1B0.cpp,matched,BFME1 byte-identical donor b1 0x0096E1B0
 ?bfmeClearAll@@YAXXZ,,0x006B5830,53,Code/GameEngine/Source/Common/Bfme5SeventySeven.cpp,matched,BFME1 Bfme5SeventySeven.cpp byte-identical donor trimmed to bfmeClearAll; tables at BFME2 absolutes
+??0?$pair@$$CBW4NameKeyType@@VDamageFX@@@_STL@@QAE@ABU01@@Z,,0x00360896,30,Code/GameEngine/Source/Common/DamageFX_pairConstruct.cpp,matched,row-only: pair copy ctor COMDAT via placement-new anchor; same TU as landed _Construct

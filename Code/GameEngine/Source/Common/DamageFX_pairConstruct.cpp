@@ -36,3 +36,11 @@ void damageFXPairConstructAnchor(DamageFXPair *at, const DamageFXPair &from)
 {
 	_STL::_Construct(at, from);
 }
+
+// ?damageFXPairCopyAnchor@@YAXPAUDamageFXPair@@ABU1@@Z absent-from-retail
+// Anchor: emits the pair copy-ctor COMDAT (retail 0x00360896) via
+// placement new; the anchor itself never shipped.
+void damageFXPairCopyAnchor(DamageFXPair *at, const DamageFXPair &from)
+{
+	new (at) DamageFXPair(from);
+}
