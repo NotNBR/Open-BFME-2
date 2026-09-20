@@ -14055,3 +14055,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva006891A0Get@@YAHXZ,,0x006891A0,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E0ABB0
 ?Rva006F5100Get@@YAHXZ,,0x006F5100,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E18078
 ?Rva006FD2F9Get@@YAHXZ,,0x006FD2F9,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E18078
+?buildFieldParse@ChinookAIUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004C1B80,43,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdate/ChinookAIUpdateBuildFieldParse.cpp,matched,BFME2 getter-table plus local-table shape over ZH Rope table; parent via SupplyTruck pin; /O1 for pop-ecx cleanup
