@@ -8,3 +8,4 @@
 typedef _STL::vector<bool>::const_iterator BitInput;
 typedef _STL::vector<bool>::iterator BitOutput;
 template BitOutput _STL::__copy_aux<BitInput,BitOutput>(BitInput,BitInput,BitOutput,const _STL::__false_type&);
+template BitOutput _STL::copy<BitInput,BitOutput>(BitInput,BitInput,BitOutput);
