@@ -13104,3 +13104,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeGoVGP@BfmeThingVGP@@QAEHXZ,,0x00176E90,70,Code/GameEngine/Source/Common/BfmeConv1356.cpp,matched,BFME1 donor imports are direct C imports
 ?bfmeFindV39@@YGHPADII@Z,,0x00029850,206,Code/GameEngine/Source/Common/BfmeConv1480.cpp,matched,BFME1 byte-identical donor; GoPA rowed
 ?bfmeDropYQ@Gen009F5040@@QAEXPAVBfmeThingYQ@@@Z,,0x006278A0,65,Code/GameEngine/Source/Common/BfmeConv2102.cpp,matched,BFME1 donor unhook helper is rowed bfmeUnhookZU
+??_GRva005D9F70@@UAEPAXI@Z,,0x005D9F7B,28,Code/GameEngine/Source/Common/Rva005EEE33Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
