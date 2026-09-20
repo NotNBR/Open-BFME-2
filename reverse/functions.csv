@@ -14166,3 +14166,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?FreeData@EAStringC@@SAXPAVStringDataC@1@@Z,,0x006D2EB0,118,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string release worker; frees via sized deallocator pin 0x6DB270 unless empty singleton
 ??1EAStringC@@QAE@XZ,,0x006D3010,10,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string scalar dtor; bare release call resolves via FreeData row
 ??0EAStringC@@QAE@ABV0@@Z,,0x006D2FC0,70,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string copy ctor; shares source data with refcount validation
+??4EAStringC@@QAEAAV0@ABV0@@Z,,0x006D3030,85,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string assignment; AddRefs new data before releasing old

@@ -37,6 +37,7 @@ public:
 
 public:
 	EAStringC(const EAStringC &other);
+	EAStringC &operator=(const EAStringC &other);
 	~EAStringC();
 };
 
@@ -84,4 +85,24 @@ EAStringC::EAStringC(const EAStringC &other)
 		}
 	}
 	m_pData->m_uRefCount++;
+}
+
+// ??4EAStringC@@QAEAAV0@ABV0@@Z, retail 0x006D3030 (85B). Assignment:
+// validates and AddRefs the new data first (the source pointer survives
+// in edi across the release call), then releases the old data and
+// stores. Keeping the source object (not just its data pointer) in a
+// named local is what pins retail's edi/esi allocation.
+EAStringC &EAStringC::operator=(const EAStringC &other)
+{
+	const EAStringC *src = &other;
+	if (src->m_pData != &g_eaEmptyStringData) {
+		if (!(src->m_pData->m_uRefCount <= 0xFFFE)) {
+			g_bfmeAptAssertAtE17734("m_pData->m_uRefCount <= 0xfffe", ".\\string\\EAString.inl", 0xE1);
+			if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+		}
+	}
+	src->m_pData->m_uRefCount++;
+	FreeData(m_pData);
+	m_pData = src->m_pData;
+	return *this;
 }
