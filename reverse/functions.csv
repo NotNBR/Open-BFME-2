@@ -13374,3 +13374,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva0023C59CGet@@YA_NXZ,,0x0023C59C,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?Rva002C7269Get@@YA_NXZ,,0x002C7269,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?get@Rva000515C7DwordField@@QBEHXZ,,0x000515C7,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0007E00FDwordField@@QBEHXZ,,0x0007E00F,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
