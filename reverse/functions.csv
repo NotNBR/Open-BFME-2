@@ -13982,3 +13982,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva0065E7CAGet@@YAHXZ,,0x0065E7CA,3,Code/GameEngine/Source/Common/ConstZeroGetters.cpp,matched,33C0C3 zero returner; prev C3 with no vtable and no callers; opaque name
 ?Rva006C5FF3Get@@YAHXZ,,0x006C5FF3,3,Code/GameEngine/Source/Common/ConstZeroGetters.cpp,matched,33C0C3 zero returner; prev C3 with no vtable and no callers; opaque name
 ?Rva00753952Get@@YAHXZ,,0x00753952,3,Code/GameEngine/Source/Common/ConstZeroGetters.cpp,matched,33C0C3 zero returner; prev C3 with no vtable and no callers; opaque name
+??$_Construct@VProductionPrerequisite@@V1@@_STL@@YAXPAVProductionPrerequisite@@ABV1@@Z,,0x002D0C17,45,Code/GameEngine/Source/Common/Thing/ProductionPrerequisiteVectorPushBack.cpp,matched,prereq _Construct 45B exact via explicit-instantiation TU; retail REL32 in push_back at 0x0033EA10; copy ctor pin 0x002D08DA resolves

@@ -3485,3 +3485,6 @@ _var_or_func,0x007555C0,address read from the REL32 call at 0x00755E9E in the _n
 _var_or_func_tail,0x007552F0,address read from the REL32 calls at 0x00755EE 0x0075624 and 0x0075640 in the _var_or_func body; Lua 4.0.1 lparser.c static
 _vsprintf,0x00629A7E,CRT vsprintf import thunk; retail REL32 target of Rva007FE780 at 0x66AC50
 dup_7e86b0,0x00655770
+??$__copy_ptrs@PAUNugget@ModuleInfo@@PAU12@@_STL@@YAPAUNugget@ModuleInfo@@PAU12@00ABU__false_type@0@@Z,0x002CF2B8,STLport 4-arg copy dispatch called from vector<ModuleInfo::Nugget>::erase at 0x0033C3BC; reads off the retail REL32 there
+??1Nugget@ModuleInfo@@QAE@XZ,0x002CF51B,BFME2 vector<ModuleInfo::Nugget>::erase destroys via the out-of-line Nugget dtor; reads off the retail REL32 at 0x0033C3E6
+??0ProductionPrerequisite@@QAE@ABV0@@Z,0x002D08DA,prereq copy ctor called from the retail REL32 in _Construct at 0x002D0C33; 77B EH body ending c9 c2-04-00 with next prologue 55-8b-ec; ghidra 10B extent understated
