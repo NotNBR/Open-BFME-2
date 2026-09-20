@@ -495,3 +495,11 @@ int Rva003ACA7DGet(void)
 {
 	return 0x00C1CA14;
 }
+
+// ?Rva003ACAFAGet@@YAHXZ @ 0x003acafa (6B): returns 0x00C1CA6C.
+// Follows a ret-4 (prev C2-04-00), carried by 2 .rdata vtable slots,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva003ACAFAGet(void)
+{
+	return 0x00C1CA6C;
+}
