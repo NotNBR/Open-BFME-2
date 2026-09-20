@@ -30,3 +30,30 @@ void BfmeHostSA::bfmeGoSA(BfmeThingSA *r)
 	int pid = r->bfmeGetSA("PID", 0);
 	m_bfmeSink->bfmeUseSA(tid, pid);
 }
+
+class BfmeThingSB
+{
+public:
+	void *bfmeGetSB(void *a, void *b);
+};
+
+class BfmeSinkSB
+{
+public:
+	void bfmeUseSB(void *a, void *b);
+};
+
+class BfmeHostSB
+{
+public:
+	void bfmeGoSB(BfmeThingSB *r);
+	char m_bfmePad[0x18];
+	BfmeSinkSB *m_bfmeSink;
+};
+
+void BfmeHostSB::bfmeGoSB(BfmeThingSB *r)
+{
+	void *a = r->bfmeGetSB((void *)"TID", 0);
+	void *b = r->bfmeGetSB((void *)"PID", 0);
+	m_bfmeSink->bfmeUseSB(a, b);
+}
