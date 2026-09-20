@@ -23,3 +23,6 @@ public:
 RefCountPtr<TextureClass> MaterialInfoClass::Peek_Texture(int index) {
     return Textures[index];
 }
+void MaterialInfoClass::Replace_Texture(int index,const RefCountPtr<TextureClass>& texture) {
+    Textures[index]=texture;
+}
