@@ -3227,3 +3227,5 @@ _read_number,0x00757200
 ?LZHLDestroyCompressor@@YAXPAX@Z,0x0068ED60
 _Rva007FFC10,0x0066C0E0
 ?notify@Rva00802A90Elem@@QAEXPAURva00802A90Query@@PAXHH@Z,0x0066DF80,address read from the REL32 displacement at placed go 0x66EBC0 twice; same FeslBrowser family; ghidra 523B boundary
+??0?$StringBase@D@@QAE@ABV0@@Z,0x000365F0,public-ctor spelling of the StringBase copy-ctor pinned here; read from REL32 at placed bfmeSetZH 0x6BFB20
+?overflow@BfmeVecCD@@QAEXPAUBfmeElemCD@@ABU2@ABUBfmeFalseCD@@I_N@Z,0x006BF6F0,folds with BfmeVec50 overflow at this address; read from REL32 at placed bfmeSetZH 0x6BFB20
