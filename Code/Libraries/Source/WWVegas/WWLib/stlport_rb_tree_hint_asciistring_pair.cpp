@@ -36,3 +36,6 @@ typedef _STL::map<AsciiString,AsciiString,_STL::less<AsciiString>,_STL::allocato
 template MapPairExtra::iterator MapPairExtra::insert(MapPairExtra::iterator, const StringPair &);
 
 template StringPairTree::_Rb_tree(const StringPairTree &);
+
+// Retail52274D clears through2E44F2 then copies through proven5224E3.
+template StringPairTree &StringPairTree::operator=(const StringPairTree &);
