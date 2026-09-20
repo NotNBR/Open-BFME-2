@@ -227,7 +227,7 @@ static void removelocalvars (LexState *ls, int nvars) {
 }
 
 
-// _adjust_mult_assign present-unmatched
+// _adjust_mult_assign BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void adjust_mult_assign (LexState *ls, int nvars, int nexps) {
   FuncState *fs = ls->fs;
   int diff = nexps - nvars;
