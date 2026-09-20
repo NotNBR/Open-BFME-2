@@ -13260,3 +13260,4 @@ _subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?get@RvaB49A1PtrChaseField@@QBEHXZ,,0x000B49A1,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
 ?get@Rva262193PtrChaseField@@QBEHXZ,,0x00262193,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
 ?get@Rva262FF8PtrChaseField@@QBEHXZ,,0x00262FF8,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva26FFDBPtrChaseField@@QBEHXZ,,0x0026FFDB,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
