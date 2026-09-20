@@ -6,6 +6,7 @@
 // String semantics follow BFME1 AsciiString/UnicodeString: the inline derived
 // copies call StringBase<char>0x365F0 or StringBase<unsigned short>0x37050.
 #include <memory>
+#include <utility>
 template <typename T> class StringBase {
     friend class AsciiString;
     friend class UnicodeString;
@@ -112,3 +113,10 @@ struct BfmeStringRecord005ED5F3 {
 };
 BfmeStringRecord005ED5F3::BfmeStringRecord005ED5F3(const BfmeStringRecord005ED5F3 &o) : text(o.text), word0(o.word0), word1(o.word1), word2(o.word2), word3(o.word3) {}
 template void _STL::_Construct<BfmeStringRecord005ED5F3,BfmeStringRecord005ED5F3>(BfmeStringRecord005ED5F3*,const BfmeStringRecord005ED5F3&);
+
+// Upstream LanguageFilter.cpp identifies the former opaque record at0x387D03
+// as pair<const UnicodeString,bool>. Reuse that claim and keep only this
+// independently verified placement-copy caller at0x387E7C.
+typedef _STL::pair<const UnicodeString,bool> UnicodeFlagPair;
+template void _STL::_Construct<UnicodeFlagPair,UnicodeFlagPair>(UnicodeFlagPair*,const UnicodeFlagPair&);
+
