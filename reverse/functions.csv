@@ -13100,3 +13100,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeCopyVIA@@YAPAUBfmeElemVIA@@PAU1@00@Z,,0x00689450,125,Code/GameEngine/Source/Common/BfmeConv1371.cpp,matched,BFME1 donor members copy via AsciiString op assign pin
 ?read_material_pass@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,,0x0018B400,175,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadMaterialPass.cpp,matched,BFME1 meshmdlio port as bool reader with per-case ok-local al-passthrough returns and retail case order with 0x3F opaque case third
 ?bfmeClearVDB@BfmeThingVDB@@QAEXXZ,,0x00759D30,75,Code/GameEngine/Source/Common/BfmeConv1350.cpp,matched,BFME1 donor trimmed free helper is scalar delete
+??_GNode@?$SList@VTagBlockIndex@@@@QAEPAXI@Z,,0x006204E0,30,Code/GameEngine/Source/Common/SListTagBlockIndexRemoveAllThunk.cpp,matched,scalar deleting dtor emitted by Remove_All TU; dtor is the pinned 0x6204D0 thunk
