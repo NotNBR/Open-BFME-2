@@ -12961,3 +12961,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva001B6390Get@@YAHXZ,,0x001B6390,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?Rva00610F10Get@@YAHXZ,,0x00610F10,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?Rva00610F20Get@@YAHXZ,,0x00610F20,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
+?q3PartialSort009F3D80@@YAXPAUQ3SortElem8@@00UQ3SortCompare@@@Z,,0x00626740,31,Code/GameEngine/Source/Common/SmallGaps/Rva009F3D80PartialSortWrappers.cpp,matched,BFME1 SmallGaps donor pair b1 0x009F3D80; Gen callee is landed partial_sort asc 0x00626530; zero new pins
