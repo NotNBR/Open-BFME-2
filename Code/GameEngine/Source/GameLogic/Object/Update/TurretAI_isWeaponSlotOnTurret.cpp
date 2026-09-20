@@ -13,6 +13,30 @@ enum WeaponSlotType
 	WEAPONSLOT_COUNT = 6
 };
 
+enum TurretStateType
+{
+	TURRETAI_IDLE,
+	TURRETAI_IDLESCAN,
+	TURRETAI_AIM,
+	TURRETAI_FIRE,
+	TURRETAI_RECENTER,
+	TURRETAI_HOLD,
+	NUM_TURRETAI_STATES
+};
+
+struct TurretStateMachine
+{
+	virtual void m_v0();
+	virtual void m_v1();
+	virtual void m_v2();
+	virtual void m_v3();
+	virtual void m_v4();
+	virtual void m_v5();
+	virtual void m_v6();
+	virtual void m_v7();
+	virtual void setState(int state);
+};
+
 struct TurretData
 {
 	char m_pad[0x4C];
@@ -23,13 +47,24 @@ class TurretAI
 {
 	char m_pad[8];
 	TurretData *m_data;
+	char m_gap[8];
+	TurretStateMachine *m_stateMachine;
 
 public:
 	Bool isWeaponSlotOnTurret(WeaponSlotType wslot) const;
+	void recenterTurret();
 };
 
 // ?isWeaponSlotOnTurret@TurretAI@@QBE_NW4WeaponSlotType@@@Z
 Bool TurretAI::isWeaponSlotOnTurret(WeaponSlotType wslot) const
 {
 	return (m_data->m_slotMask & (1 << wslot)) != 0;
+}
+
+// ?recenterTurret@TurretAI@@QAEXXZ, retail 0x004D8298, 11 bytes.
+// The state machine lives at +0x14; setState is vtable slot 8 and
+// TURRETAI_RECENTER is 4, matching the push-4 plus call-[eax+0x20] shape.
+void TurretAI::recenterTurret()
+{
+	m_stateMachine->setState(TURRETAI_RECENTER);
 }
