@@ -614,3 +614,25 @@ Rva005DCC4B::Rva005DCC4B(const Rva005DCC4BSource *source)
 {
 	m_field04 = source->m_field74;
 }
+
+// ---- vptr + two member subobject copies (retail 0x0028F68F)
+// B2 body-address name: member at +0x04 copies with the rowed 171B body and
+// member at +0x6C with the rowed 33B body. Both member copies are pure
+// stores, so the compiler proves nothrow and stays frameless with two
+// outlined calls, exactly like retail. (The E8 sites sit 21/33 bytes in;
+// the row names the C9-C3 boundary, not the call sites.)
+class Rva0028F68F
+{
+public:
+	Rva0028F68F(const Rva0028F68F &other);
+	virtual ~Rva0028F68F();
+
+	Rva0028C62B m_member04;
+	Rva0028C6D6 m_member6C;
+};
+
+Rva0028F68F::Rva0028F68F(const Rva0028F68F &other)
+	: m_member04(other.m_member04)
+	, m_member6C(other.m_member6C)
+{
+}
