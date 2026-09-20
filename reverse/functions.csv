@@ -14130,3 +14130,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?Rva00849E80FileSize@@YAJPAX@Z,,0x0001D240,50,Code/stlport/FileSizeHelper.cpp,matched,BFME1 byte-identical donor; b1 0x00849E80
 ??0Rva005D6FCC@@QAE@PAX@Z,,0x005D6FCC,18,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly pointer-holder ctor twin of 0x005CB22A shape with distinct vtable; four E8 callers; B2 address names the body
 ?setTurretEnabled@AIUpdateInterface@@QAEXW4WhichTurretType@@_N@Z,,0x00262651,27,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterface_setTurretEnabled.cpp,matched,BFME2 AIUpdate logic; m_turretAI at +0x20C; TurretAI setEnabled pin 0x4D82D6
+??0Rva005DAA36@@QAE@PAX@Z,,0x005DAA36,18,Code/GameEngine/Source/Common/V3PolyCopyCtors.cpp,matched,V3Poly pointer-holder ctor twin of 0x005CB22A shape with distinct vtable; three E8 callers; B2 address names the body
