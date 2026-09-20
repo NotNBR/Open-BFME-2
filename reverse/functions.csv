@@ -12949,3 +12949,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?wrapAngle@@YAMM@Z,,0x006E03F0,67,Code/GameEngine/Source/Common/SmallGaps/wrapAngle.cpp,matched,BFME1 SmallGaps donor with halved constants; intrinsic fmod via msvcr71 __CIfmod 0x629A36; strict-lt middle selects test-ah-05
 ??0Rva00064640Record@@QAE@ABV0@@Z,,0x0050403D,49,Code/GameEngine/Source/Common/Rva00064640Copy.cpp,matched,BFME1 byte-identical donor; b1 0x00064640
 ?Rva0011D250Get@@YAHXZ,,0x0011D250,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
+?Rva0011D260Get@@YAHXZ,,0x0011D260,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
