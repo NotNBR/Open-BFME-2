@@ -3248,3 +3248,4 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ?read_vertex_materials@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,0x0018AD40,retail REL32 from read_prelit_material switch case for W3D_CHUNK_VERTEX_MATERIALS 0x2A at 0x0018B567 via jump-table index 2
 ?read_textures@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,0x0018AE50,retail REL32 from read_prelit_material switch case for W3D_CHUNK_TEXTURES 0x30 at 0x0018B57D via jump-table index 3
 ?read_material_pass@MeshModelClass@@IAE_NAAVChunkLoadClass@@PAVMeshLoadContextClass@@@Z,0x0018B400,retail REL32 from read_prelit_material switch case for W3D_CHUNK_MATERIAL_PASS 0x38 at 0x0018B588 via jump-table index 4
+??1Node@?$SList@VTagBlockIndex@@@@QAE@XZ,0x006204D0,this-adjust thunk (add ecx 8 + jmp StringBase dtor 0x36410); called as the member dtor from Remove_All 0x620870 and from the ??_G at 0x6204E0
