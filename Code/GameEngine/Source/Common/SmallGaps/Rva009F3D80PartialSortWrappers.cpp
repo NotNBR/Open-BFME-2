@@ -52,3 +52,8 @@ void q3PartialSort009F3D80(Q3SortElem8 *first, Q3SortElem8 *middle, Q3SortElem8 
 {
 	_STL::__partial_sort((S4SortElem8 *)first, (S4SortElem8 *)middle, (S4SortElem8 *)last, (S4SortElem8 *)0, (S4Cmp00625BB0 &)comp);
 }
+// ?q3PartialSort009F3DA0@@YAXPAUQ3SortElem8@@00UQ3SortCompare@@@Z
+void q3PartialSort009F3DA0(Q3SortElem8 *first, Q3SortElem8 *middle, Q3SortElem8 *last, Q3SortCompare comp)
+{
+	_STL::__partial_sort((S4SortElem8 *)first, (S4SortElem8 *)middle, (S4SortElem8 *)last, (S4SortElem8 *)0, (S4Cmp00625C10 &)comp);
+}
