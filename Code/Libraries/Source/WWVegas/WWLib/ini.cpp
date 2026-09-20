@@ -1825,7 +1825,6 @@ int INIClass::Get_Int_Bitfield(char const * section, char const * entry, int def
 	return retval;
 }
 
-// ?Get_Alloc_Int_Array@INIClass@@ present-unmatched
 int *	INIClass::Get_Alloc_Int_Array(char const * section, char const * entry, int listend)
 {
 	int *retval = NULL;
@@ -1846,7 +1845,7 @@ int *	INIClass::Get_Alloc_Int_Array(char const * section, char const * entry, in
 	for (token = strtok(str, " "); token; token = strtok(NULL, " ")) {
 		count++;
 	}
-	free(str);
+	_STL::free(str);
 
 	// now that we know how many tokens there are in the string, allocate a int
 	// array to hold the tokens and parse out the actual values.
@@ -1857,7 +1856,7 @@ int *	INIClass::Get_Alloc_Int_Array(char const * section, char const * entry, in
 		retval[count] = atoi(token);
 		count++;
 	}
-	free(str);
+	_STL::free(str);
 
 	// arrays of integers are terminated with the listend variable passed in
 	retval[count] = listend;
