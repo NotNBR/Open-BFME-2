@@ -34,7 +34,7 @@ public:
 class Xfer;
 class Snapshot {
 public:
-    virtual ~Snapshot();
+    __forceinline virtual ~Snapshot() {}
     virtual void crc(Xfer *);
     virtual const char *typeName() const;
     virtual void xfer(Xfer *);
@@ -50,11 +50,10 @@ struct BfmeVector0022C55B {
 // Complete copy at 0x229875 is 141 bytes: vptr 0xBE7460; eight 0x1AC-byte
 // elements at +4; blocks at +0xD64/+0xD74; byte +0xD9C; dword +0xDA0.
 // Its destructor is the direct +0x44 member cleanup at 0x2DC62C.
-struct BfmeSubobject00229875 {
-    void *vtable;
+struct BfmeSubobject00229875 : Snapshot {
     unsigned char storage[0xDA0];
     BfmeSubobject00229875(const BfmeSubobject00229875 &);
-    ~BfmeSubobject00229875();
+    virtual ~BfmeSubobject00229875();
 };
 struct BfmeSubobject0022CE19 : Snapshot {
     virtual ~BfmeSubobject0022CE19();
@@ -78,3 +77,5 @@ BfmeSubobject0022CE19::BfmeSubobject0022CE19(const BfmeSubobject0022CE19 &o)
       date10(o.date10), text20(o.text20), word24(o.word24), word28(o.word28),
       text2C(o.text2C), text30(o.text30), text34(o.text34),
       range38(o.range38), object44(o.object44) {}
+
+BfmeSubobject0022CE19::~BfmeSubobject0022CE19() {}
