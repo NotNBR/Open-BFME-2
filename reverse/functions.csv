@@ -14094,3 +14094,4 @@ __Locale_tolower,,0x00021B10,291,Code/Libraries/Source/WWVegas/WWLib/stlport_Loc
 ?_M_bit_alloc@?$_Bvector_base@V?$allocator@_N@_STL@@@_STL@@IAEPAII@Z,,0x00069F75,24,Code/GameEngine/Source/Common/System/SaveGame/CreateAHeroDataCopy.cpp,matched,vendored=stlport-4.5.3;bit-vector allocator placed from CreateAHeroData TU
 ?GadgetCheckBoxIsChecked@@YA_NPAVGameWindow@@@Z,,0x00327B33,19,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetCheckBoxIsChecked.cpp,matched,
 ?BfmeGadgetListBoxSetAudioFeedback@@YAXPAVGameWindow@@_N@Z,,0x0032497D,21,Code/GameEngine/Source/GameClient/GUI/Gadget/BfmeGadgetListBoxSetAudioFeedback.cpp,matched,
+?bfmeGoENK@@YAXPAVBfmeObjENK@@D@Z,,0x00324992,21,Code/GameEngine/Source/Common/BfmeConv880GoENK.cpp,matched,
