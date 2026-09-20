@@ -30,3 +30,7 @@ StringPairTree::_Link_type StringPairTree::_M_create_node(const StringPair &valu
 }
 
 template StringPairTree::iterator StringPairTree::insert_unique(StringPairTree::iterator, const StringPair &);
+
+// The map wrapper directly calls this tree's verified hinted insertion.
+typedef _STL::map<AsciiString,AsciiString,_STL::less<AsciiString>,_STL::allocator<StringPair> > MapPairExtra;
+template MapPairExtra::iterator MapPairExtra::insert(MapPairExtra::iterator, const StringPair &);
