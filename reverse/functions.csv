@@ -14079,3 +14079,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva001EAE1AByteField@@QBEEXZ,,0x001EAE1A,7,Code/GameEngine/Source/Common/DispByteFieldGetters.cpp,matched,Disp32 byte getter
 ??1DX8MeshRendererClass@@QAE@XZ,,0x00147F60,172,Code/Libraries/Source/WWVegas/WW3D2/DX8MeshRendererClassDtor.cpp,matched,DX8MeshRenderer dtor 172B exact via dedicated member-layout TU; Invalidate plus Clear plus guarded skin ::delete plus list member dtors plus inlined SimpleDynVec teardown; nothrow deletes and 0x18 list size are the levers
 ?Get_Bits_Per_Pixel@@YIIW4WW3DFormat@@@Z,,0x00131A9D,88,Code/Libraries/Source/WWVegas/WW3D2/ww3dformat_bits.cpp,matched,BFME1 ww3dformat_bits donor verbatim; fastcall enum D3DFORMAT numbering with DXT FOURCCs; /O1 builds retail switch tree
+__Locale_toupper,,0x000219E0,291,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCtypeCase.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084E850
