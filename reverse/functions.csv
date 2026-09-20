@@ -13453,3 +13453,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?isSkirmish@GameInfo@@QAE_NXZ,,0x003FF9E2,90,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameInfo isSkirmish with BFME1 GameInfo.cpp shape except allied AI continues the scan instead of aborting
 ?getSlotIndex@@YAHPBVGameSlot@@@Z,,0x003FF796,33,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot helper outlined in retail; places via same-TU EDI design
 ?isOccupied@GameSlot@@QBE_NXZ,,0x003FF0FB,44,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameSlot occupied predicate with player AI observer states and occupancy byte
+?getNumPlayers@GameInfo@@QBEHXZ,,0x003FF218,37,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameInfo player counter with BFME1 GameInfo.cpp shape
