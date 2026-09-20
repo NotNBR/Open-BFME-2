@@ -13340,3 +13340,4 @@ _marktagmethods,,0x00750C20,110,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 by
 _markobject,,0x00750C90,164,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markclosure inlines to direct protomark calls
 _marklock,,0x00751290,50,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c
 _markall,,0x007512D0,276,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markstack inlines
+_luaK_posfix,,0x00753710,208,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor Lua 4.0.1 lcode.c; pinned callee of _subexpr; exact via explain_mismatch
