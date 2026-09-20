@@ -3501,3 +3501,4 @@ dup_7e86b0,0x00655770
 ??H?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@_STL@@QBE?AU01@H@Z,0x00069F22,STLport bit-iterator operator+ called from the retail REL32 in _M_initialize at 0x00389106; same decorated callee the vector-bool TU emits
 ??$__copy_aux@U?$_Bit_iter@_NPB_N@_STL@@U?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@2@@_STL@@YA?AU?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@0@U?$_Bit_iter@_NPB_N@0@0U10@ABU__false_type@0@@Z,0x0038925D,STLport bit-iterator copy worker called from the retail REL32 in the 50B copy wrapper at 0x003893F2; same decorated callee the vector-bool TU emits
 ?allocate@?$allocator@I@_STL@@QBEPAIIPBX@Z,0x00068E15,STLport unsigned allocator identical-code fold with the allocator pins already at this address; read from the retail REL32 in _M_bit_alloc at 0x00069F8A
+?Rva000306327Xfer@@YAXPAVXfer@@PAX@Z,0x00306327,EH-head helper called once from SkirmishGameInfo::xfer at 0x003FFACE; sole E8 caller in game.dat; takes (Xfer*, this+0x40) cdecl

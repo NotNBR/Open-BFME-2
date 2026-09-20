@@ -14097,3 +14097,4 @@ __Locale_tolower,,0x00021B10,291,Code/Libraries/Source/WWVegas/WWLib/stlport_Loc
 ?bfmeGoENK@@YAXPAVBfmeObjENK@@D@Z,,0x00324992,21,Code/GameEngine/Source/Common/BfmeConv880GoENK.cpp,matched,
 ?Rva00897FD0@@YAPBUR4Word@@PBDI@Z,,0x006DBA00,273,Code/GameEngine/Source/Common/R4PerfectHashWithOverflow.cpp,matched,
 ?Rva008B60B0@@YAPBUR4Word@@PBDI@Z,,0x006F3F60,273,Code/GameEngine/Source/Common/R4PerfectHashWithOverflow.cpp,matched,
+?xfer@SkirmishGameInfo@@UAEXPAVXfer@@@Z,,0x003FFA3C,272,Code/GameEngine/Source/GameNetwork/SkirmishGameInfoXfer.cpp,matched,Substantial BFME1 GameInfo.cpp:2396 reconstruction; retail drops version checks and strings for flat runs; +0x40 helper pinned at 0x000306327; locals slot/fiveC/count reproduce retail homes first-try
