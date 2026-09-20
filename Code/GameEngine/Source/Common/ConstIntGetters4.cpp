@@ -735,3 +735,11 @@ int Rva00436846Get(void)
 {
 	return 0x006D20D3;
 }
+
+// ?Rva0044643DGet@@YAHXZ @ 0x0044643d (6B): returns 0x006D1F77.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva0044643DGet(void)
+{
+	return 0x006D1F77;
+}
