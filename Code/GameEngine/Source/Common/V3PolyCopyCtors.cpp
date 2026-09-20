@@ -589,3 +589,28 @@ Rva005E67FE::Rva005E67FE(void *held)
 {
 	m_field04 = held;
 }
+
+// ----------------- vptr + converted int from +0x74 (retail 0x005DCC4B)
+// B2 body-address name: the single member takes arg+0x74, not arg+0x04, so
+// this converts from a larger source whose only observed member is the int
+// at +0x74. The source layout is inferred from that one load. Retail caller
+// 0x005AD6CA passes the source pointer by value then installs its own vptr.
+struct Rva005DCC4BSource
+{
+	char m_bytes00[0x74];
+	Int m_field74;
+};
+
+class Rva005DCC4B
+{
+public:
+	Rva005DCC4B(const Rva005DCC4BSource *source);
+	virtual ~Rva005DCC4B();
+
+	Int m_field04;
+};
+
+Rva005DCC4B::Rva005DCC4B(const Rva005DCC4BSource *source)
+{
+	m_field04 = source->m_field74;
+}
