@@ -224,3 +224,138 @@ bool Rva004A6AB2Get(void)
 {
 	return false;
 }
+// ?Rva00040FB2Get@@YA_NXZ @ 0x00040fb2 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva00040FB2Get(void)
+{
+	return false;
+}
+
+// ?Rva00040FCAGet@@YA_NXZ @ 0x00040fca (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva00040FCAGet(void)
+{
+	return false;
+}
+
+// ?Rva0004E50FGet@@YA_NXZ @ 0x0004e50f (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva0004E50FGet(void)
+{
+	return false;
+}
+
+// ?Rva00050DCDGet@@YA_NXZ @ 0x00050dcd (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva00050DCDGet(void)
+{
+	return false;
+}
+
+// ?Rva00050DE0Get@@YA_NXZ @ 0x00050de0 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva00050DE0Get(void)
+{
+	return false;
+}
+
+// ?Rva0005155BGet@@YA_NXZ @ 0x0005155b (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva0005155BGet(void)
+{
+	return false;
+}
+
+// ?Rva0005320CGet@@YA_NXZ @ 0x0005320c (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva0005320CGet(void)
+{
+	return false;
+}
+
+// ?Rva00072580Get@@YA_NXZ @ 0x00072580 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva00072580Get(void)
+{
+	return false;
+}
+
+// ?Rva000B3A7DGet@@YA_NXZ @ 0x000b3a7d (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva000B3A7DGet(void)
+{
+	return false;
+}
+
+// ?Rva001EB0C7Get@@YA_NXZ @ 0x001eb0c7 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva001EB0C7Get(void)
+{
+	return false;
+}
+
+// ?Rva001EB0E7Get@@YA_NXZ @ 0x001eb0e7 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva001EB0E7Get(void)
+{
+	return false;
+}
+
+// ?Rva001EB0F8Get@@YA_NXZ @ 0x001eb0f8 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva001EB0F8Get(void)
+{
+	return false;
+}
+
+// ?Rva00203B05Get@@YA_NXZ @ 0x00203b05 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva00203B05Get(void)
+{
+	return false;
+}
+
+// ?Rva0020D7B9Get@@YA_NXZ @ 0x0020d7b9 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva0020D7B9Get(void)
+{
+	return false;
+}
+
+// ?Rva0028AFCFGet@@YA_NXZ @ 0x0028afcf (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva0028AFCFGet(void)
+{
+	return false;
+}
+
+// ?Rva002B2B58Get@@YA_NXZ @ 0x002b2b58 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva002B2B58Get(void)
+{
+	return false;
+}
+
+// ?Rva002B3750Get@@YA_NXZ @ 0x002b3750 (3B): returns false.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva002B3750Get(void)
+{
+	return false;
+}
