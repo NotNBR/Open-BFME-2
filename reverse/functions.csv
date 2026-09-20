@@ -13436,3 +13436,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva0041FE60Get@@YA_NXZ,,0x0041FE60,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?isSlotLocalAlly@@YA_NPBVGameSlot@@@Z,,0x003FF7B7,92,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent family ally helper with BFME1 GameInfo.cpp shape and getSlotIndex inlined and slot in EDI
 ?getApparentPlayerTemplate@GameSlot@@QBEHXZ,,0x003FF813,37,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent template with BFME1 GameInfo.cpp shape and orig fallback for hidden random
+?getApparentColor@GameSlot@@QBEHXZ,,0x003FF838,56,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent color with BFME1 GameInfo.cpp shape and observer color path
