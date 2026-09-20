@@ -13065,3 +13065,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?getVideo@VideoPlayer@@UAEPBUVideo@@VAsciiString@@@Z,,0x00689B10,338,Code/GameEngine/Source/GameClient/VideoPlayerGetVideo.cpp,matched,BFME1 donor trimmed to getVideo; implicit AsciiString members emit StringBase base calls; trim and dtor pins added
 ?Rva009A7950@@YAXPAHPAGHHHHPBH@Z,,0x001B83B0,127,Code/GameEngine/Source/Common/Rva009A7950.cpp,matched,BFME1 byte-identical donor b1 0x009A7950
 ?broadcast@Rva0088A1F0Owner@@QAEXXZ,,0x000392C0,63,Code/GameEngine/Source/Common/Rva0088A1F0Broadcast.cpp,matched,BFME1 byte-identical donor b1 0x0088A1F0
+??0SubtitleEntry@@QAE@ABVUnicodeString@@IHHHHH@Z,,0x00688550,74,Code/GameEngine/Source/GameClient/SubtitleEntryCtor.cpp,matched,BFME1 donor reconstruction; vptr immediate; text via StringBase copy pin
