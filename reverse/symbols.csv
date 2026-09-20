@@ -3516,3 +3516,5 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ?setTurretTargetPosition@TurretAI@@QAEXPBUCoord3D@@@Z,0x004D8828,address read from the retail REL32 at 0x00262649 in AIUpdateInterface::setTurretTargetPosition; single-pos delegate matching TurretAI::setTurretTargetPosition
 ?setTurretTargetObject@TurretAI@@QAEXPAVObject@@_N@Z,0x004D8791,address read from the retail REL32 at 0x002625FD in AIUpdateInterface::setTurretTargetObject; object plus force delegate matching TurretAI::setTurretTargetObject
 ?getGoalObject@TurretStateMachine@@QAEPAVObject@@XZ,0x004D7726,TheGameLogic ID lookup at TurretAI plus-0x14 machine plus-0x20 called from friend_getTurretTarget retail REL32 at 0x004D821D
+?isNeutralControlled@Object@@QBE_NXZ,0x0028B091,Object neutral check for StatsCollector unit count
+?isLocalPlayer@Player@@QBE_NXZ,0x002A9D89,Player local check for StatsCollector unit count

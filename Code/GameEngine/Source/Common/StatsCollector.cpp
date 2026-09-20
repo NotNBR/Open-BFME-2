@@ -15,17 +15,27 @@ typedef int Bool;
 
 #define FALSE 0
 
-class AsciiString
+template <typename T> class StringBase
 {
 public:
-	AsciiString() : m_data( 0 ) {}
+	int compare(const char *other) const;
 
-private:
+protected:
 	char *m_data;
 };
 
-struct GameLogicFrame
+class AsciiString : public StringBase<char>
 {
+public:
+	AsciiString() { m_data = 0; }
+};
+
+class Object;
+class Player;
+
+struct GameLogic
+{
+	Object *getFirstObject();
 	UnsignedInt getFrame() const { return m_frame; }
 
 	char m_pad00[ 0x40 ];
@@ -34,11 +44,52 @@ struct GameLogicFrame
 
 extern void *TheGameLogic;
 
+class ThingTemplate
+{
+public:
+	Bool isKindOf(Int kind) const { return (m_kindOf & (1U << kind)) != 0; }
+
+private:
+	void *m_vtable;
+	void *m_nextOverride;
+	unsigned char m_pad08[ 0x108 - 8 ];
+	UnsignedInt m_kindOf;
+};
+
+class Player
+{
+public:
+	bool isLocalPlayer() const;
+	const AsciiString &getSide() const { return m_side; }
+
+private:
+	void *m_vtable;
+	unsigned char m_pad04[ 0x58 - 4 ];
+	AsciiString m_side;
+};
+
+class Object
+{
+public:
+	const ThingTemplate *getTemplate() const { return m_thingTemplate; }
+	Bool isKindOf(Int kind) const { return getTemplate()->isKindOf(kind); }
+	bool isNeutralControlled() const;
+	Player *getControllingPlayer() const;
+	Object *getNextObject() const { return m_nextObject; }
+
+private:
+	void *m_vtable;
+	ThingTemplate *m_thingTemplate;
+	unsigned char m_pad08[ 0x8c - 8 ];
+	Object *m_nextObject;
+};
+
 // upstream layout: reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Include/Common/StatsCollector.h
 class StatsCollector
 {
 public:
 	StatsCollector();
+	void collectUnitCountStats();
 
 private:
 	AsciiString m_statsFileName;
@@ -95,6 +146,42 @@ StatsCollector::StatsCollector()
 	m_isScrolling = FALSE;
 	m_timeCount = 0;
 	m_lastUpdate = 0;
-	UnsignedInt frame = static_cast<GameLogicFrame *>( TheGameLogic )->getFrame();
+	UnsignedInt frame = static_cast<GameLogic *>( TheGameLogic )->getFrame();
 	m_startFrame = frame;
+}
+
+// ?collectUnitCountStats@StatsCollector@@QAEXXZ, retail 0x00437B4D (105 bytes).
+// BFME1 StatsCollector.cpp donor (StatsCollector::collectUnitCountStats) with
+// BFME2 layout repairs; anchored by the "Civilian" literal plus the
+// getFirstObject/getControllingPlayer/compare/isLocalPlayer call chain.
+// Retail-measured BFME2 repairs vs the BFME1 donor:
+// - Object::m_nextObject is at +0x8c here (BFME1 donor has +0x88).
+// - ThingTemplate::m_kindOf is at +0x108 here; isKindOf(8)||isKindOf(9) folds
+//   to a single `test byte [eax+0x109],3`.
+// - Object::getTemplate is direct here (no m_nextOverride check); the donor
+//   override walk would emit extra branches.
+// - StringBase<char>::compare (0x000069B1), Object::getControllingPlayer
+//   (0x0028AFA9) and GameLogic::getFirstObject (0x0023CAD2) are rowed; the
+//   minimal AsciiString stand-in above keeps the out-of-line call instead of
+//   folding compare inline like the BFME1 donor does.
+// - Object::isNeutralControlled (0x0028B091) and Player::isLocalPlayer
+//   (0x002A9D89) are pinned; ThePlayerList is 0x00DFEEE8 with local at +0x10
+//   and neutral at +0x18.
+// - Player::m_side (AsciiString) is at +0x58 here.
+// - /O1 (TU flags) keeps the frameless push-esi/push-edi loop with the shared
+//   counting tail.
+void StatsCollector::collectUnitCountStats()
+{
+	for( Object *obj = static_cast<GameLogic *>( TheGameLogic )->getFirstObject(); obj; obj = obj->getNextObject() )
+	{
+		if( !(obj->isKindOf( 8 ) || obj->isKindOf( 9 )) ||
+			obj->isNeutralControlled() ||
+			obj->getControllingPlayer()->getSide().compare( "Civilian" ) == 0 )
+			continue;
+
+		if( obj->getControllingPlayer()->isLocalPlayer() )
+			++m_playerUnits;
+		else
+			++m_aiUnits;
+	}
 }
