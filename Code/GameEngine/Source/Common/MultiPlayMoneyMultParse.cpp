@@ -78,5 +78,3 @@ void parseMultiPlayMoneyMult( INI *ini, void *, void *store, const void * )
 		}
 	}
 }
-
-
