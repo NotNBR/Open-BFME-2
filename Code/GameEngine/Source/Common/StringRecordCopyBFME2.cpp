@@ -32,3 +32,11 @@ struct BfmeStringRecord000B950F {
     BfmeStringRecord000B950F(const BfmeStringRecord000B950F &o) : word0(o.word0), text(o.text), word1(o.word1) {}
 };
 template void _STL::_Construct<BfmeStringRecord000B950F,BfmeStringRecord000B950F>(BfmeStringRecord000B950F*,const BfmeStringRecord000B950F&);
+
+// Retail copy 0x000B9534: observed scalar fields and string member.
+// Original application type and scalar meanings are unknown.
+struct BfmeStringRecord000B9534 {
+    AsciiString text; unsigned char flag; unsigned int word0, word1, word2, word3;
+    BfmeStringRecord000B9534(const BfmeStringRecord000B9534 &o) : text(o.text), flag(o.flag), word0(o.word0), word1(o.word1), word2(o.word2), word3(o.word3) {}
+};
+template void _STL::_Construct<BfmeStringRecord000B9534,BfmeStringRecord000B9534>(BfmeStringRecord000B9534*,const BfmeStringRecord000B9534&);
