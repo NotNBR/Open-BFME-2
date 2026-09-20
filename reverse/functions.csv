@@ -13337,3 +13337,4 @@ _marktagmethods,,0x00750C20,110,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 by
 ?get@Rva0007E0F1FloatChaseField@@QBEMXZ,,0x0007E0F1,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
 ?get@Rva000910C0FloatChaseField@@QBEMXZ,,0x000910C0,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
 ?get@Rva001E3F27FloatChaseField@@QBEMXZ,,0x001E3F27,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+_markobject,,0x00750C90,164,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markclosure inlines to direct protomark calls
