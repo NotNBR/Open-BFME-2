@@ -13471,3 +13471,20 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?XferLivingWorldPlayerID@@YAXPAVXfer@@PAH@Z,,0x002034C4,24,Code/GameEngine/Source/Common/System/XferEnumHelpers.cpp,matched,
 ?Disable_Backface_Culling@MeshMatDescClass@@IAEXXZ,,0x00188670,67,Code/Libraries/Source/WWVegas/WW3D2/MeshMatDescDisableBackfaceCulling.cpp,matched,BFME2 cull bit 20 with retail 0x118 layout; TU-local ShaderFlags and ShareBuffer mirror; BFME1 inline spelling
 ?xfer@GameSlot@@UAEXPAVXfer@@@Z,,0x003FF616,384,Code/GameEngine/Source/Common/System/XferEnumHelpers.cpp,matched,
+?Rva0036E0E0Get@@YA_NXZ,,0x0036E0E0,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva003FF1D7Get@@YA_NXZ,,0x003FF1D7,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva004291C5Get@@YA_NXZ,,0x004291C5,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva004297B8Get@@YA_NXZ,,0x004297B8,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva004B0EE2Get@@YA_NXZ,,0x004B0EE2,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva004D95AFGet@@YA_NXZ,,0x004D95AF,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva004F10E3Get@@YA_NXZ,,0x004F10E3,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva004F19F3Get@@YA_NXZ,,0x004F19F3,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva00513863Get@@YA_NXZ,,0x00513863,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva00559B61Get@@YA_NXZ,,0x00559B61,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva0056B8F1Get@@YA_NXZ,,0x0056B8F1,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva0059EF46Get@@YA_NXZ,,0x0059EF46,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva005A678BGet@@YA_NXZ,,0x005A678B,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva005DB21EGet@@YA_NXZ,,0x005DB21E,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva006C53A5Get@@YA_NXZ,,0x006C53A5,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva006CE7C9Get@@YA_NXZ,,0x006CE7C9,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
+?Rva006D0439Get@@YA_NXZ,,0x006D0439,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3; no callers branches or vtable refs
