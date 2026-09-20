@@ -40,6 +40,7 @@ public:
 	virtual void reset();
 	bool isOccupied() const;
 	bool isAI() const;
+	bool isOpen() const { return m_state == SLOT_OPEN; }
 	Int getPlayerTemplate() const { return m_playerTemplate; }
 
 private:
@@ -55,6 +56,8 @@ class GameInfo
 public:
 	Int getNumPlayers() const;
 	Int getNumNonObserverPlayers() const;
+	Int getNumOpenOrOccupiedSlots() const;
+	const GameSlot *getConstSlot(Int slotNum) const;
 private:
 	char m_pad[0x18];
 	GameSlot *m_slot[MAX_SLOTS];
@@ -86,6 +89,18 @@ Int GameInfo::getNumPlayers() const
 	return numPlayers;
 }
 
+// ?getConstSlot@GameInfo@@QBEPBVGameSlot@@H@Z
+// Unrowed second definition: the row lives in GameSlotApparent.cpp, but this
+// file-unit's counters need same-TU visibility into the body (it preserves
+// EDX: only EAX is written) so their index loops stay in EDX across the call
+// instead of spilling to a third callee-saved register.
+const GameSlot *GameInfo::getConstSlot(Int slotNum) const
+{
+	if (slotNum < 0 || slotNum >= MAX_SLOTS)
+		return 0;
+	return m_slot[slotNum];
+}
+
 // ?getNumNonObserverPlayers@GameInfo@@QBEHXZ
 Int GameInfo::getNumNonObserverPlayers() const
 {
@@ -97,4 +112,20 @@ Int GameInfo::getNumNonObserverPlayers() const
 			numPlayers++;
 	}
 	return numPlayers;
+}
+
+// ?getNumOpenOrOccupiedSlots@GameInfo@@QBEHXZ
+// No BFME1 donor: counts slots that are open for joining plus slots already
+// taken (state OPEN read inline, the rest via the in-TU isOccupied). Both
+// callers pair it with getNumPlayers, so the difference is the open count.
+Int GameInfo::getNumOpenOrOccupiedSlots() const
+{
+	Int numSlots = 0;
+	for (int i = 0; i < MAX_SLOTS; ++i)
+	{
+		const GameSlot *slot = getConstSlot(i);
+		if (slot->isOpen() || slot->isOccupied())
+			numSlots++;
+	}
+	return numSlots;
 }

@@ -13458,3 +13458,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?getNumNonObserverPlayers@GameInfo@@QBEHXZ,,0x003FF23D,43,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME1 GameNetwork/GameInfo.cpp donor shape with PLAYERTEMPLATE_OBSERVER guard; same TU as getNumPlayers
 ?isAI@GameSlot@@QBE_NXZ,,0x003FF127,30,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME2 AI states 2 3 4 5; supersedes pin at same address
 ?isOccupied@GameSlot@@QBE_NXZ,,0x003FF0FB,44,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME2 states 6 2 3 4 5 plus occupancy byte; single-return AND keeps the jne tail; supersedes pin
+?getNumOpenOrOccupiedSlots@GameInfo@@QBEHXZ,,0x003FF987,45,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,
