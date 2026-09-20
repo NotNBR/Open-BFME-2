@@ -39,6 +39,7 @@ public:
 	EAStringC(const EAStringC &other);
 	EAStringC &operator=(const EAStringC &other);
 	~EAStringC();
+	EAStringC &clear();
 };
 
 // Retail empty singleton at 0x00DDC020. The linker never sees this TU's
@@ -105,4 +106,16 @@ EAStringC &EAStringC::operator=(const EAStringC &other)
 	FreeData(m_pData);
 	m_pData = src->m_pData;
 	return *this;
+}
+
+// ?clear@EAStringC@@QAEAAV1@XZ, retail 0x006D2F90 (16B). Resets to the
+// empty singleton with its own reference; chained (returns *this), which
+// is what keeps the opening mov eax,ecx in retail's shape. Name is a
+// semantic pick: the body takes no arguments and only re-roots m_pData.
+EAStringC &EAStringC::clear()
+{
+	EAStringC *self = this;
+	self->m_pData = (StringDataC *)0x00DDC020;
+	g_eaEmptyStringData.m_uRefCount++;
+	return *self;
 }
