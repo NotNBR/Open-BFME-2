@@ -13180,3 +13180,4 @@ _Rva009C2320Vp6FilterDiag4,,0x001D2C20,764,Code/GameEngine/Source/Common/BfmeCon
 ?Rva000BEED0@@YAPAVR1DwordPair@@PAV1@HH@Z,,0x00219701,18,Code/GameEngine/Source/Common/R1SmallFieldInitialisers.cpp,matched,BFME1 donor b1 0x000BEED0 verbatim; twins inside STLport copy_sign bodies eliminated
 _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/GameSpy/serverbrowsing/sb_serverbrowsing.c,matched,BFME1 byte-identical donor sb_serverbrowsing.c; all 8 SB callees rowed; htons/inet_addr import pins present
 ?Rva0032378@@YIHPAU_ListboxData@@@Z,,0x00323F78,36,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME2 top-entry scan; ecx ABI with 0x10 row stride
+?LZHLCreateCompressor@@YAPAXXZ,,0x0068EC80,24,Code/Libraries/Source/Compression/LZHCompress/CompLibSource/LZHLApi.cpp,matched,BFME1 byte-identical donor; b1 0x00823200; CompressFile caller tiebreak at 0x0068A922

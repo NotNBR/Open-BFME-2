@@ -1,22 +1,26 @@
-// cl: /DNDEBUG /MD /GX-
+// cl: /DNDEBUG /MD /GX- /DLZHLINTERNAL -ICode/Libraries/Source/Compression/LZHCompress/CompLibHeader
 
-// LZHLCompress, retail 0x0068ECA0 (25B) and LZHLDestroyCompressor,
+// LZHLCreateCompressor, retail 0x0068EC80 (24B), LZHLCompress,
+// retail 0x0068ECA0 (25B) and LZHLDestroyCompressor,
 // retail 0x0068ED60 (27B).
 // Ported from Open-BFME-1 Code/Libraries/Source/Compression/LZHCompress/CompLibSource/LZHLApi.cpp
-// (BFME1 0x00823130 and 0x00823210). Only the placed probes are defined here;
-// the donor's create/maxbuf helpers stay out, so the unmatched-definition
-// gate passes. Retail shuffles the four cdecl slots into thiscall shape
-// (this = handle, push dst/src/size) and tail-returns the member answer
-// through the single pinned call site.
+// (BFME1 0x00823200, 0x00823130 and 0x00823210). The donor's maxbuf helper
+// stays out, so the unmatched-definition gate passes. Retail shuffles the
+// four cdecl slots into thiscall shape (this = handle, push dst/src/size)
+// and tail-returns the member answer through the single pinned call site.
 
-typedef unsigned char BYTE;
+#include "_huff.h"
+#include "_lz.h"
 
-class LZHLCompressor
+// ?LZHLCreateCompressor@@YAPAXXZ, retail 0x0068EC80 (24B).
+// Matched CompressFile calls this named API (retail 0x0068A880 calls it at
+// 0x0068A922); the operator-new plus constructor tail-jump shape is the
+// callee tiebreak against the byte-twin decompressor factory. sizeof is the
+// canonical 0x18 from the vendored _lz.h declaration.
+void *LZHLCreateCompressor()
 {
-public:
-	~LZHLCompressor();
-	unsigned int compress(BYTE *dst, const BYTE *src, unsigned int size);
-};
+	return new LZHLCompressor;
+}
 
 // ?LZHLCompress@@YAIPAX00I@Z, retail 0x0068ECA0 (25B).
 unsigned int LZHLCompress(void *handle, void *destination, void *source, unsigned int sourceSize)
