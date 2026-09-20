@@ -23,4 +23,19 @@ struct TreeHintRef0051030C {
 
 typedef _STL::pair<const AsciiString, TreeHintRef0051030C> TreeHintPair0051030C;
 typedef _STL::_Rb_tree<AsciiString, TreeHintPair0051030C, _STL::_Select1st<TreeHintPair0051030C>, _STL::less<AsciiString>, _STL::allocator<TreeHintPair0051030C> > TreeHint0051030C;
+// Retail uses its static byte allocator and has no node cleanup catch block.
+namespace _STL {
+template <> class allocator<char> {
+public:
+    static char *allocate(unsigned int bytes, const void *hint);
+};
+}
+// ?_M_create_node@?$_Rb_tree@VAsciiString@@U?$pair@$$CBVAsciiString@@UTreeHintRef0051030C@@@_STL@@U?$_Select1st@U?$pair@$$CBVAsciiString@@UTreeHintRef0051030C@@@_STL@@@3@U?$less@VAsciiString@@@3@V?$allocator@U?$pair@$$CBVAsciiString@@UTreeHintRef0051030C@@@_STL@@@3@@_STL@@IAEPAU?$_Rb_tree_node@U?$pair@$$CBVAsciiString@@UTreeHintRef0051030C@@@_STL@@@2@ABU?$pair@$$CBVAsciiString@@UTreeHintRef0051030C@@@2@@Z
+template <>
+TreeHint0051030C::_Link_type TreeHint0051030C::_M_create_node(const TreeHintPair0051030C &value)
+{
+    _Link_type node = (_Link_type)_STL::allocator<char>::allocate(sizeof(_STL::_Rb_tree_node<TreeHintPair0051030C>), 0);
+    _STL::_Construct(&node->_M_value_field, value);
+    return node;
+}
 template TreeHint0051030C::iterator TreeHint0051030C::insert_unique(TreeHint0051030C::iterator, const TreeHintPair0051030C &);
