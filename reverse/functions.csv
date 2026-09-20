@@ -13151,3 +13151,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeFwdVMS@BfmeStrVMS@@QAEXHHH@Z,,0x0002A520,53,Code/GameEngine/Source/Common/BfmeConv1439.cpp,matched,BFME1 byte-identical donor; b1 0x00830C50; callee bfmeImplVMS already pinned at 0x284D0
 ?bfmeGoBUE@BfmeThingBUE@@QAEXPAX@Z,,0x004C0DD1,34,Code/GameEngine/Source/Common/BfmeConv534.cpp,matched,BFME1 donor trimmed to go; head 0xD0 to 0xF0 per retail; ask pin 0x4C0D4F; tail jmp slot1
 ?bfmeGoBVF@BfmeThingBVF@@QAEHXZ,,0x004C0F6F,35,Code/GameEngine/Source/Common/BfmeConv541.cpp,matched,BFME1 donor verbatim; head 0xD0 to 0xF0 per retail; ask pin 0x4C0D4F; tail jmp slot 16
+?bfmeGoBVG@BfmeThingBVG@@QAEHXZ,,0x004C0F92,35,Code/GameEngine/Source/Common/BfmeConv540.cpp,matched,BFME1 donor verbatim; head 0xD0 to 0xF0 per retail; ask pin 0x4C0D4F; tail jmp slot 17
