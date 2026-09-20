@@ -13027,3 +13027,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?route@Rva0080A110Owner@@QAEXPAURva0080A110Message@@@Z,,0x00676010,362,Code/GameEngine/Source/GameNetwork/Rva0080A110Route.cpp,matched,BFME1 byte-identical donor
 ?handle@Gen0080AB50@@QAEHI@Z,,0x00676A50,374,Code/GameEngine/Source/GameNetwork/Rva0080AB50Handle.cpp,matched,BFME1 byte-identical donor
 ?Rva009B3650FilterVert@@YAXPAXPAEHPBH@Z,,0x001C3F50,180,Code/GameEngine/Source/Common/BfmeLoopFilterVert.cpp,matched,BFME1 byte-identical donor; clamp tables masked
+?Rva009A9660@@YAXPAEHI@Z,,0x001BA0A0,179,Code/GameEngine/Source/Common/BfmeInterpRows6.cpp,matched,BFME1 byte-identical donor; call-free body
