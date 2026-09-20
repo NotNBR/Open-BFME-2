@@ -13003,3 +13003,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva009AF840FilterVert@@YAXHPAEH@Z,,0x001C0230,535,Code/GameEngine/Source/Common/BfmeLimitedEdgeFilters.cpp,matched,BFME1 byte-identical donor; cross-placement differs by 1 byte so own placement is unique
 ?Rva009AFCA0FilterVert@@YAXHPAEH@Z,,0x001C0690,535,Code/GameEngine/Source/Common/BfmeLimitedEdgeFilters.cpp,matched,BFME1 byte-identical donor; cross-placement differs by 1 byte so own placement is unique
 ?bfmeRSearchV33@@YAPAPADPAPADPAD111@Z,,0x00026340,758,Code/GameEngine/Source/Common/BfmeConv1473.cpp,matched,BFME1 byte-identical donor; b1 0x0082E130
+?bfmeRFindNotChV32@@YAPAPADPAPADPAD1D@Z,,0x000260A0,596,Code/GameEngine/Source/Common/BfmeConv1472.cpp,matched,BFME1 byte-identical donor
