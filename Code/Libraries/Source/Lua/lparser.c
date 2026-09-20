@@ -679,7 +679,7 @@ static int funcname (LexState *ls, expdesc *v) {
 }
 
 
-// _body present-unmatched
+// _body BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void body (LexState *ls, int needself, int line) {
   /* body ->  '(' parlist ')' chunk END */
   FuncState new_fs;
