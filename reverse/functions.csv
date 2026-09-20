@@ -12969,3 +12969,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?bfmeInterpRows2Mmx@@YAXPAXHH@Z,,0x001D2550,293,Code/GameEngine/Source/Common/BfmeInterpRows2Mmx.cpp,matched,BFME1 MMX donor masked placement; b1 0x009C1C50
 ?bfmeInterpRows5Mmx@@YAXPAXHH@Z,,0x001D2150,358,Code/GameEngine/Source/Common/BfmeInterpRows5Mmx.cpp,matched,BFME1 MMX donor masked placement; b1 0x009C1850
 ?bfmeInterpRows6Mmx@@YAXPAXHH@Z,,0x001D23E0,366,Code/GameEngine/Source/Common/BfmeInterpRows6Mmx.cpp,matched,BFME1 MMX donor masked placement; b1 0x009C1AE0
+?bfmeClampBlock@@YAXPAEPAFHH@Z,,0x001D55C0,301,Code/GameEngine/Source/Common/BfmeClampBlock.cpp,matched,BFME1 donor masked placement; b1 0x009C4CC0
