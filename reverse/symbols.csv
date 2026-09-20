@@ -3297,3 +3297,7 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 __strupr,0x0075B4F0
 ?bfmeDtorATYA@BfmeHeadTYA@@QAEXXZ,0x0066D900,read from REL32 at placed ?bfmeDelTYA 0x66E3D0; BFME1 pins same name at 0x00801600; folds with clear@Rva00801600 row
 ?bfmeFreeTWB@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1325 donor call site; same body as rowed scalar delete
+?bfmeDtorTXA@BfmeThingTXA@@QAEXXZ,0x001767D0,BFME1 BfmeConv1326 donor call site; BFME1 names this member dtor at the call target
+?bfmeReleaseATXA@@YGXPAX@Z,0x0065477E,BFME1 BfmeConv1326 donor call site; BFME1 names this stdcall release at the call target
+?bfmeReleaseBTXA@@YGXPAX@Z,0x0065478A,BFME1 BfmeConv1326 donor call site; BFME1 names this stdcall release at the call target
+?bfmeFreeTXA@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1326 donor call site; same body as rowed scalar delete
