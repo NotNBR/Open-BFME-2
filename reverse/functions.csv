@@ -13251,3 +13251,4 @@ _subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?Init@WW3D@@SA_NPAXPAD_N@Z,,0x00118040,158,Code/Libraries/Source/WWVegas/WW3D2/WW3D_Init_Bfme.cpp,matched,BFME1 byte-identical donor WW3D_Init_Bfme.cpp; DX8Wrapper::Init pinned from retail call
 ?get@Rva00030D00MaskedDwordField@@QBEHXZ,,0x00030D00,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
 ?get@Rva00742EC0MaskedDwordField@@QBEHXZ,,0x00742EC0,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
+?get@Rva00625BA0SubDwordField@@QBEHXZ,,0x00625BA0,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
