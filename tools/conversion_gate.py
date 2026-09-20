@@ -159,10 +159,26 @@ def naked_keys(rev, all_rows, sources):
 
     Feeds naked_cpp_rows every matched row of each affected source, not just
     the changed rows: its sole-row-sole-body proof is only valid on whole files.
+    A source unreadable at `rev` (pre-existing ledger corruption: a matched
+    row names a file absent from that tree) contributes no keys — its coverage
+    cannot be proven clean, so Rule B cannot count it as lost. Warns loudly
+    instead of crashing the gate, so the repair commit can land.
     """
+    texts, missing = {}, []
+    for s in sources:
+        if Path(s).suffix.lower() not in CPP_SUFFIXES:
+            continue
+        try:
+            texts[s] = show(rev, s)
+        except SystemExit:
+            missing.append(s)
+    if missing:
+        print("conversion gate: %s not readable at %s — a matched row names "
+              "a file absent from that tree (pre-existing ledger corruption, "
+              "not this commit). Its coverage is unverifiable and excluded "
+              "from Rule B." % (", ".join(sorted(missing)), rev), file=sys.stderr)
     matched = {(r["name"], r["target_rva"]): (int(r["target_size"]), r["source"])
-               for rows in all_rows.values() for r in rows if r["source"] in sources}
-    texts = {s: show(rev, s) for s in sources if Path(s).suffix.lower() in CPP_SUFFIXES}
+               for rows in all_rows.values() for r in rows if r["source"] in texts}
     return naked_cpp_rows(matched, texts)
 
 
