@@ -13370,3 +13370,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva000B2EB2Get@@YA_NXZ,,0x000B2EB2,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?Rva000B3EC4Get@@YA_NXZ,,0x000B3EC4,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?Rva001DBB01Get@@YA_NXZ,,0x001DBB01,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00238F8EGet@@YA_NXZ,,0x00238F8E,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
