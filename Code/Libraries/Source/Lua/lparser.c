@@ -249,7 +249,7 @@ static void adjust_mult_assign (LexState *ls, int nvars, int nexps) {
 }
 
 
-// _test_then_block present-unmatched
+// _test_then_block BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void test_then_block (LexState *ls, expdesc *v) {
   /* test_then_block -> [IF | ELSEIF] cond THEN block */
   next(ls);  /* skip IF or ELSEIF */
