@@ -12972,3 +12972,5 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?bfmeClampBlock@@YAXPAEPAFHH@Z,,0x001D55C0,301,Code/GameEngine/Source/Common/BfmeClampBlock.cpp,matched,BFME1 donor masked placement; b1 0x009C4CC0
 ?bfmeBlurRowsSse@@YAXPAX0IHH@Z,,0x001D1540,200,Code/GameEngine/Source/Common/Bfme5ThirtySix.cpp,matched,BFME1 SSE donor masked placement; b1 0x009C0C40
 ?nameToLowercaseKey@NameKeyGenerator@@QAE?AW4NameKeyType@@PBD@Z,,0x00620500,187,Code/GameEngine/Source/Common/NameKeyGeneratorNameToLowercaseKey.cpp,matched,BFME1 byte-identical donor; b1 0x009EDD70; stale-header LegacyBucket layout; hash via pinned Rva0061FCA0Hash
+?Rva00610F30Get@@YAHXZ,,0x00610F30,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
+?Rva008FCA30_Surface_Byte_Size@SurfaceClass@@QBEIXZ,,0x00116910,119,Code/Libraries/Source/WWVegas/WW3D2/SurfaceByteSize.cpp,matched,BFME1 DrawPixel donor; /G7 selects cmp-mem null check; Get_Description 0x116620 pinned same lane
