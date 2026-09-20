@@ -14154,3 +14154,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?collectUnitCountStats@StatsCollector@@QAEXXZ,,0x00437B4D,105,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,anchor Civilian plus call chain; ZH StatsCollector donor with BFME2 layout repairs
 ?isLocalPlayer@Player@@QBE_NXZ,,0x002A9D89,15,Code/GameEngine/Source/Common/RTS/PlayerIsLocalPlayer.cpp,matched,Player local check; ThePlayerList local at plus 0x10
 ?isNeutralControlled@Object@@QBE_NXZ,,0x0028B091,23,Code/GameEngine/Source/GameLogic/Object/ObjectIsNeutralControlled.cpp,matched,Object neutral check; ThePlayerList neutral at plus 0x18
+??0ArmorStore@@QAE@XZ,,0x00360BB8,70,Code/GameEngine/Source/GameLogic/Object/ArmorStoreCtor.cpp,matched,SubsystemInterface 0xC base plus member hash_map; base and map pins at 0x1B4E63 and 0x360B99; clear resolves to rowed 0x1DBCDC alias
