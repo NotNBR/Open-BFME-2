@@ -13084,3 +13084,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?Remove_All@?$SList@VTagBlockIndex@@@@UAEXXZ,,0x00620870,63,Code/GameEngine/Source/Common/SListTagBlockIndexRemoveAllThunk.cpp,matched,BFME1 byte-identical donor; b1 0x009EDD30
 ??_GRva004907C0@@UAEPAXI@Z,,0x00490A58,28,Code/GameEngine/Source/GameLogic/Object/Update/ModuleUpdateDtors2.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??_GRva004C0988@@UAEPAXI@Z,,0x004C09FA,28,Code/GameEngine/Source/Common/Rva004BF951Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
+??_GRva004DF324@@UAEPAXI@Z,,0x004DF480,28,Code/GameEngine/Source/Common/Rva004DF324Dtor.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
