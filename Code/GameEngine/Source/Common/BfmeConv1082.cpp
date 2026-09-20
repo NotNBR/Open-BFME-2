@@ -45,3 +45,23 @@ void bfmeGo1082B(void)
 		g_bfmeS1082_3 = 0;
 	}
 }
+
+void bfmeGo1082C(void)
+{
+	if (g_bfmeS1082_4) {
+		g_bfmeS1082_4->bfmeSlot1082S_1();
+		g_bfmeS1082_4 = 0;
+	}
+	if (g_bfmeS1082_5) {
+		g_bfmeS1082_5->bfmeSlot1082S_1();
+		g_bfmeS1082_5 = 0;
+	}
+	if (g_bfmeS1082_6) {
+		g_bfmeS1082_6->bfmeSlot1082S_1();
+		g_bfmeS1082_6 = 0;
+	}
+	if (g_bfmeS1082_7) {
+		g_bfmeS1082_7->bfmeSlot1082S_1();
+		g_bfmeS1082_7 = 0;
+	}
+}
