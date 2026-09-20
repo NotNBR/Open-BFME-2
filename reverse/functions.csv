@@ -12953,3 +12953,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva0011D270Get@@YAHXZ,,0x0011D270,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?nextToken@?$StringBase@D@@QAE_NPAV1@PBD@Z,0x00036D90,0x00036D90,186,Code/Libraries/Source/WWVegas/WWLib/StringBaseSkipSeps.cpp,matched,BFME1 naked-lift donor rewritten as clean C++; same-TU skipSeps skipNonSeps EAX-EDI convention; getBufferForRead 0x36640 pinned same batch
 ?Rva0011D280Get@@YAHXZ,,0x0011D280,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
+?Rva0011D290Get@@YAHXZ,,0x0011D290,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
