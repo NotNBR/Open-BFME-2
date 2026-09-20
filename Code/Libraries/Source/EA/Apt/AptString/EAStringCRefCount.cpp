@@ -34,6 +34,9 @@ public:
 	static void FreeData(StringDataC *data);
 
 	StringDataC *m_pData;
+
+public:
+	~EAStringC();
 };
 
 // Retail empty singleton at 0x00DDC020. The linker never sees this TU's
@@ -55,4 +58,13 @@ void EAStringC::FreeData(StringDataC *data)
 		if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
 	}
 	g_pChainBlockAllocator->freeBlock(data, (int)(data->m_uMaxSize + 9));
+}
+
+// ??1EAStringC@@QAE@XZ, retail 0x006D3010 (10B). Scalar destructor: releases
+// the shared data through FreeData. Retail is the bare 10-byte
+// load-push-call-cleanup shape with no vtable work (EAStringC is a
+// value class); the release call resolves via the FreeData row.
+EAStringC::~EAStringC()
+{
+	FreeData(m_pData);
 }
