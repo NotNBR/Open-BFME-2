@@ -14165,3 +14165,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?closeAllStreams@VideoPlayer@@UAEXXZ,,0x006891B0,36,Code/GameEngine/Source/GameClient/VideoPlayerCloseAllStreams.cpp,matched,VideoPlayer vtable slot19; null-tested firstStream loop closing each stream through its slot7 per donor shape
 ?FreeData@EAStringC@@SAXPAVStringDataC@1@@Z,,0x006D2EB0,118,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string release worker; frees via sized deallocator pin 0x6DB270 unless empty singleton
 ??1EAStringC@@QAE@XZ,,0x006D3010,10,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string scalar dtor; bare release call resolves via FreeData row
+??0EAStringC@@QAE@ABV0@@Z,,0x006D2FC0,70,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string copy ctor; shares source data with refcount validation

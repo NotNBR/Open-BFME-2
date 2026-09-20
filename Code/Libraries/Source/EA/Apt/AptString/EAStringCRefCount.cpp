@@ -36,6 +36,7 @@ public:
 	StringDataC *m_pData;
 
 public:
+	EAStringC(const EAStringC &other);
 	~EAStringC();
 };
 
@@ -67,4 +68,20 @@ void EAStringC::FreeData(StringDataC *data)
 EAStringC::~EAStringC()
 {
 	FreeData(m_pData);
+}
+
+// ??0EAStringC@@QAE@ABV0@@Z, retail 0x006D2FC0 (70B). Copy constructor:
+// shares the source data after validating its refcount, then takes its
+// own reference. The empty singleton skips validation but still AddRefs.
+EAStringC::EAStringC(const EAStringC &other)
+{
+	StringDataC *otherData = other.m_pData;
+	m_pData = otherData;
+	if (otherData != &g_eaEmptyStringData) {
+		if (!(otherData->m_uRefCount <= 0xFFFE)) {
+			g_bfmeAptAssertAtE17734("m_pData->m_uRefCount <= 0xfffe", ".\\string\\EAString.inl", 0xE1);
+			if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+		}
+	}
+	m_pData->m_uRefCount++;
 }
