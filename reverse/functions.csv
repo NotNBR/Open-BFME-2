@@ -12641,3 +12641,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Set_User_String@ParticleEmitterDefClass@@UAEXPBD@Z,,0x001AF850,46,Code/Libraries/Source/WWVegas/WW3D2/ParticleEmitterDefSetName.cpp,matched,BFME1 donor verbatim logic; twin of Set_Name; m_pUserString+8
 ?Rva0049533EGet@@YAHXZ,,0x0049533E,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf5400; prev C2-08-00 with 1 vtable ref and no callers; opaque name
 ?Rva0049B5D6Get@@YAHXZ,,0x0049B5D6,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf5100; prev C2-08-00 with 1 vtable ref and no callers; opaque name
+?Rva0049C3F6Get@@YAHXZ,,0x0049C3F6,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret bf51b0; prev C2-08-00 with 1 vtable ref and no callers; opaque name
