@@ -12989,3 +12989,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva0069BD50Get@@YAHXZ,,0x0069BD50,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?Rva006C5E70Get@@YAHXZ,,0x006C5E70,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
 ?Rva006F36DCGet@@YAHXZ,,0x006F36DC,6,Code/GameEngine/Source/Common/ConstGlobalGetters2.cpp,matched,global-int getter A1-6 prev CC with no vtable and no callers; twin-free TU
+?set@Rva009A29A0WindowManager@@QAEXPAURva009A29A0Window@@@Z,,0x00758940,121,Code/GameEngine/Source/Common/Rva009A29A0WindowManagerSet.cpp,matched,BFME1 byte-identical donor; b1 0x009A29A0 area; record ctor at 0x7583B0 already rowed
