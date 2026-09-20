@@ -14,6 +14,8 @@ public:
 	void bfmeTwoEBK(void *x, void *b);
 };
 
+extern void *g_bfmeXEBK;
+
 class BfmeObjEBL
 {
 public:
@@ -57,4 +59,10 @@ char bfmeGoEBNb(BfmeObjEBN *o)
 	if (!s)
 		return 0;
 	return s->m_bfmeC;
+}
+
+// ?bfmeGoEBKb@@YGXPAVBfmeObjEBK@@PAX@Z
+void __stdcall bfmeGoEBKb(BfmeObjEBK *o, void *b)
+{
+	o->bfmeTwoEBK(g_bfmeXEBK, b);
 }
