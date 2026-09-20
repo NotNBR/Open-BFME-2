@@ -13460,3 +13460,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?isOccupied@GameSlot@@QBE_NXZ,,0x003FF0FB,44,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME2 states 6 2 3 4 5 plus occupancy byte; single-return AND keeps the jne tail; supersedes pin
 ?getNumOpenOrOccupiedSlots@GameInfo@@QBEHXZ,,0x003FF987,45,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,
 ?isObserver@GameSlot@@QBE_NXZ,,0x003FF165,10,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,
+?Init_From_Material3@VertexMaterialClass@@QAEXABUW3dMaterial3Struct@@@Z,,0x0013CEA0,398,Code/Libraries/Source/WWVegas/WW3D2/VertexMaterialInitFromMaterial3.cpp,matched,BFME1 vertmaterial.cpp Init_From_Material3 port as call-free SSE TU
