@@ -1,4 +1,4 @@
-// cl: /O1 /EHsc /MD
+// cl: /O1 /EHs /MD
 // ?bfmeGoEBC@BfmeThingEBC@@QAEXPAX@Z, retail 0x00460A85 (19B) and
 // ?bfmeGoEBD@BfmeThingEBD@@QAEXXZ, retail 0x003862CA (17B). Ported from
 // Open-BFME-1 Code/GameEngine/Source/Common/BfmeConv802.cpp (BFME1 0x001F8660
@@ -46,15 +46,30 @@ struct BfmeNodeEBD
 class BfmeNodeValueEBD { public: ~BfmeNodeValueEBD(); };
 extern "C" void __cdecl free(void *);
 
+// STLport's owning header proxy. Destructor384DEB calls the proven clear on
+// the same receiver, then destroys this header on normal and exceptional exits.
+// /EHs preserves the retail cleanup-state transition before calling free.
+struct BfmeHeaderEBD
+{
+	BfmeNodeEBD *data;
+	__forceinline ~BfmeHeaderEBD() { if (data) free(data); }
+};
+
 class BfmeSubEBD
 {
 public:
+	~BfmeSubEBD();
 	void bfmeCallEBD();
 	void bfmeEraseSubtree(BfmeNodeEBD *node);
 private:
-	BfmeNodeEBD *m_header;
+	BfmeHeaderEBD m_header;
 	unsigned int m_nodeCount;
 };
+
+BfmeSubEBD::~BfmeSubEBD()
+{
+	bfmeCallEBD();
+}
 
 void BfmeSubEBD::bfmeEraseSubtree(BfmeNodeEBD *node)
 {
@@ -71,10 +86,10 @@ void BfmeSubEBD::bfmeEraseSubtree(BfmeNodeEBD *node)
 void BfmeSubEBD::bfmeCallEBD()
 {
 	if (m_nodeCount != 0) {
-		bfmeEraseSubtree(m_header->parent);
-		m_header->left = m_header;
-		m_header->parent = 0;
-		m_header->right = m_header;
+		bfmeEraseSubtree(m_header.data->parent);
+		m_header.data->left = m_header.data;
+		m_header.data->parent = 0;
+		m_header.data->right = m_header.data;
 		m_nodeCount = 0;
 	}
 }
