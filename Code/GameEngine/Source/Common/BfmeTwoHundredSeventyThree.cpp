@@ -1,12 +1,9 @@
 // cl: /DNDEBUG /MD /EHsc /Og-
+// A block let go of through one of two paths according to how big it is. The
+// small-block arm is STLport's node allocator, with the false-thread
+// specialization's constant lock tests retained by this compiler mode.
 
-// bfmeSmallFreePM, retail 0x00027A40 (75B).
-// Ported from Open-BFME-1 Code/GameEngine/Source/Common/BfmeTwoHundredSeventyThree.cpp
-// (BFME1 0x0082E4F0). Only the placed small-block arm is defined here; the
-// donor's bfmeFreePM size dispatch stays out, so the unmatched-definition
-// gate passes. The /Og- mode is load-bearing: it retains the false-thread
-// specialization's constant lock tests, which is what emits retail's
-// acquire/release call pair around the free-list push.
+void bfmeBigFreePM(void *at);
 
 namespace _STL
 {
@@ -51,7 +48,6 @@ struct BfmeFreeListNode
 
 extern BfmeFreeListNode *bfmeFreeList[0x10];
 
-// ?bfmeSmallFreePM@@YAXPAXI@Z, retail 0x00027A40 (75B).
 void bfmeSmallFreePM(void *at, unsigned int bytes)
 {
 	BfmeFreeListNode * volatile *my_free_list =
@@ -59,4 +55,12 @@ void bfmeSmallFreePM(void *at, unsigned int bytes)
 	_STL::_Node_Alloc_Lock<false, 0> lock_instance;
 	((BfmeFreeListNode *)at)->m_next = *my_free_list;
 	*my_free_list = (BfmeFreeListNode *)at;
+}
+
+void bfmeFreePM(void *at, unsigned int bytes)
+{
+	if (bytes > 0x80)
+		bfmeBigFreePM(at);
+	else
+		bfmeSmallFreePM(at, bytes);
 }

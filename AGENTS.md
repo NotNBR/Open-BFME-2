@@ -26,14 +26,18 @@ An explicit request or assigned lane overrides the queue:
    compiles. A TU emits far more than the one function it was written to land,
    and the rest was invisible only because the export table had no address for
    it; the tool finds those addresses by masked byte search and reads each
-   placed body's call sites for its callees. Re-run it after every wave — each
-   pin unblocks the next body — and prune what `./build.sh` refuses to a
-   fixpoint, recording the refusal in `reverse/place_denylist.txt`.
+   placed body's call sites for its callees. After an import, repair, or
+   shared-dependency fix, rescan affected source units. Land incidental bodies
+   as well as planned ones when each satisfies the existing identity,
+   provenance, and byte verification requirements. Repeat while new placements
+   unlock further candidates; a placement candidate alone is not a verified
+   recovery. Prune what `./build.sh` refuses to a fixpoint, recording the
+   refusal in `reverse/place_denylist.txt`.
 
 A tier reporting zero candidates is exhausted, not broken. Regenerate with
 `tools/drift_classify.py`, `tools/anchor_unclaimed.py`, `./build.sh`.
 
-Finish or revert each body before the next.
+Finish or revert each body or homogeneous trivial batch before the next.
 
 ## Prefer coverage-first reference sweeps
 
@@ -51,6 +55,17 @@ Use compiler and configuration variants from successfully matched siblings, with
 Do not spend unbounded effort forcing a weak reference. Once evidence no longer supports the same identity or semantics, or reasonable repair attempts stop yielding useful progress, move on to the byte-true dump path.
 
 Re-run sweeps as new dependencies, identities, compiler configurations, and sibling matches land; previously unproductive reference units may become viable later.
+
+## Investigate shared deltas first
+
+When multiple failures suggest the same layout, offset, callee, compiler,
+ABI, or wrapper difference, test that shared explanation before retrying
+each body independently. Apply a shared fix only where target evidence
+supports it; similar symptoms alone do not establish a common cause.
+
+Avoid repeating attempts whose current evidence points to the same
+unresolved dependency. Continue with independent candidates, then resweep
+affected units after the dependency is resolved.
 
 ## BFME 1 reference freshness
 
@@ -71,9 +86,43 @@ solo, 46.5% with ten or more siblings landed together, because the layout,
 offsets and callee pins from the first body are what the next one needs. A
 shared header edit costs a full gate: edit every dependent body, pay once.
 
-## Convert, verify, commit, push — per body
+When several files in one subsystem demonstrate the same successful
+reference-transfer pattern, prioritize other candidates in that subsystem.
+Reuse established compiler settings and evidence-backed shared deltas,
+verifying their applicability to each candidate. Folder structure alone
+is not evidence. Return to the broader queue when transfer behavior
+diverges or the remaining candidates require distinct investigation.
 
-1. Make the smallest source and ledger change for one function.
+## Batch homogeneous trivial recoveries
+
+Atomic does not mean one function per commit.
+
+When several bodies use the same established recovery pattern and form
+one coherent, reviewable change, recover, ledger, verify, and commit them
+as one batch. Examples include tiny getters/setters, thunks, wrappers,
+and reference transfers differing only by verified RVA or offset.
+
+Similar instruction shapes alone do not establish identity, types,
+calling convention, or layout. Verify each member against its own
+evidence; do not extrapolate correctness from a representative sample.
+
+Prefer `Recover 31 disp8 ptr-chase getters` over 31 separate 7-byte
+commits when all members satisfy these conditions. Keep batches small
+enough to review and diagnose; prefer roughly 5–20 entries per commit
+as a guideline, not a quota or hard limit.
+
+Keep substantive reconstruction or work requiring distinct identity,
+compiler, ABI/layout, or reconstruction reasoning in separate atomic
+commits.
+
+Verify the entire batch before committing. If a member fails, determine
+whether the failure undermines the shared pattern. Continue with the
+remaining members only if their evidence and verification still hold;
+otherwise reassess the batch.
+
+## Convert, verify, commit, push — per body or homogeneous trivial batch
+
+1. Make the smallest source and ledger change for one function or a homogeneous trivial batch under the rule above.
 2. `./build.sh <file-or-symbol>`. If a command returns a process or session ID,
    poll it; never launch a duplicate build.
 3. Stage explicit paths only: `git add <specific-paths>`, never `git add .`.
@@ -82,7 +131,7 @@ shared header edit costs a full gate: edit every dependent body, pay once.
 5. `git pull --rebase origin master`, `git push`, then pull --rebase again. On
    rejection: rebase, recheck the ledger, retry, final pull (Subject to the batching and retry limits in #6).
 
-6. This step governs when to run #5 and limits its retries. Normally, publish after 1 verified commit. Keep substantive changes in separate atomic, verified commits; batching changes push frequency only.
+6. This step governs when to run #5 and limits its retries. Normally, publish after 1 verified commit. Keep substantive changes in separate atomic, verified commits; the publication batching below changes push frequency only.
 
 On a non-fast-forward push rejection caused by `origin/master` advancing, rebase, recheck the ledger, complete any required verification, and retry once.
 
@@ -149,6 +198,16 @@ record `blocked`.
 - Never load `reverse/functions.csv`, `ghidra_functions.csv` or `exports.csv`
   wholesale; use `rg` or narrow filters.
 - Preserve unrelated dirty-tree work; revert only your own attempt.
+
+## Preserve donor provenance
+
+In the existing evidence records, distinguish facts established from
+target evidence, facts carried from donor source, and structural
+inferences. Record the basis for identity and layout claims separately
+when their evidence differs.
+
+Exact bytes alone do not establish a donor name or layout as a target
+fact. Preserve uncertainty until independent target evidence resolves it.
 
 ## Generated claims
 

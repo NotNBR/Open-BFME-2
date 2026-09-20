@@ -369,7 +369,6 @@ void VertexMaterialClass::Set_Emissive(float r,float g,float b)
 }
 
 
-// ?Get_Shininess@VertexMaterialClass@@QBEMXZ present-unmatched
 float	VertexMaterialClass::Get_Shininess(void) const
 {
 	return Material->Power;

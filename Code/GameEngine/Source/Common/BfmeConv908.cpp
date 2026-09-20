@@ -70,3 +70,12 @@ void *BfmeThingRF::bfmeGoRF(void *a, void *b)
 		return b;
 	return bfmeTwoRF(r, b);
 }
+
+// ?bfmeGoRE@BfmeThingRE@@QAEDPAVBfmeOtherRE@@@Z
+char BfmeThingRE::bfmeGoRE(BfmeOtherRE *o)
+{
+	if (!o->bfmeCmpRE(m_bfmeA, m_bfmeB))
+		return 0;
+	++m_bfmeB;
+	return 1;
+}

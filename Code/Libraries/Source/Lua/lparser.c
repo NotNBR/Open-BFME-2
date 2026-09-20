@@ -61,13 +61,13 @@ typedef struct Breaklabel {
    statics that retail's bodies call are DEFINED below instead: MSVC uses
    TU-private conventions for statics, so an extern declaration would emit a
    standard call site where retail has a private one. */
-BinOpr subexpr (LexState *ls, expdesc *v, int limit);
+static BinOpr subexpr (LexState *ls, expdesc *v, int limit);
 void open_func (LexState *ls, FuncState *fs);
 void adjustlocalvars (LexState *ls, int nvars);
-void parlist (LexState *ls);
-void chunk (LexState *ls);
+static void parlist (LexState *ls);
+static void chunk (LexState *ls);
 void close_func (LexState *ls);
-void pushclosure (LexState *ls, FuncState *func);
+static void pushclosure (LexState *ls, FuncState *func);
 
 
 /* Forward declaration: `checkname' (below) calls back into it. */
@@ -80,6 +80,11 @@ static void funcargs (LexState *ls, int slf);
 static void singlevar (LexState *ls, TString *n, expdesc *var);
 static int search_local (LexState *ls, TString *n, expdesc *var);
 static int string_constant (FuncState *fs, TString *s);
+static void block (LexState *ls);
+static void cond (LexState *ls, expdesc *v);
+static void var_or_func (LexState *ls, expdesc *v);
+static void forstat (LexState *ls, int line);
+static void constructor (LexState *ls);
 
 
 static void next (LexState *ls) {
@@ -194,6 +199,20 @@ static void leavebreak (FuncState *fs, Breaklabel *bl) {
 }
 
 
+// _pushclosure BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void pushclosure (LexState *ls, FuncState *func) {
+  FuncState *fs = ls->fs;
+  Proto *f = fs->f;
+  int i;
+  for (i=0; i<func->nupvalues; i++)
+    luaK_tostack(ls, &func->upvalues[i], 1);
+  luaM_growvector(ls->L, f->kproto, f->nkproto, 1, Proto *,
+                  "constant table overflow", MAXARG_A);
+  f->kproto[f->nkproto++] = func->f;
+  luaK_code2(fs, OP_CLOSURE, f->nkproto-1, func->nupvalues);
+}
+
+
 // _optional present-unmatched
 static int optional (LexState *ls, int c) {
   if (ls->t.token == c) {
@@ -224,6 +243,104 @@ static void removelocalvars (LexState *ls, int nvars) {
   FuncState *fs = ls->fs;
   while (nvars--)
     fs->f->locvars[fs->actloc[--fs->nactloc]].endpc = fs->pc;
+}
+
+
+// _adjust_mult_assign BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void adjust_mult_assign (LexState *ls, int nvars, int nexps) {
+  FuncState *fs = ls->fs;
+  int diff = nexps - nvars;
+  if (nexps > 0 && luaK_lastisopen(fs)) { /* list ends in a function call */
+    diff--;  /* do not count function call itself */
+    if (diff <= 0) {  /* more variables than values? */
+      luaK_setcallreturns(fs, -diff);  /* function call provide extra values */
+      diff = 0;  /* no more difference */
+    }
+    else  /* more values than variables */
+      luaK_setcallreturns(fs, 0);  /* call should provide no value */
+  }
+  /* push or pop eventual difference between list lengths */
+  luaK_adjuststack(fs, diff);
+}
+
+
+// _test_then_block BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void test_then_block (LexState *ls, expdesc *v) {
+  /* test_then_block -> [IF | ELSEIF] cond THEN block */
+  next(ls);  /* skip IF or ELSEIF */
+  cond(ls, v);
+  check(ls, TK_THEN);
+  block(ls);  /* `then' part */
+}
+
+
+// _ifstat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void ifstat (LexState *ls, int line) {
+  /* ifstat -> IF cond THEN block {ELSEIF cond THEN block} [ELSE block] END */
+  FuncState *fs = ls->fs;
+  expdesc v;
+  int escapelist = NO_JUMP;
+  test_then_block(ls, &v);  /* IF cond THEN block */
+  while (ls->t.token == TK_ELSEIF) {
+    luaK_concat(fs, &escapelist, luaK_jump(fs));
+    luaK_patchlist(fs, v.u.l.f, luaK_getlabel(fs));
+    test_then_block(ls, &v);  /* ELSEIF cond THEN block */
+  }
+  if (ls->t.token == TK_ELSE) {
+    luaK_concat(fs, &escapelist, luaK_jump(fs));
+    luaK_patchlist(fs, v.u.l.f, luaK_getlabel(fs));
+    next(ls);  /* skip ELSE */
+    block(ls);  /* `else' part */
+  }
+  else
+    luaK_concat(fs, &escapelist, v.u.l.f);
+  luaK_patchlist(fs, escapelist, luaK_getlabel(fs));
+  check_match(ls, TK_END, TK_IF, line);
+}
+
+
+// _assignment BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static int assignment (LexState *ls, expdesc *v, int nvars) {
+  int left = 0;  /* number of values left in the stack after assignment */
+  luaX_checklimit(ls, nvars, MAXVARSLH, "variables in a multiple assignment");
+  if (ls->t.token == ',') {  /* assignment -> ',' NAME assignment */
+    expdesc nv;
+    next(ls);
+    var_or_func(ls, &nv);
+    check_condition(ls, (nv.k != VEXP), "syntax error");
+    left = assignment(ls, &nv, nvars+1);
+  }
+  else {  /* assignment -> '=' explist1 */
+    int nexps;
+    check(ls, '=');
+    nexps = explist1(ls);
+    adjust_mult_assign(ls, nvars, nexps);
+  }
+  if (v->k != VINDEXED)
+    luaK_storevar(ls, v);
+  else {  /* there may be garbage between table-index and value */
+    luaK_code2(ls->fs, OP_SETTABLE, left+nvars+2, 1);
+    left += 2;
+  }
+  return left;
+}
+
+
+// _localstat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void localstat (LexState *ls) {
+  /* stat -> LOCAL NAME {',' NAME} ['=' explist1] */
+  int nvars = 0;
+  int nexps;
+  do {
+    next(ls);  /* skip LOCAL or ',' */
+    new_localvar(ls, str_checkname(ls), nvars++);
+  } while (ls->t.token == ',');
+  if (optional(ls, '='))
+    nexps = explist1(ls);
+  else
+    nexps = 0;
+  adjust_mult_assign(ls, nvars, nexps);
+  adjustlocalvars(ls, nvars);
 }
 
 
@@ -298,7 +415,7 @@ static void code_string (LexState *ls, TString *s) {
 }
 
 
-// _indexupvalue present-unmatched
+// _indexupvalue BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static int indexupvalue (LexState *ls, expdesc *v) {
   FuncState *fs = ls->fs;
   int i;
@@ -313,7 +430,7 @@ static int indexupvalue (LexState *ls, expdesc *v) {
 }
 
 
-// _pushupvalue present-unmatched
+// _pushupvalue BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void pushupvalue (LexState *ls, TString *n) {
   FuncState *fs = ls->fs;
   expdesc v;
@@ -330,7 +447,7 @@ static void pushupvalue (LexState *ls, TString *n) {
 }
 
 
-// _var_or_func_tail present-unmatched
+// _var_or_func_tail BFME1 byte-identical donor (Lua 4.0.1 lparser.c; switch jump table follows the body)
 static void var_or_func_tail (LexState *ls, expdesc *v) {
   for (;;) {
     switch (ls->t.token) {
@@ -373,7 +490,7 @@ static void var_or_func_tail (LexState *ls, expdesc *v) {
 }
 
 
-// _var_or_func present-unmatched
+// _var_or_func BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void var_or_func (LexState *ls, expdesc *v) {
   /* var_or_func -> ['%'] NAME var_or_func_tail */
   if (optional(ls, '%')) {  /* upvalue? */
@@ -562,7 +679,7 @@ static int funcname (LexState *ls, expdesc *v) {
 }
 
 
-// _body present-unmatched
+// _body BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static void body (LexState *ls, int needself, int line) {
   /* body ->  '(' parlist ')' chunk END */
   FuncState new_fs;
@@ -579,6 +696,39 @@ static void body (LexState *ls, int needself, int line) {
   check_match(ls, TK_END, TK_FUNCTION, line);
   close_func(ls);
   pushclosure(ls, &new_fs);
+}
+
+
+// _code_params BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void code_params (LexState *ls, int nparams, int dots) {
+  FuncState *fs = ls->fs;
+  adjustlocalvars(ls, nparams);
+  luaX_checklimit(ls, fs->nactloc, MAXPARAMS, "parameters");
+  fs->f->numparams = fs->nactloc;  /* `self' could be there already */
+  fs->f->is_vararg = dots;
+  if (dots) {
+    new_localvarstr(ls, "arg", 0);
+    adjustlocalvars(ls, 1);
+  }
+  luaK_deltastack(fs, fs->nactloc);  /* count parameters in the stack */
+}
+
+
+// _parlist BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void parlist (LexState *ls) {
+  /* parlist -> [ param { ',' param } ] */
+  int nparams = 0;
+  int dots = 0;
+  if (ls->t.token != ')') {  /* is `parlist' not empty? */
+    do {
+      switch (ls->t.token) {
+        case TK_DOTS: next(ls); dots = 1; break;
+        case TK_NAME: new_localvar(ls, str_checkname(ls), nparams++); break;
+        default: luaK_error(ls, "<name> or `...' expected");
+      }
+    } while (!dots && optional(ls, ','));
+  }
+  code_params(ls, nparams, dots);
 }
 
 
@@ -608,6 +758,65 @@ static void exp1 (LexState *ls) {
   expdesc v;
   expr(ls, &v);
   luaK_tostack(ls, &v, 1);
+}
+
+
+// _simpleexp BFME1 byte-identical donor (Lua 4.0.1 lparser.c; expr inlines to a direct subexpr call)
+static void simpleexp (LexState *ls, expdesc *v) {
+  FuncState *fs = ls->fs;
+  switch (ls->t.token) {
+    case TK_NUMBER: {  /* simpleexp -> NUMBER */
+      Number r = ls->t.seminfo.r;
+      next(ls);
+      luaK_number(fs, r);
+      break;
+    }
+    case TK_STRING: {  /* simpleexp -> STRING */
+      code_string(ls, ls->t.seminfo.ts);  /* must use `seminfo' before `next' */
+      next(ls);
+      break;
+    }
+    case TK_TRUE: {  /* simpleexp -> `true' */
+      next(ls);
+      codepushbool(fs, 1);
+      break;
+    }
+    case TK_FALSE: {  /* simpleexp -> `false' */
+      next(ls);
+      codepushbool(fs, 0);
+      break;
+    }
+    case TK_NIL: {  /* simpleexp -> NIL */
+      luaK_adjuststack(fs, -1);
+      next(ls);
+      break;
+    }
+    case '{': {  /* simpleexp -> constructor */
+      constructor(ls);
+      break;
+    }
+    case TK_FUNCTION: {  /* simpleexp -> FUNCTION body */
+      next(ls);
+      body(ls, 0, ls->linenumber);
+      break;
+    }
+    case '(': {  /* simpleexp -> '(' expr ')' */
+      next(ls);
+      expr(ls, v);
+      check(ls, ')');
+      return;
+    }
+    case TK_NAME: case '%': {
+      var_or_func(ls, v);
+      return;
+    }
+    default: {
+      luaK_error(ls, "<expression> expected");
+      return;
+    }
+  }
+  v->k = VEXP;
+  v->u.l.t = v->u.l.f = NO_JUMP;
 }
 
 
@@ -655,6 +864,93 @@ static void breakstat (LexState *ls) {
   luaK_concat(fs, &bl->breaklist, luaK_jump(fs));
   /* correct stack for compiler and symbolic execution */
   luaK_adjuststack(fs, bl->stacklevel - currentlevel);
+}
+
+
+// _namestat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void namestat (LexState *ls) {
+  /* stat -> func | ['%'] NAME assignment */
+  FuncState *fs = ls->fs;
+  expdesc v;
+  var_or_func(ls, &v);
+  if (v.k == VEXP) {  /* stat -> func */
+    check_condition(ls, luaK_lastisopen(fs), "syntax error");  /* an upvalue? */
+    luaK_setcallreturns(fs, 0);  /* call statement uses no results */
+  }
+  else {  /* stat -> ['%'] NAME assignment */
+    int left = assignment(ls, &v, 1);
+    luaK_adjuststack(fs, left);  /* remove eventual garbage left on stack */
+  }
+}
+
+
+// _stat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static int stat (LexState *ls) {
+  int line = ls->linenumber;  /* may be needed for error messages */
+  switch (ls->t.token) {
+    case TK_IF: {  /* stat -> ifstat */
+      ifstat(ls, line);
+      return 0;
+    }
+    case TK_WHILE: {  /* stat -> whilestat */
+      whilestat(ls, line);
+      return 0;
+    }
+    case TK_DO: {  /* stat -> DO block END */
+      next(ls);  /* skip DO */
+      block(ls);
+      check_match(ls, TK_END, TK_DO, line);
+      return 0;
+    }
+    case TK_FOR: {  /* stat -> forstat */
+      forstat(ls, line);
+      return 0;
+    }
+    case TK_REPEAT: {  /* stat -> repeatstat */
+      repeatstat(ls, line);
+      return 0;
+    }
+    case TK_FUNCTION: {  /* stat -> funcstat */
+      funcstat(ls, line);
+      return 0;
+    }
+    case TK_LOCAL: {  /* stat -> localstat */
+      localstat(ls);
+      return 0;
+    }
+    case TK_NAME: case '%': {  /* stat -> namestat */
+      namestat(ls);
+      return 0;
+    }
+    case TK_RETURN: {  /* stat -> retstat */
+      retstat(ls);
+      return 1;  /* must be last statement */
+    }
+    case TK_BREAK: {  /* stat -> breakstat */
+      breakstat(ls);
+      return 1;  /* must be last statement */
+    }
+    default: {
+      luaK_error(ls, "<statement> expected");
+      return 0;  /* to avoid warnings */
+    }
+  }
+}
+
+
+/* }====================================================================== */
+
+
+// _chunk BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void chunk (LexState *ls) {
+  /* chunk -> { stat [';'] } */
+  int islast = 0;
+  while (!islast && !block_follow(ls->t.token)) {
+    islast = stat(ls);
+    optional(ls, ';');
+    LUA_ASSERT(ls->fs->stacklevel == ls->fs->nactloc,
+               "stack size != # local vars");
+  }
 }
 
 
@@ -808,6 +1104,60 @@ static BinOpr getbinopr (int op) {
 }
 
 
+// _getunopr present-unmatched
+static UnOpr getunopr (int op) {
+  switch (op) {
+    case TK_NOT: return OPR_NOT;
+    case '-': return OPR_MINUS;
+    default: return OPR_NOUNOPR;
+  }
+}
+
+
+static const struct {
+  char left;  /* left priority for each binary operator */
+  char right; /* right priority */
+} priority[] = {  /* ORDER OPR */
+   {5, 5}, {5, 5}, {6, 6}, {6, 6},  /* arithmetic */
+   {9, 8}, {4, 3},                  /* power and concat (right associative) */
+   {2, 2}, {2, 2},                  /* equality */
+   {2, 2}, {2, 2}, {2, 2}, {2, 2},  /* order */
+   {1, 1}, {1, 1}                   /* logical */
+};
+
+#define UNARY_PRIORITY	7  /* priority for unary operators */
+
+
+/*
+** subexpr -> (simplexep | unop subexpr) { binop subexpr }
+** where `binop' is any binary operator with a priority higher than `limit'
+*/
+// _subexpr BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static BinOpr subexpr (LexState *ls, expdesc *v, int limit) {
+  BinOpr op;
+  UnOpr uop = getunopr(ls->t.token);
+  if (uop != OPR_NOUNOPR) {
+    next(ls);
+    subexpr(ls, v, UNARY_PRIORITY);
+    luaK_prefix(ls, uop, v);
+  }
+  else simpleexp(ls, v);
+  /* expand while operators have priorities higher than `limit' */
+  op = getbinopr(ls->t.token);
+  while (op != OPR_NOBINOPR && priority[op].left > limit) {
+    expdesc v2;
+    BinOpr nextop;
+    next(ls);
+    luaK_infix(ls, op, v);
+    /* read sub-expression with higher priority */
+    nextop = subexpr(ls, &v2, priority[op].right);
+    luaK_posfix(ls, op, v, &v2);
+    op = nextop;
+  }
+  return op;  /* return first untreated operator */
+}
+
+
 /* Anchor, absent from retail: keeps the static workers out-of-line so the
    verifier can see them. Only the rowed bodies are claimed. */
 void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd) {
@@ -834,4 +1184,9 @@ void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd
   funcargs(ls, 0);
   luaY_parser(0, 0);
   next(ls);
+  localstat(ls);
+  adjust_mult_assign(ls, 0, 0);
+  stat(ls);
+  { expdesc anchor_v; simpleexp(ls, &anchor_v); }
+  { expdesc anchor_w; subexpr(ls, &anchor_w, 0); getunopr(0); }
 }

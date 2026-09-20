@@ -14,7 +14,9 @@ struct BfmeSetupRecord
 
 extern const char TheBfmeSetupFirstText[];
 extern const char TheBfmeSetupSecondText007E9860[];
+extern const char TheBfmeSetupSecondText007F26A0[];
 extern int TheBfmeSetupGlobal007E9860;
+extern int TheBfmeSetupGlobal007F26A0;
 
 // ?bfmeSetupPair_007E9860@@YGXPAUBfmeSetupRecord@@H@Z
 void __stdcall bfmeSetupPair_007E9860(BfmeSetupRecord *record, int second)
@@ -27,4 +29,17 @@ void __stdcall bfmeSetupPair_007E9860(BfmeSetupRecord *record, int second)
 
 	record->bfmeWrite(TheBfmeSetupFirstText, value);
 	record->bfmeWrite(TheBfmeSetupSecondText007E9860, second);
+}
+
+// ?bfmeSetupPair_007F26A0@@YGXPAUBfmeSetupRecord@@H@Z
+void __stdcall bfmeSetupPair_007F26A0(BfmeSetupRecord *record, int second)
+{
+	int value = TheBfmeSetupGlobal007F26A0;
+
+	record->bfmeBegin();
+
+	record->m_bfmeTag = 0x72616E6B;					// 'rank'
+
+	record->bfmeWrite(TheBfmeSetupFirstText, value);
+	record->bfmeWriteAlt(TheBfmeSetupSecondText007F26A0, second);
 }

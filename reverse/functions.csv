@@ -13507,3 +13507,271 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ??0?$_Rb_tree@HU?$pair@$$CBHV?$vector@IV?$allocator@I@_STL@@@_STL@@@_STL@@U?$_Select1st@U?$pair@$$CBHV?$vector@IV?$allocator@I@_STL@@@_STL@@@_STL@@@2@U?$less@H@2@V?$allocator@U?$pair@$$CBHV?$vector@IV?$allocator@I@_STL@@@_STL@@@_STL@@@2@@_STL@@QAE@ABV01@@Z,,0x0021E146,165,Code/Libraries/Source/WWVegas/WWLib/stlport_hero_integer_vector_tree.cpp,matched,STLport4.5.3; signed key ordering proven at21D203;32-byte nodes and vector<unsigned> copy2CFAB9 anchor typed chain; full raw size and strict bytes verified
 ??0?$vector@_NV?$allocator@_N@_STL@@@_STL@@QAE@ABV01@@Z,,0x00389413,136,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_bool_copy.cpp,matched,STLport4.5.3 real vector<bool>; complete decoded helper ABI and exact getter/base aliases; full136-byte strict verification
 ??0CreateAHeroData@@QAE@ABV0@@Z,,0x00409D4D,339,Code/GameEngine/Source/Common/System/SaveGame/CreateAHeroDataCopy.cpp,matched,Named Snapshot-derived140-byte layout; real STL container families and verified13-byte constructor/5-byte destructor array callbacks; full339-byte strict match
+?bfmeDelTQD@BfmeThingTQD@@QAEPAXE@Z,,0x006587E0,51,Code/GameEngine/Source/Common/BfmeConv1321.cpp,matched,BFME1 byte-identical donor BfmeConv1321.cpp; b1 0x0084E4A0; callees bfmeGetTQD/bfmeFreeTQD pinned
+?bfmeDelTWB@BfmeThingTWB@@QAEPAXE@Z,,0x006634E0,68,Code/GameEngine/Source/Common/BfmeConv1325.cpp,matched,BFME1 byte-identical donor BfmeConv1325.cpp grafted onto twin DelTWA TU; b1 0x0084E5C0; dtor/drop callees pinned; free via new alias pin
+?messageToName@Eva@@QAE?AVAsciiString@@H@Z,,0x001DEB8A,108,Code/GameEngine/Source/GameClient/EvaMessageName.cpp,matched,BFME2 mod-extended messageToName: static table plus dynamic event-name walk with Unknown fallback; banked first/next pins
+?bfmeDelTXA@BfmeThingTXA@@QAEPAXE@Z,,0x001768D0,78,Code/GameEngine/Source/Common/BfmeConv1326.cpp,matched,BFME1 byte-identical donor BfmeConv1326.cpp; b1 0x0084E380; dtor/release callees pinned; free helpers via alias pins
+?bfmeAllocVLV@@YAPAXI@Z,,0x00029920,152,Code/GameEngine/Source/Common/BfmeConv1421.cpp,matched,BFME1 byte-identical donor; b1 0x0082ECD0; ambiguous 2-cand tiebreak via SmallVLV->0x27A90 vs SmallVLW->0x279A0
+?bfmeInitVHC@BfmeThingVHC@@QAEPAV1@PAVBfmeMsgVHC@@@Z,,0x00661C90,55,Code/GameEngine/Source/Common/BfmeConv1360.cpp,matched,BFME1 byte-identical donor BfmeConv1360.cpp; b1 0x007F52B0; base/getter callees pinned; QPOS/QLEN key globals agree
+?bfmeAllocVLW@@YAPAXI@Z,,0x00029A80,152,Code/GameEngine/Source/Common/BfmeConv1422.cpp,matched,BFME1 byte-identical donor; b1 0x0082EE30; ambiguous 2-cand tiebreak pair with VLV@29920 via SmallVLW->0x279A0
+?bfmeInitVHD@BfmeThingVHD@@QAEPAV1@PAVBfmeMsgVHC@@@Z,,0x00661CD0,59,Code/GameEngine/Source/Common/BfmeConv1360.cpp,matched,BFME1 byte-identical donor BfmeConv1360.cpp appended to InitVHC TU; b1 0x007F5320; TYPE/REASON key globals agree
+?bfmeFreeVLX@@YAXPAXI@Z,,0x000299C0,177,Code/GameEngine/Source/Common/BfmeConv1423.cpp,matched,BFME1 byte-identical donor; b1 0x0082ED70; ambiguous 2-cand tiebreak via SmallFreeVLX->0x27B40 vs SmallFreePM->0x27A40
+?bfmeClearVJS@BfmeThingVJS@@QAEXXZ,,0x00197F30,73,Code/GameEngine/Source/Common/BfmeConv1393.cpp,matched,BFME1 byte-identical donor BfmeConv1393.cpp; b1 0x007F7E40; array-delete helper pinned; GoVJR sibling already rowed elsewhere
+?bfmeClearVMN@BfmeTableVMN@@QAEXXZ,,0x00758F30,75,Code/GameEngine/Source/Common/BfmeConv1447.cpp,matched,BFME1 byte-identical donor BfmeConv1447.cpp; b1 0x009A2890; free helper via new alias pin at rowed scalar delete
+?bfmeAllocPR@@YAPAXI@Z,,0x00028D10,52,Code/GameEngine/Source/Common/BfmeTwoHundredSeventySeven.cpp,matched,BFME1 byte-identical donor; b1 0x0082E9D0; ambiguous 2-cand tiebreak via SmallAllocPR->0x279A0 vs 0x27A90
+?bfmeFreePM@@YAXPAXI@Z,,0x00028D50,44,Code/GameEngine/Source/Common/BfmeTwoHundredSeventyThree.cpp,matched,BFME1 byte-identical donor; b1 0x0082EA10; ambiguous 2-cand tiebreak via SmallFreePM->0x27A40 vs 0x27B40
+?displayCantBuildMessage@InGameUI@@QAEXW4LegalBuildCode@@@Z,,0x0029C291,101,Code/GameEngine/Source/GameClient/InGameUIDisplayCantBuild.cpp,matched,ZH InGameUI port with BFME2 single-AsciiString tail and reordered LegalBuildCode
+?bfmeGo1042E@BfmeC1042@@QAEXPAUBfmeR1042@@@Z,,0x00105CC7,47,Code/GameEngine/Source/Common/BfmeConv1042.cpp,matched,BFME1 donor BfmeConv1042.cpp with 1-const layout repair pad 0xD7 to 0xCF; b1 0x00848A10; setter folded with rowed process via new alias pin
+?spin@LockClass@FastCriticalSectionClass@@CIXPAX@Z,,0x006C5EF0,67,Code/Libraries/Source/WWVegas/WWLib/FastCriticalSectionSpin.cpp,matched,BFME1 FastCriticalSectionSpin donor with WaitForSingleObject event yield; b1 0x006D10E0; string-domain spin
+?bfmeSetupPair_007F26A0@@YGXPAUBfmeSetupRecord@@H@Z,,0x0065F190,61,Code/GameEngine/Source/Common/Bfme5SetupPairs.cpp,matched,BFME1 byte-identical donor; b1 0x007F26A0; ambiguous 3-cand tiebreak via WriteAlt->0x655960 vs 0x660070/0x6602F0
+?invoke@Open2381C0Impl@@QAEXHPAX0@Z,,0x000172A0,35,Code/Libraries/Source/STLport/Open2381C0Impl_invoke.cpp,matched,BFME1 byte-identical donor; b1 0x00840F00; ambiguous 2-cand tiebreak via __find_if->0x16F20 vs 0x16EA0
+??1VideoPlayer@@UAE@XZ,,0x00689350,35,Code/GameEngine/Source/GameClient/VideoPlayerDestructorThunk.cpp,matched,BFME1 readable donor body; b1 0x0088A410; base dtor present-unmatched
+??0LockClass@FastCriticalSectionClass@@QAE@AAV1@@Z,,0x006C5F40,20,Code/Libraries/Source/WWVegas/WWLib/FastCriticalSectionLockCtor.cpp,matched,out-of-line lock guard ctor; AAV1 names the outer section class; calls the string-domain spin
+?bfmeGoECF@@YAXXZ,,0x007B7270,16,Code/GameEngine/Source/Common/BfmeConv804.cpp,matched,BFME1 byte-identical donor BfmeConv804.cpp; b1 0x00C72050; guarded stdcall ripple; ECI sibling deferred
+?bfmeGoECI@@YA_NXZ,,0x004441B0,21,Code/GameEngine/Source/Common/BfmeConv804.cpp,matched,BFME1 donor with vtable repair to retail slot 54; b1 0x00516C00; guarded ask shape
+_parlist,,0x00754B70,254,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; next and optional inline; 6 retail calls all resolve
+_code_params,,0x00753F20,131,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned from the _parlist retail call site
+?_S_refill@?$__node_alloc@$00$0A@@_STL@@CAPAXI@Z,,0x000253E0,169,Code/Libraries/Source/WWVegas/WWLib/STL_node_alloc_refillThunk.cpp,matched,BFME1 byte-identical donor; b1 0x0082C920; ambiguous 2-cand tiebreak via Chunk1150->0x23F30
+?bfmeGo1019C@@YAXH@Z,,0x0065CF10,42,Code/GameEngine/Source/Common/BfmeConv1019.cpp,matched,BFME1 donor BfmeConv1019.cpp; b1 0x007F00B0; init callee pinned; FESL string agrees; folded with free helper in BFME1
+?_S_refill@?$__node_alloc@$0A@$0A@@_STL@@CAPAXI@Z,,0x00025330,169,Code/Libraries/Source/WWVegas/WWLib/STL_node_alloc_refill_single.cpp,matched,BFME1 byte-identical donor; b1 0x0082C870; ambiguous 2-cand tiebreak pair via Chunk1149->0x23D80
+_localstat,,0x00754860,273,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; next and optional inline; tail-jumps to adjustlocalvars
+_adjust_mult_assign,,0x00753EC0,82,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _localstat
+?deallocate@?$__debug_alloc@V?$__node_alloc@$0A@$0A@@_STL@@@_STL@@SAXPAXI@Z,,0x00029B20,177,Code/Libraries/Source/WWVegas/WWLib/STLDebugNodeAllocDeallocate.cpp,matched,object-symbol=_bfme_DebugNodeAllocDeallocate_82EED0;BFME1 byte-identical donor; b1 0x0082EED0
+??1DebugIOCon@@UAE@XZ,,0x00040860,85,Code/Libraries/Source/debug/DebugIOConDestructorThunk.cpp,matched,BFME1 readable donor; b1 0x00890210; Con-adjacency plus Net/Cmd rowed elsewhere
+?DEREncode@?$Int@$0EA@@@QBEHPAE@Z,,0x00615C90,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,BFME1 byte-identical donor; b1 0x009E9CF0; ambiguous 2-cand tiebreak pair
+?DERDecode@?$Int@$0EA@@@QAEXPBE@Z,,0x0061DCF0,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,BFME1 byte-identical donor; b1 0x009E9E50; ambiguous 2-cand tiebreak pair with DEREncode@615C90
+?bfmeGoPF@BfmeThingPF@@QAEXPBUBfmeRangePF@@PAX@Z,,0x00028C10,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySix.cpp,matched,BFME1 byte-identical donor; b1 0x0082E910; ambiguous 6-cand tiebreak via DoPF->0x276B0
+?bfmeGoPG@BfmeThingPG@@QAEXPBUBfmeRangePG@@PAX@Z,,0x00028C90,43,Code/GameEngine/Source/Common/BfmeTwoHundredSixtySeven.cpp,matched,BFME1 byte-identical donor; b1 0x0082E950; ambiguous 6-cand tiebreak via DoPG->0x27740
+_indexupvalue,,0x00753DC0,125,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _pushupvalue
+_pushupvalue,,0x00753E40,121,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned callee of _var_or_func
+_var_or_func_tail,,0x007552F0,714,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; switch jump table follows the body; pinned callee of _var_or_func
+_var_or_func,,0x007555C0,136,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; optional and singlevar inline; pinned from the _namestat retail call
+_test_then_block,,0x00755CE0,154,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; cond expr next and block inline
+_assignment,,0x007559C0,192,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; pinned from the _namestat retail call
+_ifstat,,0x00755D80,267,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; block inlines with chunk call; pinned from the _stat retail call
+_namestat,,0x00755E90,99,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; check_condition inlines to a direct luaK_error call
+_stat,,0x00755F00,513,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; jump table free dispatch over statement tokens
+_luaK_number,,0x00752810,349,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor Lua 4.0.1 lcode.c; pinned callee of _simpleexp
+_simpleexp,,0x00755650,581,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; expr inlines to a direct subexpr call
+_pushclosure,,0x00753FF0,142,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; static convention fixes the _body call site
+_body,,0x00754C70,182,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; new_localvarstr inlines; static pushclosure call
+_chunk,,0x00756110,167,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; loop over stat with optional separators
+_subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; ICF-folded in BFME1 so the name is this sweeps pick among its twins; getunopr inlines
+?get@Rva005F17A3AddDwordField@@QBEHXZ,,0x005F17A3,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?get@Rva005F17AAAddDwordField@@QBEHXZ,,0x005F17AA,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?get@Rva005FC75BAddDwordField@@QBEHXZ,,0x005FC75B,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?get@Rva0040CACCSubDwordField@@QBEHXZ,,0x0040CACC,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
+?get@Rva00414325SubDwordField@@QBEHXZ,,0x00414325,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
+?get@Rva0051E3F1SubDwordField@@QBEHXZ,,0x0051E3F1,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
+?Init@WW3D@@SA_NPAXPAD_N@Z,,0x00118040,158,Code/Libraries/Source/WWVegas/WW3D2/WW3D_Init_Bfme.cpp,matched,BFME1 byte-identical donor WW3D_Init_Bfme.cpp; DX8Wrapper::Init pinned from retail call
+?get@Rva00030D00MaskedDwordField@@QBEHXZ,,0x00030D00,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
+?get@Rva00742EC0MaskedDwordField@@QBEHXZ,,0x00742EC0,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
+?get@Rva00625BA0SubDwordField@@QBEHXZ,,0x00625BA0,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
+?get@Rva006BD4C0SubDwordField@@QBEHXZ,,0x006BD4C0,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
+?get@Rva00709BD0AddDwordField@@QBEHXZ,,0x00709BD0,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?get@Rva00709D10AddDwordField@@QBEHXZ,,0x00709D10,7,Code/GameEngine/Source/Common/Disp8AddDwordFieldGetters.cpp,matched,disp8 add dword getter; opaque holder
+?notifyAddress@LanTheaterEmulator@@QAEXPAURva00809500Entry@@@Z,,0x006768B0,202,Code/GameEngine/Source/GameNetwork/Y4FeslFavGameAddress_notify.cpp,matched,BFME1 donor Y4FeslFavGameAddress.cpp; two data addresses repaired for BFME2 0x00C71658 and 0x00CE3F98
+?get@Rva000425C4PtrChaseField@@QBEHXZ,,0x000425C4,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@RvaB49A1PtrChaseField@@QBEHXZ,,0x000B49A1,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva262193PtrChaseField@@QBEHXZ,,0x00262193,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva262FF8PtrChaseField@@QBEHXZ,,0x00262FF8,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva26FFDBPtrChaseField@@QBEHXZ,,0x0026FFDB,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva2D2CD5PtrChaseField@@QBEHXZ,,0x002D2CD5,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0002E05F5PtrChaseField@@QBEHXZ,,0x002E05F5,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0002E05FCPtrChaseField@@QBEHXZ,,0x002E05FC,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva000318B17PtrChaseField@@QBEHXZ,,0x00318B17,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00033F25CPtrChaseField@@QBEHXZ,,0x0033F25C,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00033F91EPtrChaseField@@QBEHXZ,,0x0033F91E,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0000033F925PtrChaseField@@QBEHXZ,,0x0033F925,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva000003638B3PtrChaseField@@QBEHXZ,,0x003638B3,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0000036CBEBPtrChaseField@@QBEHXZ,,0x0036CBEB,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00000468A1CPtrChaseField@@QBEHXZ,,0x00468A1C,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+_protomark,,0x00750B50,147,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; self-recursive over kproto
+_marktagmethods,,0x00750C20,110,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markclosure inlines
+?get@Rva00000468A23PtrChaseField@@QBEHXZ,,0x00468A23,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0000048E828PtrChaseField@@QBEHXZ,,0x0048E828,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0000048E82FPtrChaseField@@QBEHXZ,,0x0048E82F,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva000004D7B8CPtrChaseField@@QBEHXZ,,0x004D7B8C,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva000004D7C9DPtrChaseField@@QBEHXZ,,0x004D7C9D,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva000004D7CA4PtrChaseField@@QBEHXZ,,0x004D7CA4,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0000528C4BPtrChaseField@@QBEHXZ,,0x00528C4B,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0000583ADBPtrChaseField@@QBEHXZ,,0x00583ADB,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005C357FPtrChaseField@@QBEHXZ,,0x005C357F,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005C39A3PtrChaseField@@QBEHXZ,,0x005C39A3,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005C7925PtrChaseField@@QBEHXZ,,0x005C7925,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005C792CPtrChaseField@@QBEHXZ,,0x005C792C,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005C7933PtrChaseField@@QBEHXZ,,0x005C7933,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005E0D6APtrChaseField@@QBEHXZ,,0x005E0D6A,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005E0D7FPtrChaseField@@QBEHXZ,,0x005E0D7F,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva00005F0604PtrChaseField@@QBEHXZ,,0x005F0604,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005F060BPtrChaseField@@QBEHXZ,,0x005F060B,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005F17B1PtrChaseField@@QBEHXZ,,0x005F17B1,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005F6029PtrChaseField@@QBEHXZ,,0x005F6029,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005F6030PtrChaseField@@QBEHXZ,,0x005F6030,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005F603EPtrChaseField@@QBEHXZ,,0x005F603E,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005F6B0BPtrChaseField@@QBEHXZ,,0x005F6B0B,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005FC72DPtrChaseField@@QBEHXZ,,0x005FC72D,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005FC734PtrChaseField@@QBEHXZ,,0x005FC734,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005FC754PtrChaseField@@QBEHXZ,,0x005FC754,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva005FF1E3PtrChaseField@@QBEHXZ,,0x005FF1E3,7,Code/GameEngine/Source/Common/Disp8PtrChaseDwordGetters.cpp,matched,disp8 pointer-chase dword getter; opaque holder
+?get@Rva0007E05FByteChaseField@@QBEEXZ,,0x0007E05F,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva0033F988ByteChaseField@@QBEEXZ,,0x0033F988,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva00373CA3ByteChaseField@@QBEEXZ,,0x00373CA3,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva004551ACByteChaseField@@QBEEXZ,,0x004551AC,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva0048E836ByteChaseField@@QBEEXZ,,0x0048E836,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva0048E83DByteChaseField@@QBEEXZ,,0x0048E83D,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva0048E844ByteChaseField@@QBEEXZ,,0x0048E844,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva004D7C5EByteChaseField@@QBEEXZ,,0x004D7C5E,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva004E0605ByteChaseField@@QBEEXZ,,0x004E0605,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva0057C22FByteChaseField@@QBEEXZ,,0x0057C22F,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005C7917ByteChaseField@@QBEEXZ,,0x005C7917,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005C791EByteChaseField@@QBEEXZ,,0x005C791E,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005CCB3EByteChaseField@@QBEEXZ,,0x005CCB3E,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005CCB45ByteChaseField@@QBEEXZ,,0x005CCB45,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005D48F0ByteChaseField@@QBEEXZ,,0x005D48F0,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005D48F7ByteChaseField@@QBEEXZ,,0x005D48F7,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005E0D71ByteChaseField@@QBEEXZ,,0x005E0D71,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005E0D78ByteChaseField@@QBEEXZ,,0x005E0D78,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005E0D86ByteChaseField@@QBEEXZ,,0x005E0D86,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F05F6ByteChaseField@@QBEEXZ,,0x005F05F6,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F05FDByteChaseField@@QBEEXZ,,0x005F05FD,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F3F3AByteChaseField@@QBEEXZ,,0x005F3F3A,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F3F64ByteChaseField@@QBEEXZ,,0x005F3F64,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F601BByteChaseField@@QBEEXZ,,0x005F601B,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F6022ByteChaseField@@QBEEXZ,,0x005F6022,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F6037ByteChaseField@@QBEEXZ,,0x005F6037,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F6045ByteChaseField@@QBEEXZ,,0x005F6045,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F6B20ByteChaseField@@QBEEXZ,,0x005F6B20,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F6B27ByteChaseField@@QBEEXZ,,0x005F6B27,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F6B2EByteChaseField@@QBEEXZ,,0x005F6B2E,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005F6B35ByteChaseField@@QBEEXZ,,0x005F6B35,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005FD4F0ByteChaseField@@QBEEXZ,,0x005FD4F0,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005FF1EAByteChaseField@@QBEEXZ,,0x005FF1EA,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva005FF1F1ByteChaseField@@QBEEXZ,,0x005FF1F1,7,Code/GameEngine/Source/Common/Disp8ByteChaseGetters.cpp,matched,disp8 byte-chase getter; opaque holder
+?get@Rva0007E066FloatChaseField@@QBEMXZ,,0x0007E066,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva0007E0F1FloatChaseField@@QBEMXZ,,0x0007E0F1,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva000910C0FloatChaseField@@QBEMXZ,,0x000910C0,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva001E3F27FloatChaseField@@QBEMXZ,,0x001E3F27,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+_markobject,,0x00750C90,164,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markclosure inlines to direct protomark calls
+_marklock,,0x00751290,50,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c
+_markall,,0x007512D0,276,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markstack inlines
+_luaK_posfix,,0x00753710,208,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor Lua 4.0.1 lcode.c; pinned callee of _subexpr; exact via explain_mismatch
+_luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched,BFME1 donor Lua 4.0.1 luaB_tostring.c; true extent ret-to-pad; jump table plus sprintf import
+?get@Rva002C7229FloatChaseField@@QBEMXZ,,0x002C7229,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva0033F981FloatChaseField@@QBEMXZ,,0x0033F981,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva0033F9BBFloatChaseField@@QBEMXZ,,0x0033F9BB,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva003638ACFloatChaseField@@QBEMXZ,,0x003638AC,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva00373CAAFloatChaseField@@QBEMXZ,,0x00373CAA,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva00373D45FloatChaseField@@QBEMXZ,,0x00373D45,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva0039ABEBFloatChaseField@@QBEMXZ,,0x0039ABEB,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva0044E6A7FloatChaseField@@QBEMXZ,,0x0044E6A7,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva0045523AFloatChaseField@@QBEMXZ,,0x0045523A,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C57FloatChaseField@@QBEMXZ,,0x004D7C57,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C65FloatChaseField@@QBEMXZ,,0x004D7C65,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C6CFloatChaseField@@QBEMXZ,,0x004D7C6C,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C73FloatChaseField@@QBEMXZ,,0x004D7C73,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C7AFloatChaseField@@QBEMXZ,,0x004D7C7A,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C81FloatChaseField@@QBEMXZ,,0x004D7C81,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C88FloatChaseField@@QBEMXZ,,0x004D7C88,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7C8FFloatChaseField@@QBEMXZ,,0x004D7C8F,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7CABFloatChaseField@@QBEMXZ,,0x004D7CAB,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva004D7CB2FloatChaseField@@QBEMXZ,,0x004D7CB2,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva005D48FEFloatChaseField@@QBEMXZ,,0x005D48FE,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva005D4905FloatChaseField@@QBEMXZ,,0x005D4905,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva005D490CFloatChaseField@@QBEMXZ,,0x005D490C,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?get@Rva005E0D8DFloatChaseField@@QBEMXZ,,0x005E0D8D,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
+?Rva000454B7Get@@YA_NXZ,,0x000454B7,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00065E39Get@@YA_NXZ,,0x00065E39,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva000B2EB2Get@@YA_NXZ,,0x000B2EB2,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva000B3EC4Get@@YA_NXZ,,0x000B3EC4,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva001DBB01Get@@YA_NXZ,,0x001DBB01,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00238F8EGet@@YA_NXZ,,0x00238F8E,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0023C59CGet@@YA_NXZ,,0x0023C59C,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002C7269Get@@YA_NXZ,,0x002C7269,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?get@Rva000515C7DwordField@@QBEHXZ,,0x000515C7,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0007E00FDwordField@@QBEHXZ,,0x0007E00F,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0009DC5ADwordField@@QBEHXZ,,0x0009DC5A,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva000B23B7DwordField@@QBEHXZ,,0x000B23B7,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva000E009DDwordField@@QBEHXZ,,0x000E009D,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva000EFD36DwordField@@QBEHXZ,,0x000EFD36,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva001E42EBDwordField@@QBEHXZ,,0x001E42EB,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0020E323DwordField@@QBEHXZ,,0x0020E323,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0025DB2DDwordField@@QBEHXZ,,0x0025DB2D,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva002620D4DwordField@@QBEHXZ,,0x002620D4,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva002620F3DwordField@@QBEHXZ,,0x002620F3,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva002856B0DwordField@@QBEHXZ,,0x002856B0,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva002A98CADwordField@@QBEHXZ,,0x002A98CA,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva002D2CBADwordField@@QBEHXZ,,0x002D2CBA,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0035AEBBDwordField@@QBEHXZ,,0x0035AEBB,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva00376CDDDwordField@@QBEHXZ,,0x00376CDD,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva003888A1DwordField@@QBEHXZ,,0x003888A1,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva003E3C05DwordField@@QBEHXZ,,0x003E3C05,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva00466AC9DwordField@@QBEHXZ,,0x00466AC9,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva004DF1D1DwordField@@QBEHXZ,,0x004DF1D1,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva0051C05CDwordField@@QBEHXZ,,0x0051C05C,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?get@Rva00552C39DwordField@@QBEHXZ,,0x00552C39,7,Code/GameEngine/Source/Common/Disp32DwordFieldGetters.cpp,matched,disp32 dword getter; opaque holder
+?Rva002C7512Get@@YA_NXZ,,0x002C7512,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002D76A3Get@@YA_NXZ,,0x002D76A3,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002D9C2CGet@@YA_NXZ,,0x002D9C2C,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00306E3DGet@@YA_NXZ,,0x00306E3D,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0035B161Get@@YA_NXZ,,0x0035B161,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0035BEC4Get@@YA_NXZ,,0x0035BEC4,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00388834Get@@YA_NXZ,,0x00388834,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00390554Get@@YA_NXZ,,0x00390554,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva003B6A37Get@@YA_NXZ,,0x003B6A37,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?getConstSlot@GameInfo@@QBEPBVGameSlot@@H@Z,,0x003FF2BE,22,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp getConstSlot shape with slot array at +0x18 and MAX_SLOTS 8
+??0Rva002E9E70@@QAE@ABV0@@Z,,0x003372EC,39,Code/GameEngine/Source/Common/Rva002E9E70Copy.cpp,matched,Opaque value copy-ctor; string via AsciiString set pin at 0x366F0 and vector member via new opaque assign pin at 0x332217; retail order falls out FIRST-TRY
+?Rva003B6C8BGet@@YA_NXZ,,0x003B6C8B,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?_S_uninitialize@ios_base@_STL@@KAXXZ,,0x00015440,894,Code/Libraries/Source/WWVegas/WWLib/stlport_ios_base_uninitialize.cpp,matched,BFME1 X4Iostream.cpp donor; rva00832100Release pinned to the rowed _Loc_init dtor at 0x70E0 whose 27B body is identical
+?Rva00040F61Get@@YA_NXZ,,0x00040F61,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?unAccept@GameSlot@@QAEXXZ,,0x003FF895,11,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp unAccept with inlined isHuman
+?setMapAvailability@GameSlot@@QAEX_N@Z,,0x003FF8A0,16,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp setMapAvailability with inlined isHuman
+?Rva00040FE2Get@@YA_NXZ,,0x00040FE2,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Get_Shininess@VertexMaterialClass@@QBEMXZ,,0x0013CD20,7,Code/Libraries/Source/WWVegas/WW3D2/vertmaterial.cpp,matched,MaterialOld Power float getter; twin shape at 0x4D7C73 already rowed elsewhere; CC-padded isolated 7B
+?Rva00075743Get@@YA_NXZ,,0x00075743,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva001D9864Get@@YA_NXZ,,0x001D9864,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva001E3952Get@@YA_NXZ,,0x001E3952,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva001FF367Get@@YA_NXZ,,0x001FF367,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002146F4Get@@YA_NXZ,,0x002146F4,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0023C6FAGet@@YA_NXZ,,0x0023C6FA,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0026EF31Get@@YA_NXZ,,0x0026EF31,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0028B13EGet@@YA_NXZ,,0x0028B13E,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002AA359Get@@YA_NXZ,,0x002AA359,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002B4C32Get@@YA_NXZ,,0x002B4C32,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002C7608Get@@YA_NXZ,,0x002C7608,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002C959BGet@@YA_NXZ,,0x002C959B,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva002CEF27Get@@YA_NXZ,,0x002CEF27,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0030B3CEGet@@YA_NXZ,,0x0030B3CE,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00318BA2Get@@YA_NXZ,,0x00318BA2,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00318F61Get@@YA_NXZ,,0x00318F61,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00341439Get@@YA_NXZ,,0x00341439,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00342309Get@@YA_NXZ,,0x00342309,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva00405B5DGet@@YA_NXZ,,0x00405B5D,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0041B8B2Get@@YA_NXZ,,0x0041B8B2,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0041FE60Get@@YA_NXZ,,0x0041FE60,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?isSlotLocalAlly@@YA_NPBVGameSlot@@@Z,,0x003FF7B7,92,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent family ally helper with BFME1 GameInfo.cpp shape and getSlotIndex inlined and slot in EDI
+?getApparentPlayerTemplate@GameSlot@@QBEHXZ,,0x003FF813,37,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent template with BFME1 GameInfo.cpp shape and orig fallback for hidden random
+?getApparentColor@GameSlot@@QBEHXZ,,0x003FF838,56,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent color with BFME1 GameInfo.cpp shape and observer color path
+?getApparentStartPos@GameSlot@@QBEHXZ,,0x003FF870,37,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent start position with BFME1 GameInfo.cpp shape and orig fallback for hidden random
+?Rva0042638BGet@@YA_NXZ,,0x0042638B,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?Rva0044E60AGet@@YA_NXZ,,0x0044E60A,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?get@Rva0013B150DwordField@@QBEHXZ,,0x0013B150,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
+?Rva0045314BGet@@YA_NXZ,,0x0045314B,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+?get@Rva002A79A1DwordField@@QBEHXZ,,0x002A79A1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
+?get@Rva00367508DwordField@@QBEHXZ,,0x00367508,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
+?Rva004A6AB2Get@@YA_NXZ,,0x004A6AB2,3,Code/GameEngine/Source/Common/ConstBoolFalseGetters.cpp,matched,Bool-false getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
+??0?$list@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@QAE@I@Z,,0x0043C072,94,Code/Libraries/Source/WWVegas/WWLib/stlport_list_unicodestring_insert.cpp,matched,wide fill ctor; wide releaseBuffer teardown names element type; base/insert via twin pins; true extent 94B
+?get@Rva004F04F1DwordField@@QBEHXZ,,0x004F04F1,4,Code/GameEngine/Source/Common/Disp8DwordFieldGetters.cpp,matched,Disp8 dword getter
+?getApparentPlayerTemplateDisplayName@GameSlot@@QBE?AVUnicodeString@@XZ,,0x003FFBB4,116,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot apparent display name with BFME1 GameInfo.cpp shape and GUI Random Observer fetches
+?insert@?$list@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@QAEXU?$_List_iterator@VUnicodeString@@U?$_Nonconst_traits@VUnicodeString@@@_STL@@@2@IABVUnicodeString@@@Z,,0x0043BFA4,25,Code/Libraries/Source/WWVegas/WWLib/stlport_list_unicodestring_insert.cpp,matched,wide 3-arg fill insert 25B; delegates to fill worker pin; true extent 25B
+??0?$list@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@QAE@ABV01@@Z,,0x0043C0D0,88,Code/Libraries/Source/WWVegas/WWLib/stlport_list_unicodestring_insert.cpp,matched,wide copy ctor 88B; get_allocator and range insert via pins; true extent 88B
+?isSkirmish@GameInfo@@QAE_NXZ,,0x003FF9E2,90,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameInfo isSkirmish with BFME1 GameInfo.cpp shape except allied AI continues the scan instead of aborting
+?getSlotIndex@@YAHPBVGameSlot@@@Z,,0x003FF796,33,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,GameSlot helper outlined in retail; places via same-TU EDI design
+?resetAccepted@GameInfo@@QAEXXZ,,0x003FF9B4,46,Code/GameEngine/Source/GameNetwork/GameInfoGetSlot.cpp,matched,BFME1 GameInfo.cpp resetAccepted; slot0 direct array load reproduces retail lea-test-mov plus dl-reused setAccept; slots 1-7 via rowed getSlot plus human-gated unAccept
+?bfmeGoRE@BfmeThingRE@@QAEDPAVBfmeOtherRE@@@Z,,0x006560F0,36,Code/GameEngine/Source/Common/BfmeConv908.cpp,matched,BFME1 byte-identical donor; b1 0x007E9090; callee bfmeCmpRE pinned at 0x00655F90
+?getNumPlayers@GameInfo@@QBEHXZ,,0x003FF218,37,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME1 GameNetwork/GameInfo.cpp donor shape; same-TU isOccupied def carries the EDX/EDI/ESI convention
+?getNumNonObserverPlayers@GameInfo@@QBEHXZ,,0x003FF23D,43,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME1 GameNetwork/GameInfo.cpp donor shape with PLAYERTEMPLATE_OBSERVER guard; same TU as getNumPlayers
+?isAI@GameSlot@@QBE_NXZ,,0x003FF127,30,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME2 AI states 2 3 4 5; supersedes pin at same address
+?isOccupied@GameSlot@@QBE_NXZ,,0x003FF0FB,44,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME2 states 6 2 3 4 5 plus occupancy byte; single-return AND keeps the jne tail; supersedes pin
+?getNumOpenOrOccupiedSlots@GameInfo@@QBEHXZ,,0x003FF987,45,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,
+?isObserver@GameSlot@@QBE_NXZ,,0x003FF165,10,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,
