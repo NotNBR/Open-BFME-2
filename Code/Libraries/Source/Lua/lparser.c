@@ -284,7 +284,7 @@ static void ifstat (LexState *ls, int line) {
 }
 
 
-// _assignment present-unmatched
+// _assignment BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static int assignment (LexState *ls, expdesc *v, int nvars) {
   int left = 0;  /* number of values left in the stack after assignment */
   luaX_checklimit(ls, nvars, MAXVARSLH, "variables in a multiple assignment");
