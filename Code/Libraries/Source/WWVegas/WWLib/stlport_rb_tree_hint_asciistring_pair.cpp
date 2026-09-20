@@ -1,4 +1,4 @@
-// cl: /O1 /EHsc /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
+// cl: /O1 /EHsc /D_STLP_NO_EXCEPTIONS /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
 // stlport
 // Semantic donor: reference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib/RvaTreeInsertUniqueHint.cpp.
 // BFME2 uses the established external AsciiString comparator.
@@ -34,3 +34,5 @@ template StringPairTree::iterator StringPairTree::insert_unique(StringPairTree::
 // The map wrapper directly calls this tree's verified hinted insertion.
 typedef _STL::map<AsciiString,AsciiString,_STL::less<AsciiString>,_STL::allocator<StringPair> > MapPairExtra;
 template MapPairExtra::iterator MapPairExtra::insert(MapPairExtra::iterator, const StringPair &);
+
+template StringPairTree::_Rb_tree(const StringPairTree &);
