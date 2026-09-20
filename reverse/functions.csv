@@ -13198,3 +13198,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ?bfmeDelTXA@BfmeThingTXA@@QAEPAXE@Z,,0x001768D0,78,Code/GameEngine/Source/Common/BfmeConv1326.cpp,matched,BFME1 byte-identical donor BfmeConv1326.cpp; b1 0x0084E380; dtor/release callees pinned; free helpers via alias pins
 ?bfmeAllocVLV@@YAPAXI@Z,,0x00029920,152,Code/GameEngine/Source/Common/BfmeConv1421.cpp,matched,BFME1 byte-identical donor; b1 0x0082ECD0; ambiguous 2-cand tiebreak via SmallVLV->0x27A90 vs SmallVLW->0x279A0
 ?bfmeInitVHC@BfmeThingVHC@@QAEPAV1@PAVBfmeMsgVHC@@@Z,,0x00661C90,55,Code/GameEngine/Source/Common/BfmeConv1360.cpp,matched,BFME1 byte-identical donor BfmeConv1360.cpp; b1 0x007F52B0; base/getter callees pinned; QPOS/QLEN key globals agree
+?bfmeAllocVLW@@YAPAXI@Z,,0x00029A80,152,Code/GameEngine/Source/Common/BfmeConv1422.cpp,matched,BFME1 byte-identical donor; b1 0x0082EE30; ambiguous 2-cand tiebreak pair with VLV@29920 via SmallVLW->0x279A0

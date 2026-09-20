@@ -3303,3 +3303,5 @@ __strupr,0x0075B4F0
 ?bfmeFreeTXA@@YAXPAX@Z,0x0002FD60,BFME1 BfmeConv1326 donor call site; same body as rowed scalar delete
 ?bfmeBigVLV@@YAPAXI@Z,0x00023790
 ?bfmeSmallVLV@@YAPAXI@Z,0x00027A90
+?bfmeBigVLW@@YAPAXI@Z,0x00023790
+?bfmeSmallVLW@@YAPAXI@Z,0x000279A0
