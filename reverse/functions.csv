@@ -13121,3 +13121,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeDelVIH@BfmeThingVIH@@QAEPAXI@Z,,0x0068A160,44,Code/GameEngine/Source/Common/BfmeConv1374.cpp,matched,BFME1 donor reconstruction with vptr immediate
 ?Add@?$DynamicVectorClass@VBfmeHandleCX@@@@QAE_NABVBfmeHandleCX@@@Z,,0x0016F8F0,103,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTextures.cpp,matched,placed by masked whole-text search of the compiled body single hit from the read_textures TU
 ?bfmeGoCDE@BfmeThingCDE@@QAEXXZ,,0x0073B220,38,Code/GameEngine/Source/Common/BfmeConv583.cpp,matched,BFME1 donor oneCDE aliased free is scalar delete
+?Add_Texture@MeshLoadContextClass@@QAEHABVBfmeHandleCX@@@Z,,0x0018A350,29,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTextures.cpp,matched,placed by masked whole-text search of the compiled body single hit from the read_textures TU
