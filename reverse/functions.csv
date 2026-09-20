@@ -12935,3 +12935,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva00116E30Get@@YAHXZ,,0x00116E30,6,Code/GameEngine/Source/Common/ConstGlobalGetters.cpp,matched,Opaque global-int getter; A1 plus C3 with no vtable and no callers
 ?Rva00117C30Get@@YAHXZ,,0x00117C30,6,Code/GameEngine/Source/Common/ConstGlobalGetters.cpp,matched,Opaque global-int getter; A1 plus C3 with no vtable and no callers
 ?Rva0011C450Get@@YAHXZ,,0x0011C450,6,Code/GameEngine/Source/Common/ConstGlobalGetters.cpp,matched,Opaque global-int getter; A1 plus C3 with no vtable and no callers
+?Rva0011D200Get@@YAHXZ,,0x0011D200,6,Code/GameEngine/Source/Common/ConstGlobalGetters.cpp,matched,Opaque global-int getter; A1 plus C3 with no vtable and no callers

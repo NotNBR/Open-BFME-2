@@ -54,3 +54,12 @@ int Rva0011C450Get(void)
 {
 	return G009B5F9C;
 }
+
+// ?Rva0011D200Get@@YAHXZ @ 0x0011D200 (6B): returns global at 0x9EDA9C.
+// Follows int3 (prev CC), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+extern int G009EDA9C;
+int Rva0011D200Get(void)
+{
+	return G009EDA9C;
+}
