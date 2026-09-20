@@ -12918,3 +12918,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva0060B883Get@@YAHXZ,,0x0060B883,3,Code/GameEngine/Source/Common/ConstZeroGetters.cpp,matched,33C0C3 zero returner; prev C3 with no vtable and no callers; opaque name
 ?Rva00740A5DGet@@YAHXZ,,0x00740A5D,3,Code/GameEngine/Source/Common/ConstZeroGetters.cpp,matched,33C0C3 zero returner; prev C3 with no vtable and no callers; opaque name
 ?bfmeAttachAlways@Gen009D6E10@@QAEPAV1@PAVBfmePeer@@@Z,,0x0060D565,47,Code/GameEngine/Source/Common/Gen009D90D0.cpp,matched,BFME1 donor Gen009D90D0 with O1 for eax coloring; bfmeReset pinned
+?Rva00021736Get@@YAHXZ,,0x00021736,3,Code/GameEngine/Source/Common/ConstZeroGetters.cpp,matched,33C0C3 zero returner; prev C3 padded CC with no vtable and no callers; opaque name
