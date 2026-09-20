@@ -27,7 +27,7 @@ class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; p
 struct PlayerPosition { unsigned char human,computer,loadAIScripts; int forceTeam; _STL::set<AsciiString> factions; ~PlayerPosition(); };
 // Implicit copy emits the real EH array-copy helper: eight20B records.
 // Callback302CE2 copies three flags/team/map; callback22D920 destroys map+8.
-struct MapPlayers { PlayerPosition items[8]; MapPlayers &operator=(const MapPlayers &); };
+struct MapPlayers { PlayerPosition items[8]; };
 class MapMetaData {
     UnicodeString displayName,description; Region3D extent; int numPlayers;
     unsigned char isMultiplayer,isScenarioMP,isOfficial;
