@@ -36,7 +36,7 @@
  *-------------------------------------------------------------------------* 
  * Functions:                                                              * 
  * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#include "../../../../../reference/shims/bfmesegline/rendobj.h" // independently verified indexed-factor prefix and 0xC4 base size
+#include "../../../../../reference/shims/bfme2renderobj/rendobj.h" // verified 0xC4 base; cached sphere@4C and box@5C
 #include "seglinerenderer.h" // retain independently verified line property identities
 #include "part_buf.h"
 #include "part_emt.h"
@@ -2438,7 +2438,7 @@ NewParticleStruct * ParticleBufferClass::Add_Uninitialized_New_Particle(void)
 }
 
 
-// ?ParticleBufferClass::Update_Cached_Bounding_Volumes present-unmatched
+// ?Update_Cached_Bounding_Volumes@ParticleBufferClass@@MBEXXZ
 void ParticleBufferClass::Update_Cached_Bounding_Volumes(void) const
 {
 	// This ugly cast is done because the alternative is to make everything
