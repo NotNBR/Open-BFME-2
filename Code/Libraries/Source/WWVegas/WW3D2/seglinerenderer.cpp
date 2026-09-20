@@ -191,10 +191,19 @@ void SegLineRendererClass::Init(const W3dEmitterLinePropertiesStruct & props)
 }
 
 
-// ?SegLineRendererClass::Set_Texture present-unmatched
+// ?Set_Texture@SegLineRendererClass@@QAEXPAVTextureClass@@@Z
 void SegLineRendererClass::Set_Texture(TextureClass *texture)
-{ 
-	REF_PTR_SET(Texture,texture); 
+{
+	TextureClass **next = reinterpret_cast<TextureClass **>(texture);
+	if (*next) {
+		(*next)->Add_Ref();
+	}
+	if (Texture) {
+		Texture->Release_Ref();
+		Texture = *next;
+	} else {
+		Texture = *next;
+	}
 }
 
 // ?SegLineRendererClass::Get_Texture present-unmatched
