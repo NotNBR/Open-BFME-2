@@ -13,6 +13,7 @@
 // Unknown BFME2 wordF4 remains opaque; no extra meaning is inferred.
 #include <list>
 #include <map>
+#include <set>
 template<class T> class StringBase { void *m_data; void releaseBuffer(); public: StringBase(const StringBase &); protected: __forceinline ~StringBase() { releaseBuffer(); } };
 class UnicodeString : private StringBase<unsigned short> { public: __forceinline UnicodeString(const UnicodeString &o) : StringBase<unsigned short>(o) {} __forceinline ~UnicodeString() {} };
 class AsciiString : private StringBase<char> { public: __forceinline AsciiString(const AsciiString &o) : StringBase<char>(o) {} __forceinline ~AsciiString() {} };
@@ -21,7 +22,9 @@ struct Region3D { Coord3D lo,hi; Region3D(const Region3D &); };
 typedef _STL::list<Coord3D> Coord3DList;
 namespace _STL { template<> list<Coord3D>::list(const list<Coord3D> &); }
 class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; public: WaypointMap(const WaypointMap &); ~WaypointMap(); };
-struct PlayerPosition { unsigned char human,computer,loadAIScripts; int forceTeam; _STL::map<AsciiString,int> factions; PlayerPosition(const PlayerPosition &); ~PlayerPosition(); };
+// The copy chain301EF6->301A3E->3012B0->2C552 proves a string-only20B node:
+// these faction names form a set, not a map with an unobserved mapped value.
+struct PlayerPosition { unsigned char human,computer,loadAIScripts; int forceTeam; _STL::set<AsciiString> factions; ~PlayerPosition(); };
 // Implicit copy emits the real EH array-copy helper: eight20B records.
 // Callback302CE2 copies three flags/team/map; callback22D920 destroys map+8.
 struct MapPlayers { PlayerPosition items[8]; ~MapPlayers(); };
