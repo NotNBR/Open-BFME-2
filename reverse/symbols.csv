@@ -3269,3 +3269,4 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ?bfmeAskBVG@BfmeOuterBVG@@QAE_NXZ,0x004C0D4F
 ?g_bfmeVJA@@3PAXA,0x00E09ED4
 ?g_bfmeVJB@@3PAXA,0x00E09F64
+?bfmeAskDHA@BfmeOuterDHA@@QAE_NXZ,0x004C0D4F
