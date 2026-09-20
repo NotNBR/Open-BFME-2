@@ -13194,3 +13194,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ?bfmeGo1083A@@YAXXZ,,0x006F3530,76,Code/GameEngine/Source/Common/BfmeConv1083.cpp,matched,BFME1 byte-identical donor BfmeConv1083.cpp; b1 0x008B4E90
 ?bfmeDelTQD@BfmeThingTQD@@QAEPAXE@Z,,0x006587E0,51,Code/GameEngine/Source/Common/BfmeConv1321.cpp,matched,BFME1 byte-identical donor BfmeConv1321.cpp; b1 0x0084E4A0; callees bfmeGetTQD/bfmeFreeTQD pinned
 ?bfmeDelTWB@BfmeThingTWB@@QAEPAXE@Z,,0x006634E0,68,Code/GameEngine/Source/Common/BfmeConv1325.cpp,matched,BFME1 byte-identical donor BfmeConv1325.cpp grafted onto twin DelTWA TU; b1 0x0084E5C0; dtor/drop callees pinned; free via new alias pin
+?messageToName@Eva@@QAE?AVAsciiString@@H@Z,,0x001DEB8A,108,Code/GameEngine/Source/GameClient/EvaMessageName.cpp,matched,BFME2 mod-extended messageToName: static table plus dynamic event-name walk with Unknown fallback; banked first/next pins
