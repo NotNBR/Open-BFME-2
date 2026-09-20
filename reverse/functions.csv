@@ -13455,3 +13455,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?isOccupied@GameSlot@@QBE_NXZ,,0x003FF0FB,44,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameSlot occupied predicate with player AI observer states and occupancy byte
 ?getNumPlayers@GameInfo@@QBEHXZ,,0x003FF218,37,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameInfo player counter with BFME1 GameInfo.cpp shape
 ?getNumNonObserverPlayers@GameInfo@@QBEHXZ,,0x003FF23D,42,Code/GameEngine/Source/GameNetwork/GameInfoNumPlayers.cpp,matched,GameInfo non observer player counter with BFME1 GameInfo.cpp shape
+?isAI@GameSlot@@QBE_NXZ,,0x003FF127,30,Code/GameEngine/Source/GameNetwork/GameSlotIsAI.cpp,matched,GameSlot AI predicate with BFME1 GameInfo.cpp shape over four AI slot states
