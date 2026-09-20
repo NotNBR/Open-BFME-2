@@ -7,6 +7,13 @@
 // followed by copying a pointer and incrementing its non-null pointee at +4.
 // Comparison reaches the established AsciiString operator< at 0x5598C.
 // Semantic donor: BFME1 RvaTreeInsertUniqueHint.cpp and STLport pair/tree.
+// Retail directly default-constructs the mapped handle. Its explicit default
+// constructor initializes the pointer to null; no scalar workaround is needed.
+#include <stl/_prolog.h>
+#include <stl/type_traits.h>
+#undef _STLP_DEFAULT_CONSTRUCTOR_BUG
+#undef _STLP_DEFAULT_CONSTRUCTED
+#define _STLP_DEFAULT_CONSTRUCTED(_TTp) _TTp()
 #include <map>
 class AsciiString { public: AsciiString(const AsciiString &); __forceinline ~AsciiString() { releaseBuffer(); } protected: void releaseBuffer(); private: void *m_data; };
 bool operator<(const AsciiString &, const AsciiString &);
@@ -18,6 +25,7 @@ struct TargetRef00217D4C { virtual void *destroy(unsigned flags); int references
 void __fastcall ReleaseTreeHintRef00217D4C(TargetRef00217D4C *);
 struct TreeHintRef00217D4C {
     TargetRef00217D4C *m_ptr;
+    TreeHintRef00217D4C() : m_ptr(0) {}
     TreeHintRef00217D4C(const TreeHintRef00217D4C &other) : m_ptr(other.m_ptr) {
         if (m_ptr) ++m_ptr->references;
     }
@@ -55,3 +63,5 @@ template TreeHint00217D4C::_Link_type TreeHint00217D4C::_M_lower_bound(const Asc
 template TreeHintPair00217D4C::pair(const AsciiString &, const TreeHintRef00217D4C &);
 
 template void _STL::_Destroy<TreeHintPair00217D4C>(TreeHintPair00217D4C *);
+
+template TreeHintRef00217D4C &MapInsert00218022::operator[](const AsciiString &);
