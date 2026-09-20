@@ -3,6 +3,7 @@
 // Semantic donor: reference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib/RvaTreeInsertUniqueHint.cpp.
 // BFME2 uses the established external AsciiString comparator.
 #include <map>
+#include <set>
 class AsciiString { public: AsciiString(const AsciiString &); ~AsciiString(); private: void *m_data; };
 bool operator<(const AsciiString &, const AsciiString &);
 // Retail _M_create_node 0x0002C552 allocates 20 bytes: 16-byte links + AsciiString.
@@ -32,3 +33,7 @@ StringSetTree::_Link_type StringSetTree::_M_create_node(const AsciiString &value
 }
 
 template StringSetTree::iterator StringSetTree::insert_unique(StringSetTree::iterator, const AsciiString &);
+
+// The map wrapper directly calls this tree's verified hinted insertion.
+typedef _STL::set<AsciiString,_STL::less<AsciiString>,_STL::allocator<AsciiString> > SetExtra;
+template SetExtra::iterator SetExtra::insert(SetExtra::iterator, const AsciiString &);
