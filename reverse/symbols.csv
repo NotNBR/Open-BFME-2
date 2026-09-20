@@ -3281,3 +3281,7 @@ _free,0x00628F98,CRT free import linker thunk (jmp [0xBBA6E8]); RemoveAll@Rva009
 ??0SpecialPowerModuleData@@QAE@ABV0@@Z,0x005488E9,base copy ctor for the 0x18 SpecialPowerModuleData intermediate; address read from retail REL32 at 0x00546B11 in FireWeaponPowerModuleData copy 0x00546B08; same vftable 0xC6A520 as base ctor 0x005488C5 placed immediately before
 ?bfmeCallDQE@BfmeOtherDQE@@QAEXPAX@Z,0x0000EA90
 ?bfmeImplVMU@@YA?AUBfmeItVMU@@U1@0DPAD@Z,0x00025CE0
+?g_bfmeS1082_0@@3PAVBfmeS1082@@A,0x00E1821C
+?g_bfmeS1082_1@@3PAVBfmeS1082@@A,0x00E18220
+?g_bfmeS1082_2@@3PAVBfmeS1082@@A,0x00E18224
+?g_bfmeS1082_3@@3PAVBfmeS1082@@A,0x00E18228
