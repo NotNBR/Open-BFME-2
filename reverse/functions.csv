@@ -13000,3 +13000,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ??0LifetimeUpdateModuleData@@QAE@XZ,,0x003A4A7D,26,Code/GameEngine/Source/GameLogic/Object/Update/LifetimeUpdateModuleDataConstructor.cpp,matched,BFME1 byte-identical donor; vtable immediate repaired to BFME2 0xC4ED70
 ?Rva009AFA60FilterHoriz@@YAXHPAEH@Z,,0x001C0450,563,Code/GameEngine/Source/Common/BfmeLimitedEdgeFilters.cpp,matched,BFME1 byte-identical donor; full-body unique placement (sweep needle fanout is conservative)
 ?Rva009AFEC0FilterHoriz@@YAXHPAEH@Z,,0x001C08B0,563,Code/GameEngine/Source/Common/BfmeLimitedEdgeFilters.cpp,matched,BFME1 byte-identical donor; full-body unique placement
+?Rva009AF840FilterVert@@YAXHPAEH@Z,,0x001C0230,535,Code/GameEngine/Source/Common/BfmeLimitedEdgeFilters.cpp,matched,BFME1 byte-identical donor; cross-placement differs by 1 byte so own placement is unique
