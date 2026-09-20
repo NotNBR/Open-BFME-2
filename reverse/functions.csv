@@ -13123,3 +13123,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeGoCDE@BfmeThingCDE@@QAEXXZ,,0x0073B220,38,Code/GameEngine/Source/Common/BfmeConv583.cpp,matched,BFME1 donor oneCDE aliased free is scalar delete
 ?Add_Texture@MeshLoadContextClass@@QAEHABVBfmeHandleCX@@@Z,,0x0018A350,29,Code/Libraries/Source/WWVegas/WW3D2/MeshModelReadTextures.cpp,matched,placed by masked whole-text search of the compiled body single hit from the read_textures TU
 ?Load_W3D@VertexMaterialClass@@QAE_NAAVChunkLoadClass@@@Z,,0x0013E8B0,274,Code/Libraries/Source/WWVegas/WW3D2/VertexMaterialLoadW3D.cpp,matched,BFME1 vertmaterial port as bool reader with explicit array new delete and String name assign with 2 Parse pins
+??_GMeshModelClass@@UAEPAXI@Z,,0x00172E50,30,Code/Libraries/Source/WWVegas/WW3D2/MeshModelClassDtor.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
