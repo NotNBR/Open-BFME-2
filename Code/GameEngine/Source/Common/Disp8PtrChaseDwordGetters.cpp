@@ -1,0 +1,23 @@
+// Disp8 pointer-chase dword getters: seven-byte __thiscall members with one shape:
+//
+//     mov eax,[ecx+<DISP1>] / mov eax,[eax+<DISP2>] / ret
+//
+// A pointer is read at a fixed displacement from `this`, then a dword is read
+// at a second displacement from that pointer and returned. MSVC 7.1 emits the
+// disp8 loads `8B 41 XX` + `8B 40 XX`, plus `ret`, for seven bytes total.
+// Identity is not recovered: every name is derived from its address.
+// No // cl: line (defaults match the frameless seven-byte shape).
+#define BFME_DISP8_PTRCHASE_DWORD_GETTER(NAME, DISP1, DISP2) \
+	class NAME \
+	{ \
+	public: \
+		int get() const; \
+		char m_lead[DISP1]; \
+		void *m_ptr; \
+	}; \
+	int NAME::get() const \
+	{ \
+		return *(int *)((char *)m_ptr + DISP2); \
+	}
+
+BFME_DISP8_PTRCHASE_DWORD_GETTER(Rva000425C4PtrChaseField, 0x08, 0x18)
