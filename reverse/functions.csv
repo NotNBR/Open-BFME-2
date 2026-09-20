@@ -14105,3 +14105,4 @@ __Locale_tolower,,0x00021B10,291,Code/Libraries/Source/WWVegas/WWLib/stlport_Loc
 ?isHuman@GameSlot@@QBE_NXZ,,0x003FF0F1,10,Code/GameEngine/Source/GameNetwork/GameSlotHumanSaveoff.cpp,matched,BFME1 GameInfo.cpp isHuman verbatim; state@4 vs SLOT_PLAYER
 ?saveOffOriginalInfo@GameSlot@@QAEXXZ,,0x003FF0D4,19,Code/GameEngine/Source/GameNetwork/GameSlotHumanSaveoff.cpp,matched,BFME1 GameInfo.cpp saveOffOriginalInfo minus DEBUG_LOG; orig triple copy
 _Rva0084ECA0,,0x00021E30,61,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084ECA0
+_Rva0084ECE0,,0x00021E70,61,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCodePageQueries.c,matched,vendored=stlport-4.5.3;BFME1 byte-identical donor; b1 0x0084ECE0
