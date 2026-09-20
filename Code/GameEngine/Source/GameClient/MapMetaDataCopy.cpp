@@ -21,7 +21,7 @@ struct Coord3D { float x,y,z; };
 struct Region3D { Coord3D lo,hi; Region3D(const Region3D &); };
 typedef _STL::list<Coord3D> Coord3DList;
 // Instantiate the reference coordinate-list copy and its typed helpers.
-class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; public: WaypointMap(const WaypointMap &); WaypointMap &operator=(const WaypointMap &); };
+class WaypointMap : public _STL::map<AsciiString,Coord3D> { int numStartSpots; public: WaypointMap(const WaypointMap &); };
 // The copy chain301EF6->301A3E->3012B0->2C552 proves a string-only20B node:
 // these faction names form a set, not a map with an unobserved mapped value.
 struct PlayerPosition { unsigned char human,computer,loadAIScripts; int forceTeam; _STL::set<AsciiString> factions; ~PlayerPosition(); };
