@@ -12854,3 +12854,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva005DAFFEGet@@YAHXZ,,0x005DAFFE,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret c76684; prev C2-04-00 with 1 vtable ref and no callers; opaque name
 ?Rva006C75F0Get@@YAHXZ,,0x006C75F0,6,Code/GameEngine/Source/Common/ConstIntGetters4.cpp,matched,B8-6 returner ret ce7d4c; prev C2-04-00 with 1 vtable ref and no callers; opaque name
 ??0Rva003A6360Record@@QAE@ABV0@@Z,,0x0052BB9A,33,Code/GameEngine/Source/Common/Bfme/Rva003A6360CopyCtor.cpp,matched,BFME1 byte-identical donor; b1 0x003A6360; ICF-folded in BFME1 so the name is this sweep pick among its twins
+?rva0080A280@Rva0080A280Owner@@QAEXPAURva0080A280Input@@@Z,,0x00676180,317,Code/GameEngine/Source/GameNetwork/Rva0080A280FeslHandler.cpp,matched,BFME1 donor with 4 FESL string-key constants repointed to BFME2 addresses; b1 0x0080A280
