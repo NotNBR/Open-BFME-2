@@ -13342,3 +13342,4 @@ _marklock,,0x00751290,50,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-iden
 _markall,,0x007512D0,276,Code/Libraries/Source/Lua/lgc.c,matched,BFME1 byte-identical donor Lua 4.0.1 lgc.c; markstack inlines
 _luaK_posfix,,0x00753710,208,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor Lua 4.0.1 lcode.c; pinned callee of _subexpr; exact via explain_mismatch
 _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched,BFME1 donor Lua 4.0.1 luaB_tostring.c; true extent ret-to-pad; jump table plus sprintf import
+?get@Rva002C7229FloatChaseField@@QBEMXZ,,0x002C7229,7,Code/GameEngine/Source/Common/Disp8FloatChaseGetters.cpp,matched,disp8 float-chase getter; opaque holder
