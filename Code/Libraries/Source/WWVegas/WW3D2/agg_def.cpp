@@ -1,5 +1,6 @@
-// cl: /arch:SSE /G7 /DNDEBUG /DWIN32 /D_WINDOWS /MD /EHsc /Ireference/shims/sweep /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/Compression /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngineDevice/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Main /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/Wwutil /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDownload /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/Code/Libraries/Source/Compression /Ireference/shims/sweep
+// cl: /arch:SSE /G7 /DNDEBUG /DWIN32 /D_WINDOWS /MT /EHsc /Ireference/shims/sweep /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngine/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/Compression /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/GameEngineDevice/Include /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/reference/CnC_Generals_Zero_Hour/GeneralsMD/Code/Main /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWLib /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WW3D2 /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWMath /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWSaveLoad /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/Wwutil /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDownload /Ireference/open-bfme-1/Code/Libraries/Source/WWVegas/WWDebug /Ireference/open-bfme-1/Code/Libraries/Source/Compression /Ireference/shims/sweep
 // Ported verbatim from the Generals Zero Hour reference
+// /MT preserves retail's direct free/strdup calls in the assignment operator.
 // (Libraries/Source/WWVegas/WW3D2/agg_def.cpp); this unit had no counterpart under Code/.
 #include "rendobj.h"	// the bfmerendobj shim has to win the include guard
 /*
@@ -119,6 +120,7 @@ AggregateDefClass::AggregateDefClass (RenderObjClass &base_model)
 //
 //	~AggregateDefClass
 //
+// ?AggregateDefClass::~AggregateDefClass present-unmatched
 AggregateDefClass::~AggregateDefClass (void)
 {
 	// Free the name buffer if necessary
@@ -203,6 +205,7 @@ AggregateDefClass::Free_Subobject_List (void)
 //	Create
 //
 RenderObjClass *
+// ?AggregateDefClass::Create present-unmatched
 AggregateDefClass::Create (void)
 {
 	// Attempt to create an instance of the hierarchy
@@ -285,6 +288,7 @@ AggregateDefClass::Find_Subobject
 //	Attach_Subobjects
 //
 void
+// ?AggregateDefClass::Attach_Subobjects present-unmatched
 AggregateDefClass::Attach_Subobjects (RenderObjClass &base_model)
 {
 	// Now loop through all the subobjects and attach them to the appropriate bone
@@ -318,6 +322,7 @@ AggregateDefClass::Attach_Subobjects (RenderObjClass &base_model)
 //	Create_Render_Object
 //
 RenderObjClass *
+// ?AggregateDefClass::Create_Render_Object present-unmatched
 AggregateDefClass::Create_Render_Object (const char *passet_name)
 {
 	// Assume failure
@@ -345,6 +350,7 @@ AggregateDefClass::Create_Render_Object (const char *passet_name)
 //	Load_Assets
 //
 bool
+// ?AggregateDefClass::Load_Assets present-unmatched
 AggregateDefClass::Load_Assets (const char *passet_name)
 {
 	// Assume failure
@@ -382,6 +388,7 @@ AggregateDefClass::Load_Assets (const char *passet_name)
 //	Initialize
 //
 void
+// ?AggregateDefClass::Initialize present-unmatched
 AggregateDefClass::Initialize (RenderObjClass &base_model)
 {
 	// Start with fresh lists
@@ -539,6 +546,7 @@ AggregateDefClass::Is_Object_In_List
 //	Load
 //
 WW3DErrorType
+// ?AggregateDefClass::Load_W3D present-unmatched
 AggregateDefClass::Load_W3D (ChunkLoadClass &chunk_load)
 {
 	W3dTextureReplacerHeaderStruct header = { 0 };
@@ -588,6 +596,7 @@ AggregateDefClass::Load_W3D (ChunkLoadClass &chunk_load)
 //	Read_Header
 //
 WW3DErrorType
+// ?AggregateDefClass::Read_Header present-unmatched
 AggregateDefClass::Read_Header (ChunkLoadClass &chunk_load)
 {
 	// Assume error
@@ -615,6 +624,7 @@ AggregateDefClass::Read_Header (ChunkLoadClass &chunk_load)
 //	Read_Info
 //
 WW3DErrorType
+// ?AggregateDefClass::Read_Info present-unmatched
 AggregateDefClass::Read_Info (ChunkLoadClass &chunk_load)
 {
 	// Assume error
@@ -691,6 +701,7 @@ AggregateDefClass::Add_Subobject (const W3dAggregateSubobjectStruct &subobj_info
 //	Read_Class_Info
 //
 WW3DErrorType
+// ?AggregateDefClass::Read_Class_Info present-unmatched
 AggregateDefClass::Read_Class_Info (ChunkLoadClass &chunk_load)
 {
 	// Assume error
@@ -745,6 +756,7 @@ AggregateDefClass::Save_W3D (ChunkSaveClass &chunk_save)
 //	Save_Header
 //
 WW3DErrorType
+// ?AggregateDefClass::Save_Header present-unmatched
 AggregateDefClass::Save_Header (ChunkSaveClass &chunk_save)
 {
 	// Assume error
@@ -779,6 +791,7 @@ AggregateDefClass::Save_Header (ChunkSaveClass &chunk_save)
 //	Save_Info
 //
 WW3DErrorType
+// ?AggregateDefClass::Save_Info present-unmatched
 AggregateDefClass::Save_Info (ChunkSaveClass &chunk_save)
 {
 	// Assume error
@@ -842,6 +855,7 @@ AggregateDefClass::Save_Subobject
 //	Save_Class_Info
 //
 WW3DErrorType
+// ?AggregateDefClass::Save_Class_Info present-unmatched
 AggregateDefClass::Save_Class_Info (ChunkSaveClass &chunk_save)
 {
 	// Assume error
@@ -871,6 +885,7 @@ AggregateDefClass::Save_Class_Info (ChunkSaveClass &chunk_save)
 //	Load
 //
 PrototypeClass *
+// ?AggregateLoaderClass::Load_W3D present-unmatched
 AggregateLoaderClass::Load_W3D (ChunkLoadClass &chunk_load)
 {
 	// Assume failure
@@ -896,4 +911,3 @@ AggregateLoaderClass::Load_W3D (ChunkLoadClass &chunk_load)
     // Return a pointer to the prototype
 	 return pprototype;
 }
-
