@@ -13191,3 +13191,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ??_GLZHLCompressor@@QAEPAXI@Z,,0x0068ECC0,30,Code/Libraries/Source/Compression/LZHCompress/CompLibSource/LZHLApi.cpp,matched,scalar deleting dtor emitted by TU delete; calls compressor dtor 0x00691080
 ?bfmeRandom@@YAHH@Z,,0x006B89A0,59,Code/GameEngine/Source/Common/Bfme5NinetyOne.cpp,matched,BFME1 byte-identical donor Bfme5NinetyOne.cpp; b1 0x00878800
 ?bfmeFreeZT@BfmeListZT@@QAEXPAUBfmeNodeZT@@@Z,,0x00758AA0,71,Code/GameEngine/Source/Common/BfmeOneHundredSixtyOne.cpp,matched,BFME1 byte-identical donor BfmeOneHundredSixtyOne.cpp; b1 0x009A2400
+?bfmeGo1083A@@YAXXZ,,0x006F3530,76,Code/GameEngine/Source/Common/BfmeConv1083.cpp,matched,BFME1 byte-identical donor BfmeConv1083.cpp; b1 0x008B4E90
