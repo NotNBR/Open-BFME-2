@@ -1,4 +1,4 @@
-// cl: /O1 /EHsc /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
+// cl: /O1 /EHsc /D_STLP_NO_EXCEPTIONS /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
 // stlport
 // BFME2 STLport tree with an AsciiString key and a four-byte opaque mapped value.
 // The application's original mapped-type name is not established.
@@ -41,3 +41,7 @@ template TreeHint001F8ACB::iterator TreeHint001F8ACB::insert_unique(TreeHint001F
 // The map wrapper directly calls this tree's verified hinted insertion.
 typedef _STL::map<AsciiString,TreeHintPayload001F8ACB,_STL::less<AsciiString >,_STL::allocator<TreeHintPair001F8ACB> > MapInsert002c6c93;
 template MapInsert002c6c93::iterator MapInsert002c6c93::insert(MapInsert002c6c93::iterator, const TreeHintPair001F8ACB &);
+
+// Retail node1F8485 is called by clone407DC2, then recursive copy407FF7.
+// These direct calls establish this typed copy family beyond masked shape.
+template TreeHint001F8ACB::_Rb_tree(const TreeHint001F8ACB &);
