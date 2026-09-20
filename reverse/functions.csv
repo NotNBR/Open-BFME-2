@@ -14056,3 +14056,7 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva006F5100Get@@YAHXZ,,0x006F5100,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E18078
 ?Rva006FD2F9Get@@YAHXZ,,0x006FD2F9,6,Code/GameEngine/Source/Common/ColdGlobalDwordGetters.cpp,matched,Global dword getter reading 0x00E18078
 ?buildFieldParse@ChinookAIUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004C1B80,43,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdate/ChinookAIUpdateBuildFieldParse.cpp,matched,BFME2 getter-table plus local-table shape over ZH Rope table; parent via SupplyTruck pin; /O1 for pop-ecx cleanup
+?get@Rva00042F2BMovzxWordField@@QBEIXZ,,0x00042F2B,5,Code/GameEngine/Source/Common/Disp8MovzxFieldGetters.cpp,matched,Disp8 movzx word getter; address-derived opaque holder
+?get@Rva004D5776MovzxWordField@@QBEIXZ,,0x004D5776,5,Code/GameEngine/Source/Common/Disp8MovzxFieldGetters.cpp,matched,Disp8 movzx word getter; address-derived opaque holder
+?get@Rva0012606CMovzxByteField@@QBEIXZ,,0x0012606C,5,Code/GameEngine/Source/Common/Disp8MovzxFieldGetters.cpp,matched,Disp8 movzx byte getter; address-derived opaque holder
+?get@Rva001E3478MovzxByteField@@QBEIXZ,,0x001E3478,5,Code/GameEngine/Source/Common/Disp8MovzxFieldGetters.cpp,matched,Disp8 movzx byte getter; address-derived opaque holder
