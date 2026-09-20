@@ -12859,3 +12859,4 @@ _luaX_lex,,0x00757C90,1324,Code/Libraries/Source/Lua/llex.c,matched,BFME1 byte-i
 ?Rva0004546DGet@@YAHXZ,,0x0004546D,6,Code/GameEngine/Source/Common/ConstIntGetters5.cpp,matched,B8-6 returner ret dbaa98; prev C2-04-00 with no vtable slot and no callers and no branches; opaque name
 ?Rva00062A52Get@@YAHXZ,,0x00062A52,6,Code/GameEngine/Source/Common/ConstIntGetters5.cpp,matched,B8-6 returner ret ffff; prev C2-04-00 with no vtable slot and no callers and no branches; opaque name
 ?Rva001DB686Get@@YAHXZ,,0x001DB686,6,Code/GameEngine/Source/Common/ConstIntGetters5.cpp,matched,B8-6 returner ret c0cd88; prev C2-04-00 with no vtable slot and no callers and no branches; opaque name
+?Rva001DFAA0Get@@YAHXZ,,0x001DFAA0,6,Code/GameEngine/Source/Common/ConstIntGetters5.cpp,matched,B8-6 returner ret bdc720; prev C2-04-00 with no vtable slot and no callers and no branches; opaque name
