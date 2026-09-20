@@ -3421,3 +3421,5 @@ __strupr,0x0075B4F0
 ??0CreateAHeroData@@QAE@ABV0@@Z,0x00409D4D,Complete339-byte copy;vtableC38D88 getter409353 names CreateAHeroData;Snapshot base and140-byte owning layout independently decoded
 ??1CreateAHeroData@@UAE@XZ,0x00409285,Complete206-byte destructor;vtableC38D88 identifies CreateAHeroData;typed member cleanup andSnapshot restoration independently decoded
 ??0BfmeAsciiScalarValue8@@QAE@ABU0@@Z,0x00466EA7,Complete27-byte AsciiString plus scalar copy independently byte-verified; alias of established NoCaseTree pair copy; direct ConstructBBA1A callee
+?get_allocator@?$vector@UBfmeAsciiScalarValue8@@V?$allocator@UBfmeAsciiScalarValue8@@@_STL@@@_STL@@QBE?AV?$allocator@UBfmeAsciiScalarValue8@@@2@XZ,0x0021983A,Complete7-byte allocator getter alias independently byte-verified; direct vector-copy callee
+??0?$_Vector_base@UBfmeAsciiScalarValue8@@V?$allocator@UBfmeAsciiScalarValue8@@@_STL@@@_STL@@QAE@IABV?$allocator@UBfmeAsciiScalarValue8@@@1@@Z,0x000B6378,Established eight-byte vector base; decoded three-pointer layout and count*8 allocation ABI; direct vector-copy callee
