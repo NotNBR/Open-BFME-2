@@ -3409,3 +3409,5 @@ __strupr,0x0075B4F0
 ??$?MDV?$char_traits@D@_STL@@V?$allocator@D@1@@_STL@@YA_NABV?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@0@0@Z,0x00388F39,BFME2 mapped-value tree 0x38d58c; directly verified comparator/iterator or insert-node-construct-copy chain; type and ownership limits documented in source.
 ?_M_compare@?$basic_string@DV?$char_traits@D@_STL@@V?$allocator@D@2@@_STL@@SAHPBD000@Z,0x00024FC0,BFME2 mapped-value tree 0x38d58c; directly verified comparator/iterator or insert-node-construct-copy chain; type and ownership limits documented in source.
 ??0BfmeSubobject0022CE19@@QAE@ABU0@@Z,0x0022CE19,Opaque polymorphic subobject copy: independently audited full216B throughret4 at22CEEE; ECX destination and constsource; vptrBE7560 then string/scalar/nested copies; caller22D106 passesboth+4
+??0BfmeVector0022C55B@@QAE@ABU0@@Z,0x0022C55B,Complete71-byte vector copy;20-byte elements; getter21983A base4FF36C range2DBEFF; destructor22CAC4
+??0BfmeSubobject00229875@@QAE@ABU0@@Z,0x00229875,Complete141-byte polymorphic member copy;vptrBE7460 eight1AC-byte elements and scalar tail; destructor2DC62C
