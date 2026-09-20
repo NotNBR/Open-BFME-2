@@ -3413,3 +3413,5 @@ __strupr,0x0075B4F0
 ??0BfmeSubobject00229875@@QAE@ABU0@@Z,0x00229875,Complete141-byte polymorphic member copy;vptrBE7460 eight1AC-byte elements and scalar tail; destructor2DC62C
 ??1BfmeVector0022C55B@@QAE@XZ,0x0022CAC4,Complete63-byte vector destructor;destroys20-byte range then frees buffer; direct SaveGameInfo member cleanup
 ??1BfmeSubobject00229875@@UAE@XZ,0x002DC62C,Complete67-byte polymorphic destructor;destroys eight1AC-byte elements then restores Snapshot vtable; direct SaveGameInfo member cleanup
+?get_allocator@?$vector@IV?$allocator@I@_STL@@@_STL@@QBE?AV?$allocator@I@2@XZ,0x0021983A,Complete7-byte allocator getter alias independently byte-verified; direct scalar-vector copy callee
+??0?$_Vector_base@IV?$allocator@I@_STL@@@_STL@@QAE@IABV?$allocator@I@1@@Z,0x004F62A4,Direct vector-copy callee; independently decoded58-byte three-pointer base; established ScienceType4-byte allocation and count*4 capacity semantics
