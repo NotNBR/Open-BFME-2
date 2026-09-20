@@ -50,3 +50,7 @@ typedef char SizeCheck[sizeof(MapMetaData)==0x100?1:-1];
 // model; the metadata reference and its coordinate copy chain prove this alias.
 WaypointMap::WaypointMap(const WaypointMap &o)
     : _STL::map<AsciiString,Coord3D>(o), numStartSpots(o.numStartSpots) {}
+
+// Retail faction-tree destruction uses the BFME null-checked header free.
+typedef _STL::_Rb_tree<AsciiString,AsciiString,_STL::_Identity<AsciiString>,_STL::less<AsciiString>,_STL::allocator<AsciiString> > FactionSetTree;
+template FactionSetTree::~_Rb_tree();
