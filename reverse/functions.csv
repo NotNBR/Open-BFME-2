@@ -14014,3 +14014,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?get@Rva0066D620ByteField@@QBEEXZ,,0x0066D620,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ?get@Rva006BD4F0ByteField@@QBEEXZ,,0x006BD4F0,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
 ?get@Rva006CFDB0ByteField@@QBEEXZ,,0x006CFDB0,4,Code/GameEngine/Source/Common/Disp8ByteFieldGetters.cpp,matched,Disp8 byte getter; address-derived opaque holder
+??0?$vector@UPrereqUnitRec@@V?$allocator@UPrereqUnitRec@@@_STL@@@_STL@@QAE@ABV01@@Z,,0x002CFE45,96,Code/GameEngine/Source/Common/Thing/ProductionPrerequisiteRecVectorCopy.cpp,matched,vector<PrereqUnitRec> copy 96B exact via explicit-instantiation TU without NO_EXCEPTIONS; idiv-0x0C count of 12-byte elements; +0x00 member of ProductionPrerequisite per copy ctor at 0x002D08DA
