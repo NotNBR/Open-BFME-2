@@ -176,3 +176,12 @@ void XferSlotState(Xfer *xfer, SlotState *state)
 {
 	xfer->XferEnum("SlotState", state, 4);
 }
+
+// ?XferLivingWorldPlayerID@@YAXPAVXfer@@PAH@Z
+// Retail 0x002034C4 (24B): shared helper used by 19 callers (team, player
+// and slot xfer methods), moving a 4-byte Living World player ID through
+// XferEnum with the "LivingWorldPlayerID" label.
+void XferLivingWorldPlayerID(Xfer *xfer, int *playerID)
+{
+	xfer->XferEnum("LivingWorldPlayerID", playerID, 4);
+}
