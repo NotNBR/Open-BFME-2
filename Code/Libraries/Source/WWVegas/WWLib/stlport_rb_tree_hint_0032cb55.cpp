@@ -13,6 +13,9 @@ bool operator<(const TreeKey00206BCF &a,const TreeKey00206BCF &b) { return (a.fi
 struct TreeOpaqueMapped0032CB55 { unsigned int m_bits; ~TreeOpaqueMapped0032CB55(); };
 typedef _STL::pair<const TreeKey00206BCF,TreeOpaqueMapped0032CB55> TreePair0032CB55;
 typedef _STL::_Rb_tree<TreeKey00206BCF,TreePair0032CB55,_STL::_Select1st<TreePair0032CB55>,_STL::less<TreeKey00206BCF>,_STL::allocator<TreePair0032CB55> > Tree0032CB55;
+namespace _STL { template <> class allocator<char> { public: static char *allocate(unsigned int bytes,const void *hint); }; }
+// ?_M_create_node@?$_Rb_tree@U?$pair@VAsciiString@@V1@@_STL@@U?$pair@$$CBU?$pair@VAsciiString@@V1@@_STL@@UTreeOpaqueMapped0032CB55@@@2@U?$_Select1st@U?$pair@$$CBU?$pair@VAsciiString@@V1@@_STL@@UTreeOpaqueMapped0032CB55@@@_STL@@@2@U?$less@U?$pair@VAsciiString@@V1@@_STL@@@2@V?$allocator@U?$pair@$$CBU?$pair@VAsciiString@@V1@@_STL@@UTreeOpaqueMapped0032CB55@@@_STL@@@2@@_STL@@IAEPAU?$_Rb_tree_node@U?$pair@$$CBU?$pair@VAsciiString@@V1@@_STL@@UTreeOpaqueMapped0032CB55@@@_STL@@@2@ABU?$pair@$$CBU?$pair@VAsciiString@@V1@@_STL@@UTreeOpaqueMapped0032CB55@@@2@@Z
+template <> Tree0032CB55::_Link_type Tree0032CB55::_M_create_node(const TreePair0032CB55 &value) { _Link_type node=(_Link_type)_STL::allocator<char>::allocate(sizeof(_STL::_Rb_tree_node<TreePair0032CB55>),0); _STL::_Construct(&node->_M_value_field,value); return node; }
 template Tree0032CB55::iterator Tree0032CB55::insert_unique(Tree0032CB55::iterator,const TreePair0032CB55 &);
 
 
