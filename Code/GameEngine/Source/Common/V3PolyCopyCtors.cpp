@@ -275,3 +275,30 @@ Rva004F5FD8::Rva004F5FD8(const Rva004F5FD8 &other)
 	m_field24 = other.m_field24;
 	m_field28 = other.m_field28;
 }
+
+// ------------------------------------------- vptr + six ints (retail 0x0020E449)
+// B2 body-address name: straight six-dword run +0x04..+0x18. Two retail E8
+// callers at 0x0020F399 and 0x004FF2B4.
+class Rva0020E449
+{
+public:
+	Rva0020E449(const Rva0020E449 &other);
+	virtual ~Rva0020E449();
+
+	Int m_field04;
+	Int m_field08;
+	Int m_field0C;
+	Int m_field10;
+	Int m_field14;
+	Int m_field18;
+};
+
+Rva0020E449::Rva0020E449(const Rva0020E449 &other)
+{
+	m_field04 = other.m_field04;
+	m_field08 = other.m_field08;
+	m_field0C = other.m_field0C;
+	m_field10 = other.m_field10;
+	m_field14 = other.m_field14;
+	m_field18 = other.m_field18;
+}
