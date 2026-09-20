@@ -13044,3 +13044,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?Rva008A3DC0@@YAPBUR4Word@@PBDI@Z,,0x006E7C80,273,Code/GameEngine/Source/Common/R4PerfectHashWithOverflow.cpp,matched,BFME1 byte-identical donor
 ?setAddressRemapping@Rva007F45E0Aries@@QAEXPBD@Z,,0x00661090,271,Code/GameEngine/Source/GameNetwork/Rva007F45E0AriesAddressRemapping.cpp,matched,BFME1 byte-identical donor; new pin _Rva007FFC10 0x66C0E0
 ?rva007FA790@Rva007FA6C0@@QAEHI@Z,,0x00666CC0,266,Code/GameEngine/Source/GameNetwork/Rva007FA790Fesl.cpp,matched,BFME1 byte-identical donor
+?rva007FA4D0@Rva007FA2C0@@QAEXPAVRva007FA5E0Arg@@PAX1I@Z,,0x00666A20,257,Code/GameEngine/Source/GameNetwork/Rva007FA4D0Request.cpp,matched,BFME1 byte-identical donor
