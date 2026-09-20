@@ -33,3 +33,6 @@ template Tree0038D58C::_Link_type Tree0038D58C::_M_lower_bound(const _STL::basic
 
 
 template TreePayload0038D58C &MapInsert0038d58c::operator[](const _STL::basic_string<char> &);
+
+// Retail0x389291 uses the independently matched narrow-string comparator388F39 twice.
+template Tree0038D58C::iterator Tree0038D58C::find(const _STL::basic_string<char> &);
