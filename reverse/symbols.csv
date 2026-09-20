@@ -3420,3 +3420,4 @@ __strupr,0x0075B4F0
 ??__C@YGXPAX0IHP6EX00@ZP6EX0@Z@Z,0x006299C4,Decoded MSVC EH array-copy iterator;destination source stride count copy and destructor callbacks;ret18 ABI
 ??0CreateAHeroData@@QAE@ABV0@@Z,0x00409D4D,Complete339-byte copy;vtableC38D88 getter409353 names CreateAHeroData;Snapshot base and140-byte owning layout independently decoded
 ??1CreateAHeroData@@UAE@XZ,0x00409285,Complete206-byte destructor;vtableC38D88 identifies CreateAHeroData;typed member cleanup andSnapshot restoration independently decoded
+??0BfmeAsciiScalarValue8@@QAE@ABU0@@Z,0x00466EA7,Complete27-byte AsciiString plus scalar copy independently byte-verified; alias of established NoCaseTree pair copy; direct ConstructBBA1A callee
