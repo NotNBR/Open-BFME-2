@@ -14086,3 +14086,4 @@ __Locale_tolower,,0x00021B10,291,Code/Libraries/Source/WWVegas/WWLib/stlport_Loc
 ?_M_bump_up@_Bit_iterator_base@_STL@@QAEXXZ,,0x000660C9,22,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_bool_copy.cpp,matched,vendored=stlport-4.5.3;bit-iterator bump-up placed from bool-copy TU
 ??D?$_Bit_iter@_NPB_N@_STL@@QBE_NXZ,,0x00068DEE,21,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_bool_copy.cpp,matched,vendored=stlport-4.5.3;const bit-iterator deref placed from bool-copy TU
 ??D?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@_STL@@QBE?AU_Bit_reference@1@XZ,,0x00068DD6,24,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_bool_copy.cpp,matched,vendored=stlport-4.5.3;bit-iterator deref placed from bool-copy TU
+??4_Bit_reference@_STL@@QAEAAU01@_N@Z,,0x00066099,25,Code/Libraries/Source/WWVegas/WWLib/stlport_vector_bool_copy.cpp,matched,vendored=stlport-4.5.3;bit-reference assign placed from bool-copy TU
