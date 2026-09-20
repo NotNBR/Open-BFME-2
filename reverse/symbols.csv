@@ -3507,3 +3507,4 @@ dup_7e86b0,0x00655770
 _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from the retail REL32 in Rva0084ECA0 at 0x00021E68 and Rva0084ECE0 at 0x00021EA8; donor name from BFME1 LocaleCodePageQueries
 ?realMapPathToPortableMapPath@GameState@@QBE?AVAsciiString@@ABV2@@Z,0x002DC833,GameState save-path converter per BFME1 XferMapName donor; address read from the REL32 call site in placed xferMapName at 0x00306327
 ?portableMapPathToRealMapPath@GameState@@QBE?AVAsciiString@@ABV2@@Z,0x002DC9F7,GameState save-path converter per BFME1 XferMapName donor; address read from the REL32 call site in placed xferMapName at 0x00306327
+?recenterTurret@TurretAI@@QAEXXZ,0x004D8298,address read from the retail REL32 at 0x0026267B in AIUpdateInterface::recenterTurret; 11B delegate matching TurretAI::recenterTurret
