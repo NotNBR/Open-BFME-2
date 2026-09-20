@@ -13095,3 +13095,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GRva005D8883@@UAEPAXI@Z,,0x005D888E,28,Code/GameEngine/Source/Common/Rva005D8964Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??_GRva005D9D5A@@UAEPAXI@Z,,0x005D9D65,28,Code/GameEngine/Source/Common/Rva005D9DC1Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ??_GRva005D99BD@@UAEPAXI@Z,,0x005D99C8,28,Code/GameEngine/Source/Common/Rva005D9DC1Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
+?bfmeGoVJI@BfmeThingVJI@@QAEXPAVBfmeMsgVJI@@@Z,,0x0066FAE0,182,Code/GameEngine/Source/Common/BfmeConv1386.cpp,matched,BFME1 donor noteVJI aliased to rowed bfmeGoBLF body
