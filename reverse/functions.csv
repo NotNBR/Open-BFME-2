@@ -13054,3 +13054,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??0_bstr_t@@QAE@PBD@Z,,0x00176CD0,129,Code/GameEngine/Source/GameNetwork/WOLBrowser/Bstr_t_ctor.cpp,matched,BFME1 byte-identical donor; COM helper pins added
 ?bfmeRFindV41@@YGHPADII@Z,,0x00027740,240,Code/GameEngine/Source/Common/BfmeConv1483.cpp,matched,BFME1 byte-identical donor
 ?bfmeRFindChV42@@YGHDI@Z,,0x000278A0,241,Code/GameEngine/Source/Common/BfmeConv1484.cpp,matched,BFME1 byte-identical donor
+?bfmeRFindChV40@@YGHDI@Z,,0x000275C0,235,Code/GameEngine/Source/Common/BfmeConv1481.cpp,matched,BFME1 byte-identical donor
