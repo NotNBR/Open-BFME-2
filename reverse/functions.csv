@@ -13176,3 +13176,4 @@ _Rva009BD750Vp6FilterWide,,0x001CE050,2596,Code/GameEngine/Source/Common/BfmeCon
 _Rva009BE180Vp6FilterWideV2,,0x001CEA80,2608,Code/GameEngine/Source/Common/BfmeConv9BE180.cpp,matched,BFME1 byte-identical donor; b1 0x009BE180
 ?GadgetListBoxGetTopVisibleEntry@@YAHPAVGameWindow@@@Z,,0x00324860,27,Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp,matched,BFME1 donor b1 0x004B78B0 with 1B ABI repair mov edx-eax to mov ecx-eax; tail worker pinned at 0x323F78; file order bottom-IsFull-top mirrors donor
 _Rva009C2320Vp6FilterDiag4,,0x001D2C20,764,Code/GameEngine/Source/Common/BfmeConv9C2320.cpp,matched,BFME1 byte-identical donor; b1 0x009C2320; twin of Rva009C2620 at 0x001D2F20
+?test@Rva004104F0@@QAE_NI@Z,,0x000788C0,19,Code/GameEngine/Source/Common/Rva004104F0Test.cpp,matched,BFME1 donor b1 0x004104F0 verbatim; twin placement inside Inverse_Rotate_Vector eliminated
