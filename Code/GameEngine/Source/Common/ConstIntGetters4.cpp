@@ -1967,3 +1967,11 @@ int Rva004EF417Get(void)
 {
 	return 0x00c62b64;
 }
+
+// ?Rva004F05BAGet@@YAHXZ @ 0x004f05ba (6B): returns 0x00c62e34.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva004F05BAGet(void)
+{
+	return 0x00c62e34;
+}
