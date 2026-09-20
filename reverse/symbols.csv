@@ -3328,3 +3328,7 @@ _luaK_number,0x00752810,address read from the REL32 call at 0x00755698 in the _s
 _pushclosure,0x00753FF0,address read from the REL32 call at 0x00754D14 in the _body body; Lua 4.0.1 lparser.c static
 _luaK_posfix,0x00753710,address read from the REL32 call at 0x00755988 in the _subexpr body; Lua 4.0.1 lcode.c
 ?Init@DX8Wrapper@@SA_NPAX_N@Z,0x00125620,address read from the REL32 call at 0x0011806B in retail WW3D::Init 0x00118040; donor callee
+_marktagmethods,0x00750C20,address read from the REL32 call at 0x007512F3 in the _markall body; Lua 4.0.1 lgc.c static
+_markobject,0x00750C90,address read from the REL32 call at 0x0075130A in the _markall body; Lua 4.0.1 lgc.c static
+_marklock,0x00751290,address read from the REL32 call at 0x0075131E in the _markall body; Lua 4.0.1 lgc.c static
+_protomark,0x00750B50,address read from the self-recursion REL32 at 0x00750BA9 and the _markobject calls; Lua 4.0.1 lgc.c static
