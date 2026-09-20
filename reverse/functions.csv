@@ -13073,3 +13073,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ??_GRva000CA119@@UAEPAXI@Z,,0x000CA1B7,28,Code/GameEngine/Source/Common/Rva000C79C9Derived.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
 ?releaseCodecState@@YAXPAPAUCodecState@@@Z,,0x001B56A0,66,Code/GameEngine/Source/Common/CodecStateRelease.cpp,matched,BFME1 donor with free helper named bfmeTwoBZB per 0x1B6410 pin
 ??_GBfmeNonRefSceneList@@UAEPAXI@Z,,0x001417E0,30,Code/Libraries/Source/WWVegas/WW3D2/BfmeNonRefSceneList_dtor.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
+??_GRva00166DE0@@UAEPAXI@Z,,0x00167640,30,Code/Libraries/Source/WWVegas/WW3D2/RenderObjClassDerivedDtors.cpp,matched,scalar deleting dtor; constrained ??_G harvest FULLMATCH
