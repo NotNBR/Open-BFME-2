@@ -78,3 +78,22 @@ struct BfmeContainerRecord002CF46E {
 };
 BfmeContainerRecord002CF46E::BfmeContainerRecord002CF46E(const BfmeContainerRecord002CF46E &o) : storage(o.storage), text(o.text), word8(o.word8) {}
 template void _STL::_Construct<BfmeContainerRecord002CF46E,BfmeContainerRecord002CF46E>(BfmeContainerRecord002CF46E*,const BfmeContainerRecord002CF46E&);
+
+#include <vector>
+struct BfmeAsciiScalarValue8 {
+    AsciiString text; unsigned int value;
+    BfmeAsciiScalarValue8(const BfmeAsciiScalarValue8 &o) : text(o.text), value(o.value) {}
+};
+// Complete retail copy has three scalars before the owning eight-byte-element
+// vector, then two established WeaponTemplateSetHead storage members.
+struct BfmeContainerRecord000C0B85 {
+    AsciiString text;
+    unsigned int word04, word08, word0C;
+    _STL::vector<BfmeAsciiScalarValue8> values10;
+    WeaponTemplateSetHead head1C, head68;
+    BfmeContainerRecord000C0B85(const BfmeContainerRecord000C0B85 &o);
+};
+BfmeContainerRecord000C0B85::BfmeContainerRecord000C0B85(const BfmeContainerRecord000C0B85 &o)
+    : text(o.text), word04(o.word04), word08(o.word08), word0C(o.word0C),
+      values10(o.values10), head1C(o.head1C), head68(o.head68) {}
+template void _STL::_Construct<BfmeContainerRecord000C0B85,BfmeContainerRecord000C0B85>(BfmeContainerRecord000C0B85*,const BfmeContainerRecord000C0B85&);
