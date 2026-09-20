@@ -13252,3 +13252,4 @@ _subexpr,,0x007558A0,261,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-
 ?get@Rva00030D00MaskedDwordField@@QBEHXZ,,0x00030D00,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
 ?get@Rva00742EC0MaskedDwordField@@QBEHXZ,,0x00742EC0,7,Code/GameEngine/Source/Common/Disp8MaskedDwordFieldGetters.cpp,matched,disp8 masked dword getter; opaque holder
 ?get@Rva00625BA0SubDwordField@@QBEHXZ,,0x00625BA0,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
+?get@Rva006BD4C0SubDwordField@@QBEHXZ,,0x006BD4C0,7,Code/GameEngine/Source/Common/Disp8SubDwordFieldGetters.cpp,matched,disp8 sub dword getter; opaque holder
