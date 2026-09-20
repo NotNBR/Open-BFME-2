@@ -810,7 +810,7 @@ static void namestat (LexState *ls) {
 }
 
 
-// _stat present-unmatched
+// _stat BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
 static int stat (LexState *ls) {
   int line = ls->linenumber;  /* may be needed for error messages */
   switch (ls->t.token) {
