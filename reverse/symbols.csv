@@ -3333,3 +3333,4 @@ _markobject,0x00750C90,address read from the REL32 call at 0x0075130A in the _ma
 _marklock,0x00751290,address read from the REL32 call at 0x0075131E in the _markall body; Lua 4.0.1 lgc.c static
 _protomark,0x00750B50,address read from the self-recursion REL32 at 0x00750BA9 and the _markobject calls; Lua 4.0.1 lgc.c static
 ?assign@Rva00332217Vec@@QAEXABV1@@Z,0x00332217,opaque 12-byte-element vector assign called by Rva002E9E70 copy-ctor at 0x3372EC; true element type and name unknown so address-derived
+?rva00832100Release@_STL@@YAXXZ,0x000070E0
