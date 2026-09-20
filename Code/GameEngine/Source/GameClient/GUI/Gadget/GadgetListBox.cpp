@@ -117,3 +117,24 @@ Int GadgetSliderGetEnabledSelectedThumbBorderColor(GameWindow *slider)
 
 	return 0x00FFFFFF;
 }
+
+// ?GadgetListBoxGetTopVisibleEntry@@YAHPAVGameWindow@@@Z, retail 0x00324860 (27B).
+// Ported from Open-BFME-1 Code/GameEngine/Source/GameClient/GUI/Gadget/GadgetListBox.cpp
+// (BFME1 0x004B7930). Retail passes the entry worker its argument in ecx, so
+// the donor's mov edx,eax tail is a mov ecx,eax here and the worker is
+// declared fastcall; the worker at 0x00323F78 is BFME2's top-entry scan.
+struct _ListboxData;
+typedef struct _ListboxData ListboxData;
+int __fastcall Rva0032378(ListboxData *listData);
+
+Int GadgetListBoxGetTopVisibleEntry(GameWindow *window)
+{
+	if (!window)
+		return 0;
+
+	ListboxData *listData = (ListboxData *)window->winGetUserData();
+	if (!listData)
+		return 0;
+
+	return Rva0032378(listData);
+}
