@@ -13224,3 +13224,4 @@ _adjust_mult_assign,,0x00753EC0,82,Code/Libraries/Source/Lua/lparser.c,matched,B
 ?deallocate@?$__debug_alloc@V?$__node_alloc@$0A@$0A@@_STL@@@_STL@@SAXPAXI@Z,,0x00029B20,177,Code/Libraries/Source/WWVegas/WWLib/STLDebugNodeAllocDeallocate.cpp,matched,object-symbol=_bfme_DebugNodeAllocDeallocate_82EED0;BFME1 byte-identical donor; b1 0x0082EED0
 ??1DebugIOCon@@UAE@XZ,,0x00040860,85,Code/Libraries/Source/debug/DebugIOConDestructorThunk.cpp,matched,BFME1 readable donor; b1 0x00890210; Con-adjacency plus Net/Cmd rowed elsewhere
 ?DEREncode@?$Int@$0EA@@@QBEHPAE@Z,,0x00615C90,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,BFME1 byte-identical donor; b1 0x009E9CF0; ambiguous 2-cand tiebreak pair
+?DERDecode@?$Int@$0EA@@@QAEXPBE@Z,,0x0061DCF0,19,Code/Libraries/Source/WWVegas/WWLib/pk.cpp,matched,BFME1 byte-identical donor; b1 0x009E9E50; ambiguous 2-cand tiebreak pair with DEREncode@615C90
