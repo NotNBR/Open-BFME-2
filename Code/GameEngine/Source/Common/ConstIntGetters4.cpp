@@ -583,3 +583,11 @@ int Rva003B00D0Get(void)
 {
 	return 0x00C1D930;
 }
+
+// ?Rva003B014CGet@@YAHXZ @ 0x003b014c (6B): returns 0x00C1D990.
+// Follows a ret-4 (prev C2-04-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva003B014CGet(void)
+{
+	return 0x00C1D990;
+}
