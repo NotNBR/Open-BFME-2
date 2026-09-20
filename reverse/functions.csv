@@ -13154,3 +13154,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?bfmeGoBVG@BfmeThingBVG@@QAEHXZ,,0x004C0F92,35,Code/GameEngine/Source/Common/BfmeConv540.cpp,matched,BFME1 donor verbatim; head 0xD0 to 0xF0 per retail; ask pin 0x4C0D4F; tail jmp slot 17
 ?bfmeGoSA@BfmeHostSA@@QAEXPAVBfmeThingSA@@@Z,,0x0066F7E0,55,Code/GameEngine/Source/Common/BfmeConv1287.cpp,matched,BFME1 byte-identical donor; b1 0x008037A0; callee tiebreak over 0x0066F820 via unique bfmeUseSA sink
 ??0?$pair@$$CBVUnicodeString@@_N@_STL@@QAE@ABU01@@Z,,0x00387D03,27,Code/GameEngine/Source/GameClient/LanguageFilter.cpp,matched,callee tiebreak over pair AsciiString-char at 0x5117F6 which calls the narrow copy ctor
+?bfmeGoVJA@@YGXPAVBfmeMsgVJA@@PAXPAPAXHH@Z,,0x006565F0,174,Code/GameEngine/Source/Common/BfmeConv1381.cpp,matched,BFME1 byte-identical donor; b1 0x007E9600; ambiguous tiebreak: VJA-first order + 0x90 global spacing in both images
