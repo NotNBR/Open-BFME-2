@@ -1,3 +1,4 @@
+// cl: /O1 /EHsc /MD
 // ?bfmeGoEBC@BfmeThingEBC@@QAEXPAX@Z, retail 0x00460A85 (19B) and
 // ?bfmeGoEBD@BfmeThingEBD@@QAEXXZ, retail 0x003862CA (17B). Ported from
 // Open-BFME-1 Code/GameEngine/Source/Common/BfmeConv802.cpp (BFME1 0x001F8660
@@ -26,20 +27,53 @@ void BfmeThingEBC::bfmeGoEBC(void *unused)
 	m_bfmeFlag = 1;
 }
 
+// Reference algorithm: STLport4.5.3 stl/_tree.c::_M_erase and _tree.h::clear.
+// This subobject is independently anchored by bfmeGoEBD at3862CA: it passes
+// this+18 to clear383EEA, which passes header->parent to erase383A95.
+// Keep the donor's opaque application identity; the actual key/value names
+// are not established. Node links are proven by both recursive traversal and
+// clear's root/extreme resets, not by the shared byte shape alone.
+struct BfmeNodeEBD
+{
+	unsigned int color;
+	BfmeNodeEBD *parent, *left, *right;
+};
+
+// Declaration-only view, never sized or instantiated. Destructor382879 is
+// independently reached by scalar-deleting destructor382B47 and the value
+// cleanup wrapper383415. It adjusts +4 to mapped-value dtor38240F; pair
+// constructor3829E5 constructs that same mapped subobject at +4.
+class BfmeNodeValueEBD { public: ~BfmeNodeValueEBD(); };
+extern "C" void __cdecl free(void *);
+
 class BfmeSubEBD
 {
 public:
 	void bfmeCallEBD();
+	void bfmeEraseSubtree(BfmeNodeEBD *node);
+private:
+	BfmeNodeEBD *m_header;
+	unsigned int m_nodeCount;
 };
+
+void BfmeSubEBD::bfmeEraseSubtree(BfmeNodeEBD *node)
+{
+	while (node) {
+		bfmeEraseSubtree(node->right);
+		BfmeNodeEBD *left = node->left;
+		reinterpret_cast<BfmeNodeValueEBD *>(node + 1)->~BfmeNodeValueEBD();
+		free(node);
+		node = left;
+	}
+}
 
 struct BfmeThingEBD
 {
 	void bfmeGoEBD();
 	unsigned char m_bfmeHead[0x18];
 	BfmeSubEBD m_bfmeSub;
-	// Retail seats the flag at +0x6C, four bytes past the donor's +0x68
-	// (empty sub + 0x4F pad); the filler absorbs the drift here.
-	unsigned char m_bfmePad[0x53];
+	// The recovered tree occupies eight bytes. Preserve the verified flag+6C.
+	unsigned char m_bfmePad[0x4c];
 	char m_bfmeFlag;
 };
 
