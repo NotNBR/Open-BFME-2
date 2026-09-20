@@ -13237,3 +13237,4 @@ _ifstat,,0x00755D80,267,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-i
 _namestat,,0x00755E90,99,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; check_condition inlines to a direct luaK_error call
 _stat,,0x00755F00,513,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; jump table free dispatch over statement tokens
 _luaK_number,,0x00752810,349,Code/Libraries/Source/Lua/lcode.c,matched,BFME1 byte-identical donor Lua 4.0.1 lcode.c; pinned callee of _simpleexp
+_simpleexp,,0x00755650,581,Code/Libraries/Source/Lua/lparser.c,matched,BFME1 byte-identical donor Lua 4.0.1 lparser.c; expr inlines to a direct subexpr call

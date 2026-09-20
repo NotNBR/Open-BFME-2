@@ -84,6 +84,7 @@ static void block (LexState *ls);
 static void cond (LexState *ls, expdesc *v);
 static void var_or_func (LexState *ls, expdesc *v);
 static void forstat (LexState *ls, int line);
+static void constructor (LexState *ls);
 
 
 static void next (LexState *ls) {
@@ -746,6 +747,65 @@ static void exp1 (LexState *ls) {
 }
 
 
+// _simpleexp BFME1 byte-identical donor (Lua 4.0.1 lparser.c; expr inlines to a direct subexpr call)
+static void simpleexp (LexState *ls, expdesc *v) {
+  FuncState *fs = ls->fs;
+  switch (ls->t.token) {
+    case TK_NUMBER: {  /* simpleexp -> NUMBER */
+      Number r = ls->t.seminfo.r;
+      next(ls);
+      luaK_number(fs, r);
+      break;
+    }
+    case TK_STRING: {  /* simpleexp -> STRING */
+      code_string(ls, ls->t.seminfo.ts);  /* must use `seminfo' before `next' */
+      next(ls);
+      break;
+    }
+    case TK_TRUE: {  /* simpleexp -> `true' */
+      next(ls);
+      codepushbool(fs, 1);
+      break;
+    }
+    case TK_FALSE: {  /* simpleexp -> `false' */
+      next(ls);
+      codepushbool(fs, 0);
+      break;
+    }
+    case TK_NIL: {  /* simpleexp -> NIL */
+      luaK_adjuststack(fs, -1);
+      next(ls);
+      break;
+    }
+    case '{': {  /* simpleexp -> constructor */
+      constructor(ls);
+      break;
+    }
+    case TK_FUNCTION: {  /* simpleexp -> FUNCTION body */
+      next(ls);
+      body(ls, 0, ls->linenumber);
+      break;
+    }
+    case '(': {  /* simpleexp -> '(' expr ')' */
+      next(ls);
+      expr(ls, v);
+      check(ls, ')');
+      return;
+    }
+    case TK_NAME: case '%': {
+      var_or_func(ls, v);
+      return;
+    }
+    default: {
+      luaK_error(ls, "<expression> expected");
+      return;
+    }
+  }
+  v->k = VEXP;
+  v->u.l.t = v->u.l.f = NO_JUMP;
+}
+
+
 static int block_follow (int token) {
   switch (token) {
     case TK_ELSE: case TK_ELSEIF: case TK_END:
@@ -1043,4 +1103,5 @@ void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd
   localstat(ls);
   adjust_mult_assign(ls, 0, 0);
   stat(ls);
+  { expdesc anchor_v; simpleexp(ls, &anchor_v); }
 }
