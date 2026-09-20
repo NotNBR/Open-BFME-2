@@ -66,3 +66,11 @@ void __stdcall bfmeGoEBKb(BfmeObjEBK *o, void *b)
 {
 	o->bfmeTwoEBK(g_bfmeXEBK, b);
 }
+
+// ?bfmeGoEBKa@@YGXPAVBfmeObjEBK@@@Z, retail 0x006694E0 (20B).
+// Same-donor sister of EBKb above: one-arg stdcall forwarding
+// (g_bfmeXEBK, 0) through the pinned bfmeOneEBK at 0x00655990.
+void __stdcall bfmeGoEBKa(BfmeObjEBK *o)
+{
+	o->bfmeOneEBK(g_bfmeXEBK, 0);
+}
