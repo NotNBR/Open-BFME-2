@@ -281,34 +281,6 @@ ParticleEmitterDefClass::Set_Creation_Volume (Vector3Randomizer *randomizer)
 
 ///////////////////////////////////////////////////////////////////////////////////
 //
-//	Set_User_String
-//
-void							
-// ?Set_User_String@ParticleEmitterDefClass@@ present-unmatched
-ParticleEmitterDefClass::Set_User_String (const char *pstring)		
-{ 
-	SAFE_FREE (m_pUserString); 
-	m_pUserString = ::_strdup (pstring); 
-	return ;
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////
-//
-//	Set_Name
-//
-void							
-// ?Set_Name@ParticleEmitterDefClass@@ present-unmatched
-ParticleEmitterDefClass::Set_Name (const char *pname)			
-{ 
-	SAFE_FREE (m_pName); 
-	m_pName = ::_strdup (pname); 
-	return ;
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////
-//
 //	Set_Texture_Filename
 //
 void							
