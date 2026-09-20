@@ -13210,3 +13210,4 @@ _ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/Ga
 ?spin@LockClass@FastCriticalSectionClass@@CIXPAX@Z,,0x006C5EF0,67,Code/Libraries/Source/WWVegas/WWLib/FastCriticalSectionSpin.cpp,matched,BFME1 FastCriticalSectionSpin donor with WaitForSingleObject event yield; b1 0x006D10E0; string-domain spin
 ?bfmeSetupPair_007F26A0@@YGXPAUBfmeSetupRecord@@H@Z,,0x0065F190,61,Code/GameEngine/Source/Common/Bfme5SetupPairs.cpp,matched,BFME1 byte-identical donor; b1 0x007F26A0; ambiguous 3-cand tiebreak via WriteAlt->0x655960 vs 0x660070/0x6602F0
 ?invoke@Open2381C0Impl@@QAEXHPAX0@Z,,0x000172A0,35,Code/Libraries/Source/STLport/Open2381C0Impl_invoke.cpp,matched,BFME1 byte-identical donor; b1 0x00840F00; ambiguous 2-cand tiebreak via __find_if->0x16F20 vs 0x16EA0
+??1VideoPlayer@@UAE@XZ,,0x00689350,35,Code/GameEngine/Source/GameClient/VideoPlayerDestructorThunk.cpp,matched,BFME1 readable donor body; b1 0x0088A410; base dtor present-unmatched
