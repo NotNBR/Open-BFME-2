@@ -2015,3 +2015,11 @@ int Rva0051AEE3Get(void)
 {
 	return 0x006d205f;
 }
+
+// ?Rva005206DCGet@@YAHXZ @ 0x005206dc (6B): returns 0x006d2147.
+// Follows a ret-12 (prev C2-0C-00), carried by 1 .rdata vtable slot,
+// no direct callers, no branch sources. Opaque address-derived name.
+int Rva005206DCGet(void)
+{
+	return 0x006d2147;
+}
