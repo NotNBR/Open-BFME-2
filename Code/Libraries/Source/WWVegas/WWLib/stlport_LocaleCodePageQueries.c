@@ -191,3 +191,52 @@ static const ConvertToCPForwarder g_convertToCPForwarders[] =
     __UseConvertToCPA,
     __UseConvertToCPB
 };
+
+// Rva0084ECA0/Rva0084ECE0 (retail 0x00021E30/0x00021E70, 61B each): locale
+// language/country name getters. The sweep promotes them from T3 guesses to
+// unique free-ground placements at distinct addresses with distinct buffers.
+// The locale buffers are hardcoded .data addresses (retail pushes them as
+// immediates with no reloc, so a named extern would add a reloc retail does
+// not have). __ConvertFromACP stays static exactly like the donor: retail
+// passes its first argument in edi (caller cleans 8 for the other two),
+// which MSVC only does for static callees, and the tail call needs the
+// Rva0084DE40Tail pin (same TU shape as the BFME1 donor).
+typedef struct LocaleCodePageObject_0084EED0
+{
+    LCID locale;
+    char codePage[1];
+} LocaleCodePageObject_0084EED0;
+
+static void __ConvertFromACP(char *buf, int bufSize, const char *cp)
+{
+    unsigned short *wideBuffer;
+    int wideSize = MultiByteToWideChar(0, 0, buf, -1, 0, 0);
+    wideBuffer = (unsigned short *)malloc(sizeof(unsigned short) * (wideSize + 1));
+    MultiByteToWideChar(0, 0, buf, -1, wideBuffer, wideSize);
+    WideCharToMultiByte(atoi(cp), 0, wideBuffer, -1, buf, bufSize, 0, 0);
+    free(wideBuffer);
+}
+
+extern char *__cdecl Rva0084DE40Tail(char *buffer);
+
+char *Rva0084ECA0(LocaleCodePageObject_0084EED0 *object)
+{
+    LCID locale = object->locale;
+    GetLocaleInfoA(locale, 0x1f, (char *)0x00DDF368, 0x104);
+    {
+        char *buffer = (char *)0x00DDF368;
+        __ConvertFromACP(buffer, 0x50, object->codePage);
+        return Rva0084DE40Tail(buffer);
+    }
+}
+
+char *Rva0084ECE0(LocaleCodePageObject_0084EED0 *object)
+{
+    LCID locale = object->locale;
+    GetLocaleInfoA(locale, 0x20, (char *)0x00DDEF58, 0x104);
+    {
+        char *buffer = (char *)0x00DDEF58;
+        __ConvertFromACP(buffer, 0x50, object->codePage);
+        return Rva0084DE40Tail(buffer);
+    }
+}

@@ -3502,3 +3502,6 @@ dup_7e86b0,0x00655770
 ??$__copy_aux@U?$_Bit_iter@_NPB_N@_STL@@U?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@2@@_STL@@YA?AU?$_Bit_iter@U_Bit_reference@_STL@@PAU12@@0@U?$_Bit_iter@_NPB_N@0@0U10@ABU__false_type@0@@Z,0x0038925D,STLport bit-iterator copy worker called from the retail REL32 in the 50B copy wrapper at 0x003893F2; same decorated callee the vector-bool TU emits
 ?allocate@?$allocator@I@_STL@@QBEPAIIPBX@Z,0x00068E15,STLport unsigned allocator identical-code fold with the allocator pins already at this address; read from the retail REL32 in _M_bit_alloc at 0x00069F8A
 ?Rva000306327Xfer@@YAXPAVXfer@@PAX@Z,0x00306327,EH-head helper called once from SkirmishGameInfo::xfer at 0x003FFACE; sole E8 caller in game.dat; takes (Xfer*, this+0x40) cdecl
+?StackWalk@DebugStackwalk@@SAHAAUSignature@1@PAU_CONTEXT@@_N@Z,0x0003C110,CrashDone 3-arg stack walker; direct E8 from 0x0003A8A0+0x22F with (sig zero flag); static member reading per call shape
+??6@YAAAVDebug@@AAV0@ABUSignature@DebugStackwalk@@@Z,0x0003BF60,CrashDone free operator-left-shift for Signature; direct E8 from 0x0003A8A0+0x33B with (this sig); matches debug_stack.cpp free overload shape
+_Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from the retail REL32 in Rva0084ECA0 at 0x00021E68 and Rva0084ECE0 at 0x00021EA8; donor name from BFME1 LocaleCodePageQueries
