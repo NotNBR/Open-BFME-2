@@ -13178,3 +13178,4 @@ _Rva009BE180Vp6FilterWideV2,,0x001CEA80,2608,Code/GameEngine/Source/Common/BfmeC
 _Rva009C2320Vp6FilterDiag4,,0x001D2C20,764,Code/GameEngine/Source/Common/BfmeConv9C2320.cpp,matched,BFME1 byte-identical donor; b1 0x009C2320; twin of Rva009C2620 at 0x001D2F20
 ?test@Rva004104F0@@QAE_NI@Z,,0x000788C0,19,Code/GameEngine/Source/Common/Rva004104F0Test.cpp,matched,BFME1 donor b1 0x004104F0 verbatim; twin placement inside Inverse_Rotate_Vector eliminated
 ?Rva000BEED0@@YAPAVR1DwordPair@@PAV1@HH@Z,,0x00219701,18,Code/GameEngine/Source/Common/R1SmallFieldInitialisers.cpp,matched,BFME1 donor b1 0x000BEED0 verbatim; twins inside STLport copy_sign bodies eliminated
+_ServerBrowserAuxUpdateIPA,,0x0069D350,245,Code/GameEngine/Source/GameNetwork/GameSpy/serverbrowsing/sb_serverbrowsing.c,matched,BFME1 byte-identical donor sb_serverbrowsing.c; all 8 SB callees rowed; htons/inet_addr import pins present
