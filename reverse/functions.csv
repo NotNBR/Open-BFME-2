@@ -13042,3 +13042,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?DecompressFile@@YA_NPAD0@Z,,0x0068A5F0,394,Code/Libraries/Source/Compression/LZHCompress/NoxCompress.cpp,matched,BFME1 donor graft; rb/wb literals restored; LZHL wrappers already in TU
 ?CompressFile@@YA_NPAD0@Z,,0x0068A880,372,Code/Libraries/Source/Compression/LZHCompress/NoxCompress.cpp,matched,BFME1 donor graft; rb/wb literals restored; 3 new LZHL API pins
 ?Rva008A3DC0@@YAPBUR4Word@@PBDI@Z,,0x006E7C80,273,Code/GameEngine/Source/Common/R4PerfectHashWithOverflow.cpp,matched,BFME1 byte-identical donor
+?setAddressRemapping@Rva007F45E0Aries@@QAEXPBD@Z,,0x00661090,271,Code/GameEngine/Source/GameNetwork/Rva007F45E0AriesAddressRemapping.cpp,matched,BFME1 byte-identical donor; new pin _Rva007FFC10 0x66C0E0
