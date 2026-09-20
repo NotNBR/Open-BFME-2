@@ -1,0 +1,22 @@
+// stlport
+// cl: /O1 /EHsc /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
+// BFME1 RvaTreeInsertUniqueHint.cpp and STLport tree/pair semantic donor.
+// Comparator0x240CE0 orders signed dword then AsciiString at key+4.
+// Keycopy0xCF475 calls AsciiString copy0x365F0; paircopy0x23E90D adds mapped dword+8.
+// Node0x240DF1 allocates28bytes. Original application names/destruction unknown.
+#include <map>
+class AsciiString { public: AsciiString(const AsciiString &); ~AsciiString(); private: void *m_data; };
+bool operator<(const AsciiString &, const AsciiString &);
+struct TreeKey00242F5E { int m_id; AsciiString m_name; };
+inline bool operator<(const TreeKey00242F5E &a, const TreeKey00242F5E &b) { return a.m_id < b.m_id || (!(b.m_id < a.m_id) && a.m_name < b.m_name); }
+struct TreeOpaqueMapped242F5E { unsigned int m_bits; ~TreeOpaqueMapped242F5E(); };
+typedef _STL::pair<const TreeKey00242F5E, TreeOpaqueMapped242F5E> IntAsciiPair;
+typedef _STL::_Rb_tree<TreeKey00242F5E, IntAsciiPair, _STL::_Select1st<IntAsciiPair>, _STL::less<TreeKey00242F5E>, _STL::allocator<IntAsciiPair> > Tree242F5E;
+namespace _STL { template <> class allocator<char> { public: static char *allocate(unsigned int bytes,const void *hint); }; }
+// ?_M_create_node@?$_Rb_tree@UTreeKey00242F5E@@U?$pair@$$CBUTreeKey00242F5E@@UTreeOpaqueMapped242F5E@@@_STL@@U?$_Select1st@U?$pair@$$CBUTreeKey00242F5E@@UTreeOpaqueMapped242F5E@@@_STL@@@3@U?$less@UTreeKey00242F5E@@@3@V?$allocator@U?$pair@$$CBUTreeKey00242F5E@@UTreeOpaqueMapped242F5E@@@_STL@@@3@@_STL@@IAEPAU?$_Rb_tree_node@U?$pair@$$CBUTreeKey00242F5E@@UTreeOpaqueMapped242F5E@@@_STL@@@2@ABU?$pair@$$CBUTreeKey00242F5E@@UTreeOpaqueMapped242F5E@@@2@@Z
+template <> Tree242F5E::_Link_type Tree242F5E::_M_create_node(const IntAsciiPair &value) { _Link_type node=(_Link_type)_STL::allocator<char>::allocate(sizeof(_STL::_Rb_tree_node<IntAsciiPair>),0); _STL::_Construct(&node->_M_value_field,value); return node; }
+template Tree242F5E::iterator Tree242F5E::insert_unique(Tree242F5E::iterator, const IntAsciiPair &);
+
+// The map wrapper directly calls this tree's verified hinted insertion.
+typedef _STL::map<TreeKey00242F5E,TreeOpaqueMapped242F5E,_STL::less<TreeKey00242F5E >,_STL::allocator<IntAsciiPair> > MapInsert00242f5e;
+template MapInsert00242f5e::iterator MapInsert00242f5e::insert(MapInsert00242f5e::iterator, const IntAsciiPair &);

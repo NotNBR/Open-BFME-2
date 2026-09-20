@@ -1,0 +1,43 @@
+// cl: /O1 /EHsc /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
+// stlport
+// BFME2 STLport tree: AsciiString key and opaque four-byte mapped object.
+// hint 0x2A5895 -> insert 0x2A48DE -> _M_insert 0x2A484A -> node 0x2A42B6.
+// The node allocates 24 bytes and constructs its 8-byte value at node+16.
+// _Construct 0x2A1EC8 calls pair copy 0x2A1538: AsciiString copy 0x365F0,
+// then the mapped object copy constructor 0x2A1383 on the second pair field.
+// Comparison reaches the established AsciiString operator< at 0x5598C.
+// Semantic donor: BFME1 RvaTreeInsertUniqueHint.cpp and STLport pair/tree.
+#include <map>
+class AsciiString { public: AsciiString(const AsciiString &); ~AsciiString(); private: void *m_data; };
+bool operator<(const AsciiString &, const AsciiString &);
+// Distinct four-byte mapped object. The original application type is unknown.
+// Pair copying passes destination+4 and source+4 to its copy constructor.
+// Preserve its out-of-line copy and destruction; do not assume trivial ownership.
+struct TreeHintOpaque002A484A {
+    void *m_body;
+    TreeHintOpaque002A484A(const TreeHintOpaque002A484A &);
+    ~TreeHintOpaque002A484A();
+};
+
+typedef _STL::pair<const AsciiString, TreeHintOpaque002A484A> TreeHintPair002A484A;
+typedef _STL::_Rb_tree<AsciiString, TreeHintPair002A484A, _STL::_Select1st<TreeHintPair002A484A>, _STL::less<AsciiString>, _STL::allocator<TreeHintPair002A484A> > TreeHint002A484A;
+// Retail uses its static byte allocator and has no node cleanup catch block.
+namespace _STL {
+template <> class allocator<char> {
+public:
+    static char *allocate(unsigned int bytes, const void *hint);
+};
+}
+// ?_M_create_node@?$_Rb_tree@VAsciiString@@U?$pair@$$CBVAsciiString@@UTreeHintOpaque002A484A@@@_STL@@U?$_Select1st@U?$pair@$$CBVAsciiString@@UTreeHintOpaque002A484A@@@_STL@@@3@U?$less@VAsciiString@@@3@V?$allocator@U?$pair@$$CBVAsciiString@@UTreeHintOpaque002A484A@@@_STL@@@3@@_STL@@IAEPAU?$_Rb_tree_node@U?$pair@$$CBVAsciiString@@UTreeHintOpaque002A484A@@@_STL@@@2@ABU?$pair@$$CBVAsciiString@@UTreeHintOpaque002A484A@@@2@@Z
+template <>
+TreeHint002A484A::_Link_type TreeHint002A484A::_M_create_node(const TreeHintPair002A484A &value)
+{
+    _Link_type node = (_Link_type)_STL::allocator<char>::allocate(sizeof(_STL::_Rb_tree_node<TreeHintPair002A484A>), 0);
+    _STL::_Construct(&node->_M_value_field, value);
+    return node;
+}
+template TreeHint002A484A::iterator TreeHint002A484A::insert_unique(TreeHint002A484A::iterator, const TreeHintPair002A484A &);
+
+// The map wrapper directly calls this tree's verified hinted insertion.
+typedef _STL::map<AsciiString,TreeHintOpaque002A484A,_STL::less<AsciiString >,_STL::allocator<TreeHintPair002A484A> > MapInsert002a5895;
+template MapInsert002a5895::iterator MapInsert002a5895::insert(MapInsert002a5895::iterator, const TreeHintPair002A484A &);

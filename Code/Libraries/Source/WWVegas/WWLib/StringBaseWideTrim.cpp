@@ -1,14 +1,15 @@
 // cl: /DNDEBUG /MD /EHs-c- /ICode/GameEngine/Source/Common/System
 //
-// Source model for StringBase<wchar_t>::trim(), retail RVA
-// 0x00888ED0, complete body 147 bytes with the final ret at +0x92
-// (end-exclusive 0x00888F63).
+// BFME1 source model adapted to BFME2 StringBase<wchar_t>::trim(),
+// RVA 0x00037F70, complete 127-byte body. BFME2 calls set(str, len)
+// out of line; the donor inlined the setter branch. The shared helper
+// remains exact at BFME2 RVA 0x00035800 (46 bytes).
 //
 // The leading helper is included from the actual visible TU body rather than
 // declared as an ordinary external cdecl function.  SkipWhitespaceW.c defines
 // file-static skipWhitespace(unsigned short*) and its visible keep-alive call;
 // MSVC 7.1 consequently uses the private EAX-incoming convention seen at
-// retail 0x008872B0.  The same helper body is therefore available to this
+// BFME2 RVA 0x00035800.  The same helper body is therefore available to this
 // StringBase trim TU without an ABI-cast or a fabricated wrapper.
 
 // Keep the helper out of line: retail trim has a direct REL32 to the
@@ -37,14 +38,9 @@ private:
 
 public:
     void trim();
+    void set(const T *str, int len);
     T *peek() const { return &m_data->data[0]; }
     T getCharAt(int index) const { return m_data ? m_data->data[index] : 0; }
-private:
-    void ensureUniqueBufferOfSize(int newLen, bool keepData,
-                                  const T *src1, int src1Len,
-                                  const T *src2, int src2Len);
-    void releaseBuffer();
-public:
     void removeLastChar();
 };
 
@@ -63,16 +59,7 @@ void StringBase<WideChar>::trim()
             int skipped = c - (unsigned int)m_data - 8;
             skipped = skipped >> 1;
             len -= skipped;
-            if (len != 0)
-            {
-                ensureUniqueBufferOfSize(
-                    len, false, (const WideChar *)c, len,
-                    0, 0);
-            }
-            else
-            {
-                releaseBuffer();
-            }
+            set((const WideChar *)c, len);
         }
 
         if (m_data)
