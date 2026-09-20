@@ -121,3 +121,21 @@ Rva004AB7EB::Rva004AB7EB(const Rva004AB7EB &other)
 {
 	m_field04 = other.m_field04;
 }
+
+// ------------------------- vptr + one int (retail 0x004C9F61)
+// B2 body-address name: same 21-byte shape with a different vtable so a
+// different class. Retail caller 0x004C9FC8 installs derived vptr 0xC07E54
+// right after the call so this is the base-class copy.
+class Rva004C9F61
+{
+public:
+	Rva004C9F61(const Rva004C9F61 &other);
+	virtual ~Rva004C9F61();
+
+	Int m_field04;
+};
+
+Rva004C9F61::Rva004C9F61(const Rva004C9F61 &other)
+{
+	m_field04 = other.m_field04;
+}
