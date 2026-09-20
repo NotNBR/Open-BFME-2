@@ -39,3 +39,7 @@ Rva00CE12FCMutex::~Rva00CE12FCMutex()
     if (m_handle != 0)
         CloseHandle(m_handle);
 }
+
+// Retail global object VA E09F9C; its mutex handle occupies E09FA0.
+// The real C++ definition emits initializer49B and registered cleanup36B.
+Rva00CE12FCMutex g_rva00CE12FCMutex;
