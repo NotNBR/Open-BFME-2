@@ -3510,3 +3510,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ?recenterTurret@TurretAI@@QAEXXZ,0x004D8298,address read from the retail REL32 at 0x0026267B in AIUpdateInterface::recenterTurret; 11B delegate matching TurretAI::recenterTurret
 ?setTurretEnabled@TurretAI@@QAEX_N@Z,0x004D82D6,address read from the retail REL32 at 0x00262664 in AIUpdateInterface::setTurretEnabled; 32B body matching TurretAI::setTurretEnabled
 ?isTurretInNaturalPosition@TurretAI@@QBE_NXZ,0x004D82A3,address read from the retail REL32 at 0x002626AB in AIUpdateInterface::isTurretInNaturalPosition; 39B body matching TurretAI::isTurretInNaturalPosition
+?isOwnersCurWeaponOnTurret@TurretAI@@QBE_NXZ,0x004D8762,address read from the retail REL32 at 0x0026276E in AIUpdateInterface::getWhichTurretForCurWeapon; 47B body matching TurretAI::isOwnersCurWeaponOnTurret
