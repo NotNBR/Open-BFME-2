@@ -55,3 +55,11 @@ int Rva0026EDB1Get(void)
 {
 	return 0x00bfa6e8;
 }
+
+// ?Rva0028C77DGet@@YAHXZ @ 0x0028c77d (6B): returns 0x0000009a.
+// Follows a ret-4 (prev C2-04-00), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+int Rva0028C77DGet(void)
+{
+	return 0x0000009a;
+}
