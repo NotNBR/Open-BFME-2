@@ -13406,3 +13406,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?Rva003B6A37Get@@YA_NXZ,,0x003B6A37,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
 ?getConstSlot@GameInfo@@QBEPBVGameSlot@@H@Z,,0x003FF2BE,22,Code/GameEngine/Source/GameNetwork/GameSlotApparent.cpp,matched,BFME1 GameInfo.cpp getConstSlot shape with slot array at +0x18 and MAX_SLOTS 8
 ??0Rva002E9E70@@QAE@ABV0@@Z,,0x003372EC,39,Code/GameEngine/Source/Common/Rva002E9E70Copy.cpp,matched,Opaque value copy-ctor; string via AsciiString set pin at 0x366F0 and vector member via new opaque assign pin at 0x332217; retail order falls out FIRST-TRY
+?Rva003B6C8BGet@@YA_NXZ,,0x003B6C8B,3,Code/GameEngine/Source/Common/ConstBoolTrueGetters.cpp,matched,Bool-true getter without vtable carriage; prev C3 next prologue; no callers branches or vtable refs
