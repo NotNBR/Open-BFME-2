@@ -12151,7 +12151,6 @@ ___TranslateToSystem,,0x00022320,57,Code/Libraries/Source/WWVegas/WWLib/stlport_
 ?name@Rva00373411Named@@QBEPBDXZ,,0x00373411,6,Code/GameEngine/Source/Common/SubsystemNameGetters4.cpp,matched,literal name getter returning MineshaftPortalNetworkManager; vtable ref in .rdata; address-derived placeholder name (fourth getter unit)
 ?name@Rva004647BANamed@@QBEPBDXZ,,0x004647BA,6,Code/GameEngine/Source/Common/ModuleNameGetters.cpp,matched,literal name getter returning OpenContain; body VA has exactly 1 .rdata ref (module vtable closed by 004B3FD0 pair); address-derived placeholder name
 _add_s,,0x00749970,307,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_add_s; Lua lstrlib static compiles to retail span
-_add_s,,0x00749970,307,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel32 alias; object-symbol=_add_s; Lua lstrlib static compiles to retail span
 ?name@Rva000EEFE6Named@@QBEPBDXZ,,0x000EEFE6,6,Code/GameEngine/Source/Common/W3DDrawNameGetters.cpp,matched,literal name getter returning W3DPropBuffer; vtable ref at 0x7CEED4; address-derived placeholder name
 _piAddListingGamesCallback,,0x0069F320,233,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerCallbacks.c,matched,GameSpy piAddListingGamesCallback 233B; assignment-wrapped gamemode call batches 3 cdecl cleanups into retail add esp 0x20; gameListCallback at 0x1784 and gameListParam at 0x1788
 _str_lower,,0x00748BA0,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string lower via donor reg-table identity; callees pinned
@@ -12601,3 +12600,4 @@ _add_s,,0x00749970,307,Code/Libraries/Source/Lua/lstrlib.c,matched,obj_sweep rel
 _piAddListingGamesCallback,,0x0069F320,233,Code/GameEngine/Source/GameNetwork/GameSpy/peer/peerCallbacks.c,matched,GameSpy piAddListingGamesCallback 233B; assignment-wrapped gamemode call batches 3 cdecl cleanups into retail add esp 0x20; gameListCallback at 0x1784 and gameListParam at 0x1788
 _str_lower,,0x00748BA0,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string lower via donor reg-table identity; callees pinned
 _str_upper,,0x00748C40,154,Code/Libraries/Source/Lua/lstrlib.c,matched,Lua string upper via donor reg-table identity; callees pinned
+??_GRva004B362D@@UAEPAXI@Z,,0x004B374D,28,Code/GameEngine/Source/GameLogic/Object/Behavior/FireWeaponWhenDeadBehaviorDerived.cpp,matched,Scalar deleting dtor via ??_G harvest; calls rowed dtor 0x4B362D plus operator delete 0x2FD60; /O1 pop-ecx shape
