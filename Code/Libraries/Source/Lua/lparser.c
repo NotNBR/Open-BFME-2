@@ -67,7 +67,7 @@ void adjustlocalvars (LexState *ls, int nvars);
 static void parlist (LexState *ls);
 void chunk (LexState *ls);
 void close_func (LexState *ls);
-void pushclosure (LexState *ls, FuncState *func);
+static void pushclosure (LexState *ls, FuncState *func);
 
 
 /* Forward declaration: `checkname' (below) calls back into it. */
@@ -196,6 +196,20 @@ static void leavebreak (FuncState *fs, Breaklabel *bl) {
   fs->bl = bl->previous;
   LUA_ASSERT(bl->stacklevel == fs->stacklevel, "wrong levels");
   luaK_patchlist(fs, bl->breaklist, luaK_getlabel(fs));
+}
+
+
+// _pushclosure BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static void pushclosure (LexState *ls, FuncState *func) {
+  FuncState *fs = ls->fs;
+  Proto *f = fs->f;
+  int i;
+  for (i=0; i<func->nupvalues; i++)
+    luaK_tostack(ls, &func->upvalues[i], 1);
+  luaM_growvector(ls->L, f->kproto, f->nkproto, 1, Proto *,
+                  "constant table overflow", MAXARG_A);
+  f->kproto[f->nkproto++] = func->f;
+  luaK_code2(fs, OP_CLOSURE, f->nkproto-1, func->nupvalues);
 }
 
 
