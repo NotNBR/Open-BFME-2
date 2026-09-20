@@ -3221,3 +3221,4 @@ _read_number,0x00757200
 ??1MeshMatDescClass@@QAE@XZ,0x0015DC40,MeshMatDescClass dtor: MeshModelClass dtor and Reset call it on the DefMatDesc and AlternateMatDesc slots; same folded bytes as the opaque BfmeHolderBY row at this address so this name pins the twin for MeshModel callers
 ?DeleteModelGapFiller@Rva00DF6F94GapFillerContext@@QAEXPAVMeshModelClass@@@Z,0x001732E2,GapFiller delete helper taking the model; deletes the +0xBC slot via dtor 0x18C57C plus operator delete and NULLs it; 5 MeshModel-internal callers; thiscall shape proven by the caller mov ecx global pattern; class name opaque
 ?Rva00199FA5TeardownMeshMatDescRenderers@@YA_NPAVMeshMatDescClass@@@Z,0x00199FA5,cdecl bool helper on CurMatDesc rechecking +0xC then calling 0x15A800 and 0x15D5B0; 5 MeshModel-internal callers each guarding on +0xC; name opaque
+?d_00885530@Rva00885920Class@@QAEHPBDH@Z,0x006CA040

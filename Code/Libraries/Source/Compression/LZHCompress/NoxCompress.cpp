@@ -23,6 +23,92 @@ LZHL_DHANDLE LZHLCreateDecompressor();
 __declspec(noinline) int LZHLDecompress(LZHL_DHANDLE, UnsignedByte *, UnsignedInt *, const UnsignedByte *, UnsignedInt *);
 void LZHLDestroyDecompressor(LZHL_DHANDLE);
 
+struct FILE;
+
+extern "C" __declspec(dllimport) FILE * __cdecl fopen(const char *, const char *);
+extern "C" __declspec(dllimport) int __cdecl fseek(FILE *, long, int);
+extern "C" __declspec(dllimport) long __cdecl ftell(FILE *);
+extern "C" __declspec(dllimport) unsigned int __cdecl fread(void *, unsigned int, unsigned int, FILE *);
+extern "C" __declspec(dllimport) unsigned int __cdecl fwrite(const void *, unsigned int, unsigned int, FILE *);
+extern "C" __declspec(dllimport) int __cdecl fclose(FILE *);
+extern "C" __declspec(dllimport) void * __cdecl malloc(unsigned int);
+extern "C" __declspec(dllimport) void __cdecl free(void *);
+
+template <class T> const T &min(const T &a, const T &b)
+{
+	if (a < b) {
+		return a;
+	} else {
+		return b;
+	}
+}
+
+Bool DecompressFile(char *infile, char *outfile)
+{
+	UnsignedInt rawSize = 0, compressedSize = 0;
+	FILE *inFilePtr = 0;
+	FILE *outFilePtr = 0;
+	char *inBlock = 0;
+	char *outBlock = 0;
+	LZHL_DHANDLE decompress;
+	Int ok = 0;
+	UnsignedInt srcSz, dstSz;
+
+	if ((infile == 0) || (outfile == 0))
+		return false;
+
+	inFilePtr = fopen(infile, "rb");
+	if (inFilePtr)
+	{
+		fseek(inFilePtr, 0, 2);
+		compressedSize = ftell(inFilePtr);
+		fseek(inFilePtr, 0, 0);
+
+		compressedSize -= sizeof(UnsignedInt);
+		fread(&rawSize, 1, sizeof(UnsignedInt), inFilePtr);
+
+		inBlock = (char *)malloc(compressedSize);
+		outBlock = (char *)malloc(rawSize);
+
+		if ((inBlock == 0) || (outBlock == 0))
+			return false;
+
+		fread(inBlock, 1, compressedSize, inFilePtr);
+		fclose(inFilePtr);
+
+		srcSz = compressedSize;
+		dstSz = rawSize;
+		decompress = LZHLCreateDecompressor();
+
+		for (;;)
+		{
+			ok = LZHLDecompress(decompress, (UnsignedByte *)outBlock + rawSize - dstSz, &dstSz,
+				(const UnsignedByte *)inBlock + compressedSize - srcSz, &srcSz);
+
+			if (!ok)
+				break;
+			if (srcSz <= 0)
+				break;
+		}
+
+		LZHLDestroyDecompressor(decompress);
+		outFilePtr = fopen(outfile, "wb");
+		if (outFilePtr)
+		{
+			fwrite(outBlock, rawSize, 1, outFilePtr);
+			fclose(outFilePtr);
+		}
+		else
+			return false;
+
+		free(inBlock);
+		free(outBlock);
+		return true;
+	}
+
+	return false;
+}
+
 LZHL_DHANDLE LZHLCreateDecompressor()
 {
 	return new LZHLDecompressor;
