@@ -150,3 +150,11 @@ int Rva003956E5Get(void)
 {
 	return 0;
 }
+
+// ?Rva003E46B1Get@@YAHXZ @ 0x003e46b1 (3B): returns 0.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+int Rva003E46B1Get(void)
+{
+	return 0;
+}
