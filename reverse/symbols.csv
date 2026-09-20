@@ -3215,3 +3215,9 @@ _read_number,0x00757200
 ?Rva007FBC00@@YAIXZ,0x00668100
 ?Rva007FD060@@YAIXZ,0x00669530
 ?Rva007FCF80@@YAPAVRva007FCF80Object@@PAX@Z,0x00669480
+?Insert_Before@?$DLNodeClass@VSortingNodeStruct@@@@QAEXPAV1@@Z,0x0012D720,SortingRenderer insert path calls state->Insert_Before(node) in Insert_Triangles 0x12FE00; dup row object-symbol asserts the same identity; 44B outlined form of the ZH inline
+?Unregister_Mesh_Type@DX8MeshRendererClass@@QAEXPAVMeshModelClass@@@Z,0x001445E0,BFME1 dx8renderer.h decl Unregister_Mesh_Type(MeshModelClass*); body strips the model +0x9C list via matched Internal_Remove_List_Head 0x6109A0; called with this under the renderer pointer guard in the MeshModelClass dtor and Reset
+?Reset@MeshModelClass@@QAEXHHH_N@Z,0x00171F70,MeshModelClass::Reset with BFME2 fourth bool param; body does MatInfo Reset plus DefMatDesc Reset plus Alt teardown plus Cur alias with ret 0x10; dtor passes the SKIN bit and the 0x18BAB9 chunk reader passes a header bool; forwards the bool to Reset_Geometry alone
+??1MeshMatDescClass@@QAE@XZ,0x0015DC40,MeshMatDescClass dtor: MeshModelClass dtor and Reset call it on the DefMatDesc and AlternateMatDesc slots; same folded bytes as the opaque BfmeHolderBY row at this address so this name pins the twin for MeshModel callers
+?DeleteModelGapFiller@Rva00DF6F94GapFillerContext@@QAEXPAVMeshModelClass@@@Z,0x001732E2,GapFiller delete helper taking the model; deletes the +0xBC slot via dtor 0x18C57C plus operator delete and NULLs it; 5 MeshModel-internal callers; thiscall shape proven by the caller mov ecx global pattern; class name opaque
+?Rva00199FA5TeardownMeshMatDescRenderers@@YA_NPAVMeshMatDescClass@@@Z,0x00199FA5,cdecl bool helper on CurMatDesc rechecking +0xC then calling 0x15A800 and 0x15D5B0; 5 MeshModel-internal callers each guarding on +0xC; name opaque
