@@ -3197,3 +3197,8 @@ _read_number,0x00757200
 ?handle@Rva008091C0Owner@@QAEXPAVBfmeC994@@HPAD@Z,0x006750C0
 ?ji_009f709c@@YAPADPBD0@Z,0x00629850
 ?ji_009f709c@@YAXXZ,0x00629850
+?Reset_Geometry@MeshGeometryClass@@QAEXHH@Z,0x0016A320,Load_W3D call-site callee
+?read_chunks@MeshGeometryClass@@IAE?AW4WW3DErrorType@@AAVChunkLoadClass@@@Z,0x0016D340,Load_W3D call-site callee
+?get_bone_links@MeshGeometryClass@@IAEPAG_N@Z,0x0016A0C0,Load_W3D call-site callee
+?testSetAndClear@?$BitFlags@$0FG@@@QBE_NABV1@0@Z,0x0026157E,BitFlags exempt-required tester called by DieMuxData isDieApplicable
+?bfmeReset@Gen009D6E10@@QAEXPAVBfmePeer@@@Z,0x0060B8C6
