@@ -3326,3 +3326,4 @@ _var_or_func,0x007555C0,address read from the REL32 call at 0x00755E9E in the _n
 _indexupvalue,0x00753DC0,address read from the REL32 call at 0x00753EA2 in the _pushupvalue body; Lua 4.0.1 lparser.c static
 _luaK_number,0x00752810,address read from the REL32 call at 0x00755698 in the _simpleexp body; Lua 4.0.1 lcode.c
 _pushclosure,0x00753FF0,address read from the REL32 call at 0x00754D14 in the _body body; Lua 4.0.1 lparser.c static
+_luaK_posfix,0x00753710,address read from the REL32 call at 0x00755988 in the _subexpr body; Lua 4.0.1 lcode.c

@@ -61,7 +61,7 @@ typedef struct Breaklabel {
    statics that retail's bodies call are DEFINED below instead: MSVC uses
    TU-private conventions for statics, so an extern declaration would emit a
    standard call site where retail has a private one. */
-BinOpr subexpr (LexState *ls, expdesc *v, int limit);
+static BinOpr subexpr (LexState *ls, expdesc *v, int limit);
 void open_func (LexState *ls, FuncState *fs);
 void adjustlocalvars (LexState *ls, int nvars);
 static void parlist (LexState *ls);
@@ -1104,6 +1104,60 @@ static BinOpr getbinopr (int op) {
 }
 
 
+// _getunopr present-unmatched
+static UnOpr getunopr (int op) {
+  switch (op) {
+    case TK_NOT: return OPR_NOT;
+    case '-': return OPR_MINUS;
+    default: return OPR_NOUNOPR;
+  }
+}
+
+
+static const struct {
+  char left;  /* left priority for each binary operator */
+  char right; /* right priority */
+} priority[] = {  /* ORDER OPR */
+   {5, 5}, {5, 5}, {6, 6}, {6, 6},  /* arithmetic */
+   {9, 8}, {4, 3},                  /* power and concat (right associative) */
+   {2, 2}, {2, 2},                  /* equality */
+   {2, 2}, {2, 2}, {2, 2}, {2, 2},  /* order */
+   {1, 1}, {1, 1}                   /* logical */
+};
+
+#define UNARY_PRIORITY	7  /* priority for unary operators */
+
+
+/*
+** subexpr -> (simplexep | unop subexpr) { binop subexpr }
+** where `binop' is any binary operator with a priority higher than `limit'
+*/
+// _subexpr BFME1 byte-identical donor (Lua 4.0.1 lparser.c)
+static BinOpr subexpr (LexState *ls, expdesc *v, int limit) {
+  BinOpr op;
+  UnOpr uop = getunopr(ls->t.token);
+  if (uop != OPR_NOUNOPR) {
+    next(ls);
+    subexpr(ls, v, UNARY_PRIORITY);
+    luaK_prefix(ls, uop, v);
+  }
+  else simpleexp(ls, v);
+  /* expand while operators have priorities higher than `limit' */
+  op = getbinopr(ls->t.token);
+  while (op != OPR_NOBINOPR && priority[op].left > limit) {
+    expdesc v2;
+    BinOpr nextop;
+    next(ls);
+    luaK_infix(ls, op, v);
+    /* read sub-expression with higher priority */
+    nextop = subexpr(ls, &v2, priority[op].right);
+    luaK_posfix(ls, op, v, &v2);
+    op = nextop;
+  }
+  return op;  /* return first untreated operator */
+}
+
+
 /* Anchor, absent from retail: keeps the static workers out-of-line so the
    verifier can see them. Only the rowed bodies are claimed. */
 void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd) {
@@ -1134,4 +1188,5 @@ void LuaParserAnchor (LexState *ls, FuncState *fs, Breaklabel *bl, Constdesc *cd
   adjust_mult_assign(ls, 0, 0);
   stat(ls);
   { expdesc anchor_v; simpleexp(ls, &anchor_v); }
+  { expdesc anchor_w; subexpr(ls, &anchor_w, 0); getunopr(0); }
 }
