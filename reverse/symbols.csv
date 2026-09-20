@@ -2434,7 +2434,6 @@ name,address,notes
 ?insert_unique@?$_Rb_tree@UGen_p12pod@@U?$pair@$$CBUGen_p12pod@@H@_STL@@U?$_Select1st@U?$pair@$$CBUGen_p12pod@@H@_STL@@@3@U?$less@UGen_p12pod@@@3@V?$allocator@U?$pair@$$CBUGen_p12pod@@H@_STL@@@3@@_STL@@QAE?AU?$_Rb_tree_iterator@U?$pair@$$CBUGen_p12pod@@H@_STL@@U?$_Nonconst_traits@U?$pair@$$CBUGen_p12pod@@H@_STL@@@2@@2@U32@ABU?$pair@$$CBUGen_p12pod@@H@2@@Z,0x0016DF60,address read from the REL32 displacement at a placed body
 ?intersect_obb_obb@@YA_NAAUObbIntersectionStruct@@@Z,0x007277C0,address read from the REL32 displacement at a placed body
 ?invoke@Rva00893030Manager@@QAEXVRva00893030Ref@@PAX11@Z,0x006D25C0
-?isAI@GameSlot@@QBE_NXZ,0x003FF127,BFME2 GameSlot isAI with state 5 included (2 3 4 5 vs ZH 2 3 4); direct callee of GameInfo isSkirmish at 0x3FF9E2
 ?isAbleToAttack@Object@@QBE_NXZ,0x00290B73,address read from the REL32 displacement at a placed body
 ?isAmmoReady@Weapon@@QBE_NXZ,0x002CC3FF,owner-has-usable-ammo gate for the empty-clip READY path; true name unproven (BFME1 attempt used bfmeAmmoReady)
 ?isAnyKindOf@Thing@@QBE_NABV?$BitFlags@$0EF@@@@Z,0x0030ADC7

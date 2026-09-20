@@ -13460,3 +13460,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?bfmeGoRE@BfmeThingRE@@QAEDPAVBfmeOtherRE@@@Z,,0x006560F0,36,Code/GameEngine/Source/Common/BfmeConv908.cpp,matched,BFME1 byte-identical donor; b1 0x007E9090; callee bfmeCmpRE pinned at 0x00655F90
 ?getNumPlayers@GameInfo@@QBEHXZ,,0x003FF218,37,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME1 GameNetwork/GameInfo.cpp donor shape; same-TU isOccupied def carries the EDX/EDI/ESI convention
 ?getNumNonObserverPlayers@GameInfo@@QBEHXZ,,0x003FF23D,43,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME1 GameNetwork/GameInfo.cpp donor shape with PLAYERTEMPLATE_OBSERVER guard; same TU as getNumPlayers
+?isAI@GameSlot@@QBE_NXZ,,0x003FF127,30,Code/GameEngine/Source/GameNetwork/GameInfoPlayerCounts.cpp,matched,BFME2 AI states 2 3 4 5; supersedes pin at same address
