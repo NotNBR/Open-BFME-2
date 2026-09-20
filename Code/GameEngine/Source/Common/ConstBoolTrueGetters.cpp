@@ -56,3 +56,11 @@ bool Rva00238F8EGet(void)
 {
 	return true;
 }
+
+// ?Rva0023C59CGet@@YA_NXZ @ 0x0023c59c (3B): returns true.
+// Follows a ret (prev C3), no .rdata vtable slot, no direct callers,
+// no branch sources. Opaque address-derived name.
+bool Rva0023C59CGet(void)
+{
+	return true;
+}
