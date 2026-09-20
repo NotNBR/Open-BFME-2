@@ -13469,3 +13469,4 @@ _luaB_tostring,,0x0074BFA0,253,Code/Libraries/Source/Lua/luaB_tostring.c,matched
 ?push_back@?$vector@VProductionPrerequisite@@V?$allocator@VProductionPrerequisite@@@_STL@@@_STL@@QAEXABVProductionPrerequisite@@@Z,,0x0033EA10,55,Code/GameEngine/Source/Common/Thing/ProductionPrerequisiteVectorPushBack.cpp,matched,prereq push_back 55B; retail stride 0x24 proves BFME2 struct grew 0x0C over ZH; callees via pins
 ?XferSlotState@@YAXPAVXfer@@PAW4SlotState@@@Z,,0x003FF0B4,24,Code/GameEngine/Source/Common/System/XferEnumHelpers.cpp,matched,
 ?XferLivingWorldPlayerID@@YAXPAVXfer@@PAH@Z,,0x002034C4,24,Code/GameEngine/Source/Common/System/XferEnumHelpers.cpp,matched,
+?Disable_Backface_Culling@MeshMatDescClass@@IAEXXZ,,0x00188670,67,Code/Libraries/Source/WWVegas/WW3D2/MeshMatDescDisableBackfaceCulling.cpp,matched,BFME2 cull bit 20 with retail 0x118 layout; TU-local ShaderFlags and ShareBuffer mirror; BFME1 inline spelling
