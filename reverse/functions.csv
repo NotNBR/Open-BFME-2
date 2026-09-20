@@ -13022,3 +13022,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?rva009C6390BinkMmx@@YAXPBXPAXHHHH0@Z,,0x001D6C90,211,Code/GameEngine/Source/Common/Rva009C6390BinkMmx.cpp,matched,BFME1 byte-identical donor; MMX tables masked
 ?rva009C6470BinkMmx@@YAXPBXPAXHHHH0@Z,,0x001D6D70,196,Code/GameEngine/Source/Common/Rva009C6470BinkMmx.cpp,matched,BFME1 byte-identical donor; MMX tables masked
 ?rva009C6540BinkMmx@@YAXPBXPAXHHHH0@Z,,0x001D6E40,211,Code/GameEngine/Source/Common/Rva009C6540BinkMmx.cpp,matched,BFME1 byte-identical donor; MMX tables masked
+?rva009C6620BinkMmx@@YAXPBXPAXHHHH0@Z,,0x001D6F20,198,Code/GameEngine/Source/Common/Rva009C6620BinkMmx.cpp,matched,BFME1 byte-identical donor; MMX tables masked
