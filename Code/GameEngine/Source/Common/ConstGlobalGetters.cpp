@@ -72,3 +72,10 @@ int Rva0011D210Get(void)
 {
 	return G009EDAA0;
 }
+
+// ?Rva0011D220Get@@YAHXZ @ 0x0011D220 (6B): returns global at 0x9EDAA4.
+extern int G009EDAA4;
+int Rva0011D220Get(void)
+{
+	return G009EDAA4;
+}
