@@ -20,3 +20,22 @@ __declspec(noinline) bool StringBase<char>::startsWithNoCase(const char *str, in
     const char *data = &m_data->data[0];
     return _memicmp(data, str, len) == 0;
 }
+
+// BFME1 donor find worker: counted for-loop over [start, end). Retail at
+// 0x00035AB0 is the wchar_t instantiation.
+template <typename T>
+const T *StringBase<T>::find(T c) const
+{
+    const T *start = m_data ? &m_data->data[0] : (const T *)"";
+    const T *end = start + (m_data ? m_data->length : 0);
+
+    for (const T *p = start; p != end; ++p) {
+        if (*p == c) {
+            return p;
+        }
+    }
+
+    return 0;
+}
+
+template const wchar_t *StringBase<wchar_t>::find(wchar_t c) const;

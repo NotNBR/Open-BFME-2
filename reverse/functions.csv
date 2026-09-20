@@ -13146,3 +13146,4 @@ _Rva009C2620Vp6FilterDiag4,,0x001D2F20,776,Code/GameEngine/Source/Common/BfmeCon
 ?Set_Texture@SegLineRendererClass@@QAEXPAVTextureClass@@@Z,,0x001911E0,46,Code/Libraries/Source/WWVegas/WW3D2/seglinerenderer.cpp,matched,BFME texture-handle setter; arg read-through with WORD Add_Ref and out-of-line Release_Ref 0x61ED10; twin-store tails
 ?LZHLDestroyCompressor@@YAXPAX@Z,,0x0068ED60,27,Code/Libraries/Source/Compression/LZHCompress/CompLibSource/LZHLApi.cpp,matched,BFME1 byte-identical donor; b1 0x00823210; callee tiebreak calls compressor dtor 0x00691080
 ?startsWithNoCase@?$StringBase@D@@QBE_NPBDH@Z,0x000359B0,0x000359B0,68,Code/Libraries/Source/WWVegas/WWLib/string_base_starts_with_nocase.cpp,matched,scratch
+?find@?$StringBase@G@@QBEPBGG@Z,0x00035AB0,0x00035AB0,55,Code/Libraries/Source/WWVegas/WWLib/string_base_starts_with_nocase.cpp,matched,BFME1 byte-identical donor; b1 0x00450B30
