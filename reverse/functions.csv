@@ -14504,3 +14504,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?buildFieldParse@DynamicGeometryInfoUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004C8FD7,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
 ?buildFieldParse@BattlePlanUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004CBBB4,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
 ?buildFieldParse@RepairDockUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004CC583,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
+?canAnySlavesAttack@SpawnBehavior@@UAE_NXZ,,0x0045F99E,58,Code/GameEngine/Source/GameLogic/Object/Behavior/SpawnBehavior_canAnySlavesAttack.cpp,matched,BFME2 layout m_spawnIDs at secondary-this+0x2C; callees findObjectByID row 0x49DC5 isAbleToAttack pin 0x290B73
