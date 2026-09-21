@@ -61,3 +61,13 @@ int BfmeAptValue006DCD20::isFloat() const
     if (flags.type == 6 && !isUndefined()) return 1;
     return 0;
 }
+
+int BfmeAptValue006DCD20::isString() const
+{
+    if (!this) {
+        g_bfmeAptAssertAtE17734("this","c:\\projects\\bfme2patch103\\bfme2\\code\\libraries\\source\\apt\\AptValue/AptValue.inl",1484);
+        if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+    }
+    if ((flags.type == 1 || flags.type == 42) && !isUndefined()) return 1;
+    return 0;
+}
