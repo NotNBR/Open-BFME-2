@@ -14486,3 +14486,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?setPlayerLeaveStatus@GameLogic@@QAEXHABVAsciiString@@H@Z,,0x0023D1A5,62,Code/GameEngine/Source/GameLogic/System/GameLogicSetPlayerLeaveStatus.cpp,matched,GameLogic player-leave-status slot setter from populateGameReport slot loop; BFME1 donor stores inlined
 ?friend_newModuleData@CleanupHazardUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x002529FF,81,Code/GameEngine/Source/GameLogic/Object/Update/CleanupHazardUpdateFriendNew.cpp,matched,
 ?friend_newModuleData@PilotFindVehicleUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252A88,81,Code/GameEngine/Source/GameLogic/Object/Update/PilotFindVehicleUpdateFriendNew.cpp,matched,
+?friend_newModuleData@DynamicGeometryInfoUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252906,81,Code/GameEngine/Source/GameLogic/Object/Update/DynamicGeometryInfoUpdateFriendNew.cpp,matched,
