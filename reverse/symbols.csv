@@ -3656,3 +3656,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??0HordeUpdateModuleData@@QAE@XZ,0x00496FA5,sole caller is the 0x24E1AB factory pushing size 0x44 plus rowed proc 0x4976CA plus initFromINIMultiProc; Horde table class with vtable read from ctor body
 ??0BattlePlanUpdateModuleData@@QAE@XZ,0x0049780A,pinned by BattlePlanUpdateModuleData factory call-site decode; sole E8 caller is factory 0x24E237 which news 0xA8 and pushes proc 0x49861A; donor BFME1 BattlePlanUpdate.cpp ctor plus 30-field table 0x84FF58; ctor body banked as 0.88 partial
 ??0ObjectCreationUpgradeModuleData@@QAE@XZ,0x004B425B
+??0MarkerTypeUpdateModuleData@@QAE@XZ,0x004C9C98,sole caller is the 0x252B11 factory pushing the rowed MarkerTypeUpdateModuleData proc; installs vtable 0xC5EDF8 and fits the 0x0C news size
