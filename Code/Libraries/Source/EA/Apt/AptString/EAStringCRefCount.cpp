@@ -19,6 +19,16 @@ public:
 
 extern Rva006DB270 *g_pChainBlockAllocator; // 0x00E176E8
 
+class Rva006DB160
+{
+public:
+	void *allocBlock(int blockSize);
+};
+
+// Same pool instance, allocation side (companion pin to the freeBlock
+// pin above; per-TU extern names each patch from retail independently).
+extern Rva006DB160 *g_aptPoolAllocator; // 0x00E176E8
+
 class EAStringC
 {
 public:
@@ -40,6 +50,7 @@ public:
 	EAStringC &operator=(const EAStringC &other);
 	~EAStringC();
 	EAStringC &clear();
+	void Reserve(int size);
 };
 
 // Retail empty singleton at 0x00DDC020. The linker never sees this TU's
@@ -118,4 +129,29 @@ EAStringC &EAStringC::clear()
 	self->m_pData = (StringDataC *)0x00DDC020;
 	g_eaEmptyStringData.m_uRefCount++;
 	return *self;
+}
+
+// ?Reserve@EAStringC@@QAEXH@Z, retail 0x006D3760 (127B). Buffer
+// allocator: validates the request, rounds it to a 4-byte pitch over
+// the 8-byte header, and installs a fresh refcount-1 block from the
+// global pool. Both bound checks are unsigned (ja/jb). The re-read of
+// m_pData before the max-size store is load-bearing: without it the
+// compiler forwards the freshly stored pointer and the tail rotates.
+void EAStringC::Reserve(int size)
+{
+	EAStringC *self = this;
+	if (!((unsigned)size > 0u)) {
+		g_bfmeAptAssertAtE17734("uSize > 0", ".\\string\\EAString.inl", 0x4CB);
+		if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+	}
+	int rounded = (size + 12) & ~3;
+	if (!((unsigned)rounded < 0xFFFFu)) {
+		g_bfmeAptAssertAtE17734("uAllocateSize < 0xffff", ".\\string\\EAString.inl", 0x4D2);
+		if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+	}
+	StringDataC *data = (StringDataC *)g_aptPoolAllocator->allocBlock(rounded);
+	self->m_pData = data;
+	data->m_uRefCount = 1;
+	data = self->m_pData;
+	data->m_uMaxSize = (unsigned short)(rounded - 9);
 }
