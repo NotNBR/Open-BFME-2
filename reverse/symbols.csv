@@ -3649,3 +3649,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??0BoneFXUpdateModuleData@@QAE@XZ,0x00487797
 ??0Rva0024C7B3Member@@QAE@XZ,0x0024C7B3,shared 0x1C-byte memset helper (memset this 0 0x1C via 0x6291AE CRT thunk; returns this); address read from the REL32 displacement at DemoTrapUpdateModuleData ctor 0x49597A
 ?clear@?$_Rb_tree@HU?$pair@$$CBHH@_STL@@U?$_Select1st@U?$pair@$$CBHH@_STL@@@2@U?$less@H@2@V?$allocator@U?$pair@$$CBHH@_STL@@@2@@_STL@@QAEXXZ,0x0021A917,TU emission 41B matches retail with 0 non-reloc diffs; called by int-int tree dtor at 0x21B775; ghidra extent 41
+??0StealthUpdateModuleData@@QAE@XZ,0x0037588B
