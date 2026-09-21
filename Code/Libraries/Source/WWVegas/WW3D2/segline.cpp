@@ -52,6 +52,13 @@
 
 static SegLineRendererClass _LineRenderer;
 
+// Nothrow global deletes: with the default throwing declarations the
+// SimpleDynVecClass member teardown stays an out-of-line call; declared
+// throw() the derived-plus-base guarded deletes inline with per-level vptr
+// stores (DX8MeshRendererClassDtor.cpp precedent).
+void __cdecl operator delete(void *) throw();
+void __cdecl operator delete[](void *) throw();
+
 
 /*
 ** SegmentedLineClass implementation:
@@ -86,7 +93,7 @@ SegmentedLineClass & SegmentedLineClass::operator = (const SegmentedLineClass &t
 	return * this;
 }
 
-// ?SegmentedLineClass::~SegmentedLineClass present-unmatched
+// ??1SegmentedLineClass@@UAE@XZ
 SegmentedLineClass::~SegmentedLineClass(void)
 {
 }
