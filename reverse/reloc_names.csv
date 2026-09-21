@@ -6,7 +6,7 @@ name,target_rva,target_size,source,notes
 ?bfmeDoOV@@YAXPAX000PAE@Z,0x00027FE0,534,Code/GameEngine/Source/Common/BfmeTwoHundredFiftySeven.cpp,reloc-derived;call-sites=1;identity=real
 ?_M_fill_insert@?$vector@PAXV?$allocator@PAX@_STL@@@_STL@@QAEXPAPAXIABQAX@Z,0x00029CA0,525,Code/GameEngine/Source/GameLogic/Object/Armor.cpp,reloc-derived;call-sites=3;identity=real
 ??$__uninitialized_copy@PBVAsciiString@@PAV1@@_STL@@YAPAVAsciiString@@PBV1@0PAV1@ABU__false_type@0@@Z,0x0002C4B2,38,Code/GameEngine/Source/Common/Thing/ThingTemplate.cpp,reloc-derived;call-sites=2;identity=real
-_bfmeRva0042CF86,0x0002CF86,10,Code/GameEngine/Source/Main/WinMain.cpp,reloc-derived;call-sites=1;identity=generated
+_bfmeRva0042CF86,0x0002CF86,291,Code/GameEngine/Source/Main/WinMain.cpp,reloc-derived;call-sites=1;identity=generated
 ?initFromINIMulti@INI@@QAEXPAXABVMultiIniFieldParse@@@Z,0x0002D7A8,10,Code/GameEngine/Source/Common/System/INI_initFromINI.cpp,reloc-derived;call-sites=2;identity=real
 ?getNextToken@INI@@QAEPBDPBD@Z,0x0002DF97,75,Code/GameEngine/Source/Common/System/INI_parseDurationReal.cpp,reloc-derived;call-sites=1;identity=real
 ?getNextAsciiString@INI@@QAE?AVAsciiString@@XZ,0x0002EA4F,233,Code/GameEngine/Source/GameLogic/Object/ObjectCreationList.cpp,reloc-derived;call-sites=3;identity=real
@@ -113,7 +113,7 @@ _realloc,0x0003E4B0,189,Code/Libraries/Source/WWVegas/WW3D2/Log_DX8_ErrorCode.cp
 ?reset@SimpleObjectIterator@@AAEXXZ,0x00291C20,100,Code/GameEngine/Source/GameLogic/Object/Update/StickyBombUpdate.cpp,reloc-derived;call-sites=1;identity=real
 ?handleRadiusCursor@InGameUI@@IAEXXZ,0x0029A661,203,Code/GameEngine/Source/GameClient/InGameUI.cpp,reloc-derived;call-sites=1;identity=real
 ?drawFloatingText@InGameUI@@IAEXXZ,0x0029D200,266,Code/GameEngine/Source/GameClient/InGameUI.cpp,reloc-derived;call-sites=1;identity=real
-?handleBuildPlacements@InGameUI@@IAEXXZ,0x002A21E1,10,Code/GameEngine/Source/GameClient/InGameUI.cpp,reloc-derived;call-sites=1;identity=real
+?handleBuildPlacements@InGameUI@@IAEXXZ,0x002A21E1,4212,Code/GameEngine/Source/GameClient/InGameUI.cpp,reloc-derived;call-sites=1;identity=real
 ?computeStatus@Weapon@@QBE?AW4WeaponStatus@@PA_N@Z,0x002CC422,187,Code/GameEngine/Source/Common/WeaponGetStatus.cpp,reloc-derived;call-sites=1;identity=real
 ?writeReportIfMismatched@BFMEDesyncCheck@@QAEXXZ,0x002CEA55,409,Code/GameEngine/Source/Common/GameEngineClientSubsystems.cpp,reloc-derived;call-sites=1;identity=real
 ?_M_copy@?$_Rb_tree@HU?$pair@$$CBHH@_STL@@U?$_Select1st@U?$pair@$$CBHH@_STL@@@2@U?$less@H@2@V?$allocator@U?$pair@$$CBHH@_STL@@@2@@_STL@@AAEPAU?$_Rb_tree_node@U?$pair@$$CBHH@_STL@@@2@PAU32@0@Z,0x002CF6CF,115,Code/Libraries/Source/WWVegas/WWLib/stlport_map_int_int_os.cpp,reloc-derived;call-sites=1;identity=real

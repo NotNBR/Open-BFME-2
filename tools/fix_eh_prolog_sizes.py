@@ -7,8 +7,8 @@ non-returning, so reverse/ghidra_functions.csv sized each such function at 10
 bytes: just those two instructions.
 
 A row is changed only if it is size 10, its call target is byte-for-byte
-__EH_prolog, and a trace of its body reaches a `ret` or a direct tail `jmp`
-before the next inventoried function. Everything else is left as is.
+__EH_prolog, and a trace of its body reaches a `ret`, a direct `jmp` or int3
+padding before the next inventoried function. Everything else is left as is.
 
 Usage:
   python3 tools/fix_eh_prolog_sizes.py [--root DIR] [--check]
@@ -94,13 +94,13 @@ def trace(image, disasm, rva, limit):
                 furthest = max(furthest, target)
         if ins.address < furthest:
             continue
+        # Nothing branches past here, so a ret or jmp (either direction) ends it.
         if ins.mnemonic in ("ret", "retn"):
             return end - rva
         if ins.mnemonic == "jmp":
-            if target is None:
-                return None           # indirect, e.g. a switch dispatch
-            if not rva <= target < end:
-                return end - rva      # tail call
+            return None if target is None else end - rva   # None: switch dispatch
+        if ins.mnemonic == "int3":
+            return ins.address - rva  # inter-function padding
     return None
 
 

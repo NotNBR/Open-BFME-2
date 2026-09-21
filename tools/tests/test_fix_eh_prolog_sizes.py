@@ -70,6 +70,24 @@ def test_no_end_before_the_next_function_is_left_alone():
     assert out == rows and changed == [] and skipped == 1
 
 
+def test_a_backward_jmp_ends_the_body():
+    """Nothing falls through a jmp, so an unlisted next function is not swallowed."""
+    body = (b"\x33\xC0"                # xor eax, eax
+            b"\x40"                    # inc eax
+            b"\xEB\xFD"                # jmp -3 (back to inc)
+            b"\x55\xC3")               # next, unlisted function
+    out, _, _ = repair(body, [(0x1000, 10, "f")] + NEXT)
+    assert out[0][1] == fix.PROLOG_CALL + 5
+
+
+def test_int3_padding_ends_the_body():
+    body = (b"\xE8\x00\x00\x00\x00"    # call (e.g. a no-return throw)
+            b"\xCC\xCC"                # padding
+            b"\x55\xC3")               # next, unlisted function
+    out, _, _ = repair(body, [(0x1000, 10, "f")] + NEXT)
+    assert out[0][1] == fix.PROLOG_CALL + 5
+
+
 def test_a_switch_dispatch_is_not_an_end():
     body = (b"\x33\xC0"                                   # xor eax, eax
             b"\xFF\x24\x85\x00\xC2\x40\x00"               # jmp [eax*4+0x40C200]

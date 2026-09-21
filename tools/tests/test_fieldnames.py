@@ -253,7 +253,7 @@ class _WideText:
 
 
 def test_utf16_text_is_not_an_entry():
-    """Accepted, its offset (0x200065) aborts the whole scan."""
+    """If accepted, its offset (0x200065) would abort the whole scan."""
     assert fieldnames.entry(_WideText(), 0x8cd27c) is None
 
 
@@ -271,9 +271,9 @@ def test_one_letter_keys_are_real_keys(tmp_path):
 def test_the_retail_scan_completes():
     image = fieldnames.Image(REPO / BINARY)
     found, _rejected = fieldnames.tables(image)
-    for rva, run in found:
-        fieldnames.check_offsets(rva, run)            # exits on a bad table
-    assert [e.key for rva, run in found if rva == 0x86c1b0 for e in run] == ["X", "Y", "Z"]
+    for rva, table in found:
+        fieldnames.check_offsets(rva, table)          # exits on a bad table
+    assert [e.key for rva, table in found if rva == 0x86c1b0 for e in table] == ["X", "Y", "Z"]
 
 
 def test_adjacent_tables_stay_apart(tmp_path):
