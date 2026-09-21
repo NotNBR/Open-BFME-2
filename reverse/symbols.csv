@@ -3617,3 +3617,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??$fill_n@PAGIG@_STL@@YAPAGPAGIABG@Z,0x0007E48F,address read from the REL32 displacement at a placed body; the body there is held under another instantiation name and the two folded
 ??0?$_Vector_base@GV?$allocator@G@_STL@@@_STL@@QAE@IABV?$allocator@G@1@@Z,0x004F62A4,address read from the REL32 displacement at a placed body; the body there is held under another instantiation name and the two folded
 ?setDisabledUntil@Object@@QAEXW4DisabledType@@I@Z,0x00290114,ZH Object method thiscall (DisabledType frame) called from setDisabled wrapper 0x291C9B with FOREVER and from EMPUpdate Chinook Spawn sites
+?clearDisabled@Object@@QAE_NW4DisabledType@@@Z,0x00291CAC,ZH Object method thiscall (DisabledType) returning Bool called from setScriptStatus paths with 9 and 10 and from Chinook Spectre Dock sites
