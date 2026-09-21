@@ -31,3 +31,10 @@ void parseHuman(INI *ini, void *instance, void *, const void *)
     INI::parseBool(ini, 0, &value, 0);
     ((SideFlags *)instance)->m_human = value;
 }
+
+void parseComputer(INI *ini, void *instance, void *, const void *)
+{
+    unsigned char value;
+    INI::parseBool(ini, 0, &value, 0);
+    ((SideFlags *)instance)->m_computer = value;
+}
