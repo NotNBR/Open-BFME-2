@@ -3627,3 +3627,5 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??$__uninitialized_copy@PAUUpgrades@CashHackSpecialPowerModuleData@@PAU12@@_STL@@YAPAUUpgrades@CashHackSpecialPowerModuleData@@PAU12@00ABU__false_type@0@@Z,0x003FA3E5
 ??$__uninitialized_fill_n@PAUUpgrades@CashHackSpecialPowerModuleData@@IU12@@_STL@@YAPAUUpgrades@CashHackSpecialPowerModuleData@@PAU12@IABU12@ABU__false_type@0@@Z,0x003FA40B
 ?allocate@?$allocator@UUpgrades@CashHackSpecialPowerModuleData@@@_STL@@QBEPAUUpgrades@CashHackSpecialPowerModuleData@@IPBX@Z,0x00523D6C
+??$_M_allocate_and_copy@PBW4ScienceType@@@?$vector@W4ScienceType@@V?$allocator@W4ScienceType@@@_STL@@@_STL@@IAEPAW4ScienceType@@IPBW42@0@Z,0x0031B9EB,member-call target read from the retail REL32 at 0x0021C250 in the vector assign body; dup row holds the address
+??$__copy_ptrs@PBW4ScienceType@@PAW41@@_STL@@YAPAW4ScienceType@@PBW41@0PAW41@ABU__false_type@0@@Z,0x0025BF40,by-reference tag call target read from the retail REL32s at 0x0021C283 and 0x0021C298 in the vector assign body; by-value twin rowed
