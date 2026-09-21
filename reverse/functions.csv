@@ -14179,3 +14179,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?collectMsgStats@StatsCollector@@QAEXPBVGameMessage@@@Z,,0x00437607,45,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,
 ?Allocate@AptValueVector@@SAPAXH@Z,,0x006CC020,17,Code/Libraries/Source/Apt/AptValue/AptValueVector.cpp,matched,Vector pool allocation entry; forwards size to global Apt pool allocator pin
 ?Reserve@EAStringC@@QAEXH@Z,,0x006D3760,127,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string buffer allocator; unsigned bound checks and fresh pool block
+_chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,

@@ -3228,7 +3228,6 @@ _callCclosure,0x0074D860
 _call_binTM,0x0074E920
 _chatGetUserID,0x006A15F0,address read from the REL32 displacement at placed _peerGetUserID 0x00698A40
 _chatLeaveChannel,0x006A18B0,
-_chatRetryWithNickA,0x006A33C0,address read from the REL32 displacement at a placed body
 _check,0x00753890
 _check_match,0x00753960
 _chunk,0x00756110

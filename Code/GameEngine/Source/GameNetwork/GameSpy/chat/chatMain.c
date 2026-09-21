@@ -878,47 +878,35 @@ CHAT chatConnectPreAuthW(const unsigned short * serverAddress,
 void chatRetryWithNickA(CHAT chat,
 					   const char * nick)
 {
+	extern __declspec(dllimport) char * __cdecl strncpy(char * dest, const char * src, unsigned int len);
 	int validateNick;
-	CONNECTION;
-	
-	// Are we already connected?
-	////////////////////////////
+	ciConnection *connection = (ciConnection *)chat;
+
 	if(connection->connected)
 		return;
 
-	// A NULL nick means stop retrying and disconnect
-	if (nick == NULL)
+	if(nick == NULL)
 	{
 		connection->connecting = CHATFalse;
 
-		// Call the callback.  (Failed to connect)
-		/////////////////////
 		if(connection->connectCallback != NULL)
-			connection->connectCallback(chat, CHATFalse, CHAT_NICK_ERROR, connection->connectParam);
+			connection->connectCallback(chat, CHATFalse, 1,
+				connection->connectParam);
 
 		return;
 	}
 
-	// Copy the new nick.
-	/////////////////////
-	strzcpy(connection->nick, nick, MAX_NICK);
-#ifdef GSI_UNICODE // store a unicode version of the nick
-	AsciiToUCS2String(connection->nick, connection->nickW);
-#endif
+	strncpy(connection->nick, nick, 64);
+	connection->nick[63] = '\0';
 
-	// Check for a bad nick.
-	////////////////////////
 	validateNick = ciNickIsValid(nick);
-	if (validateNick != CHAT_NICK_OK)
+	if(!validateNick)
 	{
-		ciNickError(chat, validateNick, nick, 0, NULL);
+		ciNickError(chat, 1, nick, 0, NULL);
 		return;
 	}
 
-	// Send the new nick.
-	/////////////////////
 	ciSocketSendf(&connection->chatSocket, "NICK :%s", nick);
-
 }
 #ifdef GSI_UNICODE
 void chatRetryWithNickW(CHAT chat,
