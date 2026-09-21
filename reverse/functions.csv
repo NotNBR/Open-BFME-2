@@ -14525,3 +14525,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?orderSlavesToAttackPosition@SpawnBehavior@@UAEXPBUCoord3D@@HW4CommandSourceType@@@Z,,0x00460757,73,Code/GameEngine/Source/GameLogic/Object/Behavior/SpawnBehavior_orderSlavesToAttackPosition.cpp,matched,
 ?setProducer@Object@@QAEXPAV1@@Z,,0x0028AFD2,21,Code/GameEngine/Source/GameLogic/Object/ObjectSetProducer.cpp,matched,Producer-ID setter; null stores 0 else arg ID at plus 0x74 into plus 0x78; proven by SpawnBehavior onDie push-0 call plus 31 raw callers; sibling at 0x28AFE7 writes plus 0x7C
 ?buildFieldParse@W3DModelDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x000C9240,17,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/Draw/W3DModelDrawModuleDataBuildFieldParse.cpp,matched,
+??0OCLUpdateModuleData@@QAE@XZ,,0x0049B355,26,Code/GameEngine/Source/GameLogic/Object/Update/OCLUpdateModuleDataCtor.cpp,matched,
