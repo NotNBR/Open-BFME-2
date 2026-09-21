@@ -53,6 +53,8 @@ public:
 	EAStringC &clear();
 	void Reserve(int size);
 	void Assign(const char *text);
+	int GetAt(int index) const;
+	bool IsEmpty() const;
 };
 
 // Retail empty singleton at 0x00DDC020. The linker never sees this TU's
@@ -166,4 +168,20 @@ EAStringC::EAStringC(const char *text)
 {
 	m_pData = 0;
 	Assign(text);
+}
+
+// ?GetAt@EAStringC@@QBEHH@Z, retail 0x006D3020 (13B). Sign-extending
+// character fetch from the internal buffer (the movsx proves an int
+// result, not a char one). No calls or data references.
+int EAStringC::GetAt(int index) const
+{
+	return reinterpret_cast<char *>(m_pData)[sizeof(StringDataC) + index];
+}
+
+// ?IsEmpty@EAStringC@@QBE_NXZ, retail 0x006D2F30 (14B). Tests whether
+// the string is the shared empty singleton by pointer comparison; the
+// xor-then-sete shape is the canonical bool return.
+bool EAStringC::IsEmpty() const
+{
+	return m_pData == &g_eaEmptyStringData;
 }

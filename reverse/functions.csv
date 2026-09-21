@@ -14184,3 +14184,5 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?Set_Texture@BfmeMapPictureTexture@@QAEXPAVTextureClass@@@Z,,0x000EF87B,36,Code/GameEngine/Source/GameClient/GUI/BfmeMapPictureTextureCtor.cpp,matched,
 ??0EAStringC@@QAE@PBD@Z,,0x006D4C80,25,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA string C-string ctor; null data root then delegates to pinned Assign
 ?SetString@AptValue@@QAEXPBD@Z,,0x006CBF70,94,Code/Libraries/Source/Apt/AptValue/AptValueSetString.cpp,matched,AptValue string member setter at plus 8 via guarded temp; plus 8 proven by assignment call
+?GetAt@EAStringC@@QBEHH@Z,,0x006D3020,13,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA string sign-extending character fetch; int result per movsx
+?IsEmpty@EAStringC@@QBE_NXZ,,0x006D2F30,14,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA string empty test by singleton pointer comparison
