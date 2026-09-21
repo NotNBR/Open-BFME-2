@@ -3698,3 +3698,5 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??0RunOffMapBehaviorModuleData@@QAE@XZ,0x00254ECE,sole raw E8 caller is factory 0x254F24; vtable BF3298 plus size 0x1C plus rowed proc 0x46216A prove ModuleData ctor
 ??0GateOpenAndCloseBehavior@@QAE@PAVThing@@PBVModuleData@@@Z,0x0049889C
 ??_7GateProxyBehaviorModuleData@@6B@,0x00BEF380
+?buildFieldParse@WanderAIUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,0x0024F1F2,chained link: base proc 0x2638FF plus table 0xBEF580 (WildBeast at +0x64 plus ConditionForEntry at +0x68 plus Selectable at +0x6C plus WanderDistance at +0x70); pushed as proc VA by ModuleData factory 0x24F248
+??0WanderAIUpdateModuleData@@QAE@XZ,0x0024F1CD,frameless ctor over base 0x26E5D7 (OR-minus-one at +0x68 plus vtable 0x00C4B6C8 plus WildBeast-false at +0x64 plus Selectable-true at +0x6C plus WanderDistance-30 at +0x70); sole raw caller is ModuleData factory 0x24F248 which news 0x74
