@@ -32,3 +32,22 @@ void SpecialPowerModuleData::buildFieldParse(MultiIniFieldParse &parse)
 {
 	parse.add(reinterpret_cast<const FieldParse *>(0x00C4E628), 0);
 }
+
+class DevastateSpecialPowerModuleData
+{
+public:
+	static void buildFieldParse(MultiIniFieldParse &parse);
+};
+
+// ?buildFieldParse@DevastateSpecialPowerModuleData@@SAXAAVMultiIniFieldParse@@@Z,
+// retail 0x004C81C8 (27 bytes): base-table call above plus the Devastate
+// table at 0x00C5E3D0 (Radius, FX, TreeValueMultiplier, TreeValueTotalCap,
+// FireWeapon at +0x7C through +0x8C). Four of five fields match BFME1's
+// DevastateSpecialPower table verbatim (Radius, FX, TreeValueMultiplier,
+// TreeValueTotalCap); BFME2 appends FireWeapon. The owning factory at
+// 0x00252653 pushes this proc's VA.
+void DevastateSpecialPowerModuleData::buildFieldParse(MultiIniFieldParse &parse)
+{
+	SpecialPowerModuleData::buildFieldParse(parse);
+	parse.add(reinterpret_cast<const FieldParse *>(0x00C5E3D0), 0);
+}
