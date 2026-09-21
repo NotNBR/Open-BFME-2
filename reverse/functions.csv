@@ -14489,3 +14489,5 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?friend_newModuleData@DynamicGeometryInfoUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252906,81,Code/GameEngine/Source/GameLogic/Object/Update/DynamicGeometryInfoUpdateFriendNew.cpp,matched,
 ?friend_newModuleData@BattlePlanUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252C64,81,Code/GameEngine/Source/GameLogic/Object/Update/BattlePlanUpdateFriendNew.cpp,matched,
 ?Clear@BfmeRva00166110@@QAEXXZ,,0x001663C0,33,Code/Libraries/Source/WWVegas/WW3D2/HTreeClassFree.cpp,matched,Plus0x1C vector clear via copy helper at 0x161350; called from Free
+?friend_newModuleData@RepairDockUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252D9A,81,Code/GameEngine/Source/GameLogic/Object/Update/RepairDockUpdateFriendNew.cpp,matched,
+?friend_newModuleData@SpyVisionUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252F74,84,Code/GameEngine/Source/GameLogic/Object/Update/SpyVisionUpdateFriendNew.cpp,matched,
