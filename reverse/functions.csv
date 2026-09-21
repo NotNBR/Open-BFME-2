@@ -14522,3 +14522,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?getCanAnySlavesUseWeaponAgainstTarget@SpawnBehavior@@UAE?AW4CanAttackResult@@W4AbleToAttackType@@PBVObject@@PBUCoord3D@@W4CommandSourceType@@@Z,,0x0045F93D,97,Code/GameEngine/Source/GameLogic/Object/Behavior/SpawnBehavior_getCanAnySlavesUseWeaponAgainstTarget.cpp,matched,
 ?orderSlavesToGoIdle@SpawnBehavior@@UAEXW4CommandSourceType@@@Z,,0x004607A0,65,Code/GameEngine/Source/GameLogic/Object/Behavior/SpawnBehavior_orderSlavesToGoIdle.cpp,matched,
 ?orderSlavesToAttackTarget@SpawnBehavior@@UAEXPAVObject@@HW4CommandSourceType@@@Z,,0x0046070E,73,Code/GameEngine/Source/GameLogic/Object/Behavior/SpawnBehavior_orderSlavesToAttackTarget.cpp,matched,
+?orderSlavesToAttackPosition@SpawnBehavior@@UAEXPBUCoord3D@@HW4CommandSourceType@@@Z,,0x00460757,73,Code/GameEngine/Source/GameLogic/Object/Behavior/SpawnBehavior_orderSlavesToAttackPosition.cpp,matched,
