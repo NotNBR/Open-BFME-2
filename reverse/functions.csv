@@ -14499,3 +14499,8 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?friend_newModuleData@SupplyWarehouseDockUpdateModuleData@@SAPAVModuleData@@PAVINI@@@Z,,0x0024F02F,81,Code/GameEngine/Source/GameLogic/Object/Update/SupplyWarehouseDockUpdateModuleDataFriendNew.cpp,matched,
 ?friend_newModuleData@AIUpdateInterface@@SAPAVModuleData@@PAVINI@@@Z,,0x002527F1,84,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterfaceFriendNew.cpp,matched,
 ?getSlotNum@GameInfo@@QBEHVAsciiString@@@Z,,0x0040009A,140,Code/GameEngine/Source/GameNetwork/GameInfoGetSlotNum.cpp,matched,BFME1 GameInfo_getSlotNum_Thunk donor with m_inGame at +0x10 and callee-released by-value Unicode temp
+?buildFieldParse@CleanupHazardUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004C9663,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
+?buildFieldParse@PilotFindVehicleUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004C99C3,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
+?buildFieldParse@DynamicGeometryInfoUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004C8FD7,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
+?buildFieldParse@BattlePlanUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004CBBB4,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
+?buildFieldParse@RepairDockUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004CC583,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
