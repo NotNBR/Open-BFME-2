@@ -34,3 +34,4 @@ void cls::buildFieldParse(MultiIniFieldParse &parse) \
 }
 
 FIELD_PROC(GrantUpgradeCreateModuleData, 0x00C594A0, GrantUpgradeTable)
+FIELD_PROC(ObjectCreationUpgradeModuleData, 0x00C57708, ObjectCreationTable)
