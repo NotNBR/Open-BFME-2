@@ -14181,3 +14181,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?Reserve@EAStringC@@QAEXH@Z,,0x006D3760,127,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA refcounted-string buffer allocator; unsigned bound checks and fresh pool block
 _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,
 ?_M_create_node@?$list@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@IAEPAU?$_List_node@VUnicodeString@@@2@ABVUnicodeString@@@Z,,0x00433B1E,34,Code/Libraries/Source/WWVegas/WWLib/stlport_list_unicodestring_create_node.cpp,matched,Wide list _M_create_node via bfmelist shim (forceinline TRY-free like int TU precedent); frameless 34B allocate plus _Construct
+?Set_Texture@BfmeMapPictureTexture@@QAEXPAVTextureClass@@@Z,,0x000EF87B,36,Code/GameEngine/Source/GameClient/GUI/BfmeMapPictureTextureCtor.cpp,matched,

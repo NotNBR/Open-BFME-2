@@ -19,9 +19,14 @@ class TextureClass
 {
 public:
 	TextureClass(const char *filename);
+	void Add_Ref() { ++m_numRefs; }
+	void Release_Ref();
 
-private:
-	char m_pad[0x3C];
+public:
+	Int m_unk00;
+	unsigned short m_numRefs;
+	unsigned short m_flags;
+	char m_padTail[0x3C - 8];
 };
 
 template <typename T>
@@ -32,7 +37,7 @@ public:
 	RefCountPtr &operator=(T *ptr);
 	~RefCountPtr();
 
-private:
+public:
 	T *m_ptr;
 };
 
@@ -40,13 +45,27 @@ class BfmeMapPictureTexture
 {
 public:
 	BfmeMapPictureTexture(const char *filename);
+	void Set_Texture(TextureClass *texture);
 
-private:
+public:
 	RefCountPtr<TextureClass> m_texture;
 };
+
+// ?Set_Texture@BfmeMapPictureTexture@@QAEXPAVTextureClass@@@Z
+void BfmeMapPictureTexture::Set_Texture(TextureClass *texture)
+{
+	if (texture != NULL)
+	{
+		texture->Add_Ref();
+		if (m_texture.m_ptr != NULL)
+			m_texture.m_ptr->Release_Ref();
+		m_texture.m_ptr = texture;
+		texture->m_flags |= 0x100;
+	}
+}
 
 // ??0BfmeMapPictureTexture@@QAE@PBD@Z
 BfmeMapPictureTexture::BfmeMapPictureTexture(const char *filename)
 {
-	m_texture = new TextureClass(filename);
+	Set_Texture(new TextureClass(filename));
 }
