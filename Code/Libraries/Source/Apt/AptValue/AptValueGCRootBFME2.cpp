@@ -49,3 +49,5 @@ void BfmeAptValue006DCD20::decrementGCRootCount()
     }
     if (flags.gcRootCount > 0) --flags.gcRootCount;
 }
+
+unsigned int BfmeAptValue006DCD20::getGCRootCount() const { return flags.gcRootCount; }
