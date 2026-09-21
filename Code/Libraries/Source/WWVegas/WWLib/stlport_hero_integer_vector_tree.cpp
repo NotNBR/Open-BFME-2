@@ -10,3 +10,6 @@ typedef _STL::vector<unsigned int> HeroVector;
 typedef _STL::pair<const int, HeroVector> HeroValue;
 typedef _STL::_Rb_tree<int, HeroValue, _STL::_Select1st<HeroValue>, _STL::less<int>, _STL::allocator<HeroValue> > HeroTree;
 template HeroTree::_Rb_tree(const HeroTree &);
+
+// Retail21DD0E calls the held typed clear21DB91 and copy21DC9B.
+template HeroTree &HeroTree::operator=(const HeroTree &);

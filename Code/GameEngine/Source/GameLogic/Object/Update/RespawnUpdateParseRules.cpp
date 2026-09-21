@@ -1,0 +1,117 @@
+// cl: /O1 /Oy- /DNDEBUG /MD /GX- /Oi- /arch:SSE
+// PC RespawnUpdate::iniParseDefaultRule; exact name in retail diagnostics.
+// Preview RespawnRules crosswalk selected the family; PC C56270 independently
+// registers this callback with the rules tree at module offset10C.
+// No clean BFME1 or GeneralsMD RespawnUpdate parser body was found. Reuse the
+// existing INI parser/exception idioms and STLport tree semantics; reconstruct
+// the sequential field checks as real C++ from the full524B PC body.
+// BFME2RespawnRuleTree/RespawnRule/RespawnInsertResult are descriptive facades,
+// not asserted original type spellings. The tree starts with its header ptr;
+// node+10 is the unsigned level key. Find357180 is the already recovered
+// unsigned STL tree lookup. Insert4AFB2B is a35B pair-copy wrapper around
+// unique insertion4AF4A6; it returns the node and bool (true iff inserted).
+// Throw-info anchor refers to the existing retail INIException chain CFE2FC.
+#include <string.h>
+class INI {
+public:
+    const char *getNextToken(const char *);
+    const char *getNextTokenOrNull(const char *);
+    const char *getSepsColon() const { return colon; }
+    static void parseBool(INI *, void *, void *, const void *);
+    static void parseInt(INI *, void *, void *, const void *);
+    static void dup_002EF72(INI *, void *, void *, const void *);
+    static void parsePercentToReal(INI *, void *, void *, const void *);
+    char unused[0x420]; const char *colon;
+};
+extern "C" __declspec(dllimport) int __cdecl _strcmpi(const char *, const char *);
+struct INIException { char *message; int code; };
+extern "C" void rva002f681_fill(void *, int, const char *, ...);
+__declspec(noreturn) void __stdcall _CxxThrowException(void *, void *);
+struct RespawnThrowInfoAnchor { int a,b,c,d; };
+static const RespawnThrowInfoAnchor respawnThrowInfoAnchor = {0,0,0,0};
+struct RespawnRule {
+    unsigned level, cost; int time; float health; bool autoSpawn;
+    RespawnRule(unsigned ruleLevel=1):level(ruleLevel),cost(0),time(0),health(1.0f),autoSpawn(false) {}
+};
+struct RespawnInsertResult { void *node; bool inserted; };
+struct BFME2RespawnRuleTree {
+    void *sentinel;
+    void *find(const unsigned &) const;
+    RespawnInsertResult insert(const RespawnRule &);
+};
+class RespawnUpdate {
+public:
+    static void iniParseNewRuleForLevel(INI *, void *, void *, const void *);
+    static void iniParseDefaultRule(INI *, void *, void *, const void *);
+};
+#define THROW0(message) { INIException e; rva002f681_fill(&e,3,message); _CxxThrowException(&e,(void *)&respawnThrowInfoAnchor); }
+#define THROW1(message,token) { INIException e; rva002f681_fill(&e,3,message,token); _CxxThrowException(&e,(void *)&respawnThrowInfoAnchor); }
+#define FIELD(key,diagnostic,parser,member) \
+    token=ini->getNextToken(ini->getSepsColon()); \
+    if(!token || _strcmpi(token,key)!=0) \
+        THROW1("RespawnUpdate::iniParseDefaultRule -- RespawnRules entry expecting '" diagnostic "' entry. You specified %s.",token) \
+    if(strcmp(token,key)!=0) \
+        THROW1("RespawnUpdate::iniParseDefaultRule -- RespawnRules entry for '" diagnostic "' is case sensitive. You specified %s.",token) \
+    INI::parser(ini,instance,&rule.member,0);
+void RespawnUpdate::iniParseDefaultRule(INI *ini, void *instance, void *store, const void *) {
+    RespawnRule rule;
+    BFME2RespawnRuleTree *rules=(BFME2RespawnRuleTree *)store;
+    if(rules->find(rule.level)!=rules->sentinel)
+        THROW0("RespawnUpdate::iniParseDefaultRule -- Duplicate RespawnRules entry.")
+    const char *token;
+    FIELD("AutoSpawn","AutoSpawn:Yes' or 'AutoSpawn:No",parseBool,autoSpawn)
+    FIELD("Cost","Cost",dup_002EF72,cost)
+    FIELD("Time","Time",parseInt,time)
+    FIELD("Health","Health",parsePercentToReal,health)
+    rules->insert(rule);
+}
+
+// Per-level sibling: retail diagnostics and PC C56280 identify RVA4AFE6C.
+// Preserve literal/logic quirks: only AutoSpawn uses case-insensitive dispatch;
+// Health repeats the Cost duplicate error; the Time duplicate format has two
+// %d conversions but retail supplies one value. Unknown keys are skipped.
+#define THROW2(message,a,b) { INIException e; rva002f681_fill(&e,3,message,a,b); _CxxThrowException(&e,(void *)&respawnThrowInfoAnchor); }
+void RespawnUpdate::iniParseNewRuleForLevel(INI *ini, void *instance, void *store, const void *) {
+    RespawnRule defaultRule;
+    BFME2RespawnRuleTree *rules=(BFME2RespawnRuleTree *)store;
+    void *node=rules->find(defaultRule.level);
+    if(node==rules->sentinel) THROW0("RespawnUpdate::iniParseNewRuleForLevel -- You cannot parse a 'RespawnEntry' before 'RespawnRules'. Please add a 'RespawnRules' -- which represents level 1.")
+    defaultRule=*(const RespawnRule *)((const char *)node+0x10);
+    RespawnRule rule(0);
+    const char *token=ini->getNextToken(ini->getSepsColon());
+    if(!token || _strcmpi(token,"Level")!=0) THROW1("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry expecting 'Level' entry. You specified %s.",token)
+    if(strcmp(token,"Level")!=0) THROW1("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry for 'Level' is case sensitive. You specified %s.",token)
+    INI::dup_002EF72(ini,instance,&rule.level,0);
+    if(rules->find(rule.level)!=rules->sentinel) THROW1("RespawnUpdate::iniParseNewRuleForLevel -- Multiple 'RespawnEntry' with the same level of %d. You may only have one!",rule.level)
+    rule.autoSpawn=defaultRule.autoSpawn;
+    rule.cost=defaultRule.cost;
+    rule.time=defaultRule.time;
+    rule.health=defaultRule.health;
+    token=ini->getNextTokenOrNull(ini->getSepsColon());
+    bool gotAuto=false,gotCost=false,gotTime=false,gotHealth=false;
+    while(token) {
+        if(_strcmpi(token,"AutoSpawn")==0) {
+            if(gotAuto) THROW1("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry Level:%d entry for 'AutoSpawn:Yes' or 'AutoSpawn:No' exists multiple times. Please remove one!",rule.level)
+            if(strcmp(token,"AutoSpawn")!=0) THROW2("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry Level:%d entry for 'AutoSpawn:Yes' or 'AutoSpawn:No' is case sensitive. You specified %s.",rule.level,token)
+            INI::parseBool(ini,instance,&rule.autoSpawn,0);
+            gotAuto=true;
+        } else if(strcmp(token,"Cost")==0) {
+            if(gotCost) THROW1("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry Level:%d entry for 'Cost' exists multiple times. Please remove one!",rule.level)
+            if(strcmp(token,"Cost")!=0) THROW2("RespawnUpdate::iniParseNewRuleForLevel -- RespawnRules Level:%d entry for 'Cost' is case sensitive. You specified %s.",rule.level,token)
+            INI::dup_002EF72(ini,instance,&rule.cost,0);
+            gotCost=true;
+        } else if(strcmp(token,"Time")==0) {
+            if(gotTime) THROW1("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry Level:%d Level:%d entry for 'Cost' exists multiple times. Please remove one!",rule.level)
+            if(strcmp(token,"Time")!=0) THROW2("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry Level:%d entry for 'Time' is case sensitive. You specified %s.",rule.level,token)
+            INI::parseInt(ini,instance,&rule.time,0);
+            gotTime=true;
+        } else if(strcmp(token,"Health")==0) {
+            if(gotHealth) THROW1("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry Level:%d entry for 'Cost' exists multiple times. Please remove one!",rule.level)
+            if(strcmp(token,"Health")!=0) THROW2("RespawnUpdate::iniParseNewRuleForLevel -- RespawnEntry Level:%d entry for 'Health' is case sensitive. You specified %s.",rule.level,token)
+            INI::parsePercentToReal(ini,instance,&rule.health,0);
+            gotHealth=true;
+        }
+        token=ini->getNextTokenOrNull(ini->getSepsColon());
+    }
+    rules->insert(rule);
+}

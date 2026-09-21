@@ -13,19 +13,21 @@ Goal: Source code that rebuilds BFME 2's engine binary (`game.dat`) byte-for-byt
 
 ## Status
 
-**10.86% of the game's retail `.text` has exact byte coverage** — 873,916 C++ bytes
-plus 5,204 ASM-only bytes. Source-backed reconstruction accounts for 10.98% of
-real code, 2,040 bytes of which are the first prebuilt-library rows: retail
-statically links Visual C++ 7.1's own support libraries, and `tools/lib_probe.py`
-places their members without needing an attached row to anchor a window. The
-vendored DirectX archives do **not** place — BFME 2 links a later SDK than the
-Summer 2003 `d3dx9`/`dxerr9` kept here for BFME 1. Flag calibration is proven:
-756 Open-BFME-1 bodies transfer to `game.dat` verbatim, so the reference sweeps
-are wide open.
+**16.16% of the game's retail `.text` has exact byte coverage** — 1,299,292 C++
+bytes plus 9,037 ASM-only bytes. Source-backed reconstruction accounts for
+12.77% of real code: 1,013,009 bytes of C++ we wrote and 5,878 bytes from
+attached prebuilt-library rows. Vendored library source contributes 270,795
+bytes, while generator-written C++ contributes 15,488 bytes. Retail statically
+links Visual C++ 7.1's own support libraries, and `tools/lib_probe.py` places
+their members without needing an attached row to anchor a window. The vendored
+DirectX archives do **not** place — BFME 2 links a later SDK than the Summer
+2003 `d3dx9`/`dxerr9` kept here for BFME 1. Flag calibration is proven: 756
+Open-BFME-1 bodies transfer to `game.dat` verbatim, so the reference sweeps are
+wide open.
 
 ## Roadmap
 
-* [ ] BFME 2 Source Code (10.86%)
+* [ ] BFME 2 Source Code (16.16%)
 * [ ] 60/120 FPS
 * [ ] Memory fix
 * [ ] Better crash logs

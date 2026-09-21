@@ -1,0 +1,16 @@
+// cl: /O1 /MD /D_CRTIMP= /D_STLP_USE_STATIC_LIB /D_STLP_NO_EXCEPTIONS /Ireference/shims/bfmealloc
+// stlport
+// BFME2's 24-byte StringRecord vector allocation/copy helper at RVA 0xBBCEF.
+class AsciiString { public: AsciiString(const AsciiString &); __forceinline ~AsciiString() { releaseBuffer(); } protected: void releaseBuffer(); private: void *m_data; };
+struct BfmeStringRecord000B9534 {
+    AsciiString text;
+    unsigned char flag;
+    unsigned int word0, word1, word2, word3;
+    BfmeStringRecord000B9534();
+    BfmeStringRecord000B9534(const BfmeStringRecord000B9534 &o)
+      : text(o.text), flag(o.flag), word0(o.word0), word1(o.word1), word2(o.word2), word3(o.word3) {}
+};
+#include <memory>
+template void _STL::_Construct<BfmeStringRecord000B9534,BfmeStringRecord000B9534>(BfmeStringRecord000B9534*,const BfmeStringRecord000B9534&);
+#include <vector>
+template class _STL::vector<BfmeStringRecord000B9534, _STL::allocator<BfmeStringRecord000B9534> >;

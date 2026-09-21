@@ -1,4 +1,4 @@
-// cl: /O1 /EHsc /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
+// cl: /O1 /EHs /D_STLP_NO_EXCEPTIONS /MD /D_STLP_USE_STATIC_LIB /D_STLP_USE_MALLOC /D_CRTIMP= /D_BFME_RETAIL_TREE_INSERT_LAYOUT
 // stlport
 // BFME2 STLport tree: AsciiString key and opaque twelve-byte mapped value.
 // hint 0x301883 -> insert 0x301384 -> _M_insert 0x3012F0 -> node 0x3012CE.
@@ -40,3 +40,9 @@ template TreeHint003012F0::iterator TreeHint003012F0::insert_unique(TreeHint0030
 // The map wrapper directly calls this tree's verified hinted insertion.
 typedef _STL::map<AsciiString,TreeHintPayload003012F0,_STL::less<AsciiString >,_STL::allocator<TreeHintPair003012F0> > MapInsert00301883;
 template MapInsert00301883::iterator MapInsert00301883::insert(MapInsert00301883::iterator, const TreeHintPair003012F0 &);
+
+// Clone301BBF calls this proven node constructor3012CE before copying color
+// and clearing both child links; copy301F9B belongs to the same typed chain.
+template TreeHint003012F0::_Link_type TreeHint003012F0::_M_clone_node(TreeHint003012F0::_Link_type);
+template TreeHint003012F0::_Link_type TreeHint003012F0::_M_copy(TreeHint003012F0::_Link_type, TreeHint003012F0::_Link_type);
+template TreeHint003012F0::_Rb_tree(const TreeHint003012F0 &);

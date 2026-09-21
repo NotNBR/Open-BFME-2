@@ -21,3 +21,6 @@ template Tree0032CB55::iterator Tree0032CB55::insert_unique(Tree0032CB55::iterat
 // The map wrapper directly calls this tree's verified hinted insertion.
 typedef _STL::map<TreeKey00206BCF,TreeOpaqueMapped0032CB55,_STL::less<TreeKey00206BCF>,_STL::allocator<TreePair0032CB55> > Map0032CB55;
 template Map0032CB55::iterator Map0032CB55::insert(Map0032CB55::iterator, const TreePair0032CB55 &);
+
+// Retail0x32C4A4 uses the proven two-AsciiString comparator206BCF.
+template Tree0032CB55::_Link_type Tree0032CB55::_M_lower_bound(const TreeKey00206BCF &) const;
