@@ -25,6 +25,13 @@ struct SideFlags
     int m_forcePlayerTeam;
 };
 
+void parseLoadAIScripts(INI *ini, void *instance, void *, const void *)
+{
+    unsigned char value;
+    INI::parseBool(ini, 0, &value, 0);
+    ((SideFlags *)instance)->m_loadAIScripts = value;
+}
+
 void parseHuman(INI *ini, void *instance, void *, const void *)
 {
     unsigned char value;
