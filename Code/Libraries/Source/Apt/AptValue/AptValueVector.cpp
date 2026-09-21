@@ -63,3 +63,15 @@ AptValueNameEntry::AptValueNameEntry(const EAStringC &name, int value) :
 	m_value(value)
 {
 }
+
+// ??0AptValueNameEntry@@QAE@XZ, retail 0x006CC000 (19B). Default entry
+// constructor: resets the name through the rowed EAStringC clear and
+// zeroes the value. Retail leaves the owning vector's array pointer to
+// the caller; array construction drives this body per element through
+// the 0x00629512 helper, which is why it also serves as the element
+// initializer callback.
+AptValueNameEntry::AptValueNameEntry()
+{
+	m_name.clear();
+	m_value = 0;
+}
