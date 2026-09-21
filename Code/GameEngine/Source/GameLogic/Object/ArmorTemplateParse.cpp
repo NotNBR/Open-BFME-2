@@ -42,7 +42,7 @@ template <typename T> struct hash
 class AsciiString
 {
 public:
-	AsciiString();
+	AsciiString() { m_text = NULL; }
 	~AsciiString();
 	AsciiString &operator=(const AsciiString &that);
 
@@ -68,6 +68,7 @@ enum
 class ArmorTemplate
 {
 public:
+	ArmorTemplate(const AsciiString &name);
 	static void parseDamageScalar(INI *ini, void *instance, void *store, const void *userData);
 	void clear();
 
@@ -80,6 +81,13 @@ private:
 };
 
 typedef char AssertArmorTemplateSize[sizeof(ArmorTemplate) == 0x7C ? 1 : -1];
+
+// ??0ArmorTemplate@@QAE@ABVAsciiString@@@Z
+ArmorTemplate::ArmorTemplate(const AsciiString &name) : m_name()
+{
+	clear();
+	m_name = name;
+}
 
 // ?parseDamageScalar@ArmorTemplate@@SAXPAVINI@@PAX1PBX@Z
 void ArmorTemplate::parseDamageScalar(INI *ini, void *instance, void * /*store*/, const void * /*userData*/)
