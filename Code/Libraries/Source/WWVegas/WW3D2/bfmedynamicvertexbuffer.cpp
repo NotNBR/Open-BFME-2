@@ -761,3 +761,12 @@ void BfmeDynamicNativeVB::Copy(const Vector3 *loc, const Vector3 *norm, const Ve
 		}
 	}
 }
+
+// Retail 0x001718E0, 21 bytes. MeshModelClass instance-list walk: a null
+// model yields the global list head, otherwise the +0xB8 next link.
+class MeshModelClass { public: char m_pad00[0xB8]; MeshModelClass *m_next; };
+MeshModelClass *rva001718E0GetNextMeshModel(MeshModelClass *model)
+{
+ if(!model) return *(MeshModelClass**)0x00DF6F90;
+ return model->m_next;
+}
