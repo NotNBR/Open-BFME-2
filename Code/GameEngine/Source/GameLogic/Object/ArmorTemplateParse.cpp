@@ -16,9 +16,14 @@
 // which is ArmorStore::parseArmorDefinition below; its field table names the
 // DamageScalar verb (0x001D8F02) whose body is a tokenize-scale-store one-liner.
 
+// string.h (via the STL headers below) declares _strcmpi without dllimport
+// because this TU builds with /D_CRTIMP=; rename that decl away so the real
+// import decl after the includes is the only _strcmpi the TU sees.
+#define _strcmpi _stlport_hides_strcmpi
 #include <hash_map>
 #include <vector>
 #include <cstddef>
+#undef _strcmpi
 
 #define NULL 0
 
@@ -52,11 +57,25 @@ private:
 
 extern AsciiString TheDefaultArmorTemplateName; // zeroed static at 0x009E0878
 
+// msvcr71!_strcmpi through the IAT (retail slot 0xBBA518), not _stricmp.
+// The STL headers above declare it without dllimport, so the shield at the
+// top renamed that decl away and this import decl is the only one in force.
+extern "C" __declspec(dllimport) int __cdecl _strcmpi(const char *a, const char *b);
+
+// Retail damage-name table at 0x009B8968 (27 entries: FORCE, CRUSH, SLASH,
+// PIERCE, SIEGE, STRUCTURAL, FLAME, HEALING, UNRESISTABLE, WATER, PENALTY,
+// FALLING, TOPPLING, REFLECTED, PASSENGER, MAGIC, CHOP, HERO, SPECIALIST,
+// URUK, HERO_RANGED, FLY_INTO, UNDEFINED, LOGICAL_FIRE, CAVALRY,
+// CAVALRY_RANGED, POISON); the push is DIR32-masked, so only the reference
+// matters, never the address.
+extern const char *TheDamageNames[];
+
 class INI
 {
 public:
 	const char *getNextToken(const char *seps);
 	float dup_002EE10(const char *token);
+	int scanIndexList(const char *token, const char *const *nameList);
 };
 
 // BFME2 carries 27 damage coefficients (retail rep stosd count 0x1B).
@@ -69,6 +88,7 @@ class ArmorTemplate
 {
 public:
 	ArmorTemplate(const AsciiString &name);
+	static void parseArmorCoefficients(INI *ini, void *instance, void *store, const void *userData);
 	static void parseDamageScalar(INI *ini, void *instance, void *store, const void *userData);
 	void clear();
 
@@ -87,6 +107,30 @@ ArmorTemplate::ArmorTemplate(const AsciiString &name) : m_name()
 {
 	clear();
 	m_name = name;
+}
+
+// ?parseArmorCoefficients@ArmorTemplate@@SAXPAVINI@@PAX1PBX@Z
+// One line of an Armor block: "<DamageType> <Percent>%". "Default" fills
+// every coefficient; anything else is looked up positionally in
+// TheDamageNames and overwrites that one slot.
+/*static*/ void ArmorTemplate::parseArmorCoefficients(INI *ini, void *instance, void * /*store*/, const void * /*userData*/)
+{
+	ArmorTemplate *self = (ArmorTemplate *)instance;
+
+	const char *damageName = ini->getNextToken(NULL);
+	float pct = ini->dup_002EE10(ini->getNextToken(NULL));
+
+	if (_strcmpi(damageName, "Default") == 0)
+	{
+		for (int i = 0; i < ARMOR_DAMAGE_TYPES; i++)
+		{
+			self->m_damageCoefficient[i] = pct;
+		}
+		return;
+	}
+
+	int dt = ini->scanIndexList(damageName, TheDamageNames);
+	self->m_damageCoefficient[dt] = pct;
 }
 
 // ?parseDamageScalar@ArmorTemplate@@SAXPAVINI@@PAX1PBX@Z
