@@ -9,6 +9,16 @@
 extern void (__cdecl *g_bfmeAptAssertAtE17734)(const char *, const char *, int);
 extern int g_bfmeAptBreakOnAssertAtDDC01C;
 
+class Rva006DB160
+{
+public:
+	void *allocBlock(int blockSize);
+};
+
+// Pool allocator instance at 0x00E176E8 (same global the string
+// Reserve path uses; DIR32 sites auto-patch from retail at verify).
+extern Rva006DB160 *g_aptPoolAllocator; // 0x00E176E8
+
 class EAStringC
 {
 public:
@@ -46,6 +56,7 @@ public:
 class AptValueVector
 {
 public:
+	static void *Allocate(int size);
 	AptValue ***GetData();
 
 	EAStringC m_name;
@@ -82,4 +93,13 @@ AptValueNameEntry::AptValueNameEntry()
 AptValue ***AptValueVector::GetData()
 {
 	return &m_data;
+}
+
+// ?Allocate@AptValueVector@@SAPAXH@Z, retail 0x006CC020 (17B). Pool
+// allocation entry: forwards the byte size to the global Apt pool
+// allocator instance. Static (no this use); the global load and the
+// allocator call both resolve as relocs at verify time.
+void *AptValueVector::Allocate(int size)
+{
+	return g_aptPoolAllocator->allocBlock(size);
 }
