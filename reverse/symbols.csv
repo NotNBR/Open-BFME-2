@@ -3467,6 +3467,7 @@ _str_checkname,0x00753AD0
 _strcat,0x0062988C,address read from the REL32 displacement in DirtySock Y2ProtoMangleHelpers at 0x006720F0; static CRT callee; body not yet converted
 _strchr,0x0062984A,address read from the REL32 displacement in DirtySock Y4CommTickIdle Rva00813E50 at 0x0067FD50; static CRT callee; body not yet converted
 _strcmp,0x006291C6,PE CRT thunk; independent FF25 import thunk at RVA 0x006291C6 resolves the retail strcmp IAT slot
+?push_back@?$vector@UHordeSplitEntrySlot@@V?$allocator@UHordeSplitEntrySlot@@@_STL@@@_STL@@QAEXABUHordeSplitEntrySlot@@@Z,0x004DFCB0,local 4-byte POD pointer-slot ABI alias from PC SplitHorde 46F288; full 49B STLport push_back verified with +4 end update and overflow2DFCF6; overlaps existing ModuleData pointer-vector body so no new byte claim
 _strcpy,0x00629176,IAT jmp after _strlen; REL32 from makeDecoratedNameKey
 _strdup,0x006C4C70,address read from the retail REL32 in INIClass::Put_String at 0x00616FB0; the CRT body this unit calls directly where it imports the rest of the CRT
 _strlen,0x00629170,BFME2 retail strlen thunk and call target for StringBase<char>::compare(const char *)
