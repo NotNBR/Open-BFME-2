@@ -3620,3 +3620,5 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??0?$_Vector_base@GV?$allocator@G@_STL@@@_STL@@QAE@IABV?$allocator@G@1@@Z,0x004F62A4,address read from the REL32 displacement at a placed body; the body there is held under another instantiation name and the two folded
 ??$_Destroy@PAUBfmeStringRecord00111ACF@@@_STL@@YAXPAUBfmeStringRecord00111ACF@@0@Z,0x003F6636,28B-stride destroy loop resolves _M_clear call at 0x3F69B0; row deferred to matching TU
 ??$__uninitialized_copy@PAUBfmeStringRecord00111ACF@@PAU1@@_STL@@YAPAUBfmeStringRecord00111ACF@@PAU1@00ABU__false_type@0@@Z,0x003F62F5,28B-stride copy loop resolves _M_allocate_and_copy call at 0x3F635E; row deferred to matching TU
+??1BfmeStringRecord00111ACF@@QAE@XZ,0x003F60C8,EH record dtor resolves _Destroy call at 0x3F663F; row deferred
+??$_Construct@UBfmeStringRecord00111ACF@@U1@@_STL@@YAXPAUBfmeStringRecord00111ACF@@ABU1@@Z,0x003F62C8,EH _Construct twin resolves uninitialized_copy call at 0x3F6303; rowed at 0xAD77B
