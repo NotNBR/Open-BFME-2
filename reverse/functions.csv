@@ -14487,3 +14487,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?friend_newModuleData@CleanupHazardUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x002529FF,81,Code/GameEngine/Source/GameLogic/Object/Update/CleanupHazardUpdateFriendNew.cpp,matched,
 ?friend_newModuleData@PilotFindVehicleUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252A88,81,Code/GameEngine/Source/GameLogic/Object/Update/PilotFindVehicleUpdateFriendNew.cpp,matched,
 ?friend_newModuleData@DynamicGeometryInfoUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252906,81,Code/GameEngine/Source/GameLogic/Object/Update/DynamicGeometryInfoUpdateFriendNew.cpp,matched,
+?friend_newModuleData@BattlePlanUpdate@@SAPAVModuleData@@PAVINI@@@Z,,0x00252C64,81,Code/GameEngine/Source/GameLogic/Object/Update/BattlePlanUpdateFriendNew.cpp,matched,
