@@ -47,10 +47,12 @@ public:
 
 public:
 	EAStringC(const EAStringC &other);
+	EAStringC(const char *text);
 	EAStringC &operator=(const EAStringC &other);
 	~EAStringC();
 	EAStringC &clear();
 	void Reserve(int size);
+	void Assign(const char *text);
 };
 
 // Retail empty singleton at 0x00DDC020. The linker never sees this TU's
@@ -154,4 +156,14 @@ void EAStringC::Reserve(int size)
 	data->m_uRefCount = 1;
 	data = self->m_pData;
 	data->m_uMaxSize = (unsigned short)(rounded - 9);
+}
+
+// ??0EAStringC@@QAE@PBD@Z, retail 0x006D4C80 (25B). C-string constructor:
+// roots a null data pointer, then delegates the whole build to Assign
+// (rowed separately; pinned here until that row lands). Returning this
+// in eax is the standard ctor epilogue.
+EAStringC::EAStringC(const char *text)
+{
+	m_pData = 0;
+	Assign(text);
 }

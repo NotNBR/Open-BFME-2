@@ -14182,3 +14182,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/chat/chatMain.c,matched,
 ?_M_create_node@?$list@VUnicodeString@@V?$allocator@VUnicodeString@@@_STL@@@_STL@@IAEPAU?$_List_node@VUnicodeString@@@2@ABVUnicodeString@@@Z,,0x00433B1E,34,Code/Libraries/Source/WWVegas/WWLib/stlport_list_unicodestring_create_node.cpp,matched,Wide list _M_create_node via bfmelist shim (forceinline TRY-free like int TU precedent); frameless 34B allocate plus _Construct
 ?Set_Texture@BfmeMapPictureTexture@@QAEXPAVTextureClass@@@Z,,0x000EF87B,36,Code/GameEngine/Source/GameClient/GUI/BfmeMapPictureTextureCtor.cpp,matched,
+??0EAStringC@@QAE@PBD@Z,,0x006D4C80,25,Code/Libraries/Source/EA/Apt/AptString/EAStringCRefCount.cpp,matched,EA string C-string ctor; null data root then delegates to pinned Assign
