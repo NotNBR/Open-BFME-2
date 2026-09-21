@@ -14533,3 +14533,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?buildFieldParse@W3DSupplyDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x000CAE28,27,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/Draw/W3DModelDrawModuleDataBuildFieldParseChained.cpp,matched,
 ?buildFieldParse@W3DTruckDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x000CB133,27,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/Draw/W3DModelDrawModuleDataBuildFieldParseChained.cpp,matched,
 ?buildFieldParse@W3DTankDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x000CDF96,27,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/Draw/W3DModelDrawModuleDataBuildFieldParseChained.cpp,matched,
+?buildFieldParse@W3DQuadrupedDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x000CA089,27,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/Draw/W3DModelDrawModuleDataBuildFieldParseChained.cpp,matched,

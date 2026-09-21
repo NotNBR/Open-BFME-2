@@ -66,3 +66,15 @@ void W3DTankDrawModuleData::buildFieldParse(MultiIniFieldParse &parse)
 	W3DModelDrawModuleData::buildFieldParse(parse);
 	parse.add(reinterpret_cast<const FieldParse *>(0x00BCCAD0), 0);
 }
+
+class W3DQuadrupedDrawModuleData : public W3DModelDrawModuleData
+{
+public:
+	static void buildFieldParse(MultiIniFieldParse &parse);
+};
+
+void W3DQuadrupedDrawModuleData::buildFieldParse(MultiIniFieldParse &parse)
+{
+	W3DModelDrawModuleData::buildFieldParse(parse);
+	parse.add(reinterpret_cast<const FieldParse *>(0x00BCBB28), 0);
+}
