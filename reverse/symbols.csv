@@ -3606,3 +3606,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??$_Construct@UBfmeStringRecord000331962@@U1@@_STL@@YAXPAUBfmeStringRecord000331962@@ABU1@@Z,0x00331B3D,twin of rowed 00331962 _Construct at this address by bytes; resolves the 331BAC worker call
 ??$_Construct@UBfmeVectorRecord0002154F3@@U1@@_STL@@YAXPAUBfmeVectorRecord0002154F3@@ABU1@@Z,0x0021559C,twin of rowed 002154F3 _Construct at this address by layout; resolves the 2155C9 worker call
 ??$_Construct@UFileInfoStruct@MixFileCreator@@U12@@_STL@@YAXPAUFileInfoStruct@MixFileCreator@@ABU12@@Z,0x00063CBC,45B EH _Construct shape calling rowed FileInfoStruct copy ctor 0x217624; resolves the 642AF worker call
+??4BfmeVectorRecord0002154F3@@QAEAAU0@ABU0@@Z,0x00215530,address read from the REL32 displacement at a placed body
