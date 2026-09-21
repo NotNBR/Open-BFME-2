@@ -40,3 +40,12 @@ void BfmeAptValue006DCD20::incrementGCRootCount()
     }
     if (flags.gcRootCount < 127) ++flags.gcRootCount;
 }
+
+void BfmeAptValue006DCD20::decrementGCRootCount()
+{
+    if (!(flags.gcRootCount > 0)) {
+        g_bfmeAptAssertAtE17734("mValueBitfield.mnGCRootCount > 0","c:\\projects\\bfme2patch103\\bfme2\\code\\libraries\\source\\apt\\AptValue/AptValue.inl",453);
+        if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+    }
+    if (flags.gcRootCount > 0) --flags.gcRootCount;
+}
