@@ -3650,3 +3650,5 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ?clear@?$_Rb_tree@HU?$pair@$$CBHH@_STL@@U?$_Select1st@U?$pair@$$CBHH@_STL@@@2@U?$less@H@2@V?$allocator@U?$pair@$$CBHH@_STL@@@2@@_STL@@QAEXXZ,0x0021A917,TU emission 41B matches retail with 0 non-reloc diffs; called by int-int tree dtor at 0x21B775; ghidra extent 41
 ??0StealthUpdateModuleData@@QAE@XZ,0x0037588B
 ??0ChinookAIUpdateModuleData@@QAE@XZ,0x004C1E8B,sole caller is the 0x251740 factory pushing the rowed ChinookAIUpdateModuleData proc; installs vtable 0xBF4028 and fits the 0x180 news size
+??0SupplyTruckAIUpdateModuleData@@QAE@XZ,0x004BF59F,factory 0x2513E8 pushes the SupplyTruck proc and calls it as its ctor; called as base by Chinook 0x4C1E8B and sibling AIUpdateModuleData ctors
+??0ToppleUpdateModuleData@@QAE@XZ,0x004A8173,sole caller is the 0x24F0B8 factory pushing the rowed ToppleUpdateModuleData proc; installs vtable 0xC538A0 and fits the 0x2C news size
