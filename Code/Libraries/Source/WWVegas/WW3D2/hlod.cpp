@@ -3506,10 +3506,9 @@ void HLodClass::Set_Texture_Reduction_Factor(float trf)
  * HISTORY:                                                                                    *
  *   1/26/00    gth : Created.                                                                 *
  *=============================================================================================*/
-// ?HLodClass::Scale present-unmatched
 void HLodClass::Scale(float scale)
 {
-	// BFME's RenderObjClass Scale slot is +0x16c; the shared ZH header
+	// BFME's RenderObjClass Scale slot is +0x170; the shared ZH header
 	// describes it at +0x168.  Keep the ABI correction local to this TU.
 	#define BFME_SCALE_VTABLE_SLOT(n) virtual void bfmeScaleSlot##n() = 0;
 	class BfmeScaleDispatch
@@ -3606,6 +3605,7 @@ void HLodClass::Scale(float scale)
 		BFME_SCALE_VTABLE_SLOT(88)
 		BFME_SCALE_VTABLE_SLOT(89)
 		BFME_SCALE_VTABLE_SLOT(90)
+		BFME_SCALE_VTABLE_SLOT(91)
 		virtual void Scale(float) = 0;
 	};
 	#undef BFME_SCALE_VTABLE_SLOT
