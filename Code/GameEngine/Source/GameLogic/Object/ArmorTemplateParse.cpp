@@ -88,6 +88,7 @@ class ArmorTemplate
 {
 public:
 	ArmorTemplate(const AsciiString &name);
+	~ArmorTemplate();
 	static void parseArmorCoefficients(INI *ini, void *instance, void *store, const void *userData);
 	static void parseDamageScalar(INI *ini, void *instance, void *store, const void *userData);
 	void clear();
@@ -107,6 +108,12 @@ ArmorTemplate::ArmorTemplate(const AsciiString &name) : m_name()
 {
 	clear();
 	m_name = name;
+}
+
+// ??1ArmorTemplate@@QAE@XZ
+// Empty body: the compiler tails into the member name dtor at 0x36410.
+ArmorTemplate::~ArmorTemplate()
+{
 }
 
 // ?parseArmorCoefficients@ArmorTemplate@@SAXPAVINI@@PAX1PBX@Z
