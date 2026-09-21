@@ -3,8 +3,19 @@
 // BFME2's 64-byte BfmeVectorRecord000BDF17 vector allocation/copy helper at RVA 0xC24A0.
 class AsciiString { public: AsciiString(); AsciiString(const AsciiString &); __forceinline ~AsciiString() { releaseBuffer(); } protected: void releaseBuffer(); private: void *m_data; };
 #include <vector>
+// Opaque 12B AsciiString-vector member: only the out-of-line range-destroy
+// call appears in the record dtor, pinned at 0x2CC70 (GenericObjectCreationNugget
+// precedent). Using vector<AsciiString> here would resolve to the 0x36410 fold
+// and miss retail by one reloc.
+struct RvaVecAscii
+{
+	~RvaVecAscii();
+
+private:
+	unsigned char m_data[12];
+};
 struct BfmeVectorRecord000BDF17 {
-    _STL::vector<AsciiString> names;
+	RvaVecAscii names;
     AsciiString text0, text1;
     unsigned int word14, word18, word1C, word20, word24, word28;
     unsigned char flag2C, flag2D;
