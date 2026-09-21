@@ -87,3 +87,15 @@ void ArmorTemplate::parseDamageScalar(INI *ini, void *instance, void * /*store*/
 	ArmorTemplate *self = (ArmorTemplate *)instance;
 	self->m_damageScalar = ini->dup_002EE10(ini->getNextToken(NULL));
 }
+
+void ArmorTemplate::clear()
+{
+	for (int i = 0; i < ARMOR_DAMAGE_TYPES; ++i)
+	{
+		m_damageCoefficient[i] = 1.0f;
+	}
+	m_flag |= -1;
+	m_damageScalar = 1.0f;
+	m_head = 0.0f;
+	m_name = TheDefaultArmorTemplateName;
+}
