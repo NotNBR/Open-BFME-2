@@ -14620,3 +14620,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?buildFieldParse@AutoDepositUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x00254141,17,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,
 ??0AutoDepositUpdateModuleData@@QAE@XZ,,0x002540ED,84,Code/GameEngine/Source/GameLogic/Object/Update/AutoDepositUpdateModuleDataCtor.cpp,matched,
 ?friend_newModuleData@AutoDepositUpdateModuleData@@SAPAVModuleData@@PAVINI@@@Z,,0x00254152,81,Code/GameEngine/Source/GameLogic/Object/Update/AutoDepositUpdateModuleDataFriendNew.cpp,matched,
+?buildFieldParse@PanicUpdateModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x004BAD64,11,Code/GameEngine/Source/GameLogic/Object/Update/ModuleDataBuildFieldParse.cpp,matched,Panic table identity; table 0x00C59DD0 holds evacuation weapon plus damage type plus panic threshold plus tracking span; factory 0x250E4B pushes proc VA
