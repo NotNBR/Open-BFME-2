@@ -9,6 +9,11 @@
 // with the out-of-line Nugget dtor (pinned at 0x002CF51B). Identity is proven
 // by the landed caller ModuleInfo::clearAiModuleInfo at 0x0033C882, which
 // walks m_info with a 0x14 stride and tail-calls this body.
+//
+// destroyNuggetRange hosts the folded 25-byte range-destroy at 0x002D028F
+// (rowed as ?dup_002d028f: _Destroy, __destroy and __destroy_aux over
+// Nugget* all fold there; the loop calls the 0x002CF51B dtor with a 0x14
+// stride, which fixes the element type).
 
 class AsciiString
 {
@@ -75,6 +80,12 @@ template <class InputIter, class OutputIter>
 OutputIter __copy_ptrs(InputIter first, InputIter last, OutputIter result,
 	const __false_type &tag);
 
+}
+
+void destroyNuggetRange(ModuleInfo::Nugget *first, ModuleInfo::Nugget *last)
+{
+	for (; first != last; ++first)
+		first->~Nugget();
 }
 
 _STL::vector<ModuleInfo::Nugget, _STL::allocator<ModuleInfo::Nugget> >::iterator
