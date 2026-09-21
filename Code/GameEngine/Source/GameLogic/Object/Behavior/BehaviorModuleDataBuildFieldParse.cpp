@@ -1,0 +1,34 @@
+// cl: /O1 /DNDEBUG /MD
+//
+// Single-field ModuleData::buildFieldParse procs (11 bytes each):
+// ?buildFieldParse@DumbProjectileBehaviorModuleData@@SAXAAVMultiIniFieldParse@@@Z,
+// retail 0x003901C9 (table 0x00C19DE8: TumbleRandomly/AllowBouncing/
+// KillWhenRestingOnGround/GravityMult/OrientToFlightPath/ShockStunned*/...).
+// Each registers exactly one FieldParse table with
+// MultiIniFieldParse::add (pinned at 0x2BC6E). Mirrors the Update-side
+// ModuleDataBuildFieldParse.cpp; the Behavior-side ZH-port TU
+// (DumbProjectileBehavior.cpp) stays untouched. Recipe: the factory TUs
+// (*FriendNew.cpp) name the owning class per stub.
+class MultiIniFieldParse;
+
+struct FieldParse;
+
+class MultiIniFieldParse
+{
+public:
+	void add(const FieldParse *parse, unsigned int extraOffset);
+};
+
+#define FIELD_PROC(cls, addr, field) \
+class cls \
+{ \
+public: \
+	static void buildFieldParse(MultiIniFieldParse &parse); \
+}; \
+\
+void cls::buildFieldParse(MultiIniFieldParse &parse) \
+{ \
+	parse.add(reinterpret_cast<const FieldParse *>(addr), 0); \
+}
+
+FIELD_PROC(DumbProjectileBehaviorModuleData, 0x00C19DE8, TumbleTable)
