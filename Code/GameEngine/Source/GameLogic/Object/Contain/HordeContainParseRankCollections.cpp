@@ -1,4 +1,4 @@
-// cl: /O1 /Oy- /DNDEBUG /MD /D_STLP_USE_STATIC_LIB /D_STLP_NO_EXCEPTIONS
+// cl: /O1 /Oy- /DNDEBUG /MD /D_STLP_USE_STATIC_LIB /D_STLP_NO_EXCEPTIONS /D_BFME_RETAIL_TREE_INSERT_LAYOUT
 // stlport
 // Donor: Open-BFME-1 HordeContainParseRanksThatStopAdvance.cpp and
 // HordeContainParseRankSets.cpp; donor RVAs are NOT BFME2 addresses.
@@ -10,6 +10,7 @@
 #undef _CRTIMP
 #define _CRTIMP __declspec(dllimport)
 #include <list>
+#include <set>
 
 class INI
 {
@@ -24,4 +25,11 @@ void parseHordeContainRanksThatStopAdvance(INI *ini, void *, void *store, const 
     for (const char *token = ini->getNextTokenOrNull(ini->seps); token;
          token = ini->getNextTokenOrNull(ini->seps))
         ((_STL::list<int> *)store)->push_back(_STL::atoi(token));
+}
+
+void parseHordeContainRankSets(INI *ini, void *, void *store, const void *)
+{
+    for (const char *token = ini->getNextTokenOrNull(ini->seps); token;
+         token = ini->getNextTokenOrNull(ini->seps))
+        ((_STL::set<int> *)store)->insert(_STL::atoi(token));
 }
