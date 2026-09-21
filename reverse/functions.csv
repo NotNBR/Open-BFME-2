@@ -14682,3 +14682,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ??0ExperienceLevelCreateModuleData@@QAE@XZ,,0x004B9220,17,Code/GameEngine/Source/GameLogic/Object/Update/ExperienceLevelCreateModuleDataCtor.cpp,matched,Trivial frameless ctor; or-first via body-or under O1; explicit vtable literal; row supersedes sole-caller pin
 ?friend_newModuleData@MoneyCrateCollideModuleData@@SAPAVModuleData@@PAVINI@@@Z,,0x00256310,81,Code/GameEngine/Source/GameLogic/Object/Collide/CrateCollide/MoneyCrateCollideModuleDataFriendNew.cpp,matched,
 ??0MoneyCrateCollideModuleData@@QAE@XZ,,0x002562FA,22,Code/GameEngine/Source/GameLogic/Object/Collide/CrateCollide/MoneyCrateCollideModuleDataCtor.cpp,matched,
+??0InheritUpgradeCreateModuleData@@QAE@XZ,,0x004B9508,69,Code/GameEngine/Source/GameLogic/Object/Update/InheritUpgradeCreateModuleDataCtor.cpp,matched,V4 empty base plus construct-method alias pin single filter call last
