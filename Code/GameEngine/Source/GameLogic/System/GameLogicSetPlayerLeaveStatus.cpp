@@ -18,7 +18,10 @@ public:
 
 struct PlayerLeaveStatus
 {
-	unsigned char m_unknown00[0x10];
+	int m_status;
+	int m_quitFrame;
+	int m_defeatFrame;
+	int m_victoryFrame;
 	Bool m_notPresent;
 	unsigned char m_unknown11[3];
 	int m_isHuman;
@@ -29,6 +32,7 @@ class GameLogic
 {
 public:
 	void setPlayerLeaveStatus(int slotIndex, const AsciiString &playerName, int isHuman);
+	PlayerLeaveStatus *getPlayerLeaveStatus(int playerIndex);
 
 private:
 	unsigned char m_unknown00[0x1C4];
@@ -43,4 +47,12 @@ void GameLogic::setPlayerLeaveStatus(int slotIndex, const AsciiString &playerNam
 	m_playerLeaveStatus[slotIndex].m_notPresent = false;
 	m_playerLeaveStatus[slotIndex].m_playerName.set(playerName);
 	m_playerLeaveStatus[slotIndex].m_isHuman = isHuman;
+}
+
+// ?getPlayerLeaveStatus@GameLogic@@QAEPAUPlayerLeaveStatus@@H@Z
+PlayerLeaveStatus *GameLogic::getPlayerLeaveStatus(int playerIndex)
+{
+	if (playerIndex >= 0 && playerIndex < 8)
+		return &m_playerLeaveStatus[playerIndex];
+	return 0;
 }
