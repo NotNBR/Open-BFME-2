@@ -31,3 +31,12 @@ void BfmeAptValue006DCD20::setGCRootCount(unsigned int nRoot)
     }
     flags.gcRootCount = nRoot;
 }
+
+void BfmeAptValue006DCD20::incrementGCRootCount()
+{
+    if (!(flags.gcRootCount < 127)) {
+        g_bfmeAptAssertAtE17734("mValueBitfield.mnGCRootCount < MAX_GCROOT","c:\\projects\\bfme2patch103\\bfme2\\code\\libraries\\source\\apt\\AptValue/AptValue.inl",425);
+        if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+    }
+    if (flags.gcRootCount < 127) ++flags.gcRootCount;
+}
