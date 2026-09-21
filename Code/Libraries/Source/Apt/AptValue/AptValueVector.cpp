@@ -75,3 +75,11 @@ AptValueNameEntry::AptValueNameEntry()
 	m_name.clear();
 	m_value = 0;
 }
+
+// ?GetData@AptValueVector@@QAEPAPAPAVAptValue@@XZ, retail 0x006CBFD0 (4B).
+// Returns the address of the element pointer array so callers can reseat
+// it; the bare lea eax,[ecx+8] shape carries no call or data references.
+AptValue ***AptValueVector::GetData()
+{
+	return &m_data;
+}
