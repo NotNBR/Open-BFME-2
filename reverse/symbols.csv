@@ -3647,3 +3647,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??0W3DLaserDrawModuleData@@QAE@XZ,0x000C9A6F,frameless ctor with E16 vector at +0x2C plus member construct at +0x4C and laser field inits; Laser factory at 0x64962 news 0x74 and calls it
 ??0W3DLightDrawModuleData@@QAE@XZ,0x000CFB3E,frameless light ctor with vtable 0xBCD820 plus color and flicker inits; Light factory at 0x64E2F news 0x48 and calls it
 ??0BoneFXUpdateModuleData@@QAE@XZ,0x00487797
+??0Rva0024C7B3Member@@QAE@XZ,0x0024C7B3,shared 0x1C-byte memset helper (memset this 0 0x1C via 0x6291AE CRT thunk; returns this); address read from the REL32 displacement at DemoTrapUpdateModuleData ctor 0x49597A
