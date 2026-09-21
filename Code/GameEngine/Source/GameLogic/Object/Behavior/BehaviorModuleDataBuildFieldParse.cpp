@@ -33,3 +33,4 @@ void cls::buildFieldParse(MultiIniFieldParse &parse) \
 
 FIELD_PROC(DumbProjectileBehaviorModuleData, 0x00C19DE8, TumbleTable)
 FIELD_PROC(GateOpenAndCloseBehaviorModuleData, 0x00BF19F8, GateTable)
+FIELD_PROC(RunOffMapBehaviorModuleData, 0x00C42F70, RunOffMapTable)
