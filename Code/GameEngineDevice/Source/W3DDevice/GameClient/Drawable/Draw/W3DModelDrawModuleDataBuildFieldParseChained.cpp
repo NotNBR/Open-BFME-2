@@ -9,6 +9,11 @@
 // ?buildFieldParse@W3DSupplyDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,
 // retail 0x000CAE28, 27 bytes (field SupplyBonePrefix at 0x188; donor
 // reference: BFME1 W3DSupplyDraw.cpp keeps the same single-field table).
+// ?buildFieldParse@W3DTruckDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,
+// retail 0x000CB133, 27 bytes (table 0xBCC358: Dust, DirtSpray,
+// PowerslideSpray plus tire/cab/trailer bones through CabRotationMultiplier
+// at 0x1DC; donor reference: BFME1 W3DTruckDrawModuleData_buildFieldParse.cpp
+// describes the same table).
 
 class MultiIniFieldParse;
 
@@ -36,4 +41,16 @@ void W3DSupplyDrawModuleData::buildFieldParse(MultiIniFieldParse &parse)
 {
 	W3DModelDrawModuleData::buildFieldParse(parse);
 	parse.add(reinterpret_cast<const FieldParse *>(0x00BCBED8), 0);
+}
+
+class W3DTruckDrawModuleData : public W3DModelDrawModuleData
+{
+public:
+	static void buildFieldParse(MultiIniFieldParse &parse);
+};
+
+void W3DTruckDrawModuleData::buildFieldParse(MultiIniFieldParse &parse)
+{
+	W3DModelDrawModuleData::buildFieldParse(parse);
+	parse.add(reinterpret_cast<const FieldParse *>(0x00BCC358), 0);
 }
