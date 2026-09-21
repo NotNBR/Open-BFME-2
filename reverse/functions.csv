@@ -14685,3 +14685,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ??0InheritUpgradeCreateModuleData@@QAE@XZ,,0x004B9508,69,Code/GameEngine/Source/GameLogic/Object/Update/InheritUpgradeCreateModuleDataCtor.cpp,matched,V4 empty base plus construct-method alias pin single filter call last
 ??0SpecialEnemySenseUpdateModuleData@@QAE@XZ,,0x0025404A,65,Code/GameEngine/Source/GameLogic/Object/Update/SpecialEnemySenseUpdateModuleDataCtor.cpp,matched,InheritUpgrade V4 recipe verbatim; empty base plus construct alias pin; completes file-unit
 ?buildFieldParse@RunOffMapBehaviorModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x0046216A,17,Code/GameEngine/Source/GameLogic/Object/Behavior/BehaviorModuleDataBuildFieldParse.cpp,matched,
+?friend_newModuleData@RunOffMapBehaviorModuleData@@SAPAVModuleData@@PAVINI@@@Z,,0x00254F24,81,Code/GameEngine/Source/GameLogic/Object/Behavior/RunOffMapBehaviorModuleDataFriendNew.cpp,matched,
