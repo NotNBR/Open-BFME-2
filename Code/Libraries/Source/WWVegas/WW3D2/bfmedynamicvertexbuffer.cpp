@@ -764,9 +764,24 @@ void BfmeDynamicNativeVB::Copy(const Vector3 *loc, const Vector3 *norm, const Ve
 
 // Retail 0x001718E0, 21 bytes. MeshModelClass instance-list walk: a null
 // model yields the global list head, otherwise the +0xB8 next link.
-class MeshModelClass { public: char m_pad00[0xB8]; MeshModelClass *m_next; };
-MeshModelClass *rva001718E0GetNextMeshModel(MeshModelClass *model)
+class MeshModelClass { public: char m_pad00[0xB8]; MeshModelClass *m_next; void rva001716E0UnregisterMeshModel(); };
+__declspec(noinline) MeshModelClass *rva001718E0GetNextMeshModel(MeshModelClass *model)
 {
  if(!model) return *(MeshModelClass**)0x00DF6F90;
  return model->m_next;
+}
+
+class DX8MeshRendererClass { public: void Invalidate(bool); };
+extern DX8MeshRendererClass *TheDX8MeshRenderer;
+
+// Retail 0x001170A0, 120 bytes. WW3D mesh-cache invalidation under the DX8
+// device lock: walk every MeshModelClass instance and unregister it, then
+// invalidate a guarded renderer.
+void WW3D::_Invalidate_Mesh_Cache()
+{
+ BFMEDX8DeviceLock lock;
+ for(MeshModelClass *model=rva001718E0GetNextMeshModel(0);model!=0;model=rva001718E0GetNextMeshModel(model))
+  model->rva001716E0UnregisterMeshModel();
+ if(TheDX8MeshRenderer!=0)
+  TheDX8MeshRenderer->Invalidate(false);
 }
