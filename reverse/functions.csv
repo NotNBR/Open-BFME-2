@@ -14498,3 +14498,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?friend_newModuleInstance@FloatUpdate@@SAPAVModule@@PAVThing@@PBVModuleData@@@Z,,0x0024D0B9,56,Code/GameEngine/Source/GameLogic/Object/Update/FloatUpdateFriendNew.cpp,matched,
 ?friend_newModuleData@SupplyWarehouseDockUpdateModuleData@@SAPAVModuleData@@PAVINI@@@Z,,0x0024F02F,81,Code/GameEngine/Source/GameLogic/Object/Update/SupplyWarehouseDockUpdateModuleDataFriendNew.cpp,matched,
 ?friend_newModuleData@AIUpdateInterface@@SAPAVModuleData@@PAVINI@@@Z,,0x002527F1,84,Code/GameEngine/Source/GameLogic/Object/Update/AIUpdateInterfaceFriendNew.cpp,matched,
+?getSlotNum@GameInfo@@QBEHVAsciiString@@@Z,,0x0040009A,140,Code/GameEngine/Source/GameNetwork/GameInfoGetSlotNum.cpp,matched,BFME1 GameInfo_getSlotNum_Thunk donor with m_inGame at +0x10 and callee-released by-value Unicode temp
