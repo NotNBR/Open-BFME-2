@@ -163,6 +163,7 @@ public:
 	virtual ~MeshModelClass();
 
 	void Reset(int polycount, int vertcount, int passcount, bool skinned);
+	void rva001716E0UnregisterMeshModel();
 
 private:
 	MeshMatDescClass *DefMatDesc;
@@ -207,5 +208,22 @@ MeshModelClass::~MeshModelClass(void)
 			NextMesh->PrevMeshLink = PrevMeshLink;
 		}
 		PrevMeshLink = NULL;
+	}
+}
+
+// Retail 0x001716E0, 58 bytes. Renderer/gapfiller/UV unregister head shared
+// with the destructor above, as a standalone thiscall method: the two global
+// guards, then the CurMatDesc UV[0] guard around the teardown helper.
+void MeshModelClass::rva001716E0UnregisterMeshModel(void)
+{
+	if (TheDX8MeshRenderer != NULL) {
+		TheDX8MeshRenderer->Unregister_Mesh_Type(this);
+	}
+	if (TheMeshGapFillerContext != NULL) {
+		TheMeshGapFillerContext->DeleteModelGapFiller(this);
+	}
+	MeshMatDescClass *curDesc = CurMatDesc;
+	if (curDesc->UV[0] != NULL) {
+		Rva00199FA5TeardownMeshMatDescRenderers(curDesc);
 	}
 }
