@@ -1555,7 +1555,6 @@ name,address,notes
 ?allocate@Rva00801600@@QAEXH@Z,0x0066DEB0
 ?allocate@Rva00802040Arr@@QAEXH@Z,0x0066DEB0
 ?allocateID@DataChunkTableOfContents@@QAEIABVAsciiString@@@Z,0x00307A6A,call site in DataChunkOutput::openDataChunk (0x307C76) lea ecx [esi+8] (m_contents) push AsciiString temp then call; body pushes AsciiString then calls findMapping at 0x307A2C then new Mapping or returns id, matching ZH DataChunkTableOfContents::allocateID; retail 0x307A6A..0x307AC0 (86B) ends ret 4, ghidra gap (missed start)
-?allocateNode@KeyToBucketMap@NameKeyGenerator@@AAEPAXABUvalue_type@12@@Z,0x003ED191,KeyToBucketMap node allocator (12B via pool plus init call); do_insert miss-path direct thiscall target with the value; ghidra 37B
 ?allow@FilePathGate@@QAE_NPBD@Z,0x00600AE5,path-gate filename predicate (ebp-frame validator: null/empty/drive-colon checks); called thiscall from FileSystem::doesFileExist; method name unproven
 ?append@Rva00800290Buffer@@QAEXPBD@Z,0x0066C760
 ?append@Rva00800550Chain@@QAEPAXH@Z,0x0066C9B0
@@ -3627,3 +3626,5 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ?allocate@?$allocator@UUpgrades@CashHackSpecialPowerModuleData@@@_STL@@QBEPAUUpgrades@CashHackSpecialPowerModuleData@@IPBX@Z,0x00523D6C
 ??$_M_allocate_and_copy@PBW4ScienceType@@@?$vector@W4ScienceType@@V?$allocator@W4ScienceType@@@_STL@@@_STL@@IAEPAW4ScienceType@@IPBW42@0@Z,0x0031B9EB,member-call target read from the retail REL32 at 0x0021C250 in the vector assign body; dup row holds the address
 ??$__copy_ptrs@PBW4ScienceType@@PAW41@@_STL@@YAPAW4ScienceType@@PBW41@0PAW41@ABU__false_type@0@@Z,0x0025BF40,by-reference tag call target read from the retail REL32s at 0x0021C283 and 0x0021C298 in the vector assign body; by-value twin rowed
+?allocate@BucketAlloc@@SAPAXIPBX@Z,0x000307F0,byte-allocator fold alias read from the retail REL32 at 0x003ED196 in KeyToBucketMap allocateNode
+??$_Construct@Uvalue_type@KeyToBucketMap@NameKeyGenerator@@@_STL@@YAXPAUvalue_type@KeyToBucketMap@NameKeyGenerator@@ABU123@@Z,0x0060C9D9,construct fold alias read from the retail REL32 at 0x003ED1A8 in KeyToBucketMap allocateNode

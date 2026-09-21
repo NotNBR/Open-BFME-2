@@ -38,6 +38,19 @@ struct NameKeyHashInt
 	unsigned operator()(int x) const { return (unsigned)x; }
 };
 
+struct BucketAlloc
+{
+	static void *allocate(unsigned int n, const void *hint);
+};
+
+namespace _STL
+{
+
+template <class Element>
+void _Construct(Element *slot, const Element &source);
+
+}
+
 struct NameKeyEqualInt
 {
 	bool operator()(int a, int b) const { return a == b; }
@@ -117,4 +130,12 @@ NameKeyGenerator::KeyToBucketMap::do_insert(const value_type &value)
 	++m_count;
 
 	return insert_result(tmp, this, true);
+}
+
+void *NameKeyGenerator::KeyToBucketMap::allocateNode(const value_type &value)
+{
+	Bucket *node = (Bucket *)BucketAlloc::allocate(sizeof(Bucket), 0);
+	node->next = 0;
+	_STL::_Construct((value_type *)&node->key, value);
+	return node;
 }
