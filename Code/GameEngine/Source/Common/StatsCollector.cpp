@@ -14,6 +14,7 @@ typedef unsigned int UnsignedInt;
 typedef int Bool;
 
 #define FALSE 0
+#define TRUE 1
 
 template <typename T> class StringBase
 {
@@ -135,6 +136,7 @@ public:
 	StatsCollector();
 	void collectUnitCountStats();
 	void collectScoreKeeperStats();
+	void startScrollTime();
 
 private:
 	AsciiString m_statsFileName;
@@ -229,6 +231,15 @@ void StatsCollector::collectUnitCountStats()
 		else
 			++m_aiUnits;
 	}
+}
+
+// ?startScrollTime@StatsCollector@@QAEXXZ, retail 0x0043768F (19 bytes).
+// BFME1 StatsCollector.cpp donor verbatim.
+void StatsCollector::startScrollTime()
+{
+	m_isScrolling = TRUE;
+	m_scrollBeginTime = static_cast<GameLogic *>( TheGameLogic )->getFrame();
+	++m_scrollMapCommands;
 }
 
 // ?collectScoreKeeperStats@StatsCollector@@QAEXXZ, retail 0x00437634 (91 bytes).

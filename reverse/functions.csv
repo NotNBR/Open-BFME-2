@@ -14175,3 +14175,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?CompressMemory@@YA_NPAXH0AAH@Z,,0x0068AA00,168,Code/Libraries/Source/Compression/LZHCompress/NoxCompress.cpp,matched,BFME1 NoxCompress donor graft; b1 0x0081EDD0; CompressFile sibling TU already rowed
 ?collectScoreKeeperStats@StatsCollector@@QAEXXZ,,0x00437634,91,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,
 ?CompressMemory@@YA_NPAXH0AAH@Z,,0x0068AA00,168,Code/Libraries/Source/Compression/LZHCompress/NoxCompress.cpp,matched,
+?startScrollTime@StatsCollector@@QAEXXZ,,0x0043768F,19,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,
