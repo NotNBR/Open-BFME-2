@@ -14174,3 +14174,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?GetData@AptValueVector@@QAEPAPAPAVAptValue@@XZ,,0x006CBFD0,4,Code/Libraries/Source/Apt/AptValue/AptValueVector.cpp,matched,Vector array address getter; bare lea with no call or data references
 ?CompressMemory@@YA_NPAXH0AAH@Z,,0x0068AA00,168,Code/Libraries/Source/Compression/LZHCompress/NoxCompress.cpp,matched,BFME1 NoxCompress donor graft; b1 0x0081EDD0; CompressFile sibling TU already rowed
 ?collectScoreKeeperStats@StatsCollector@@QAEXXZ,,0x00437634,91,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,
+?CompressMemory@@YA_NPAXH0AAH@Z,,0x0068AA00,168,Code/Libraries/Source/Compression/LZHCompress/NoxCompress.cpp,matched,
