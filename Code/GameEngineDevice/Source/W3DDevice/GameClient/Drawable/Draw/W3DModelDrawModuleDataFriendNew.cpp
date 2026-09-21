@@ -1,6 +1,6 @@
 // cl: /O1 /GX /DNDEBUG /MD
 //
-// ?friend_newModuleData@W3DModelDrawModuleData@@SAPAVModuleData@@PAVINI@@@Z,
+// ?friend_newModuleData@W3DModelDraw@@SAPAVModuleData@@PAVINI@@@Z,
 // retail 0x000648D6, 83 bytes. Dedicated TU: the factory news 0x188, runs the
 // declared-only ctor (pinned at 0xC8EEF), then feeds the new data plus the
 // class parse proc at 0xC9240 (pushed immediate, no pin) to
@@ -23,19 +23,24 @@ public:
 	void initFromINIMultiProc(void *what, void (__cdecl *proc)(MultiIniFieldParse &));
 };
 
+class W3DModelDraw
+{
+public:
+	static ModuleData *friend_newModuleData(INI *ini);
+};
+
 class W3DModelDrawModuleData
 {
 public:
 	W3DModelDrawModuleData();
 	virtual ~W3DModelDrawModuleData();
-	static ModuleData *friend_newModuleData(INI *ini);
 
 private:
 	unsigned char m_pad[0x188 - 4];
 };
 
-// ?friend_newModuleData@W3DModelDrawModuleData@@SAPAVModuleData@@PAVINI@@@Z
-ModuleData *W3DModelDrawModuleData::friend_newModuleData(INI *ini)
+// ?friend_newModuleData@W3DModelDraw@@SAPAVModuleData@@PAVINI@@@Z
+ModuleData *W3DModelDraw::friend_newModuleData(INI *ini)
 {
 	W3DModelDrawModuleData *data = new W3DModelDrawModuleData;
 	if (ini)
