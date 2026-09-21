@@ -14177,3 +14177,4 @@ _Rva0084EF00,,0x00022090,48,Code/Libraries/Source/WWVegas/WWLib/stlport_LocaleCo
 ?CompressMemory@@YA_NPAXH0AAH@Z,,0x0068AA00,168,Code/Libraries/Source/Compression/LZHCompress/NoxCompress.cpp,matched,
 ?startScrollTime@StatsCollector@@QAEXXZ,,0x0043768F,19,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,
 ?endScrollTime@StatsCollector@@QAEXXZ,,0x004376A2,25,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,
+?collectMsgStats@StatsCollector@@QAEXPBVGameMessage@@@Z,,0x00437607,45,Code/GameEngine/Source/Common/StatsCollector.cpp,matched,

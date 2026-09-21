@@ -113,6 +113,18 @@ private:
 
 extern PlayerList *ThePlayerList;
 
+class GameMessage
+{
+public:
+	Int getPlayerIndex() const { return m_playerIndex; }
+	Int getType() const { return m_messageType; }
+
+private:
+	unsigned char m_pad00[ 0x10 ];
+	Int m_messageType;              // +0x10
+	Int m_playerIndex;              // +0x14
+};
+
 class Object
 {
 public:
@@ -136,6 +148,7 @@ public:
 	StatsCollector();
 	void collectUnitCountStats();
 	void collectScoreKeeperStats();
+	void collectMsgStats(const GameMessage *msg);
 	void startScrollTime();
 	void endScrollTime();
 
@@ -231,6 +244,26 @@ void StatsCollector::collectUnitCountStats()
 			++m_playerUnits;
 		else
 			++m_aiUnits;
+	}
+}
+
+// ?collectMsgStats@StatsCollector@@QAEXPBVGameMessage@@@Z, retail 0x00437607 (45 bytes).
+// BFME1 StatsCollector.cpp donor with BFME2 message IDs: the build-command
+// cases moved 0x416/0x418 -> 0x417/0x419 and a third case 0x463 joined them.
+// Both selectors read inline (local player index at +0x54; message type at
+// +0x10 and player index at +0x14).
+void StatsCollector::collectMsgStats(const GameMessage *msg)
+{
+	if( ThePlayerList->getLocalPlayer()->getPlayerIndex() != msg->getPlayerIndex() )
+		return;
+
+	switch( msg->getType() )
+	{
+		case 0x417:
+		case 0x419:
+		case 0x463:
+			++m_buildCommands;
+			break;
 	}
 }
 
