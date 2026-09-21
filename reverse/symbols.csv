@@ -3651,7 +3651,6 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??0SupplyTruckAIUpdateModuleData@@QAE@XZ,0x004BF59F,factory 0x2513E8 pushes the SupplyTruck proc and calls it as its ctor; called as base by Chinook 0x4C1E8B and sibling AIUpdateModuleData ctors
 ??0ToppleUpdateModuleData@@QAE@XZ,0x004A8173,sole caller is the 0x24F0B8 factory pushing the rowed ToppleUpdateModuleData proc; installs vtable 0xC538A0 and fits the 0x2C news size
 ??0BoredUpdateModuleData@@QAE@XZ,0x004966FE,pinned by BoredUpdateModuleData factory call-site decode; sole caller is factory 0x24E122 which pushes size 0x1C plus proc 0x496780 plus initFromINIMultiProc; vtable 0x00C4F590; pool key 0x4966B9 ends where ctor starts
-??0BoredUpdate@@QAE@PAVThing@@PBVModuleData@@@Z,0x00496791,pinned by BoredUpdate Update factory call-site decode; sole E8 caller is factory 0x24E0EA which news 0x24 and forwards thing plus data; base is UpdateModule per rowed 0x253390; vtable 0x00C4F55C
 ??0GrantUpgradeCreateModuleData@@QAE@XZ,0x004B90E1
 ??0HordeUpdateModuleData@@QAE@XZ,0x00496FA5,sole caller is the 0x24E1AB factory pushing size 0x44 plus rowed proc 0x4976CA plus initFromINIMultiProc; Horde table class with vtable read from ctor body
 ??0BattlePlanUpdateModuleData@@QAE@XZ,0x0049780A,pinned by BattlePlanUpdateModuleData factory call-site decode; sole E8 caller is factory 0x24E237 which news 0xA8 and pushes proc 0x49861A; donor BFME1 BattlePlanUpdate.cpp ctor plus 30-field table 0x84FF58; ctor body banked as 0.88 partial
