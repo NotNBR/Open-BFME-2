@@ -33,6 +33,33 @@ public:
 class Object;
 class Player;
 
+// ScoreKeeper totals mostly read inline; the two faction-slot sums stay
+// out of line (retail calls 0x0039B769 and 0x0039B73F), matching the Zero
+// Hour header where only those two getters are defined in the .cpp.
+class ScoreKeeper
+{
+public:
+	Int getTotalMoneyEarned() { return m_totalMoneyEarned; }
+	Int getTotalMoneySpent() { return m_totalMoneySpent; }
+	Int getTotalUnitsDestroyed();
+	Int getTotalUnitsBuilt() { return m_totalUnitsBuilt; }
+	Int getTotalUnitsLost() { return m_totalUnitsLost; }
+	Int getTotalBuildingsDestroyed();
+	Int getTotalBuildingsBuilt() { return m_totalBuildingsBuilt; }
+	Int getTotalBuildingsLost() { return m_totalBuildingsLost; }
+
+private:
+	void *m_snapshotBase;               // +0x00
+	Int m_totalMoneyEarned;             // +0x04
+	Int m_totalMoneySpent;              // +0x08
+	unsigned char m_pad0C[ 0x70 - 0x0C ];
+	Int m_totalUnitsBuilt;              // +0x70
+	Int m_totalUnitsLost;               // +0x74
+	unsigned char m_pad78[ 0xC8 - 0x78 ];
+	Int m_totalBuildingsBuilt;          // +0xC8
+	Int m_totalBuildingsLost;           // +0xCC
+};
+
 struct GameLogic
 {
 	Object *getFirstObject();
@@ -60,13 +87,30 @@ class Player
 {
 public:
 	bool isLocalPlayer() const;
+	Int getPlayerIndex() const { return m_playerIndex; }
+	ScoreKeeper *getScoreKeeper() { return &m_scoreKeeper; }
 	const AsciiString &getSide() const { return m_side; }
 
 private:
 	void *m_vtable;
-	unsigned char m_pad04[ 0x58 - 4 ];
-	AsciiString m_side;
+	unsigned char m_pad04[ 0x54 - 4 ];
+	Int m_playerIndex;                  // +0x54
+	AsciiString m_side;                 // +0x58
+	unsigned char m_pad5C[ 0x3BC - 0x5C ];
+	ScoreKeeper m_scoreKeeper;          // +0x3BC
 };
+
+class PlayerList
+{
+public:
+	Player *getLocalPlayer() { return m_localPlayer; }
+
+private:
+	unsigned char m_pad00[ 0x10 ];
+	Player *m_localPlayer;              // +0x10
+};
+
+extern PlayerList *ThePlayerList;
 
 class Object
 {
@@ -90,6 +134,7 @@ class StatsCollector
 public:
 	StatsCollector();
 	void collectUnitCountStats();
+	void collectScoreKeeperStats();
 
 private:
 	AsciiString m_statsFileName;
@@ -183,5 +228,31 @@ void StatsCollector::collectUnitCountStats()
 			++m_playerUnits;
 		else
 			++m_aiUnits;
+	}
+}
+
+// ?collectScoreKeeperStats@StatsCollector@@QAEXXZ, retail 0x00437634 (91 bytes).
+// BFME1 StatsCollector.cpp donor verbatim: the local player hands out its
+// embedded score keeper at +0x3BC (no load, so the keeper lives inside the
+// player object) and every total reads inline except the two faction-slot
+// sums, which stay out-of-line calls to 0x0039B769 (units, +0x20) and
+// 0x0039B73F (buildings, +0x78).
+void StatsCollector::collectScoreKeeperStats()
+{
+	Player *player = ThePlayerList->getLocalPlayer();
+	if( player )
+	{
+		ScoreKeeper *scoreKeeper = player->getScoreKeeper();
+		if( scoreKeeper )
+		{
+			m_scoreKeeperMoneySpent = scoreKeeper->getTotalMoneySpent();
+			m_scoreKeeperMoneyEarned = scoreKeeper->getTotalMoneyEarned();
+			m_scoreKeeperUnitsDestroyed = scoreKeeper->getTotalUnitsDestroyed();
+			m_scoreKeeperUnitsBuilt = scoreKeeper->getTotalUnitsBuilt();
+			m_scoreKeeperUnitsLost = scoreKeeper->getTotalUnitsLost();
+			m_scoreKeeperBuildingsDestroyed = scoreKeeper->getTotalBuildingsDestroyed();
+			m_scoreKeeperBuildingsBuilt = scoreKeeper->getTotalBuildingsBuilt();
+			m_scoreKeeperBuildingsLost = scoreKeeper->getTotalBuildingsLost();
+		}
 	}
 }
