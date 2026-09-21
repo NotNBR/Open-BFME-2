@@ -31,3 +31,13 @@ int BfmeAptValue006DCD20::isLookup() const
     if (flags.type == 8 && !isUndefined()) return 1;
     return 0;
 }
+
+int BfmeAptValue006DCD20::isInteger() const
+{
+    if (!this) {
+        g_bfmeAptAssertAtE17734("this","c:\\projects\\bfme2patch103\\bfme2\\code\\libraries\\source\\apt\\AptValue/AptValue.inl",1535);
+        if (g_bfmeAptBreakOnAssertAtDDC01C) __debugbreak();
+    }
+    if (flags.type == 7 && !isUndefined()) return 1;
+    return 0;
+}
