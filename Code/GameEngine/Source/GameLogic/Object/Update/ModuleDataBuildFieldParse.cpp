@@ -60,3 +60,4 @@ FIELD_PROC(SpawnPointProductionExitUpdateModuleData, 0x00BF22D4, SpawnPointBoneT
 FIELD_PROC(HijackerUpdateModuleData, 0x00BF2318, HijackerTable)
 FIELD_PROC(SlavedUpdateModuleData, 0x00BF2110, SlavedTable)
 FIELD_PROC(BoredUpdateModuleData, 0x00C4F618, BoredFilterTable)
+FIELD_PROC(BaikonurLaunchPowerModuleData, 0x00C5F150, SoundStateTable)
