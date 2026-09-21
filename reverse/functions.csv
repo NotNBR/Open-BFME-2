@@ -14545,3 +14545,4 @@ _chatRetryWithNickA,,0x006A33C0,119,Code/GameEngine/Source/GameNetwork/GameSpy/c
 ?friend_newModuleData@DumbProjectileBehaviorModuleData@@SAPAVModuleData@@PAVINI@@@Z,,0x0024E774,81,Code/GameEngine/Source/GameLogic/Object/Behavior/DumbProjectileBehaviorModuleDataFriendNew.cpp,matched,
 ?buildFieldParse@W3DLaserDrawModuleData@@SAXAAVMultiIniFieldParse@@@Z,,0x000C928F,17,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/Draw/W3DLaserDrawModuleDataBuildFieldParse.cpp,matched,
 ?friend_newModuleData@ProductionUpdateModuleData@@SAPAVModuleData@@PAVINI@@@Z,,0x0024E88F,81,Code/GameEngine/Source/GameLogic/Object/Update/ProductionUpdateModuleDataFriendNew.cpp,matched,
+?friend_newModuleData@W3DLaserDraw@@SAPAVModuleData@@PAVINI@@@Z,,0x00064962,81,Code/GameEngineDevice/Source/W3DDevice/GameClient/Drawable/Draw/W3DLaserDrawModuleDataFriendNew.cpp,matched,
