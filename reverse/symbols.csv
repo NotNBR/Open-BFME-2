@@ -3672,3 +3672,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ?buildFieldParse@CommandPointsUpgradeModuleData@@SAXAAVMultiIniFieldParse@@@Z,0x004B863F,chained link: calls base proc 0x4CE29D then adds table 0xC590E8 (CommandPoints@118 RequiredObject@11C); CommandPointsUpgrade pool key ends where proc begins
 ??0CommandPointsUpgradeModuleData@@QAE@XZ,0x00254891,EH ctor; sole raw caller is ModuleData factory 0x2548D2 which news 0x120; table 0xC590E8 holds CommandPoints@118 RequiredObject@11C
 ??0SpecialEnemySenseUpdateModuleData@@QAE@XZ,0x0025404A,EH ctor with filter at +8 plus zero float at +0xC plus one at +0x10; sole raw caller is ModuleData factory 0x25409C; table 0xBF1B88 holds SpecialEnemyFilter@8 ScanRange@C ScanInterval@10
+??0AnimationSoundClientBehaviorModuleData@@QAE@XZ,0x004CA70D,sole raw caller 0x252BE3 inside 0x18 factory 0x252BC2; rowed proc 0x4CAB2C of same class per BFME1 AnimationSoundClientBehaviorModuleData donor
