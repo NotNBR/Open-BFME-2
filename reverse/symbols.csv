@@ -3691,3 +3691,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ?buildFieldParse@ModelConditionUpgradeModuleData@@SAXAAVMultiIniFieldParse@@@Z,0x004B6691,chained link: base proc plus table 0xC58730 (AddConditionFlags RemoveConditionFlags RemoveConditionFlagsInRange AddTempConditionFlag TempConditionTime); ModelConditionUpgrade pool key ends where MD ctor begins
 ??0ModelConditionUpgradeModuleData@@QAE@XZ,0x004B6428,EH ctor over base 0x253487; vtable 0x00BF2558; condition members at +0x118/+0x164; sole raw caller is ModuleData factory 0x250546 which news 0x1B8
 ??_7UnitCrateCollideModuleData@@6B@,0x00BF39C0,UnitCrateCollideModuleData vtable installed once by ctor 0x255A72 (mov [esi] imm at 0x255A8D); factory 0x255AB8 news 0x64 for this class; address read from the mov immediate at 0x255A8D
+??0PartTheHeavensUpdateModuleData@@QAE@XZ,0x004ACBF8
