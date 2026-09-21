@@ -137,6 +137,7 @@ public:
 	void collectUnitCountStats();
 	void collectScoreKeeperStats();
 	void startScrollTime();
+	void endScrollTime();
 
 private:
 	AsciiString m_statsFileName;
@@ -240,6 +241,17 @@ void StatsCollector::startScrollTime()
 	m_isScrolling = TRUE;
 	m_scrollBeginTime = static_cast<GameLogic *>( TheGameLogic )->getFrame();
 	++m_scrollMapCommands;
+}
+
+// ?endScrollTime@StatsCollector@@QAEXXZ, retail 0x004376A2 (25 bytes).
+// BFME1 StatsCollector.cpp donor verbatim.
+void StatsCollector::endScrollTime()
+{
+	if( !m_isScrolling )
+		return;
+
+	m_isScrolling = FALSE;
+	m_scrollTime += static_cast<GameLogic *>( TheGameLogic )->getFrame() - m_scrollBeginTime;
 }
 
 // ?collectScoreKeeperStats@StatsCollector@@QAEXXZ, retail 0x00437634 (91 bytes).
