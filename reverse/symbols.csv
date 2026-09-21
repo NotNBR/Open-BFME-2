@@ -3696,3 +3696,4 @@ _Rva0084DE40Tail,0x000210C0,STLport locale tail helper called via tail-jmp from 
 ??_7MoneyCrateCollideModuleData@@6B@,0x00BF3AC0,MoneyCrateCollideModuleData vtable installed by ctor 0x2562FA (mov [esi] imm at 0x256306); shared-fold with VeterancyCrate sibling ctor 0x255B09; address read from the mov immediate
 ?construct@Rva003623E5Member@@QAEXXZ,0x003623E5
 ??0RunOffMapBehaviorModuleData@@QAE@XZ,0x00254ECE,sole raw E8 caller is factory 0x254F24; vtable BF3298 plus size 0x1C plus rowed proc 0x46216A prove ModuleData ctor
+??0GateOpenAndCloseBehavior@@QAE@PAVThing@@PBVModuleData@@@Z,0x0049889C
